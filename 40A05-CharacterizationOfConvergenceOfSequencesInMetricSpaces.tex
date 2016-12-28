@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CharacterizationOfConvergenceOfSequencesInMetricSpaces}
+\pmcreated{2013-03-22 15:06:10}
+\pmmodified{2013-03-22 15:06:10}
+\pmowner{gumau}{3545}
+\pmmodifier{gumau}{3545}
+\pmtitle{characterization of convergence of sequences in metric spaces}
+\pmrecord{4}{36832}
+\pmprivacy{1}
+\pmauthor{gumau}{3545}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmclassification{msc}{54E35}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $(M, d)$ be a metric space, and let $ \mathbb{N} = P_{1} \bigcup \cdots \bigcup P_{k}$ be a partition of the set of natural numbers such that $P_{i}$ is infinite for every $i$, that is, there is a bijection $f_{i} \colon \mathbb{N} \to P_{i}$. Then, given a sequence $(x_n)_{n \in \mathbb{N}}$, it converges to $x \in M$ if and only if the subsequence $$(x_{f_i(n)})_n$$ converges to $x$ for every $i = 1, \cdots, k$.
+
+
+\textbf{Examples}
+
+If you have a sequence $(x_n)_n$ and a natural number $k$, and you know that it converges to $x$ for every corresponding subsequence over the classes of remainders modulo $k$, then it converges to $x$.
+%%%%%
+%%%%%
+\end{document}

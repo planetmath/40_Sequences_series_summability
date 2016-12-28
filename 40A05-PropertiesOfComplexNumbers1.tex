@@ -1,0 +1,119 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfComplexNumbers1}
+\pmcreated{2013-03-11 19:29:52}
+\pmmodified{2013-03-11 19:29:52}
+\pmowner{swapnizzle}{13346}
+\pmmodifier{}{0}
+\pmtitle{Properties of Complex Numbers}
+\pmrecord{1}{50097}
+\pmprivacy{1}
+\pmauthor{swapnizzle}{0}
+\pmtype{Definition}
+
+%none for now
+\begin{document}
+\documentclass[11pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage[mathcal]{eucal}
+\usepackage{xy}
+\textheight 9in
+\textwidth 7in
+\oddsidemargin 0in
+\evensidemargin 0in
+\topmargin 0in
+\headheight 0in
+\headsep 0in
+\title{Properties of Complex Numbers}
+\author{Swapnil Sunil Jain}
+\date{December 26, 2006}
+\begin{document}
+\maketitle
+
+\subsection*{Conjugate Properties}
+\begin{eqnarray*}
+&& (z_1 + z_2)^* = z_1^* + z_2^* \\
+&& (z_1 z_2)^* = z_1^* z_2^* \\
+&& (\frac{z_1}{z_2})^* = \frac{z_1^*}{z_2^*} \\
+&& (z^n)^* = (z^*)^n \\
+&&  f(z^*) = f^*(z) \\
+&& zz^* = |z|^2 \\
+\end{eqnarray*}
+
+\subsection*{Re() and Im() Properties}
+\begin{eqnarray*}
+&& z = Re(z) = jIm(z) \\
+&& Re(z) = \frac{z + z^*}{2} \\
+&& Im(z) = \frac{z - z^*}{2j} \\
+&& Re(z^*) = Re(z) \\
+&& Im(z^*) = -Im(z) \\
+&& Re(z) \leq |z| \\
+&& Im(z) \leq |z| \\
+&& Re(z_1 + z_2) = Re(z_1) + Re(z_2) \\
+&& Im(z_1 + z_2) = Im(z_1) + Im(z_2) \\
+&& Re(z) = Im(jz) \\
+&& Im(z) = Re(-jz) \\
+\end{eqnarray*}
+
+\subsection*{Abs() and Arg() Properties}
+\begin{eqnarray*}
+&& |z| \equiv {\Big[Re(z)^2 + Im(z)^2\Big]}^\frac{1}{2} \\
+&& |z_1 z_2| = |z_1| |z_2| \\
+&& \Big|\frac{z_1}{z_2}\Big| = \frac{|z_1|}{|z_2|} \\
+&& |z^*| = |z| \\
+&& |z_1 + z_2| \leq |z_1| + |z_2| \\
+\\
+&& \text{arg}(z) \equiv \begin{cases} \arctan\Big(\frac{Im(z)}{Re(z)}\Big),& x>0 \\ \arctan\Big(\frac{Im(z)}{Re(z)}\Big)+\pi, & x<0 \\ \frac{\pi}2, & x=0,y>0 \\ -\frac{\pi}2, & x=0,y<0 \end{cases} \\
+\\
+&& \text{arg}(z^*) = -\text{arg}(z) \\
+&& \text{arg}(z_1 z_2) = \text{arg}(z_1) + \text{arg}(z_2) \\
+&& \text{arg}\Big(\frac{z_1}{z_2}\Big) = \text{arg}(z_1) - \text{arg}(z_2) \\ 
+\end{eqnarray*}
+
+\subsection*{Some Tips}
+\begin{eqnarray*}
+&& \frac{1}{j} = -j \\
+&& -j^2 = 1 \\
+&& a^{log(b)} = b^{log(a)} \\
+&& a = e^{ln(a)} \\
+\end{eqnarray*}
+
+\subsection*{Power Properties}
+For $z = r(\cos(\theta) + j\sin(\theta))$,
+
+\begin{eqnarray*}
+&& z^n = r^n(\cos(n\theta) + j\sin(n\theta))\\
+\\
+&& z^{\frac{1}{n}} = r^{\frac{1}{n}}\Big[\cos(\frac{\theta + 2k\pi}{n}) + j\sin(\frac{\theta + 2k\pi}{n})\Big] \qquad \mbox{for } k=0,1,...,n-1 \\
+\end{eqnarray*}
+
+\subsection*{Trigonometric and Logarithmic Properties}
+\begin{eqnarray*}
+&& \ln(z) = \ln(|z| e^{j\text{arg}(z)}) \equiv \ln(|z|) + j\text{arg}(z) = \ln(|z|) + j(\theta + 2k\pi) \\
+\\
+&& \exp(z) = \exp(Re(z)) \Big[\cos(Im(z)) + j\sin(Im(z)) \Big] \\
+\\
+&& \cos(z) = \frac{1}{2}(e^{jz} + e^{-jz}) \\
+\\
+&& \sin(z) = \frac{1}{2j}(e^{jz} - e^{-jz}) \\
+\\
+&& \arccos(z) = -j \ln(z + j(1 - |z|^2)^{\frac{1}{2}}) \\
+\\
+&& \arcsin(z) = -j \ln(jz + (1 - |z|^2)^{\frac{1}{2}}) \\
+\\
+&& \cosh(z) = \frac{1}{2}(e^{z} + e^{-z}) \\
+\\
+&& \sinh(z) = \frac{1}{2}(e^{z} - e^{-z}) \\
+\\
+&& \text{arccosh}(z) = -j \ln(z + j(|z|^2 - 1)^{\frac{1}{2}}) \\
+\\
+&& \text{arcsinh}(z) = -j \ln(z + (|z|^2 + 1)^{\frac{1}{2}}) \\
+\end{eqnarray*}
+
+\end{document}
+%%%%%
+\end{document}

@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FiniteChangesInConvergentSeries}
+\pmcreated{2013-03-22 19:03:10}
+\pmmodified{2013-03-22 19:03:10}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{finite changes in convergent series}
+\pmrecord{9}{41931}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmrelated{SumOfSeriesDependsOnOrder}
+\pmrelated{RiemannSeriesTheorem}
+\pmrelated{RatioTestOfDAlembert}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{terms}
+
+The following theorem means that at the beginning of a convergent series, one can remove or attach a finite amount of terms without influencing on the convergence of the series -- the convergence is determined alone by the infinitely long ``tail'' of the series.\, Consequently, one can also freely change the \PMlinkescapetext{order} of a finite amount of terms.\\
+
+\textbf{Theorem.}\, Let $k$ be a natural number.\, A series $\displaystyle\sum_{n=1}^\infty a_n$ converges iff
+the series $\displaystyle\sum_{n=k+1}^\infty\!a_n$ converges.\, Then the sums of both series are \PMlinkescapetext{connected} with
+\begin{align}
+\sum_{n=k+1}^\infty\!a_n \;=\; \sum_{n=1}^\infty a_n-\sum_{n=1}^k a_n.
+\end{align}
+
+
+\emph{Proof.}\, Denote the $k$th partial sum of $\sum_{n=1}^\infty a_n$ by $S_k$ and the $n$th partial sum of 
+$\sum_{n=k+1}^\infty a_n$ by $S_n'$.\, Then we have
+\begin{align}
+S_n' \;=\; \sum_{n=k+1}^{k+n}\!a_n \;=\; S_{k+n}\!-\!S_k.
+\end{align}
+$1^\circ$.\, If $\sum_{n=1}^\infty a_n$ converges, i.e.\, $\lim_{n\to\infty}S_n := S$\, exists as a finite number,  then (2) implies
+$$\lim_{n\to\infty}S_n' \;=\; \lim_{n\to\infty}S_{k+n}-\lim_{n\to\infty}S_k \;=\; S\!-\!S_k.$$
+Thus $\sum_{n=k+1}^\infty a_n$ converges and (1) is true.
+
+$2^\circ$.\, If we suppose $\sum_{n=k+1}^\infty a_n$ to be convergent, i.e.\, $\lim_{n\to\infty}S_n' := S'$\, exists as finite, then (2) implies that
+$$\lim_{n\to\infty}S_n \;=\; \lim_{n\to\infty}S_{k+n} \;=\; \lim_{n\to\infty}(S_k+S_n') \;=\; S_k\!+\!S'.$$
+This means that $\sum_{n=1}^\infty a_n$ is convergent and\, $S = S_k\!+\!S'$,\, which is (1), is in \PMlinkescapetext{force}.
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OnTheResidueTheorem1}
+\pmcreated{2013-03-11 19:29:41}
+\pmmodified{2013-03-11 19:29:41}
+\pmowner{swapnizzle}{13346}
+\pmmodifier{}{0}
+\pmtitle{On the Residue Theorem}
+\pmrecord{1}{50096}
+\pmprivacy{1}
+\pmauthor{swapnizzle}{0}
+\pmtype{Definition}
+
+%none for now
+\begin{document}
+\documentclass[11pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage[mathcal]{eucal}
+\usepackage{xy}
+\textheight 9in
+\textwidth 7in
+\oddsidemargin 0in
+\evensidemargin 0in
+\topmargin 0in
+\headheight 0in
+\headsep 0in
+\title{On the Residue Theorem}
+\author{Swapnil Sunil Jain}
+\date{December 26, 2006}
+\begin{document}
+\maketitle
+
+\subsection*{The Residue Theorem}
+
+If $\gamma$ is a simply closed contour and f is analytic within the region bounded by $\gamma$ except for some finite number of poles $z_0,z_1,...,z_n$ then
+\begin{eqnarray*}
+\int_{\gamma} f(z) dz &=& 2\pi i \sum_{k=0}^{n} Res_{z=z_k} f(z)
+\end{eqnarray*}
+where $Res_{z=z_k} f(z)$ is the reside of $f(z)$ at $z_k$.
+
+\subsection*{Calculating Residues}
+
+The Residue of $f(z)$ at a particular pole $p$ depends on the characteristic of the pole.
+
+For a single pole $p$, $Res_{z=p} f(z) = \lim_{z \to p} \Big[ (z-p)f(z) \Big]$
+
+For a double pole $p$, $Res_{z=p} f(z) = \lim_{z \to p} \Big[ \frac{d}{dz} (z-p)^2 f(z) \Big]$
+
+For a n-tuple pole $p$, $Res_{z=p} f(z) = \lim_{z \to p} \Big[ \frac{1}{(n-1)!}\frac{d^{(n-1)}}{dz^{(n-1)}} (z-p)^n f(z) \Big]$
+ 
+\subsection*{Evaluation of Real-Valued Definite Integrals}
+
+We can use the Residue theorem to evaluate real-valued definite integral of the form
+\begin{eqnarray}
+&& \int_{0}^{2\pi} f(\sin(n\theta), \cos(n\theta)) d\theta
+\end{eqnarray}
+If we let $z=e^{i\theta}$, then $\frac{dz}{d\theta} = ie^{i\theta} = iz$ which implies that $d\theta = \frac{dz}{iz}$. Then using the identity $\cos(n\theta) = \frac{1}{2}(z^{n} + z^{-n})$ and $\sin(n\theta) = \frac{1}{2i}(z^{n} - z^{-n})$, we can re-write (1) as 
+\begin{eqnarray}
+&& \int_{\gamma} g(z) \frac{dz}{iz}
+\end{eqnarray}
+where $g(z) = f( \frac{1}{2i}(z^{n} - z^{-n}), \frac{1}{2}(z^{n} + z^{-n}))$ and $\gamma$ is a contour that traces the unit circle. Then, by the Residue theorem, (2) is equal to 
+\begin{eqnarray*}
+&& 2\pi i \sum_{k=0}^{n} Res_{z=z_k} (\frac{g(z)}{iz}) = \frac{2\pi i}{i} \sum_{k=0}^{n} Res_{z=z_k} (\frac{g(z)}{z}) = 2\pi \sum_{k=0}^{n} Res_{z=z_k} (\frac{g(z)}{z})
+\end{eqnarray*}
+where $z_k$ are the poles of $\frac{g(z)}{z}$. 
+
+\end{document}
+%%%%%
+\end{document}

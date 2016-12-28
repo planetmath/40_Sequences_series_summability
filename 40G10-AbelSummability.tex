@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AbelSummability}
+\pmcreated{2013-03-22 13:07:03}
+\pmmodified{2013-03-22 13:07:03}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{Abel summability}
+\pmrecord{7}{33549}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40G10}
+\pmrelated{CesaroSummability}
+\pmrelated{AbelsLimitTheorem}
+\pmdefines{Abelian theorem}
+\pmdefines{Tauberian theorem}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+
+\newtheorem{theorem}[proposition]{Theorem}
+\begin{document}
+\PMlinkexternal{Abel}{http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Abel.html}
+summability is a generalized convergence criterion for power series.
+It extends the usual definition of the sum of a series, and gives a
+way of summing up certain divergent series.  Let us start with a
+series $\sum_{n=0}^\infty a_n$, convergent or not, and use that series
+to define a power series
+$$f(r) = \sum_{n=0}^\infty a_n r^n.$$
+Note that for $|r|<1$ the
+summability of $f(r)$ is easier to achieve than the summability of the
+original series.  Starting with this observation we say that the
+series $\sum a_n$ is \emph{Abel summable} if the defining series
+for $f(r)$ is convergent for all $|r|<1$, and if $f(r)$ converges to
+some limit $L$ as $r\rightarrow 1^-$.  If this is so, we shall say
+that $\sum a_n$ Abel converges to $L$.
+
+Of course it is important to ask whether an ordinary convergent series
+is also Abel summable, and whether it converges to the same limit?
+This is true, and the result is known as Abel's limit theorem,
+or simply as Abel's theorem.
+\begin{theorem}[Abel]
+  Let $\sum_{n=0}^\infty a_n$ be a series; let 
+  $$s_N=a_0+\cdots+a_N,\quad N\in\natnums,$$
+  denote the corresponding
+  partial sums; and let $f(r)$ be the corresponding power series
+  defined as above.  If $\sum a_n$ is convergent, in the
+  usual sense that the $s_N$ converge to some limit $L$ as
+  $N\rightarrow\infty$, then the series is also Abel summable and
+  $f(r)\rightarrow L$ as $r\rightarrow 1^-$.
+\end{theorem}
+
+The standard example of a divergent series that is nonetheless Abel
+summable is the alternating series
+$$\sum_{n=0}^\infty (-1)^n.$$
+The corresponding power series is
+$$\frac{1}{1+r}=\sum_{n=0}^\infty (-1)^n r^n.$$
+Since 
+$$\frac{1}{1+r}\rightarrow \frac{1}{2}\quad \text{as}\quad
+r\rightarrow 1^-,$$
+this otherwise divergent series Abel converges to $\frac{1}{2}$.
+
+Abel's theorem is the prototype for a number of other theorems about
+convergence, which are collectively known in analysis as Abelian
+theorems.  An important class of associated results are the so-called
+Tauberian theorems.  These describe various convergence criteria, and
+sometimes provide partial converses for the various Abelian theorems.
+
+The general converse to Abel's theorem is false, as the example above
+illustrates\footnote{We want the converse to be false; the whole idea
+  is to describe a method of summing certain divergent series!}.
+However, in the 1890's
+\PMlinkexternal{Tauber}{http://www-groups.dcs.st-and.ac.uk/~history/Mathematicians/Tauber.html}
+proved the following partial converse.
+\begin{theorem}[Tauber]
+Suppose that $\sum a_n$ is an Abel summable series and that $n a_n
+\rightarrow 0$ as $n\rightarrow \infty$.  Then, $\sum_n a_n$ is
+convergent in the ordinary sense as well.  
+\end{theorem}
+The proof of the above theorem is not hard, but the same cannot be
+said of the more general Tauberian theorems.  The more famous of these
+are due to Hardy, Hardy-Littlewood, Weiner, and Ikehara.  In all
+cases, the conclusion is that a certain series or a certain integral
+is convergent.  However, the proofs are lengthy and require
+sophisticated techniques.  Ikehara's theorem is especially noteworthy
+because it is used to prove the prime number theorem.
+%%%%%
+%%%%%
+\end{document}

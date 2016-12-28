@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfTelescopingSum}
+\pmcreated{2013-03-22 17:27:21}
+\pmmodified{2013-03-22 17:27:21}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{example of telescoping sum}
+\pmrecord{11}{39838}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmrelated{GoniometricFormulae}
+\pmrelated{ExampleOfSummationByParts}
+\pmrelated{DirchletKernel}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+ \usepackage[T2A]{fontenc}
+ \usepackage[russian, english]{babel}
+
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\PMlinkescapeword{formula}
+Some trigonometric sums, as $\sum_{k=1}^n\cos{k\alpha}$ and $\sum_{k=1}^n\sin{k\alpha}$, may be telescoped if the terms are first edited by a suitable \PMlinkname{goniometric formula}{GoniometricFormulae} (``product formula'').  E.g. we may write:
+$$\sum_{k=1}^n\cos{k\alpha} \;=\; 
+\frac{1}{\sin\frac{\alpha}{2}}\sum_{k=1}^n\cos{k\alpha}\sin\frac{\alpha}{2}$$
+The product formula \,$\cos{x}\sin{y} \,=\, \frac{1}{2}[\sin(x\!+\!y)-\sin(x\!-\!y)]$\, alters this to
+$$\sum_{k=1}^n\cos{k\alpha} \;=\;
+\frac{1}{2\sin\frac{\alpha}{2}}\sum_{k=1}^n\left(\sin\frac{(2k\!+\!1)\alpha}{2}-\sin\frac{(2k\!-\!1)\alpha}{2}\right),$$
+or
+$$\sum_{k=1}^n\cos{k\alpha} \;=\; \frac{1}{2\sin\frac{\alpha}{2}}\left(\sin\frac{3\alpha}{2}-\sin\frac{\alpha}{2}+\sin\frac{5\alpha}{2}
+-\sin\frac{3\alpha}{2}+-\ldots+\sin\frac{(2n\!+\!1)\alpha}{2}-\sin\frac{(2n\!-\!1)\alpha}{2}\right).$$
+After cancelling the opposite numbers we obtain the formula
+\begin{align}
+\sum_{k=1}^n\cos{k\alpha} \;=\; \frac{\sin\frac{(2n+1)\alpha}{2}-\sin\frac{\alpha}{2}}{2\sin\frac{\alpha}{2}}.
+\end{align}
+The corresponding formula
+\begin{align}
+\sum_{k=1}^n\sin{k\alpha} \;=\; \frac{-\cos\frac{(2n+1)\alpha}{2}+\cos\frac{\alpha}{2}}{2\sin\frac{\alpha}{2}}.
+\end{align}
+is derived analogously.\\
+
+\textbf{Note.}\, The formulae (1) and (2) are gotten also by adding the left side of the former and $i$ times the left side of the latter and then applying de Moivre identity.
+
+\begin{thebibliography}{7}
+\bibitem{LDK} \CYRL. \CYRD. \CYRK\cyru\cyrd\cyrr\cyrya\cyrv\cyrc\cyre\cyrv: 
+{\em \CYRM\cyra\cyrt\cyre\cyrm\cyra\cyrt\cyri\cyrch\cyre\cyrs\cyrk\cyri\cyrishrt \,\cyra\cyrn\cyra\cyrl\cyri\cyrz. II \cyrt\cyro\cyrm}. \,\CYRI\cyrz\cyrd\cyra\cyrt\cyre\cyrl\cyrsftsn\cyrs\cyrt\cyrv\cyro \,
+``\CYRV\cyrery\cyrs\cyrsh\cyra\cyrya \,\cyrsh\cyrk\cyro\cyrl\cyra''. \CYRM\cyro\cyrs\cyrk\cyrv\cyra \,(1970).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

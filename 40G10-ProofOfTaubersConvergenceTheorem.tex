@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfTaubersConvergenceTheorem}
+\pmcreated{2013-03-22 13:08:20}
+\pmmodified{2013-03-22 13:08:20}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{proof of Tauber's convergence theorem}
+\pmrecord{7}{33576}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40G10}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+
+\newtheorem{theorem}[proposition]{Theorem}
+\begin{document}
+Let
+$$f(z) = \sum_{n=0}^\infty a_n z^n,$$
+be a complex power series, convergent in the open disk $\vert
+z\vert<1$.  We suppose that
+\begin{enumerate}
+\item $n a_n\rightarrow 0$ as
+$n\rightarrow\infty$, and that
+\item  $f(r)$ converges to some finite  $L$ as
+$r\rightarrow 1^-$;
+\end{enumerate}
+and wish to show that
+$\sum_n a_n$ converges to the same $L$ as well.
+
+Let $s_n=a_0+\cdots+a_n$, where $n=0,1,\ldots$, denote the partial
+sums of the series in question.  The enabling idea in Tauber's
+convergence result (as well as other Tauberian theorems) is the
+existence of a correspondence in the evolution of the $s_n$ as
+$n\rightarrow\infty$, and the evolution of $f(r)$ as $r\rightarrow
+1^-$.  Indeed we shall show that
+\begin{equation}
+  \label{eq:e1}
+  \left\vert s_n - f\lp \frac{n-1}{n} \rp\right\vert \rightarrow 0 \quad\text{as}\quad
+  n\rightarrow \infty.  
+\end{equation}
+The desired result then follows in an obvious fashion.
+
+For every real $0<r<1$ we have
+$$s_n = f(r) + \sum_{k=0}^n a_k (1-r^k) - \sum_{k=n+1}^\infty a_k\, r^k.$$
+Setting
+$$\epsilon_n = \sup_{k>n}  \vert k a_k \vert,$$
+and noting that
+$$ 1-r^k = (1-r)(1+r+\cdots+r^{k-1}) < k(1-r),$$
+we have that
+$$
+\vert s_n - f(r) \vert \leq (1-r)\sum_{k=0}^n ka_k +
+\frac{\epsilon_n}{n}
+\sum_{k=n+1}^\infty r^k.$$
+Setting $r=1-1/n$ in the above inequality we get
+$$
+\vert s_n - f(1-1/n) \vert \leq \mu_n + \epsilon_n (1-1/n)^{n+1},$$
+where
+$$\mu_n = \frac{1}{n}\sum_{k=0}^n \vert k a_k \vert$$
+are the Ces\`aro
+means of the sequence $\vert k a_k\vert,\; k=0,1,\ldots$ 
+Since the
+latter sequence converges to zero, so do the means $\mu_n$, and the
+suprema $\epsilon_n$.  Finally,
+Euler's formula for $e$ gives
+$$\lim_{n\rightarrow\infty}(1-1/n)^n = e^{-1}.$$
+The validity of \eqref{eq:e1} follows immediately. QED
+
+%%%%%
+%%%%%
+\end{document}

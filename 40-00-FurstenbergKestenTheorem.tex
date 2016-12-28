@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FurstenbergKestenTheorem}
+\pmcreated{2014-03-19 22:14:18}
+\pmmodified{2014-03-19 22:14:18}
+\pmowner{Filipe}{28191}
+\pmmodifier{Filipe}{28191}
+\pmtitle{Furstenberg-Kesten theorem}
+\pmrecord{3}{88075}
+\pmprivacy{1}
+\pmauthor{Filipe}{28191}
+\pmtype{Theorem}
+\pmrelated{Oseledet's decomposition}
+\pmrelated{multiplicative cocycle}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Consider $\mu$ a probability measure, and $f:M\rightarrow M$ a measure preserving dynamical system. Consider $A:M\rightarrow GL(d,\textbf{R})$, a measurable transformation, where GL(d,\textbf{R}) is the space of invertible square matrices of size $d$.
+Consider the multiplicative cocycle $(\phi^n(x))_n$ defined by the transformation $A$.
+
+If $\log^+||A||$ is integrable, where $\log^+||A||=\max\{ \log ||A||,0\}$, then:
+$$\lambda_{\max}(x)=\lim_n \frac{1}{n} \log ||\phi^n(x)||$$
+exists almost everywhere, and $\lambda^+_{\max}$ is integrable and
+$$\int \lambda_{\max} d\mu = \lim_n \frac{1}{n} \int \log ||\phi^n|| d\mu = \inf_n \frac{1}{n} \int \log ||\phi^n||d\mu$$
+
+If $\log^+||A^{-1}||$ is integrable, then:
+$$\lambda_{\min}(x)=\lim_n -\frac{1}{n} \log ||\phi^{-n}(x)||$$
+exists almost everywhere, and $\lambda^+_{\min}$ is integrable and
+$$\int \lambda_{\min} d\mu = \lim_n -\frac{1}{n} \int \log ||\phi^{-n}|| d\mu = \sup_n -\frac{1}{n} \int \log ||\phi^{-n}||d\mu$$
+
+Furthermore, both $\lambda_{\min}$ and $\lambda_{\max}$ are invariant for the tranformation $f$, that is, $\lambda_{\min}\circ f(x)=\lambda_{\min}(x)$ and $\lambda_{\max}\circ f(x)=\lambda_{\max}(x)$, for $\mu$ almost everywhere.
+
+This theorem is a direct consequence of Kingman's subadditive ergodic theorem, by observing that both
+$$\log ||\phi^n(x)||$$ and $$\log ||\phi^{-n}(x)||$$ are subadditive sequences.
+
+The results in this theorem are strongly improved by Oseledet's multiplicative ergodic theorem, or Oseledet's decomposition.
+\end{document}

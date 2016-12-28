@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CauchysRootTest}
+\pmcreated{2013-03-22 12:58:03}
+\pmmodified{2013-03-22 12:58:03}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{Cauchy's root test}
+\pmrecord{9}{33337}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmsynonym{root test}{CauchysRootTest}
+\pmrelated{LambertSeries}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+If $\sum a_{n}$ is a series of positive real terms and
+$$\sqrt[n]{a_{n}} < k < 1$$
+for all $n > N$, then $\sum a_{n}$ is convergent.  If $\sqrt[n]{a_{n}} \geq 1$ for an infinite number of values of $n$, then $\sum a_{n}$ is divergent.
+
+\subsubsection*{Limit form} Given a series $\sum a_{n}$ of complex terms, set
+$$\rho = \limsup_{n \to \infty} \sqrt[n]{| a_{n} |}$$
+The series $\sum a_{n}$ is absolutely convergent if $\rho < 1$ and is divergent if $\rho > 1$.  If $\rho = 1$, then the test is inconclusive.
+%%%%%
+%%%%%
+\end{document}

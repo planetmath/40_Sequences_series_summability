@@ -1,0 +1,987 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NoosphereTables1}
+\pmcreated{2013-03-11 19:36:34}
+\pmmodified{2013-03-11 19:36:34}
+\pmowner{rspuzio}{6075}
+\pmmodifier{}{0}
+\pmtitle{Noosphere Tables}
+\pmrecord{1}{50143}
+\pmprivacy{1}
+\pmauthor{rspuzio}{0}
+\pmtype{Definition}
+
+%none for now
+\begin{document}
+\documentclass{article}
+\pagestyle{empty}
+
+\begin{document}
+
+\section{acl\_default\_uid\_seq}
+
+\begin{itemize}
+\item{\textbf{val} [\texttt{int(11) NOT NULL AUTO\_INCREMENT}]:} acl\_default unique ID counter sequence.
+\end{itemize}
+
+\section{acl\_default}
+
+This table stores each user's default ACL rules.  These rules are applied to that user's objects when new objects are created.  This table is virtually the same as the ACL table, which makes sense: you can think of its function as having some of its rows copied to the ACL table upon object creation events.
+
+\begin{itemize}
+\item{\textbf{uid} [\texttt{int(11) NOT NULL AUTO\_INCREMENT}]:}
+ unique ID of row
+\item{\textbf{userid} [\texttt{int(11) NOT NULL default '0'}]:}
+ user who owns this ACL entry.
+\item{\textbf{\_write} [\texttt{tinyint(4) NOT NULL default '0'}]:} 
+write flag.
+\item{\textbf{\_read} [\texttt{tinyint(4) NOT NULL default '1'}]:}
+ read flag.
+\item{\textbf{\_acl} [\texttt{tinyint(4) NOT NULL default '0'}]:} can change ACL flag.
+\item{\textbf{subjectid} [\texttt{int(11) NOT NULL default '0'}]:}
+ subject (user or group) ID this entry pertains to.
+\item{\textbf{user\_or\_group} [\texttt{char(1) NOT NULL default 'u'}]:}
+ is the above ID a user or group.
+\item{\textbf{default\_or\_normal} [\texttt{char(1) NOT NULL default 'n'}]}
+ is this a normal (specific) rule or a default rule for when no specific rule is found?
+\end{itemize}
+
+\section{acl\_uid\_seq}
+
+\begin{itemize}
+\item{\textbf{val} [\texttt{int(11) NOT NULL auto\_increment}]}
+ counter for unique IDs in acl table.
+\end{itemize}
+
+\section{acl}
+
+This table stores access control rules.  Every Noosphere object
+has associated to it one or more entries in this table which
+describe who has what permissions to read the object, write to it,
+or control access to it (change ACLs).
+
+\begin{itemize}
+\item{\textbf{uid} [\texttt{int(11) NOT NULL default '0'}]:}
+Unique ID of  this rule.
+\item{\textbf{user\_or\_group} [\texttt{char(1) default 'u'}]:}
+Does this rule pertain to access by a user (u) or a group (g)?
+\item{\textbf{\_write} [\texttt{int(11) default '0'}]:}
+Flag describing write access.
+\item{\textbf{\_read} [\texttt{int(11) default '1'}]:}
+Flag describing read access.
+\item{\textbf{objectid} [\texttt{int(11) NOT NULL default '0'}]:}
+Identifier of object to which access rule applies.
+\item{\textbf{subjectid} [\texttt{int(11) NOT NULL default '0'}]:}
+Identifier of user or group who is being granted access.
+\item{\textbf{\_acl} [\texttt{int(11) default '0'}]:}
+Flag describing permission to control access.
+\item{\textbf{tbl} [\texttt{varchar(16) NOT NULL default ''}]:}
+Table in which the object to which the rule applies resides (also can be thought of as object type).
+\item{\textbf{default\_or\_normal} [\texttt{char(1) default 'n'}]:}
+Is this a default rule or a normal rule?  Default rules apply when no specific rule is found (group ID or user ID of the accessing user does not match anything).
+\end{itemize}
+
+\section{actions\_uid\_seq}
+
+\begin{itemize}
+\item{\textbf{val} [\texttt{int(11) NOT NULL auto\_increment}]:} unique ID counter for 'actions' table.
+\end{itemize}
+
+\section{actions}
+
+This table exists to keep track of user actions such as voting
+in polls.  Each action gets a separate entry in the table so
+as to make it possible to do things like ensure that no one votes twice.
+
+\begin{itemize}
+\item{\textbf{created} [\texttt{timestamp(14) NOT NULL}]:}  
+ Date of action.
+\item{\textbf{uid} [\texttt{int(11) NOT NULL default '0'}]:}  
+ Unique numerical identifier of action.
+\item{\textbf{userid} [\texttt{int(11) default NULL}]:}  
+ Identifier
+of the user performing the action.
+\item{\textbf{score} [\texttt{int(11) NOT NULL default '0'}]:} 
+ Score change conferred by action (can be zero if not applicable). 
+\item{\textbf{data} [\texttt{text}]:} 
+ Any text data that went with the action (can be a descriptive message).
+\item{\textbf{type} [\texttt{int(11) NOT NULL default '0'}]:}  
+ Type of action -- `1' is voting for example (the only action type yet defined; lookup is stored in the main config in the code.) 
+\item{\textbf{objectid} [\texttt{int(11) default NULL}]:}  
+ Identifier of the object on which the action was performed if applicable.
+\end{itemize}
+
+\section{authors}
+
+This table documents the authors of an object (anyone who has written to an object will be in here).  There is a separate entry for each combination of author and object.
+
+\begin{itemize}
+\item{\textbf{tbl} [\texttt{varchar(16) NOT NULL default ''}]:} 
+ Table in which the object authored is to be found.
+\item{\textbf{ts} [\texttt{datetime default NULL}]:}  
+ The date on which the author made the most recent edit.
+\item{\textbf{userid} [\texttt{int(11) NOT NULL default '0'}]:}  
+ The user number of the author.
+\item{\textbf{objectid} [\texttt{int(11) NOT NULL default '0'}]:}  
+ Identifier of the object authored within its table.
+\end{itemize}
+
+\section{blacklist\_uid\_seq}
+
+\begin{itemize}
+\item{textbf{val} [\texttt{int(11) NOT NULL auto\_increment}]:}
+ Unique ID counter for the blacklist entries.
+\end{itemize}
+
+\section{blacklist}
+
+The blacklist is a list of perl regular expression masks which are checked against the email address of each new user. When there is a match, the user's application is rejected. This can be used to prevent attacks where one person creates many accounts, each with an email address that fits a regular pattern.
+
+\begin{itemize}
+\item{textbf{uid} [\texttt{int(11) NOT NULL default '0'}]:}  
+ Numerical identifier for record.
+\item{textbf{mask} [\texttt{varchar(128) NOT NULL default ''}]:}  
+ Regular expression describing some addresses to be blocked.
+\end{itemize}
+
+\section{books\_uid\_seq}
+
+\begin{itemize}
+\item{textbf{val} [\texttt{int(11) NOT NULL auto\_increment}]:}
+ Unique ID counter for the books table.
+\end{itemize}
+
+\section{books}
+
+This table stores the content of the books section of PM.
+
+\begin{itemize}
+\item{\textbf{rights} [\texttt{text}]:}  Copyright terms for book.
+\item{\textbf{authors} [\texttt{varchar(255) default NULL}]:}  Author(s) of book.
+\item{\textbf{msc} [\texttt{varchar(16) default NULL}]:} MSC number(s) describing subject of book.
+\item{\textbf{uid} [\texttt{int(11) NOT NULL default '0'}]:} Numerical identifier for record.
+\item{\textbf{userid} [\texttt{int(11) NOT NULL default '0'}]:}  Number of user who made this record.
+\item{\textbf{data} [\texttt{text}]:}  Description of book.
+\item{\textbf{urls} [\texttt{text}]:}  URL's for links to copy of book.
+\item{\textbf{comments} [\texttt{varchar(128) default NULL}]:}  Comments about book.
+\item{\textbf{modified} [\texttt{datetime default NULL}]:}  Date record was last modified.
+\item{\textbf{created} [\texttt{datetime default NULL}]:}  Date record was added to books section.
+\item{\textbf{keywords} [\texttt{varchar(128) default ''}]:}  Keywords for use in search.
+\item{\textbf{hits} [\texttt{int(11) default '0'}]:}  How many times record has been accessed.
+\item{\textbf{loc} [\texttt{varchar(32) default NULL}]:}  Library of Congress catalogue number.
+\item{\textbf{isbn} [\texttt{varchar(32) default NULL}]:} ISBN number for book.
+\item{\textbf{title} [\texttt{varchar(255) NOT NULL default ''}]:} Title of book.
+\end{itemize}
+
+\section{cache}
+
+The cache table is the structure necessary to maintain an accurate cache.  It
+works like this:  The table starts off empty. A user requests an object from 
+browsing PlanetMath.  The request is served by a perl function which checks 
+the cache table for the 'name'.  If the name is not present, it then calls a 
+procedure which generates the page to the cache directory and proper sub 
+directories (based on the namespace id string).  In the meantime, the entry 
+in the database is still "0" for invalid, but "1" for build. this means all 
+subsequent requests will end up waiting and rechecking the database every 
+(some interval) for valid to go to "1", at which point the page will be 
+served from the cache location. when the page is doing being built, build 
+goes to 0 and valid goes to 1.
+
+The 'rrequests' column tallies the outstanding render requests, and re-renders are prioritized to the objects with the most requests.
+
+Note: If the object is not in the table, this is essentially equivalent to a value of "0" for valid, except after the object goes valid,  It should always have an entry in the table.  This will not hold if the entire cache table is cleared---which is never normally done, but should be safe and can be used to ``reset'' the system if necessary.
+
+\begin{itemize}
+\item{\textbf{build} [\texttt{int(11) default '0'}]:}  1 if object is 
+being built, 0 if not.
+\item{\textbf{objectid} [\texttt{int(11) NOT NULL default '0'}]:} 
+Identifier of objects stored in cache.
+\item{\textbf{tbl} [\texttt{varchar(16) default NULL}]:}  Table in which
+object being cached resides (can be thought of as object type).
+\item{\textbf{valid} [\texttt{int(11) default '0'}]:} 1 if valid in cache, 
+0 if not
+\item{\textbf{bad} [\texttt{int default 0}]:} 
+ The object can be marked ``bad'' if it will not render; in which case the system will ignore it and output a special message when an attempt to display it is made.  As of now, this flag can only be set through the database, as there is no front-end provision for it.
+\item{\textbf{rrequests} [\texttt{int(11) default '0'}]:} Number of re-render requests outstanding; used to prioritize rendering.  
+\item{\textbf{method} [\texttt{char(3) default NULL}]:} Rendering ``method''---``l2h'', ``png'', ``src'' for now---potentially other in the future (such as MathML, which could be encoded as ``mml'').
+\item{\textbf{touched} [\texttt{datetime default NULL}]:}  When the the cache entry was last modified; used to determine which entries have ``timed out'' rendering.
+\end{itemize}
+
+\section{catlinks}
+
+This table stores intra-category scheme links.  These are interpreted as directed links, going from a to b (or left-hand to right-hand).
+
+\begin{itemize}
+\item{\textbf{nsb} [\texttt{int(11) default NULL}]:}  Namespace 'a' (left-hand side).  The Namespace is a particular category scheme.
+\item{\textbf{nsa} [\texttt{int(11) default NULL}]:}  Namespace 'b' (right-hand side).
+\item{\textbf{a} [\texttt{int(11) default NULL}]:}  Left-hand category (by ID).
+\item{\textbf{b} [\texttt{int(11) default NULL}]:}  Right-hand category.
+\end{itemize}
+
+\section{classification}
+
+This table describes how objects such as encyclopaedia entries
+and books are classified.  Note that each record describes the
+assignment of a single classification number to a given object 
+so there may be multiple records pertaining to the same object
+if it is assigned multiple categories.
+
+\begin{itemize}
+\item{\textbf{ns} [\texttt{varchar(16) NOT NULL default ''}]:}  Table describing the classification scheme (namespace).
+\item{\textbf{tbl} [\texttt{varchar(32) NOT NULL default ''}]:}  Table in which object being classified is found.
+\item{\textbf{ord} [\texttt{int(11) default NULL}]:}  In case of multiple categories, this specifies the place (ordinal value) in the list of category codes.
+\item{\textbf{nsid} [\texttt{int(11) default NULL}]:} Namespace (scheme) ID.
+\item{\textbf{catid} [\texttt{int(11) NOT NULL default '0'}]:}  Identifier of the classification code within the
+table describing the classification scheme.
+\item{\textbf{objectid} [\texttt{int(11) NOT NULL default '0'}]:}  Numerical identifier of object being classified 
+within its table.
+\end{itemize}
+
+\section{collab\_uid\_seq}
+
+\begin{itemize}
+\item{\textbf{val} [\texttt{int(11) NOT NULL auto\_increment}]:} Unique ID counter for collab objects table.
+\end{itemize}
+
+\section{collab}
+
+All data pertaining to collaboration objects is stored in this table with one
+record per collaboration object.
+
+\begin{itemize}
+\item{\textbf{uid} [\texttt{int(11) NOT NULL default '0'}]:}  Numerical identifier of collaboration object.
+\item{\textbf{version} [\texttt{int(11) default '1'}]:}  Version of object.
+\item{\textbf{userid} [\texttt{int(11) NOT NULL default '0'}]:}  Number of owner of collaboration.
+\item{\textbf{data} [\texttt{text]}:}  Text of collaboration (complete \TeX~document).
+\item{\textbf{locktime} [\texttt{datetime default NULL}]:}  If locked, the time when the lock was placed; otherwise empty.
+\item{\textbf{modified} [\texttt{datetime default NULL}]:}  Date the object was last modified.
+\item{\textbf{published} [\texttt{tinyint(4) default '0'}]:}  Flag indication whether collaboration has been published.
+\item{\textbf{\_lock} [\texttt{int(11) default '0'}]:}  Flag indication whether collaboration is locked.
+\item{\textbf{created} [\texttt{datetime default NULL}]:}  Date collaboration was begun.
+\item{\textbf{hits} [\texttt{int(11) default '0'}]:}  How many times it has been viewed.
+\item{\textbf{sitedoc} [\texttt{tinyint(4) default '0'}]:}  Flag indication whether collaboration is site document.
+\item{\textbf{title} [\texttt{varchar(255) NOT NULL default ''}]:}  Title of collaboration.
+\item{\textbf{abstract} [\texttt{text}]:}  Abstract of Collaboration document.
+\item{\textbf{lockuser} [\texttt{int(11) default NULL}]:}  If locked, ID of user who locked the collaboration. otherwise empty.
+\end{itemize}
+
+\section{concepts\_id\_seq}
+
+\begin{itemize}
+\item{\textbf{val} [\texttt{int(11) NOT NULL auto\_increment}]:}  Concepts unique ID counter.
+\end{itemize}
+
+\section{concepts}
+
+This table lists all the concepts defined in the encyclopaedia.
+
+\begin{itemize}
+\item{\textbf{istitle} [\texttt{int(11) NOT NULL default '0'}]:}  Indicating whether concept is defined in entry/object title.
+\item{\textbf{isprimary} [\texttt{int(11) NOT NULL default '0'}]:}  Indicates whether is specified as a synonym in entry ('0' value) or whether it is a main definition instance
+\item{\textbf{name} [\texttt{varchar(255) NOT NULL default ''}]:}  Name of concept.
+\item{\textbf{id} [\texttt{int(11) NOT NULL default '0'}]:}  Numerical identifier of concept.
+\item{\textbf{objectid} [\texttt{int(11) NOT NULL default '0'}]:}  Number of entry in which concept is defined.
+\end{itemize}
+
+\section{corrections\_uid\_seq}
+
+\begin{itemize}
+\item{\textbf{val} [\texttt{int(11) NOT NULL auto\_increment}]:}
+Corrections table unique ID counter.
+\end{itemize}
+
+\section{corrections}
+
+This table contains all corrections filed to entries.
+
+\begin{itemize}
+\item{\textbf{closed} [\texttt{datetime default NULL}]:}  If the correction is closed, the date on which it was
+closed, otherwise empty.
+\item{\textbf{uid} [\texttt{int(11) NOT NULL default '0'}]:}  Numerical identifier of correction.
+\item{\textbf{userid} [\texttt{int(11) NOT NULL default '0'}]:}  Number of user filing the correction.
+\item{\textbf{data} [\texttt{text NOT NULL}]:}  Text of correction.
+\item{\textbf{objectid} [\texttt{int(11) NOT NULL default '0'}]:}  Number of entry to which correction is posted.
+\item{\textbf{comment} [\texttt{text}]:}  Optional comment by the user who closed the correction.
+\item{\textbf{filed} [\texttt{datetime default NULL}]:}  Date on which the correction was filed.
+\item{\textbf{accepted} [\texttt{int(11) default NULL}]:}  Indication whether the correction has been accepted (1)
+rejected (0), or retracted (2).  
+\item{\textbf{type} [\texttt{char(3) NOT NULL default ''}]:}  Type of correction.
+\item{\textbf{title} [\texttt{varchar(128) default NULL}]:}  Title of correction.
+\item{\textbf{closedbyid} [\texttt{int(11) NOT NULL default '0'}]:}  number of user who closed the correction, blank is still open.
+\item{\textbf{graceint} [\texttt{int(11) default NULL}]:}  Grace interval: applied when calculating time till the correction becomes outstanding.  This is applied when ownership changes.
+\end{itemize}
+
+\section{corstat}
+
+This table is part of the reputations system plugin.
+
+\begin{itemize}
+\item{\textbf{objectid} [\texttt{??????}]:}  ??????
+\item{\textbf{cnt} [\texttt{?????}]:}  ??????
+\end{itemize}
+
+\section{forums\_uid\_seq}
+
+\begin{itemize}
+\item{\textbf{val} [\texttt{int(11) NOT NULL auto\_increment}]:} Forums unique ID counter.
+\end{itemize}
+
+\section{forums}
+
+Each entry in this table describes a forum.
+
+\begin{itemize}
+\item{\textbf{created} [\texttt{datetime default NULL}]:}  Date forum was created.
+\item{\textbf{uid} [\texttt{int(11) NOT NULL default '0'}]:}  Numerical identifier for forum.
+\item{\textbf{userid} [\texttt{int(11) NOT NULL default '0'}]:}  ID of user who created the forum.
+\item{\textbf{data} [\texttt{text NOT NULL}]:}  Human-readable description of the forum.
+\item{\textbf{title} [\texttt{varchar(128) NOT NULL default ''}]:}  Name of forum.
+\item{\textbf{parentid} [\texttt{int(11) default NULL}]:} Parent forum (for hierarchy), if any.
+\item{\textbf{modified} [\texttt{datetime default NULL}]:} Date forum was last modified.
+\end{itemize}
+
+\section{group\_members}
+
+This table describes membership in editor groups.  Each
+record states that a certain user belongs to a certain froup.
+
+\begin{itemize}
+\item{\textbf{userid} [\texttt{int(11) NOT NULL default '0'}]:}  Number of user.
+\item{\textbf{groupid} [\texttt{int(11) NOT NULL default '0'}]:} number of group to which user belongs.
+\end{itemize}
+
+\section{groups\_groupid\_seq}
+
+\begin{itemize}
+\item{\textbf{val} [\texttt{int(11) NOT NULL auto\_increment}]:}  Group table unique identifier.
+\end{itemize}
+
+\section{groups}
+
+This table lists all the editor groups in PM.
+
+\begin{itemize}
+\item{\textbf{groupname} [\texttt{varchar(128) default NULL}]:}  Name of group.
+\item{\textbf{userid} [\texttt{int(11) NOT NULL default '0'}]:}  Number of user who founded the group.
+\item{\textbf{groupid} [\texttt{int(11) NOT NULL default '0'}]:}  ID number of the group.
+\item{\textbf{description} [\texttt{text}]:}  Description of the group.
+\end{itemize}
+
+\section{hits}
+
+This table records individual access events to PM objects.
+
+\begin{itemize}
+\item{\textbf{uid} [\texttt{int(11) NOT NULL auto\_increment}]:}
+Numerical identifer of access event.
+\item{\textbf{objectid} [\texttt{int(11) NOT NULL default '0'}]:}
+Identifier of object being accessed.
+\item{\textbf{tblid} [\texttt{int(11) NOT NULL default '0'}]:}
+Numerical identifier of table in which object accessed resides
+(as per tdesc table).
+\item{\textbf{at} [\texttt{timestamp(14) NOT NULL}]:}
+Time of access.
+\end{itemize}
+
+\section{inv\_dfs}
+
+Invalidation table -- document frequencies.  
+
+The invalidation system maps word tuples to entries so that the system can 
+invalidate (in terms of rendering cache) entries that may be effected by the 
+addition or removal of terms to the corpus.
+
+This table primarily keeps track of document frequencies -- the number of 
+documents (objects) a word or phrase appears in.  This is used for determining
+whether even longer phrases (generated by adding one word to the current phrase)
+need to also be indexed.  This is key in making this into an \emph{adaptive} 
+inverted index tracking tuples, not just single worlds.
+
+\begin{itemize}
+\item{\textbf{id} [\texttt{int(11) NOT NULL}]:} The word or phrase ID.
+\item{\textbf{word\_or\_phrase} [\texttt{tinyint(4) NOT NULL}]:}  Whether this is a single word or phrase (tells us which table to look it up in).
+\item{\textbf{count} [\texttt{tinyint(4) NOT NULL}]:}  Document frequency count.
+\end{itemize}
+
+\section{inv\_idx}
+
+Main invalidation index of occurrences.
+
+Note that unlike a search engine index, we do not bother tracking term frequency (the actual count of occurrences in the document).  This is because we only care  about whether the phrase occurs at all in the record (if so; we may need to invalidate the object; if not, then we can ignore it).
+
+\begin{itemize}
+\item{\textbf{id} [\texttt{int(11) NOT NULL}]:}  Word or phrase ID.
+\item{\textbf{word\_or\_phrase} [\texttt{tinyint(4) NOT NULL}]:} Whether the current record is for a word or phrase (tells us what table to look it up in).
+\item{\textbf{objectid} [\texttt{int(11) NOT NULL}]:} The object ID the word or phrase occurs in.
+\end{itemize}
+
+\section{inv\_phrases}
+
+Dictionary of invalidation index phrases (multi-word tuples).
+
+\begin{itemize}
+\item{\textbf{id} [\texttt{mediumint(8) unsigned not null auto\_increment}]:}
+Unique ID of this phrase.
+\item{\textbf{phrase} [\texttt{char(255) not null}]:}
+The phrase itself (as a text string).
+\end{itemize}
+
+\section{inv\_words}
+
+Invalidation index words dictionary (as in single words; one-word ``tuples'', which is just like a normal inverted index).
+
+\begin{itemize}
+\item{\textbf{word} [\texttt{char(32) NOT NULL UNIQUE}]:}
+The word (human-readable text form).
+\item{\textbf{id} [\texttt{mediumint unsigned not null auto\_increment}]:}
+Unique identifier of the word.
+\end{itemize}
+
+\section{lastmsg}
+
+This table contains the ID of the last message posted to a forum when last
+viewed by each user. This is used to determine if there have been new messages
+since last view.
+
+\begin{itemize}
+\item{\textbf{objid} [\texttt{int(11) NOT NULL default '0'}]:}
+ The forum object ID.
+\item{\textbf{tbl} [\texttt{varchar(32) NOT NULL default ''}]:} 
+ Table of the forum object (always 'forums' for now).
+\item{\textbf{lastmsg} [\texttt{int(11) NOT NULL default '0'}]:}
+ Last-seen message ID.
+\item{\textbf{userid} [\texttt{int(11) NOT NULL default '0'}]:}
+ User ID for this record.
+\end{itemize}
+
+\section{lec\_uid\_seq}
+
+\begin{itemize}
+\item{\textbf{val} [\texttt{int(11) NOT NULL auto\_increment}]:}  Lectures/expositions unique ID counter.
+\end{itemize}
+
+\section{lec}
+
+The contents of the Expositions (lectures) section of PM are stored in this table.
+
+\begin{itemize}
+\item{\textbf{rights} [\texttt{varchar(255) default ''}]:}  Copyright terms for the exposition.  
+\item{\textbf{authors} [\texttt{varchar(255) default NULL}]:}  Author(s) of the exposition.
+\item{\textbf{msc} [\texttt{varchar(16) default NULL}]:}  MSC number(s) describing the subject matter of the exposition.
+\item{\textbf{uid} [\texttt{int(11) NOT NULL default '0'}]:}  Numerical identifier of record.
+\item{\textbf{userid} [\texttt{int(11) NOT NULL default '0'}]:}  Number of user who added the record.
+\item{\textbf{data} [\texttt{text NOT NULL}]:}  Summary of exposition.
+\item{\textbf{urls} [\texttt{text}]:}  URL's for links to exposition.
+\item{\textbf{comments} [\texttt{varchar(128) default NULL}]:}  Comments about exposition.
+\item{\textbf{modified} [\texttt{datetime default NULL}]:}  Date the record was last modified.
+\item{\textbf{created} [\texttt{datetime default NULL}]:}  Date the record was added to the Expositions section.
+\item{\textbf{keywords} [\texttt{varchar(128) default ''}]:}  Keywords for search purposes.
+\item{\textbf{hits} [\texttt{int(11) default '0'}]:}  How many times this has been accessed.
+\item{\textbf{title} [\texttt{varchar(255) NOT NULL default ''}]:}  Title of the exposition.
+\end{itemize}
+
+\section{links}
+
+This table records links between encyclopedia objects, which for the most 
+part are automatically generated.
+
+\begin{itemize}
+\item{\textbf{totbl} [\texttt{varchar(16) NOT NULL default ''}]:}
+ Table in which object to which link points resides (always 'objects' for now, which is encyclopedia objects).
+\item{\textbf{fromid} [\texttt{int(11) NOT NULL default '0'}]:}
+ Identifier of object from which link points.
+\item{\textbf{toid} [\texttt{int(11) NOT NULL default '0'}]:}
+ Identifier of object to which link points.
+\item{\textbf{fromtbl} [\texttt{varchar(16) NOT NULL default ''}]:}
+ Table in which object from which link points resides (also always 'objects').
+\end{itemize}
+
+\section{mail\_uid\_seq}
+
+\begin{itemize}
+\item{\textbf{val} [\texttt{int(11) NOT NULL auto\_increment}]:} Noosphere mail unique ID counter.
+\end{itemize}
+
+\section{mail}
+
+This table stores all the Noosphere internal mails sent between users.
+
+\begin{itemize}
+\item{\textbf{body} [\texttt{text NOT NULL}]:}  Text of letter.
+\item{\textbf{userfrom} [\texttt{int(11) NOT NULL default '0'}]:}  Number of user sending the letter.
+\item{\textbf{userto} [\texttt{int(11) NOT NULL default '0'}]:}  Number of user receiving the letter.
+\item{\textbf{uid} [\texttt{:int(11) NOT NULL default '0'}]}  Identifier for this particular letter.
+\item{\textbf{subject} [\texttt{varchar(128) NOT NULL default ''}]:}  Subject heading of letter.
+\item{\textbf{sent} [\texttt{datetime default NULL}]:}  Date when letter was sent.
+\item{\textbf{\_read} [\texttt{int(11) default NULL}]:}  Flag indicating whether letter was read by recipient.
+\end{itemize}
+
+\section{messages\_uid\_seq}
+
+\begin{itemize}
+\item{\textbf{val} [\texttt{int(11) NOT NULL auto\_increment}]:} Forum (and object-attached) messages unique ID counter.
+\end{itemize}
+
+\section{messages}
+
+This table contains all messages posted to fora, entries,
+corrections and anywhere else one can post a message on PM.
+
+\begin{itemize}
+\item{\textbf{visible} [\texttt{tinyint(4) not null default '1'}]:}  This flag may not be in use.
+\item{\textbf{uid} [\texttt{int(11) NOT NULL default '0'}]:}  Unique identifier of message.
+\item{\textbf{subject} [\texttt{varchar(128) default 'none'}]:}  Subject heading of message.
+\item{\textbf{userid} [\texttt{int(11) NOT NULL default '0'}]:}  ID of user posting message.
+\item{\textbf{objectid} [\texttt{int(11) NOT NULL default '0'}]:}  Identifier of object to which message is posted. 
+\item{\textbf{tbl} [\texttt{varchar(16) default NULL}]:}  Table in which object to which message was posted is located.
+\item{\textbf{created} [\texttt{datetime default NULL}]:}  Date on which message was posted.
+\item{\textbf{body} [\texttt{text}]:}  Text of message.
+\item{\textbf{threadid} [\texttt{int(11) default NULL}]:}  Number of first message in thread to which message 
+belongs; same as uid if message is directly posted to a forum or similar
+place as opposed to replying to another message (in other words, if this is the first message in the thread, then threadid = uid).
+\item{\textbf{replyto} [\texttt{int(11) default '-1'}]:}  If message is a reply to some other message, the identifier
+of that message, otherwise -1.
+\end{itemize}
+
+\section{msc}
+
+The local copy of the MSC resides in this table.  Each record
+pertains to a specific category.
+
+\begin{itemize}
+\item{\textbf{uid} [\texttt{int(11) NOT NULL default '0'}]:}  
+ Internal Unique ID of this category.
+\item{\textbf{id} [\texttt{varchar(6) NOT NULL default ''}]:}   
+ Public unambiguous 'code' for the category.
+\item{\textbf{parent} [\texttt{varchar(6) default NULL}]:} 
+ Parent category of this category (if applicable).
+\item{\textbf{comment} [\texttt{varchar(128) default NULL}]:} 
+ Description of the category.
+\end{itemize}
+
+\section{nag}
+
+This table keeps track of automated nags for outstanding corrections.
+
+\begin{itemize}
+\item{\textbf{lastnag} [\texttt{datetime default NULL}]:}  
+  Date of most recent automatically generated nag.
+\item{\textbf{cid} [\texttt{int(11) default NULL}]:}  
+ Identifier of correction which is subject of nag.
+\end{itemize}
+
+\section{news\_uid\_seq}
+
+\begin{itemize}
+\item{\textbf{val} [\texttt{int(11) NOT NULL auto\_increment}]:} News items unique ID counter.
+\end{itemize}
+
+\section{news}
+
+This table stores news items posted in the box on the home page (or in blog mode, scrolling down the whole front page).
+
+\begin{itemize}
+\item{\textbf{uid} [\texttt{int(11) NOT NULL default '0'}]:}  
+ Unique identifier of news item.
+\item{\textbf{intro} [\texttt{text}]:}  
+ Lead-in 'teaser' which shows up on the main page or which could be pulled as
+a description for an RSS feed or similar.
+\item{\textbf{userid} [\texttt{int(11) NOT NULL default '0'}]:}  
+ Number of user posting the news item.
+\item{\textbf{modified} [\texttt{datetime default NULL}]:}  
+ Date the news item was last modified.
+\item{\textbf{created} [\texttt{datetime default NULL}]:}  
+ Date the news item was posted.
+\item{\textbf{body} [\texttt{text}]:}  
+ Main text of news item.
+\item{\textbf{hits} [\texttt{int(11) default '0'}]:}  
+ How many times this news item has been accessed.
+\item{\textbf{title} [\texttt{varchar(128) NOT NULL default ''}]:}  
+ Headline of news item.
+\end{itemize}
+
+\section{notices\_uid\_seq}
+
+\begin{itemize}
+\item{\textbf{val} [\texttt{int(11) NOT NULL auto\_increment}]:} Notices table unique ID counter.
+\end{itemize}
+
+\section{notices}
+
+Notices sent to users are stored in this table.  These record events like post replies, any posts to objects being watched, corrections, and so forth.
+
+\begin{itemize}
+\item{\textbf{choice\_action} [\texttt{text}]:}  
+ A menu of possible responses to the notice, if applicable (these are URLs encoded into the text field).
+\item{\textbf{uid} [\texttt{int(11) NOT NULL default '0'}]:}  
+ Unique ID of notice.
+\item{\textbf{userid} [\texttt{int(11) NOT NULL default '0'}]:} 
+ ID of user being notified
+\item{\textbf{choice\_default} [\texttt{int(11) default NULL}]:}  
+ Indication of which of the menu options is 
+the default action which will happen should the recipient of the notice
+not chose an option within a certain time from when the notice was issued.
+\item{\textbf{data} [\texttt{text}]:} 
+ Text description of notice
+\item{\textbf{created} [\texttt{datetime default NULL}]:} 
+ Date of notice issue.
+\item{\textbf{userfrom} [\texttt{int(11) default NULL}]:}  
+ ID of user who caused the action leading to the notice, if applicable.
+\item{\textbf{viewed} [\texttt{int(11) default '0'}]:} 
+ Flag indicating whether the notice has been viewed.
+\item{\textbf{title} [\texttt{varchar(128) default NULL}]:}  
+ Title of notice.
+\item{\textbf{choice\_title} [\texttt{text}]:} 
+ A list of titles for the actions in the menu.
+\end{itemize}
+
+\section{ns}
+
+Category namespaces (schemes) supported.
+
+\begin{itemize}
+\item{\textbf{link} [\texttt{varchar(255) default NULL}]:} Link to web site which is the authority on this scheme. 
+\item{\textbf{shortdesc} [\texttt{varchar(64) NOT NULL default ''}]:} 
+ Short descriptor of the scheme.
+\item{\textbf{longdesc} [\texttt{varchar(255) NOT NULL default ''}]:} 
+ Long description of the scheme.
+\item{\textbf{name} [\texttt{varchar(16) NOT NULL default ''}]:} 
+ Name of the scheme.
+\item{\textbf{id} [\texttt{int(11) default NULL}]:} 
+ Unique ID for the scheme.
+\end{itemize}
+
+\section{object\_rating\_all}
+
+This table is for the ratings/reputation subsystem and is not part of Noosphere proper.
+
+\begin{itemize}
+\item{\textbf{userid} [\texttt{???????}]:}  ???????
+\item{\textbf{answer} [\texttt{???????}]:}  ???????
+\item{\textbf{weight} [\texttt{???????}]:}  ???????
+\item{\textbf{ratid} [\texttt{???????}]:}  ???????
+\end{itemize}
+
+\section{object\_rating}
+
+This table is for the ratings/reputation subsystem and is not part of Noosphere proper.
+
+\begin{itemize}
+\item{\textbf{uid} [\texttt{???????}]:}  ???????
+\item{\textbf{userid} [\texttt{???????}]:}  ???????
+\item{\textbf{value} [\texttt{???????}]:}  ???????
+\end{itemize}
+
+\section{objects\_uid\_seq}
+
+\begin{itemize}
+\item{\textbf{val} [\texttt{int(11) NOT NULL auto\_increment}]:} Encyclopedia objects unique ID counter.
+\end{itemize}
+
+\section{objects}
+
+Encyclopaedia entries are stored in this table.  Each record
+corresponds to a particular entry.  The generic-seeming name of the table is due
+to its origins as the first object table (before books, expositions, papers, etc.).
+
+\begin{itemize}
+\item{\textbf{uid} [\texttt{int(11) NOT NULL default '0'}]:} A numerical identifier unique to the entry.
+\item{\textbf{title} [\texttt{varchar(255) NOT NULL default ''}]:}  The title of the entry.
+\item{\textbf{type} [\texttt{int(11) NOT NULL default '0'}]:}  What type of entry is this, e.g. theorem, proof, definition... (the numerical codes for this field are defined in Config.pm)
+\item{\textbf{parentid} [\texttt{int(11) default NULL}]:}  If the entry happens to be attached to another entry, the
+unique numerical identifier or canonical name of that entry, otherwise blank.
+\item{\textbf{userid} [\texttt{int(11) NOT NULL default '0'}]:}  The numerical identifier of the current owner of the entry.
+\item{\textbf{self} [\texttt{int(11) default NULL}]:} Contains proof for self?
+\item{\textbf{keywords} [\texttt{text}]:} A list of terms associated to the subject of the entry which
+to be used in searching separated by commas; note that synonyms should not
+be repeated in this list.
+\item{\textbf{hits} [\texttt{int(11) default '0'}]:} How many times the entry has been accessed.
+\item{\textbf{synonyms} [\texttt{text}]:}  A list of commonly-used terms synonymous with the titular concept of the entry.
+\item{\textbf{defines} [\texttt{text}]:}  A list of additional terms defined in the entry separated by commas; 
+by default, the title is considered as being defined by the entry, so it 
+need not be listed here.
+\item{\textbf{linkpolicy} [\texttt{text}]:}  The linking policy of the entry in question (modifies automatic linking behavior to the entry).
+\item{\textbf{pronounce} [\texttt{varchar(255) default NULL}]:}  Pronounciation guide for the title.
+\item{\textbf{version} [\texttt{int(11) default NULL}]:}  Number of current version (due to edit history).
+\item{\textbf{preamble} [\texttt{text}]:}  The \TeX ~preamble for the entry.  This contains
+definitions and instructions to load packages.
+\item{\textbf{name} [\texttt{varchar(255) NOT NULL default ''}]:}  A unique canonical name which identifies the entry (the html page for the entry is derived from this).
+\item{\textbf{data} [\texttt{text NOT NULL}]:}  The \TeX ~source for the entry.  Note that this should
+not include instructions to begin and end the document, macro definitions,
+or instructions to include packages.  Rather, the code specified here is
+combined with the preamble to produce a complete \TeX~file which is
+then processed to produce a viewable version of the entry.
+\item{\textbf{modified} [\texttt{datetime default NULL}]:}  Date on which the current version was made.
+\item{\textbf{created} [\texttt{datetime default NULL}]:} Date on whhich the original version of the entry was
+added to the collection.
+\item{\textbf{related} [\texttt{text}]:}  A list of canonical names of entries which discuss 
+related material separated by commas.
+\end{itemize}
+
+\section{objindex}
+
+This table lists various information for Noosphere objects (this table mostly exists to provide in one place metadata for searchable objects).
+
+\begin{itemize}
+\item{\textbf{objectid} [\texttt{int(11) NOT NULL default '0'}]:}  Unique identifier of the object in its table.
+\item{\textbf{tbl} [\texttt{varchar(16) NOT NULL default ''}]:}  Table in which object is located.
+\item{\textbf{userid} [\texttt{int(11) NOT NULL default '0'}]:}  ID of user who owns the object.
+\item{\textbf{ichar} [\texttt{char(1) default NULL}]:}  First letter of object name for alphabetical listing.
+\item{\textbf{type} [\texttt{int(11) NOT NULL default '1'}]:}  Whether this is a primary entry for the object, or a synonym or defines (2 and 3) for the same object.
+\item{\textbf{source} [\texttt{varchar(16) default NULL}]:}  Short name of digital library source originating this object (for provenance).  See 'source' table.
+\item{\textbf{title} [\texttt{varchar(128) NOT NULL default ''}]:}  Title of object.
+\item{\textbf{cname} [\texttt{varchar(128) NOT NULL default ''}]:}  Canonical name, where relevant.
+\end{itemize}
+
+\section{objlinks}
+
+This table contains various sorts of administrative links (as opposed to user-facing definitional links) such as links  from a request to the object requested.  
+
+\begin{itemize}
+\item{\textbf{uid} [\texttt{int(11) NOT NULL auto\_increment}]:}
+Unique numerical identifier of this link.
+\item{\textbf{srcid} [\texttt{varchar(32) NOT NULL default ''}]:}
+Indentifier of source of link.
+\item{\textbf{destid} [\texttt{varchar(32) NOT NULL default ''}]:}
+Identifier of destination of link.
+\item{\textbf{desttbl} [\texttt{varchar(32) NOT NULL default ''}]:}
+Table in which destination resides.
+\item{\textbf{srctbl} [\texttt{varchar(32) NOT NULL default ''}]:}
+Table in which source resides.
+\item{\textbf{note} [\texttt{varchar(128) default NULL}]:}  ?????
+\end{itemize}
+
+\section{ownerlog}
+
+This table documents changes of ownership of Noosphere objects.
+Each record corresponds to a single change of ownership of an object.
+
+\begin{itemize}
+\item{\textbf{objectid} [\texttt{integer}]:}  Numerical identifier of object whose ownership changed.
+\item{\textbf{tbl} [\texttt{varchar(16)}]:}  Table in which object in question resides.
+\item{\textbf{ts} [\texttt{datetime}]:}  Date on which ownership of object changed hands.
+\item{\textbf{userid} [\texttt{integer}]:}  User ID of former owner.
+\item{\textbf{action} [\texttt{varchar(1)}]:}  Why ownership changed --- ``o'' for orphaning,``t'' for transfer, ``a'' for abandon.
+\end{itemize}
+
+\section{papers\_uid\_seq}
+
+\begin{itemize}
+\item{\textbf{val} [\texttt{int(11) NOT NULL auto\_increment}]:} Counter for paper object unique IDs.
+\end{itemize}
+
+\section{papers}
+
+The contents of the papers section of Noosphere are stored in this table.
+
+\begin{itemize}
+\item{\textbf{rights} [\texttt{varchar(255) default ''}]:}  Copyright terms of paper.
+\item{\textbf{authors} [\texttt{varchar(255) default NULL}]:}  Author(s) of paper.
+\item{\textbf{msc} [\texttt{varchar(16) default NULL}]:}  MSC number(s) classifying subject of paper.
+\item{\textbf{uid} [\texttt{int(11) NOT NULL default '0'}]:}  Number identifying record.
+\item{\textbf{userid} [\texttt{int(11) NOT NULL default '0'}]:}  number of user who made the record.
+\item{\textbf{data} [\texttt{text NOT NULL}]:}  Abstract of paper.
+\item{\textbf{comments} [\texttt{varchar(128) default NULL}]:} Comments about paper.
+\item{\textbf{modified} [\texttt{datetime default NULL}]:}  Date record was last modified.
+\item{\textbf{created} [\texttt{datetime default NULL}]:}  Date record was added to papers section.
+\item{\textbf{keyword} [\texttt{varchar(128) default ''}]:}  Keywords for search purposes.
+\item{\textbf{hits} [\texttt{int(11) default '0'}]:}  How many times this has been accessed.
+\item{\textbf{title} [\texttt{varchar(255) NOT NULL default ''}]:}  Title of paper.
+\end{itemize}
+
+\section{polls\_uid\_seq}
+
+\begin{itemize}
+\item{\textbf{val} [\texttt{int(11) NOT NULL auto\_increment}]:}  Counter yielding unique IDs for poll objects.
+\end{itemize}
+
+\section{polls}
+
+This table contains the polls conducted on PM.
+
+\begin{itemize}
+\item{\textbf{options} [\texttt{varchar(255) NOT NULL default ''}]:}  The list of possible responses to the poll separated by commas.
+\item{\textbf{uid} [\texttt{int(11) NOT NULL default '0'}]:}  Numerical identifier of poll.
+\item{\textbf{finish} [\texttt{datetime default NULL}]:}  Date on which poll ends.
+\item{\textbf{userid} [\texttt{int(11) NOT NULL default '0'}]:}  Number of user who made the poll.
+\item{\textbf{title} [\texttt{varchar(128) NOT NULL default ''}]:}  Title of poll.
+\item{\textbf{start} [\texttt{datetime default NULL}]:}  Date on which poll starts.
+\end{itemize}
+
+\section{relsuggest}
+
+This table exists to keep track of suggestions regarding reciprocal ``related'' links (the contents of ``see also'' fields when an object is viewed).  When a related link is created, the owner of the destination object needs to receive a notice asking whether the reciprocal link should be created.  When this happens, an entry is added to this table, so that the owner of that object is not asked again whenever the related list of that object is edited.
+
+\begin{itemize}
+\item{\textbf{related} [\texttt{varchar(255) NOT NULL default ''}]:} Canonical name of the related object under consideration.
+\item{\textbf{objectid} [\texttt{int(11) NOT NULL default '0'}]:}  Object ID of the outgoing related link in question. 
+\item{\textbf{tbl} [\texttt{varchar(16) NOT NULL default ''}]:} Table ID of the  above object.  
+\end{itemize}
+
+\section{rendered\_images}
+
+This table contains a cache of rendered equation images (for metadata such as titles, not entry content).
+
+\begin{itemize}
+\item{\textbf{uid} [\texttt{int(11) NOT NULL auto\_increment}]:}
+ Unique ID of this image rendering.
+\item{\textbf{align} [\texttt{varchar(10) default NULL}]:} 
+ HTML vertical alignment meta-information (extracted from  latex2html).
+\item{\textbf{variant} [\texttt{varchar(16) NOT NULL}]:}
+ If this is a stylistic variant, which one (i.e. title colors, hyperlink, normal).
+\item{\textbf{imagekey} [\texttt{varchar(128) NOT NULL}]:} 
+ Image key (derived from the equation \TeX ~segment).
+\item{\textbf{image} [\texttt{blob}]:} 
+ The rendered image itself (binary data).
+\end{itemize}
+
+\section{requests\_uid\_seq}
+
+\begin{itemize}
+\item{\textbf{val} [\texttt{int(11) NOT NULL auto\_increment}]:} Encyclopedia requests unique ID  counter. 
+\end{itemize}
+
+\section{requests}
+
+This table stores the user requests for new encyclopaedia entries.
+Each entry documents a single request.
+
+\begin{itemize}
+\item{\textbf{uid} [\texttt{int(11) NOT NULL default '0'}]:}  Unique ID of this entry.
+\item{\textbf{closed} [\texttt{datetime default NULL}]:}  Date on which the request was confirmed.  
+(empty if unfilled or filled but unconfirmed.)
+\item{\textbf{creatorid} [\texttt{int(11) NOT NULL default '0'}]:}  numerical id of the user making the request.
+\item{\textbf{data} [\texttt{text}]:}  The human-readable text of the request.
+\item{\textbf{created} [\texttt{datetime default NULL}]:}  Date on which the request was made.
+\item{\textbf{title} [\texttt{varchar(128) NOT NULL default ''}]:}  Title of the request.
+\item{\textbf{fulfilled} [\texttt{datetime default NULL}]:}  Date on which the request was filled.
+\item{\textbf{fulfillerid} [\texttt{int(11) default NULL}]:}  Number identifying the owner of the
+entry fulfilling the request.
+\end{itemize}
+
+\section{score}
+
+This table contains a detailed accounting of how users'
+scores change.  Each record corresponds to a particular
+event in which a user gains (or loses) points.
+
+\begin{itemize}
+\item{\textbf{delta} [\texttt{int(11) NOT NULL default '0'}]:} Number of points awarded (or forfeited).
+\item{\textbf{uid} [\texttt{int(11) NOT NULL auto\_increment}]:}  Numerical identifier specific to this table.
+\item{\textbf{userid} [\texttt{int(11) NOT NULL default '0'}]:}  User whose score changed.
+\item{\textbf{occured} [\texttt{timestamp(14) NOT NULL}]:}  Date on which the event happened.
+\end{itemize}
+
+\section{searchresults}
+
+This table temporarily stores basic information for search engine results (no matter whether it is the built-in search engine as originally the case, or an external search engine such as ESSEX or Lucene).
+ 
+The 'ts' (timestamp) field is used by a background process to determine whether to delete the search result.
+
+\begin{itemize}
+\item{\textbf{objectid} [\texttt{int(11) NOT NULL default '0'}]:} Unique ID of the result object.
+\item{\textbf{tbl} [\texttt{varchar(16) NOT NULL default ''}]:} Table of the result object.
+\item{\textbf{ts} [\texttt{timestamp(14) NOT NULL}]:} Timestamp of the search.
+\item{\textbf{token} [\texttt{int(11) NOT NULL default '0'}]:} Unique token of the search.
+\item{\textbf{rank} [\texttt{double NOT NULL default '0'}]:} Numerical rank (assigned by the search engine itself, not Noosphere).
+\end{itemize}
+
+\section{source}
+
+Digital library provenance sources of objects (for objects that have been imported).
+
+\begin{itemize}
+\item{\textbf{uid} [\texttt{integer}]:} Unique ID of this source.
+\item{\textbf{nickname} [\texttt{varchar(16)}]:} Short name of source.
+\item{\textbf{url} [\texttt{varchar(255)}]:} Reference URL of source.
+\item{\textbf{name} [\texttt{varchar(255)}]:} Full name of source.
+\end{itemize}
+
+\section{storage}
+
+This table stores cached statistics (typically, statistics which require long-running queries to generate).  It is the main table of the StatCache subsystem. 
+
+\begin{itemize}
+\item{\textbf{\_key} [\texttt{varchar(64) NOT NULL default ''}]:} Unique key of this statistic.
+\item{\textbf{\_val} [\texttt{text}]:} Current value of this statistic.
+\item{\textbf{valid} [\texttt{int(11) default '1'}]:} Is this statistic valid?
+\item{\textbf{timeout} [\texttt{varchar(32) default NULL}]:} How long the statistic is valid for (or NULL for forever/until triggered by an pertinent event).
+\item{\textbf{callback} [\texttt{varchar(32) default NULL}]:} Callback function that generates this statistic (function pointer).
+\item{\textbf{lastupdate} [\texttt{varchar(32) default NULL}]:} When this statistic was last refreshed.  Combined with timeout to determine invalidation.
+\end{itemize}
+
+\section{tdesc}
+
+User-friendly titles for some Noosphere tables.
+
+\begin{itemize}
+\item{\textbf{uid} [\texttt{int(11) default NULL}]:}  Numerical identifier labeling rows of this table.
+\item{\textbf{description} [\texttt{varchar(128) NOT NULL default ''}]:}  User-friendly name.
+\item{\textbf{tname} [\texttt{varchar(32) NOT NULL default ''}]:}  Name which SQL recognizes.
+\end{itemize}
+
+\section{users\_rating}
+
+This belongs to the ratings/reputation module and is not part of Noosphere proper.
+
+\begin{itemize}
+\item{\textbf{ranking} [\texttt{??????}]:}
+\item{\textbf{value} [\texttt{??????}]:}
+\item{\textbf{userid} [\texttt{??????}]:}
+\end{itemize}
+
+\section{users\_uid\_seq}
+
+\begin{itemize}
+\item{\textbf{val} [\texttt{int(11) NOT NULL auto\_increment}]:} User unique ID counter.
+\end{itemize}
+
+\section{users}
+
+This table contains the records of all user accounts on PM.
+
+\begin{itemize}
+\item{\textbf{forename} [\texttt{varchar(64) default ''}]:}  First Name
+\item{\textbf{lastip} [\texttt{varchar(15)}]:} Last IP address from which this user logged in.
+\item{\textbf{state} [\texttt{varchar(128) default ''}]:} State where user is located
+\item{\textbf{email} [\texttt{varchar(255) NOT NULL default ''}]:}  e-mail address of user
+\item{\textbf{password} [\texttt{varchar(32) NOT NULL default ''}]:} PM password
+\item{\textbf{city} [\texttt{varchar(128) default ''}]:}  City in which user is located
+\item{\textbf{prefs} [\texttt{text}]:}  System-wide preferences set by user
+\item{\textbf{bio} [\texttt{text}]:}  Biography of user
+\item{\textbf{country} [\texttt{varchar(128) default ''}]:}  Country where user is located
+\item{\textbf{uid} [\texttt{int(11) NOT NULL default '0'}]:}  Unique number used to identify user
+throughout PM.
+\item{\textbf{access} [\texttt{int(11) default '10'}]:}  Access level of user
+\item{\textbf{active} [\texttt{int(11) default '1'}]:}  Flag indicating whether user is
+active
+\item{\textbf{preamble} [\texttt{text}]:}  Default \TeX~preamble for encyclopaedia
+entries added by the user.
+\item{\textbf{last} [\texttt{datetime default NULL}]:}  Last date on which the user did something
+while logged in.
+\item{\textbf{score} [\texttt{int(11) default '0'}]:}  Score of the user
+\item{\textbf{username} [\texttt{varchar(32) NOT NULL default ''}]:}  Screenname by which user is known.
+\item{\textbf{joined} [\texttt{datetime default NULL}]:}  Date on which user joined PM.
+\item{\textbf{surname} [\texttt{varchar(64) default ''}]:}  Last name of user
+\item{\textbf{homepage} [\texttt{varchar(255) default ''}]:}  Home web page of user
+\item{\textbf{sig} [\texttt{text}]:}  Signature file appended to forum posts
+by user
+\end{itemize}
+
+\section{watches}
+
+This table keeps track of watches placed on objects (most of which are placed by default as per the user's settings).
+
+\begin{itemize}
+\item{\textbf{uid} [\texttt{int(11) NOT NULL auto\_increment}]:}  Unique ID of this watch.
+\item{\textbf{tbl} [\texttt{varchar(16) NOT NULL default ''}]:}  Table in which watched
+object is to be found.
+\item{\textbf{objectid} [\texttt{int(11) NOT NULL default '0'}]:}   Numerical identifier specifying the
+watched object within its table.
+\item{\textbf{userid} [\texttt{int(11) NOT NULL default '0'}]:}  The numerical identifier of the
+user watching the object.
+\end{itemize}
+
+\end{document}
+%%%%%
+\end{document}

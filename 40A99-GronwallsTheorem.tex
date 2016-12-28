@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GronwallsTheorem}
+\pmcreated{2013-03-22 19:33:44}
+\pmmodified{2013-03-22 19:33:44}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Gronwall's theorem}
+\pmrecord{8}{42548}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A99}
+\pmclassification{msc}{11A25}
+\pmclassification{msc}{26A12}
+\pmrelated{EulerMascheroniConstant}
+\pmrelated{RobinsTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{means}
+
+The function
+$$G(n) \; :=\; \frac{\sigma(n)}{n\ln(\ln{n})} \qquad (n \;=\; 2,\,3,\,4,\,\ldots),$$
+in which $\sigma(n)$ means the sum of the positive divisors of $n$, satisfies the equation
+$$\limsup_{n\to\infty}\,G(n) \;=\; e^{\gamma}$$
+where $\gamma$ is the Euler--Mascheroni constant.
+
+
+\begin{thebibliography}{8}
+\bibitem{G}{\sc T. H. Gronwall}:\, Some asymptotic expressions in the theory of numbers.\, $-$ 
+\emph{Trans. Amer. Math. Soc.} \textbf{14} (1913) 113--122.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

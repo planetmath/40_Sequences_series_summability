@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KempnerSeries}
+\pmcreated{2013-03-22 19:12:59}
+\pmmodified{2013-03-22 19:12:59}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Kempner series}
+\pmrecord{8}{42136}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmsynonym{depleted harmonic series}{KempnerSeries}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{contain}
+
+The harmonic series
+\begin{align}
+\sum_{n=1}^\infty\frac{1}{n} \;=\; \frac{1}{1}+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\ldots
+\end{align}
+is divergent.\, The situation is different when one omits from this series all terms whose denominators contain in the \PMlinkname{decimal system}{PositionalNumberSystems} some digits 9.\, Kempner proved 1914 very simply that such a ``\emph{depleted harmonic series}'' is convergent and that its sum is less than 90.\, This series is called \emph{Kempner series}.\, A better value of the sum with 15 decimals is 22.920676619264150.
+
+The digit 9 here has no special status; one has \PMlinkescapetext{similar results} for other digits 
+$0,\,1,\,2,\,\ldots,\,8$ and \PMlinkescapetext{even} for digit strings, as ``716''.\, E.g., we show the convergence of the partial series
+\begin{align*}
+K_0\;
+\begin{cases}
+=&\!\!\frac{1}{1}+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\frac{1}{5}+\frac{1}{6}+\frac{1}{7}+\frac{1}{8}+\frac{1}{9}\\
++&\!\!\frac{1}{11}+\frac{1}{12}+\ldots+\frac{1}{19}+\frac{1}{21}+\ldots\ldots+\frac{1}{99}\\
++&\!\!\frac{1}{111}+\frac{1}{112}+\ldots+\frac{1}{119}+\frac{1}{121}+\ldots\ldots+\frac{1}{999}\\
++&.\;.\;.\;.\;.\;.
+\end{cases}
+\end{align*}
+of (1) where the denominators contain no 0's.\, Every digit in the denominators has nine possibilities.\, For this series we thus get the estimation
+$$K_0 \;<\; 9\!\cdot\!\frac{1}{1}+9\!\cdot\!9\cdot\!\frac{1}{10}+9\!\cdot\!9\!\cdot\!9\!\cdot\frac{1}{100}+\ldots 
+\;=\; 9+9\!\cdot\!\frac{9}{10}+9\!\cdot\!\left(\frac{9}{10}\right)^{\!2}+\ldots
+\;=\; \frac{9}{1\!-\!\frac{9}{10}} \;=\; 90$$
+(a sum of convergent geometric series).
+
+For determining more accurately the sums of depleted harmonic series (cf. \PMlinkexternal{depleted uranium}{http://en.wikipedia.org/wiki/Depleted_uranium}), see the article \PMlinkexternal{Summing the curious series of Kempner and Irwin}{http://arxiv.org/ftp/arxiv/papers/0806/0806.4410.pdf} of Baillie.
+
+%%%%%
+%%%%%
+\end{document}

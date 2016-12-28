@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MultiplicativeCocycle}
+\pmcreated{2014-03-19 22:13:54}
+\pmmodified{2014-03-19 22:13:54}
+\pmowner{Filipe}{28191}
+\pmmodifier{Filipe}{28191}
+\pmtitle{multiplicative cocycle}
+\pmrecord{4}{88074}
+\pmprivacy{1}
+\pmauthor{Filipe}{28191}
+\pmtype{Definition}
+\pmsynonym{cocycle; multiplicative linear cocycle}{MultiplicativeCocycle}
+\pmrelated{Furstenberg-Kesten theorem}
+\pmdefines{multiplicative cocycle}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $f:M\rightarrow M$ be a measurable transformation, and let $\mu$ be an invariant probability measure. Consider $A:M\rightarrow GL(d,\textbf{R})$, a measurable transformation, where GL(d,\textbf{R}) is the space of invertible square matrices of size $d$. We define $A^{-1}:M\rightarrow GL(d,\textbf{R})$ by $A^{-1}(x)=[A(x)]^{-1}$.
+Then we define the sequence of functions:
+$$\phi^n (x)=A(f^{n-1}(x)) \cdots A(f(x))A(x)$$
+$$\phi^{-n}(x)=[\phi^n(f^{-n}(x))]^{-1}$$
+for $n\geq 1$ and $x \in M$.
+
+It is easy to verify that:
+$$\phi^{m+n}(x)=\phi^n(f^m(x))\phi^m(x)$$
+for $n,m\in \textbf{Z}$ and $x \in M$.
+
+The sequence $(\phi^n)_n$ is called a multiplicative cocycle, or just cocycle defined by the transformation $A$.
+\end{document}

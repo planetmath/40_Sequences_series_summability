@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBaronisTheorem}
+\pmcreated{2013-03-22 13:32:33}
+\pmmodified{2013-03-22 13:32:33}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{Proof of Baroni's theorem}
+\pmrecord{5}{34142}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+%\pmkeywords{sequence}
+%\pmkeywords{convergence}
+%\pmkeywords{limit}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $m=\inf A'$ and $M=\sup A'$ . If $m=M$ we are done since the sequence is
+convergent and $A'$ is the degenerate interval composed of the point $l \in
+\mathbb{\overline{R}}$ , where $\displaystyle l=\lim_{n\rightarrow \infty} x_n$.
+
+Now , assume that $m<M$ . For every $\lambda \in (m,M)$ , we will construct
+inductively two subsequences $x_{k_n}$ and $x_{l_n}$ such that $\displaystyle
+\lim_{n \rightarrow \infty} x_{k_n} = \lim_{n\rightarrow \infty} x_{l_n} = \lambda$
+and $\displaystyle x_{k_n} < \lambda < x_{l_n}$
+
+From the definition of $M$ there is an $N_1 \in \mathbb{N}$ such that :
+$$ \lambda < x_{N_1} < M $$
+
+Consider the set of all such values $N_1$ . It is bounded from below (because it
+consists only of natural numbers and has at least one element) and thus it has a
+smallest element . Let $n_1$ be the smallest such element and from its definition we
+have $x_{n_1-1} \leq \lambda < x_{n_1}$ . So , choose $k_1=n_1 - 1$ , $l_1=n_1$ .
+Now, there is an $N_2 > k_1$ such that :
+$$ \lambda < x_{N_2} < M$$
+Consider the set of all such values $N_2$ . It is bounded from below and it has a
+smallest element $n_2$ . Choose $k_2 = n_2-1$ and $l_2=n_2$ . Now , proceed by
+induction to construct the sequences $k_n$ and $l_n$ in the same fashion . Since
+$l_n-k_n=1$ we have :
+$$ \lim_{n\rightarrow \infty} x_{k_n} = \lim_{n\rightarrow \infty} x_{l_n}$$ and
+thus they are both equal to $\lambda$.
+%%%%%
+%%%%%
+\end{document}

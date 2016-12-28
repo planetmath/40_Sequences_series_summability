@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ASeriesRelatedToHarmonicSeries}
+\pmcreated{2013-03-22 17:56:40}
+\pmmodified{2013-03-22 17:56:40}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{a series related to harmonic series}
+\pmrecord{5}{40441}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+%\pmkeywords{series with positive terms}
+\pmrelated{PTest}
+\pmrelated{RaabesCriteria}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The series 
+\begin{align}
+\sum_{n=1}^\infty\frac{1}{n\sqrt[n]{n}} = \sum_{n=1}^\infty \frac{1}{n^{1+\frac{1}{n}}}
+\end{align}
+is divergent.\, In fact, since for every positive integer n, one has\, $2^n > n$,\, i.e.\, $\sqrt[n]{n} < 2$, any \PMlinkescapetext{term} of the series satisfies
+$$\frac{1}{n\sqrt[n]{n}} > \frac{1}{2n}.$$
+Because the harmonic series and therefore also $\sum_{1}^\infty\frac{1}{2n}$ diverges, the comparison test implies that the series (1) diverges.
+
+%%%%%
+%%%%%
+\end{document}

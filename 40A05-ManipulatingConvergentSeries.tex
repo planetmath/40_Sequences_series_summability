@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ManipulatingConvergentSeries}
+\pmcreated{2013-03-22 14:50:49}
+\pmmodified{2013-03-22 14:50:49}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{manipulating convergent series}
+\pmrecord{12}{36517}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmclassification{msc}{26A06}
+\pmrelated{SumOfSeries}
+\pmrelated{MultiplicationOfSeries}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem{thmplain}{Theorem}
+\begin{document}
+The \PMlinkescapetext{terms} of the series in the following theorems are supposed to be either real or complex numbers.
+
+\begin{thmplain}
+ \, If the series\, $a_1+a_2+\cdots$\, and\, $b_1+b_2+\cdots$\, converge and have the sums $a$ and $b$, respectively, then also the series
+\begin{align}
+           (a_1+b_1)+(a_2+b_2)+\cdots
+\end{align}
+converges and has the sum $a\!+\!b$.
+\end{thmplain}
+
+{\em Proof.} \,The $n^\mathrm{th}$ partial sum of (1) has the limit
+$$\lim_{n\to\infty}\sum_{j = 1}^n(a_j+b_j) = 
+\lim_{n\to\infty}\sum_{j = 1}^na_j+\lim_{n\to\infty}\sum_{j = 1}^nb_j = a\!+\!b.$$
+
+\begin{thmplain}
+ \, If the series\, $a_1+a_2+\cdots$\, converges having the sum $a$ and if $c$ is any \PMlinkescapetext{constant}, then also the series
+\begin{align}
+              ca_1+ca_2+\cdots
+\end{align}
+converges and has the sum $ca$.
+\end{thmplain}
+
+{\em Proof.} \,The $n^\mathrm{th}$ partial sum of (2) has the limit
+$$\lim_{n\to\infty}\sum_{j = 1}^nca_j = c\lim_{n\to\infty}\sum_{j = 1}^na_j = 
+ca.$$
+
+\begin{thmplain}
+ \, If the \PMlinkescapetext{terms} of any converging series
+\begin{align}
+a_1+a_2+a_3+\cdots
+\end{align}
+are grouped arbitrarily without changing their \PMlinkescapetext{order}, then the resulting series
+\begin{align}
+(a_1+\cdots+a_{m_1})+(a_{m_1+1}+\cdots+a_{m_2})+(a_{m_2+1}+\cdots+a_{m_3})+\cdots
+\end{align}
+also converges and its sum equals to the sum of (3).
+\end{thmplain}
+
+{\em Proof.} \,Since all the partial sums of (4) are simultaneously partial sums of (3), they have as limit the sum of the series (3).
+%%%%%
+%%%%%
+\end{document}

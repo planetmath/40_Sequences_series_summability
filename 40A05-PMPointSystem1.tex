@@ -1,0 +1,228 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PMPointSystem1}
+\pmcreated{2013-03-11 19:33:08}
+\pmmodified{2013-03-11 19:33:08}
+\pmowner{CWoo}{3771}
+\pmmodifier{}{0}
+\pmtitle{PM Point System}
+\pmrecord{1}{50114}
+\pmprivacy{1}
+\pmauthor{CWoo}{0}
+\pmtype{Definition}
+
+%none for now
+\begin{document}
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage{ulem}
+\begin{document}
+
+\title{PlanetMath Point System - Draft Version}
+
+\date{\today}
+
+\maketitle
+
+\tableofcontents
+
+\section{Introduction}
+This portion contains the various rules on how points are awarded to or deducted from users.  (mostly adapted from 
+
+\texttt{\htmladdnormallink{PlanetMath/Noosphere Scoring}{http://planetmath.org/?op=getobj&from=collab&id=30}})
+
+The PlanetMath Point System is developed to motivate the PlanetMath users to actively participate in the PlanetMath community in a positive and productive manner.
+
+A user starts with $0$ points in his/her account when he/she first signs up with PlanetMath.  Each time a user earns points due to a given activity, the points are added to his/her account.
+
+The way the point system works is by having a basic set of ``base points'' awarded to basic activities (defined below) done on PlanetMath.  In addition, more complicated awarding schemes are used with more complex activities.
+
+Certain activities can result in points being forfeited.  When such a case occurs, negative points are awarded.
+
+\section{Base Points}
+The following table describes the basic activities and the corresponding base points awarded.
+
+\begin{center}
+\begin{tabular}{|l|r|}
+\hline
+basic activity & base point \\
+\hline
+addition of a publishable encyclopedia entry & 100 \\
+\hline
+addition of a publishable non-encyclopedia entry & 20 \\
+\hline
+addition of a non-publishable entry & 10 \\
+\hline
+addition of a book & 100 \\
+\hline
+addition of a paper & 50 \\
+\hline
+addition of an exposition & 75 \\
+\hline
+addition of a forum post & 1 \\
+\hline
+voting in a poll & 1 \\
+\hline
+\end{tabular}
+\end{center}
+
+For example, if a user writes three entries, one is publishable encyclopedic, one is publishable non-encyclopedic, and one is not publishable, the total number of points earned by the user based on the addition of these three entries is 120.
+
+\section{Additives}
+A user may earn additional points based on additional activities that are done to past activities.  For example, if a user revises an existing PM entry, certain points may be earned as a result of this activity.  The past activity, in this case, is the addition of the original entry.  The user does not have to be responsible for both activities to earn the points (please see examples below).  Currently, PlanetMath only has provisions for a point system for past activities that are related to entry contribution.
+
+Below is a table that shows the activities and the corresponding additional points that can be earned by a user.
+
+\begin{center}
+\begin{tabular}{|l|r|}
+\hline
+additional activity & point \\
+\hline
+correction accepted (erratum) & 30 \\
+\hline
+correction accepted (addendum) & 20 \\
+\hline
+correction accepted (meta or minor) & 10 \\
+\hline
+revision of a publishable encyclopedic entry & 5 \\
+\hline
+revision of a entry that is neither publishable nor encyclopedic & 0 \\
+\hline
+minor administrative edits (??) & 5 \\
+\hline
+\end{tabular}
+\end{center}
+
+Below are some examples illustrating how the additives work:
+\begin{itemize}
+\item A user revises two of his own entries, one publishable encyclopedic, one not publishable: total points earned $=5$.
+\item A user revises two publishable entries, one encyclopedic, one non-encyclopedic, neither of which he owns: total points earned $=5$.
+\item A user files two correction notices, one of which is minor and is accepted, the other is major (erratum) and is rejected: total points earned $=10$.
+\end{itemize}
+
+\section{Points associated with an entry}
+
+The evaluation of points can be based on a specific object.  In most cases, this object is a PlanetMath entry.  For example, if publishable encyclopedic entry is added, and two revisions are made to it, then the points associated with that entry is $100+5+5=110$.
+
+Below, we will see some more complicated examples of evaluation of points associated with an entry.
+
+\section{Reclassification of an Entry}
+
+If an entry is reclassified, the points associated with the entry will be scaled to correspond to its new classification.  Define the \emph{state} of an entry by the pair $(a,b)$ where $a$ denotes whether it is encyclopedic or not, and $b$ denotes whether it is publishable or not.  Any entry can be in any one of four states at any time of its lifetime.
+
+Given a state of an entry, we associate it with a number, called a \emph{scaling factor}.  The following table shows the matrix of scaling factors:
+
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\hline
+classification & encyclopedic & non-encyclopedic \\
+\hline
+publishable & 10 & 2 \\
+\hline
+non-publishable & 1 & 1 \\
+\hline
+\end{tabular}
+\end{center}
+
+The way to find the scaling factor of an entry given its classification is evident from the above matrix.  For example, if an entry is publishable and non-encyclopedic, its scaling factor is 2.
+
+In order to calculate the points gained (or lost) as the result of a reclassification, do the following:
+\begin{enumerate}
+\item Let $p$ be the points associated with the entry prior to reclassification
+\item Let $s_i$ be the scaling factor of the entry prior to reclassification
+\item Let $s_f$ be the scaling factor of the entry after reclassification
+\item The points gained is $$p\frac{s_f}{s_i}-p.$$
+\end{enumerate}
+
+For example, an entry, currently classified as non-publishable non-encyclopedic, and is worth 5 points.  Its user changes it to publishable encyclopedic. The points awarded is $5\cdot\frac{10}{1}-5=45$.  It is easy to come up with examples where a user would lose points due to reclassification.
+
+\section{Transfer of an Entry}
+
+When an entry is transferred from one user to another, some points are transferred from one to another correspondingly.  More precisely, the person losing the entry loses ``some'' of the points associated with the entry, while the person gaining the entry earns the points lost by the other.
+
+Transfers can occur in three ways:
+\begin{enumerate}
+\item A user voluntarily transfers his/her entry to another user
+\item A user orphans or abandons his/her entry, and the entry is picked up or adopted by another user later
+\item An administrative confiscation (takeover) of an entry from a user.
+\end{enumerate}
+
+The exact way ``some'' is calculated is as follows: find the base points associated with the entry to be transferred in its current ``state'' (defined in the previous section).  Let this number be $p$.  Then the person losing the entry will lose $$0.5p$$ points, while the person getting the entry will receive $0.5p$ points.
+
+Below are a series of examples illustrating how transfer works:
+\begin{enumerate}
+\item
+For example, if an entry is transferred from $X$ to $Y$.  At time of transfer, it is worth $60$ points.  However, its state is publishable non-encyclopedic.  As a result, only $0.5\cdot 20=10$ points will be transferred.  In other words, $X$ will lose $10$ points, while $Y$ will gain just $10$ points.
+\item
+Continuing from the example above, if $Y$ changes the entry from publishable non-encyclopedic to publishable encyclopedic and transfers it to $Z$, then $Y$ loses $0.5\cdot 100=50$ points and $Z$ gains $50$ points in the process.
+\item
+$Z$ orphans the entry.  Just prior to orphaning it, the entry is publishable encyclopedic.  Therefore, $Z$ will lose $50$ points.  The $50$ points remains with the entry, until $X$ picks up or adopts the entry later.  He will then receive the $50$ points.
+\end{enumerate}
+
+\section{Entry Deletion}
+
+If an entry is deleted, most of the points associated with the entries are deleted.  The ``most'' portion is calculated as follows: find the base points of the entry at its current state prior to deletion, let this number be $p$.  The points to be deleted are $$pf,$$ where $f$ is determined by the following schedule
+
+\begin{center}
+\begin{tabular}{|l|r|}
+\hline
+entry originally added by & $f$ \\
+\hline
+self & 1.0 \\
+\hline
+another user & 0.5 \\
+\hline
+\end{tabular}
+\end{center}
+
+Below are two examples illustrating how this works:
+\begin{itemize}
+\item User $X$ deletes one of his entries, written by himself.  When it was first written, it was non-publishable and non-encyclopedic.  Just prior to deletion, its state is publishable encyclopedic.  He will thus lose $100\cdot 1=100$ points.
+\item As in the previous example, if the entry was adopted or transferred to $X$  from user $Y$ who first added the entry.  $X$ will lose $100\cdot 0.5=50$ points instead.
+\item Again, as previously, if the entry was transferred back to $X$, who wrote the entry originally, then $X$ will lose $100\cdot 1=100$ points.
+\end{itemize}
+
+\section{Points associated with an entry - Revisited}
+
+With the additional situations (reclassification, transfer, deletion), it can be a bit tricky to calculate the number of points a user has associated with a given entry.  We give one long example to illustrate how the points associated with an entry are calculated.
+
+An entry is created by user $X$, initially set as non-publishable encyclopedic.  After two revisions, the entry becomes encyclopedic.  Subsequently, three additional revisions take place, one as a result of self edit, two as a result of correction notices received by others.  The entry is subsequently transferred to user $Y$, who makes a single revision.
+\begin{itemize}
+\item How many points associated with the entry does each user have?
+\\\\
+Solution.  $X$ earns 10 points for initially adding the entry as non-publishable encyclopedic.  Two revisions later, the entry is still worth 10 points.  When the entry becomes publishable, however, the entry is worth 100 points.  Three additional edits result in 15 points added to the entry.  Before the entry is transferred to $Y$, it is worth 115 points.  After the transfer, $X$ loses $50$ points and $Y$ gains $50$ points.  When $Y$ makes an edit on the entry, 5 point is awarded to him.  So, in the end, $X$ has $115-50=65$ points and $Y$ has $50+5=55$ points.
+\item
+If $Y$ transfers the entry back to user $X$, how many points associated with the entry does each user have?
+\\\\
+Solution.  When $Y$ transfers the entry back to $X$, he loses $50$ points since at time of transfer the entry was publishable encyclopedic.  After the transfer, $X$ has $65+50=115$ points and $Y$ has $55-50=5$ points.
+\item
+If $Y$ deletes the entry instead, how many points associated with the entry does each user have?
+\\\\
+Solution.  Again, since the entry was publishable encyclopedic prior to deletion, $Y$ loses $100\cdot 0.5=50$ points, since he did not add the entry in the first place.  In the end, $X$ still has $65$ points, and $Y$ only has $5$ points left.
+
+Interestingly, if $Y$ transfers the entry back to $X$ and $X$ deletes it, then $X$ only has $15$ points left and $Y$ still just has $5$ points.
+\end{itemize}
+
+\section{Cash Cow}
+
+Administrators: the last example in the previous section leads to an interesting cash cow (loophole) in the PM system, and it seems like this loophole also exists in the current PM system.  Please correct me if I am wrong, as I am going to exhibit some examples.
+
+Users $X$ and $Y$ are good friends.  Neither one of them really want to work very hard.  They figure out a way to earn PM points without contributing to entries.  $X$ writes an entry worth 100 points.  He transfers it to $Y$ and asks $Y$ to delete it for him.  In the end $X$ ends up with $50$ points.  Later $Y$ asks $X$ to do the same thing for him too, so $Y$ also ends up with $50$ points.  Neither of them own any entries, and they both end up $50$ points more.
+
+Possible fix 1: When a transfer of entry occurs, do not apply the $0.5$ factor to $p$, but use all of $p$ instead (refer to section 6 on detail on transfers).  Furthermore, when deleting an entry, again do not use $f=0.5$, but use $f=1$ in all cases (refer to section 7 for detail on deletion).
+\\\\
+However, the possible fix 1 does not really fix the problem.  We have users $X$ and $Y$ again.  User $X$ writes a bogus entry initially worth 100 points.  He makes 10 empty edits himself and transfers it to $Y$.  He loses 100 points as the result of Possible fix 1.  But he retains $10\cdot 5=50$ points from the edits.  $Y$ deletes the entry for him, so $X$ is left with $50$ points.  $Y$ does the same later and he receives $50$ points.  Again, neither of them have any entries left but they are $50$ points richer.
+
+Possible fix 2: In addition to Possible fix 1, a transfer of entry should also transfer \emph{all} points associated with the entry at time of transfer.
+\\\\
+In other words, the PM system has to be able to figure out exactly how many points are associated with every entry now.  I am not sure the PM system has that ability now.  If not, it will be a desirable thing to have, because I think Possible fix 2 will solve the Cash Cow problem.
+
+\section*{Revisions}
+
+\begin{enumerate}
+\item Moved Point System from the PM Community Guidelines (6-16-2007) --[[Cwoo]]
+\end{enumerate}
+
+\end{document}
+%%%%%
+\end{document}

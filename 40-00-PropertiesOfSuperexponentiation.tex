@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfSuperexponentiation}
+\pmcreated{2013-03-22 19:07:21}
+\pmmodified{2013-03-22 19:07:21}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{properties of superexponentiation}
+\pmrecord{7}{42017}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40-00}
+\pmclassification{msc}{03D20}
+\pmrelated{SuperexponentiationIsNotElementary}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+In this entry, we list some basic properties of the superexponetial function $f:\mathbb{N}^2 \to \mathbb{N}$, defined recursively by $$f(m,0)=m,\qquad f(m,n+1)=m^{f(m,n)}.$$
+Furthermore, we set $f(0,n):=0$ for all $n$.
+
+Given $m$, the values of $f$ are $$m, m^m, m^{m^m}, \cdots, m^{\ldotp \cdotp ^m}, \cdots,$$ where the evaluation of these values start from the top, for example: $3^{3^3}=3^{81}$.
+
+\begin{prop}  Suppose $x,y,z\in \mathbb{N}$ (including $0$), and for all except the first assertion, $x>1$.
+\begin{enumerate}
+\item $x \le f(x,y)$.
+\item $f(x,y)$ is increasing in both arguments.
+\item $2f(x,y)\le f(x,y+1)$.
+\item $f(x,y)^2 \le f(x,y+1)$.
+\item $f(x,y)^{f(x,y)} \le f(x,y+2)$
+\item $f(x,y)+f(x,z) \le f(x,1+\max\lbrace y,z\rbrace)$.
+\item $f(x,y)\cdot f(x,z)\le f(x,1+\max\lbrace y,z\rbrace)$.
+\item $f(x,y)^{f(x,z)} \le f(x,2+\max\lbrace y,z\rbrace)$.
+\item $f(f(x,y),z) \le f(x, y+2z)$.
+\item $y < f(x,y)$.
+\end{enumerate}
+\end{prop}
+
+\begin{proof}  Most of the proofs are done by induction.
+\begin{enumerate}
+\item The case when $x=0$ is obvious.  Assume now that $x\ne 0$.  Induct on $y$.  The case $y=0$ is clear.  Suppose $x\le f(x,y)$.  Then $x\le x^x \le x^{f(x,y)}= f(x,y+1)$.
+\item To see $f(x,y)< f(x,y+1)$ for $x>1$, induct on $y$.  First, $f(x,0)=x < x^x = f(x,1)$.  Next, assume $f(x,y)< f(x,y+1)$.  Then $f(x,y+1)=x^{f(x,y)} < x^{f(x,y+1)} = f(x,y+1)$.  
+
+To see $f(x,y)< f(x+1,y)$ for $x>1$, again induct on $y$.  First, $f(x,0)=x < x+1=f(x+1,y)$.  Next, assume $f(x,y)< f(x+1,y)$.  Then $f(x,y+1)=x^{f(x,y)}<(x+1)^{f(x,y)} <(x+1)^{f(x+1,y)}=f(x+1,y+1)$.
+\item Induct on $y$: if $y=0$, then $2f(x,0)=2x \le x^2 \le x^x = f(x,1)$.  Next, assume $2f(x,y)\le f(x,y+1)$.  Then $2f(x,y+1)=x^{f(x,y)}\le x^{2f(x,y)} \le x^{f(x,y+1)}=f(x,y+2)$.
+\item If $y=0$, then $f(x,0)^2 = x^2 \le x^x = x^{f(x,0)}=f(x,1)$.  Otherwise, $y=z+1$.  Then $f(x,y)^2=f(x,z+1)^2 = x^{2f(x,z)} \le x^{f(x,z+1)} = x^{f(x,y)}=f(x,y+1)$.  The inequality $2f(x,z)\le f(x,z+1)$ is derived previously.
+\item If $y=0$, then $f(x,0)^{f(x,0)}=x^x =f(x,1)\le f(x,2)$.  Otherwise, $y=z+1$.  Then $f(x,y)^{f(x,y)}=f(x,z+1)^{f(x,z+1)} = x^{f(x,z)f(x,z+1)} \le x^{f(x,z+1)^2}=x^{f(x,z+2)}=f(x,z+3)=f(x,y+2)$.
+\end{enumerate}
+From the last three statements, the next three proofs can be easily settled, fisrt, let $t=\max\lbrace y,z\rbrace$.  Then
+\begin{enumerate}
+\item[6.] $f(x,y)+f(x,z)\le 2f(x,t) \le f(x,t+1)$.
+\item[7.] $f(x,y)f(x,z)=f(x,t)^2 \le f(x,t+1)$. 
+\item[8.] $f(x,y)^{f(x,z)}\le f(x,t)^{f(x,t)} \le f(x,t+2)$. 
+\item[9.] Induct on $z$.  If $z=0$, then $f(f(x,y),0)=f(x,y)$.  Next, assume $f(f(x,y),z)\le f(x,y+2z)$.  Then $f(f(x,y),z+1)= f(x,y)^{f(f(x,y),z)}= f(x,y)^{f(x,y+2z)} \le f(x,y+1)^{f(x,y+2z)} \le x^{f(x,y)f(x,y+2z)} \le x^{f(x,y+2z+1)}=f(x,y+2z+2)$.
+\item[10.] Induct on $y$.  The case when $y=0$ is obvious.  Next, if $y< f(x,y)$, then $y+1 <f(x,y)+1<f(x,y)+f(x,0) \le f(x,y+1)$.
+\end{enumerate}
+\end{proof}
+
+Concerning the recursiveness of $f$, here is another basic property of $f$:
+\begin{prop} $f$ is primitive recursive. \end{prop}
+\begin{proof}
+Since $f(m,0)=m=p_1^1(m)$ and $f(m,n+1)=\exp(m,f(m,n))=g(m,n,f(m,n))$, where $g(x,y,z)=\exp(p_1^3(x,y,z),p_3^3(x,y,z))$, are defined by primitive recursion via functions $p_1^1$ and $g$, and since the projection functions $p_i^j$, the exponential function $\exp$, and consequently $g$, are primitive recursive ($g$ obtained by composition), we see that $f$ is primitive recursive.
+\end{proof}
+
+\textbf{Remark}.  Another recursive property of $f$ is that $f$ is not elementary recursive.  The proof uses the properties listed above.  It is a bit lengthy, and is done in the link below.
+%%%%%
+%%%%%
+\end{document}

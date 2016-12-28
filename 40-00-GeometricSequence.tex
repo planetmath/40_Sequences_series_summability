@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeometricSequence}
+\pmcreated{2013-03-22 14:38:52}
+\pmmodified{2013-03-22 14:38:52}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{geometric sequence}
+\pmrecord{14}{36238}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40-00}
+\pmrelated{GeometricSeries}
+\pmrelated{LimitOfRealNumberSequence}
+\pmdefines{common ratio}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A sequence of the form
+                       $$a,\,ar,\,ar^2,\,ar^3,\,\ldots$$
+of real or complex numbers is called {\em geometric sequence}.\, \PMlinkescapetext{Characteristic} of the geometric sequence is thus that every two consecutive members of the sequence have the constant ratio $r$, called usually the {\em common ratio} of the sequence (if\, $ar = 0$, \PMlinkescapetext{strictly} speaking the ratio of members does not exist). 
+
+The $n^\mathrm{th}$ member of the geometric sequence has the \PMlinkescapetext{formula}
+                          $$a_n = ar^{n-1}.$$
+Let\, $a \neq 0$.\, The sequence is convergent for\, $|r| < 1$\, having the \PMlinkname{limit}{LimitOfRealNumberSequence} 0, and for\, $r = 1$\, having as constant sequence the limit $a$.
+
+When the members of the sequence are positive numbers, each member is the geometric mean of the preceding and the following member; the name ``geometric sequence''(or ``geometric series'') is due to this fact (a \PMlinkescapetext{comparable} fact is true for the harmonic series and harmonic mean).
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfWeierstrassCriterionOfUniformConvergence}
+\pmcreated{2013-03-22 16:26:28}
+\pmmodified{2013-03-22 16:26:28}
+\pmowner{argerami}{15454}
+\pmmodifier{argerami}{15454}
+\pmtitle{proof of Weierstrass' criterion of uniform convergence}
+\pmrecord{4}{38596}
+\pmprivacy{1}
+\pmauthor{argerami}{15454}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A30}
+\pmclassification{msc}{26A15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The assumption that $|f_n(x)| \le M_n$ for every $x$ guarantees that each numerical series $\sum_n f_n(x)$ converges absolutely. We call the limit $f(x)$.
+
+To see that the convergence is uniform: let $\epsilon>0$. Then there exists $K$ such that $n>K$ implies $\sum_{n>K} M_n < \epsilon$. Now, if $k>K$,
+
+\[
+|f(x)-\sum_{n=1}^k f_n(x)| = |\sum_{n>k} f_n(x) | \le
+\sum_{n>k} |f_n(x)| \le \sum_{n>k} M_n < \epsilon
+\]
+
+The $\epsilon$ does not depend on $x$, so the convergence is uniform.
+
+
+%%%%%
+%%%%%
+\end{document}

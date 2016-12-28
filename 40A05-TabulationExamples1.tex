@@ -1,0 +1,237 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TabulationExamples1}
+\pmcreated{2013-03-11 19:36:07}
+\pmmodified{2013-03-11 19:36:07}
+\pmowner{CWoo}{3771}
+\pmmodifier{}{0}
+\pmtitle{Tabulation Examples}
+\pmrecord{1}{50139}
+\pmprivacy{1}
+\pmauthor{CWoo}{0}
+\pmtype{Definition}
+
+%none for now
+\begin{document}
+\documentclass[12pt]{article}
+\usepackage{html}
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{multicol}
+\usepackage{tabls}
+%\usepackage{multirow}
+\pagestyle{empty}
+
+\begin{document}
+
+
+This documentation serves to illustrate the use of the various packages aiming at creating tables in \LaTeX{} by giving examples of actual code and the corresponding results.  First note that, it is possible to create tables with the list of standard packages provided by the preamble section of a generic PlanetMath entry.  However, the following package 
+\begin{quote}\begin{verbatim}\usepackage{tabls}\end{verbatim}\end{quote}
+is recommended, in particular when the contents of the cells in a table are of different sizes.
+
+\subsection*{Elementary Examples}
+
+\begin{enumerate}
+\item
+\begin{multicols}{2}
+\begin{verbatim}
+\begin{tabular}{c}
+a\\
+bc\\
+def\\
+ghij\\
+klmno
+\end{tabular}
+\end{verbatim}
+\columnbreak
+\begin{tabular}{c}
+a\\
+bc\\
+def\\
+ghij\\
+klmno
+\end{tabular}
+\end{multicols}
+
+\item
+\begin{multicols}{2}
+\begin{verbatim}
+\begin{tabular}{c}
+a\\
+bc\\
+def\\
+ghij\\
+klmno
+\end{tabular}
+\end{verbatim}
+\columnbreak
+\begin{tabular}{c}
+a\\
+bc\\
+def\\
+ghij\\
+klmno
+\end{tabular}
+\end{multicols}
+
+\item 
+\begin{multicols}{2}
+\begin{verbatim}
+\begin{tabular}{|c|}
+a\\
+bc\\
+def\\
+ghij\\
+klmno
+\end{tabular}
+\end{verbatim}
+\columnbreak
+\begin{tabular}{|c|}
+a\\
+bc\\
+def\\
+ghij\\
+klmno
+\end{tabular}
+\end{multicols}
+
+\item
+\begin{multicols}{2}
+\begin{verbatim}
+\begin{tabular}{|c|}
+\hline a\\
+\hline bc\\
+\hline def\\
+\hline ghij\\
+\hline klmno\\
+\hline
+\end{tabular}
+\end{verbatim}
+\columnbreak
+\begin{tabular}{|c|}
+\hline a\\
+\hline bc\\
+\hline def\\
+\hline ghij\\
+\hline klmno\\
+\hline
+\end{tabular}
+\end{multicols}
+
+\item
+\begin{multicols}{2}
+\begin{verbatim}
+\begin{tabular}{|l|}
+\hline a\\
+\hline bc\\
+\hline def\\
+\hline ghij\\
+\hline klmno\\
+\hline
+\end{tabular}
+\end{verbatim}
+\columnbreak
+\begin{tabular}{|l|}
+\hline a\\
+\hline bc\\
+\hline def\\
+\hline ghij\\
+\hline klmno\\
+\hline
+\end{tabular}
+\end{multicols}
+
+\item
+\begin{multicols}{2}
+\begin{verbatim}
+\begin{tabular}{|r|}
+\hline a\\
+\hline bc\\
+\hline def\\
+\hline ghij\\
+\hline klmno\\
+\hline
+\end{tabular}
+\end{verbatim}
+\columnbreak
+\begin{tabular}{|r|}
+\hline a\\
+\hline bc\\
+\hline def\\
+\hline ghij\\
+\hline klmno\\
+\hline
+\end{tabular}
+\end{multicols}
+
+\item
+\begin{multicols}{2}
+\begin{verbatim}
+\begin{tabular}{|c|c|c|c|}
+\hline a & b & c & d \\
+\hline
+\end{tabular}
+\end{verbatim}
+\columnbreak
+\begin{tabular}{|c|c|c|c|}
+\hline a & b & c & d \\
+\hline
+\end{tabular}
+\end{multicols}
+
+\item
+\begin{multicols}{2}
+\begin{verbatim}
+\begin{tabular}{|c|c|c|c|}
+\hline a & b & c & d \\
+\hline e & f & g & h \\
+\hline
+\end{tabular}
+\end{verbatim}
+\columnbreak
+\begin{tabular}{|c|c|c|c|}
+\hline a & b & c & d \\
+\hline e & f & g & h \\
+\hline
+\end{tabular}
+\end{multicols}
+
+
+\end{enumerate}
+
+The above list of elementary examples will at least get you started with creating basic tables.  However, there is nothing fancy about these tables.  Certainly one can improve the appearance of a table with some added tricks.  Below are more examples of tabulation using some fancier tricks.
+
+
+\subsection*{Examples}
+
+\begin{enumerate}
+\item
+
+\begin{multicols}{2}
+\begin{verbatim}
+\begin{tabular}{|c||c|c|c|}
+\hline $\times$ & 0 & 1 & 2 \\
+\hline
+\hline 0 & 0 & 0 & 0 \\
+\hline 1 & 0 & 1 & 2 \\
+\hline 2 & 0 & 2 & 4 \\
+\hline
+\end{tabular}
+\end{verbatim}
+\columnbreak
+\begin{tabular}{|c||c|c|c|}
+\hline $\times$ & 0 & 1 & 2 \\
+\hline
+\hline 0 & 0 & 0 & 0 \\
+\hline 1 & 0 & 1 & 2 \\
+\hline 2 & 0 & 2 & 4 \\
+\hline
+\end{tabular}
+\end{multicols}
+
+\end{enumerate}
+
+\end{document}
+%%%%%
+\end{document}

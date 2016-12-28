@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfAbsoluteConvergenceTheorem}
+\pmcreated{2013-03-22 13:41:52}
+\pmmodified{2013-03-22 13:41:52}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{proof of absolute convergence theorem}
+\pmrecord{6}{34373}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Suppose that $\sum a_n$ is absolutely convergent, i.e., that $\sum \vert a_n \vert$ is convergent.
+First of all, notice that 
+\[
+  0\le a_n + \vert a_n \vert \le 2 \vert a_n\vert,
+\]
+and since the series $\sum (a_n+\vert a_n\vert)$ has non-negative terms it can be compared with $\sum 2\vert a_n\vert=2\sum \vert a_n\vert$ and hence converges.
+
+On the other hand
+\[
+ \sum_{n=1}^N a_n = \sum_{n=1}^N (a_n+\vert a_n\vert) - \sum_{n=1}^N \vert a_n\vert.
+\]
+Since both the partial sums on the right hand side are convergent, the partial 
+sum on the left hand side is also convergent. So, the series $\sum a_n$ is convergent.
+%%%%%
+%%%%%
+\end{document}

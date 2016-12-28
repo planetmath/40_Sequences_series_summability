@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfIdentityTheoremOfPowerSeries1}
+\pmcreated{2013-03-22 16:48:46}
+\pmmodified{2013-03-22 16:48:46}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of identity theorem of power series}
+\pmrecord{11}{39047}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A30}
+\pmclassification{msc}{30B10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+We can prove the identity theorem for power series
+using divided differences.  From amongst the points
+at which the two series are equal, pick a sequence
+$\{w_k\}_{k=0}^\infty$ which satisfies the following
+three conditions:
+\begin{enumerate}
+\item $\lim_{k \to \infty} w_k = z_0$
+\item $w_m = w_n$ if and only if $m = n$.
+\item $w_k \neq z_0$ for all $k$.
+\end{enumerate}
+Let $f$ be the function determined by one power series 
+and let $g$ be the function determined by the other
+power series:
+\begin{align*}
+f(z) &= \sum_{n=0}^\infty a_n (z - z_0)^n \\
+g(z) &= \sum_{n=0}^\infty b_n (z - z_0)^n
+\end{align*}
+
+Because formation of divided differences involves
+finite sums and dividing by differences of $w_k$'s
+(which all differ from zero by condition 2 above,
+so it is legitimate to divide by them), we may
+carry out the formation of finite diffferences
+on a term-by-term basis.  Using the result about
+divided differences of powers, we have
+\begin{align*}
+\Delta^m f [w_k, \ldots, w_{k+m}] &=
+\sum_{n=m}^\infty a_n D_{mnk} \\
+\Delta^m f [w_k, \ldots, w_{k+m}] &=
+\sum_{n=m}^\infty b_n D_{mnk}
+\end{align*}
+where
+\[
+D_{mnk} = \sum_{j_0 + \ldots j_m = n - m}
+(w_k - z_0)^{j_0} \cdots (w_{k+m} - z_0)^{j_m}.
+\]
+
+Note that $\lim_{k \to infty} D_{mnk} = 0$
+when $m > n$, but $D_{mmk} = 1$.  Since
+power series converge uniformly, we may
+intechange limit and summation to conclude
+\begin{align*}
+\lim_{k \to \infty} \Delta^m f [w_k, \ldots, w_{k+m}] &=
+\sum_{n=m}^\infty a_n \lim_{k \to \infty} D_{mnk} = a_m \\
+\lim_{k \to \infty} \Delta^m g [w_k, \ldots, w_{k+m}] &=
+\sum_{n=m}^\infty b_n \lim_{k \to \infty} D_{mnk} = b_m.
+\end{align*}
+Since, by design, $f(w_k) = g(w_k)$, we have
+\[
+\Delta^m f [w_k, \ldots, w_{k+m}] = 
+\Delta^m g [w_k, \ldots, w_{k+m}],
+\]
+hence $a_m = b_m$ for all $m$.
+%%%%%
+%%%%%
+\end{document}

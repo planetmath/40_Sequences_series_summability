@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfFourierCoefficients1}
+\pmcreated{2013-03-11 19:30:41}
+\pmmodified{2013-03-11 19:30:41}
+\pmowner{swapnizzle}{13346}
+\pmmodifier{}{0}
+\pmtitle{Derivation of Fourier Coefficients}
+\pmrecord{1}{50099}
+\pmprivacy{1}
+\pmauthor{swapnizzle}{0}
+\pmtype{Definition}
+
+%none for now
+\begin{document}
+\documentclass[11pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage{txfonts}
+\usepackage[mathcal]{eucal}
+\usepackage{xy}
+\textheight 9in
+\textwidth 7in
+\oddsidemargin 0in
+\evensidemargin 0in
+\topmargin 0in
+\headheight 0in
+\headsep 0in
+\title{Derivation of Fourier Coefficients}
+\author{Swapnil Sunil Jain}
+\date{December 28, 2006}
+\begin{document}
+\maketitle
+
+As you know, any periodic function $f(t)$ can be written as a Fourier series like the following
+\begin{eqnarray}
+f(t) &=& c_0 + \sum_{n=1}^{\infty} a_n\cos(\omega_n t) + b_n\sin(\omega_n t)
+\end{eqnarray}
+where $\omega_n = n\omega_0$ and $\omega_0 = \frac{2\pi}{T}$  
+
+In the process to find an explicit expression for the coefficients $c_0, a_n, b_n$ in terms of $f(t)$, we write (1) in a slightly different way as the following
+\begin{align}
+f(t) =& \; c_0 + a_1\cos(\omega_1 t) + a_2\cos(\omega_2 t) + ... + a_k\cos(\omega_k t) + ...\nonumber \\
+& \; + b_1\sin(\omega_1 t) + b_2\sin(\omega_2 t) + ... + b_k\sin(\omega_k t) + ...
+\end{align}
+where $k$ is a positive integer.
+
+
+In order to derive the coefficient $c_0$, we take the integral of both sides of (2) over one period. 
+\begin{align*}
+\int_{\tau} f(t) dt =& \; \int_{\tau} c_0 dt + \int_{\tau} a_1\cos(\omega_1 t) dt + \int_{\tau} a_2\cos(\omega_2 t) dt + ... + \int_{\tau} a_k\cos(\omega_k t) dt + ...\\
+& \; + \int_{\tau} b_1\sin(\omega_1 t) dt + \int_{\tau} b_2\sin(\omega_2 t) dt + ... + \int_{\tau} b_k\sin(\omega_k t) dt + ...
+\end{align*}
+where $\tau = [t_0, t_0 + T]$. After evaluating the above equation, all the integrals on the right side with a sine or a cosine term drop out (since the integral of a sine or cosine over one period is zero) and we get
+\begin{align*}
+\int_{\tau} f(t) dt =& \; c_0 \int_{\tau} dt \\
+\Rightarrow  \int_{\tau} f(t) dt =& \; c_0 (T) \\
+\Rightarrow c_0 =& \; \frac{1}{T} \int_{\tau} f(t)dt = \frac{1}{T} \int_{t_0}^{t_0 + T} f(t)dt \\
+\end{align*}
+
+Now, in order to find $a_k$, we multiply both sides of (2) by $\cos(\omega_k t)$ and we arrive at 
+\begin{align*}
+f(t)\cos(\omega_k t) =& \; c_0\cos(\omega_k t) + a_1\cos(\omega_1 t)\cos(\omega_k t) + a_2\cos(\omega_2 t)\cos(\omega_k t) + ... + a_k{\cos}^2(\omega_k t) + ...\\
+& \; + b_1\sin(\omega_1 t)\cos(\omega_k t) + b_2\sin(\omega_2 t)\cos(\omega_k t) + ... + b_k\sin(\omega_k t)\cos(\omega_k t) + ...
+\end{align*}
+Then we take the integral of both sides of the above equation over one period and we get
+\begin{align*}
+\int_{\tau} f(t)\cos(\omega_k t)dt =& \; \int_{\tau} c_0\cos(\omega_k t)dt + \int_{\tau} a_1\cos(\omega_1 t)\cos(\omega_k t)dt + \int_{\tau} a_2\cos(\omega_2 t)\cos(\omega_k t)dt + ... \\
+& \; + \int_{\tau} a_k{\cos}^2(\omega_k t)dt + ... + \int_{\tau} b_1\sin(\omega_1 t)\cos(\omega_k t)dt + \int_{\tau} b_2\sin(\omega_2 t)\cos(\omega_k t)dt + ... \\
+& \; + \int_{\tau} b_k\sin(\omega_k t)\cos(\omega_k t)dt + ... 
+\end{align*}
+By using orthogonality relationships or by literally evaluating the above integrals, we get the following
+\begin{align*}
+\int_{\tau} f(t)\cos(\omega_k t)dt =& \; \int_{\tau} a_k {\cos}^2(\omega_k t)dt \\
+\Rightarrow \int_{\tau} f(t)\cos(\omega_k t)dt =& \; a_k (\frac{T}{2}) \\
+\Rightarrow a_k =& \; \frac{2}{T}\int_{\tau} f(t)\cos(\omega_k t)dt  = \frac{2}{T}\int_{t_0}^{t_0 + T} f(t)\cos(\omega_k t)dt \\
+\end{align*}
+
+Now, the process of finding $b_k$ is similar. We multiply both sides of (2) by $\sin(\omega_k t)$ and we get 
+\begin{align*}
+f(t)\sin(\omega_k t) =& \; c_0\cos(\omega_k t) + a_1\cos(\omega_1 t)\sin(\omega_k t) + a_2\cos(\omega_2 t)\sin(\omega_k t) + ... + a_k\cos(\omega_k t)\sin(\omega_k t) + ...\\
+& \; + b_1\sin(\omega_1 t)\sin(\omega_k t) + b_2\sin(\omega_2 t)\sin(\omega_k t) + ... + b_k{\sin}^2(\omega_k t) + ...
+\end{align*}
+Then we take the integral of both sides of the above equation over one period and we arrive at
+\begin{align*}
+\int_{\tau} f(t)\sin(\omega_k t)dt =& \; \int_{\tau} c_0\cos(\omega_k t)dt + \int_{\tau} a_1\cos(\omega_1 t)\cos(\omega_k t)dt + \int_{\tau} a_2\cos(\omega_2 t)\cos(\omega_k t)dt + ... \\
+& \; + \int_{\tau} a_k\cos(\omega_k t)\sin(\omega_k t)dt + ... + \int_{\tau} b_1\sin(\omega_1 t)\cos(\omega_k t)dt + \int_{\tau} b_2\sin(\omega_2 t)\cos(\omega_k t)dt + ... \\
+& \; + \int_{\tau} b_k{\sin}^2(\omega_k t)dt + ...
+\end{align*}
+By using orthogonality relationships or by literally evaluating the above integrals, we get the following
+\begin{align*}
+\int_{\tau} f(t)\sin(\omega_k t)dt =& \; \int_{\tau} b_k {\sin}^2(\omega_k t)dt \\
+\Rightarrow \int_{\tau} f(t)\sin(\omega_k t)dt =& \; b_k (\frac{T}{2}) \\
+\Rightarrow b_k =& \; \frac{2}{T}\int_{\tau} f(t)\sin(\omega_k t)dt = \frac{2}{T}\int_{t_0}^{t_0 + T} f(t)\sin(\omega_k t)dt \\
+\end{align*}
+ 
+\end{document}
+%%%%%
+\end{document}

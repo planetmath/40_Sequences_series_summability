@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CauchyProduct}
+\pmcreated{2013-03-22 13:37:14}
+\pmmodified{2013-03-22 13:37:14}
+\pmowner{msihl}{2134}
+\pmmodifier{msihl}{2134}
+\pmtitle{Cauchy product}
+\pmrecord{7}{34254}
+\pmprivacy{1}
+\pmauthor{msihl}{2134}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{bbm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $a_k$ and $b_k$ be two sequences of real or complex numbers for 
+$k \in {\mathbb N}_0$ ( ${\mathbb N}_0$ is the set of natural numbers containing zero).
+The Cauchy product is defined by:
+\begin{equation}
+(a \circ b)(k) = \sum_{l=0}^k a_l b_{k-l}.
+\end{equation}
+This is basically the convolution for two sequences.
+Therefore the product of two series $\sum_{k=0}^{\infty} a_k$, $\sum_{k=0}^{\infty} b_k$ is given by:
+\begin{equation}
+\sum_{k=0}^{\infty} c_k = \left(\sum_{k=0}^{\infty} a_k \right)\cdot \left(\sum_{k=0}^{\infty} b_k \right) =
+\sum_{k=0}^{\infty} \sum_{l=0}^k a_l b_{k-l}.
+\end{equation}
+A sufficient condition for the resulting series $\sum_{k=0}^{\infty} c_k$ to be absolutely convergent is that $\sum_{k=0}^{\infty} a_k$ and $\sum_{k=0}^{\infty} b_k$ both converge absolutely .
+%%%%%
+%%%%%
+\end{document}

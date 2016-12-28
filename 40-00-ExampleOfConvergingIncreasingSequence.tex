@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfConvergingIncreasingSequence}
+\pmcreated{2013-03-22 17:40:44}
+\pmmodified{2013-03-22 17:40:44}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{example of converging increasing sequence}
+\pmrecord{6}{40118}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40-00}
+\pmrelated{NthRoot}
+\pmrelated{BolzanosTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let $a$ be a positive real number and $q$ an integer greater than 1.\, Set
+$$x_1 := \sqrt[q]{a},$$
+$$x_2 := \sqrt[q]{a+x_1} = \sqrt[q]{a+\sqrt[q]{a}},$$
+$$x_3 := \sqrt[q]{a+x_2} = \sqrt[q]{a+\sqrt[q]{a+\sqrt[q]{a}}},$$
+and generally
+\begin{align}
+x_n := \sqrt[q]{a+x_{n-1}}.
+\end{align}
+Since\, $x_1 > 0$,\, the two first above equations imply that\, $x_1 < x_2$.\, By induction on $n$ one can show that
+$$x_1 < x_2 < x_3 < \ldots < x_n < \ldots$$
+The numbers $x_n$ are all below a finite bound $M$.\, For demonstrating this, we write the inequality \,$x_n < x_{n+1}$\, in the form \,$x_n < \sqrt[q]{a+x_n}$, which implies \, $x_n^q < a+x_n$,\, i.e.
+\begin{align}
+x_n^q-x_n-a < 0
+\end{align}
+for all $n$.\, We study the polynomial
+$$f(x) := x^q-x-a = x(x^{q-1}-1)-1.$$
+From its latter form we see that the function $f$ attains negative values when\, $0 \leqq x \leqq 1$\, and that $f$ increases monotonically and boundlessly when $x$ increases from 1 to $\infty$.\, Because $f$ as a polynomial function is also continuous, we infer that the equation
+\begin{align}
+x^q-x-a = 0
+\end{align}
+has exactly one \PMlinkescapetext{positive} \PMlinkname{root}{Equation} \, $x = M > 1$,\, and that $f$ is negative for\, $0 < x < 1$\, and positive for\, $x > M$.\, Thus we can conclude by (2) that\, $x_n < M$\, for all values of $n$. 
+
+The proven facts
+$$x_1 < x_2 < x_3 < \ldots < x_n < \ldots < M$$
+settle, by the theorem of the \PMlinkname{parent entry}{NondecreasingSequenceWithUpperBound}, that the sequence 
+$$x_1,\,x_2,\,x_3,\,\ldots,\,x_n,\,\ldots$$
+converges to a limit $x' \leqq M$.
+
+Taking limits of both sides of (1) we see that $x' = \sqrt[q]{a+x'}$,\, i.e.\, $x'^q-x'-a = 0$,\, which means that\, $x' = M$,\, in other words: the limit of the sequence is the only \PMlinkescapetext{positive root} $M$ of the equation (3).\\
+
+\begin{thebibliography}{9}
+\bibitem{NP}{\sc E. Lindel\"of:} {\em Johdatus korkeampaan analyysiin}. Nelj\"as painos.\, Werner S\"oderstr\"om Osakeyhti\"o, Porvoo ja Helsinki (1956).
+\end{thebibliography}
+
+
+%%%%%
+%%%%%
+\end{document}

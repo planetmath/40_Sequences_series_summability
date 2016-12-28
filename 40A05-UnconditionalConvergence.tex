@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UnconditionalConvergence}
+\pmcreated{2013-03-22 15:29:57}
+\pmmodified{2013-03-22 15:29:57}
+\pmowner{kompik}{10588}
+\pmmodifier{kompik}{10588}
+\pmtitle{unconditional convergence}
+\pmrecord{11}{37358}
+\pmprivacy{1}
+\pmauthor{kompik}{10588}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmsynonym{unconditionally convergent}{UnconditionalConvergence}
+\pmrelated{AbsoluteConvergence}
+\pmrelated{ConditionallyConvergentSeriesOfRealNumbersCanBeRearrangedToConvergeToAnyNumber}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\begin{document}
+A series $\displaystyle{\sum_{n=1}^\infty x_n}$ in a Banach space $X$ is \emph{unconditionally convergent}
+if for every permutation $\sigma: \sN \to \sN$ the series $\displaystyle{\sum_{n=1}^\infty x_{\sigma(n)}}$
+converges.
+
+Alternatively, for every chain of finite subsets $S_1\subseteq S_2\subseteq\cdots$ of $\mathbb{N}$, the partial sums
+$$\sum_{k\in S_1} x_k,\mbox{ }\sum_{k\in S_2} x_k,\mbox{ },\ldots$$
+converges.  The trick to see this equivalence is to realize two facts: 1. every subsequence of a convergent sequence is convergent, and 2. every chain $\lbrace S_i\rbrace$ can be enlarged to a maximal chain  $\lbrace T_i\rbrace$, such that $|T_i|=i$.  Then the series indexed by $\{S_i\}$ is a subseries indexed by $\{T_i\}$, which is a subseries of a permutation of the original convergent series.
+
+Yet a third \PMlinkname{equivalent}{Equivalent3} definition is given as follows: A series is unconditionally convergent if
+for every sequence $(\varepsilon_n)_{n=1}^\infty$, with $\varepsilon_n\in\{\pm 1\}$, the
+series $\displaystyle{\sum_{n=1}^\infty \varepsilon_n x_n}$ converges.
+
+Every absolutely convergent series is unconditionally convergent, the converse implication does not hold in general.
+
+When $X=\sR^n$ then by a famous theorem of Riemann $(\sum x_n)$ is unconditionally convergent if and only if it is absolutely convergent.  
+
+\begin{thebibliography}{5}
+
+\bibitem{knopp2} K.~Knopp: {\em {Theory and application of infinite series}}.
+
+\bibitem{knopp} K.~Knopp: {\em {Infinite sequences and series}}.
+
+\bibitem{wojtaszczyk} P.~Wojtaszczyk: {\em {Banach spaces for analysts}}.
+
+\bibitem{heil}
+Ch.~Heil: \PMlinkexternal{A basis theory primer}{http://www.math.gatech.edu/~heil/papers/bases.pdf}.
+
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,268 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompilationOfSuggestedChangesToPMwishList}
+\pmcreated{2013-03-11 19:27:24}
+\pmmodified{2013-03-11 19:27:24}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{}{0}
+\pmtitle{compilation of suggested changes to PM (wish list)}
+\pmrecord{1}{50082}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{0}
+\pmtype{Definition}
+
+%none for now
+\begin{document}
+\documentclass[12pt]{article}
+\usepackage{syntonly}
+\pagestyle{empty}
+\setlength{\paperwidth}{8.5in}
+\setlength{\paperheight}{11in}
+\setlength{\topmargin}{0.00in}
+\setlength{\headsep}{0.00in}
+\setlength{\headheight}{0.00in}
+\setlength{\evensidemargin}{0.00in}
+\setlength{\oddsidemargin}{0.00in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{9.00in}
+\setlength{\voffset}{0.00in}
+\setlength{\hoffset}{0.00in}
+\setlength{\marginparwidth}{0.00in}
+\setlength{\marginparsep}{0.00in}
+\setlength{\parindent}{0.00in}
+\setlength{\parskip}{0.15in}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{xypic}
+\begin{document}
+
+These are all of the suggested changes that people have mentioned and added to this list thus far:
+
+\begin{enumerate}
+\item Allow users to view entries in the encyclopedia sorted by type (definition, theorem, etc.). \textbf{DONE!(?)}
+\item Allow members who make requests and administrators to retract/delete requests.
+\item Allow members who state that requests are filled and administrators to update/renew requests.
+\item Allow members to edit/delete their previous posts.
+\item Make the words ``edit this entry" (in the sentence ``Anyone with an account can edit this entry" within world editable objects) clickable for members in order to edit the entry.
+\item Give the ability to preview in HTML or Page Images mode when writing/editing an entry.
+\item Improve the search function. Why isn't the ``ring" entry the first that comes up when I search for ``ring"? Also bump users to the end: For instance, the user Matrix is the first result upon searching for ``matrix."
+\item Have the search engine use metadata such as classification to better
+locate material.  Add an advanced search feature which would allow limiting
+searches by various sorts of criteria and searching only over subcollections.
+\item Redefine popularity scoring. Does popularity of an entry equal total number of views it has received? Or should it based on some kind of average, or a combination of averages, weighted by how long it has been on PlanetMath?
+\item See a list of world-editable objects that you have edited.
+\item It seems that whenever a theorem is previewed (when being edited), the ``Contains own proof'' box becomes unchecked. This bug needs to be fixed.
+\item Fix those ``Unexpected Noosphere Errors''.
+\item Make it easier to post corrections to non-viewable objects.
+\item Make a log of deleted objects available, so that users can see who has been deleting what and why. (The ``why" part would require allowing users to give an explanation when deleting an object.) Perhaps also allow other users to revive deleted objects, so that good entries are not lost simply because their owner no longer wants them.
+\item Include a rerender link on every entry (for logged-in users only --- otherwise it would be triggered by Googlebot and other indexers, which would put an unnecessary load on the server). For some reason entries often get in a corrupt state that can only be fixed by rerendering, and it is currently unreasonably difficult for users to do this unless they have edit permission on the entry.
+\item Fix the display of the consistency scores of users when the user list is \emph{not} sorted by user id.
+\item Provide a clear link from a filed correction to the entry to which the correction was filed. (The current link is a red triangle that is easily overlooked and doesn't even look like a link.)
+\item Fix autolinker so that math mode and punctuation do not affect it.
+\item Add feature that searches through fora to fetch posts containing designated words or phrases.
+\item Allow sorting of things like your own objects, requests, or unproved theorems by date posted.
+\item Allow display of forum entries by thread.
+\item Provide some visual indicator of entries read (by logged-in user).
+\item Get rid of the long preamble before the forum entries on the main screen, at least for logged-in users.
+\item Fix the ``consistency'' value bug: the values are not correctly showing when users are sorted in certain ways.
+\item Enable \TeX in forum posts.  There already is a script by Steve Cheng
+which will render math in posts so we could start by improving the script
+and posting a link to download and install it in a prominent place on the
+site.  However, this requires installation on the client side, so, while it
+may be a plausible interim solution, a server side solution is called for
+in the long run.
+\item Have an e-mail interface to the fora and other areas of the site 
+such as, for instance, being able to file corrections by e-mail.  Once such 
+an interface would be in place, the mailing list could be liquidated and
+its content moved to an e-mail-accessible forum.  More generally, make it
+possible to connect to PM by all sorts of means such as CVS, emacs and FTP
+rather than only through the web.
+\item Add features usually found in e-mail, such as being able to send copies
+of a message to multiple recipients to PM e-mail.  Maybe also allow users
+to make their own folders for their e-mail and allow mail to be previewed, 
+sent, and viewed in \TeX --- the latter feature could be quite useful since
+a number of users discuss math via PM mail.
+\item Allow bug reports to be filed on search results --- for instance, if 
+a search for a term did not generate an entry with that term as title, it
+would be helpful to be able to file a report so that this shortcoming could 
+be fixed.
+\item Allow rendered views of past versions of entries --- now only the source
+can viewed and compared with other versions.  Also assign URLs to past versions,
+say something like ``http//planetmath.org.MyEntry.5.html'' to specify that
+one wants version 5 of ``my entry''.   In particular, this would be important
+for scholarly citation where one want to be sure that the reader is looking at 
+the same text which the author intended, not some later reworking of it.
+\item Distinguish minor from major edits as on Asteroid Meta.  The version numbers could be replaced by pairs such as ``5.6'' and the scoring could be 
+adjusted accordingly.
+\item Standardize the \TeX preambles to provide common macros for commonly used
+items as opposed to each user doing it whatever way.  Once these are in place,
+they should be described in documentation and corrections filed to bring old
+entries into compliance.  Later on, new definitions should be added to 
+central files and documented rather than introduced ad hoc in possibly
+conflicting variations.
+\item Have the \TeX compiler produce indexing data in addition to graphic
+output.  This data would allow one to do things like locate definitions, 
+statements of theorems, and proofs in the collection.
+\item For longer entries, it would be nice to have abstracts and abridgements.
+For instance, for an entry of type definition, the longer form would 
+motivate the definition, explain it, and illustrate with examples whilst 
+the abridgement would simply state the definition.  A lengthy entry on some
+topic might come with an abstract.  An involved proof might come with an
+abstract describing what it is about and a abridged version listing the main steps with most of the detailed verifications and explanations left out.
+Since abstracts and abridgements are not appropriate for every entry, they
+would be optional, but corrections could be filed to indicate entries which
+should have them.  For an example of how to present shorter and longer
+versions of material in an online reference, see the MacTutor bibliographies.
+\item To improve the presentation of longer entries, have a format in which 
+one has an outline of the sections and can either click on the section heading 
+to bring up its contents or have it scroll down as in a menu.  In the page 
+image mode, the outline would be rendered as a table of contents preceding
+the main text.
+\item Allow anchors within entries for convenience in linking to longer 
+entries.  These could be set using some sort of \TeX pseudo-command so that,
+for instance, a link to a term defined on page 3 of a 9 page entry would
+take one to the correct location in the document.
+\item While the Cyrillic alphabet is well-supported, its parent is only
+available via math mode but 
+$\tau o~\alpha\pi o\tau\epsilon\lambda\epsilon\sigma\mu\alpha~
+\epsilon\iota\nu\alpha\iota~\alpha\sigma\chi\eta\mu o\nu$ because the
+spacing is designed for variables in formulas, not words in natural language.
+Therefore, we should install packages for Greek and other alphabets
+and update the internationalization document accordingly.
+\item  Provide a mechanism for listing foreign names of titles and terms
+defined in entries.
+\item The pronunciation boxes of most entries are not used.  Maybe someone
+could systematically look through entries, note which ones could use
+pronunciations and either file addenda or add them directly where given
+permission by the owner.  Also, add some mechanism to provide pronunciations
+for alternative titles and defined terms.
+\item Have a field for indicating whether an entry is based on existing work(s)
+and, if so, which ones.  not only would this allow automatic generation of a
+banner stating this fact, it would allow for automatic generation of lists of
+entries based on previous works, which could be important in case it might
+happen that we find out we do not, or no longer have permission to base
+entries on a particular work and need to pull them out of the collection or at
+least freeze them from further edits.
+\item Make a technical editing apparatus, such as what was originally intended 
+for FEM.  This package would enable one to compile multiple entries into a
+single document, perhaps applying diff files to them, and the like.
+\item Make a test site for trying out new features before installing them on
+the main site.
+\item Have links to versions of entries for printing.
+\item Provide citations for entry in various formats which can be cut and 
+pasted into documents citing PM as a reference.
+\item Have a box for indicating whether an entry is under construction, in 
+a stable version, or being reworked.  This status could be reflected in a 
+banner at the top of the rendered entry, such as ``Under construction'' or
+``Under renovation --- for the last stable version, click here''.
+\item In addition to the fora now attached to entries, have author fora
+for discussing how to write the entry and drop suggestions to the authors.
+\item Provide localized help --- for instance, have help links near items or
+have help messages appear upon floating a cursor over a button.
+\item Reorganize and refactor the site documents to make them more useful
+and work as a unit with some sort of master guide.
+\item Be sure to not only document the technical aspects of features, but
+also the social conventions and community norms pertinent to their use.
+\item Include a field for indicating prerequisites for understanding an
+entry.  For example, to understand class field theory, one needs to know 
+something about algebraic number fields, Galois theory, and ideal theory,
+so the prerequisite field could mention this and point the potential reader
+towards material supplying this preliminary information.  Together with
+audience classification, this could help readers who are not experts in a 
+particular area to go about learning something new from the encyclopaedia.
+\item Devise and write material to help people learn material from PM.
+This could include textbook projects, notes, guides suggesting which entries 
+to read to learn some topic, etc.
+\item  Allow corrections for typos, minus signs and the like to be filed 
+in the form of patches.  To post such a correction, someone would edit the
+text of the entry in a special window, the program would generate a diff file
+which could be applied as a patch, and the owner would have the additional
+option of accepting the correction by applying the patch. (Although the owner
+should still be able to accept the correction by making changes by hand ---
+this might be desirable in cases such as when the owner wants to fix 
+mistakes in a way different from what was suggested.)
+\item Add a facility for uploading and downloading entries as \TeX files and e-mail.
+\item Make a PM banner which can go on web pages to link to PM and make it
+available through the site.
+\item Interest experts in writing entries on their specialties.  On the longer 
+term, think of new ways in which experts might be interested in participating.
+For example, while they may not be too keen on writing a lot themselves, they
+might be interested in an arrangement in which they supervise students who
+write material bases on their notes.
+\item Improve the display of corrections for users so that one can see only the
+outstanding corrections to one's entries (or have them appear at the top of a 
+list) and see date by which correction must be answered.
+\item Make a text-only version of the PM site as well as versions designed
+for PDA, mobile telephones, and similar devices which can connect to web.
+\item Have a calendar of events accessible from the home page or some 
+prominent page which is indexed from the home page.
+\item Set up a task management program.
+\item Have the system automatically notify people about events when so
+requested by an organizer.
+\item It would be nice to have a login box which redirects you to the page you came from when you try to perform an action which can only be done by a logged user.
+\item Make a holding tank for mass uploading of entries (like APM-Xi).  
+Rather than flooding the encyclopaedia with lots of material, mass
+uploads could go into this special area in which they could be reviewed 
+and from which they could be gradually adopted so as not to mess up
+the workflow.
+\item Document Noosphere.  While there is a general description in Aaron's
+thesis, comments within the code, and documentation of SQL tables, what is
+missing is the middle level documentation which bridges the gap between
+the high-level description of the thesis and the low-level description
+of comments and data structures.  Good documentation should make it easy for
+someone to figure out how the program works and locate the code responsible 
+for a particular feature so ad to make it easy to fix bugs and make 
+improvements.  While we are at it, it would be good to set up standards and
+conventions for documentation so that the documentation can keep up with
+changes to the program and make sure that hackers leave the program as 
+easy to figure out as they found it --- updating the documentation
+appropriately should be a required part of modifying the code.
+\item Make it possible to access past years and months quickly through a hierarchical menu (click on year to get list of months, click on month to bring up all messages) posted that month.
+\item It would be nice to be able to expand all the messages in a thread below the current message; this would make getting up to speed on a discussion faster.
+\item How has the encyclopedia changed and grown over time? It would be cool to see a graph.
+\item I think it would be great if the links that were saved in PM tarballs looked like PMlinkname commands rather than as htmladdnormallink commands
+\item I think it would be nice to be able to use links in a TeX source view, specifically, in addition to the un-marked-up original TeX view, I would like there to be a version that includes automatically generated links.
+\item Create a way for blind mathematicians/low-vision users to view and contribute to PM.
+\item  Add subject classification to questions in help fora.
+\item I think it would make sense to display "Latest Rejections" in the same 
+way as "Latest Additions", "Latest Revisions" on the main page. This way, all
+users can verify that the rejection is valid.  Another thing one could consider
+is that owners should not be allowed to accept a correction without changing 
+the entry. Nor should they be allowed to check the correction without offering
+some revision comment.
+\item User info currently provides "corrections filed" and "corrections received". How about a quick link to "corrections rejected"?
+\item Somewhere on PM, there could be a list of the distribution of corrections.
+\item We could have various different "high scores" â€“ one for users who file the most corrections would be a simple measure. Another one for users who reject the most corrections could be funny â€“ it isn't clear that rejecting corrections is a good way to improve your reputation.  Other categories could be worth including. (Most articles, most postings, etc., etc.)
+\item Implement mechanisms for disputing corrections.
+\item Enable people to specify certain keywords and phrases that they will get email notices about (e.g. "number theory" or "prime number" or "statistics"). Similarly, one might always wish to get email notices when certain people (aka "buddies") post, or when posts occur in certain parts of the site (e.g. attachments to anything in the 38-XX range).
+\item Currently figures are attached to a fixed entry. It would be good if all figures on PM would be in a centralized figure database. This database could also contain the code creating the figure. This will make it easy to reuse figures across entries and also make small changes to figures.  It will also encourage users to take figures from PM and use them in their own texts.
+\item I assume that it is easy enough to supply a hitcounter for messages 
+(since encyclopedia entries already have them).
+\item When transfering an entry to another user, it would make sense to have some comment field describing why one is offering the entry to him/her.
+\item It would be good to have a common logo/banner that people could put on material that is "Free Math". That is, if someone releases a paper or lecture note as Free Math (say GPL), he could put that logo on the front page. In PDF:s, the logo could link to a manifesto page on PM describing why Free Math is important. One advantage of this is that it would be easier to find GPL math content on the web using search engines.
+\item It would make sense to have the requests classified according to the MSC. First, this would enable users to browse requests from their own expertise, and second, it would make it easier to fill in a request; the topic is already classified.
+\item There is a large portion of math in the PM forums that could be turned into PM articles. As PM gets more users and the forums start supporting latex this will become even more relevant. It would seem that we need some kind of procedure after a question is answered.
+\item I think it would be handy to have user homepages for PM in the same style as other articles â€“ instead of HTML, use LaTeX, for example. But also supply some additional productivity tools.
+\item I'm also noticing an interesting phenomenon of "labeling" or "categorization" taking place on the web; many blogs seem to have this feature, the idea being that pages or postings can belong to several user-supplied categories. Perhaps a feature like this could be worked into the PM homepages.
+\item Have an entry of the day.
+\item To help authors create entries (and to improve old entries) we could have entry checklists.
+\item All text on PM (forums, corrections) have automatically generated hyperlinks for www pages. Unfortunately, this is not true for requests. This would be particularly useful as one can point out related entries in the request.
+\item Sometimes it would be nice to take a peek at how Noosphere is written. Having the sources browsable online would make this a bit easier for the average user. They don't even have to be the absolute latest version.
+\item PM has users from all over the world. Yet all dates and times are represented in only one format and timezone. For example, for international readers, 2006-03-05 can mean either 5 March or 3 May.
+\item Sometimes it is useful to file corrections to more than one entry at a time.
+\item How about creating a page that lists in addition to the Latest Additions and Latest Revisions, Latest Corrections and Latest Postings (i.e., in these two cases, a list of the objects that have been corrected or posted to, as with the first two cases), all in one easy-to-access place? 
+\item Update the orphanage procedure.  A suggestion is that objects stay in the orphanage for a week, users express interest in the orphaned object, and the Content Committee determines new ownership.
+\end{enumerate}
+
+Please add changes that either you would like to come about or that you know that someone has requested.
+
+After compiling the changes, it would be a good idea to check and see whether these changes are feasible or not. Then, it might be a good idea to take a poll to see if people on PM want these changes or not.
+
+\end{document}
+%%%%%
+\end{document}

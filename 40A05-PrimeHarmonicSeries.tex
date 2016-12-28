@@ -1,0 +1,118 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PrimeHarmonicSeries}
+\pmcreated{2013-03-22 15:07:16}
+\pmmodified{2013-03-22 15:07:16}
+\pmowner{Cosmin}{8605}
+\pmmodifier{Cosmin}{8605}
+\pmtitle{prime harmonic series}
+\pmrecord{17}{36860}
+\pmprivacy{1}
+\pmauthor{Cosmin}{8605}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmclassification{msc}{11A41}
+\pmsynonym{series of reciprocals of primes}{PrimeHarmonicSeries}
+%\pmkeywords{prime series}
+%\pmkeywords{prime sum}
+%\pmkeywords{reciprocal prime}
+%\pmkeywords{prime harmonic}
+\pmrelated{Prime}
+\pmrelated{HarmonicSeries}
+\pmrelated{HarmonicNumber}
+\pmrelated{Series}
+\pmrelated{EulersConstant}
+\pmrelated{HarmonicSeriesOfPrimes}
+
+% This is Cosmin's PlanetMath preamble.
+
+% Packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+%%%\usepackage{xypic}
+
+% Theorem Environments
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lem}{Lemma}
+\newtheorem*{cor}{Corollary}
+
+% New Commands
+  %Sets
+    \newcommand{\bbP}{\mathbb{P}}
+    \newcommand{\bbN}{\mathbb{N}}
+    \newcommand{\bbZ}{\mathbb{Z}}
+    \newcommand{\bbQ}{\mathbb{Q}}
+    \newcommand{\bbR}{\mathbb{R}}
+    \newcommand{\bbC}{\mathbb{C}}
+    \newcommand{\bbK}{\mathbb{K}}
+    \newcommand{\bbB}{\mathbb{B}}
+    \newcommand{\bbS}{\mathbb{S}}
+    \newcommand{\bbA}{\mathbb{A}}
+    \newcommand{\bbT}{\mathbb{T}}
+  %Script and Cal Letters
+    \newcommand{\scP}{\mathscr{P}}
+    \newcommand{\scF}{\mathscr{F}}
+    \newcommand{\scC}{\mathscr{C}}
+    \newcommand{\scL}{\mathscr{L}}
+    \newcommand{\caA}{\mathcal{A}}
+    \newcommand{\caB}{\mathcal{B}}
+    \newcommand{\caC}{\mathcal{C}}
+    \newcommand{\caD}{\mathcal{D}}
+    \newcommand{\caE}{\mathcal{E}}
+    \newcommand{\caF}{\mathcal{F}}
+    \newcommand{\caR}{\mathcal{R}}
+    \newcommand{\caP}{\mathcal{P}}
+    \newcommand{\caM}{\mathcal{M}}
+    \newcommand{\caS}{\mathcal{S}}
+    \newcommand{\caH}{\mathcal{H}}
+    \newcommand{\caT}{\mathcal{T}}
+    \newcommand{\caU}{\mathcal{U}}
+    \newcommand{\caX}{\mathcal{X}}
+    \newcommand{\caY}{\mathcal{Y}}
+    \newcommand{\caZ}{\mathcal{Z}}
+  %Other Commands
+    \newcommand{\vect}[1]{\boldsymbol{#1}}
+    \renewcommand{\div}{\!\mid\!}
+\begin{document}
+\PMlinkescapeword{infinite}
+\PMlinkescapeword{constant}
+\PMlinkescapeword{bound}
+\PMlinkescapephrase{square-free part}
+\PMlinkescapephrase{set of primes}
+\PMlinkescapephrase{harmonic series}
+
+The prime\footnote{\(\bbP\) denotes the set of 
+primes.} harmonic series (also known as series of reciprocals of primes) is the infinite sum \(\sum_{p\in\bbP}\frac{1}{p}\). The following result was originally proved by Euler (using the Euler product of the Riemann Zeta function) but the following extremely elegant proof is due to Paul Erd\H{o}s \cite{Er}.
+
+\begin{thm}
+The series \( \sum_{p\in\bbP}\frac{1}{p} \) diverges.
+\end{thm}
+\begin{proof}
+Assume that this series is convergent. If so, then, for a certain \( 
+k\in\bbN \), we have:
+\[ \sum_{i > k}\frac{1}{p_i} < \frac{1}{2}, \]
+where \(p_i\) is the \(i^{\mathrm{th}}\) prime. Now, we define \( 
+\lambda_k(n) := \#\{ m\leq n : p_i \div m \Rightarrow i \leq k \} \), the 
+number of integers less than \(n\) divisible only by the first \(k\) 
+primes. Any of these numbers can be expressed as 
+\(m = p_1^{\omega_1} \dotsm p_k^{\omega_k} \cdot s^2,\; 
+\omega_i\in\{0,1\} \) (i.e. a square multiplied by a square-free number). There are \(2^k\) ways to chose the square-free part and clearly \(s\leq 
+\sqrt{n}\), so \( \lambda_k(n) \leq 2^k \sqrt{n}\). Now, the number of integers divisible by \(p_i\) less than \(n\) is \(\bigl\lfloor\frac{n}{p_i}\bigr\rfloor\), so the number of integers less than \(n\) divisible by primes bigger than \(p_k\) (which we shall denote by \( \Lambda_k(n) \)) is bounded above as follows:
+\[\Lambda_k(n) \leq \sum_{i>k}\left\lfloor\frac{n}{p_i}\right\rfloor \leq \sum_{i>k}\frac{n}{p_i} < \frac{n}{2}.\]
+However, by their definitions, \(\lambda_k(n)+\Lambda_k(n) = n\) for all \(n\in\bbN\) and so it is sufficient to find an \(n\) such that \(\lambda_k(n)\leq\frac{n}{2}\) for a contradiction and, using the previous bound for \( \lambda_k(n) \), which is \( \lambda_k(n) \leq 2^k \sqrt{n}\), we see that \( n = 2^{2k+2} \) works.
+\end{proof}
+
+The series is in some ways similar to the \PMlinkname{Harmonic series}{HarmonicSeries} \(H_n := \sum_{k = 1}^n \frac{1}{n}\). In fact, it is well known that \(H_n = \log n + \gamma + o(1) \), where \(\gamma = 0.577215664905\dots\) is Euler's constant, and this series obeys the similar asymptotic relation \(\sum_{k=1}^n\frac{1}{p_k}= \log\log n + C + o(1)\), where \(C = 0.26149721\dots\) and is sometimes called the Mertens constant. Its divergence, however, is extremely slow: for example, taking \(n\) as the biggest currently known prime, the \( 42^{\mathrm{nd}} \) Mersenne prime \(M_{25964951}\), we get \(\log\log(2^{25964951} - 1) + C \approx 16.9672\) (while \(H_{M_{25964951}}\approx 1.79975\cdot 10^{17} \) which is enormous considering \(H_n\)'s also slow divergence).
+
+\begin{thebibliography}{2}
+\bibitem{AZ} \textsc{M.~Aigner \& G.~M.~Ziegler}: \emph{Proofs from THE BOOK}, 3\(^\mathrm{rd}\) edition (2004), Springer-Verlag, 5--6.
+\bibitem{Er} \textsc{P.~Erd\H{o}s}: \emph{\"Uber die Reihe \(\sum\frac{1}{p}\)}, Mathematica, Zutphen B 7 (1938).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

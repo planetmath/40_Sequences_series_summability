@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfDivergenceOfHarmonicSeriesbySplittingOddAndEvenTerms}
+\pmcreated{2013-03-22 17:38:26}
+\pmmodified{2013-03-22 17:38:26}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of divergence of harmonic series (by splitting odd and even terms)}
+\pmrecord{4}{40062}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Suppose that the series $\sum_{n=1}^\infty 1/n$ converged.  Since all the terms are positive,
+we could regroup them as we please, in particular, split the series into two series, that of
+even terms and that of odd terms:
+\[
+ \sum_{n=1}^{\infty} {1 \over n} =
+ \sum_{n=1}^{\infty} {1 \over 2n} +
+ \sum_{n=1}^{\infty} {1 \over 2n-1}
+\]
+Since $\sum_{n=1}^\infty 1/n = 2 \sum_{n=1}^\infty 1/(2n)$, we would conclude that
+\[
+ \sum_{n=1}^{\infty} {1 \over 2n} =
+ \sum_{n=1}^{\infty} {1 \over 2n-1} .
+\]
+But $2n-1 < 2n$, hence $1/(2n) < 1/(2n-1)$, so we would also have
+\[
+ \sum_{n=1}^{\infty} {1 \over 2n} <
+ \sum_{n=1}^{\infty} {1 \over 2n-1} ,
+\]
+which contradicts the previous conclusion.  Thus, the assumption that the
+series converged is untenable.
+%%%%%
+%%%%%
+\end{document}

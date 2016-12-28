@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IndirectProofOfIdentityTheoremOfPowerSeries}
+\pmcreated{2013-03-22 16:47:48}
+\pmmodified{2013-03-22 16:47:48}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{indirect proof of identity theorem of power series}
+\pmrecord{9}{39030}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A30}
+\pmclassification{msc}{30B10}
+%\pmkeywords{proof by contradiction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\begin{align}
+\sum_{n=0}^\infty a_n(z-z_0)^n \;=\; \sum_{n=0}^\infty b_n(z-z_0)^n
+\end{align}
+is valid in the set of points $z$ presumed in the \PMlinkname{theorem}{IdentityTheoremOfPowerSeries} to be proved.
+
+Antithesis:\, There are integers $n$ such that\, $a_n \neq b_n$;\, let $\nu$ ($\geqq 0$) be least of them.
+
+We can choose from the point set an infinite sequence\, $z_1,\,z_2,\,z_3,\,\ldots$\, which converges to $z_0$ with\, $z_n \neq z_0$\, for every $n$.\, Let $z$ in the equation (1) belong to\, 
+$\{z_1,\,z_2,\,z_3,\,\ldots\}$\, and let's divide both \PMlinkescapetext{sides} of (1) by $(z-z_0)^{\nu}$ which is distinct from zero; we then have
+\begin{align}
+\underbrace{a_{\nu}+a_{\nu+1}(z-z_0)+a_{\nu+2}(z-z_0)^2+\ldots}_{f(z)}\, 
+=\, \underbrace{b_{\nu}+b_{\nu+1}(z-z_0)+b_{\nu+2}(z-z_0)^2+\ldots}_{g(z)}
+\end{align}
+Let here $z$ to tend $z_0$ along the points $z_1,\,z_2,\,z_3,\,\ldots$, i.e. we take the limits $\lim_{n\to\infty}f(z_n)$ and $\lim_{n\to\infty}g(z_n)$.\, Because the sum of power series is always a continuous function, we see that in (2),
+$$\mathrm{left\,side\,}\longrightarrow f(z_0) = a_{\nu}\quad\mathrm{and}\quad
+\mathrm{right\,side\,}\longrightarrow g(z_0) = b_{\nu}$$
+But all the time, the left and \PMlinkescapetext{right side} of (2) are equal, and thus also the limits.\, So we must have\, $a_{\nu} = b_{\nu}$,\, contrary to the antithesis.\, We conclude that the antithesis is wrong.\, This settles the proof.
+
+\textbf{Note.}\, I learned this proof from my venerable teacher, the number-theorist Kustaa Inkeri (1908--1997).
+
+%%%%%
+%%%%%
+\end{document}

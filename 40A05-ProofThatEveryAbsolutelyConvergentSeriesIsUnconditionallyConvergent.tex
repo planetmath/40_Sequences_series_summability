@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatEveryAbsolutelyConvergentSeriesIsUnconditionallyConvergent}
+\pmcreated{2013-03-11 19:17:17}
+\pmmodified{2013-03-11 19:17:17}
+\pmowner{Filipe}{28191}
+\pmmodifier{}{0}
+\pmtitle{Proof that every absolutely convergent series is unconditionally convergent}
+\pmrecord{7}{42626}
+\pmprivacy{1}
+\pmauthor{Filipe}{0}
+\pmtype{Proof}
+\pmclassification{msc}{40A05}
+\pmsynonym{}{ProofThatEveryAbsolutelyConvergentSeriesIsUnconditionallyConvergent}
+%\pmkeywords{}
+\pmrelated{}
+\pmdefines{}
+
+
+\begin{document}
+Suppose the series $\sum_{k=1}^\infty a_k$ converges to a $A$ and that it is also absolutely convergent. So, as $\sum_{k=1}^\infty |a_k|$ converges, we have $\forall \epsilon >0$:
+
+$$\exists N>0:\sum_{k=n+1}^\infty |a_k|<\frac{\epsilon}{2}, \forall n>N$$
+
+As the series converges to $A$, we may choose $n$ such that:
+$$|A-\sum_{k=1}^n a_k|<\frac{\epsilon}{2}$$
+
+Now suppose that $\sum_{k=1}^\infty b_k$ is a rearrangement of $\sum_{k=1}^\infty a_k$, that is, it exists a bijection $\sigma:\mathbb{N}\rightarrow \mathbb{N}$, such that $b_k=a_{\sigma(k)}$
+
+Let $J=max\lbrace j:\sigma(j)\leq n \rbrace$. Now take $m\geq J$. Then:
+
+$$\sum_{k=1}^m b_k=b_1+...+b_m=a_{\sigma(1)}+...+a_{\sigma(m)}$$
+
+This sum must include the terms $a_1,...,a_n$, otherwise $J$ wouldn't be maximum. Thus, for $m\geq J$, we have that $\sum_{j=1}^m b_j - \sum_{k=1}^n a_k$ is a finite sum of terms $a_k$, with $k\geq n+1$. So:
+
+$$|\sum_{j=1}^m b_j - \sum_{k=1}^n a_k|\leq \sum_{k=n+1}^\infty |a_k|<\frac{\epsilon}{2}$$
+
+Finally, taking $m\geq J$, we have:
+
+$$|A-\sum_{k=1}^m b_k|\leq |A-\sum_{k=1}^n a_k|+|\sum_{j=1}^m b_j - \sum_{k=1}^n a_k|<\frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon$$
+
+So $\sum_{k=1}^\infty b_k=A$
+
+
+
+%%%%%
+\end{document}

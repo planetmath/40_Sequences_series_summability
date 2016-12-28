@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{1fracalphannIsMonotoneForLargeN}
+\pmcreated{2013-03-22 17:53:55}
+\pmmodified{2013-03-22 17:53:55}
+\pmowner{uriw}{288}
+\pmmodifier{uriw}{288}
+\pmtitle{$(1+\frac{\alpha}{n})^n$ is monotone for large $n$}
+\pmrecord{4}{40389}
+\pmprivacy{1}
+\pmauthor{uriw}{288}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40-01}
+\pmclassification{msc}{00-01}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\newtheorem*{lemma}{Lemma}
+
+\begin{document}
+\begin{lemma}
+Let $\alpha$ be a real number. The sequence
+$(1+\frac{\alpha}{n})^n$ is monotone increasing for all $n>
+|\alpha|$.
+\end{lemma}
+
+\begin{proof}
+Let $n>|\alpha|$. We want to prove the following inequality:
+\[
+\left(1+\frac{\alpha}{n}\right)^n \leq
+\left(1+\frac{\alpha}{n+1}\right)^{n+1}
+\]
+Since both sides are positive, this follows by taking the
+$(n+1)$-th root and using the arithmetic-geometric-harmonic means
+inequality:
+\[
+\sqrt[n+1]{\left(1+\frac{\alpha}{n}\right)^n} =
+\underbrace{\sqrt[n+1]{1\cdot \left(1+\frac{\alpha}{n}\right)
+\cdots \left(1+\frac{\alpha}{n}\right)} }_{\textrm{$n+1$ elements}
+} \leq \frac{1+n\left(1+\frac{\alpha}{n}\right)}{n+1} =
+1+\frac{\alpha}{n+1}
+\]
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UpcrossingsAndDowncrossings}
+\pmcreated{2013-03-22 18:49:33}
+\pmmodified{2013-03-22 18:49:33}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{upcrossings and downcrossings}
+\pmrecord{5}{41629}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmclassification{msc}{60G17}
+%\pmkeywords{stochastic process}
+\pmrelated{MartingaleConvergenceTheorem}
+\pmrelated{ConvergenceOfASequenceWithFiniteUpcrossings}
+\pmdefines{upcrossing}
+\pmdefines{downcrossing}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx,float}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{inequalities}
+\PMlinkescapeword{number}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{sequence}
+\PMlinkescapeword{real numbers}
+\PMlinkescapeword{limit}
+\PMlinkescapeword{finiteness}
+\PMlinkescapeword{regularity}
+\PMlinkescapeword{applications}
+\PMlinkescapeword{index set}
+\PMlinkescapeword{subset}
+\PMlinkescapeword{definitions}
+\PMlinkescapeword{integer}
+\PMlinkescapeword{interval}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{infinite}
+\PMlinkescapeword{terms}
+
+Inequalities involving the number of times at which a stochastic process passes upwards or downwards through a bounded interval play an important role in the theory of stochastic processes. Whether or not a sequence of real numbers converges to a limit can be expressed in terms of the finiteness of the number of \emph{upcrossings} or \emph{downcrossings}, leading to results such as the martingale convergence theorem and regularity of martingale sample paths.
+As the main applications are to stochastic processes, we suppose that $(X_t)_{t\in\mathbb{T}}$ is a real-valued stochastic process with totally ordered time index set $\mathbb{T}$, usually a subset of the real numbers. However, for the definitions here, it is enough to consider $X_t$ to be a sequence of real numbers, and the dependence on any underlying probability space is suppressed.
+
+For real numbers $a<b$, the number of upcrossings of $X$ across the interval $[a,b]$ is the maximum nonnegative integer $n$ such that there exists times $s_k,t_k\in\mathbb{T}$ satisfying
+\begin{equation}
+s_1<t_1<s_2<t_2<\cdots<s_n<t_n\label{eq:1}
+\end{equation}
+and for which $X_{s_k}<a<b<X_{t_k}$. The number of upcrossings is denoted by $U[a,b]$. Note that this is either a nonnegative integer or is infinite. Similarly, the number of downcrossings, denoted by $D[a,b]$, is the maximum nonnegative integer $n$ such that there are times $s_k,t_k\in\mathbb{T}$ satisfying (\ref{eq:1}) and such that $X_{s_k}>b>a>X_{t_k}$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1.2,bb=71 519 364 714]{upcrossingspic}
+\caption{Process with 3 upcrossings of the interval $[a,b]$.}
+\label{fig:1}
+\end{figure}
+
+Note that between any two upcrossings there is a downcrossing. Given $s_k,t_k$ satisfying (\ref{eq:1}) and $X_{s_k}<a<b<X_{t_k}$, we can set $s^\prime_k=t_k$ and $t^\prime_k=s_{k+1}$ for $k=1,\ldots,n-1$. Then, $X_{s^\prime_k}>b>a>X_{t^\prime_k}$ from which we conclude that $D[a,b]\ge U[a,b]-1$. Similarly, we have $U[a,b]\ge D[a,b]-1$. Hence, the number of upcrossings and the number of downcrossings of an interval differ by at most $1$.
+
+For a finite index set $\mathbb{T}=\{1,2,\ldots,N\}$, the number of upcrossings can be computed as follows. Set $t_0=0$ and define $s_1,s_2,\ldots$ and $t_1,t_2,\ldots$ by
+\begin{align*}
+&t_k=\inf\left\{t\in\mathbb{T}\colon t\ge s_k, X_t>b\right\}\in\mathbb{T}\cup\{\infty\}.\\
+&s_k=\inf\left\{t\in\mathbb{T}\colon t\ge t_{k-1}, X_t<a\right\}\in\mathbb{T}\cup\{\infty\}.
+\end{align*}
+The number of upcrossings of $[a,b]$ is then equal to the maximum $n$ such that $t_n<\infty$ (see Figure \ref{fig:1}).
+
+\begin{thebibliography}{9}
+\bibitem{williams}
+David Williams, \emph{Probability with martingales},
+Cambridge Mathematical Textbooks, Cambridge University Press, 1991.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

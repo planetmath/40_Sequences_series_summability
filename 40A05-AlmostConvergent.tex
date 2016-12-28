@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlmostConvergent}
+\pmcreated{2013-03-22 15:29:51}
+\pmmodified{2013-03-22 15:29:51}
+\pmowner{kompik}{10588}
+\pmmodifier{kompik}{10588}
+\pmtitle{almost convergent}
+\pmrecord{12}{37356}
+\pmprivacy{1}
+\pmauthor{kompik}{10588}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmclassification{msc}{40C99}
+\pmrelated{Banachlimit}
+\pmdefines{almost convergent}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A real sequence $(x_n)$ is said to be \textbf{almost convergent} to $L$ if each Banach limit assigns
+the same value $L$ to the sequence $(x_n)$.
+
+Lorentz \cite{lorentz} proved that $(x_n)$ is almost convergent to $L$ if and only if
+$$\lim\limits_{p\to\infty} \frac{x_{n}+\ldots+x_{n+p-1}}p=L$$
+uniformly in $n$.
+
+The above limit can be rewritten in detail as
+$$(\forall \varepsilon>0) (\exists p_0) (\forall p>p_0) (\forall n) \left|\frac{x_{n}+\ldots+x_{n+p-1}}p-L\right|<\varepsilon.$$
+
+Almost convergence is studied in summability theory. It is an example of a summability method
+which cannot be represented as a matrix method.
+
+\begin{thebibliography}{9}
+\bibitem{benkal}
+G.~Bennett and N.J. Kalton: 
+{Consistency theorems for almost convergence.}
+\emph{Trans. Amer. Math. Soc.}, 198:23--43, 1974.
+
+\bibitem{boos}
+J.~Boos:
+\emph{Classical and modern methods in summability}.
+Oxford University Press, New York, 2000.
+
+\bibitem{congre}
+Jeff Connor and K.-G. Grosse-Erdmann:
+{Sequential definitions of continuity for real functions.}
+\emph{Rocky Mt. J. Math.}, 33(1):93--121, 2003.
+
+\bibitem{lorentz}
+G.~G. Lorentz:
+A contribution to the theory of divergent sequences.
+\emph{Acta Math.}, 80:167--190, 1948.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

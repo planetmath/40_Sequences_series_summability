@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DirichletsConvergenceTest}
+\pmcreated{2013-03-22 13:19:53}
+\pmmodified{2013-03-22 13:19:53}
+\pmowner{lieven}{1075}
+\pmmodifier{lieven}{1075}
+\pmtitle{Dirichlet's convergence test}
+\pmrecord{5}{33844}
+\pmprivacy{1}
+\pmauthor{lieven}{1075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Theorem. Let $\{a_n\}$ and $\{b_n\}$ be sequences of real numbers such that $\{\sum_{i=0}^n a_i\}$ is bounded and $\{b_n\}$ decreases with $0$ as limit.
+Then $\sum_{n=0}^\infty a_nb_n$ converges.
+
+Proof. Let $A_n:=\sum_{i=0}^n a_n$ and let $M$ be an upper bound for $\{|A_n|\}$. By Abel's lemma, 
+
+\begin{eqnarray*}
+\sum_{i=m}^n a_ib_i &=& \sum_{i=0}^n a_ib_i - \sum_{i=0}^{m-1} a_ib_i\\
+                    &=& \sum_{i=0}^{n-1} A_i(b_i-b_{i+1}) - \sum_{i=0}^{m-2} A_i(b_i-b_{i+1}) +A_nb_n - A_{m-1}b_{m-1}\\
+&=&\sum_{i=m-1}^{n-1}A_i(b_i-b_{i+1}) +A_nb_n -A_{m-1}b_{m-1}\\
+|\sum_{i=m}^{n} a_ib_i|&\leq& \sum_{i=m-1}^{n-1}|A_i(b_i-b_{i+1})| + |A_nb_n| + |A_{m-1}b_{m-1}|\\ 
+&\leq& M \sum_{i=m-1}^{n-1}(b_i-b_{i+1}) + |A_nb_n| + |A_{m-1}b_{m-1}|\\
+\end{eqnarray*}
+
+Since $\{b_n\}$ converges to $0$, there is an $N(\epsilon)$ such that both $\sum_{i=m-1}^{n-1}(b_i-b_{i+1})<\frac{\epsilon}{3M}$ and $b_i<\frac{\epsilon}{3M}$ for $m,n>N(\epsilon)$. Then, for $m,n>N(\epsilon)$, $|\sum_{i=m}^n a_ib_i|<\epsilon$ and $\sum a_nb_n$ converges.
+%%%%%
+%%%%%
+\end{document}

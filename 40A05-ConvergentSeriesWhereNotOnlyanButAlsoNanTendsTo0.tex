@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConvergentSeriesWhereNotOnlyanButAlsoNanTendsTo0}
+\pmcreated{2013-03-22 19:03:29}
+\pmmodified{2013-03-22 19:03:29}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{convergent series where not only$~a_n$ but also $na_n$ tends to 0}
+\pmrecord{14}{41941}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmsynonym{Olivier's theorem}{ConvergentSeriesWhereNotOnlyanButAlsoNanTendsTo0}
+%\pmkeywords{decreasing}
+\pmrelated{NecessaryConditionOfConvergence}
+\pmrelated{AGeneralisationOfOlivierCriterion}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Proposition.}\, If the \PMlinkname{terms}{Series} $a_n$ of the convergent series
+$$a_1+a_2+\ldots$$
+are positive and form a monotonically decreasing sequence, then 
+\begin{align}
+\lim_{n\to\infty}na_n \;=\; 0.
+\end{align}
+
+\emph{Proof.}\, Let $\varepsilon$ be any positive number.\, By the Cauchy criterion for convergence and the positivity of the terms, there is a positive integer $m$ such that
+$$0 \;<\; a_{m+1}+\ldots+a_{m+p} \;<\; \frac{\varepsilon}{2} \qquad (p \;=\; 1,\,2,\,\ldots).$$
+Since the sequence \,$a_1,\,a_2,\,\ldots$\, is decreasing, this implies
+\begin{align}
+0 \;<\; pa_{m+p} \;<\; \frac{\varepsilon}{2} \qquad (p \;=\; 1,\,2,\,\ldots).
+\end{align}
+Choosing here especially\, $p := m$,\, we get
+$$0 \;<\; ma_{m+m} \;<\; \frac{\varepsilon}{2},$$
+whence again due to the decrease,
+\begin{align}
+0 \;<\; ma_{m+p} \;<\; \frac{\varepsilon}{2} \qquad (p \;=\; m,\,m\!+\!1,\,\ldots).
+\end{align}
+Adding the inequalities (2) and (3) with the common values\, $p = m,\,m\!+\!1,\,\ldots$\, then yields
+$$0 \;<\; (m\!+\!p)a_{m+p} \;<\; \varepsilon \qquad \mbox{for}\quad p \;\geqq\; m.$$
+This may be written also in the form
+$$0 \;<\; na_n \;<\; \varepsilon \qquad \mbox{for} \quad n\;\geqq\; 2m$$
+which means that\, $\lim_{n\to\infty}na_n \;=\; 0$.\\
+
+\textbf{Remark.}\, The assumption of monotonicity in the Proposition is essential.\, I.e., without it, one cannot gererally get the limit result (1).\, A counterexample would be the series $a_1\!+\!a_2\!+\ldots$ where\, 
+$a_n := \frac{1}{n}$\, for any perfect square $n$ but 0 for other values of $n$.\, Then this series is convergent (cf. the over-harmonic series), but\, $na_n = 1$\, for each perfect square $n$; so\, $na_n \not\to 0$\, as\, $n \to \infty$.
+
+%%%%%
+%%%%%
+\end{document}

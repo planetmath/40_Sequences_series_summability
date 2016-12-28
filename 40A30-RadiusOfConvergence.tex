@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RadiusOfConvergence}
+\pmcreated{2013-03-22 12:32:59}
+\pmmodified{2013-03-22 12:32:59}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{radius of convergence}
+\pmrecord{13}{32794}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A30}
+\pmclassification{msc}{30B10}
+\pmsynonym{Abel's theorem on power series}{RadiusOfConvergence}
+\pmrelated{ExampleOfAnalyticContinuation}
+\pmrelated{NielsHenrikAbel}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+To the power series
+\begin{equation}
+\sum_{k=0}^{\infty}a_k(x-x_0)^k
+\end{equation}
+there exists a number $r\in [0,\infty]$, its \emph{radius of convergence}, such that the series converges absolutely for all (real or complex) numbers $x$ with $|x-x_0|<r$ and diverges whenever $|x-x_0|>r$. This is known as {\em Abel's theorem on power series}. (For $|x-x_0|= r$ no general statements can be made.)
+
+The radius of convergence is given by:
+\begin{equation}
+r=\liminf_{k\to\infty}\frac{1}{\sqrt[k]{|a_k|}}
+\end{equation}
+and can also be computed as
+\begin{equation}
+r=\lim_{k\to\infty}\left|\frac{a_k}{a_{k+1}}\right|,
+\end{equation}
+if this limit exists.
+
+It follows from the \PMlinkname{Weierstrass $M$-test}{WeierstrassMTest} that for any radius $r'$ smaller than the radius of convergence, the power series converges uniformly within the closed disk of radius $r'$.
+%%%%%
+%%%%%
+\end{document}

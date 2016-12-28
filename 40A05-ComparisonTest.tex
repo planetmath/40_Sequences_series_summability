@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ComparisonTest}
+\pmcreated{2013-03-22 13:21:48}
+\pmmodified{2013-03-22 13:21:48}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{comparison test}
+\pmrecord{4}{33889}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The series
+$$\sum_{i=0}^\infty a_i$$
+with real $a_i$ is absolutely convergent if there is a sequence $(b_n)_{n\in\mathbb{N}}$ with positive real $b_n$ such that
+$$\sum_{i=0}^\infty b_i$$
+is \PMlinkescapetext{convergent} and for all sufficiently large $k$ holds $|a_k|\leq b_k$.
+
+Also, the series $\sum a_i$ is divergent if there is a sequence $(b_n)$ with positive real $b_n$, so that $\sum b_i$ is divergent and $a_k\geq b_k$ for all sufficiently large $k$.
+%%%%%
+%%%%%
+\end{document}

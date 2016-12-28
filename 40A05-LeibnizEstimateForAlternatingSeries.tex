@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LeibnizEstimateForAlternatingSeries}
+\pmcreated{2014-07-22 15:34:38}
+\pmmodified{2014-07-22 15:34:38}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Leibniz' estimate for alternating series}
+\pmrecord{35}{36523}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmclassification{msc}{40-00}
+\pmsynonym{Leibniz' estimate for remainder term}{LeibnizEstimateForAlternatingSeries}
+\pmrelated{EIsIrrational2}
+\pmrelated{ConvergingAlternatingSeriesNotSatisfyingAllLeibnizConditions}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\begin{document}
+\textbf{Theorem (Leibniz 1682).}
+ \, If \,$p_1 > p_2 > p_3 > \cdots$\, and\, $\displaystyle\lim_{m\to\infty}p_m = 0$,\, then the alternating series 
+\begin{align}
+p_1-p_2+p_3-p_4+-\ldots
+\end{align}
+converges.\, Its remainder term has the same \PMlinkname{sign}{SignumFunction} as the first omitted \PMlinkescapetext{term} $\pm p_{m+1}$ and the absolute value less than $p_{m+1}$.\\
+
+{\em Proof.}\, The convergence of (1) is proved 
+\PMlinkname{here}{ProofOfAlternatingSeriesTest}.\, Now denote the sum of the series by $S$ and the partial sums of it by $S_1,\,S_2,\,S_3,\,\ldots$.\, Suppose that (1) is truncated after a negative \PMlinkescapetext{term} $-p_{2n}$.\, Then the remainder term
+$$R_{2n} \;=\; S\!-\!S_{2n}$$
+may be written in the form
+$$R_{2n} \;=\; (p_{2n+1}-p_{2n+2})+(p_{2n+3}-p_{2n+4})+\ldots$$
+or
+$$R_{2n} \;=\; p_{2n+1}-(p_{2n+2}-p_{2n+3})-(p_{2n+4}-p_{2n+5})-\ldots$$
+The former shows that $R_{2n}$ is positive as the first omitted \PMlinkescapetext{term} $p_{2n+1}$ and the latter that\, $|R_{2n}| < p_{2n+1}$.\, Similarly one can see the assertions true when the series (1) is truncated after a positive \PMlinkescapetext{term} $p_{2n-1}$.\\
+
+\bigskip
+
+\emph{A pictorial proof.}
+
+\begin{center}
+\includegraphics{leibniz-sequence.eps}
+\end{center}
+
+As seen in this diagram, whenever\, $m' > m$,\, we have\, 
+$\abs{S_{m'}\!-\!S_m} \leq p_{m+1} \to 0$.\, Thus the partial sums form a Cauchy sequence, and hence converge.\, The limit lies in the \PMlinkescapetext{centre} of the spiral, strictly in \PMlinkescapetext{between} $S_m$ and $S_{m+1}$ for any $m$.\, So the remainder after the $m$th \PMlinkescapetext{term} must have the same direction as\, $\pm p_{m+1} = S_{m+1}\!-\!S_m$\, and lesser magnitude.\\
+
+\textbf{Example 1.}\, The alternating series
+$$\frac{1}{\sqrt{2}-1}-\frac{1}{\sqrt{2}+1}
++\frac{1}{\sqrt{3}-1}-\frac{1}{\sqrt{3}+1}
++\frac{1}{\sqrt{4}-1}-\frac{1}{\sqrt{4}+1}+-\ldots$$
+does not fulfil the requirements of the theorem and is divergent.\\
+
+\textbf{Example 2.}\, The alternating series
+$$\frac{1}{\ln{2}}-\frac{1}{\ln{3}}+\frac{1}{\ln{4}}-\frac{1}{\ln{5}}+-\ldots$$
+satisfies all conditions of the theorem and is convergent.
+%%%%%
+%%%%%
+\end{document}

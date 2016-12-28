@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SilvermanToeplitzTheorem}
+\pmcreated{2013-03-22 14:51:28}
+\pmmodified{2013-03-22 14:51:28}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Silverman-Toeplitz theorem}
+\pmrecord{10}{36531}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40B05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\{a_{mn}\}$ be a double sequence of complex numbers and let $B$ be a positive real number such that:
+\begin{enumerate}
+\item $\sum_{n=0}^\infty |a_{mn}| \le B$ for all $m = 0, 1, 2, \ldots$
+\item $\lim_{m \to \infty} \sum_{n=0}^\infty a_{mn} = 1$
+\item For every $n = 0,1,2,\ldots$, it is the case that $\lim_{m \to \infty} a_{mn} = 0$
+\end{enumerate}
+Then, if the sequence $\{z_n\}$ converges, the series $\sum_{n=0}^ \infty a_{mn} z_n$ converges and
+ $$\lim_{n \to \infty} z_n = \lim_{m \to \infty} \sum_{n=0}^ \infty a_{mn} z_n$$
+%%%%%
+%%%%%
+\end{document}

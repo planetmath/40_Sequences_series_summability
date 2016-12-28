@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfAbelLemmabyExpansion}
+\pmcreated{2013-03-22 17:28:14}
+\pmmodified{2013-03-22 17:28:14}
+\pmowner{perucho}{2192}
+\pmmodifier{perucho}{2192}
+\pmtitle{proof of Abel lemma (by expansion)}
+\pmrecord{7}{39856}
+\pmprivacy{1}
+\pmauthor{perucho}{2192}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\begin{document}
+\section{Abel lemma}
+\begin{equation}
+\sum_{i=0}^n a_ib_i=\sum_{i=0}^{n-1} A_i(b_i-b_{i+1})+A_nb_n,
+\end{equation}
+where, $A_i=\sum_{k=0}^i a_k$. Sequences $\{a_i\}$, $\{b_i\}$, $i=0,\dots, n$, are real or complex one.
+\section{Proof}
+We consider the expansion of the sum
+\begin{equation*}
+\sum_{i=0}^n A_i(b_i-b_{i+1})
+\end{equation*}
+on two different forms, namely:
+\begin{enumerate}
+\item On the short way.
+\begin{equation}
+\sum_{i=0}^n A_i(b_i-b_{i+1})=\sum_{i=0}^{n-1} A_i(b_i-b_{i+1})+A_nb_n-A_nb_{n+1}.
+\end{equation}
+\item On the long way.
+\end{enumerate}
+\begin{equation*}
+\sum_{i=0}^n A_i(b_i-b_{i+1})=\sum_{i=0}^n A_ib_i-\sum_{i=0}^n A_ib_{i+1}=
+\sum_{i=0}^n A_ib_i-\sum_{i=1}^{n+1} A_{i-1}b_i=
+\end{equation*}
+\begin{equation}
+A_0 b_0+\sum_{i=1}^n (A_{i-1}+a_i)b_i-\sum_{i=1}^n A_{i-1}b_i-A_nb_{n+1}=\sum_{i=0}^n a_ib_i-A_nb_{n+1},
+\end{equation}
+where a simplification has been performed. Notice that $A_0=a_0$. By equating (2), (3), the last two terms cancel, {\footnote{Without loss of generality, $b_{n+1}$ may be assumed finite. Indeed we don't need $b_{n+1}$, but the proof is a couple lines larger. It is left as an exercise.}} and then, (1) follows. $\Box$
+
+
+
+%%%%%
+%%%%%
+\end{document}

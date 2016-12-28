@@ -1,0 +1,633 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlgebraMultilinealDeEvEuclideanos}
+\pmcreated{2013-03-11 19:23:36}
+\pmmodified{2013-03-11 19:23:36}
+\pmowner{juanman}{12619}
+\pmmodifier{}{0}
+\pmtitle{Algebra multilineal de e.v. euclideanos}
+\pmrecord{1}{50064}
+\pmprivacy{1}
+\pmauthor{juanman}{0}
+\pmtype{Definition}
+
+%none for now
+\begin{document}
+\documentclass[12pt]{article}
+
+\DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+\DeclareSymbolFontAlphabet{\Bbb}{AMSb}
+\pagestyle{empty}
+\usepackage{graphicx}
+\usepackage{xypic}
+
+\newcommand{\modu}[1] {\left|\begin{array}{c} #1 \end{array}\right| }
+\newcommand{\paren}[1]{\left(\begin{array}{c} #1 \end{array}\right) }
+\newcommand{\llav}[1] {\left\{\begin{array}{c} #1 \end{array}\right\} }
+\newcommand{\corch}[1]{\left[\begin{array}{c} #1 \end{array}\right] }
+
+\begin{document} 
+
+\centerline{\Large\bf \'Algebra Multilineal de E.V. Euclideanos.}
+\bigskip
+\centerline{Juan Manuel M\'arquez B.}
+
+
+\vskip1cm
+\sf
+Estos son algunos hechos b\'asicos de los
+--- {\bf espacios vectoriales euclideanos} --- 
+\index{espacios euclideanos}
+espacios vectoriales con producto interior y las ideas de transformaciones multilineales 
+conocidas como {\bf tensores}.
+\bigskip
+
+Sea $V$ un espacio euclideano con $\langle\quad ,\quad\rangle$ su producto interior en el, es decir
+un mapeo $V\times V\to \Bbb{R}$ que cumple:
+
+\bigskip
+
+i) $\langle rX+sY,Z\rangle=r\langle X,Z\rangle+s\langle Y,Z\rangle$
+
+ii) $\langle X,rY+sZ\rangle=r\langle X,Y\rangle+s\langle X,Z\rangle$
+
+iii) $\langle X,Y\rangle=\langle Y,X\rangle$
+
+iv) $\langle X,X\rangle>0$ cuando $X\neq0$
+
+v) $\langle X,X\rangle=0$ si y solo si $X=0$,
+
+\bigskip
+
+\noindent es decir, $\langle\quad,\quad\rangle$ es un mapeo bilineal, sim\'etrico y positivo-definido.
+
+
+\begin{enumerate}
+
+\item El conjunto de transformaciones lineales tambi\'en es un e.v.
+
+\item Sean $V$ y $W$ dos espacios vectoriales reales de dimensi\'on finita. 
+      Entonces su producto tensorial $V\otimes W$ es el espacio vectorial real de dimensi\'on igual al
+      producto de $\dim V$ por $\dim W$, y cuya base son los s\'\i mbolos:
+      $$b_i\otimes c_j$$
+      donde los $b_i$ son base para $V$ y los $c_j$ base para $W$.
+
+      Por ejemplo, si $V=\langle\{b_1,b_2,...,b_8\}\rangle$ y $W=\langle\{c_1,c_2,...,c_{11}\}\rangle$	
+      entonces 
+      $$V\otimes W=\langle\{b_1\otimes c_1,\ b_1\otimes c_2,\ b_1\otimes c_3,...,\ b_8\otimes c_{11}\}\rangle$$
+      de donde vemos que $\dim(V\otimes W)=88$.
+
+\item Un elemento t\'\i pico $B\in V\otimes W$ se escribe como una combinaci\'on lineal de los $b_i\otimes c_j$:
+      $$B=B^{\mu\nu}b_{\mu}\otimes c_{\nu}$$
+      donde se esta usando la convenci\'on de la suma de Einstein y que significa:
+      $$B^{\mu\nu}b_{\mu}\otimes c_{\nu}=B^{11}b_1\otimes c_1+B^{12}b_1\otimes c_2+B^{21}b_2\otimes c_1+
+                           \cdots+B^{8,11}b_8\otimes c_{11}$$
+      
+
+\item El espacio dual $V^*$ 
+      \index{espacio dual}
+      es el conjunto de transformaciones lineales
+      $V\to\Bbb{R}$ tambi\'en llamados funcionales lineales o 
+      {\bf covectores}\index{covector}.\\
+      $V^*$ es un espacio vectorial con la suma $(f+g)(X)=f(X)+g(X)$ y la acci\'on de los escalares v\'\i a
+      $(rf)(X)=rf(X)=f(rX)$.
+
+\item Cada $f\in V^*$ puede representarse a trav\'es de
+      $$f(X)=\langle X,a\rangle,$$
+      donde $a\in V$ es fijo (Lema de Riesz).\\
+      O dicho de otra forma: {\it las \'unicas transformaciones lineales
+      $V\to\Bbb{R}$ son} 
+      $$X\longmapsto \langle X, a\rangle$$
+
+\item Sea $\{ b_1,...,b_n \}$ una base para $V$ entonces la matriz de
+      Gram\index{matriz de Gram} o tensor m\'etrico \index{tensor m\'etrico} de esta base es
+      $$G=\left[\begin{array}{c}    
+         g_{ij}=\langle b_i, b_j\rangle
+         \end{array}\right].$$
+      Tal matriz $G=[g_{ij}]$ es no singular debido a la independencia lineal 
+      de los $b_i$.
+
+\item Se denota con $g^{ij}$ las entradas de la matriz $G^{-1}=[g_{ij}]^{-1}$.
+      Observe que $\sum_k g^{ik}g_{kj}=\delta^i_j$ y que $\sum_k g_{ik}g^{kj}=\delta^j_i$. 
+      Que mediante la convenci\'on de la suma se escribe solamente
+      $$g^{ik}g_{kj}=\delta^i_j$$
+      pues $G^{-1}G=1$ como producto de matrices,
+      y
+      $$g_{ik}g^{kj}=\delta^j_i.$$
+      ya que $GG^{-1}=1$ tambi\'en como producto de matrices.
+
+\item La {\bf base reciproca} \index{base reciproca} $b^i$ a $b_i$ se construye con
+      $$b^i=g^{ij}b_j,$$
+      con suma sobre $j$. Enfaticemos que $g^{ij}b_j=g^{i1}b_1+g^{i2}b_2+\cdots g^{in}b_n$
+
+\item Representamos con $b^i$ los  covectores
+      $$\beta^i(\quad):=\langle\quad,b^i \rangle,$$
+      $\beta^i$ que llamaremos {\bf covectores b\'asicos}.
+
+\item Si $a\in V$ entonces $a=a^ib_i$ con suma sobre $i$ (convenci\'on de la suma de Einstein)
+      \index{Einstein}. Los $a^i$ se llaman componentes contra-variantes \index{componentes contravariantes} de $a$. 
+      En la base reciproca $a=a_ib^i$ y llamamos a los $a_i$ componentes co-variantes
+      \index{componentes covariantes} de $a$.
+      Estas son las leyes de subir y bajar indices \index{leyes de subir y bajar indices}.
+      Tenemos el siguiente "truco"
+      $$a=a^ib_i=a^i\delta_i^jb_j=a^ig_{ik}g^{kj}b_j=a_kb^k$$
+      lo que muestra como se escribe $a$ como combinaci\'on lineal en las dos bases: $b_i$ y $b^j$ de $V$.
+
+\item La relaci\'on entre los componentes es entonces $$a_i=g_{ij}a^j$$ o bien
+      $$a^i=g^{ij}a_j.$$
+
+\item Ahora si $f\in V^*$ entonces
+      $$f(\quad)=\langle\quad,a\rangle=\langle\quad,a_ib^i\rangle=a_i\langle\quad,b^i \rangle=a_i\beta^i(\quad)$$
+      en otras palabras $f=a_i\beta^i$. As\'\i\ los $\beta^i$ generan a $V^*$. Y por lo tanto 
+      $\dim V=\dim V^*$
+
+\item $V^*$ tambi\'en es euclideano. Sean $f,g\in V^*$ y $a,b\in V$ sus
+      representantes respectivamente, entonces 
+      $$\langle f, g\rangle^*:= \langle a, b\rangle$$ 
+      define un producto interior en $V^*$.
+
+\item Sea $V^{**}=(V^*)^*$ el dual del dual. Se identifica con $V$, pues si $T:V^*\to\Bbb{R}$ entonces
+      existir\'a $f\in V^*$ talque       
+      $$F(\mu)=\langle \mu,f\rangle^*$$
+      para todo covector $\mu$ y $f$ fija. Pero si $f(X)=\langle X,a\rangle$ entonces la aplicaci\'on
+      $$F\longmapsto a,$$
+      ser\'a un isomorfismo-isometr\'\i a $V^{**}\cong V$.
+      En otras palabras podemos representar con los elementos de $V$ a los
+      $V^{**}$ mediante la f\'ormula
+      $$F(\mu)=\langle \mu,f\rangle^*=\langle m,a\rangle=\langle a,m\rangle=\mu(a)$$
+      donde $\mu(\ )=\langle\quad ,m\rangle$. 	
+
+      Mediante el mismo proceso de dualizaci\'on que hicimos para construir $V^*$ desde $V$, ahora habr\'a 
+      funcionales lineales $B_i:V^*\to\Bbb{R}$ dados mediante la f\'ormula
+      $$B_i(\quad)=\langle\quad,\beta_i\rangle^*$$
+      donde los $\beta_i=g_{ij}\beta^j$ son los b\'asicos reciprocos de los $\beta^j$.
+      As\'\i\ 
+      $$F(\quad)=\langle\quad,f\rangle^*=\langle\quad,a^k\beta_k\rangle^*=a^k\langle\quad,\beta_k\rangle^*=a^kB_k(\quad )$$ 
+
+
+      
+\item Una {\bf tranformaci\'on k-lineal covariante} 
+      \index{tranformaci\'on k-lineal covariante}
+      o {\bf k-tensor covariante} es un
+      $$A:V\times\cdots\times V\to\Bbb{R}$$ que satisface (para cualquiera sean los escalares $r,s$):
+      $$A(rX_1+s Y_1,X_2,...,X_k)=
+      rA(X_1,X_2,...,X_k)+sA(Y_1,X_2,...,X_k),$$
+      $$A(X_1,rX_2+sY_2,...,X_k)=
+      rA(X_1,X_2,...,X_k)+sA(X_1,Y_2,...,X_k),$$
+      $$...$$
+      $$A(X_1,X_2,...,rX_k+sY_k)=
+      rA(X_1,X_2,...,X_k)+sA(X_1,X_2,...,Y_k),$$
+      Es decir $A$ es lineal en cada uno de sus $k$ argumentos.
+      En estos t\'erminos $\langle \ ,\ \rangle$ es un mapeo $2$-lineal.
+      Tambi\'en $\det$ es $n$-lineal.
+
+\item Similarmente las tranformaciones mul\-ti\-li\-nea\-les 
+      con\-tra\-va\-rian\-tes 
+      o los {\bf k-ten\-sores con\-tra\-va\-rian\-tes} 
+      \index{k-ten\-sores con\-tra\-va\-rian\-tes}
+      son los mapeos 
+      $k$-lineales
+      $$B:V^*\times\cdots\times V^*\to\Bbb{R}.$$
+
+\item Sean $T^{(k,0)}V$ el conjunto de los $k$-co tensores y $T^{(0,l)}V$
+      los $l$-contra tensores. Ellos forman espacios vectoriales con las 
+      operaciones obvias. Tambi\'en es posible $T^{(k,l)}V$ que es el 
+      conjunto de los tensores mixtos $k$-covariantes y $l$-contravariantes.
+      Se tiene que 
+ 
+\item Para contruir las bases (vectoriales) del espacio $T^{(2,0)}V$ 
+      definimos el {\bf producto tensorial} 
+      \index{producto tensorial}
+      de basicos de $V^*$
+      $$\beta^i\otimes\beta^j(X,Y):=\beta^i(X)\beta^j(Y),\index{$\beta^i\otimes\beta^j$}$$
+      \noindent para $2$ factores, siendo el lado derecho de la relaci\'on de 
+      arriba un simple producto en $\Bbb{R}$.
+      Similarmente para $p$ covectores b\'asicos:
+      $$\beta^{i_1}\otimes \cdots \otimes \beta^{i_p}(X_1,...,X_p)
+      :=\beta^{i_1}(X_1)\cdots\beta^{i_p}(X_p).$$
+      No es dif\'\i cil ver que tales construciones son verdaderamente transformaciones $p$-multilineales.
+
+\item Para $T^{(0,l)}V$ tenemos
+      $$b^{i_1}\otimes\cdots\otimes b^{i_l}(f_1,...,f_l):=f_1(b^{i_1})\cdots f_l(b^{i_l}),$$
+      donde $f_i$ son $l$ covectores arbitrarios.
+
+\item Para los mixtos vemos por ejemplo que en $T^{(1,1)}V$ tenemos
+      $$\beta^i\otimes b^j(X,f):=\beta^i(X)f(b^j),$$ 
+      ...etc.
+
+\item Con aquellas bases, si $A\in T^{(3,0)}V$ entonces
+      $$A=A_{\mu\nu\lambda}
+      \beta^{\mu}\otimes\beta^{\nu}\otimes\beta^{\lambda},$$
+      ejemplo que ilustra el caso general para co-tensores.
+      Los $A_{\mu\nu\lambda}$ se llaman {\bf componentes covariantes}
+      \index{componentes covariantes}
+      del tensor $A$.
+\item Sean $T\in T^{(k,0)}V$ y $W\in T^{(l,0)}V$ entonces $T\otimes W$
+      ser\'a un $k+l$-tensor covariante cuyos componentes son
+      $$(T\otimes W)_{i_1...i_{k+l}}=T_{i_1...i_k}W_{i_{k+1}...i_{k+l}}.$$
+\item Con relaciones del tipo
+      $$g^{\mu\nu}T_{\alpha\nu\lambda}={ { T_{\alpha} }^{\mu} }_{\lambda},$$
+      (suma sobre $\nu$) se cambia de componentes covariantes a mixtos y a
+      contravariantes.
+\item Observe que 
+                $$T^{(1,0)}V=V^*.$$
+                $$T^{(0,1)}V=V^{**}=V.$$
+                $$T^{(1,1)}V=\hom(V,V).$$
+\item Tambi\'en tenemos
+                $$\langle\ ,\ \rangle=g_{ij}\beta^i\otimes\beta^j.$$
+      Adem\'as de que podemos transformar $T^{(2,0)}V\rightarrow T^{(0,2)}V$
+      isom\'orficamente conforme a
+      $$A_{ij}\beta^i\otimes\beta^j\mapsto A^{ij} b_i\otimes b_j.$$
+      visto como tensor $T^{(1,1)}V$ se ver\'\i a como
+      $${A_i}^j\beta^i\otimes b_j.$$
+
+\item Un tensor covariante se dice {\bf alternante} 
+      \index{tensor alternante}
+      si cualquier cambio de 
+      dos indices en los componentes corresponde un cambio de signo 
+      con respecto al nuevo componente, como por ejemplo
+      $$A_{\mu\nu\lambda\kappa}=-A_{\nu\mu\lambda\kappa}.$$
+\item Sea $\Lambda^kV$ el conjunto de todos los tensores $k$-covariantes 
+      alternantes, tambi\'en llamados $k$-formas\index{formas}. 
+      $\Lambda^k(V)$ es un espacio vectorial.
+
+\item La base para $\Lambda^2V=\Lambda^2(V)$ se logra con el {\bf producto exterior}
+      \index{producto exterior}
+      \index{$\beta^i\wedge\beta^j$}
+      \begin{eqnarray*}
+      \beta^i\wedge\beta^j(X,Y)&=&
+      (\beta^i\otimes\beta^j-\beta^j\otimes\beta^i)(X,Y),\\
+      &=&\beta^i\otimes\beta^j(X,Y)-\beta^j\otimes\beta^i(X,Y),\\
+      &=&\beta^i(X)\beta^j(Y)-\beta^j(X)\beta^i(Y).
+      \end{eqnarray*}
+      Esta construcci\'on es bilineal y alternante.
+      $\beta^i\wedge\beta^j$ se llama {\bf bivector b\'asico}.
+      \index{bivector b\'asico}
+      
+      Observe que 
+      $$\beta^i\wedge\beta^i=0,$$
+      $$\beta^i\wedge\beta^j=-\beta^j\wedge\beta^i.$$
+      Por lo tanto
+      $$\dim \Lambda^2V=n!/2!(n-2)!={n\choose 2}.$$
+
+\item 
+
+
+
+Similarmente $\Lambda^3V$ es el espacio de las 3-formas que esta generado 
+      por la construcci\'on;
+      $$\beta^i\wedge \beta^j\wedge \beta^k=\sum_{p\in S_3}
+       (-1)^p \beta^{p(i)}\otimes \beta^{p(j)}\otimes \beta^{p(k)},$$
+      donde $S_3$ son las $6$ permutaciones de $\{i,j,k\}$ y $(-1)^p$ su 
+      {\em paridad}. 
+
+Observe que
+$$\beta^i\wedge \beta^j\wedge \beta^k(b_s,b_t,b_u)=
+\delta^i_s\delta^j_t\delta^k_u
+-\delta^i_s\delta^k_t\delta^j_u
++\delta^k_s\delta^i_t\delta^j_u
+-\delta^k_s\delta^j_t\delta^i_u
++\delta^j_s\delta^k_t\delta^i_u
+-\delta^j_s\delta^i_t\delta^k_u
+$$ 
+
+Entonces $\beta^i\wedge \beta^j\wedge \beta^k(b_s,b_u,b_t)=0$ si los conjuntos 
+      $\{ i,j,k\}$ y $\{ s,t,u\}$ son diferentes.
+
+Adem\'as si $X=X^sb_s,Y=Y^tb_t,Z=Z^ub_u$ entonces
+
+$$\beta^i\wedge \beta^j\wedge \beta^k(X,Y,Z)=
+X^iY^jZ^k
+-X^iY^kZ^j
++X^kY^iZ^j
+-X^kY^jZ^i
++X^jY^kZ^i
+-X^jY^iZ^k
+$$ 
+
+\bigskip
+\bigskip
+\bigskip
+
+
+      Entonces
+      $$\dim \Lambda^3V=n!/3!(n-3)!={n\choose 3}.$$
+\item No es dif\'\i cil visualizar que
+      $$\dim \Lambda^kV=n!/k!(n-k)!={n\choose n-k}.$$
+      Y que $\Lambda^{n+r}V=0$ para cada $r\in\Bbb{Z}$.
+
+
+
+\item Sea $A:V\to W$ una transformaci\'on lineal y si $f:W\to\Bbb{R}$ es un covector en $W$ entonces
+      podemos hacer el "pullback" de $f$, denotado y calculado mediante
+      $$A^*(f)=f\cdot A$$
+      Observe que esto \'ultimo es la composici\'on $V\stackrel{A}\to W\stackrel{f}\to\Bbb{R}$.
+      En otras palabras tenemos que $A$ induce una transformaci\'on lineal $A^*:W^*\to V^*$.		
+\end{enumerate}
+
+\pagebreak
+
+\bigskip
+\centerline{\bf ******************}
+
+
+1. ?` Cu\'al es la dimensi\'on de espacio vectorial real $\langle\{b_i\otimes b_j\}\rangle$ (generado por los $b_i\otimes b_j$) ?\\
+{\em 
+RESP: solo hay $n^2$ objetos basicos:
+$$b_1\otimes b_1$$
+$$b_1\otimes b_2$$
+$$b_1\otimes b_3$$
+$$...$$ 
+$$b_1\otimes b_n$$
+$$b_2\otimes b_1$$
+$$b_2\otimes b_2$$
+$$...$$
+
+$$...$$
+$$b_{n-1}\otimes b_n$$
+$$b_n\otimes b_1$$
+$$b_n\otimes b_2$$
+$$...$$
+$$b_n\otimes b_n$$
+para escribir combinaciones lineales 
+$$B=B^{ij}b_i\otimes b_j=B^{11}b_1\otimes b_1+B^{12}b_1\otimes b_2+...+B^{nn}b_n\otimes b_n$$
+estos $B$ son los 2-contra-tensores.
+
+\rule{.1in}{.1in} 
+}
+
+
+2. ?` Y de $\langle\{b_{i_1}\otimes\cdots\otimes b_{i_k}\}\rangle$?\\
+{\em 
+RESP: solo hay $n^k$ objetos basicos:
+$$b_1\otimes b_1\otimes... \otimes b_1$$
+$$b_1\otimes b_1\otimes... \otimes b_2$$
+$$b_1\otimes b_1\otimes... \otimes b_3$$
+$$...$$ 
+$$b_1\otimes b_1\otimes... \otimes b_n$$
+
+$$b_1\otimes b_2\otimes... \otimes...b_1$$
+$$b_1\otimes b_2\otimes... \otimes...b_2$$
+$$...$$ 
+$$b_1\otimes b_2\otimes... \otimes b_n$$
+$$...$$
+
+$$...$$
+$$b_{n-1}\otimes b_n\otimes... \otimes b_1$$
+$$...$$
+$$b_{n-1}\otimes b_n\otimes... \otimes b_n$$
+$$b_n\otimes b_n\otimes... \otimes b_1$$
+$$b_n\otimes b_n\otimes... \otimes b_2$$
+$$...$$
+
+$$...$$
+$$b_n\otimes b_n\otimes... \otimes b_n$$
+
+\rule{.1in}{.1in} 
+}
+
+3. La relaci\'on con la geometr\'\i a esta dada mediante la substituci\'on
+$$b_k=\partial_k=\frac{\partial}{\partial x^k}$$ donde
+$$\partial_k=d\Phi|_pe_k$$
+y donde $\Phi$ es una parametrizaci\'on local 
+$\Phi\colon D\to M\subset{\Bbb{R}}^N$.
+
+?` Cu\'al es la dimensi\'on de $\Omega^r(T_pM)$, siendo $T_pM$ de dimensi\'on $n$?
+
+4. Si $f\colon U\to V$ y $g\colon V\to W$  son tranformaciones lineales entre espacios vectoriales reales demuestre que $(g\circ f)^* = f^*\circ g^*$.
+
+5. Explique como transforman las 2-formas, si cambiamos de coordenadas.
+
+6. Calcule los $\Gamma_{jk}^i$ para la parametrizac\'on $\Phi(v,w)=(5v+3w-1,-v+7w,-2v+3)$.
+
+7. Calcular todos los $\Gamma_{jk}^i$ para el paraboloide $(v,w)\mapsto(v,w,v^2+w^2)$. ({\bf Resuelto en cursur.pdf})
+
+8. ?` Cu\'al es el volumen generado por los campos vectoriales $S(u,v,w)=(2u+v,w+1,vw)$ , $T(u,v,w)=(u,v+w,w^2)$ y $D_ST$ en el punto $p=(1,1,2)$?
+
+9. Sean $a=(a_1,a_2,...,a_n)$ y $b=(b_1,b_2,...,b_n)$. Definimos 
+$$a\times_1 b=a_1b_2-a_2b_1$$
+Demuestre que $\times_1$ define un mapeo bilineal ${\Bbb{R}}^n\times{\Bbb{R}}^n\to{\Bbb{R}}$.\\
+{\em RESP: Se debe ver que si ponemos una combinaci\'on lineal en la primera entrada
+$$(ka+k'a')\times_1 b=k(a\times_1 b)+k'(a'\times_1 b)$$
+y tambi\'en en la segunda
+$$a\times_1 (kb+k'b')=k(a\times_1 b)+k'(a\times_1 b')$$
+
+\rule{.1in}{.1in} 
+}
+
+10. Similar al anterior pero con 
+$$a\times_2 b=a_1b_3-a_3b_1$$
+
+11. ?` Cu\'antos mapeos bilineales como los previos se pueden construir cuando $n=4$?
+
+12. Demuestre que $\nabla_{\partial_k}(dx^a\wedge dx^b)$ satisface la regla de Leibniz.
+
+13. Diga como son los componentes ${{A^{\mu}}_{\nu}}_{; k}$ en t\'erminos de derivadas parciales y symbolos de Chistoffel, para un tensor mixto
+$A={A^{\mu}}_{\nu}\partial_{\mu}\otimes dx^{\nu}$.
+
+14. Sean $A=A^{\mu\nu}\partial_{\mu}\otimes\partial_{\nu}$ y $B=B^{\sigma\tau}\partial_{\sigma}\otimes\partial_{\tau}$ dos contratensores de rango 2. Definimos
+$$\langle A,B\rangle_2=g_{\nu\sigma}g_{\mu\tau}A^{\mu\nu}B^{\sigma\tau}={A^{\mu}}_{\sigma}{B^{\sigma}}_{\mu}$$
+Verifique que $\langle\quad ,\quad\rangle_2$ define un producto interior entre los contratensores de rango 2.\\
+{\em RESP: Se deben de checar los axiomas de espacio vectorial con producto interior:
+
+i) Bilinealidad: $\langle kA+k'A',B\rangle_2=k\langle A,B\rangle_2+k'\langle A',B\rangle_2$ y\\ 
+$\langle A,kB+k'B'\rangle_2=k\langle A,B\rangle_2+k'
+\langle A,B\rangle_2$;
+
+ii) Simetr\'ia: $\langle A,B\rangle_2=\langle B,A\rangle_2$;
+
+iii) Positivo definido: $\langle A,A\rangle_2\ge 0$ si $A\neq0$;
+
+iv) No degeneado: $\langle A,A\rangle_2=0$ si y solo si $A=0$.
+
+\rule{.1in}{.1in} 
+}
+
+
+
+
+15. ?` Cu\'al es la ley de transformaci\'on de $\nabla_{\partial_k}\partial_l$ cuando cambiamos coordenadas? 
+
+{\em RESP: Por un lado tenemos 
+
+$$\Gamma_{ij}^s\partial_s=
+\nabla_{\partial_i}\partial_j
+\quad\mbox{tanto como}\quad\tilde{\Gamma}_{ij}^s\tilde{\partial}_s=
+\nabla_{\tilde{\partial}_i}\tilde{\partial}
+$$
+
+y como 
+
+$$\partial_k=\frac{\partial y^s}{\partial x^k}\tilde{\partial}_s
+\quad
+\mbox{implica}
+\quad
+\tilde{\partial}_k=\frac{\partial x^s}{\partial y^k}\partial_s$$
+
+entonces 
+$$\tilde{\Gamma}_{ij}^s\tilde{\partial}_s
+=
+\nabla_{\tilde{\partial}_i}\tilde{\partial}_j
+=
+\nabla_{
+(\frac{\partial x^s}{\partial y^i}\partial_s)
+}
+(\frac{\partial x^t}{\partial y^j}\partial_t)
+=
+\frac{\partial x^s}{\partial y^i}
+\nabla_{\partial_s}(\frac{\partial x^t}{\partial y^j}\partial_t)
+$$
+
+$$\tilde{\Gamma}_{ij}^s\tilde{\partial}_s
+=\frac{\partial x^s}{\partial y^i}
+\corch{
+\frac{\partial}{\partial x^s}
+(\frac{\partial x^t}{\partial y^j})\partial_t+
+\frac{\partial x^t}{\partial y^j}\nabla_{\partial_s}\partial_t
+}
+$$
+$$
+=\frac{\partial x^s}{\partial y^i}
+\corch{
+\frac{\partial}{\partial x^s}
+(\frac{\partial x^t}{\partial y^j})\partial_t+
+\frac{\partial x^t}{\partial y^j}
+\Gamma_{st}^r\partial_r
+}
+$$
+$$
+=\frac{\partial x^s}{\partial y^i}
+\corch{
+\frac{\partial}{\partial x^s}
+(\frac{\partial x^t}{\partial y^j})+
+\frac{\partial x^r}{\partial y^j}
+\Gamma_{sr}^t
+}\partial_t
+$$
+
+$$
+=
+\corch{
+\frac{\partial}{\partial x^s}
+(\frac{\partial x^t}{\partial y^j})
+\frac{\partial x^s}{\partial y^i}
++
+\frac{\partial x^r}{\partial y^j}
+\frac{\partial x^s}{\partial y^i}
+\Gamma_{sr}^t
+}
+\partial_t
+$$
+pero
+$\partial_t=\frac{\partial y^u}{\partial x^t}\tilde{\partial}_u$
+entonces
+$$\tilde{\Gamma}_{ij}^u\tilde{\partial}_u
+=
+\corch{
+\frac{\partial}{\partial x^s}
+(\frac{\partial x^t}{\partial y^j})
+\frac{\partial x^s}{\partial y^i}
+\frac{\partial y^u}{\partial x^t}
++
+\frac{\partial x^r}{\partial y^j}
+\frac{\partial x^s}{\partial y^i}
+\Gamma_{sr}^t
+\frac{\partial y^u}{\partial x^t}
+}
+\tilde{\partial}_u
+$$
+por lo tanto
+$$
+\tilde{\Gamma}_{ij}^u
+=
+\frac{\partial}{\partial x^s}
+(\frac{\partial x^t}{\partial y^j})
+\frac{\partial x^s}{\partial y^i}
+\frac{\partial y^u}{\partial x^t}
++
+\frac{\partial x^r}{\partial y^j}
+\frac{\partial x^s}{\partial y^i}
+\Gamma_{sr}^t
+\frac{\partial y^u}{\partial x^t}
+$$
+
+$$
+\tilde{\Gamma}_{ij}^u
+=
+\frac{\partial^2 x^t}{\partial y^j\partial y^i}
+\frac{\partial y^u}{\partial x^t}
++
+\frac{\partial x^r}{\partial y^j}
+\frac{\partial x^s}{\partial y^i}
+\Gamma_{sr}^t
+\frac{\partial y^u}{\partial x^t}
+$$
+
+\rule{.1in}{.1in} 
+}
+
+16. ?` Y de $\nabla_{\partial_k}A\otimes B$ 
+donde $A,B$ son 1-covariantes? 
+
+17 ?` Y de la derivada covariante en direcci\'on $X$ de un mixto 2-covariante y 1-contravariante?
+
+\bigskip
+
+Los siguientes ejemplos estan dedicados a mi amigo Perucho de Venezuela...
+
+\bigskip
+
+18.- Demuestre que $\Gamma^i_{ir}={1\over 2}g^{is}g_{si,r}$.
+
+{\em RESP: Desde la definiciÃ³n 
+$\Gamma^i_{jr}={1\over 2}g^{is}\corch{g_{js,r}+g_{sr,j}-g_{jr,s}}$ haciendo $j=i$ tendremos
+$$\Gamma^i_{ir}={1\over 2}g^{is}\corch{g_{is,r}+g_{sr,i}-g_{ir,s}}$$
+$$\Gamma^i_{ir}={1\over 2}\corch{g^{is}g_{is,r}+g^{is}g_{sr,i}-g^{is}g_{ir,s}}$$
+$$={1\over 2}\corch{g^{is}g_{is,r}+g^{is}g_{sr,i}-g^{si}g_{sr,i}}$$
+
+$$\Gamma^i_{ir}={1\over 2}g^{is}g_{is,r}$$
+
+\rule{.1in}{.1in} 
+}
+
+19. El siguiente esquema permite encontrar la matriz de una transformaci\'on lineal (definida usando la base standar) en un cambio de base: 
+\[
+\begin{xy}
+(35,20)*+{\Bbb{R}^3,e}="b"; (70,20)*+{\Bbb{R}^3,e}="c";%
+(0,20)*+{\Bbb{R}^3,b}="a"; (105,20)*+{\Bbb{R}^3,b}="d";
+%
+{\ar "a";"b"}?*!/_5mm/{
+\tiny
+\left[\begin{array}{ccc}
+1&0&0\\
+0&1&0\\
+0&-8&1 
+\end{array}\right]
+};
+{\ar "b";"c"}?*!/_5mm/{
+\tiny
+\left[\begin{array}{ccc}
+1&0&0\\
+4&1&0\\
+-1&1&1 
+\end{array}\right]
+};
+{\ar "c";"d"}?*!/_5mm/{
+\tiny
+\left[\begin{array}{ccc}
+1&0&0\\
+0&1&0\\
+0&8&1 
+\end{array}\right]
+};
+\end{xy}
+\]
+
+%\begin{center}
+%\includegraphics{prodtensor}
+%\end{center}
+
+
+\end{document}
+%%%%%
+\end{document}

@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegralTest}
+\pmcreated{2013-03-22 12:27:12}
+\pmmodified{2013-03-22 12:27:12}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{integral test}
+\pmrecord{20}{32590}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmrelated{Function}
+\pmrelated{Sequence}
+\pmrelated{Limit}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\newtheorem{dfn}{Definition}
+\begin{document}
+Consider a sequence $(a_n)=\{a_0,a_1,a_2,a_3,\ldots\}$ 
+and given $M\in \R$ consider any monotonically nonincreasing function $f:[M,+\infty)\to \R$ which extends the sequence, i.e.
+\[
+  f(n) = a_n \qquad \forall n\ge M
+\]
+
+An example is
+$$a_n = 2n\qquad \to\qquad f(x) = 2x$$
+(the former being the sequence $\{0,2,4,6,8,\ldots\}$ and the later the doubling function for any real number.
+
+We are interested on finding out when the summation
+$$\sum_{n = 0}^{\infty}a_n$$
+converges.
+
+The integral test states the following.
+
+The series
+$$\sum_{n = 0}^{\infty}a_n$$
+converges if and only if the integral
+$$\int_M^\infty f(x)\, dx$$
+is finite.
+%%%%%
+%%%%%
+\end{document}

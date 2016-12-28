@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MethodsOfEvaluatingImproperIntegrals}
+\pmcreated{2014-11-07 19:12:16}
+\pmmodified{2014-11-07 19:12:16}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{methods of evaluating improper integrals}
+\pmrecord{34}{41520}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A10}
+\pmrelated{IntegrationOfLaplaceTransformWithRespectToParameter}
+\pmrelated{ListOfImproperIntegrals}
+\pmrelated{IntegralRelatedToArcSine}
+\pmrelated{ExampleOfChangingVariable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{place}
+
+There are some general methods of evaluating improper integrals in such cases when one cannot directly use the antiderivative of the integrand.\, Which method is suitable in a certain instance, is dependent on the kind of the \PMlinkname{integral}{DefiniteIntegral}.\\
+
+\begin{itemize}
+\item Differentiation under the integral sign with respect to a 
+parametre in the integrand; one can add a new parametre to a 
+suitable place.\, The differentiated form may then be 
+integrated directly or from a differential equation.\, Examples: 
+\PMlinkname{a}{twoimproperintegrals}, 
+\PMlinkname{b}{generalisationofgaussianintegral}, 
+\PMlinkname{c}{relativeofexponentialintegral}, 
+\PMlinkname{d}{integralrelatedtoarcsine}, 
+\PMlinkid{e}{11617}.
+\item \PMlinkname{Laplace transform}{laplacetransform}.\, If the 
+integrand has, as above, a parametre in a suitable place, the 
+Laplace transform of the integrand with respect to this 
+parametre is often simpler to integrate and the new improper 
+integral to evaluate; thereafter one simply 
+\PMlinkescapetext{transforms} inversely.\, Examples: 
+\PMlinkname{f}{sineintegralatinfinity}, 
+\PMlinkname{g}{usingconvolutiontofindlaplacetransform}, 
+\PMlinkname{h}{relativeofcosineintegral}, 
+\PMlinkname{i}{laplacetransformoftnft}, 
+\PMlinkid{j}{10637}.
+\item Cauchy residue theorem.\, The integral may be obtained as 
+limit of a contour integral in the complex plane.\, Examples: 
+\PMlinkname{k}{usingresiduetheoremnearbranchpoint}, 
+\PMlinkname{l}{fresnelformulas}, 
+\PMlinkname{m}{laplaceintegrals}, 
+\PMlinkid{n}{11489}.
+\item Expanding the integrand to series.\, Example: 
+\PMlinkname{o}{applicationoflogarithmseries}.
+\item 
+\PMlinkname{Changing variable}{ChangeOfVariableInDefiniteIntegral} in an improper integral sometimes may recur it to a known improper integral.\, Examples: 
+\PMlinkname{p}{areaundergaussiancurve}, 
+\PMlinkname{q}{exampleofimproperintegral},
+\PMlinkname{r}{exampleofchangingvariable}.
+\end{itemize}
+
+
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

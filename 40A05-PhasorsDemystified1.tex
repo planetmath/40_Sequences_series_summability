@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PhasorsDemystified1}
+\pmcreated{2013-03-11 19:26:47}
+\pmmodified{2013-03-11 19:26:47}
+\pmowner{swapnizzle}{13346}
+\pmmodifier{}{0}
+\pmtitle{Phasors Demystified}
+\pmrecord{1}{50080}
+\pmprivacy{1}
+\pmauthor{swapnizzle}{0}
+\pmtype{Definition}
+
+%none for now
+\begin{document}
+\documentclass[11pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage[mathcal]{eucal}
+\usepackage{xy}
+\textheight 9in
+\textwidth 6.5in
+\oddsidemargin 0in
+\evensidemargin 0in
+\topmargin 0in
+\headheight 0in
+\headsep 0in
+\title{Phasors Demystified}
+\author{Swapnil Sunil Jain}
+\date{Aug 7, 2006}
+\begin{document}
+\maketitle
+
+Suppose the following integro-differential equation is given in the time-domain\footnote[1]{This is not the most general integro-differential equation but it has all the basic elements required for this discussion and hence the reader can easily extend this discussion for the more generalized case.}:
+\begin{eqnarray}
+&& C_1 \frac{d}{dt}y(t) + C_2 \int_{-\infty}^{t} y(t) dt + C_3 y(t) = x(t)
+\end{eqnarray}
+where $y(t)$ and $x(t)$ are sinusoidal waveforms of the same frequency. Now, since $y(t)$ is a sinusoidal function it can be represented as $A_y \cos(\omega t + \phi_y)$ and, similarly, x(t) can be represented as $A_x \cos(\omega t + \phi_x)$. Furthermore, using the properties of complex numbers we can write
+\begin{eqnarray*}
+&& y(t) = A_y \cos(\omega t + \phi_y) = \Re(A_y e^{j\phi_y} e^{j\omega t}) \\
+&& x(t) = A_x \cos(\omega t + \phi_x) = \Re(A_x e^{j\phi_x} e^{j\omega t}) \\
+\end{eqnarray*}
+
+Now if we define the quantities $\tilde{Y}$ as $A_y e^{j\phi_y}$ and $\tilde{X}$ as $A_x e^{j\phi_x}$ (where $\tilde{Y}$ and $\tilde{X}$ are called $\emph{phasors}$), then we can write the above expression in a more compact form as 
+\begin{eqnarray*}
+&& y(t) = \Re(\tilde{Y} e^{j\omega t}) \\
+&& x(t) = \Re(\tilde{X} e^{j\omega t}) 
+\end{eqnarray*}
+
+Now, using the above expression for $y(t)$ and $x(t)$ we can rewrite our original integro-differential equation as
+\begin{eqnarray*}
+&& C_1 \frac{d}{dt}\Re[\tilde{Y} e^{j\omega t}] + C_2 \int_{-\infty}^{t}\Re[\tilde{Y} e^{j\omega t}] dt + C_3\Re[\tilde{Y} e^{j\omega t}] = \Re[\tilde{X} e^{j\omega t}] \\
+\end{eqnarray*}
+Moving the derivative and the integral inside the $\Re$ operator we get
+\begin{eqnarray*}
+&& C_1 \Re\Big[\frac{d}{dt}\tilde{Y} e^{j\omega t}\Big] + C_2 \Re\Bigg[\int_{-\infty}^{t}\tilde{Y} e^{j\omega t}dt \Bigg]  + C_3\Re[\tilde{Y} e^{j\omega t}] = \Re[\tilde{X} e^{j\omega t}] \\
+&& \Rightarrow C_1\Re[\tilde{Y} j\omega e^{j\omega t}] + C_2 \Re[\tilde{Y} \frac{e^{j\omega t}}{j\omega}] + C_3 \Re[\tilde{Y} e^{j\omega t}] = \Re[\tilde{X} e^{j\omega t}] \\
+&& \Rightarrow \Re[\tilde{Y} j\omega C_1 e^{j\omega t}] + \Re[\frac{\tilde{Y} C_2}{j\omega} e^{j\omega t}]  + \Re[\tilde{Y} C_3 e^{j\omega t}] - \Re[\tilde{X} e^{j\omega t}] = 0
+\end{eqnarray*}
+\begin{eqnarray*}
+&& \Rightarrow \Re\Big[\tilde{Y} j\omega C_1 e^{j\omega t} + \frac{\tilde{Y} C_2}{j\omega} e^{j\omega t} + \tilde{Y} C_3 e^{j\omega t} - \tilde{X} e^{j\omega t} \Big] = 0 \\
+&& \Rightarrow \Re\Big[ e^{j\omega t} \Big(\tilde{Y} j\omega C_1  + \frac{\tilde{Y} C_2}{j\omega} + \tilde{Y} C_3 - \tilde{X} \Big) \Big] = \Re[0] + j\Im[0] 
+\end{eqnarray*}
+Equating the real parts above we get,
+\begin{eqnarray*}
+&& \Rightarrow e^{j\omega t} \Big(\tilde{Y} j\omega C_1  + \frac{\tilde{Y} C_2}{j\omega} + \tilde{Y} C_3 - \tilde{X} \Big) = 0 \\
+\end{eqnarray*}
+\begin{eqnarray}
+&& \Rightarrow \tilde{Y} j\omega C_1  + \frac{\tilde{Y} C_2}{j\omega} + \tilde{Y} C_3 - \tilde{X} = 0 \quad \mbox{(for $t\neq-\infty$)} 
+\end{eqnarray}
+
+Hence, we have now arrive at the phasor domain expression for (1). You can see from the analysis above that we aren't adding or losing any information when we transform equation (1) into the $\mbox{"phasor domain"}$ and arrive at equation (2). One can easily get to (2) by using simple algebraic properties of real and complex numbers. Furthermore, since (2) can be derived readily from (1), in practice we don't even bother to do all the intermediate steps and just skip straight to (2) calling this "skipping of steps" as "transforming the equation into the phasor domain."
+
+We can now continue the analysis even further and solve for $y(t)$ which is the whole motivation behind the use of phasors. Solving for $\tilde{Y}$ in (2) we get
+\begin{eqnarray*}
+&& \Rightarrow \tilde{Y} = \frac{\tilde{X}}{\Big( j\omega C_1  + \frac{C_2}{j\omega} + C_3\Big)}
+\end{eqnarray*}
+Now, since 
+\begin{eqnarray*}
+&& y(t) = \Re[\tilde{Y} e^{j\omega t}]
+\end{eqnarray*}
+we have 
+\begin{eqnarray*}
+&& y(t) = \Re\Bigg[ \frac{\tilde{X} e^{j\omega t}}{\Big( j\omega C_1  + \frac{C_2}{j\omega} + C_3\Big)} \Bigg] \\
+&& \Rightarrow y(t) = \Re\Bigg[\frac{ A_x e^{j\phi_x} e^{j\omega t}}{\Big( j\omega C_1  + \frac{C_2}{j\omega} + C_3\Big)} \Bigg]
+\end{eqnarray*}
+
+The above equation makes sense because you can see that the output y(t) is given completely in terms of the variables $A_x$ and $\phi_x$ (which depend only on the input sinusoid $x(t)$) and the constants $C_1$, $C_2$ and $C_3$---as we expected! So by converting the integro-differential equation (1) into the phasor domain (2), all the complicated integration and differentiation operations become simple manipulation of complex variables---which is why phasors are so useful!     
+\end{document}
+%%%%%
+\end{document}

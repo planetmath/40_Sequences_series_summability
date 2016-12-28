@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfStolzCesaroTheorem}
+\pmcreated{2013-03-22 13:17:45}
+\pmmodified{2013-03-22 13:17:45}
+\pmowner{slash}{33}
+\pmmodifier{slash}{33}
+\pmtitle{Proof of Stolz-Cesaro theorem}
+\pmrecord{4}{33795}
+\pmprivacy{1}
+\pmauthor{slash}{33}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+%\pmkeywords{sequence}
+%\pmkeywords{limit}
+%\pmkeywords{convergence}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+From the definition of convergence , for every $\epsilon > 0$ there is $N(\epsilon) \in \mathbb{N}$ such that $(\forall) n \geq N(\epsilon)$ , we have :
+$$ l-\epsilon < \frac{a_{n+1}-a_n}{b_{n+1}-b_n} < l + \epsilon $$
+Because $b_n$ is strictly increasing we can multiply the last equation with $b_{n+1}-b_n$ to get :
+$$ (l-\epsilon)(b_{n+1}-b_n) < a_{n+1}-a_n < (l+\epsilon)(b_{n+1}-b_n) $$
+Let $k>N(\epsilon)$ be a natural number . Summing the last relation we get :
+$$ (l-\epsilon)\sum_{i=N(\epsilon)}^{k}(b_{i+1}-b_i) < \sum_{i=N(\epsilon)}^{k}(a_{n+1}-a_n) < (l+\epsilon)\sum_{i=N(\epsilon)}^{k}(b_{i+1}-b_i) \Rightarrow $$
+$$ (l-\epsilon)(b_{k+1}-b_{N(\epsilon)}) < a_{k+1} - a_{N(\epsilon)} < (l+\epsilon)(b_{k+1}-b_{N(\epsilon)})$$
+Divide the last relation by $b_{k+1}>0$ to get :
+$$ (l-\epsilon)(1 - \frac{b_{N(\epsilon)}}{b_{k+1}}) < \frac{a_{k+1}}{b_{k+1}} - \frac{a_{N(\epsilon)}}{b_{k+1}}<(l+\epsilon)(1 - \frac{b_{N(\epsilon)}}{b_{k+1}}) \Leftrightarrow$$
+$$ (l-\epsilon)(1 - \frac{b_{N(\epsilon)}}{b_{k+1}}) + \frac{a_{N(\epsilon)}}{b_{k+1}}< \frac{a_{k+1}}{b_{k+1}}<(l+\epsilon)(1 - \frac{b_{N(\epsilon)}}{b_{k+1}}) + \frac{a_{N(\epsilon)}}{b_{k+1}} $$
+This means that there is some $K$ such that for $k \geq K$ we have :
+$$(l-\epsilon)<\frac{a_{k+1}}{b_{k+1}}< (l+\epsilon)$$
+(since the other terms who were left out converge to 0)
+
+This obviously means that :
+$$ \lim_{n \rightarrow \infty} \frac{a_n}{b_n}=l$$
+and we are done .
+%%%%%
+%%%%%
+\end{document}

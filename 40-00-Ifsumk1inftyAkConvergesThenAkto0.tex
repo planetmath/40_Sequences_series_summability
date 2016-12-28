@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Ifsumk1inftyAkConvergesThenAkto0}
+\pmcreated{2013-03-22 15:00:38}
+\pmmodified{2013-03-22 15:00:38}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{if $\sum_{k=1}^\infty a_k$ converges then $a_k\to 0$}
+\pmrecord{13}{36717}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40-00}
+\pmsynonym{necessary condition of convergence}{Ifsumk1inftyAkConvergesThenAkto0}
+%\pmkeywords{divergence test}
+\pmrelated{DeterminingSeriesConvergence}
+\pmrelated{CompleteUltrametricField}
+\pmrelated{ConvergenceConditionOfInfiniteProduct}
+\pmrelated{LambertSeries}
+\pmrelated{AbsoluteConvergenceOfIntegralAndBoundednessOfDerivative}
+\pmrelated{ConvergentSeriesWhereNotOnlyA_nButAlsoNa_nTendsTo0}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\begin{thm} Suppose $a_1,a_2, \ldots$ is a sequence of real or complex numbers.
+If the series
+$$
+  \sum_{k=1}^\infty a_k
+$$
+converges, then $\lim_{k\to \infty} a_k = 0$.
+\end{thm}
+
+\subsubsection*{Remarks}
+\begin{enumerate}
+\item 
+The harmonic series $\sum_{k=1}^\infty 1/k$ shows that the 
+implication can not be reversed. 
+\item This result can be used as a first test for convergence of a series
+  $\sum_{k=1}^\infty a_k$. If $a_k$ does not converge to $0$, then 
+  $\sum_{k=1}^\infty a_k$ does not converge either. 
+\end{enumerate}
+
+\begin{proof} Let $S\in \C$ be the value of the sum, and let $\varepsilon>0$
+be arbitrary. Then there exists an $N\ge 1$ such that 
+$$
+  | \sum_{k=1}^M a_k -S | < \frac{\varepsilon}{2}
+$$
+for all $M\ge N$. For $j\ge N$ we then have
+\begin{eqnarray*}
+|a_{j+1}| &=& | \sum_{k=1}^{j+1} a_k -\sum_{k=1}^j a_k| \\
+          &\le & | \sum_{k=1}^{j+1} a_k -S | + |S - \sum_{k=1}^j a_k| \\
+          &<& \varepsilon,
+\end{eqnarray*}
+and the claim follows.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

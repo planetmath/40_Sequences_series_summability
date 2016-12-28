@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ImproperIntegral}
+\pmcreated{2013-03-22 12:30:06}
+\pmmodified{2013-03-22 12:30:06}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{improper integral}
+\pmrecord{8}{32732}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A10}
+%\pmkeywords{improper integration}
+\pmrelated{CauchyPrinciplePartIntegral}
+\pmrelated{ExampleOfUsingResidueTheorem}
+\pmrelated{FunctionXx}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbf R}
+\begin{document}
+The Riemann integral of a function $f\colon I\to \R$ 
+\[
+  \int_I f(t)\, dt
+\]
+is defined when $f$ is bounded and $I=[a,b]\subset \R$ is a compact interval.
+If $I$ is any interval of $\R$ and $f$ is bounded on every compact subset of $I$ (for example $f$ is continuous), then we can define the concept of \emph{improper integral} of $f$ on $I$ by approximation of $I$ with compact sets.
+
+Let $I=(a,b)$ with $a\in[-\infty,+\infty)$ and $b\in(-\infty,+\infty]$ and let $f$ be a continuous function on $I$. Given $x,y\in I$ we know that the function $f$ is Riemann integrable on $[a,b]$; hence we can define the \emph{improper integral of $f$ on $I$ as}
+\[
+  \int_I f(t)\, dt := \lim_{(x,y)\to(a,b),\ x>a, y<b} \int_x^y f(t)\, dt.
+\]
+
+Notice that the limit is taken in two variables. In the case when $I$ is compact 
+this is the usual Riemann integral on $I=[a,b]$ (because the integral function is continuous). So there is no ambiguity in using the same simbol for improper integrals and usual Riemann integrals (but we will see that there is an ambiguity when dealing with Lebesgue integrals).
+Similarly, in the case when the interval $I$ is semi-open, i.e.\ when $I=[a,b)$ with $a>-\infty$, the definition clearly reduces to
+\[
+  \int_I f(t)\, dt := \lim_{y\to b^-} \int_a^y f(t)\, dt
+\]
+which is a limit in one variable.
+
+Notice also that an improper integral can be infinite or can possibly not exist (even thought $f$ is continuous).
+
+The definition may be extended to the case when $I$ is the union of a finite number of intervals $I=I_1\cup\ldots I_N$ by summing up the improper integrals on every interval:
+\[
+  \int_I f(t)\, dt := \sum_{k=1}^N \int_{I_k} f(t)\, dt.
+\]
+
+In the case when $I=\R$ (or more generally when $I$ has some symmetry), one can define the \emph{symmetric improper integral} as 
+\[
+ \int_{\R} f(x)\, dx = \lim_{x\to+\infty} \int_{-x}^x f(t)\, dt.
+\]
+This limit can exist in some cases when the \emph{improper integral} (not symmetric) fails to exist.
+
+\section{Examples}
+
+Given $I=(0,1]$, $f(t)=1/\sqrt t$ one has:
+\begin{align*}
+  \int_{(0,1]} \frac 1 {\sqrt t}\, dt 
+&= \lim_{x\to 0^+}\int_x^1 \frac 1 {\sqrt t}\, dt \\
+&= \lim_{x\to 0^+} [2t^\frac 1 2]_x^1 \\
+&= \lim_{x\to 0^+} (2-2\sqrt x) = 2. 
+\end{align*}
+
+Given $I=[1,+\infty)$, $f(t)=(\sin t)/t$ one can check that the improper integral $\int_I f(t)\, dt$ exists and is finite but the improper integral $\int_I |f(t)|\, dt$ is infinite. In particular this function is not summable (in the sense of Lebesgue integrals) on the interval $I$.
+
+The function $f(t)=t/(1+t^2)$ has no improper integral in $I=\R$. But since $f(t)=-f(-t)$ one can easily check that the symmetric integral is zero:
+\[
+  \lim_{x\to+\infty} \int_{-x}^x \frac{t}{1+t^2}\, dt =0.
+\]
+%%%%%
+%%%%%
+\end{document}

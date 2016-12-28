@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CauchyCriterionForConvergence}
+\pmcreated{2013-03-22 13:22:03}
+\pmmodified{2013-03-22 13:22:03}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{Cauchy criterion for convergence}
+\pmrecord{14}{33894}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A series $\sum_{i=0}^\infty a_i$ in a Banach space $(V,\|\cdot\|)$ is \PMlinkid{convergent}{2311} iff for every $\varepsilon>0$ there is a number $N\in\mathbb{N}$ such that
+$$\|a_{n+1}+a_{n+2}+\cdots+a_{n+p}\|<\varepsilon$$
+holds for all $n>N$ and $p\geq1$.
+
+
+\subsection*{Proof:}
+First define
+$$s_n:=\sum_{i=0}^n a_i.$$
+Now, since $V$ is complete, $(s_n)$ converges if and only if it is a Cauchy sequence, so if for every $\varepsilon>0$ there is a number $N$, such that for all $n,m>N$ holds:
+$$\|s_m-s_n\|<\varepsilon.$$
+We can assume $m>n$ and thus set $m=n+p$. The series is \PMlinkescapetext{convergent} iff
+$$\|s_{n+p}-s_n\|=\|a_{n+1}+a_{n+2}+\cdots+a_{n+p}\|<\varepsilon.$$
+%%%%%
+%%%%%
+\end{document}

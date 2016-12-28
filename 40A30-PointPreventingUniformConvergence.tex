@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PointPreventingUniformConvergence}
+\pmcreated{2013-03-22 17:27:18}
+\pmmodified{2013-03-22 17:27:18}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{point preventing uniform convergence}
+\pmrecord{6}{39837}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A30}
+\pmrelated{NotUniformlyContinuousFunction}
+\pmrelated{LimitFunctionOfSequence}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}  If the sequence \,$f_1,\,f_2,\,f_3,\,\ldots$\, of real functions converges at each point of the interval \,$[a,\,b]$ but does not converge uniformly on this interval, then there exists at least one point $x_0$ of the interval such that the function sequence converges uniformly on no closed sub-interval of\, $[a,\,b]$ containing $x_0$.
+
+{\em Proof.}  Let the limit function of the sequence on the interval \,$[a,\,b]$\, be $f$.  According the entry uniform convergence on union interval, the sequence can not converge uniformly to $f$ both half-intervals\, $[a,\,\frac{a+b}{2}]$\, and\, $[\frac{a+b}{2},\,b]$,\, since otherwise it would do it on the union \,$[a,\,b]$.  Denote by\, $[a_1,\,b_1]$\, the first (fom left) of those half-intervals on which the convergence is not uniform.  We have\,  $[a,\,b] \supset [a_1,\,b_1]$.  Then the interval\, $[a_1,\,b_1]$\, is halved and chosen its half-interval\, $[a_2,\,b_2]$\, on which the convergence is not uniform.  We can continue similarly arbitrarily far and obtain a unique endless sequence
+$$[a,\,b] \supset [a_1,\,b_1] \supset [a_2,\,b_2] \supset \ldots$$
+of nested intervals on which the convergence of the function sequence is not uniform, and besides the length of the intervals tend to zero:
+$$\lim_{n\to\infty}(b_n-a_n) = \lim_{n\to\infty}\frac{b-a}{2^n} = 0.$$
+The nested interval theorem thus gives a unique real number $x_0$ belonging to each of the intervals\, $[a,\,b]$\, and\, $[a_n,\,b_n]$.  Then\, $\lim_{n\to\infty}a_n = x_0 = \lim_{n\to\infty}b_n$.\, Let us choose $\alpha$ and $\beta$ such that\, $a \leqq \alpha \leqq x_0 \leqq \beta \leqq b$.  There exist the integers $n_1$ and $n_2$ such that
+$$|a_n-x_0| = x_0-a_n \leqq x_0-\alpha\quad \mbox{when}\;\;n > n_1$$
+$$|b_n-x_0| = b_n-x_0 \leqq \beta-x_0\quad \mbox{when}\;\;n > n_2.$$
+Therefore\, 
+$$\alpha \leqq a_n \leqq x_0 \leqq b_n \leqq \beta \quad\mbox{when}\;\;n > \max\{n_1,\,n_2\}.$$
+This means that\, $f_n \to f$\, not uniformly on\, $[a_n,\,b_n] \subset [\alpha,\,\beta]$, whence the function sequence does not converge uniformly on the arbitrarily chosen subinterval\, $[\alpha,\,\beta]$\, of\, $[a,\,b]$ containing $x_0$.
+
+%%%%%
+%%%%%
+\end{document}

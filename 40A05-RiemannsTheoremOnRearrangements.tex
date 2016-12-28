@@ -1,0 +1,142 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RiemannsTheoremOnRearrangements}
+\pmcreated{2013-03-22 17:31:52}
+\pmmodified{2013-03-22 17:31:52}
+\pmowner{Gorkem}{3644}
+\pmmodifier{Gorkem}{3644}
+\pmtitle{Riemann's theorem on rearrangements}
+\pmrecord{23}{39928}
+\pmprivacy{1}
+\pmauthor{Gorkem}{3644}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmsynonym{Riemann series theorem}{RiemannsTheoremOnRearrangements}
+\pmrelated{UnconditionallyConvergent}
+\pmrelated{FiniteChangesInConvergentSeries}
+\pmrelated{FiniteChangesInConvergentSeries2}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amssymb,amsbsy}
+\usepackage{graphicx,color}
+\usepackage{epsfig}
+
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+
+
+
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{rk}[thm]{Remark}
+\newtheorem{crl}[thm]{Corollary}
+\newtheorem{stp}{Step}
+
+\newcommand{\disp}{\displaystyle}
+\newcommand{\dintl}{\disp\int\limits}
+\newcommand{\dsuml}{\disp\sum\limits}
+\newcommand{\hsp}{\hspace{30pt}}
+\newcommand{\ba}{\begin{array}}
+\newcommand{\ea}{\end{array}}
+\newcommand{\trns}{\,\widehat{}\,\,}
+
+\newcommand{\bthm}{\begin{thm}}
+\newcommand{\ethm}{\end{thm}}
+\newcommand{\bstp}{\begin{stp}}
+\newcommand{\estp}{\end{stp}}
+\newcommand{\blemma}{\begin{lemma}}
+\newcommand{\elemma}{\end{lemma}}
+\newcommand{\bprop}{\begin{prop}}
+\newcommand{\eprop}{\end{prop}}
+\newcommand{\bpf}{\begin{pf}}
+\newcommand{\epf}{\end{pf}}
+\newcommand{\bdefn}{\begin{defn}}
+\newcommand{\edefn}{\end{defn}}
+\newcommand{\brk}{\begin{rk}}
+\newcommand{\erk}{\end{rk}}
+\newcommand{\bcrl}{\begin{crl}}
+\newcommand{\ecrl}{\end{crl}}
+
+
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\brackets}[1]{\left[#1\right]}
+\newcommand{\beqn}{\begin{equation}}
+\newcommand{\eeqn}{\end{equation}}
+\newcommand{\supnorm}[1]{\norm{#1}_\infty}
+\newcommand{\normt}[1]{\norm{#1}_2}
+\newcommand{\ip}[2]{\left\langle#1 , #2\right\rangle}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\calg}[1]{\mathcal{#1}}
+
+
+\newcommand{\sinc}{\operatorname{sinc}}
+\newcommand{\qed}{$\ \ \ \ \ \Box$}
+\newcommand{\qedin}{\ \ \ \ \ \Box}
+\newcommand{\Tr}{\operatorname{\Tr}}
+
+\newenvironment{pf}{\begin{trivlist}\item[\hskip%
+\labelsep{\bf Proof.}]}
+{\rm\end{trivlist}}
+
+\begin{document}
+\PMlinkescapeword{order}
+
+If the map $n \mapsto n'$ is a bijection on $\mathbb{N}$, we say that the sequence $(a_{n'})$ is a rearrangement of $(a_{n})$. 
+
+The following theorem, which is due to Riemann, shows that the convergence of a conditionally convergent series depends so much on the order of its terms; in particular, a conditionally convergent series can be made to converge to any real number by changing the order of its terms. 
+
+\textbf{Theorem (Riemann series theorem).}
+Let $(a_n)$ be a sequence in $\mathbb{R}$  such that $\sum_{n=1}^\infty a_n$ converges but $\sum_{n=1}^\infty |a_n| = \infty$, i.e, $\sum a_n$ is conditionally convergent.   Let $-\infty\leq \alpha < \beta \leq \infty $ be arbitrary. Then there exists a rearrangement $(a_{n'})$  such that 
+$$
+\liminf_N \sum_{n'=1}^N a_{n'} = \alpha \ \ \ \mbox{and} \ \ \  \limsup_N \sum_{n'=1}^N a_{n'} = \beta.
+$$
+
+
+{\em Proof.}
+Let $a_n^+ = \max\{0,a_n\}$ and $a_n^- = \min\{0,-a_n\}$.  Then we have $a_n = a_n^+ - a_n^-$ and $|a_n| = a_n^+ + a_n^-$.  Since $\sum a_n < \infty$, both $\sum a_n^+$ and $\sum a_n^-$ diverge or converge simultaneously. But since $\sum|a_n|=\infty$, we see that at least one of $\sum a_n^+$ and $\sum a_n^-$ must diverge.  It follows that  $\sum a_n^+ = \infty$ and $\sum a_n^- = \infty$.
+
+Also by the $n$th term test, $\lim_n a_n^+ = \lim_n a_n^- = 0$. 
+
+Now we pass to subsequence of $(a_n^+)$ by removing all terms with $a_n^+ = 0$ and $a_n \neq 0$.  For $a_n^-$, we remove all terms with $a_n^- = 0$.   Let us denote the subsequences still as $(a_n^+)$ and $(a_n^-)$.  Since only zeros have been removed, $\sum a_n^+$ and $\sum a_n^-$ are still divergent.
+
+Now we will define integers $m_j$ and $k_j$ for $j\in\mathbb{N}$, and consider the series
+\begin{align*}
+a^+_1 & + a^+_2 + \cdots + a^+_{m_1}\\
+&- a^-_1 - a^-_2 - \cdots - a^-_{k_2}\\
+& + a^+_{m_1+1}  + a^+_2 + \cdots + a^+_{m_2}\\
+&- a^-_{k_1+1} - a^-_2 - \cdots - a^-_{k_2}+ \\
+& \ \ \ \vdots 
+\end{align*}
+This series is clearly a rearrangement of $\sum a_n$, by our choice of the subsequences $a^+_n$ and $a^-_n$.  
+
+We pick up two sequences $\alpha_j$ and $\beta_j$ such that $\alpha_j\rightarrow \alpha $ , $\beta_j \rightarrow \beta$, $\alpha_n \leq \beta_n$ and  $\beta_1 >0$.  We choose $m_1$ such that $\sum_{n=1}^{m_1} \geq \beta_1$ but $\sum_{n=1}^{m_1-1} < \beta_1$. We choose $k_1$ such that $\sum_{n=1}^{m_1}  - \sum_{n=1}^{k_1}\leq \alpha_1$ but $\sum_{n=1}^{m_1}  - \sum_{n=1}^{k_1-1}>\alpha_1$.  We continue this way, inductively.
+
+
+Since $\lim_n a_n^+ = \lim_n a_n^- = 0$, the subsequences of the sequence of partial sums that end with $a^+_{m_j}$ and $a^-_{k_j}$ converge to $\beta$ and $\alpha$, and it can be seen that no subsequence can be found with a limit larger than $\beta$ or lower than $\alpha$. \qed
+
+\begin{thebibliography}{9}
+\bibitem{rudin}Rudin, W., \textsl{Principles of Mathematical Analysis},  McGraw Hill, 1976.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

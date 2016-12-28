@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ArithmeticSeries}
+\pmcreated{2013-03-22 16:17:58}
+\pmmodified{2013-03-22 16:17:58}
+\pmowner{georgiosl}{7242}
+\pmmodifier{georgiosl}{7242}
+\pmtitle{arithmetic series}
+\pmrecord{10}{38420}
+\pmprivacy{1}
+\pmauthor{georgiosl}{7242}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+An \emph{arithmetic series} is the series, $\sum_{i=1}^na_i$, in which each real term has the form $ a_i=a_{i-1}+d $ for $i=2,\ldots, n $ where $ d$ is constant. The sum of the sequence is given by the following
+$\displaystyle \frac{1}{2}n[2a_1+d(n-1)].$
+In order to find the formula above firstly we express the terms of the sequence, $ a_2, \ldots, a_n$ in terms of $ a_1$ and the constant $ d$. In this case we get $ a_2=a_1+d, a_3=a_2+2d,\ldots , a_n=a_1+(n-1)d$. Now we express the sum of the sequence by developing the series forward and we have:
+$$S_n=\sum_{i=1}^na_i =a_1+a_1+d+\cdots +a_1+(n-2)d+a_1+(n-1)d$$
+Reversely, we develop the series backwards and we get
+$$S_n=a_n-d+a_n-2d+\cdots +a_n-(n-1)d$$
+\\It is easily seen that by adding the two expressions we get
+\begin{eqnarray}
+2S_n=n(a_1+a_n)\\
+S_n= \frac{1}{2}n(a_1+a_n)
+\end{eqnarray}
+Hence, by substituting $a_n=a_1+(n-1)d$ we get the first formula. 
+%%%%%
+%%%%%
+\end{document}

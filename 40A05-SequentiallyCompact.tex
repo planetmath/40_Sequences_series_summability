@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SequentiallyCompact}
+\pmcreated{2013-03-22 12:50:05}
+\pmmodified{2013-03-22 12:50:05}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{sequentially compact}
+\pmrecord{12}{33159}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmclassification{msc}{54D30}
+\pmsynonym{sequential compactness}{SequentiallyCompact}
+%\pmkeywords{topology}
+%\pmkeywords{sequence}
+%\pmkeywords{convergence}
+\pmrelated{Compact}
+\pmrelated{LimitPointCompact}
+\pmrelated{BolzanoWeierstrassTheorem}
+\pmrelated{Net}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A topological space $X$ is \emph{sequentially compact} if every sequence in $X$ has a convergent subsequence.
+
+Every sequentially compact space is countably compact.  Conversely, every first countable countably compact space is sequentially compact.  The ordinal space $W(2\omega_1)$ is sequentially compact but not first countable, since $\omega_1$ has not countable local basis.
+
+Next, compactness and sequential compactness are not compatible.  In other words, neither one implies the other.  Here's an example of a compact space that is not sequentially compact.  Let $X=I^I$, where $I$ is the closed unit interval (with the usual topology), and $X$ is equipped with the product topology.  Then $X$ is compact (since $I$ is, together with Tychonoff theorem).  However, $X$ is not sequentially compact.  To see this, let $f_n:I\to I$ be the function such that for any $r\in I$, $f(r)$ is the $n$-th digit of $r$ in its binary expansion.  But the sequence $f_1,\ldots, f_n,\ldots$ has no convergent subsequences: if $f_{n_1},\ldots, f_{n_k},\ldots$ is a subsequence, let $r\in I$ such that its binary expansion has its $k$-th digit $0$ iff $k$ is odd, and $1$ otherwise.  Then $f_{n_1}(r),\ldots, f_{n_k}(r), \ldots$ is the sequence $0,1,0,1,\ldots$, and is clearly not convergent.  The ordinal space $\Omega_0:=W(\omega_1)$ is an example of a sequentially compact space that is not compact, since the cover $\lbrace W(\alpha)\mid \alpha\in \Omega_0\rbrace$ has no finite subcover.
+
+When $X$ is a metric space, the following are equivalent:
+\begin{itemize}
+\item
+$X$ is sequentially compact.
+\item
+$X$ is limit point compact.
+\item
+$X$ is compact.
+\item
+$X$ is totally bounded and complete.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

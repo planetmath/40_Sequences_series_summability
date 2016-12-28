@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivativeOfLimitFunctionDivergesFromLimitOfDerivatives}
+\pmcreated{2013-03-22 19:00:29}
+\pmmodified{2013-03-22 19:00:29}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{derivative of limit function diverges from limit of derivatives}
+\pmrecord{7}{41877}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A30}
+\pmclassification{msc}{26A15}
+\pmsynonym{limit of derivatives diverges from derivative of limit function}{DerivativeOfLimitFunctionDivergesFromLimitOfDerivatives}
+%\pmkeywords{function sequence}
+%\pmkeywords{uniform convergence}
+\pmrelated{GrowthOfExponentialFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{Theorem}
+For a function sequence, one cannot always change the \PMlinkescapetext{order} of \PMlinkid{taking limit}{6209} and \PMlinkname{differentiating}{Differentiate}, i.e. it may well be
+$$\lim_{n\to\infty}\frac{d}{dx}f_n(x) \;\neq\; \frac{d}{dx}\lim_{n\to\infty}f_n(x),$$
+\PMlinkescapetext{even} in the case that a sequence of continuous (and differentiable) functions converges uniformly; cf. Theorem 2 of the \PMlinkname{parent entry}{LimitFunctionOfSequence}.\\
+
+\textbf{Example.}\, The function sequence
+\begin{align}
+f_n(x) \;:=\; \sum_{j=1}^n\frac{x^3}{(1\!+\!x^2)^j} \;=\; x-\frac{x}{(1\!+\!x^2)^n} \qquad (n \;=\; 1,\,2,\,3,\,\ldots)
+\end{align}
+provides an instance; we consider it on the interval \,$[-1,\,1]$.\, It's a question of partial sum the converging geometric series
+$$\frac{x^3}{1\!+\!x^2}+\frac{x^3}{(1\!+\!x^2)^2}+\frac{x^3}{(1\!+\!x^2)^2}+\ldots$$
+(although one cannot use Weierstrass' criterion of uniform convergence).\, Since
+the limit function is
+$$f(x) \;:=\; \lim_{n\to\infty}\left(x-\frac{x}{(1\!+\!x^2)^n}\right) \;=\; x \quad \forall x \in [-1,\,1],$$
+we have
+$$\sup_{[-1,\,1]}|f_n(x)-f(x)| \;=\; \sup_{[-1,\,1]}\frac{|x|}{(1\!+\!x^2)^n} 
+\,\longrightarrow 0 \quad \mbox{as}\;\; n \to \infty,$$
+which means by Theorem 1 of the \PMlinkname{parent entry}{LimitFunction} that the sequence (1) converges uniformly on the interval to the identity function.\, Further, the members of the sequence are continuous and differentiable.\, Furthermore,
+$$f_n'(x) \;=\; 1-\frac{1\!+(1\!-\!2n)x^2}{(1\!+\!x^2)^{n+1}},$$
+whence 
+$$\lim_{n\to\infty}f_n'(x) \;=\; 1 \quad (x \;\neq\; 0).$$
+But in the point \,$x = 0$\, we have
+$$\lim_{n\to\infty}f_n'(0) \;=\; \lim_{n\to\infty}0 \;=\; 0,$$ 
+which says that the limit of derivative sequence of (1) is discontinuous in the origin.\, Because
+$$f'(x) \;\equiv\; 1,$$
+we may write
+$$\lim_{n\to\infty}\frac{d}{dx}f_n \;\neq\; \frac{d}{dx}\lim_{n\to\infty}f_n.$$
+
+%%%%%
+%%%%%
+\end{document}

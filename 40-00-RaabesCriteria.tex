@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RaabesCriteria}
+\pmcreated{2013-03-22 15:08:45}
+\pmmodified{2013-03-22 15:08:45}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Raabe's criteria}
+\pmrecord{7}{36892}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40-00}
+\pmrelated{ASeriesRelatedToHarmonicSeries}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+\,The series\, $a_1\!+\!a_2\!+\!a_3\!+\cdots$\, with positive \PMlinkescapetext{terms} is
+\begin{itemize}
+ \item convergent if, starting from some value of $n$, its \PMlinkescapetext{terms} fulfil the condition
+   $$\frac{a_{n+1}}{a_n} \leqq 1-\frac{\mu}{n}$$
+where $\mu$ is a \PMlinkescapetext{constant} and $> 1$;
+ \item divergent if, starting from some value of $n$, its \PMlinkescapetext{terms} fulfil the condition
+   $$\frac{a_{n+1}}{a_n} \geqq 1-\frac{1}{n}-\frac{M}{n^2}$$
+where $M$ is a \PMlinkescapetext{constant}.
+\end{itemize}
+\end{thmplain}
+%%%%%
+%%%%%
+\end{document}

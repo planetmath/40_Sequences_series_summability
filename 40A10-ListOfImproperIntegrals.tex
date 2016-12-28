@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ListOfImproperIntegrals}
+\pmcreated{2014-11-07 19:08:22}
+\pmmodified{2014-11-07 19:08:22}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{list of improper integrals}
+\pmrecord{66}{41484}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A10}
+%\pmkeywords{improper integral}
+\pmrelated{ErrorFunction}
+\pmrelated{SignumFunction}
+\pmrelated{EulersConstant}
+\pmrelated{MethodsOfEvaluatingImproperIntegrals}
+\pmrelated{AreaFunctions}
+\pmrelated{ConvergenceOfIntegrals}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Below, we list some \PMlinkescapetext{simple} 
+\PMlinkname{convergent}{ConvergenceOfIntegrals} improper 
+integrals.\\
+
+\PMlinkname{\textbf{1.}}{areaundergaussiancurve} \; $\displaystyle\int_0^\infty e^{-x^2}\,dx \;=\; \frac{\sqrt{\pi}}{2}$\\
+
+\PMlinkname{\textbf{2.}}{generalisationofgaussianintegral} \; $\displaystyle\int_0^\infty e^{-x^2}\cos{kx}\,dx\;=\;\frac{\sqrt{\pi}}{2}e^{-\frac{1}{4}k^2}$\\
+
+\PMlinkname{\textbf{3.}}{usingconvolutiontofindlaplacetransform} \; $\displaystyle\int_0^\infty \frac{e^{-x^2}}{a^2\!+\!x^2}\,dx 
+\;=\;\frac{\pi}{2a}e^{a^2}\,{\rm erfc}\,a$\\
+
+\PMlinkname{\textbf{4.}}{fresnelformulas} \; $\displaystyle\int_0^\infty\sin{x^2}\,dx \;=\; \int_0^\infty\cos{x^2}\,dx \;=\; 
+\frac{\sqrt{2\pi}}{4}$\\
+
+\PMlinkname{\textbf{5.}}{sineintegralatinfinity} \; $\displaystyle\int_0^\infty\frac{\sin{ax}}{x}\,dx \;=\; (\mbox{sgn}\,a)\frac{\pi}{2}
+\qquad (a \in \mathbb{R})$\\
+
+\PMlinkname{\textbf{6.}}{twoimproperintegrals} \; $\displaystyle\int_0^\infty\left(\frac{\sin{x}}{x}\right)^2 dx \;=\; \frac{\pi}{2}$\\
+
+\PMlinkname{\textbf{7.}}{twoimproperintegrals} \; $\displaystyle\int_0^\infty\frac{1-\cos{kx}}{x^2}\,dx \;=\; \frac{\pi k}{2}$\\
+
+\PMlinkname{\textbf{8.}}{usingresiduetheoremnearbranchpoint} \; $\displaystyle\int_0^\infty\frac{x^{-k}}{x\!+\!1}\,dx \;=\; \frac{\pi}{\sin{\pi k}} 
+\quad (0 < k < 1)$\\
+
+\PMlinkname{\textbf{9.}}{exampleofchangingvariable} \; $\displaystyle\int_{-\infty}^\infty\frac{e^{kx}}{1\!+\!e^x}\,dx \;=\; \frac{\pi}{\sin{\pi k}} 
+\quad (0 < k < 1)$\\
+
+\PMlinkname{\textbf{10.}}{exampleofusingresiduetheorem} \; $\displaystyle\int_0^\infty\frac{\cos{kx}}{x^2\!+\!1}\,dx \;=\; \frac{\pi}{2e^k}$\\
+
+\PMlinkname{\textbf{11.}}{laplaceintegrals} \; $\displaystyle\int_0^\infty\frac{a\cos{x}}{x^2\!+\!a^2}\,dx 
+\;=\; \int_0^\infty\frac{x\sin{x}}{x^2\!+\!a^2}\,dx \;=\; \frac{\pi}{2e^a} \quad\; (a > 0)$\\
+
+\PMlinkname{\textbf{12.}}{applicationofsineintegralatinfinity} \; $\displaystyle\int_0^\infty\frac{\sin{ax}}{x(x^2\!+\!1)}\,dx \;=\; \frac{\pi}{2}(1-e^{-a}) \quad\; (a > 0)$\\
+
+\PMlinkid{13.}{9223} \; $\displaystyle\int_0^\infty e^{-x}x^{-\frac{3}{2}}\,dx \;=\; \sqrt{\pi}$\\
+
+\PMlinkname{\textbf{14.}}{laplacetransformoftnft} \; $\displaystyle\int_0^\infty e^{-x}x^3\sin{x}\,dx \;=\; 0$\\
+
+\PMlinkid{15.}{7891} \; $\displaystyle\int_0^\infty\!\left(\frac{1}{e^x\!-\!1}-\frac{1}{xe^x}\right) dx \;=\; \gamma$\\
+
+\PMlinkname{\textbf{16.}}{relativeofcosineintegral} \; $\displaystyle\int_0^\infty\!\frac{\cos{ax^2}-\cos{ax}}{x} dx \;=\; \frac{\gamma+\ln{a}}{2} \quad (a > 0)$\\
+
+\PMlinkname{\textbf{17.}}{relativeofexponentialintegral} \; $\displaystyle\int_0^\infty\frac{e^{-ax}\!-\!e^{-bx}}{x}\,dx \;=\; \ln\frac{b}{a} \quad (a > 0,\;\, b > 0)$\\
+
+\PMlinkname{\textbf{18.}}{integralrelatedtoarcsine} \; $\displaystyle\int_1^\infty\left(\arcsin\frac{1}{x}-\frac{1}{x}\right)\,dx \;=\; 1+\ln{2}-\frac{\pi}{2}$\\
+
+\PMlinkname{\textbf{19.}}{exampleofimproperintegral} \; $\displaystyle\int_0^1\frac{\arctan{x}}{x\sqrt{1\!-\!x^2}}\,dx 
+\;=\; \frac{\pi}{2}\ln(1\!+\!\sqrt{2}) \;=\; \frac{\pi}{2}\,\mbox{arsinh}\,1$\\
+
+\PMlinkname{\textbf{20.}}{applicationoflogarithmseries} \; 
+$\displaystyle\int_0^1\frac{\ln(1\!+\!x)}{x}\,dx \;=\; 
+\frac{\pi^2}{12}$\\
+
+21. \; $\displaystyle\int_{\frac{1}{2}}^1\frac{\ln(1\!-\!x)}{x^2}\,dx \;=\; -2\ln{2}$\\
+%%%%%
+%%%%%
+\end{document}

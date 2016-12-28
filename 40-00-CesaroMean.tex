@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CesaroMean}
+\pmcreated{2013-03-22 12:29:54}
+\pmmodified{2013-03-22 12:29:54}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Ces\`aro mean}
+\pmrecord{11}{32725}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40-00}
+\pmclassification{msc}{40G05}
+\pmsynonym{Cesaro mean}{CesaroMean}
+\pmrelated{Sequence}
+\pmrelated{CesaroSummability}
+\pmrelated{StolzCesaroTheorem}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\md}{d}
+\newcommand{\mv}[1]{\mathbf{#1}}	% matrix or vector
+\newcommand{\mvt}[1]{\mv{#1}^{\mathrm{T}}}
+\newcommand{\mvi}[1]{\mv{#1}^{-1}}
+\newcommand{\mderiv}[1]{\frac{\md}{\md {#1}}} %d/dx
+\newcommand{\mnthderiv}[2]{\frac{\md^{#2}}{\md {#1}^{#2}}} %d^n/dx
+\newcommand{\mpderiv}[1]{\frac{\partial}{\partial {#1}}} %partial d^n/dx
+\newcommand{\mnthpderiv}[2]{\frac{\partial^{#2}}{\partial {#1}^{#2}}} %partial d^n/dx
+\newcommand{\borel}{\mathfrak{B}}
+\newcommand{\integers}{\mathbb{Z}}
+\newcommand{\rationals}{\mathbb{Q}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\complexes}{\mathbb{C}}
+\newcommand{\naturals}{\mathbb{N}}
+\newcommand{\defined}{:=}
+\newcommand{\var}{\mathrm{var}}
+\newcommand{\cov}{\mathrm{cov}}
+\newcommand{\corr}{\mathrm{corr}}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\powerset}[1]{\mathcal{P}(#1)}
+\newcommand{\bra}[1]{\langle#1 \vert}
+\newcommand{\ket}[1]{\vert \hspace{1pt}#1\rangle}
+\newcommand{\braket}[2]{\langle #1 \ket{#2}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\left|\left|#1\right|\right|}
+\newcommand{\esssup}{\mathrm{ess\ sup}}
+\newcommand{\Lspace}[1]{L^{#1}}
+\newcommand{\Lone}{\Lspace{1}}
+\newcommand{\Ltwo}{\Lspace{2}}
+\newcommand{\Lp}{\Lspace{p}}
+\newcommand{\Lq}{\Lspace{q}}
+\newcommand{\Linf}{\Lspace{\infty}}
+\newcommand{\sequence}[1]{\{#1\}}
+\begin{document}
+\paragraph{Definition}
+Let $\sequence{a_n}_{n=0}^\infty$ be a sequence of real (or possibly complex numbers).  
+The {\bf Ces\`aro mean} of the sequence $\{a_n\}$ is the sequence $\{b_n\}_{n=0}^\infty$ 
+with
+\begin{equation}
+b_n = \frac{1}{n+1} \sum_{i=0}^{n} a_i.
+\end{equation}
+
+\subsubsection{Properties}
+\begin{enumerate}
+\item
+A key property of the Ces\`aro mean is that it has the same limit as the
+original sequence (when this limit exists). In other words, if $\{a_n\}$ and 
+$\{b_n\}$ are as above, and $a_n \to a$, then $b_n \to a$. 
+In particular, if $\{a_n\}$ converges, then $\{b_n\}$ converges too.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatEulersConstantExists}
+\pmcreated{2013-03-22 16:34:48}
+\pmmodified{2013-03-22 16:34:48}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof that Euler's constant exists}
+\pmrecord{6}{38771}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+
+\begin{document}
+\begin{thm} The limit
+\[\gamma = \lim_{n\to\infty}\left(\sum_{k=1}^n \frac{1}{k} - \ln n\right)\]
+exists.
+\end{thm}
+
+\textbf{Proof. } Let
+\[C_n=\frac{1}{1}+\frac{1}{2}+\cdots+\frac{1}{n}-\ln n\]
+and
+\[D_n=C_n-\frac{1}{n}\]
+Then
+\[C_{n+1}-C_n=\frac{1}{n+1}-\ln\left(1+\frac{1}{n}\right)\]
+and
+\[D_{n+1}-D_n=\frac{1}{n}-\ln\left(1+\frac{1}{n}\right)\]
+Now, by considering the Taylor series for $\ln(1+x)$, we see that
+\[\frac{1}{n+1}<\ln\left(1+\frac{1}{n}\right)<\frac{1}{n}\]
+and so
+\[C_{n+1}-C_n < 0 < D_{n+1}-D_n\]
+Thus, the $C_n$ decrease monotonically, while the $D_n$ increase monotonically, since the differences are negative (positive for $D_n$). Further, $D_n<C_n$ and thus $D_1=0$ is a lower bound for $C_n$. Thus the $C_n$ are monotonically decreasing and bounded below, so they must converge.
+
+
+\begin{thebibliography}{10}
+\bibitem{bib:artin}
+E.~Artin, \emph{The Gamma Function}, Holt, Rinehart, Winston 1964.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

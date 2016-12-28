@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SlowerConvergentSeries}
+\pmcreated{2013-03-22 15:08:24}
+\pmmodified{2013-03-22 15:08:24}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{slower convergent series}
+\pmrecord{11}{36884}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmrelated{SlowerDivergentSeries}
+\pmrelated{NonExistenceOfUniversalSeriesConvergenceCriterion}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+\, If 
+\begin{align}
+a_1\!+\!a_2\!+\!a_3\!+\cdots
+\end{align}
+is a converging series with positive \PMlinkescapetext{terms}, then one can always form another converging series
+$$g_1\!+\!g_2\!+\!g_3\!+\cdots$$
+such that 
+\begin{align}
+\lim_{n\to\infty}\frac{g_n}{a_n} = \infty
+\end{align}
+\end{thmplain}
+
+{\em Proof.}\, Let $S$ be the sum of (1),\, $S_n = a_1\!+\!a_2\!+\cdots+\!a_n$\, the $n^\mathrm{th}$ partial sum of (1) and\, $R_{n+1} = S\!-\!S_n = a_{n+1}\!+\!a_{n+2}\!+\cdots$\, the corresponding remainder term.\, Then we have 
+$$a_n = R_n\!-\!R_{n+1} = (\sqrt{R_n}\!+\!\sqrt{R_{n+1}})(\sqrt{R_n}\!-\!\sqrt{R_{n+1}}).$$
+We set
+$$g_n := \frac{a_n}{\sqrt{R_n}\!+\!\sqrt{R_{n+1}}} 
+= \sqrt{R_n}\!-\!\sqrt{R_{n+1}}
+\quad \forall n = 1,\,2,\,3,\,\ldots$$
+Then the series\, $g_1\!+\!g_2\!+\!g_3\!+\cdots$\, fulfils the requirements in the theorem.\, Its \PMlinkescapetext{terms} $g_n$ are positive.\, Further, it converges because its $n^\mathrm{th}$ partial sum is equal to 
+$\sqrt{R_1}\!-\!\sqrt{R_{n+1}}$ which tends to the limit\, 
+$\sqrt{R_1} = \sqrt{S}$\, as\, $n\to\infty$\, since\, $R_{n+1}\to 0$;\, this implies also (2).
+%%%%%
+%%%%%
+\end{document}

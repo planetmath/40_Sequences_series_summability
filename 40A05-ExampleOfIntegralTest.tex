@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfIntegralTest}
+\pmcreated{2013-03-22 13:37:11}
+\pmmodified{2013-03-22 13:37:11}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{example of integral test}
+\pmrecord{5}{34253}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Consider the series
+\[
+   \sum_{k=1}^\infty \frac 1 {k \log k}.
+\]
+Since the integral
+\[
+   \int_1^\infty \frac 1 {x \log x}\, dx 
+    = \lim_{M\to \infty} \left[\log (\log(x))\right]_1^M
+\]
+is divergent also the series considered is divergent.
+%%%%%
+%%%%%
+\end{document}

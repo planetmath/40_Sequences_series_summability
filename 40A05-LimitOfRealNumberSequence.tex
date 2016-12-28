@@ -1,0 +1,124 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LimitOfRealNumberSequence}
+\pmcreated{2015-01-30 17:53:27}
+\pmmodified{2015-01-30 17:53:27}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{limit of real number sequence}
+\pmrecord{17}{41263}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmsynonym{limit of sequence of real numbers}{LimitOfRealNumberSequence}
+%\pmkeywords{real number sequence}
+\pmrelated{GeometricSequence}
+\pmrelated{BriggsianLogarithms}
+\pmrelated{InfiniteProductOfSums1a_i}
+\pmdefines{limit}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+An endless real number sequence
+\begin{align}
+a_1,\,a_2,\,a_3,\,\ldots
+\end{align}
+has the real number $A$ as its {\em limit}, if the distance 
+between $A$ and $a_n$ can be made smaller than an arbitrarily 
+small positive number $\varepsilon$ by chosing the 
+\PMlinkescapetext{ordinal number} $n$ of $a_n$ sufficiently great, i.e. greater than a number $N$ (the \PMlinkescapetext{size} of which depends on the value of $\varepsilon$); accordingly
+$$|A-a_n| < \varepsilon \quad \mbox{when} \quad n > N.$$
+Then we may denote
+\begin{align}
+\lim_{n\to\infty}a_n \;=\; A
+\end{align}
+or equivalently
+\begin{align}
+a_n \to A \quad \mbox{as} \quad n \to \infty.
+\end{align}
+
+\textbf{Remark 1.}\, One should not think, that\, $a_n = A$\, when\, $n = \infty$.\, The symbol ``$\infty$'' \PMlinkescapetext{represents} no number, one cannot set it for the value of $n$.\, It's only a question of allowing $n$ to exceed any necessary 
+value.\\
+
+\textbf{Example 1.}\, Using the notation (2) we can write a result
+             $$\lim_{n\to\infty}\frac{2n}{n\!+\!1} \;=\; 2.$$
+It's a question of that the real number sequence
+     $$\frac{2}{2},\;\frac{4}{3},\;\frac{6}{4},\;\ldots$$
+has the limit value 2 (e.g. the nine hundred ninety-ninth member\, $\frac{1998}{1000} = 1.998$\, is already ``almost'' 2!).\, For justificating the result, let $\varepsilon$ be an arbitrary positive number, as small as you want.\, Then
+\begin{align}
+\left|2-\frac{2n}{n\!+\!1}\right| = \left|\frac{2n\!+\!2}{n\!+\!1}-\frac{2n}{n\!+\!1}\right| 
+= \left|\frac{2}{n\!+\!1}\right| = \frac{2}{n\!+\!1} < \varepsilon,
+\end{align}
+when $n$ is chosen so big that
+\begin{align}
+n > \frac{2}{\varepsilon}\!-\!1.
+\end{align}
+The condition (5) is obtained from (4) by solving this inequality for $n$.\, In this case, we have\, 
+$N = \frac{2}{\varepsilon}\!-\!1$.\\
+
+\textbf{Example 2.}\, The so-called decimal expansions, i.e. endless decimal numbers, such as
+\begin{align}
+3.14159265\ldots \,=\, \pi, \quad 0.636363\ldots, \quad 0.99999\ldots,
+\end{align}
+are, as a matter of fact, limits of certain real number sequences.\, E.g. the last of these is related to the sequence
+\begin{align}
+0.9,\;0.99,\;0.999,\;\ldots
+\end{align}
+which may be also written as
+$$1\!-\!\frac{1}{10},\; 1\!-\!\frac{1}{10^2},\; 1\!-\!\frac{1}{10^3},\;\ldots $$
+The limit of (7) is 1.\, Actually, if\, $\varepsilon > 0$,\, the distance between 1 and the $n^\mathrm{th}$ member of (7) is
+$$\left|1-\left(1\!-\!\frac{1}{10^n}\right)\right| = \frac{1}{10^n} < \varepsilon,$$
+when\, $10^n > \frac{1}{\varepsilon}$,\, i.e. when\, $n > -\log_{10}\varepsilon = N$.
+
+The endless decimal notations (6) and others are, in fact, limit notations --- no finite amount of decimals in them suffices to give their exact values.\\
+
+\textbf{Remark 2.}\, In both of the above examples, no of the sequence members was equal to the limit, but it does not need always to be so; thus for example
+$$\lim_{n\to\infty}\frac{1\!+\!(-1)^n}{2n} = 0$$
+and every other member of the sequence in question is 0.\\
+
+\subsection*{Infinite limits of real number sequences}
+
+There are sequences that have no limit at all, for example\, $1,\,-1,\,1,\,-1,\,1,\,-1,\,\ldots$.\, Some real number sequences (1) have the property, that the member $a_n$ may exeed every beforehand given real number $M$ if one takes 
+$n$ greater than some value $N$ (which depends on $M$):
+$$a_n > M \quad \mbox{when} \quad n > N.$$
+Then we write
+$$\lim_{n\to\infty}a_n \;=\; \infty.$$
+Similarly, the sequence (1) may be such that for each positive $M$ there is $N$ such that
+$$a_n < -M \quad \mbox{when} \quad n > N,$$
+and then we write
+$$\lim_{n\to\infty}a_n \;=\; -\infty.$$
+E.g.
+$$\lim_{n\to\infty}n^2 \;=\; \infty, \quad \lim_{n\to\infty}(1\!-\!n) \;=\; -\infty.$$
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,143 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SumOfPowers}
+\pmcreated{2013-03-22 17:35:50}
+\pmmodified{2013-03-22 17:35:50}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{sum of powers}
+\pmrecord{21}{40011}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmrelated{HarmonicSeries}
+\pmrelated{SumOfKthPowersOfTheFirstNPositiveIntegers}
+\pmdefines{Faulhaber's formula}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{tabls}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\subsection*{Introduction}
+
+A \emph{sum of powers} is a number expressible in the form
+$$1^m+2^m+\cdots + n^m$$
+where $m$ and $n$ are positive integers.  Let us denote this sum by $S_m(n)$.  It is a well-known fact that when $m=1$, then we have the following equality
+$$S_1(n):=1+2+\cdots +n = \frac{n(n+1)}{2}.$$
+In fact, a famous story goes that, when the teacher asked the students to sum up all the integers from 1 to 100, Gauss, at the age of 10, solved the problem immediately.  Gauss realized that the sum can be written in two ways
+$$\underbrace{
+\xymatrix@R=0pt@C=0pt{
+&1& +&2& +&\cdots& + &n &&\\
+&n& + &(n-1)&+ &\cdots&+ &1 &&\\
+\ar@{-}[rrrrrrrr]&&&&&&&& \\
+&(n+1)& +&(n+1)& +&\cdots& + &(n+1) &&
+}}_{\displaystyle{n}\mbox{ terms}}
+$$
+Therefore, $2S_1(n)=n(n+1)$ and hence the result: $1+2+\cdots+100=\frac{100(101)}{2}=50\cdot 100=5050$.
+
+What Gauss did is actually a special case of a method that can be generalized to the case when $m>1$.  Thinking of a number $i$ as $1$ added to itself $i$ times, then using the following diagram:
+$$
+\xymatrix@R=0pt@C=0pt{
+&1& && && & &&1&&\\
+&1& + &1& &&& &&2&&\\
+&\vdots&  &\vdots& &\ddots && &&\vdots &&\\
+&1& +&1& +&\cdots& + &1 && n&&\\
+\ar@{-}[rrrrrrrr]&&&&&&& &\ar@{-}[rr]&& \\
+&n& +&(n-1)& +&\cdots& + &1 && S_1(n)&&
+}
+$$
+Using the summation notation, it then follows that $$\sum_{i=1}^n (n-i+1)=n+(n-1)+\cdots +1=S_1(n)=1+2+\cdots +n=\sum_{i=1}^n i.$$  Then, $$S_1(n)=\sum_{i=1}^n (n-i+1) = \sum_{i=1}^n (n+1) - \sum_{i=1}^n i = (n+1)\sum_{i=1}^n 1 - S_1(n) = (n+1)n -S_1(n),$$ and we have the same result.
+
+Let us now apply this method to the case when $m=2$.  This time, we use the following diagram
+$$
+\xymatrix@R=0pt@C=0pt{
+&1& && && & &&S_1(1)&&\\
+&1& + &2& &&& &&S_1(2)&&\\
+&\vdots&  &\vdots& &\ddots && &&\vdots &&\\
+&1& +&2& +&\cdots& + &n && S_1(n)&&\\
+\ar@{-}[rrrrrrrr]&&&&&&& &\ar@{-}[rr]&& \\
+&n\cdot 1& +&(n-1)\cdot 2& +&\cdots& + &1\cdot n && T&&
+}
+$$
+Again, using the summation notation, we have
+$$\sum_{i=1}^n (n-i+1)i = T = \sum_{i=1}^n S_1(i) = \sum_{i=1}^n \frac{i(i+1)}{2}.$$
+Further algebraic manipulations give us the result:
+$$S_2(n):=1^2+2^2+\cdots +n^2=\frac{n(n+1)(2n+1)}{6}.$$
+
+\subsection*{The general case}
+
+Using the method above, one can iteratively solve for $S_3(n),S_4(n),\ldots$.  This means that if we know the formulas for $S_k(n)$ for all $k<p$, then we can derive the formula for $S_m(n)$.  The formulas for $m=3,4,5$ and $6$ are 
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+$m$ & $S_m(n)$ \\
+\hline\hline
+$3$ & $\displaystyle{\frac{n^2(n+1)^2}{4}}$ \\
+\hline
+$4$ & $\displaystyle{\frac{n(n+1)(2n+1)(3n^2+3n-1)}{30}}$ \\
+\hline
+$5$ & $\displaystyle{\frac{n^2(n+1)^2(2n^2+2n-1)}{12}}$ \\
+\hline
+$6$ & $\displaystyle{\frac{n(n+1)(2n+1)(3n^4+6n^3-3n +1)}{42}}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Remarks}.
+\begin{enumerate}
+\item
+Notice that the formula for each of the powers $m=1,2,\ldots, 6$ is always a polynomial of degree $m+1$.  This is in fact true in the general case, and can be proved by the method of telescoping sum, together with induction: for each positive integer $n$, define $$x_n:=n^{m+1}-(n-1)^{m+1}.$$  Then $x_n$ is expressible as a polynomial $y(n)$ of degree $m$ in $n$.  So $$n^{m+1}=x_n+x_{n-1}+\cdots +x_1 = \sum_{i=1}^n y(i)=a_m \sum_{i=1}^n i^m + a_{m-1}\sum_{i=1}^n i^{m-1} + \cdots + a_0 \sum_{i=1}^n 1.$$
+The right hand side is $a_mS_m(n)+a_{m-1}S_{m-1}(n)+\cdots + a_0n$.  By induction, each $S_k(n)$ is a polynomial of degree $k+1$ for all $k<m$.  But then right hand side is equal to the left hand side, which is a polynomial of degree $m+1$. Therefore, $S_m(n)$ is a polynomial of degree $m+1$.  So we can safely write $$S_m(n)=c_0+c_1n+\cdots + c_{m+1}n^{m+1}.$$
+\item
+Another property of $S_m(n)$ is that $c_0+c_1+\cdots + c_{m+1}=1$ for any $m$.  This is clear, since, one the one hand, $S_m(1)=1$ as a sum of just one term $1^m$.  On the other hand, its polynomial representation evaluated at $n=1$ is just the sum of the coefficients.
+\item
+In addition, there are also two curious properties: 
+\begin{itemize}
+\item
+for each $m>0$, both $n$ and $n+1$ divide $S_m(n)$, and 
+\item
+$2n+1$ divides $S_m(n)$ iff $m$ is even.
+\end{itemize}
+These can be proved using the method above.  For example, to show that $n|S_m(n)$, use the expression $$n^{m+1}= \sum_{i=1}^n y(i)=a_m \sum_{i=1}^n i^m + a_{m-1}\sum_{i=1}^n i^{m-1} + \cdots + a_0 \sum_{i=1}^n 1,$$ and notice that the left hand side is divisible by $n$, and therefore so is the right hand side.  Since all sums with powers $k<m$ are divisible by $n$ (induction), so is the sum with power $m$, and hence $n|S_m(n)$.  From this, one also sees that $$S_m(n)=\sum_{i=1}^n i^m=-(n+1)^m+\sum_{i=1}^{n+1} i^m $$ is divisible by $n+1$ as well.
+\item
+Since $(n+1)|S_m(n)$, we may write $S_m(n)$ as a polynomial in terms of $n+1$:  $$S_m(n)= d_1(n+1)+d_2(n+1)^2+\cdots + d_{m+1}(n+1)^{m+1}.$$  Notice that there is no coefficient for the constant term.  It turns out that, when $S_m(n)$ is written this way, the coefficients are much easier to express.  Jacques Bernoulli gave the formula for the coefficients: 
+\begin{equation}d_i=\frac{B_{m+1-i}}{m+1}\binom{m+1}{i},\end{equation} where $B_k$ is the $k$th Bernoulli number.  The formula for $S_m(n)$ using the polynomial representation with the coefficients $d_i$ is called the \emph{Faulhaber's formula}, since Faulhaber first wrote down the polynomial in this form in 1631 (before Bernoulli).
+\item
+The Faulhaber's formula can actually be extended to all real numbers.  In other words, $S_m(x)$ can be viewed as a polynomial of degree $m+1$ in the real variable $x$ with coefficients $d_i$ described by $(1)$.  When $x$ is some positive integer $n$, we are back to the formula for the sum of $m$-th powers of integers $1$ through $n$.  In general, $S_m(x)$ is the indefinite sum of $x^m$: $$S_m(x)=\Delta^{-1} x^m.$$
+\item
+When $m<0$, we have what is known as the \PMlinkname{$m$-series}{PSeries} of order $n$ with the special case $m=-1$ the harmonic series (of order $n$).  There are no polynomial representations for $S_m(n)$ when $m<0$.
+\end{enumerate}
+
+%For further properties of the sum of powers, see the refreshing article \PMlinkexternal{Sum of Powers of Integers}{http://www.xula.edu/math/Research/Colloquium/Past/Colloquium20030320-Paper-SahooP.pdf}.
+
+\begin{thebibliography}{9}
+\bibitem{AFB} A. F. Beardon, \emph{Sums of Powers of Integers}, Amer. Math. Monthly 103 (1996), pp. 201-213.
+\bibitem{RC} R. Cook, \emph{On Sums of Powers of Integers}, J. Number Theory 11 (1979), pp. 516-528.
+\bibitem{RWO} R. W. Owens, \emph{Sums of Powers of Integers}, Math. Mag 65 (1992), pp. 38-40.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

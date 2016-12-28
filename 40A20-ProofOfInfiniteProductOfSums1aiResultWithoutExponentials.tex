@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfInfiniteProductOfSums1aiResultWithoutExponentials}
+\pmcreated{2013-03-22 18:40:38}
+\pmmodified{2013-03-22 18:40:38}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of infinite product of sums $1\!+\!a_i$ result without exponentials}
+\pmrecord{11}{41425}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A20}
+\pmclassification{msc}{26E99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+In this entry, we show how the proof presented in the parent entry
+may be modified so as to avoid use of the exponential function.
+This modification makes it more elementary by not requiring that
+one first develop the theory of the exponential function before
+proving this basic result about infinite products.  Note that it
+is only necessary to redo the part of the result which states that,
+if the series converges, then the product also converges because
+the proof of the opposite implication did not involve the exponential
+function.
+
+We begin with a simple inequality.  Suppose that $a$ and $b$ are
+real numbers such that $0 \le a$ and $0 \le b < 1/2$.  Then we
+have $2ab \le a$, hence
+\begin{align*}
+ (1 + a) (1 + 2 b) &= 1 + 2b + a + 2 a b \cr
+                   &\le 1 + 2b + a + a \cr
+                   &= 1 + 2 (a + b) .
+\end{align*}
+
+Now suppose that the series $a_1 + a_2 + a_3 + \cdots$ converges
+to a value $S$. 
+Since the convergence of an infinite series or product is not
+affected by removing a finite number of terms we may, without
+loss of generality, assume that $S < 1/2$.  Then,
+since the terms $a_n$ are nonnegative for all $n$, for each partial
+sum $s_n$ we will have $0 \le s_n < 1/2$.
+
+Clearly, $t_1 \le 1 + 2 s_1$.  Suppose that, for some $n$, we have
+$t_n \le 1 + 2 s_n$.  Then, using the definitions of $t_n$ and
+$s_n$ along with the inequality demonstrated above, we conclude that
+\begin{align*}
+t_{n+1} &= t_n (1 + a_{n+1}) \cr
+        &\le (1 + 2 s_n)(1 + a_{n+1}) \cr
+        &\le 1 + 2 (s_n + a_{n+1}) \cr 
+        &= 1 + 2 s_{n+1}
+\end{align*}
+
+Hence, if $t_n \le 1 + 2 s_n$, then
+$t_{n+1} \le 1 + 2 s_{n+1}$ as well.  By induction, we conclude that
+$t_n \le 1 + 2 s_n$ for all $n$.
+
+Thus, for all $n$, we have $t_n \le 1 + 2 s_n \le 1 + 2S$.  Substituting
+this inequality for the inequality $t_n \le e^{s_n} \le e^S$ in the
+parent entry, the rest of the proof proceeds in exactly the same manner.
+%%%%%
+%%%%%
+\end{document}

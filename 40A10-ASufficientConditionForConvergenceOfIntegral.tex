@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ASufficientConditionForConvergenceOfIntegral}
+\pmcreated{2013-03-22 19:01:13}
+\pmmodified{2013-03-22 19:01:13}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{a sufficient condition for convergence of integral}
+\pmrecord{10}{41891}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A10}
+\pmrelated{RatioTest}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Suppose that the real function $f$ is positive and continuous on the interval \,$[a,\,\infty)$.\, A sufficient condition for the \PMlinkname{convergence}{ConvergentIntegral} of the improper integral
+\begin{align}
+\int_a^\infty\!f(x)\,dx
+\end{align}
+is that
+\begin{align}
+\lim_{x\to\infty}\frac{f(x\!+\!1)}{f(x)} \;=\; q \;<\; 1.
+\end{align}
+
+\emph{Proof.}\, Assume that the condition (2) is in \PMlinkescapetext{force}.\, For an \PMlinkname{indirect proof}{ReductioAdAbsurdum}, make the antithesis that the \PMlinkname{integral}{RiemannIntegral} (1) \PMlinkname{diverges}{DivergentIntegral}.
+
+Because of the positiveness, we have\, $\int_a^\infty\!f(x)\,dx = \infty$.\, We can use \PMlinkname{l'H\^opital's rule}{LHpitalsRule}:
+$$\lim_{c\to\infty}\frac{\int_a^c\!f(x\!+\!1)\,dx}{\int_a^c\!f(x)\,dx} \;=\; \lim_{c\to\infty}\frac{f(c\!+\!1)}{f(c)}.$$
+Using the \PMlinkid{substitution}{11373} \,$x\!+\!1 = t$\, we get
+$$\int_a^c\!f(x\!+\!1)\,dx \;=\; \int_{a-1}^{c-1}f(t)\,dt 
+\;=\; \int_{a-1}^a\!f(t)\,dt+\int_a^c\!f(t)\,dt-\int_{c-1}^c\!f(t)\,dt,$$
+and dividing this equation by $\int_a^cf(t)\,dt$ and taking \PMlinkname{limits}{ImproperLimits} yield ($f$ is bounded!)
+$$1 \;>\; q \;=\; \lim_{c\to\infty}\frac{\int_a^c\!f(x\!+\!1)\,dx}{\int_a^c\!f(x)\,dx} \;=\; 0+1-0 \;=\; 1.$$
+This contradictory result shows that the antithesis is wrong; thus (1) must be \PMlinkname{convergent}{ConvergentIntegral}.\\
+
+\textbf{Note.}\, The condition (2) is not necessary for the convergence of (1).\, This is seen e.g. in the case of the converging \PMlinkescapetext{integral $\int_1^\infty\!x^s\,dx$ with\, $s < -1$, where the limit} of (2) equals 1.
+%%%%%
+%%%%%
+\end{document}

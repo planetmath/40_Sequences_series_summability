@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesForLimitComparisonTest}
+\pmcreated{2013-03-22 15:08:48}
+\pmmodified{2013-03-22 15:08:48}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{examples for limit comparison test}
+\pmrecord{4}{36893}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\lc}{\lim_{x\to c}}
+\newcommand{\lzero}{\lim_{x\to 0}}
+\newcommand{\lhzero}{\lim_{h\to 0}}
+\newcommand{\linf}{\lim_{x\to \infty}}
+\newcommand{\limn}{\lim_{n\to\infty}}
+\newcommand{\sumi}{\sum_{i=1}^\infty }
+\newcommand{\sumn}{\sum_{n=1}^\infty }
+\newcommand{\sumno}{\sum_{n=0}^\infty }
+\newcommand{\sumio}{\sum_{i=1}^\infty }
+\begin{document}
+\begin{exa}
+Does the following series converge?
+$$\sumn \frac{1}{n^2+n+1}$$
+The series is similar to $\sumn 1/n^2$ which converges (use $p$-test, for example). Next we compute the limit:
+$$\limn \frac{\frac{1}{n^2+n+1}}{\frac{1}{n^2}}=\limn \frac{n^2}{n^2+n+1} = 1$$
+Therefore, since $1\neq 0$, by the Limit Comparison Test (with $a_n=1/(n^2+n+1)$ and $b_n=1/n^2$), the series converges.\\
+\end{exa}
+
+\begin{exa}
+Does the following series converge?
+$$\sumn \frac{n^3+n+1}{n^4+n+1}$$
+If we ``forget'' about the lower order terms of $n$:
+$$\frac{n^3+n+1}{n^4+n+1} \sim \frac{n^3}{n^4}=\frac{1}{n}$$
+and $\sumn 1/n$ is the harmonic series which diverges (by the $p$-test). Thus, we take $b_n=1/n$ and compute:
+$$\limn \frac{\frac{n^3+n+1}{n^4+n+1}}{\frac{1}{n}}=\limn \frac{n(n^3+n+1)}{n^4+n+1}=
+\limn \frac{n^4+n^2+n}{n^4+n+1}=\limn \frac{1+1/n^2+1/n^3}{1+1/n^3+1/n^4}=1$$
+Therefore the series diverges like the harmonic does.\\
+\end{exa}
+%%%%%
+%%%%%
+\end{document}

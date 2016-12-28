@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfRadiusOfConvergence}
+\pmcreated{2013-03-22 13:21:50}
+\pmmodified{2013-03-22 13:21:50}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{proof of radius of convergence}
+\pmrecord{6}{33890}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A30}
+\pmclassification{msc}{30B10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+According to Cauchy's root test a power series is absolutely convergent if
+$$\limsup_{k\to\infty}\sqrt[k]{|a_k(x-x_0)^k|}=|x-x_0|\limsup_{k\to\infty}\sqrt[k]{|a_k|}<1.$$
+This is obviously true if
+$$|x-x_0|<\frac{1}{\limsup_{k\to\infty}\sqrt[k]{|a_k|}}=\liminf_{k\to\infty}\frac{1}{\sqrt[k]{|a_k|}}=.$$
+In the same way we see that the series is divergent if
+$$|x-x_0|>\liminf_{k\to\infty}\frac{1}{\sqrt[k]{|a_k|}},$$
+which means that the right hand side is the radius of convergence of the power series.
+Now from the ratio test we see that the power series is absolutely convergent if
+$$\lim_{k\to\infty}\left|\frac{a_{k+1}(x-x_0)^{k+1}}{a_k(x-x_0)^k}\right|=|x-x_0| \lim_{k\to\infty}\left|\frac{a_{k+1}}{a_k}\right|<1.$$
+Again this is true if
+$$|x-x_0|<\lim_{k\to\infty}\left|\frac{a_k}{a_{k+1}}\right|.$$
+The series is divergent if
+$$|x-x_0|>\lim_{k\to\infty}\left|\frac{a_k}{a_{k+1}}\right|,$$
+as follows from the ratio test in the same way. So we see that in this way too we can \PMlinkescapetext{calculate} the radius of convergence.
+%%%%%
+%%%%%
+\end{document}

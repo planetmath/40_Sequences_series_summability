@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SummationByParts}
+\pmcreated{2013-03-22 16:28:10}
+\pmmodified{2013-03-22 16:28:10}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{summation by parts}
+\pmrecord{8}{38632}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmclassification{msc}{40D05}
+\pmsynonym{partial summation}{SummationByParts}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+
+\begin{document}
+The following corollaries apply Abel's lemma to allow estimation of certain bounded sums:
+
+\begin{cor} (Summation by parts)
+\newline
+Let $\{a_i\},\{b_i\}$ be sequences of complex numbers. Suppose the partial sums of the $a_i$ are bounded in magnitude by $h$, that $\sum_0^{\infty} |b_i-b_{i+1}|$ converges, and that $\lim_{i\to\infty} b_i=0$. Then $\sum_0^{\infty} a_i b_i$ converges, and
+\[\left|\sum_0^{\infty}a_i b_i\right|\leq h\sum_0^{\infty}|b_i-b_{i+1}|\]
+\end{cor}
+\textbf{Proof. }
+By Abel's lemma,
+\[\sum_{i=0}^N a_ib_i = \sum_{i=0}^{N-1} A_i(b_i-b_{i+1}) + A_Nb_N\]
+so that
+\begin{align*}
+\left\lvert \sum_{i=0}^N a_ib_i\right\rvert &= \left\lvert \sum_{i=0}^{N-1} A_i(b_i-b_{i+1}) + A_Nb_N\right\rvert \leq \sum_{i=0}^{N-1}\left\lvert A_i(b_i-b_{i+1})\right\rvert + \left\lvert A_Nb_N\right\rvert\\
+&\leq h\sum_{i=0}^{N-1}\left\lvert b_i-b_{i+1}\right\rvert + h\left\lvert b_N\right\rvert
+\end{align*}
+The condition that the $b_i\to 0$ is easily seen to imply that the sequence $\left\lvert \sum_{i=0}^N a_ib_i\right\rvert$ is Cauchy hence convergent, so that
+\[\left\lvert \sum_{i=0}^\infty a_ib_i\right\rvert \leq h\sum_{i=0}^{\infty} \left\lvert b_i-b_{i+1}\right\rvert\]
+since $b_N\to 0$.
+
+
+\begin{cor} (Summation by parts for real sequences)
+\newline
+Let $\{a_i\}$ be a sequence of complex numbers. Suppose the partial sums are bounded in magnitude by $h$. Let $\{b_i\}$ be a sequence of decreasing positive real numbers such that $\lim_{i\to\infty} b_i=0$. Then $\sum_1^{\infty} a_ib_i$ converges, and $|\sum_1^{\infty} a_ib_i|\leq hb_1$.
+\end{cor}
+\textbf{Proof. } This follows immediately from the above, since $|b_i-b_{i+1}|=b_i-b_{i+1}$.
+
+%%%%%
+%%%%%
+\end{document}

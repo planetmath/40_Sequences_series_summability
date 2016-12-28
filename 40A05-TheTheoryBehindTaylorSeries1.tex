@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheTheoryBehindTaylorSeries1}
+\pmcreated{2013-03-11 19:24:28}
+\pmmodified{2013-03-11 19:24:28}
+\pmowner{swapnizzle}{13346}
+\pmmodifier{}{0}
+\pmtitle{The Theory Behind Taylor Series}
+\pmrecord{1}{50069}
+\pmprivacy{1}
+\pmauthor{swapnizzle}{0}
+\pmtype{Definition}
+
+%none for now
+\begin{document}
+\documentclass[11pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage[mathcal]{eucal}
+\usepackage{xy}
+\textheight 9in
+\textwidth 6.5in
+\oddsidemargin 0in
+\evensidemargin 0in
+\topmargin 0in
+\headheight 0in
+\headsep 0in
+\title{The Theory Behind Taylor Series}
+\author{Swapnil Sunil Jain}
+\date{April 23, 2006}
+\begin{document}
+\maketitle
+We first make a safe assumption that any function f(x) can be approximated with the help of an nth degree polynomial p(x). Thus, 
+
+\begin{eqnarray}
+f(x)  \approx  p(x) & =  a_{n}x^{n} + a_{n-1}x^{n-1} + .\: .\: .\: + a_{4}x^{4} + a_{3}x^{3} + a_{2}x^{2} + a_{1}x + a_{0}
+\end{eqnarray}
+
+Now all we need to do in order to \textit{know} this function is to figure out the values of the coefficients $a_{n}, a_{n-1}, .\: .\: .\: , a_{4}, a_{3}, a_{2}, a_{1}, a_{0}$ of the polynomial p(x).
+
+Getting $a_{0}$ is easy, we just set x = 0, and we get $a_{0}=p(0)$. 
+However, getting the rest of the coefficients requires some trick. But before doing anything else, let's just take the first few derivatives of the polynomial p(x):
+
+\begin{eqnarray*}
+p'(x)  &=& na_{n}x^{n-1} + .\: .\: .\: + 4\cdot a_{4}x^{3} + 3\cdot a_{3}x^{2} + 2\cdot a_{2}x + a_{1} \\
+p''(x) &=& n(n-1)a_{n}x^{n-2} + .\: .\: .\: + 4\cdot 3\cdot a_{4}x^{2} + 3\cdot 2\cdot a_{3}x + 2\cdot a_{2}\\
+p^{3}(x) &=& n(n-1)(n-2)a_{n}x^{n-3} + .\: .\: .\: + 4\cdot 3\cdot 2\cdot a_{4}x + 3\cdot 2\cdot a_{3}\\
+p^{4}(x) &=& n(n-1)(n-2)(n-3)a_{n}x^{n-4} + .\: .\: .\: + 4\cdot 3\cdot 2\cdot a_{4}\\
+.\\.\\.
+\end{eqnarray*}
+
+Now getting the next coefficient $a_1$ is easy! We just set x = 0 and we get $p'(0) = a_1$. Similarly, setting x = 0 for all the rest of the derivatives we get:
+
+\begin{eqnarray*} 
+p''(0) &=& 2\cdot a_2\\
+p^{3}(0) &=& 3\cdot 2\cdot a_3\\
+p^{4}(0) &=& 4\cdot 3\cdot 2\cdot a_4\\
+.\\.\\.
+\end{eqnarray*}
+
+Hmmm... Do you see a pattern? The coefficient in front of the nth term seems to be n!. By this logic, the nth derivative of p(x) (evaluated at 0) should look like the following:
+
+\begin{eqnarray*} 
+& & p^{n}(0) = n!\cdot a_n
+\end{eqnarray*}
+
+Solving for $a_{n}$, we get: 
+
+\begin{eqnarray*}
+& & a_n = \frac{p^{n}(0)}{n!}
+\end{eqnarray*}
+
+By using this formula we can figure out all the coefficients (i.e. $a_{n}, a_{n-1}, .\: .\: .\: ,a_{2}, a_{1}, a_{0}$) of the polynomial p(x) (and be able to approximate f(x)!). Thus, our original function (1), which was approximated by the polynomial p(x), could be written (in the form of a polynomial) as:
+
+\begin{eqnarray*}
+& & f(x) \approx p(x) = \frac{p^{n}(0)}{n!}x^{n} + \frac{p^{n-1}(0)}{(n-1)!}x^{n-1} + ... + \frac{p^{3}(0)}{3!}x^{3} + \frac{p^{2}(0)}{2!}x^{2} + \frac{p^{1}(0)}{1!}x + \frac{p^{0}(0)}{0!}
+\end{eqnarray*}
+
+or in summation form as:
+
+\begin{eqnarray}
+& & f(x) \approx \sum_{k=0}^{n} \frac{f^k(0)}{k!}x^k
+\end{eqnarray}
+
+This is the nth-order Taylor series expansion of f(x) about the point x = 0. However, this is only an approximation. To get the \textit{exact} form, we have to have an infinite series summing over all the possible integer values of k 
+from 0 to infinity (i.e. an infinite degree polynomial)
+
+\begin{eqnarray}
+& & f(x) = \sum_{k=0}^{\infty} \frac{f^k(0)}{k!}x^k
+\end{eqnarray}
+
+Now, one more thing that we can do is to change the point of evaluation from x = 0 to x = a for some real value a. Thus, the Taylor series expansion of f(x) about a point x = a becomes the following (Note that setting a = 0 gives us back our above expression):
+
+\begin{eqnarray}
+& & f(x) = \sum_{k=0}^{\infty} \frac{f^k(a)}{k!}{(x-a)}^k
+\end{eqnarray}
+
+\end{document}
+%%%%%
+\end{document}

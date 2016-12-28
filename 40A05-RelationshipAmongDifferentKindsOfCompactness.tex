@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RelationshipAmongDifferentKindsOfCompactness}
+\pmcreated{2013-03-22 18:00:57}
+\pmmodified{2013-03-22 18:00:57}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{relationship among different kinds of compactness}
+\pmrecord{6}{40531}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmclassification{msc}{54D30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\newtheorem{prop}{Proposition}
+
+\begin{document}
+The goal of this article is to prove
+\begin{thm} If $X$ is second countable and $T_1$, or if $X$ is a metric space, then the following are equivalent:
+\begin{enumerate}
+\item $X$ is compact;
+\item $X$ is limit point compact;
+\item $X$ is sequentially compact.
+\end{enumerate}
+\end{thm}
+We prove this using several subsidiary theorems, which prove the various implications in stronger settings.
+
+\begin{thm} A compact topological space $T$ is limit point compact. (Here we make no assumptions about the topology on $T$).
+\end{thm}
+\textbf{Proof. } 
+Choose an subset $A\subset T$, and suppose $A$ has no limit points. Then $A$ contains its (vacuous set of) limit points and is therefore closed. But closed subsets of compact spaces are compact, so $A$ is compact. Since $A$ has no limit points, we may choose a neighborhood $U_a$ of each $a\in A$ such that $U_a$ intersects $A$ only in $a$. But this cover clearly has a finite subcover only if $A$ is finite. So any set without limit points is finite, and thus any infinite set has a limit point. This concludes the proof.
+
+
+\begin{thm} If $T$ is first countable, $T_1$, and limit point compact, then $T$ is sequentially compact.
+\end{thm}
+
+\textbf{Proof. }
+Let $x_i$ be any sequence of points in $T$, and assume that $x_i$ takes infinitely many values (otherwise it obviously has a convergent subsequence). Choose a limit point $x$ for the sequence; we may assume wlog that $x_i$ is equal to $x$ for only finitely many $i$ (otherwise again the result holds trivially). So by ignoring a finite number of leading terms of the sequence, we may assume that $x_i\neq x$ for every $i$. Since $T$ is first countable, choose a countable basis $B_i$ at $x$; by replacing $B_n$ with $B_1\cap\ldots\cap B_n$, we may assume that $B_{i+1}\subset B_i$ for all $i$.
+
+Now, choose $n_1$ such that $p_{n_1}\in B_1$. Inductively, assume we have chosen $n_1,\ldots,n_k$ with $p_{n_k}\in B_k$. Since $T$ is $T_1$, we may choose a neighborhood $U$ of $q$ that is disjoint from $p_{n_1},\ldots,p_{n_k}$; choose $p_{n_{k+1}}$ to be any point in $U\cap B_{k+1}$. Then inductively the $p_{n_i}$ form a subsequence with $p_{n_i}\in B_i$, and clearly the $p_{n_i}$ converge to $q$. This concludes the proof.
+
+Note that every metric space and every second countable $T_1$ space is also first countable and $T_1$.
+
+\begin{prop} Any sequentially compact metric space $M$ is second countable.
+\end{prop}
+\textbf{Proof. }
+It clearly suffices to show that $M$ has a countable dense subset.
+
+Claim first that for $\epsilon>0$, the set of $\epsilon$-balls in $M$ has a finite subcover. Suppose this is false for some particular $\epsilon$. Let $p_1\in M$ be any point, and construct inductively points $p_k$ with $p_k\notin B_{\epsilon}(p_1)\cup\ldots B_{\epsilon}(p_{k-1})$. Since $M$ is sequentially compact, we may replace the $p_i$ by a convergent subsequence, which we also call $p_i$, with $p_i\to p\in M$. But convergent sequences are Cauchy, so for $n$ large enough, we have $d(p_n,p_m)<\epsilon$, which contradicts the construction of the $p_i$. This proves the claim.
+
+Then for each positive integer $n$, let $p_{n,n_1},\ldots,{p_{n,n_k}}\in M$ be a finite set of points such that the $\frac{1}{n}$-balls around those points cover $M$. This set of points is countable, and is obviously dense in $M$. This concludes the proof.
+
+\begin{thm} If $T$ is second countable or is a metric space, and sequentially compact, then $T$ is compact.
+\end{thm}
+
+\textbf{Proof. } Assume first that $T$ is second countable. Choose any open cover of $T$; it has a countable subcover $U_i$. We use an argument very similar to that used in the above proposition. Suppose no finite subset of the $U_i$ covers $T$, and choose $p_k\in T\backslash(U_1\cup\ldots\cup U_k)$. Since $T$ is sequentially compact, the $p_k$ have a convergent subsequence $p_{n_k}$ converging to $p\in T$. But $p\in U_n$ for some $n$; since the $p_{n_k}$ converge to $p$, all $p_{n_k}\in U_n$ for $k$ large enough. But this is a contradiction to the construction of the $p_k$, so that a finite subset of the $U_i$ cover $T$ and $T$ is compact.
+
+Since any sequentially compact metric space is second countable by the above proposition, we are done.
+
+
+The main theorem follows trivially from the above. Note that we have in fact proven the following set of implications:
+\begin{itemize}
+\item Compact $\Rightarrow$ limit point compact for general topological spaces;
+\item Limit point compact $\Rightarrow$ sequentially compact for first countable $T_1$ spaces;
+\item Sequentially compact $\Rightarrow$ compact for second countable or metrizable spaces.
+\end{itemize}
+
+%%%%%
+%%%%%
+\end{document}

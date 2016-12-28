@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AbsolutelyConvergentInfiniteProductConverges}
+\pmcreated{2013-03-22 18:41:15}
+\pmmodified{2013-03-22 18:41:15}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{absolutely convergent infinite product converges}
+\pmrecord{6}{41439}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmclassification{msc}{30E20}
+\pmsynonym{convergence of absolutely convergent infinite product}{AbsolutelyConvergentInfiniteProductConverges}
+%\pmkeywords{infinite product}
+%\pmkeywords{complex numbers}
+\pmrelated{AbsoluteConvergenceImpliesConvergenceForAnInfiniteProduct}
+\pmrelated{AbsoluteConvergenceOfInfiniteProductAndSeries}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\; An \PMlinkname{absolutely convergent}{AbsoluteConvergenceOfInfiniteProduct} infinite product
+\begin{align}
+\prod_{\nu=1}^\infty(1\!+\!c_\nu) \;=\; (1\!+\!c_1)(1\!+\!c_2)(1\!+\!c_3)\cdots
+\end{align}
+of complex numbers is convergent.\\
+
+{\em Proof.}\, We thus assume the convergence of the \PMlinkname{product}{Product}
+\begin{align}
+\prod_{\nu=1}^\infty(1\!+\!|c_\nu|) \;=\; (1\!+\!|c_1|)(1\!+\!|c_2|)(1\!+\!|c_3|)\cdots
+\end{align}
+Let $\varepsilon$ be an arbitrary positive number.\, By the general convergence condition of infinite product, we have
+$$|(1\!+\!|c_{n+1}|)(1\!+\!|c_{n+2}|)\cdots(1\!+\!|c_{n+p}|)-1| < \varepsilon 
+\quad \forall\; p \in \mathbb{Z}_+$$
+when\, $n \geqq$ certain $n_\varepsilon$.\, Then we see that
+\begin{align*}
+|(1\!+\!c_{n+1})(1\!+\!c_{n+2})\cdots(1\!+\!c_{n+p})-1| 
+& =    |1+\sum_{\nu=n+1}^{n+p}c_\nu+\sum_{\mu,\,\nu}c_\mu c_\nu+\ldots+c_{n+1}c_{n+2}\cdots c_{n+p}-1|\\
+& \leqq 1+\sum_{\nu=n+1}^{n+p}|c_\nu|+\sum_{\mu,\,\nu}|c_\mu||c_\nu|+\ldots+|c_{n+1}||c_{n+2}|\cdots|c_{n+p}|-1\\
+& = |(1\!+\!|c_{n+1}|)(1\!+\!|c_{n+2}|)\cdots(1\!+\!|c_{n+p}|)-1| < \varepsilon 
+\qquad \forall\; p \in \mathbb{Z}_+
+\end{align*}
+as soon as\, $n \geqq n_\varepsilon$.\; I.e., the infinite product (1) converges, by the same convergence condition.
+
+%%%%%
+%%%%%
+\end{document}

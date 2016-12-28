@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfConvergenceOfASequenceWithFiniteUpcrossings}
+\pmcreated{2013-03-22 18:49:39}
+\pmmodified{2013-03-22 18:49:39}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of convergence of a sequence with finite upcrossings}
+\pmrecord{4}{41631}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmclassification{msc}{60G17}
+%\pmkeywords{upcrossings}
+%\pmkeywords{supremum limit}
+%\pmkeywords{infimum limit}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{limit}
+\PMlinkescapeword{number}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{conversely}
+\PMlinkescapeword{integer}
+\PMlinkescapeword{infinite}
+\PMlinkescapeword{interval}
+
+We show that a sequence $x_1,x_2,\ldots$ of real numbers converges to a limit in the extended real numbers if and only if the number of upcrossings $U[a,b]$ is finite for all $a<b$.
+
+Denoting the infimum limit and supremum limit by
+\begin{equation*}
+l = \liminf_{n\rightarrow\infty}x_n,\ u=\limsup_{n\rightarrow\infty}x_n,
+\end{equation*}
+then $l\le u$ and the sequence converges to a limit if and only if $l=u$.
+
+We first show that if the sequence converges then $U[a,b]$ is finite for $a<b$. If $l>a$ then there is an $N$ such that $x_n>a$ for all $n\ge N$. So, all upcrossings of $[a,b]$ must start before time $N$, and we may conclude that $U[a,b]\le N$ is finite. On the other hand, if $l\le a$ then $u=l<b$ and we can infer that $x_n<b$ for all $n\ge N$ and some $N$. Again, this gives $U[a,b]\le N$.
+
+Conversely, suppose that the sequence does not converge, so that $u>l$. Then choose $a<b$ in the interval $(l,u)$. For any integer $n$, there is then an $m>n$ such that $x_m>b$ and an $m>n$ with $x_m<a$. This allows us to define infinite sequences $s_k,t_k$ by $t_0=0$ and
+\begin{align*}
+&s_k=\inf\left\{m\ge t_{k-1}\colon X_{m}<a\right\},\\
+&t_k=\inf\left\{m\ge s_{k}\colon X_{m}>b\right\},
+\end{align*}
+for $k\ge 1$. Clearly, $s_1<t_1<s_2<\cdots$ and $x_{s_k}<a<b<x_{t_k}$ for all $k\ge 1$, so $U[a,b]=\infty$.
+
+%%%%%
+%%%%%
+\end{document}

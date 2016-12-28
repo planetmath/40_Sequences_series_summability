@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UncountableSumsOfPositiveNumbers}
+\pmcreated{2013-03-22 15:44:47}
+\pmmodified{2013-03-22 15:44:47}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{uncountable sums of positive numbers}
+\pmrecord{5}{37698}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40-00}
+\pmrelated{SupportOfIntegrableFunctionWithRespectToCountingMeasureIsCountable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The notion of sum of a series can be generalized to sums of nonnegative
+real numbers over arbitrary index sets.
+
+let $I$ be a set and let $c$ be a mapping from $I$ to the nonnegative
+real numbers.  Then we may define the sum as follows:
+ \[\sum_{i \in I} c_i = \sup_{s \subset I \atop \#s < \infty} \sum_{i
+ \in s} c_i\]
+In words, we are taking the supremum over all sums over finite subsets
+of the index set.  This agrees with the usual notion of sum when our
+set is countably infinite, but generalizes this notion to uncountable
+index sets.
+
+An important fact about this generalization is that the sum can only
+be finite if the number of elements $i \in I$ such that $c_i > 0$ is
+countable.  To demonstrate this fact, define the sets $s_n$ (where n
+is a nonnegative integer) as follows:
+ \[ s_0 = \{ i \in I \mid c_i \ge 1 \}\]
+when $n>0$,
+ \[ s_n = \{ i \in I \mid 1/n > c_i \ge 1/(n+1) \}\]
+If any of these sets is infinite, then the sum will diverge so, for
+the sum to be finite, all these sets must be finite.  However, if
+these sets are all finite, then their union is countable.  In other
+words, the number of indices for which $c_i > 0$ will be countable.
+
+This notion finds use in places such as non-separable Hilbert spaces.
+For instance, given a vector in such a space and a complete
+orthonormal set, one can express the norm of the vector as the sum of
+the squares of its components using this definition even when the
+orthonormal set is uncountably infinite.
+
+This discussion can also be phrased in terms of Lesbegue integration 
+with respect to counting measure.  For this point of view, please see the entry
+support of integrable function with respect to counting measure is countable.
+%%%%%
+%%%%%
+\end{document}

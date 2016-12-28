@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UniquenessOfLimitOfSequence}
+\pmcreated{2013-03-22 19:00:23}
+\pmmodified{2013-03-22 19:00:23}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{uniqueness of limit of sequence}
+\pmrecord{4}{41875}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+If a number sequence has a limit, then the limit is uniquely determined.\\
+
+\emph{Proof.}\, For an \PMlinkname{indirect proof}{ReductioAdAbsurdum}, suppose that a sequence
+$$a_1,\,a_2,\,a_3,\,\ldots$$
+has two distinct limits $a$ and $b$.\, Thus we must have both
+$$|a_n\!-\!a| < \frac{|a\!-\!b|}{2} \quad \mbox{for all}\;\; n > \mbox{\,some\;} n_1$$
+and
+$$|a_n\!-\!b| < \frac{|a\!-\!b|}{2} \quad \mbox{for all}\;\; n > \mbox{\,some\;} n_2$$
+But when $n$ exceeds the greater of $n_1$ and $n_2$, we can write
+$$|a\!-\!b| \;=\; |a\!-\!a_n\!+\!a_n\!-\!b|\;\leqq\; |a\!-\!a_n|+|a_n\!-\!b| 
+\;<\; \frac{|a\!-\!b|}{2}+\frac{|a\!-\!b|}{2} \;=\; |a\!-\!b|.$$
+This inequality \PMlinkescapetext{chain contains} an impossibility, whence the antithesis made in the begin is wrong and the assertion is \PMlinkescapetext{right}.
+
+%%%%%
+%%%%%
+\end{document}

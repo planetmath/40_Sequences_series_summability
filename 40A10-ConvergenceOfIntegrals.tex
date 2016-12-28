@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConvergenceOfIntegrals}
+\pmcreated{2013-03-22 18:59:51}
+\pmmodified{2013-03-22 18:59:51}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{convergence of integrals}
+\pmrecord{9}{41865}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A10}
+%\pmkeywords{improper integral}
+\pmrelated{UniformConvergenceOfIntegral}
+\pmrelated{LogarithmicIntegral2}
+\pmrelated{ListOfImproperIntegrals}
+\pmrelated{SubstitutionNotation}
+\pmrelated{ONotation}
+\pmdefines{convergent integral}
+\pmdefines{divergent integral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+\begin{document}
+\PMlinkescapeword{convergent} \PMlinkescapeword{divergent}
+
+Similarly as one speaks of convergence of series, one can speak of \emph{convergence of integrals}, especially of Riemann integrals
+$$\int_If(t)\,dt.$$
+This integral is \emph{convergent}, if it exists, and otherwise \emph{divergent}.\, One can also speak of \emph{absolute convergence of integrals}.\\
+
+\textbf{Example.}\, Study the convergence of the integral
+\begin{align}
+\int_1^2\frac{dx}{(\ln{x})^c}
+\end{align}
+where $c$ is a real constant.
+
+According to the logarithm series, we may write for\, $1 < x < b$,\, where $b$ is sufficiently close to $1$, the estimations
+\begin{align*}
+\ln(x\!-\!1) \;=\; x-1+O((x\!-\!1)^2) \;=\; (x\!-\!1)[1+O(x\!-\!1)] \;
+\begin{cases}
+\leq 2(x\!-\!1), \\
+\geq \frac{1}{2}(x\!-\!1). 
+\end{cases}
+\end{align*}
+Let\, $1 < a < b$.\, \\
+
+$1^\circ$.\, For\, $c > 1$:
+\begin{align*}
+\int_a^b\frac{dx}{(\ln{x})^c} &\geqq \int_a^b\frac{dx}{2^c(x\!-\!1)^c}
+   \;=\; -\frac{1}{2^c}\!\sijoitus{x=a}{\quad b}\!\frac{1}{(c\!-\!1)(x\!-\!1)^{c-1}}\\
+  &\;=\; \frac{1}{2^c(c\!-\!1)}\left[\frac{1}{(a\!-\!1)^{c-1}}-\frac{1}{(b\!-\!1)^{c-1}}\right]
+\;\longrightarrow \infty \quad \mbox{as} \quad a \to 1+
+\end{align*}
+
+$2^\circ$.\, For\, $c = 1$:
+\begin{align*}
+\int_a^b\frac{dx}{\ln{x}} &\geqq \int_a^b\frac{dx}{2(x\!-\!1)}
+   \;=\; \frac{1}{2}\!\sijoitus{a}{\quad b}\!\ln(x\!-\!1)\\
+  &\;=\; \frac{1}{2}\left[\ln(b\!-\!1)-\ln(a\!-\!1)\right]
+\;\longrightarrow \infty \quad \mbox{as} \quad a \to 1+
+\end{align*}
+
+$3^\circ$.\, For\, $c < 1$:
+\begin{align*}
+0 \;<\; \int_a^b\frac{dx}{(\ln{x})^c} &\leqq \int_a^b\frac{2^c\,dx}{(x\!-\!1)^c}
+   \;=\; 2^c\!\sijoitus{x=a}{\quad b}\!\frac{x^{1-c}}{1\!-\!c}\\
+  &\;=\; \frac{2^c}{1\!-\!c}\left[(b\!-\!1)^{1-c}-(a\!-\!1)^{1-c}\right]
+\;\longrightarrow \frac{2^c}{1\!-\!c}(b\!-\!1)^{1-c} \quad \mbox{as} \quad a \to 1+
+\end{align*}
+Consequently, the integral $\int_a^b\frac{dx}{(\ln{x})^c}$, and thus also (1), converges if and only if\, $c < 1$.
+
+
+%%%%%
+%%%%%
+\end{document}

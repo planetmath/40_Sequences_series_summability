@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegralRepresentationsOfTheMascheroniConstant}
+\pmcreated{2013-03-22 15:53:24}
+\pmmodified{2013-03-22 15:53:24}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{integral representations of the Mascheroni constant}
+\pmrecord{8}{37891}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Mascheroni's constant can be expressed by the following integrals:
+\begin{eqnarray*}
+\gamma &=& - \int_0^1 \log (- \log x) \, dx \\
+\gamma &=& - \int_0^\infty e^{-x} \log x \, dx \\
+\gamma &=& \int_0^\infty \left( {1 \over e^t - 1} - {1 \over t e^t} \right) \, dt \\
+\gamma &=& \int_0^\infty \left( {1 \over t} - {1 \over 1 + t} - {1 \over t e^t} \right) \, dt \\
+\end{eqnarray*}
+
+% To derive this formula, we may first deral with the singularity as $t \to 0$ in % the integrand by cutting off the lower limit of integration, then expand in a 
+% series:
+% \begin{eqnarray*}
+% \lim_{\lambda \to 0} \int_\lambda^\infty {e^{-t} \over 1 - e^{-t}} - {e^{-t} 
+% \over t}
+%%%%%
+%%%%%
+\end{document}

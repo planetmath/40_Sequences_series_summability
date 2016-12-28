@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LaneEmdenSystem}
+\pmcreated{2013-03-11 19:34:47}
+\pmmodified{2013-03-11 19:34:47}
+\pmowner{linor}{11198}
+\pmmodifier{}{0}
+\pmtitle{Lane-Emden System}
+\pmrecord{1}{50127}
+\pmprivacy{1}
+\pmauthor{linor}{0}
+\pmtype{Definition}
+
+%none for now
+\begin{document}
+\documentclass[12pt,leqno]{article}
+\usepackage{amssymb}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\dk}{d\sigma_{\xi}}
+\newcommand{\dx}{d\sigma_{x}}
+\newcommand{\nd}{\frac{ \partial}{ \partial n}}
+\newcommand{\ndk}{\disfrac{\textstyle \partial}{\textstyle \partial n_{ \xi}}}
+\newcommand{\ndx}{\disfrac{\textstyle \partial}{\textstyle \partial n_{ x}}}
+\newcommand{\ik}{\int_{ \Gamma}}
+\newcommand{\ts}{\textstyle}
+
+\begin{document}
+Here is an example of Hamiltonian elliptic systems,
+also called the Lane-Emden system,
+%\be  %\label{LE}
+$$
+(LE) \; \left\{
+\begin{array}{ll}
+ - \Delta u =  v^p & \, x \in\Omega,\nonumber\\
+ - \Delta v =  u^q & \, x \in\Omega,\nonumber\\
+             u=v=0 & \,  x \in \partial \Omega, \nonumber
+\end{array}
+\right.
+%J(u)=\int_{\Omega}\Big[\frac{1}{2}|\nabla %u|^2-\frac{1}{q+1}|x|^r|u|^{q+1}\Big]dx
+%\ee
+$$
+where $p,q>0,\Omega\subset {\mathbb R}^N (N\ge 1)$ 
+is an open bounded domain. (LE) is called sublinear (superlinear) 
+if $pq<1 \; (pq>1)$.
+The associated energy functional to (LE) is 
+$$
+J(u,v)=\int_{\Omega}\nabla u  \nabla v dx -
+\int_{\Omega}(\frac{1}{q+1}u^{q+1}+\frac{1}{p+1}v^{p+1})dx.
+$$
+
+%Here are some numerical results to the Liouville-Gelfand problem
+%when $\Omega$ is an annulus.
+
+\end{document}
+%%%%%
+\end{document}

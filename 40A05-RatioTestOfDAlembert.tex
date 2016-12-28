@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RatioTestOfDAlembert}
+\pmcreated{2013-03-22 19:12:28}
+\pmmodified{2013-03-22 19:12:28}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{ratio test of d'Alembert}
+\pmrecord{9}{42123}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmrelated{FiniteChangesInConvergentSeries}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[T2A]{fontenc}
+\usepackage[russian, english]{babel}
+
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+\begin{document}
+A lighter version of the ratio test is the
+
+\textbf{Ratio test of d'Alembert.}\, Let\, $a_1\!+\!a_2\!+\ldots$\, be a series with positive terms.
+
+$1^\circ$.\, If there exists a number $q$ such that\, $0 < q < 1$\, and
+\begin{align}
+\frac{a_{n+1}}{a_n} \;\le\; q \quad \mbox{for all}\;\; n \ge n_0,
+\end{align}
+then the series converges.
+
+$2^\circ$.\, If there exists a number $n_0$ such that
+\begin{align}
+\frac{a_{n+1}}{a_n} \;\ge\; 1 \quad \mbox{for all}\;\; n \ge n_0,
+\end{align}
+then the series diverges.\\
+
+
+\emph{Proof.}\, $1^\circ$. By the condition (1), we have\, $a_{n+1} \le a_nq$;\, thus we get the estimations
+$$a_{n_0+1} \;\le\; a_{n_0}q,$$
+$$a_{n_0+2} \;\le\; a_{n_0+1}q \;\le\; a_{n_0}q^2,$$
+$$\cdots \quad \cdots \quad \cdots$$
+$$a_{n_0+p} \;\le\; a_{n_0+p-1}q \;\le\; \ldots \;\le\; a_{n_0}q^p,$$
+$$\cdots \quad \cdots \quad \cdots$$
+Because\, $a_{n_0}q+a_{n_0}q^2+\ldots+a_{n_0}q^p+\ldots$\, is a convergent geometric series, those inequalities and the comparison test imply that the series
+$$a_{n_0+1}\!+\!a_{n_0+2}\!+\ldots+\!a_{n_0+p}\!+\ldots$$
+and as well the whole series\, $a_1\!+\!a_2\!+\ldots$\, is convergent.
+
+$2^\circ$.\, The condition (2) yields
+$$a_{n_0+1} \;\ge\; a_{n_0}, \quad a_{n_0+2} \;\ge\; a_{n_0+1} \;\ge\; a_{n_0}, \quad \ldots$$
+and since\, $a_{n_0}$ is positive, the limit of $a_n$ as $n$ tends to infinity cannot be 0.\, Hence the given series does not fulfil the necessary condition of convergence.\\
+
+\textbf{Example.}\, If the variable $x$ in the power series
+$$\sum_{n=0}^\infty n!x^n$$
+is distinct from zero, we have
+$$\frac{|(n\!+\!1)!x^{n+1}|}{|n!x^n|} \;=\; (n\!+\!1)|x| \;\ge\; 1 \quad \mbox{for all}\;\; n \ge n_0.$$
+Then the series does not \PMlinkname{converge absolutely}{AbsoluteConvergence}.\, The known theorem of Abel says that the series diverges for all\, 
+$x \neq 0$.\, It means that the radius of convergence is 0.
+
+
+
+\begin{thebibliography}{7}
+\bibitem{LDK} \CYRL. \CYRD. \CYRK\cyru\cyrd\cyrr\cyrya\cyrv\cyrc\cyre\cyrv: 
+{\em \CYRM\cyra\cyrt\cyre\cyrm\cyra\cyrt\cyri\cyrch\cyre\cyrs\cyrk\cyri\cyrishrt \,\cyra\cyrn\cyra\cyrl\cyri\cyrz. I \cyrt\cyro\cyrm}. \,\CYRI\cyrz\cyrd\cyra\cyrt\cyre\cyrl\cyrsftsn\cyrs\cyrt\cyrv\cyro \,
+``\CYRV\cyrery\cyrs\cyrsh\cyra\cyrya \,\cyrsh\cyrk\cyro\cyrl\cyra''. \CYRM\cyro\cyrs\cyrk\cyrv\cyra \,(1970).
+\end{thebibliography}
+
+
+
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

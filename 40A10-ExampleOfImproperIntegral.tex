@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfImproperIntegral}
+\pmcreated{2014-11-07 11:47:42}
+\pmmodified{2014-11-07 11:47:42}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{example of improper integral}
+\pmrecord{6}{41617}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A10}
+\pmrelated{SubstitutionNotation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+\begin{document}
+The integrand of 
+\begin{align}
+I \;=\; \int_0^1\frac{\arctan{x}}{x\sqrt{1\!-\!x^2}}\,dx
+\end{align}
+is undefined both at the lower and the upper limit.\, However, the value of the improper integral exists and may be found via the more general integral
+\begin{align}
+I(y) \;=\; \int_0^1\frac{\arctan{xy}}{x\sqrt{1\!-\!x^2}}\,dx.
+\end{align}
+Denote the integrand of (2) by\, $f(x,\,y)$.\, For any fixed real value $y$, 
+$$f(x,\,y) \in O(1) \mbox{\; as \;} x \to 0, \quad
+  f(x,\,y) \in O(\frac{1}{\sqrt{1\!-\!x^2}}) \mbox{\; as \;} x \to 1,$$
+where the \PMlinkname{Landau big ordo}{formaldefinitionoflandaunotation} notation has been used.\, Accordingly, the integral (2) converges for every $y$.
+
+The inequality
+$$\left|\frac{\partial f(x,\,y)}{\partial y}\right| \;=\; \frac{1}{(1\!+\!x^2y^2)\sqrt{1\!-\!x^2}} 
+\;\leqq\; \frac{1}{\sqrt{1\!-\!x^2}}$$
+and the convergence of the integral
+$$\int_0^1\!\frac{dx}{\sqrt{1\!-\!x^2}} \;=\; \frac{\pi}{2}$$
+imply that the integral
+\begin{align}
+\int_0^1\frac{\partial f(x,\,y)}{\partial y}\,dx
+\end{align}
+\PMlinkid{converges uniformly}{6277} on the whole $y$-axis and equals $I'(y)$.\, For expressing this derivative in a \PMlinkname{closed form}{ExpressibleInClosedForm}, one may utilise the \PMlinkname{changes of variable}{ChangeOfVariableInDefiniteIntegral}
+$$x \;:=\; \cos\varphi, \quad \tan\varphi \;:=\; t$$
+which yield
+\begin{align*}
+I'(y) & \;=\; \int_0^1\!\frac{dx}{(1\!+\!x^2y^2)\sqrt{1\!-\!x^2}} 
+\;=\; \int_0^{\frac{\pi}{2}}\!\frac{d\varphi}{1\!+\!y^2\cos^2\varphi}\\ 
+      & \;=\; \int_0^\infty\!\frac{dt}{1\!+\!y^2\!+\!t^2} 
+\;=\; \sijoitus{t\,=0}{\quad\infty}\!\frac{1}{\sqrt{1\!+\!y^2}}\arctan\frac{t}{\sqrt{1\!+\!y^2}}\\   
+      & \;=\; \frac{\pi}{2\sqrt{1\!+\!y^2}}.
+\end{align*}
+Hence,
+$$I(y) \;=\; \frac{\pi}{2}\int_0^y\frac{dy}{\sqrt{1\!+\!y^2}} \;=\; \sijoitus{0}{\quad y}\!\ln(y+\sqrt{1\!+\!y^2})$$
+and the integral (1) equals \;$I \;=\; I(1) \;=\; \frac{\pi}{2}\ln(1\!+\!\sqrt{2})$,\, i.e.
+\begin{align}
+\int_0^1\frac{\arctan{x}}{x\sqrt{1\!-\!x^2}}\,dx \;=\; \frac{\pi}{2}\ln(1\!+\!\sqrt{2}).
+\end{align}
+
+%%%%%
+%%%%%
+\end{document}

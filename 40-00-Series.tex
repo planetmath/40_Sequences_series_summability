@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Series}
+\pmcreated{2013-03-22 12:41:35}
+\pmmodified{2013-03-22 12:41:35}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{series}
+\pmrecord{7}{32973}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40-00}
+\pmrelated{AbsoluteConvergence}
+\pmrelated{HarmonicNumber}
+\pmrelated{CompleteUltrametricField}
+\pmrelated{Summation}
+\pmrelated{PrimeHarmonicSeries}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Given a sequence of numbers (real or complex) $\{a_n\}$ we define a sequence of \textit{partial
+sums} $\{S_N\}$, where $S_N=\sum_{n=1}^N a_n$. This sequence is called the \textit{series} with \textit{terms} $a_n$. We define the \textit{sum of the series}
+$\sum_{n=1}^\infty a_n$ to be the limit of these partial sums. More precisely
+\[
+ \sum_{n=1}^\infty a_n = \lim_{N\to\infty} S_n
+    = \lim_{N\to\infty} \sum_{n=1}^N a_n.
+\]
+In a context where this distinction does not matter much (this is usually the case) one identifies a series with its sum, if the latter exists.
+
+Traditionally, as above, series are infinite sums of real numbers. However,
+the formal constraints on the terms $\{a_n\}$ are much less strict. We need
+only be able to add the terms and take the limit of partial sums. So in full
+generality the terms could be complex numbers or even elements of certain rings,
+fields, and vector spaces.
+%%%%%
+%%%%%
+\end{document}

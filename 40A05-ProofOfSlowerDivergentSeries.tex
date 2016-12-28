@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfSlowerDivergentSeries}
+\pmcreated{2013-03-22 15:08:42}
+\pmmodified{2013-03-22 15:08:42}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of slower divergent series}
+\pmrecord{9}{36891}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let us show that, if the series $\sum_{i=1}^\infty a_i$ of positive terms is divergent, then Abel's series
+ \[ \sum_{i=1}^\infty \frac{a_i}{\sum_{j=1}^i a_j} \]
+also diverges.
+
+Since the series $\sum_{i=1}^\infty a_i$ diverges, we can find an increasing sequence $(n_i)_{i=0}^\infty$ of integers such that
+ \[ \sum_{j=1}^{n_{i+1}} a_j > 2 \sum_{j=1}^{n_i} a_j \]
+for all $i$.  By convention, set $n_0 = 0$.  Then we can group the sum like so:
+ \[ \sum_{i=1}^{n_m} \frac{a_i}{\sum_{j=1}^i a_j} = \sum_{i=0}^{m-1} \sum_{k=n_i+1}^{n_{i-1}} \frac{a_k}{\sum_{j=1}^k a_j} \]
+Because $\sum_{j=1}^k a_j \le \sum_{j=1}^{n_{i-1}} a_j$, we have
+ \[ \sum_{k=n_i+1}^{n_{i-1}} \frac{a_k}{\sum_{j=1}^k a_j} \ge \sum_{k=n_i+1}^{n_{i-1}} \frac{a_k}{\sum_{j=1}^{n_{i-1}} a_j} = 
+\frac{\sum_{k=n_i+1}^{n_{i-1}} a_k}{\sum_{j=1}^{n_{i-1}} a_j} \]
+
+By the way we chose the sequence $(n_i)_{i=0}^\infty$, we have $2 \sum_{k=n_i+1}^{n_{i-1}} a_k > \sum_{j=1}^{n_{i-1}} a_j$ and, hence,
+ \[ \sum_{k=n_i+1}^{n_{i-1}} \frac{a_k}{\sum_{j=1}^k a_j} \ge \frac{\sum_{k=n_i+1}^{n_{i-1}} a_k}{\sum_{j=1}^{n_{i-1}} a_j} > \frac{1}{2}. \]
+Therefore,
+ \[ \sum_{i=1}^{n_m} \frac{a_i}{\sum_{j=1}^i a_j} > \sum_{i=1}^{n_m} \frac{1}{2} = \frac{m}{2}, \]
+so the sum diverges in the limit $m \to \infty$.
+%%%%%
+%%%%%
+\end{document}

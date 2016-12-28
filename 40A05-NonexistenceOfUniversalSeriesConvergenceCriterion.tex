@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NonexistenceOfUniversalSeriesConvergenceCriterion}
+\pmcreated{2013-03-22 15:08:33}
+\pmmodified{2013-03-22 15:08:33}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{non-existence of universal series convergence criterion}
+\pmrecord{16}{36887}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmrelated{SlowerDivergentSeries}
+\pmrelated{SlowerConvergentSeries}
+\pmrelated{ErnstLindelof}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{divergence} \PMlinkescapeword{terms} \PMlinkescapeword{mean} \PMlinkescapeword{}
+
+There exist many criteria for examining the convergence and divergence of series with positive terms (see e.g. determining series convergence).\, They all are sufficient but not necessary.\, It has also been asked whether there would be any criterion which were both sufficient and necessary.\, The famous mathematician Niels Henrik Abel took this question under consideration and proved the
+
+\begin{thmplain}
+There is no sequence
+\begin{align}
+   \varrho_1,\,\varrho_2,\,\varrho_3,\,\ldots
+\end{align}
+of positive numbers such that every series\; $a_1+a_2+a_3+\ldots$\; of positive terms converges when the condition
+$$\lim_{n\to\infty}\varrho_n a_n \;=\; 0$$
+is true but diverges when it is false.
+\end{thmplain}
+
+{\em Proof.}\, Let's assume that there is a sequence (1) having the both properties.\, We infer that the series\, $\frac{1}{\varrho_1}\!+\!\frac{1}{\varrho_2}\!+\!\frac{1}{\varrho_3}\!+\ldots$\, is divergent because\, $\lim_{n\to\infty}(\varrho_n\!\cdot\!\frac{1}{\varrho_n}) \ne 0$.\, The theorem on slower divergent series guarantees us another divergent series $s_1\!+\!s_2\!+\!s_3\!+\ldots$ such that the ratio \, $s_n\colon\!\frac{1}{\varrho_n} = 
+\varrho_n s_n$\, tends to the limit $0$ as\, $n\to\infty$.\, But this limit result concerning the series\, $s_1\!+\!s_2\!+\!s_3\!+\ldots$\, should mean, according to our assumption, that the series is convergent.\, The contradiction shows that the theorem holds.
+
+\begin{thebibliography}{9}
+ \bibitem{EL}{\sc Ernst Lindel\"of:} {\em Differentiali- ja integralilasku ja sen sovellutukset III.2.}\, Mercatorin Kirjapaino Osakeyhti\"o. Helsinki (1940).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

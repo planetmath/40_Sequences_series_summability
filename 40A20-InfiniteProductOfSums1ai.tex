@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InfiniteProductOfSums1ai}
+\pmcreated{2013-03-22 18:40:01}
+\pmmodified{2013-03-22 18:40:01}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{infinite product of sums $1\!+\!a_i$}
+\pmrecord{6}{41411}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A20}
+\pmclassification{msc}{26E99}
+\pmrelated{LimitOfRealNumberSequence}
+\pmrelated{DeterminingSeriesConvergence}
+\pmrelated{InfiniteProductOfDifferences1A_i}
+\pmrelated{AbsoluteConvergenceOfInfiniteProductAndSeries}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Lemma.}\, Let the numbers $a_i$ be nonnegative reals.\, The infinite product
+\begin{align}
+\prod_{i=1}^\infty(1\!+\!a_i) \,=\, (1\!+\!a_1)(1\!+\!a_2)(1\!+\!a_3)\cdots
+\end{align}
+converges iff the series \;$a_1\!+\!a_2\!+\!a_3\!+\ldots$\; is convergent.\\
+
+{\em Proof.}\, Denote
+$$\sum_{i=1}^na_n \;:=\; s_n, \quad \prod_{i=1}^n(1\!+\!a_i) \;:=\; t_n \qquad (n = 1,\,2,\,\ldots).$$
+Now\; $\displaystyle 1\!+\!a_i \,\leqq\, 1\!+\!\frac{a_i}{1!}\!+\!\frac{a_i^2}{2!}\!+\ldots \;=\; e^{a_i}$,\, whence
+\begin{align}
+t_n \;\leqq\; \prod_{i=1}^ne^{a_i} \;=\; e^{s_n}.
+\end{align}
+We can estimate also downwards:
+\begin{align}
+t_n \;=\; (1\!+\!a_1)(1\!+\!a_2)\cdots(1\!+\!a_n) \;=\; 
+1\!+\!\sum_{i=1}^na_i\!+\ldots+\!a_1a_2\cdots a_n \;>\; \sum_{i=1}^na_i \;=\; s_n
+\end{align}
+If the series is convergent with sum $S$, then by (2),
+$$t_n \;\leqq\; e^{s_n} \;\leqq\; e^S,$$
+and since the monotonically nondecreasing sequence \,$\langle t_1,\,t_2,\,t_3,\,\ldots\rangle$\, thus is bounded from above, it converges (cf. limit of nondecreasing sequence).\, So (1) converges.\\
+
+If, on the other hand, the series is divergent, then\, $\displaystyle\lim_{n\to\infty}s_n = \infty$\, and by (3), also\, $\displaystyle\lim_{n\to\infty}t_n = \infty$,\, i.e. the \PMlinkescapetext{product} (1) diverges.
+
+
+
+ 
+
+%%%%%
+%%%%%
+\end{document}

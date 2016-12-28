@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HalleysFormula}
+\pmcreated{2013-03-22 19:34:39}
+\pmmodified{2013-03-22 19:34:39}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Halley's formula}
+\pmrecord{8}{42564}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmrelated{ListOfCommonLimits}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The following formula is due to the English scientist and mathematician Edmond Halley (1656 \`a 1742):
+\begin{align}
+\ln{x} \;=\; \lim_{n\to\infty}(\sqrt[n]{x}-1)n
+\end{align}
+
+{\it Proof.}\, We change the $n$th root to power of $e$ and use the power series expansion of exponential function:
+\begin{align*}
+(\sqrt[n]{x}-1)n &\;=\; (e^{\frac{\ln{x}}{n}}-1)n\\
+&\;=\; \left(\sum_{m=0}^\infty\frac{(\ln{x}/n)^m)}{m!}-1\right)\!n\\ 
+&\;=\; \sum_{m=1}^\infty\frac{(\ln{x}/n)^mn}{m!}\\
+&\;=\; \ln{x}+\frac{1}{n}\sum_{m=2}^\infty\frac{(\ln{x})^m}{m!n^{m-2}}
+\end{align*}
+The last converging series has a finite sum, and as\, $n \to \infty$,\, the asserted formula follows.\\
+
+\textbf{Note.}\, The formula (1) was known also by Leonhard Euler, who used it for defining the natural logarithm.\, Using  (1), one can easily prove the well-known laws of logarithm, e.g.
+\begin{align*}
+\ln{xy} &\;=\; \lim_{n\to\infty}(\sqrt[n]{x}\sqrt[n]{y}-1)n\\
+&\;=\; \lim_{n\to\infty}(\sqrt[n]{x}\sqrt[n]{y}-\sqrt[n]{y}+\sqrt[n]{y}-1)n\\
+&\;=\; \lim_{n\to\infty}y^{\frac{1}{n}}(\sqrt[n]{x}-1)n+\lim_{n\to\infty}(\sqrt[n]{y}-1)n\\
+&\;=\; y^0\ln{x}+\ln{y}\\
+&\;=\; \ln{x}+\ln{y}.
+\end{align*}
+
+
+\begin{thebibliography}{8}
+\bibitem{L}{\sc Paul Loya}: {\em Amazing and Aesthetic Aspect of Analysis: On the incredible infinite}. A course in undergraduate analysis, fall 2006.  Available \PMlinkexternal{here}{http://www.math.binghamton.edu/dennis/478.f07/EleAna.pdf}.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

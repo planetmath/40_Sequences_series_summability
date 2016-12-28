@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DeterminingSeriesConvergence}
+\pmcreated{2013-03-22 13:24:45}
+\pmmodified{2013-03-22 13:24:45}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{determining series convergence}
+\pmrecord{16}{33958}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmrelated{ThenA_kto0IfSum_k1inftyA_kConverges}
+\pmrelated{LimitComparisonTest}
+\pmrelated{AbsoluteConvergence}
+\pmrelated{InfiniteProductOfSums1a_i}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{url}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\ser{\Sigma a_n}
+\begin{document}
+Consider a series $\ser$. To determine whether $\ser$ converges or diverges, several tests are available. There is no precise rule indicating which \PMlinkescapetext{type} of test to use with a given series. The more obvious approaches are collected below.
+
+\begin{itemize}
+\item When the terms in $\ser$ are positive, there are several possibilities:
+\begin{itemize}
+\item comparison test,
+\item root test (Cauchy's root test),
+\item \PMlinkname{ratio test of d'Alembert}{RatioTestOfDAlembert},
+\item ratio test,
+\item \PMlinkname{$p$-test}{PTest},
+\item integral test,
+\item Raabe's criteria.
+\end{itemize} 
+\item limit comparison test.
+\item \PMlinkname{the divergence test}{ThenA_kto0IfSum_k1inftyA_kConverges}.
+\item If the series is an alternating series, then the \PMlinkname{alternating series test}{AlternatingSeriesTest} may be used.
+\item Abel's test for convergence can be used when terms in $\ser$ can be obained as the product of terms of a convergent series with terms of a monotonic convergent sequence.
+\end{itemize}
+
+The root test and the ratio test are direct applications of the comparison test to the geometric series with terms $(|a_n|)^{1/n}$ and $\frac{a_{n+1}}{a_n}$, respectively.
+
+For a paper about tests for convergence, please see \PMlinkexternal{this article.}{http://planetmath.org/?op=getobj&from=lec&id=37}
+%%%%%
+%%%%%
+\end{document}

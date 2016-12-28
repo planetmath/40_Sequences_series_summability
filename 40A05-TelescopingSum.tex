@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TelescopingSum}
+\pmcreated{2013-03-22 14:25:18}
+\pmmodified{2013-03-22 14:25:18}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{telescoping sum}
+\pmrecord{8}{35929}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmdefines{telescope}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A {\em telescoping sum} is a sum in which cancellation occurs between subsequent terms, allowing the sum to be expressed using only the initial and final terms.
+
+Formally a telescoping sum is or can be rewritten in the form
+
+$$ S= \sum_{n=\alpha}^{\beta}\left(a_n - a_{n+1}\right) = a_\alpha - a_{\beta+1}$$
+
+where $a_n$ is a sequence.
+
+{\bf Example:}\\
+
+Define $S(N) = \sum_{n=1}^{N} \frac{1}{n(n+1)}$.  Note that by partial fractions of expressions:
+\[ \frac{1}{n(n+1)}= \frac{1}{n} - \frac{1}{n+1} \] and thus $a_n = \frac{1}{n}$ in this example.
+
+\[ S(N) = \sum_{n=1}^{N} \left( \frac{1}{n} - \frac{1}{n+1} \right) \]
+\[  = \left( 1 - \frac{1}{2} \right)
+      + \cdots + \left( \frac{1}{n} - \frac{1}{n+1} \right) +
+      \left( \frac{1}{n+1} - \frac{1}{n+2} \right)
+      + \cdots + \left( \frac{1}{N} - \frac{1}{N+1} \right) \]
+\[  = 1 + \left( - \frac{1}{2} + \frac{1}{2} \right)
+      + \cdots + \left( -\frac{1}{n+1} +\frac{1}{n+1} \right)
+      + \cdots - \frac{1}{N+1} \]
+\[  = 1 - \frac{1}{N+1} \]
+%%%%%
+%%%%%
+\end{document}

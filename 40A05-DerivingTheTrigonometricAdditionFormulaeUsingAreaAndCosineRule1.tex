@@ -1,0 +1,188 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivingTheTrigonometricAdditionFormulaeUsingAreaAndCosineRule1}
+\pmcreated{2013-03-11 19:55:01}
+\pmmodified{2013-03-11 19:55:01}
+\pmowner{dkrbabajee}{19083}
+\pmmodifier{}{0}
+\pmtitle{Deriving the trigonometric addition formulae using area and cosine rule}
+\pmrecord{1}{50173}
+\pmprivacy{1}
+\pmauthor{dkrbabajee}{0}
+\pmtype{Definition}
+
+%none for now
+\begin{document}
+\documentclass[10pt]{article}
+\usepackage{url}
+\usepackage{amssymb,amsmath,amstext}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\renewcommand{\baselinestretch}{1.2}
+%This is the command that spaces the manuscript for easy reading
+
+\begin{document}
+%\thispagestyle{empty}
+\begin{center}
+\Large
+% TITLE GOES HERE
+Deriving the trigonometric addition formulae using area and cosine rule
+\end{center}
+
+
+
+
+\begin{abstract}
+The trigonometric addition formulae are very important and useful in Mathematics.
+They can be derived from geometric proof, relations from analytical geometry, Euler formula or relations from
+vectorial analysis. In this work, we prove the sine addition formula by considering area. Using cosine
+rule, we prove the cosine addition formula. Our proof is simpler because
+it requires the knowledge of area of triangles and cosine rule which are easily understood by students.
+From the addition formulae, we obtain the difference formulae by solving simultaneous equations.\\
+\bigskip
+{\bf Keywords}\\
+Trigonometric addition and difference formulae, area of triangles, cosine rule\\
+\bigskip
+\end{abstract}
+
+
+\section{Introduction}
+The sine and cosine addition and difference  formulae are given by
+\begin{equation}\label{eq:trisinsum}
+\sin{(\alpha\pm\beta)} = \sin{\alpha}\cos{\beta}\pm\sin{\beta}\cos{\alpha}
+\end{equation}
+and
+\begin{equation}\label{eq:tricossum}
+\cos{(\alpha\pm\beta)} = \cos{\alpha}\cos{\beta}\mp\sin{\alpha}\sin{\beta},
+\end{equation}
+respectively. The sine and cosine addition and diference formulae can be obtained from geometric proofs ,
+Euler's formula, analytical geometry and vectorial analysis . Feldman  uses the cosine rule
+and Pythagoras theorem to get the cosine difference formula. In this work, we consider the area of triangles to obtain the
+sine addition formula since the area of any triangle depends on the sine of the angle. Then, using the cosine rule twice, we obtain
+the cosine addition formula. Finally, we obtain the trigonometric difference formulae from addition formulae by solving
+two simultaneous equations.
+\section{Preliminaries}
+We use the important formulas and identities:\\
+From Fig. (\ref{fig:tri}), we have
+\begin{figure}[t]
+\centering
+\includegraphics[width=5in,height=3in]
+{tri.eps}
+\caption{Triangle XYZ}\label{fig:tri}
+\end{figure}
+$$\text{area of $\triangle$ XYZ}=\frac{1}{2}x y \sin{\theta}$$
+and the cosine rule gives
+$$z^{2}=x^{2}+y^{2}-2x y\cos{\theta}.$$
+The simple trigonometric identities are given by
+\begin{eqnarray}\label{eq:triden1}
+% \nonumber to remove numbering (before each equation)
+  &&\sin{(180^{\circ}-\theta)}=\sin{\theta},\\ \label{eq:triden2}
+  &&\cos{(180^{\circ}-\theta)}=-\cos{\theta}, \\ \label{eq:triden3}
+  &&\sin^{2}{\theta}+\cos^{2}{\theta}=1.
+\end{eqnarray}
+\section{Derivation of Addition Trigonometric Formulae}
+\begin{figure}[t]
+\centering
+\includegraphics[width=5in,height=3in]
+{tri1.eps}
+\caption{Quadrilateral ABCD}\label{fig:tri1}
+\end{figure}
+Fig. (\ref{fig:tri1}) shows a quadrilateral ABCD which consists of two right-angled triangles
+$ABC$ and $ACD$.
+In $\triangle\ ABC$, $C\widehat{A}B=\alpha$, $AC=s$. By simple trigonometry, we have
+\begin{equation}\label{eq:triabc}
+\begin{array}{cc}
+  AB=s\ \cos{\alpha}, & BC=s\ \sin{\alpha}.
+\end{array}
+\end{equation}
+In $\triangle\ ACD$, $C\widehat{A}D=\beta$, $AD=h$. We have the following trigonometric equations:
+\begin{equation}\label{eq:triacd}
+\begin{array}{cc}
+  \cos{\beta}=\displaystyle{\frac{s}{h}}, & CD=h\ \sin{\beta}.
+\end{array}
+\end{equation}
+We also note that $B\widehat{C}D=180^{\circ}-\alpha.$\\
+We can express the area of quadrilateral ABCD as:
+\begin{eqnarray}\label{eq:quadarea}\nonumber
+% \nonumber to remove numbering (before each equation)
+&&\text{Area of}\ \triangle\ ABC+ \text{Area of}\ \triangle\ ACD =\text{Area of}\ \triangle\ ABD+\text{Area of}\ \triangle\ BCD  \\ \nonumber
+  &&\frac{1}{2}\ (AB)\ (BC)+ \frac{1}{2}\ (AC)\ (CD) =\frac{1}{2}\ (AB)\ h\ \sin{(\alpha+\beta)}\\&&\hspace{7.4cm}+
+  \frac{1}{2}\ (CD)\ (BC)\ \sin{(180^{\circ}-\alpha)}.
+\end{eqnarray}
+Substituting eqs. (\ref{eq:triden1}), (\ref{eq:triabc}) and (\ref{eq:triacd}) into eq. (\ref{eq:quadarea}), we have, after simplifications,
+\begin{equation}\label{eq:sim1}
+\frac{1}{2}s^{2}\sin{\alpha}\cos{\alpha}+ \frac{1}{2}\ hs\sin{\beta}  =\frac{1}{2}hs\cos{\alpha} \sin{(\alpha+\beta)}+
+\frac{1}{2}hs \sin{\beta}\sin^{2}{\alpha}.
+\end{equation}
+Dividing eq. (\ref{eq:sim1}) by $\displaystyle{\frac{1}{2}hs},$ we obtain
+$$\frac{s}{h}\sin{\alpha}\cos{\alpha}+\sin{\beta}=\cos{\alpha}\sin{(\alpha+\beta)}+\sin{\beta}\sin^{2}{\alpha}.$$
+Simplifying and using eq. (\ref{eq:triden3}), we have
+\begin{eqnarray}\label{eq:sim2}\nonumber
+% \nonumber to remove numbering (before each equation)
+  \cos{\alpha}\sin{(\alpha+\beta)} &=& \frac{s}{h}\sin{\alpha}\cos{\alpha}+\sin{\beta}(1-\sin^{2}{\alpha}),  \\
+   &=& \frac{s}{h}\sin{\alpha}\cos{\alpha}+\sin{\beta}\cos^{2}{\alpha}.
+\end{eqnarray}
+Dividing eq. (\ref{eq:sim2}) by $\cos{\alpha}$ and using eq. (\ref{eq:triacd}),
+we finally obtain the sine addition formula given by eq. (\ref{eq:trisinsum}) with the $+$ sign.\\
+We next consider $\triangle\  BCD$. By using cosine rule and eqs. (\ref{eq:triden2}), (\ref{eq:triabc}) and (\ref{eq:triacd}),
+we have
+\begin{eqnarray}\label{eq:bc}\nonumber
+% \nonumber to remove numbering (before each equation)
+  BD^{2} &=& CD^{2}+BC^{2}-2(CD)(BC)\cos{(180^{\circ}-\alpha)} , \\
+   &=& h^{2}\sin^{2}{\beta}+s^{2}\sin^{2}{\alpha}+2hs\sin{\beta}\sin{\alpha}\cos{\alpha}.
+\end{eqnarray}
+Using cosine rule in $\triangle\ ABD$ and  eq. (\ref{eq:bc}),
+we obtain
+\begin{eqnarray}\label{eq:cos}\nonumber
+% \nonumber to remove numbering (before each equation)
+  \cos{(\alpha+\beta)} &=& \frac{h^{2}+AB^{2}-BD^{2}}{2h(AB)}  \\
+   &=& \frac{h^{2}(1-\sin^{2}{\beta})+s^{2}(\cos^{2}{\alpha}-\sin^{2}{\alpha})-2hs\sin{\beta}\sin{\alpha}\cos{\alpha}}{2hs\cos{\alpha}}.
+\end{eqnarray}
+Using eq. (\ref{eq:triden3}) and $s^{2}=h^{2}\cos^{2}{\beta}$, eq. (\ref{eq:cos}) reduces to
+\begin{eqnarray}\label{eq:cossim}\nonumber
+% \nonumber to remove numbering (before each equation)
+  \cos{(\alpha+\beta)} &=& \frac{h^{2}\cos^{2}{\beta}+s^{2}(\cos^{2}{\alpha}-\sin^{2}{\alpha})-2hs\sin{\beta}\sin{\alpha}\cos{\alpha}}{2hs\cos{\alpha}}\\ \nonumber
+  &=& \frac{s^{2}(1+\cos^{2}{\alpha}-\sin^{2}{\alpha})-2hs\sin{\beta}\sin{\alpha}\cos{\alpha}}{2hs\cos{\alpha}}\\ \nonumber
+  &=& \frac{2s^{2}\cos^{2}{\alpha}-2hs\sin{\beta}\sin{\alpha}\cos{\alpha}}{2hs\cos{\alpha}}\\
+  &=& \frac{s}{h}\cos{\alpha}-\sin{\alpha}\sin{\beta}.
+\end{eqnarray}
+Substituting eq. (\ref{eq:triacd}) into eq. (\ref{eq:cossim}),
+we finally obtain cosine addition formula given by eq. (\ref{eq:tricossum}) with the $+$ sign.
+We point out the proof of the cosine addition formula is a generalization to that of Feldman 
+who used $s=h=1.$
+\section{Derivation of Trigonometric Difference Formulae}
+The difference formulas can be obtained by replacing $\beta$ by $-\beta$ in eqs. (\ref{eq:trisinsum})
+and (\ref{eq:tricossum}).\\
+But we adopt a different approach. We set $\gamma=\alpha+\beta$ so that $\beta=\gamma-\alpha.$\\
+Then  eqs. (\ref{eq:trisinsum}) and (\ref{eq:tricossum}) reduce to
+\begin{equation}\label{eq:trisinsum1}
+\sin{(\gamma)} = \sin{\alpha}\cos{(\gamma-\alpha)}+\cos{\alpha}\sin{(\gamma-\alpha)}
+\end{equation}
+and
+\begin{equation}\label{eq:tricossum1}
+\cos{\gamma} = \cos{\alpha}\cos{(\gamma-\alpha)}-\sin{\alpha}\sin{(\gamma-\alpha)},
+\end{equation}
+respectively. We obtain the trigonometric difference formulae by solving eqs. (\ref{eq:trisinsum1})
+and (\ref{eq:tricossum1}) simultaneously.\\ $(\ref{eq:trisinsum1})\times \cos{\alpha}-(\ref{eq:tricossum1})\times \sin{\alpha}$
+yields
+$$
+\sin{\gamma}\cos{\alpha}-\cos{\gamma}\sin{\alpha}   = (\sin^{2}{\alpha}+\cos^{2}{\alpha})\  \sin{(\gamma-\alpha)}
+$$
+so that
+\begin{equation}\label{eq:tridiffsin}
+\sin{(\gamma-\alpha)}=\sin{\gamma}\cos{\alpha}-\cos{\gamma}\sin{\alpha}
+\end{equation}
+using eq. (\ref{eq:triden3}).\\
+Similarly, $(\ref{eq:trisinsum1})\times \sin{\alpha}+(\ref{eq:tricossum1})\times \cos{\alpha}$
+results in
+\begin{equation}\label{eq:tridiffsin}
+\cos{(\gamma-\alpha)}=\cos{\gamma}\cos{\alpha}+\sin{\gamma}\sin{\alpha}.
+\end{equation}
+
+\bibliographystyle{plain}
+\bibliography{References}
+
+\end{document}
+
+%%%%%
+\end{document}

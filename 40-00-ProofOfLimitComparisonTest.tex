@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfLimitComparisonTest}
+\pmcreated{2013-03-22 15:35:54}
+\pmmodified{2013-03-22 15:35:54}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{proof of limit comparison test}
+\pmrecord{4}{37513}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40-00}
+%\pmkeywords{series}
+%\pmkeywords{comparisson test}
+%\pmkeywords{limit}
+%\pmkeywords{finite}
+%\pmkeywords{convergence}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The main theorem we will use is the comparison test, which basically states that if $a_n>0$, $b_n>0$ and there is an $N$ such that for all $n>N$, $a_n < b_n$ , then if $\sum_{i=1}^\infty b_n$ converges so will $\sum_{i=1}^\infty a_n$.
+
+Suppose $\lim_{n\to \infty} \frac{a_n}{b_n} = L$ where $L$ can be a non negative real number or $+\infty$.
+
+By definition, for $L$ finite, this means that for every $\epsilon>0$ there is a natural number $n_\epsilon$ such that for all $n > n_\epsilon$, $\left\| \frac{a_n}{b_n} -L \right \| < \epsilon$
+
+To make matters more concrete choose $\epsilon = \frac{L}{2}$ and assume $L\ne0$ and finite.
+
+$0< a_n < \frac{3L}{2} b_n $, for all $n > n_{\frac{L}{2}}$.
+
+If $\sum_{i=1}^\infty b_n$ converges, so will $\sum_{i=1}^\infty \frac{3L}{2} b_n$ and thus by the comparison test, $\sum_{i=1}^\infty a_n$ will also be convergent.
+
+For the reverse result, consider $\lim_{n \to \infty} \frac{b_n}{a_n} = \frac{1}{L}$, since if $L$ is finite so will $\frac{1}{L}$, applying the previous result we can say that if $\sum_{i=1}^\infty a_n$ converges so will $\sum_{i=1}^\infty b_n$
+
+Consider the case $L=0$, clearly $L=0^+$ since both $a_n$ and $b_n$ are positive, this means that for all $\epsilon > 0$ there exists $n_\epsilon$ such that for all $n>n_\epsilon$, $0<a_n<\epsilon b_n$.
+
+Considering $\epsilon=1$ we get the exact formulation of the comparison test, so if $\sum_{i=1}^\infty b_n$ converges so will $\sum_{i=1}^\infty a_n$.
+
+For the case $L=+\infty$ just apply the result to $\lim_{n \to \infty} \frac{b_n}{a_n} = 0$ to conclude that if $\sum_{i=1}^\infty a_n$ converges so will $\sum_{i=1}^\infty b_n$
+%%%%%
+%%%%%
+\end{document}

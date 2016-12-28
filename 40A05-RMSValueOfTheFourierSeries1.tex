@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RMSValueOfTheFourierSeries1}
+\pmcreated{2013-03-11 19:30:56}
+\pmmodified{2013-03-11 19:30:56}
+\pmowner{swapnizzle}{13346}
+\pmmodifier{}{0}
+\pmtitle{RMS Value of the Fourier Series}
+\pmrecord{1}{50100}
+\pmprivacy{1}
+\pmauthor{swapnizzle}{0}
+\pmtype{Definition}
+
+%none for now
+\begin{document}
+\documentclass[11pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage{txfonts}
+\usepackage[mathcal]{eucal}
+\usepackage{xy}
+\textheight 9in
+\textwidth 7in
+\oddsidemargin 0in
+\evensidemargin 0in
+\topmargin 0in
+\headheight 0in
+\headsep 0in
+\title{RMS Value of the Fourier Series}
+\author{Swapnil Sunil Jain}
+\date{December 28, 2006}
+\begin{document}
+\maketitle
+
+If a function $f(t)$ is given by its Fourier series i.e. 
+\begin{eqnarray*}
+f(t) &=& \frac{a_0}{2} + \sum_{k=1}^{\infty} [a_k\cos(k\omega t) + b_k\sin(k\omega t)]
+\end{eqnarray*}
+The RMS value $F_{\mathrm{rms}}$ of $f(t)$ is  
+\begin{eqnarray*}
+F_{\mathrm{rms}} &=& \frac{{a_0}^2}{4} + \frac{1}{2} \sum_{k=1}^{\infty} {a_k}^2 + {b_k}^2
+\end{eqnarray*}
+
+$\textbf{Proof:}$
+
+The RMS value of a function $f(t)$ is, by definition, given by 
+\begin{eqnarray*} 
+F_{\mathrm{rms}} &=& \frac{1}{T} \int_{t_0}^{t_0+T} [f(t)]^2 dt
+\end{eqnarray*}
+Then, 
+\begin{align*}
+F_{\mathrm{rms}} &= \frac{1}{T} \int_{t_0}^{t_0+T} [f(t)]^2 dt \\
+&= \frac{1}{T}\int_{t_0}^{t_0+T} f(t)\cdot f(t) dt \\
+&= \frac{1}{T}\int_{t_0}^{t_0+T} f(t)\cdot \Big( \frac{a_0}{2} + \sum_{k=1}^{\infty}\Big[a_k\cos(k\omega t) + b_k\sin(k\omega t)\Big] \Big) dt \\
+&= \frac{1}{T}\int_{t_0}^{t_0+T}\Big( \frac{a_0 f(t)}{2} + \sum_{k=1}^{\infty}\Big[a_k f(t)\cos(k\omega t) + b_k f(t)\sin(k\omega t)\Big] \Big) dt \\
+&= \frac{1}{T}\Big( \int_{t_0}^{t_0+T} \frac{a_0 f(t)}{2}dt + \sum_{k=1}^{\infty} \Big[\int_{t_0}^{t_0+T} a_k f(t)\cos(k\omega t) dt + \int_{t_0}^{t_0+T} b_k f(t)\sin(k\omega t) dt \Big] \Big) \\
+&= \frac{1}{T}\Big( \frac{a_0}{2}\int_{t_0}^{t_0+T} f(t) dt + \sum_{k=1}^{\infty} \Big[a_k\int_{t_0}^{t_0+T} f(t)\cos(k\omega t) dt + b_k\int_{t_0}^{t_0+T}f(t)\sin(k\omega t) dt \Big] \Big) \\
+&= \frac{1}{T}\Big( \frac{a_0}{2}(a_0 \frac{T}{2}) + \sum_{k=1}^{\infty} \Big[a_k( a_k\frac{T}{2}) + b_k(b_k\frac{T}{2}) \Big] \Big) \\
+&= \frac{{a_0}^2}{4} + \sum_{k=1}^{\infty}\frac{{a_k}^2}{2} + \frac{{b_k}^2}{2} \\
+&= \frac{{a_0}^2}{4} + \frac{1}{2}\sum_{k=1}^{\infty}{a_k}^2 + {b_k}^2
+\end{align*}
+
+\end{document}
+%%%%%
+\end{document}

@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WallisFormulae}
+\pmcreated{2013-03-22 12:56:15}
+\pmmodified{2013-03-22 12:56:15}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Wallis formulae}
+\pmrecord{8}{33294}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A20}
+\pmclassification{msc}{40A10}
+\pmrelated{Pi}
+\pmrelated{ReductionFormulasForIntegrationOfPowers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Wallis' formula expresses $\pi$ as an infinite product:
+$$\frac{\pi}{2} = \prod_{n = 1}^{\infty} \frac{4n^{2}}{4n^{2} - 1} = \frac{2}{1}\frac{2}{3}\frac{4}{3}\frac{4}{5} \cdots$$
+
+It may be derived by taking the limit as $n \to \infty$ of the ratio of the following
+two integrals.
+$$\int_{0}^{\frac{\pi}{2}} \sin^{2n}x dx = \frac{1 \cdot 3 \cdots (2n - 1)}{2 \cdot 4 \cdots 2n} \frac{\pi}{2}$$
+
+$$\int_{0}^{\frac{\pi}{2}} \sin^{2n + 1}x dx = \frac{2 \cdot 4 \cdots 2n}{3 \cdot 5 \cdots (2n + 1)}$$
+
+
+%%%%%
+%%%%%
+\end{document}

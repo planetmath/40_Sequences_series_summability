@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DoubleSeries}
+\pmcreated{2013-03-22 16:32:54}
+\pmmodified{2013-03-22 16:32:54}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{double series}
+\pmrecord{6}{38731}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmclassification{msc}{26A06}
+\pmsynonym{double series theorem}{DoubleSeries}
+%\pmkeywords{absolutely convergent}
+\pmrelated{FourierSineAndCosineSeries}
+\pmrelated{AbsoluteConvergenceOfDoubleSeries}
+\pmrelated{PerfectPower}
+\pmdefines{diagonal summing}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, If the {\em double series}
+\begin{align}
+\sum_{m=1}^\infty\sum_{n=1}^\infty a_{mn} =
+  \sum_{n=1}^\infty a_{1n}+\sum_{n=1}^\infty a_{2n}+\sum_{n=1}^\infty a_{3n}
++\ldots
+\end{align}
+converges and if it remains convergent when the \PMlinkescapetext{terms} of the partial series are replaced with their absolute values, i.e. if the series
+\begin{align}
+\sum_{n=1}^\infty|a_{1n}|+\sum_{n=1}^\infty|a_{2n}|+\sum_{n=1}^\infty|a_{3n}|
++\ldots
+\end{align}
+has a finite sum $M$, then the addition in (1) can be performed in reverse \PMlinkescapetext{order}, i.e.
+$$\sum_{m=1}^\infty\sum_{n=1}^\infty a_{mn} = \sum_{n=1}^\infty\sum_{m=1}^\infty a_{mn} =
+  \sum_{m=1}^\infty a_{m1}+\sum_{m=1}^\infty a_{m2}+\sum_{m=1}^\infty a_{m3}
++\ldots$$
+
+{\em Proof.}\, The assumption on (2) implies that the sum of an arbitrary finite amount of the numbers $|a_{mn}|$ is always\ $\leqq M$.\, This means that (1) is absolutely convergent, and thus the order of summing is insignificant.
+
+\textbf{Note.}\, The series satisfying the assumptions of the theorem is often denoted by
+$$\sum_{m,n=1}^\infty a_{mn}$$
+and this may by interpreted to \PMlinkescapetext{mean} an arbitrary summing \PMlinkescapetext{order}.\, One can use e.g. the {\em diagonal summing}:
+$$a_{11}+a_{12}+a_{21}+a_{13}+a_{22}+a_{31}+\ldots$$
+%%%%%
+%%%%%
+\end{document}

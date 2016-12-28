@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MultiplicationOfSeries}
+\pmcreated{2014-10-31 20:23:29}
+\pmmodified{2014-10-31 20:23:29}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{multiplication of series}
+\pmrecord{21}{37431}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmsynonym{Cauchy multiplication rule}{MultiplicationOfSeries}
+\pmrelated{ManipulatingConvergentSeries}
+\pmrelated{AlternatingHarmonicSeries}
+\pmrelated{ErnstLindelof}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\textbf{Theorem} (Franz Mertens).
+If the series $\sum_{k=1}^\infty a_k$ and $\sum_{k=1}^\infty b_k$ with real or complex \PMlinkescapetext{terms} converge and have the \PMlinkname{sums}{SumOfSeries} $A$ and $B$, respectively, and at least one of them converges absolutely, then also the series
+\begin{align}
+a_1b_1\!+\!(a_1b_2\!+\!a_2b_1)\!+\!(a_1b_3\!+\!a_2b_2\!+\!a_3b_1)\!+\cdots
+\end{align}
+is convergent and its \PMlinkescapetext{sum} is equal to $AB$.
+
+{\em Proof.}\, Denote the partial sums of the series\, $A_n := a_1+a_2+\cdots+a_n$,\, $B_n := b_1+b_2+\cdots+b_n$\, and\, 
+$s_n := a_1b_1+(a_1b_2+a_2b_1)+(a_1b_3+a_2b_2+a_3b_1)+\cdots
++(a_1b_n+a_2b_{n-1}+\cdots+a_nb_1)$\, for each $n$.\, Then we have\, $\lim_{n\to\infty}A_n = A$\, and\, $\lim_{n\to\infty}B_n = B$.\, Suppose that e.g. the series $\sum a_n$ converges absolutely and that at least one $a_n$ is distinct from zero; so the \PMlinkescapetext{sum}\, $\sum_{n=1}^\infty|a_n|$ is a real positive number $M$.\, Let $\varepsilon$ be an arbitrary positive number.
+
+Now we can write the identities
+
+$AB = (A-A_n)B+a_1B+a_2B+\cdots+a_nB$,
+
+$s_n = a_1(b_1+b_2+\cdots+b_n)+a_2(b_1+b_2+\cdots+b_{n-1})+\cdots+a_nb_1 =
+  a_1B_n+a_2B_{n-1}+\cdots+a_nB_1$,
+
+$AB\!-\!s_n = (A-A_n)B+a_1(B-B_n)+a_2(B-B_{n-1})+\cdots+a_n(B-B_1)$\\
+$= (A-A_n)B+[a_1(B-B_n)+a_2(B-B_{n-1})+\cdots+a_k(B-B_{n-k+1})]\\
++a_{k+1}(B-B_{n-k})+\cdots+a_n(B-B_1)$.
+
+There is a positive number $n_1(\varepsilon)$ such that\,  
+$|A\!-\!A_n| < \frac{\varepsilon}{3(|B|+1)}$\, when\, $n > n_1(\varepsilon)$.\, Then
+\begin{align}
+|(A\!-\!A_n)B| = |A\!-\!A_n|\cdot|B| < \frac{\varepsilon}{3(|B|\!+\!1)}(|B|\!+\!1) = \frac{\varepsilon}{3}.
+\end{align}
+The convergence of $\sum b_n$ implies that there is a number $n_2(\varepsilon)$ such that\, $|B\!-\!B_n| < \frac{\varepsilon}{3M}$\, when\, 
+$n > n_2(\varepsilon)$.\, Thus we have
+\begin{align}
+|[\ldots]| \leq 
+|a_1|\!\cdot\!|B\!-\!B_n|\!+\cdots+\!|a_k|\!\cdot\!|B\!-\!B_{n-k+1}| < 
+(|a_1|\!+\cdots+\!|a_k|)\frac{\varepsilon}{3M} \leq M\!\cdot\!\frac{\varepsilon}{3M} = \frac{\varepsilon}{3}
+\end{align}
+if\, $n\!-\!k\!+\!1 > n_2(\varepsilon)$.\, Because\, $\lim_{n\to\infty}B_n = B$,\, the numbers $|B_n|$ are bounded, i.e. there is a positive number $K$ such that for each $j$ we have\, $|B_j| < K$\, and consequently\, $|B| \leq K$.\, It follows that\, $|B\!-\!B_j| \leq |B|\!+\!|B_j| < K\!+\!K = 2K$\, for every $j$.\, We apply Cauchy criterion for convergence to the series $\sum_{n=1}^\infty|a_n|$ getting a number $n_3(\varepsilon)$ such that for each $m$, one has the inequality\, $|a_{k+1}|+\cdots+|a_m| < \frac{\varepsilon}{6K}$\, if\, 
+$k > n_3(\varepsilon)$.\, Accordingly we obtain the estimation
+\begin{align}
+|a_{k+1}(B\!-\!B_{n-k})\!+\cdots+\!a_n(B\!-\!B_1)| \leq |a_{k+1}||B\!-\!B_{n-k}|\!+\cdots+\!|a_n||B\!-\!B_1| < 2K\!\cdot\!\frac{\varepsilon}{6K} = \frac{\varepsilon}{3}
+\end{align}
+which is valid when\, $k > n_3(\varepsilon)$.
+
+If we choose\, $n > \max\{n_1(\varepsilon\},\, n_2(\varepsilon)\!+\!n_3(\varepsilon)\}$\, and $k$ such that\, $n \geq k > n_3(\varepsilon)\!+\!1$,\, then the inequalities (2), (3) and (4) are satisfied, ensuring that
+$$|AB\!-\!s_n| < 
+\frac{\varepsilon}{3}\!+\!\frac{\varepsilon}{3}\!+\!\frac{\varepsilon}{3} = \varepsilon.$$
+This means that the assertion of the theorem has been proved.\\
+
+
+\textbf{Remark.}\, The mere convergence of both series does not 
+suffice for convergence of (1).\, This is seen in the following 
+example by Cauchy where both series are 
+  $$1\!-\!\frac{1}{\sqrt{2}}\!+\!\frac{1}{\sqrt{3}}\!-+\cdots$$
+They converge by virtue of Leibniz test, but not absolutely (see the \PMlinkname{$p$-test}{PTest}).\, In their product series
+ $$1\!-\!(\frac{1}{\sqrt{2}}\!+\!\frac{1}{\sqrt{2}})\!+\!(\frac{1}{\sqrt{3}}\!+\!\frac{1}{\sqrt{2}}\frac{1}{\sqrt{2}}\!+\!\frac{1}{\sqrt{3}})\!-+\cdots$$
+the absolute value of the $n^\mathrm{th}$ \PMlinkescapetext{term} is\,  $1\!\cdot\!\frac{1}{\sqrt{n}}\!+\!\frac{1}{\sqrt{2}}\frac{1}{\sqrt{n-1}}\!+\cdots
++\frac{1}{\sqrt{n}}\!\cdot1\!$,\, having $n$ summands which all are greater than $\frac{2}{n+1}$ (this is seen when one looks at the half circle\, $y = \sqrt{x}\sqrt{n\!+\!1\!-\!x}$\, or\, $(x\!-\!\frac{n+1}{2})^2\!+\!y^2 = (\frac{n+1}{2})^2$,\, which shows that\, $y \leq \frac{n+1}{2}$\, and thus\, $\frac{1}{y} \geq \frac{2}{n+1}$).\, Because\, $\lim_{n\to\infty}n\cdot\frac{2}{n+1} = 2 \neq 0$, the product series does not satisfy the \PMlinkname{necessary condition of convergence}{ThenA_kto0IfSum_k1inftyA_kConverges} and therefore the series diverges.
+
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc Ernst Lindel\"of:} {\it Johdatus funktioteoriaan}. \,Mercatorin Kirjapaino Osakeyhti\"o. Helsinki (1936).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

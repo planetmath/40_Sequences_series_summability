@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LimitLawsForUniformConvergence}
+\pmcreated{2013-03-22 15:23:06}
+\pmmodified{2013-03-22 15:23:06}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{limit laws for uniform convergence}
+\pmrecord{4}{37215}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+\usepackage{enumerate}
+\usepackage{amsthm}
+
+
+% define commands here
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\complex}{\mathbb{C}}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+\providecommand{\defnterm}[1]{\emph{#1}}
+
+\newtheorem{thm}{Theorem}
+\begin{document}
+As might be expected, the usual (pointwise) limit laws --- for instance, that the sum of limits is the limit of sums --- have analogues for uniform limits.  The laws for uniform limits are usually not mentioned in elementary textbooks, but they are useful in situations where having uniform convergence is crucial,
+such as when working with infinite sums or products of holomorphic or meromorphic functions.
+
+The uniform laws may be derived simply by reinterpreting the pointwise proofs from any calculus text, with some extra conditions.  Some of these results are listed below.  
+
+In the following, $X$ is a metric space, and $Y$ is another metric space (with the appropriate operations defined), while $f_n\colon X \to Y$ and $g_n\colon X \to Y$ (with $n \in \nat$)
+are functions that converge uniformly on $X$ to $f\colon X \to Y$ and $g\colon X \to Y$, respectively.  (For example, $X$ and $Y$ may be $\complex$, the complex plane.)
+
+\begin{thm}
+If $Y$ is a normed vector space, 
+then
+$f_n + g_n$ uniformly converge to $f + g$.
+\end{thm}
+
+\begin{thm}
+If $Y$ is a Banach algebra, and both $f(X)$ and $g(X)$ are bounded,
+then $f_n \cdot g_n$ uniformly converge to $f \cdot g$.
+\end{thm}
+
+\begin{thm}
+Let $Z$ be another metric space. 
+Suppose that $X$ is compact, $Y$ is locally compact,
+and $f\colon X \to Y$, and $h\colon Y \to Z$
+are continuous functions.  Then $h \circ f_n$ converge to $h \circ f$
+uniformly.
+\end{thm}
+%%%%%
+%%%%%
+\end{document}

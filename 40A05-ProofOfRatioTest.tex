@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfRatioTest}
+\pmcreated{2013-03-22 12:24:46}
+\pmmodified{2013-03-22 12:24:46}
+\pmowner{vitriol}{148}
+\pmmodifier{vitriol}{148}
+\pmtitle{proof of ratio test}
+\pmrecord{6}{32296}
+\pmprivacy{1}
+\pmauthor{vitriol}{148}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmclassification{msc}{26A06}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Assume $k < 1$. By definition $\exists N$ such that \newline $n > N \implies |\frac{a_{n+1}}{a_n} - k| < \frac{1-k}{2} \implies |\frac{a_{n+1}}{a_n}| < \frac{1+k}{2} < 1$
+
+
+i.e. eventually the series $|a_n|$ becomes less than a convergent geometric series, therefore a shifted subsequence of $|a_n|$ converges by the comparison test. Note that a general sequence $b_n$ converges iff a shifted subsequence of $b_n$ converges. Therefore, by the absolute convergence theorem, the series $a_n$ converges.
+
+Similarly for $k > 1$ a shifted subsequence of $|a_n|$ becomes greater than a geometric series tending to $\infty$, and so also tends to $\infty$. Therefore $a_n$ diverges.
+%%%%%
+%%%%%
+\end{document}

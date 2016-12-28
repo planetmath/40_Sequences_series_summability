@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HarmonicSeries}
+\pmcreated{2013-03-22 13:02:46}
+\pmmodified{2013-03-22 13:02:46}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{harmonic series}
+\pmrecord{8}{33449}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmrelated{HarmonicNumber}
+\pmrelated{PrimeHarmonicSeries}
+\pmrelated{SumOfPowers}
+\pmdefines{p-series}
+\pmdefines{harmonic series of order}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+\textbf{The} \emph{harmonic series} is 
+
+ $$ h = \sum_{n=1}^\infty \frac{1}{n} $$
+
+The harmonic series is known to diverge.  This can be proven via the integral test; compare $h$ with 
+
+ $$ \int_{1}^\infty \frac{1}{x} \; dx. $$ 
+
+The harmonic series is a special case of the \emph{$p$-series}, $h_p$, which has the form
+
+$$ h_p = \sum_{n=1}^\infty \frac{1}{n^p} $$
+
+where $p$ is some positive real number.  The series is known to converge (leading to the p-series test for series convergence) iff $p > 1$.  In using the comparison test, one can often compare a given series with positive terms to some $h_p$.
+
+\textbf{Remark 1.}  One could call $h_p$ with\, $p > 1$\, an {\em overharmonic series} and $h_p$ with\, $p < 1$\, an {\em underharmonic series}; the corresponding names are known at least in Finland.
+
+\textbf{Remark 2.}  A $p$-series is sometimes called \emph{a} harmonic series, so that \emph{the} harmonic series is a harmonic series with $p=1$.\\
+
+For complex-valued $p$, $h_p = \zeta(p)$, the Riemann zeta function.
+
+A famous $p$-series is $h_2$ (or $\zeta(2)$), which converges to $\frac{\pi^2}{6}$.  In general no $p$-series of odd $p$ has been solved analytically.
+
+A $p$-series which is not summed to $\infty$, but instead is of the form
+
+$$ h_p(k) = \sum_{n=1}^k \frac{1}{n^p} $$
+
+is called a $p$-series (or a harmonic series) of order $k$ of $p$.
+%%%%%
+%%%%%
+\end{document}

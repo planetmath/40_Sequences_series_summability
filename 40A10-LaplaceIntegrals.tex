@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LaplaceIntegrals}
+\pmcreated{2013-03-22 18:43:17}
+\pmmodified{2013-03-22 18:43:17}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Laplace integrals}
+\pmrecord{5}{41489}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The improper integrals
+$$\displaystyle\int_{-\infty}^\infty\frac{a\cos{x}}{x^2\!+\!a^2}\,dx \quad 
+\mbox{and} \quad \int_{-\infty}^\infty\frac{x\sin{x}}{x^2\!+\!a^2}\,dx,$$
+where $a$ is a positive \PMlinkescapetext{constant}, are called {\em Laplace integrals}.\, Both of them have the same value $\pi e^{-a}$.\\
+
+The evaluation of the Laplace integrals can be performed by first determining the integrals
+$$\int_{-\infty}^\infty\frac{e^{ix}}{x-ia}\,dx \quad 
+\mbox{and} \quad \int_{-\infty}^\infty\frac{e^{ix}}{x+ia}\,dx$$
+where one integrates along the real axis.\, Therefore one has to determine the integrals
+$$\oint\frac{e^{iz}}{z-ia}\,dz \quad \mbox{and} \quad \oint\frac{e^{iz}}{z+ia}\,dz$$
+around the perimeter of the half-disk with the arc in the upper half-plane, centered in the origin and with the diameter \,$(-R,\,+R)$.\, The residue theorem yields the values
+$$\oint\frac{e^{iz}}{z-ia}\,dz \;=\; 2i\pi e^{-a}
+\quad \mbox{and} \quad \oint\frac{e^{iz}}{z+ia}\,dz \;=\, 0.$$
+As in the entry example of using residue theorem, the parts of these contour integrals along the half-circle tend to zero when\, $R \to \infty$.\, Consequently, 
+$$\int_{-\infty}^\infty\frac{e^{ix}}{x-ia}\,dx \;=\; 2i\pi e^{-a}\quad 
+\mbox{and} \quad \int_{-\infty}^\infty\frac{e^{ix}}{x+ia}\,dx \;=\; 0.$$
+These equations imply by adding and subtracting and then taking the \PMlinkname{real}{RealPart} and the imaginary parts, the \PMlinkescapetext{formulas}
+$$\displaystyle\int_{-\infty}^\infty\frac{a\cos{x}}{x^2\!+\!a^2}\,dx 
+\;=\; \int_{-\infty}^\infty\frac{x\sin{x}}{x^2\!+\!a^2}\,dx \;=\; \pi e^{-a}.$$
+
+\begin{thebibliography}{9}
+\bibitem{NP}{\sc R. Nevanlinna \& V. Paatero}: {\em Funktioteoria}.\, Kustannusosakeyhti\"o Otava. Helsinki (1963).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

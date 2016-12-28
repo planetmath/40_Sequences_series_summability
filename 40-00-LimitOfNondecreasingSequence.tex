@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LimitOfNondecreasingSequence}
+\pmcreated{2013-03-22 17:40:31}
+\pmmodified{2013-03-22 17:40:31}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{limit of nondecreasing sequence}
+\pmrecord{13}{40114}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40-00}
+\pmsynonym{nondecreasing sequence with upper bound}{LimitOfNondecreasingSequence}
+\pmsynonym{limit of increasing sequence}{LimitOfNondecreasingSequence}
+%\pmkeywords{nondecreasing}
+%\pmkeywords{bounded from above}
+%\pmkeywords{nonincreasing}
+%\pmkeywords{bounded from below}
+\pmrelated{MonotonicallyIncreasing}
+\pmrelated{MonotoneIncreasing}
+\pmrelated{Supremum}
+\pmrelated{Infimum}
+\pmrelated{ConvergenceOfTheSequence11nn}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{nonincreasing}
+
+\textbf{Theorem.}\, A monotonically nondecreasing sequence of real numbers with upper bound a number $M$ converges to a limit which does not exceed $M$.
+
+{\em Proof.}\, Let\, $a_1 \leqq a_2 \leqq \ldots \leqq a_n \leqq \ldots \leqq M$.\, Therefore the set \,$\{a_1,\,a_2,\,\ldots\}$ has a finite supremum $s \leqq M$.\, We show that
+\begin{align}                       
+\lim_{n\to\infty}a_n \;=\; s.
+\end{align}
+Let $\varepsilon$ an arbitrary positive number.\, According to the definition of supremum we have\, $a_n \leqq s$\, for all $n$ and on the other hand, there exists a member $a_{n(\varepsilon)}$ of the sequence that is $> s-\varepsilon$.\, Then we have\, $s-\varepsilon < a_{n(\varepsilon)} \leqq s$,\, and since the sequence is nondecreasing,
+      $$0 \;\leqq\; s-a_n \;\leqq\; s\!-\!a_{n(\varepsilon)} \;<\; \varepsilon \quad \mbox{for all}\;\, n \geqq n(\varepsilon).$$
+Thus the equation (1) and the whole theorem has been proven.\\
+
+
+For the nonincreasing sequences there is the corresponding
+
+\textbf{Theorem.}\, A monotonically nonincreasing sequence of real numbers with lower bound a number $L$ converges to a limit which is not less than $L$.\\
+
+\textbf{Note.}\, A good application of the latter theorem is in the proof that Euler's constant exists.
+
+%%%%%
+%%%%%
+\end{document}

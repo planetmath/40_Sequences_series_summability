@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConvergingAlternatingSeriesNotSatisfyingAllLeibnizConditions}
+\pmcreated{2013-03-22 19:00:45}
+\pmmodified{2013-03-22 19:00:45}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{converging alternating series not satisfying all Leibniz' conditions}
+\pmrecord{7}{41882}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40-00}
+\pmclassification{msc}{40A05}
+\pmrelated{SumOfSeriesDependsOnOrder}
+\pmrelated{LeibnizEstimateForAlternatingSeries}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The alternating series
+\begin{align}
+\sum_{n=1}^\infty\frac{(-1)^{n-1}}{n\!+\!(-1)^{n-1}} \;=\;
+\frac{1}{2}-\frac{1}{1}+\frac{1}{4}-\frac{1}{3}+\frac{1}{6}-\frac{1}{5}+-\ldots
+\end{align}
+satisfies the other requirements of Leibniz test except the monotonicity of the absolute values of the terms.\, The convergence may however be shown by manipulating the terms as follows.
+
+We first multiply the numerator and the denominator of the general term by the difference $n\!-\!(-1)^{n-1}$, getting from (1)
+\begin{align}
+\sum_{n=1}^\infty\frac{(-1)^{n-1}}{n\!+\!(-1)^{n-1}} 
+\;=\; \frac{1}{2}+\sum_{n=2}^\infty\frac{n\!-\!(-1)^{n-1}}{n^2\!-\!1}(-1)^{n-1} 
+\;=\; \frac{1}{2}+\sum_{n=2}^\infty\left(\frac{(-1)^{n-1}n}{n^2\!-\!1}-\frac{1}{n^2\!-\!1}\right).
+\end{align}
+One can \PMlinkescapetext{state} that the series
+\begin{align}
+\sum_{n=2}^\infty\frac{(-1)^{n-1}n}{n^2\!-\!1}
+\end{align}
+satisfies all requirements of Leibniz test and thus is convergent.\, Since 
+$$
+0 \;<\; \frac{1}{n^2\!-\!1} \;<\; \frac{1}{n^2\!-\!\frac{1}{2}n^2} \;=\; 2\cdot\frac{1}{n^2}\quad\mbox{for}\quad n \geqq 2,
+$$
+and the over-harmonic series $\sum_{n=2}^\infty\frac{1}{n^2}$ converges, the comparison test guarantees the convergence of the series
+\begin{align}
+\sum_{n=2}^\infty\frac{1}{n^2\!-\!1}.
+\end{align}
+Therefore the difference series of (3) and (4) and consequently, by (2), the given series (1) is convergent.
+
+
+%%%%%
+%%%%%
+\end{document}

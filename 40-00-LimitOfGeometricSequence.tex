@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LimitOfGeometricSequence}
+\pmcreated{2013-03-22 18:32:43}
+\pmmodified{2013-03-22 18:32:43}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{limit of geometric sequence}
+\pmrecord{6}{41264}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+As mentionned in the geometric sequence entry, 
+\begin{align}
+\lim_{n\to\infty}ar^n = 0
+\end{align}
+for\, $|r| < 1$.\, We will prove this for real or complex values of $r$.\\
+
+We first remark, that for the values\, $s > 1$\, we have\; 
+$\displaystyle\lim_{n\to\infty}s^n = \infty$ (cf. limit of real number sequence).\, In fact, if $M$ is an arbitrary positive number, the binomial theorem (or Bernoulli's inequality) implies that
+$$s^n = (1+s-1)^n > 1^n+\binom{n}{1}(s-1) = 1+n(s-1) > n(s-1) > M$$
+as soon as\, $\displaystyle n > \frac{M}{s-1}$.\\
+
+Let now\, $|r| < 1$\, and $\varepsilon$ be an arbitrarily small positive number.\, Then\, $\displaystyle|r| = \frac{1}{s}$\, with\,$s > 1$.\, By the above remark,
+$$|r^n| = |r|^n = \frac{1}{s^n} < \frac{1}{n(s-1)} < \varepsilon$$
+when\, $\displaystyle n > \frac{1}{(s-1)\varepsilon}$.\, Hence, 
+$$\lim_{n\to\infty}r^n =0,$$
+which easily implies (1) for any real number $a$.
+%%%%%
+%%%%%
+\end{document}

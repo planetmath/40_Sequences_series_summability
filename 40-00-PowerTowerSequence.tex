@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PowerTowerSequence}
+\pmcreated{2013-03-22 16:41:58}
+\pmmodified{2013-03-22 16:41:58}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{power tower sequence}
+\pmrecord{8}{38913}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40-00}
+\pmrelated{PowerFunction}
+\pmrelated{OrderOfOperations}
+\pmrelated{NaturalLogBase}
+\pmrelated{FunctionXx}
+\pmrelated{SuperexponentiationIsNotElementary}
+\pmrelated{ErnstLindelof}
+\pmdefines{power tower sequence}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+For positive values of $a$, the {\em power tower sequence}
+              $$a,\, a^a,\, a^{a^a},\, a^{a^{a^a}},\, \ldots$$
+is convergent if and only if
+               $$\frac{1}{e^e} \leqq a \leqq e^{\frac{1}{e}},$$
+approximately 
+                  $$0.065989\leqq a \leqq 1.444667.$$
+The limit of the sequence is the least real \PMlinkname{root}{Equation} of the equation
+                           $$a^x = x.$$
+The proof is found in [1].
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc E. Lindel\"of}: {\em Differentiali- ja integralilasku
+ja sen sovellutukset III. Toinen osa.}\, Mercatorin Kirjapaino Osakeyhti\"o, Helsinki (1940).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

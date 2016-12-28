@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternatingSeriesTest}
+\pmcreated{2013-03-22 12:27:09}
+\pmmodified{2013-03-22 12:27:09}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{alternating series test}
+\pmrecord{18}{32588}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmclassification{msc}{40-00}
+\pmsynonym{Leibniz's theorem}{AlternatingSeriesTest}
+\pmsynonym{Leibniz test}{AlternatingSeriesTest}
+\pmrelated{AlternatingSeries}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+\PMlinkescapeword{states}
+\PMlinkescapeword{simple}
+The {\bf alternating series test}, or
+the {\bf Leibniz's Theorem}, states the following:
+
+{\bf Theorem} \cite{rudin, kreyszig93}
+Let $(a_n)_{n=1}^\infty$ be a non-negative, non-increasing sequence 
+or real numbers such that $\lim_{n \rightarrow \infty} a_n = 0$.  
+Then the infinite series $\sum_{n=1}^\infty (-1)^{(n+1)} a_n$ converges.
+
+This test provides a necessary and sufficient condition for the convergence of an alternating series, since if $\sum_{n=1}^\infty a_n$ converges then $a_n\to 0$. 
+
+{\bf Example:}  The series
+$\sum_{k = 1}^{\infty}\frac{1}{k}$
+does not converge, but the alternating series
+$\sum_{k = 1}^{\infty}(-1)^{k+1}\frac{1}{k}$
+converges to $\ln(2)$.
+
+\begin{thebibliography}{9}
+\bibitem{rudin}
+ W. Rudin, \emph{Principles of Mathematical Analysis}, McGraw-Hill Inc., 1976.
+ \bibitem {kreyszig93} E. Kreyszig,
+ \emph{Advanced Engineering Mathematics},
+ John Wiley \& Sons, 1993, 7th ed.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

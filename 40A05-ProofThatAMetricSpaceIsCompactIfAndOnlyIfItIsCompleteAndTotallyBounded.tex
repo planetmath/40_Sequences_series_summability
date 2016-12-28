@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatAMetricSpaceIsCompactIfAndOnlyIfItIsCompleteAndTotallyBounded}
+\pmcreated{2013-03-22 18:01:06}
+\pmmodified{2013-03-22 18:01:06}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof that a metric space is compact if and only if it is complete and totally bounded}
+\pmrecord{5}{40534}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmclassification{msc}{54D30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\textbf{Theorem:}\ A metric space is compact if and only if it is complete and totally bounded.
+
+\textbf{Proof. }\ Let $X$ be a metric space with metric $d$. If $X$ is compact, then it is sequentially compact and thus complete. Since $X$ is compact, the covering of $X$ by all $\epsilon$-balls must have a finite subcover, so that $X$ is totally bounded.
+
+Now assume that $X$ is complete and totally bounded. For metric spaces, compact and sequentially compact are equivalent; we prove that $X$ is sequentially compact. Choose a sequence $p_n\in X$; we will find a Cauchy subsequence (and hence a convergent subsequence, since $X$ is complete).
+
+Cover $X$ by finitely many balls of radius $1$ (since $X$ is totally bounded). At least one of those balls must contain an infinite number of the $p_i$. Call that ball $B_1$, and let $S_1$ be the set of integers $i$ for which $p_i\in B_1$.
+
+Proceeding inductively, it is clear that we can define, for each positive integer $k>1$, a ball $B_k$ of radius $1/k$ containing an infinite number of the $p_i$ for which $i\in S_{k-1}$; define $S_k$ to be the set of such $i$.
+
+Each of the $S_k$ is infinite, so we can choose a sequence $n_k\in S_k$ with $n_k < n_{k+1}$ for all $k$. Since the $S_k$ are nested, we have that whenever $i,j\geq k$, then $n_i,n_j\in S_k$. Thus for all $i,j\geq k$, $p_{n_i}$ and $p_{n_j}$ are both contained in a ball of radius $1/k$. Hence the sequence $p_{n_k}$ is Cauchy.
+
+\begin{thebibliography}{9}
+\bibitem{munkres} J. Munkres, \emph{Topology} , Prentice Hall, 1975.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

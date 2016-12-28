@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BayesRule}
+\pmcreated{2013-03-11 19:52:58}
+\pmmodified{2013-03-11 19:52:58}
+\pmowner{renato}{9974}
+\pmmodifier{}{0}
+\pmtitle{Baye's rule}
+\pmrecord{1}{50158}
+\pmprivacy{1}
+\pmauthor{renato}{0}
+\pmtype{Definition}
+
+%none for now
+\begin{document}
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+%\documentstyle[a4,12pt,amssymbols]{article}
+%\input epsf
+\setlength{\textwidth}{16truecm}
+\parindent=22pt
+\parskip=15pt
+\renewcommand\baselinestretch{1.5}
+\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{lemma}{Lemma}[section]
+%\newtheorem{corollary}{Corollary}[section]
+%\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+\def\bd{\mbox{\boldmath $d$}}
+\def\bD{\mbox{\boldmath $D$}}
+\def\bi{\mbox{\boldmath $i$}}
+\def\bI{\mbox{\boldmath $I$}}
+\def\bn{\mbox{\boldmath $n$}}
+\def\bN{\mbox{\boldmath $N$}}
+\def\bW{\mbox{\boldmath $W$}}
+\def\bx{\mbox{\boldmath $x$}}
+\def\bX{\mbox{\boldmath $X$}}
+\def\bz{\mbox{\boldmath $z$}}
+\def\bZ{\mbox{\boldmath $Z$}}
+\def\boldeta{\mbox{\boldmath $\eta$}}
+\def\bgamma{\mbox{\boldmath $\gamma$}}
+\def\bsigma{\mbox{\boldmath $\sigma$}}
+\def\blambda{\mbox{\boldmath $\lambda$}}
+\def\bLambda{\mbox{\boldmath $\Lambda$}}
+\def\btheta{\mbox{\boldmath $\theta$}}
+\def\bmu{\mbox{\boldmath $\mu$}}
+\def\yang{\par\noindent\hang}
+\def\f{\mathcal{F}_{t-1}}
+\def\E{\mathbb{E}}
+\def\P{\mathbb{P}}
+\def\Q{\mathbb{Q}}
+\def\R{\mathbb{R}}
+\def\m{M_{Y_t|\f}}
+\def\o{\omega}
+\def\g{\mathcal{G}}
+\def\t{\theta}
+\def\da{P_{\theta} da}
+
+
+\begin{document}
+
+\noindent {\large {\bf \ Theorem:}}
+\vspace{0.3cm}
+\renewcommand{\theequation}{1.\arabic{equation}}
+
+Let $\mu$ and $\nu$ be two probability measures on a measurable space $(\Omega, \mathcal{G})$ such that
+
+
+$$d\nu(\omega) = f(\o) d\mu(\o) $$
+
+for some $ f \in L^{1}(\mu)$.
+Let $X$ be a random variable on $(\Omega, \mathcal{G})$ such that 
+
+$$E_{\nu}[|X|]= \int_{\Omega}|X(\o)| f(\o)d\mu(\o) < \infty $$
+ 
+($ \nu $-integrable)
+
+Let $\mathcal{H}$ be a $\sigma$-algebra, $ \mathcal{H} \subset \mathcal{G}$. Then, 
+
+$$ E_{\nu}[X|\mathcal{H}].E_{\mu}[f|\mathcal{H}]= E_{\mu}[fX|\mathcal{H}]  \quad a.s. $$
+
+or
+\begin{eqnarray*}
+E_{\nu}[X|\mathcal{H}]=\frac{E_{\mu}[fX|\mathcal{H}]}{E_{\mu}[f|\mathcal{H}]} \quad a.s.
+\end{eqnarray*}
+
+\end{document}
+%%%%%
+\end{document}

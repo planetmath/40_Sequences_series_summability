@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ZeroSequence}
+\pmcreated{2015-07-10 21:03:45}
+\pmmodified{2015-07-10 21:03:45}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{zero sequence}
+\pmrecord{11}{41934}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmsynonym{null sequence}{ZeroSequence}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let a field $k$ be equipped with a rank one valuation $|.|$.\, A sequence 
+\begin{align}
+\langle a_1,\,a_2,\,\ldots \rangle
+\end{align}
+of elements of $k$ is called a \emph{zero sequence} or a \emph{null sequence}, if\, $\displaystyle\lim_{n\to\infty}a_n = 0$\,
+in the metric induced by $|.|$.\\
+
+If $k$ together with the metric induced by its valuation $|.|$ is a 
+complete ultrametric field, it's clear that its sequence
+(1) has a limit (in $k$) as soon as the sequence
+$$\langle a_2\!-a_1,\, a_3\!-\!a_2,\,a_4\!-\!a_3,\,\ldots \rangle$$
+is a zero sequence.\\
+
+If $k$ is not complete with respect to its valuation $|.|$, its 
+\PMlinkname{completion}{Completion} can be made as follows.\, The 
+Cauchy sequences (1) form an integral domain $D$ when the 
+operations ``$+$'' and ``$\cdot$'' are defined componentwise.\, The 
+subset $P$ of $D$ formed by the zero sequences is a 
+maximal ideal, whence the quotient ring $D/P$ is a field 
+$K$.\, Moreover, $k$ may be isomorphically embedded into $K$ and 
+the valuation $|.|$ may be uniquely extended to a valuation of 
+$K$.\, The field $K$ then is complete with respect to $|.|$ and $k$ 
+is dense in $K$.
+
+%%%%%
+%%%%%
+\end{document}

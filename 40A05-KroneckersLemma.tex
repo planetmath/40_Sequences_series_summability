@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KroneckersLemma}
+\pmcreated{2013-03-22 18:33:54}
+\pmmodified{2013-03-22 18:33:54}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{Kronecker's lemma}
+\pmrecord{6}{41288}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmclassification{msc}{40-00}
+%\pmkeywords{sequence}
+%\pmkeywords{convergence}
+%\pmkeywords{partial sum}
+\pmrelated{StolzCesaroTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+
+
+\begin{document}
+Kronecker's lemma gives a condition for convergence of partial sums of real numbers, and for example can be used in the proof of Kolmogorov's strong law of large numbers.
+
+\begin{lemma*}[Kronecker]
+Let $x_1,x_2,\ldots$ and $0<b_1<b_2<\cdots$ be sequences of real numbers such that $b_n$ increases to infinity as $n\rightarrow\infty$. Suppose that the sum $\sum_{n=1}^\infty x_n/b_n$ converges to a finite limit. Then, $b_n^{-1}\sum_{k=1}^nx_k\rightarrow 0$ as $n\rightarrow\infty$.  
+\end{lemma*}
+\begin{proof}
+Set $u_n=\sum_{k=1}^nx_k/b_k$, so that the limit $u_\infty=\lim_{n\rightarrow\infty}u_n$ exists.
+Also set $a_n=\sum_{k=1}^{n-1}(b_{k+1}-b_k)u_k$ so that
+\begin{equation*}
+\frac{a_{n+1}-a_n}{b_{n+1}-b_n}=u_n\rightarrow u_\infty
+\end{equation*}
+as $n\rightarrow\infty$. Then, the Stolz-Cesaro theorem says that $a_n/b_n$ also converges to $u_\infty$, so
+\begin{equation*}
+b_n^{-1}\sum_{k=1}^nx_k=b_n^{-1}\sum_{k=1}^nb_k(u_k-u_{k-1})=u_n-b_n^{-1}a_n\rightarrow 0.
+\end{equation*}
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{APathologicalFunctionOfRiemann}
+\pmcreated{2013-03-22 18:34:17}
+\pmmodified{2013-03-22 18:34:17}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{a pathological function of Riemann}
+\pmrecord{9}{41295}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmclassification{msc}{26A15}
+\pmclassification{msc}{26A03}
+\pmsynonym{example of semicontinuous function}{APathologicalFunctionOfRiemann}
+%\pmkeywords{jump discontinuity}
+\pmrelated{DirichletsFunction}
+\pmrelated{ValueOfTheRiemannZetaFunctionAtS2}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{term} \PMlinkescapeword{terms}
+
+The periodic mantissa function \;$t \mapsto t\!-\!\lfloor{t}\rfloor$\; has at each integer value of $t$ a jump (saltus) equal to $-1$, being in these points continuous from the right but not from the left.\, For every real value $t$, one has
+\begin{align}
+0 \leqq t\!-\!\lfloor{t}\rfloor < 1.
+\end{align}
+Let us consider the series
+\begin{align}
+\sum_{n=1}^\infty\frac{nx\!-\!\lfloor{nx}\rfloor}{n^2}
+\end{align}
+due to Riemann.\, Since by (1), all values of\, $x \in \mathbb{R}$\, and\, $n \in \mathbb{Z}_+$\, satisfy
+\begin{align}
+0 \;\leqq\; \frac{nx\!-\!\lfloor{nx}\rfloor}{n^2} \;<\; \frac{1}{n^2},
+\end{align}
+the series is, by Weierstrass' M-test, uniformly convergent on the whole $\mathbb{R}$ (see also the p-test).\, We denote by $S(x)$ the sum function of (2).
+
+The $n^\mathrm{th}$ term of the series (2) defines a periodic function
+\begin{align}
+x \mapsto \frac{nx\!-\!\lfloor{nx}\rfloor}{n^2}
+\end{align}
+with the \PMlinkname{period}{PeriodicFunctions} $\frac{1}{n}$ and having especially for\, $0 \leqq x < \frac{1}{n}$\, the value $\frac{x}{n}$.\, The only points of discontinuity of this function are
+\begin{align}
+x \;=\; \frac{m}{n} \qquad (m = 0,\,\pm1,\,\pm2,\,\ldots),
+\end{align}
+where it vanishes and where it is continuous from the right but not from the left; in the point (5) this function apparently has the jump\, $\displaystyle-\frac{1}{n^2}$.
+
+The theorem of the entry one-sided continuity by series \, implies that the sum function $S(x)$ is continuous in every irrational point $x$, because the series (2) is uniformly convergent for every $x$ and its terms are continuous for irrational points $x$.
+
+Since the terms (4) of (2) are continuous from the right in the rational points (5), the same theorem implies that 
+$S(x)$ is in these points continuous from the right.\, It can be shown that $S(x)$ is in these points discontinuous from the left having the jump equal to\, $\displaystyle-\frac{\pi^2}{6n^2}$.
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc E. Lindel\"of}: {\em Differentiali- ja integralilasku
+ja sen sovellutukset III.2}.\, Mercatorin Kirjapaino Osakeyhti\"o, Helsinki (1940).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

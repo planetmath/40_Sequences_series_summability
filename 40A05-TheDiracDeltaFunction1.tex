@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheDiracDeltaFunction1}
+\pmcreated{2013-03-11 19:30:28}
+\pmmodified{2013-03-11 19:30:28}
+\pmowner{swapnizzle}{13346}
+\pmmodifier{}{0}
+\pmtitle{The Dirac Delta Function}
+\pmrecord{1}{50098}
+\pmprivacy{1}
+\pmauthor{swapnizzle}{0}
+\pmtype{Definition}
+
+%none for now
+\begin{document}
+\documentclass[11pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage{txfonts}
+\usepackage[mathcal]{eucal}
+\usepackage{xy}
+\textheight 9in
+\textwidth 7in
+\oddsidemargin 0in
+\evensidemargin 0in
+\topmargin 0in
+\headheight 0in
+\headsep 0in
+\title{The Dirac Delta Function}
+\author{Swapnil Sunil Jain}
+\date{December 27, 2006}
+\begin{document}
+\maketitle
+
+\subsection*{Definition}
+The Dirac delta function can be defined as 
+\begin{eqnarray*}
+&& \delta(t) \triangleq \lim_{\epsilon \to 0} \frac{1}{\epsilon} \Pi\Big(\frac{t}{\epsilon}\Big)
+\end{eqnarray*}
+where $\Pi(t)$ is the pulse function. The delta function can also be defined as 
+\begin{eqnarray*}
+&& \delta(t) =   
+\begin{cases}
+0 & \mbox{for } t \neq 0 \\
+\infty & \mbox{for } t = 0,
+\end{cases}
+\qquad \mbox{s.t } \int_{-\infty}^{+\infty} \delta(t) dt = 1 \\ 
+\end{eqnarray*}
+or it can also be defined as an operator s.t.
+\begin{eqnarray*}
+&& \delta(t)[f(t)] \triangleq \lim_{\epsilon \to 0}
+\frac{1}{\epsilon} \int_{-\infty}^{+\infty} \Pi\Big(\frac{t}{\epsilon}\Big) f(t)dt \\
+\end{eqnarray*}
+
+\subsection*{Properties}
+\begin{eqnarray*}
+&& \mbox{1. } \int_{-\infty}^{\infty} f(t)\delta(t-a) dt = f(a)
+\end{eqnarray*}
+Proof: 
+\begin{align*}
+\int_{-\infty}^{\infty} f(t)\delta(t-a) dt &= \lim_{\epsilon \to 0} \Big( \int_{-\infty}^{a - \epsilon} f(t)\delta(t-a) dt + \int_{1-\epsilon}^{a+\epsilon} f(t)\delta(t-a) dt + \int_{a+\epsilon}^{\infty} f(t)\delta(t-a) dt \Big) \\
+&= \lim_{\epsilon \to 0} \Big( \int_{a - \epsilon}^{a + \epsilon} f(t)\delta(t-a) dt \Big) \\
+&= f(a) \lim_{\epsilon \to 0} \Big( \int_{a - \epsilon}^{a + \epsilon} \delta(t-a) dt \Big) = f(a)(1) = f(a) \\
+\end{align*}
+
+\begin{eqnarray*}
+&& \mbox{2. } \int_{-\infty}^{\infty} f(t)\delta(t) dt = f(0)
+\end{eqnarray*}
+Proof: Readily seen if we set $a=0$ in Property \#1.
+
+\begin{eqnarray*}
+&& \mbox{3. } \int_{-\infty}^{\infty} f(t)\delta(at) dt = \frac{1}{a} f(0)
+\end{eqnarray*}
+Proof: Set $u = at$, then
+\begin{align*}
+\int_{-\infty}^{\infty} f(t)\delta(at) dt &= \int_{-\infty}^{\infty} f(\frac{u}{a})\delta(u) \frac{du}{a} = \frac{1}{a} f(0) \\
+\end{align*}
+
+\begin{eqnarray*}
+&& \mbox{4. } \int_{-\infty}^{\infty} f(t)\delta(at - t_0) dt = \frac{1}{a}f(\frac{t_0}{a})
+\end{eqnarray*}
+Proof: Set $u = at - t_0$, then
+\begin{align*}
+\int_{-\infty}^{\infty} f(t)\delta(at - t_0) dt &= \int_{-\infty}^{\infty} f(\frac{u - t_0}{a})\delta(u) \frac{du}{a} = \frac{1}{a} f(\frac{t_0}{a}) \\
+\end{align*}
+
+\begin{eqnarray*}
+&& \mbox{5. } \int_{-\infty}^{\infty} f(t)\delta(g(t)) dt = \sum_{ \{x_i\;|\;g(x_i)\;=\; 0\} } \frac{1}{|g'(x_i)|} f(x_i)
+\end{eqnarray*}
+
+\begin{eqnarray*}
+&& \mbox{6. } \int_{-\infty}^{\infty} f(t)\delta'(t) dt = -f'(0)
+\end{eqnarray*}
+Proof: If we let $u = f(t)$ and $dv = \delta'(t) dt$, then, using integration by parts,
+\begin{align*}
+\int_{-\infty}^{\infty} f(t)\delta'(t) dt &= f(t)\delta(t){\Big|}_{-\infty}^{\infty} - \int_{-\infty}^{\infty} f'(t)\delta(t) dt = -f'(0) \\
+\end{align*}
+
+\end{document}
+%%%%%
+\end{document}

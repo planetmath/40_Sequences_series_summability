@@ -1,0 +1,435 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PrincipiosDealgebraMultilineal}
+\pmcreated{2013-03-11 19:27:49}
+\pmmodified{2013-03-11 19:27:49}
+\pmowner{juanman}{12619}
+\pmmodifier{}{0}
+\pmtitle{Principios de \'algebra multilineal}
+\pmrecord{1}{50084}
+\pmprivacy{1}
+\pmauthor{juanman}{0}
+\pmtype{Definition}
+
+%none for now
+\begin{document}
+\documentclass[twocolumn]{article}
+
+\textwidth=17.5truecm
+\textheight=23.5truecm
+\hoffset=-0.5cm
+\voffset=-3.0cm
+
+
+\DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+\DeclareSymbolFontAlphabet{\Bbb}{AMSb}
+
+\newcommand{\paren}[1]{\left(\begin{array}{c} #1 \end{array}\right) }
+
+
+\title{
+\centerline{\tt\'ALGEBRA MULTILINEAL}
+\centerline{\tt DE ESPACIOS VECTORIALES REALES}
+\centerline{\tt CON PRODUCTO INTERIOR}
+}
+\date{}
+\author{\sl Juan M. M\'arquez B.}
+\begin{document}
+\maketitle
+\small
+\sf
+Sea $V$ un espacio vectorial sobre los reales $\Bbb{R}$ de dimensi\'on $n$. Si los objetos $b_1,b_2,...,b_n$ es una base 
+entonces usamos la notaci\'on 
+$$V=\langle\{b_i\}\rangle=\langle\{b_1,b_2,...,b_n\}\rangle$$ 
+para indicar que cada $X$ vector en $V$ se escribe como combinaci\'on lineal de los $b_i$. 
+
+\bigskip
+\bigskip
+\centerline{\bf Espacio dual}
+\bigskip
+
+El {\it espacio dual} de $V$ se define como el conjunto $V^*$ de los funcionales lineales $V\to \Bbb{R}$. 
+Resulta que $V^*$ tambi\'en es una espacio vectorial. 
+
+\bigskip
+
+?` Cu\'al es una base y la dimensi\'on de este espacio?
+
+\bigskip
+
+Considere las transformaciones (una para cada $i$) 
+$$\beta^i:V\to\Bbb{R}$$ 
+definida por
+$$X\mapsto\beta^i(X)=X^i,$$
+donde $X=X^sb_s$ (convenci\'on de la suma de Einstein). 
+
+As\'\i\ $\beta^i$ es una funci\'on lineal.
+En otras palabras, el funcional $\beta^i$ "extrae" el $i$-esimo componente de $X$ y cumple linealidad:
+$$\beta^i(aX)=a\beta^i(X)$$
+$$\beta^i(X+Y)=\beta^i(X)+\beta^i(Y)$$
+para cualesquiera escalar $a$ y vectores $X,Y$.
+
+\bigskip
+
+Los elementos de $V^*$ tambi\'en se llaman {\it covectores}.
+
+\bigskip
+
+Todo elemento  $f\in V^*$ se escribe as\'i\ ;
+$$f=f_s\beta^s$$
+donde los componentes satisfacen $f_s=f(b_s)$ 
+
+\bigskip
+\bigskip
+\centerline{\bf Producto tensorial}
+\bigskip
+
+Sean $V,W$ dos espacios vectoriales sobre los reales $\Bbb{R}$.
+Indicamos con 
+$$V=\langle\{ b_1,...,b_n\}\rangle$$ 
+que el espacio $V$ est\'a generado por los vectores b\'asicos $b_i$.
+En otras palabras; si $X\in V$ entonces 
+$$X=X^sb_s$$ 
+es la combinaci\'on lineal 
+$X=X^1b_1+X^2b_2+\cdots+X^nb_n$.
+
+\bigskip
+
+Si $W=\langle\{ d_1,...,d_m\}\rangle$ es otro espacio vectorial, entonces definimos
+$$V\otimes W=\langle\{ b_1\otimes d_1, b_1\otimes d_2,...,b_n\otimes d_m,\}\rangle,$$
+esto implica que si $B\in V\otimes W$ entonces 
+$$B=B^{st}b_s\otimes d_t$$
+lo cual es la {\it combinaci\'on lineal bi-indexada}:
+$$B=B^{11}b_1\otimes d_1+B^{12}b_1\otimes d_2+\cdots+B^{nm}b_n\otimes d_m$$
+
+\bigskip
+
+Los objetos en $V\otimes V$ se llaman {\it tensor contravariante de rango 2} en $V$ o bien un 
+{\it 2-contratensor}.
+
+Los objetos en $V^*\otimes V^*$ se llaman {\it tensor covariante de rango 2} en $V$ o bien un 
+{\it 2-cotensor}.
+
+Los objetos en $V^*\otimes V$ se llaman {\it tensor mixto de rango 2} en $V$.
+
+\bigskip
+\bigskip
+\centerline{\bf Multilinealidad}
+\bigskip
+
+Los elementos b\'asicos de $V^*\otimes V^*$ pueden ser visualizados como transformaciones bilineales 
+$$\beta^i\otimes\beta^j:V\times V\to\Bbb{R}$$
+mediante la asignaci\'on dada por
+$$(X,Y)\mapsto\beta^i\otimes\beta^j(X,Y)=\beta^i(X)\beta^j(Y)=X^iY^j$$ 
+
+\bigskip
+
+Similarmente los elementos b\'asicos de $V\otimes V$ pueden ser con\-si\-de\-ra\-dos como mapas bilineales 
+$$b_i\otimes b_j:V^*\otimes V^*\to\Bbb{R}$$ 
+mediante la asignaci\'on
+$$(f,g)\mapsto b_i\otimes b_j(f,g)=f(b_i)g(b_j)=f_ig_j$$
+
+Un elemento b\'asico de $V^*\otimes V$ se puede ver como un mapa bilineal 
+$$V\times V^*\to\Bbb{R}$$ 
+mediante la f\'ormula
+$$(X,f)\mapsto \beta^i\otimes b_j(X,f)=\beta^i(X)f(b_j)=X^if_j$$ 
+ 
+\bigskip
+
+Efectivamente estas reglas son bilineales, pues por ejemplo, 
+para cualesquiera escalares $a,c\in\Bbb{R}$ y vectores $X,Y,Z\in V$
+tenemos 
+$$\beta^i\otimes\beta^j(aX+cY,Z)=a\beta^i\otimes\beta^j(X,Z)+c\beta^i\otimes\beta^j(Y,Z)$$
+$$\beta^i\otimes\beta^j(X,aY+cZ)=a\beta^i\otimes\beta^j(X,Y)+c\beta^i\otimes\beta^j(X,Z)$$
+que son respectivamente
+$$(aX^i+cY^i)z^j=aX^iZ^j+cY^iZ^j$$ 
+$$X^i(aY^j+cZ^j)=aX^iY^j+cX^iZ^j$$
+
+\bigskip
+
+Toda transformaci\'on bilineal $V\times V\to\Bbb{R}$ est\'a generada por los $\beta^i\otimes\beta^j$ pues 
+si $B:V\times V\to\Bbb{R}$ es un mapeo bilineal arbitario, este se expresar\'a como
+$$B=B_{st}\beta^s\otimes\beta^t$$
+y denotaremos con $T^{(2,0)}V$ el espacio vectorial generado por los $\beta^i\otimes\beta^j$, en otras palabras
+$$T^{(2,0)}V=\langle\{\beta^i\otimes\beta^j\}\rangle$$
+
+\bigskip
+
+Similarmente el conjunto de los mapas tri-lineales 
+$$T^{(3,0)}V=\langle\{\beta^i\otimes\beta^j\otimes\beta^k\}\rangle$$
+donde $\beta^i\otimes\beta^j\otimes\beta^k(X,Y,Z)=X^iY^jZ^k$ es una construcci\'on tri-lineal b\'asica.
+As\'i\ cualquier otro mapa trilineal $T:V\times V\times V\to\Bbb{R}$ se escribe conforme a 
+$$T=T_{stu}\beta^s\otimes\beta^t\otimes\beta^u$$
+
+\bigskip
+
+No es dif\'\i cil visualizar lo qu\'e hay en el espacio vectorial $T^{(k,0)}V$ y cu\'al es una base para \'el.
+?`puede ud. decir cu\'al es las dimensi\'on de cada uno de estos espacios vectoriales?
+
+\bigskip
+\bigskip
+\centerline{\bf \'Algebra de Grassmann}
+\bigskip
+
+Importantes son las transformaciones multilineales que son {\it antisim\'etricas}, es decir transformaciones multilieales 
+que cambian de signo cuando intercambiamos (transponemos) dos de sus argumentos.
+Por ejemplo un mapa bilineal $B:V\times V\to\Bbb{R}$ es antisim\'etrico (o alternante) si satisface
+$$B(X,Y)=-B(Y,X)$$
+un trilineal alternante cumple
+\begin{eqnarray*}
+T(X,Y,Z)&=&-T(Y,X,Z)\\
+        &=&T(Y,Z,X)\\
+	&=&-T(Z,Y,X)
+\end{eqnarray*}
+
+\bigskip
+
+La construcci\'on 
+$$\beta^i\wedge\beta^j=\beta\otimes\beta^j-\beta^j\otimes\beta^i$$
+define un operador bilineal antisim\'etrico b\'asico 
+y satisface
+$$\beta^i\wedge\beta^j(X,Y)=X^iY^j-X^jY^i$$
+Otra notaci\'on es 
+$$\beta^i\wedge\beta^j=\beta^{[i}\otimes\beta^{j]}$$
+
+\bigskip
+
+Estos objetos generan un subespacio de mapas bilineales --tambi\'en llamados {\it bivectores} o {\it 2-formas}--
+y los simbolizamos con 
+$$\Lambda^2V=\langle\{\beta^i\wedge\beta^j\}\rangle$$
+esto implica que si $B\in\Lambda^2V$ entonces $B=B_{st}\beta^s\wedge\beta^t$
+
+\bigskip
+
+Observe que $\beta^i\wedge\beta^i=0$ para cada $i$.
+
+\bigskip
+
+Ahora, si $\dim V=n$ entonces 
+$$\beta^1\wedge\beta^2,\beta^1\wedge\beta^3,...,\beta^1\wedge\beta^n,\beta^2\wedge\beta^3,...,\beta^{n-1}\wedge\beta^n$$ 
+son los \'unicos bivectores b\'asicos
+por lo tanto $\dim\Lambda^2V={n\choose2}$ 
+
+\bigskip
+
+El espacio vectorial $\Lambda^kV$ generado por los productos exteriores de $k$ covectores b\'asicos 
+$$\beta^{i_1}\wedge\beta^{i_2}\wedge\cdots\wedge\beta^{i_k}$$
+donde los indices cumplen $i_1< i_2<\cdots< i_k$, tiene dimensi\'on ${n\choose k}$
+i.e. 
+$$\dim(\Lambda^kV)={\dim V\choose k}$$
+
+\bigskip
+
+El espacio $\Lambda^nV$ est\'a generado por la \'unica {\it n-forma} $\beta^1\wedge\beta^2\wedge\cdots\wedge\beta^n$ 
+por lo que $\dim(\Lambda^nV)=1$.
+
+\bigskip
+
+El espacio vectorial 
+$$\Lambda V=\Lambda^0V\oplus \Lambda^1V\oplus\cdots\oplus\Lambda^{n-1}V\oplus \Lambda^nV$$
+junto con el producto exterior $\wedge$ constituyen un {\it \'algebra} que recibe el nombre de \'algebra de Grassmann  
+(o \'algebra exterior) de $V$ 
+
+
+\bigskip
+\bigskip
+\centerline{\bf Espacios vectoriales con producto interior.}
+\bigskip
+
+Sea $V$ un espacio vectorial sobre los reales $\Bbb{R}$ generado por los objetos 
+$\{ b_1,b_2,...,b_n\}$. Suponga que existe un {\it producto interior} en $V$ i.e. hay un mapa
+$$\langle\quad ,\quad \rangle:V\times V\to \Bbb{R}$$ 
+el cual es bilineal, sim\'etrico y positivo definido no degenerado:
+repectivamente
+\begin{enumerate}
+\item $\langle aX+cY,Z\rangle=a\langle X,Z\rangle+c\langle Y,Z\rangle$
+\item $\langle X,aY+cZ\rangle=a\langle X,Y\rangle+c\langle X,Z\rangle$
+\item $\langle X,Y\rangle=\langle Y,Z\rangle$
+\item $\langle X,X\rangle\ge 0$
+\item $\langle X,X\rangle=0$ si y s\'olo si $X=0$
+\end{enumerate} 
+donde $a,c$ son escalares reales y $X,Y,Z$ vectores arbitarios en $V$. 
+
+\bigskip
+
+El {\it tensor m\'etrico} es la matriz 
+$$G=\left(\begin{array}{cccc}
+g_{11} & g_{12} &\cdots & g_{1n} \\
+g_{21} & g_{22} &\cdots & g_{2n} \\
+\vdots &        &\ddots & \vdots \\
+g_{n1} &        &       & g_{nn} 
+\end{array}\right)$$
+donde $g_{ij}=\langle b_i,b_j\rangle$.
+
+\bigskip
+
+La matriz inversa $G^{-1}$ se llama {\it cotensor m\'etrico} y sus entradas se indexan
+$G^{-1}=[g^{ij}]$,
+por lo que al multiplicar $G$ y $G^{-1}$ se obtienen las relaciones
+$${\delta_i}^j=g_{is}g^{sj}=g_{i1}g^{1j}+g_{i2}g^{2j}+\cdots g_{in}g^{nj}$$
+
+\bigskip
+
+{\bf Lema de Representaci\'on de Riesz} {\it Sea $f\colon V\to \Bbb{R}$ un co\-vec\-tor en $V$ con producto interior 
+$\langle\quad ,\quad \rangle$.
+Entonces existe un \'unico vector $a\in V$ el cual determina a $f$, esto es:
+$$f(\quad)=\langle a,\quad\rangle$$  
+}
+
+\bigskip
+
+Para los covectores b\'asicos $\beta^i$ resulta que el vector $b^i=g^{is}b_s$ (suma sobre $s$) satisface
+$$\beta^i(\quad)=\langle b^i,\quad\rangle$$
+pues si $\beta^i$ se aplica a el b\'asico $b_t$ tenemos 
+\begin{eqnarray*}
+\beta^i(b_t)&=&\langle b^i,b_t\rangle\\
+            &=&\langle g^{is}b_s,b_t\rangle\\
+            &=&g^{is}\langle b_s,b_t\rangle\\
+            &=&g^{is}g_{st}\\
+	    &=&{\delta^i}_t 	
+\end{eqnarray*}
+por lo que aplicado a un vector $X=X^{\mu}b_{\mu}$ arbitario tenemos
+\begin{eqnarray*}
+\beta^i(X)&=&\langle b^i,X^{\mu}b_{\mu}\rangle\\
+            &=&X^{\mu}\langle b^i,b_{\mu}\rangle\\
+            &=&X^{\mu}{\delta^i}_{\mu}\\
+            &=&X^i 	
+\end{eqnarray*}
+Los vectores $b^1, b^2,...,b^n$ son linealmente independientes, forman tambi\'en una base para $V$ y se llaman 
+{\it b\'asicos reciprocos}.
+
+\bigskip
+
+Siendo $T^{(2,0)}V$ el conjunto de los mapeos bilineales $V\times V\to\Bbb{R}$ y si $B\in T^{(2,0)}V$ entonces 
+$B=B_{\mu\nu}\beta^{\mu}\otimes\beta^{\nu}$. 
+
+En el conjunto $T^{(0,2)}V$ est\'a el mapeo bilineal
+$\bar{B}=B^{\mu\nu}b_{\mu}\otimes b_{\nu}$. 
+
+Y en $T^{(1,1)}V$ est\'a $\bar{\bar{B}}={B_{\mu}}^{\nu}\beta^{\mu}\otimes b_{\nu}$. 
+
+\bigskip
+
+Ahora si construimos los {\it b\'asicos reciprocos duales} 
+$$\beta_i=g_{is}\beta^s$$ 
+vamos a poder calcular que
+$$B(b_s,b_t)=\bar{B}(\beta_s,\beta_t)=\bar{\bar{B}}(b_s,\beta_t)=B_{st}$$
+donde los componentes se relacionan mediante el cotensor m\'etrico as\'\i :  
+$${B^i}_j=B_{sj}g^{si}$$
+con suma sobre $s$, y
+$$B^{ij}={B^i}_sg^{sj}=B_{st}g^{si}g^{tj}$$
+con suma sobre $t$ y $s,t$ respectivamente.  
+O bien ${B_i}^j=B^{sj}g_{si}$ y $B_{ij}={B_i}^sg_{sj}$.
+
+\bigskip
+
+Todas estas relaciones entre los componentes con respecto al tensor y cotensor m\'etricos reciben el nombre de 
+{\it leyes de subir y bajar \'\i ndices}. 
+
+\bigskip
+\bigskip
+\centerline{\bf Las formas tiene un producto interior tambi\'en}
+\bigskip
+
+Es posible inducir un producto interior en los espacios $\Lambda^kV$. Si 
+$A=A_{i_1...i_k}\beta^{i_1}\wedge\dots\wedge\beta^{i_k}$ y 
+$C=C_{j_1...j_k}\beta^{j_1}\wedge\dots\wedge\beta^{j_k}$ entonces 
+$$\langle A,C\rangle=g^{i_1j_1}\cdots g^{i_kj_k}A_{i_1...i_k}C_{j_1...j_k}$$
+
+Por ejemplo para 1-formas tenemos
+\begin{eqnarray*}
+\langle A,C\rangle&=&g^{i_1j_1}A_{i_1}C_{j_1}\\
+                  &=&A_{i_1}C^{i_1}
+\end{eqnarray*}
+que satisface los 5 axiomas de producto interior.
+
+\bigskip
+\bigskip
+\centerline{\bf Pullback}
+\bigskip
+
+Teniendo una transformaci\'on lineal $L\colon V\to W$ podemos construir por cada forma en $W$ otra forma en $V$.
+Pues si $\phi\in W^*=\Lambda^1V$ es decir $\phi\colon W\to\Bbb{R}$ es covector en $W$ entonces podemos construir otra transformaci\'on lineal $\phi\circ L\colon V\to\Bbb{R}$, es decir $\phi\circ L\in V^*=\Lambda^1V$. 
+As\'\i\ hemos definido 
+una transformaci\'on lineal 
+$$L^*\colon W^*\to V^*$$
+v\'\i a
+$$\phi\mapsto L^*\phi=\phi\circ L$$ 
+la regla de asignaci\'on $L^*$ es el {\it pullback} de $L$.
+
+\bigskip
+
+Supongamos que $V=\langle\{ b_1,...,b_n\}\rangle$ y $W=\langle\{ c_1,...,c_m\}\rangle$, as\'\i\ tendremos que 
+$$Lb_k={L^s}_kc_s,\eqno{(A)}$$ 
+es la forma en que las bases se relacionan.
+
+\bigskip
+
+?`C\'omo se relacionan las base de covectores?
+
+\bigskip
+
+Sean $V^*=\langle\{ \beta^1,..., \beta^n\}\rangle$ y $W=\langle\{ \gamma^1,...,\gamma^m\}\rangle$. Sean 
+$g_{ij}=\langle b_i,b_j\rangle$ y $h_{kl}=\langle c_k,c_l\rangle$ los componentes de los tensores m\'etricos de $V$ y $W$ respectivamente.
+
+Por lo que  
+\begin{eqnarray*}
+L^*\gamma^i(b_k)&=&\gamma^i\circ L(b_k)\\
+                 &=&\gamma^i(Lb_k)\\
+                 &=&\gamma^i({L^s}_kc_s)\\
+                 &=&{L^s}_k\gamma^i(c_s)\\
+                 &=&{L^s}_k\gamma^i(c_s)\\
+                 &=&{L^s}_k{\delta^i}_s\\
+                 &=&{L^i}_k
+\end{eqnarray*}
+Pero tambi\'en 
+\begin{eqnarray*}
+{L^i}_t\beta^t(b_k)&=&{L^i}_t{\delta^t}_k\\
+                   &=&{L^i}_k
+\end{eqnarray*}
+
+Es decir 
+$$L^*\gamma^i(b_k)={L^i}_t\beta^t(b_k)$$ para todo b\'asico $b_k$, por lo que las transformaciones
+son iguales, i.e. 
+$$L^*\gamma^i={L^i}_t\beta^t,\eqno{(B)}$$
+lo que nos indica como se relacionan las bases duales de $W,V$ respectivamente (cf. $(A)$ arriba).
+
+\bigskip
+
+Finalmente, si $\varphi\in W^*$ este se expresa como $\varphi=\varphi_{\mu}\gamma^{\mu}$ y entonces
+$$L^*\varphi=\varphi_{\mu}L^*\gamma^{\mu}=\varphi_{\mu}{L^{\mu}}_t\beta^t$$
+lo cual muestra que los componentes de $L^*\varphi$ son 
+$$\varphi_{\mu}{L^{\mu}}_t$$
+
+
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+
+{\bf Ejercicios}
+\bigskip
+\bigskip
+ 
+\begin{enumerate}
+\item Demuestre que si $V\stackrel{L}\to W\stackrel{M}\to U$ es una composici\'on de transformaciones lineales, 
+entonces el correspondiente diagrama de pullbacks es
+$$U^*\stackrel{M^*}\to W^*\stackrel{L^*}\to V^*$$ 
+\bigskip
+\bigskip
+  
+\item Escriba todo el ejercicio 1 en t\'erminos de componentes.
+\bigskip
+\bigskip
+
+\item Si el covector $\varphi\in W^*$ tiene una representaci\'on $\varphi(\quad)=\langle \xi,\quad\rangle$
+y covector $L^*\varphi\in V^*$ tiene $L^*\varphi(\quad)=\langle \zeta,\quad\rangle$, con $\xi\in W$ y $\zeta\in V$, 
+?`Cu\'al es la relaci\'on entre los componentes de $L$, $\xi$ y $\zeta$?
+\end{enumerate}
+
+\end{document}
+
+
+%%%%%
+\end{document}

@@ -1,0 +1,468 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HigherDimensionalAlgebraStructuresAndBiodynamics}
+\pmcreated{2013-03-11 19:52:03}
+\pmmodified{2013-03-11 19:52:03}
+\pmowner{bci1}{20947}
+\pmmodifier{}{0}
+\pmtitle{Higher Dimensional Algebra: Structures and Biodynamics}
+\pmrecord{1}{50152}
+\pmprivacy{1}
+\pmauthor{bci1}{0}
+\pmtype{Definition}
+
+%none for now
+\begin{document}
+%%Title[Higher Dimensional Algebra-- Structures and Biodynamics]{Higher 
+%%Dimensional Algebra of Super-Molecular Structures and Biodynamics.}
+\documentclass[11pt]{amsart}
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym,enumerate}
+\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\rO}{{\rm O}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\renewcommand{\H}{\mathcal H}
+\renewcommand{\cL}{\mathcal L}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathsf{G}}}
+\newcommand{\dgrp}{{\mathsf{D}}}
+\newcommand{\desp}{{\mathsf{D}^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathsf{H}}}
+\newcommand{\mgr}{{\mathsf{M}}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathsf{G)}}}
+\newcommand{\obgp}{{\rm Ob(\mathsf{G}')}}
+\newcommand{\obh}{{\rm Ob(\mathsf{H})}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathsf{G}(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\ovset}[1]{\overset {#1}{\ra}}
+\newcommand{\ovsetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\pagestyle{myheadings}
+%\usepackage{geometry, amsmath,amssymb,latexsym,enumerate}
+%\usepackage{xypic}
+
+\def\baselinestretch{1.1}
+
+
+\hyphenation{prod-ucts}
+
+%\geometry{textwidth= 16 cm, textheight=21 cm}
+
+\newcommand{\sqdiagram}[9]{$$ \diagram  #1  \rto^{#2} \dto_{#4}&
+#3  \dto^{#5} \\ #6    \rto_{#7}  &  #8   \enddiagram
+\eqno{\mbox{#9}}$$ }
+
+\def\C{C^{\ast}}
+
+\newcommand{\labto}[1]{\stackrel{#1}{\longrightarrow}}
+
+%\newenvironment{proof}{\noindent {\bf Proof} }{ \hfill $\Box$
+%{\mbox{}}
+
+\newcommand{\quadr}[4]{\begin{pmatrix} & #1& \\[-1.1ex] #2 & & #3\\[-1.1ex]& #4&
+ \end{pmatrix}}
+\def\D{\mathsf{D}}
+
+
+\begin{document}
+
+
+
+
+\title[Higher Dimensional Algebra-- Structures and Biodynamics]{Higher Dimensional Algebra of Super-Molecular Structures and Biodynamics.}
+
+
+
+
+
+File: ATBiol-ICBetaproposal.tex 
+
+\date{\today} --July 2, 2008
+
+
+
+\author[I. C. Baianu]
+{I. C. Baianu}
+
+\address{University of Illinois at Urbana--Champaign\\
+FSHN and NPRE Departments\\ Microspectroscopy Facility
+\\ Urbana IL 61801 USA}
+
+\email[I. C. Baianu]{ibaianu@uiuc.edu}
+
+\maketitle
+
+
+
+\begin{abstract}/: \textbf{SYNPOSIS}
+An international collaboration proposal is made for- and on behalf of- a group with the topic of  ``Higher Dimensional Algebra of Super-Molecular Structure and Biodynamics'', with the aim of stimulating the development of both algebraic and computational, novel approaches to modeling Super-Molecular Structures and Biodynamics in Complex Systems Biology. 
+
+Based on our recent international collaborations in the fields of Relational Biology, Category Theory and Algebraic Topology applications to modeling complex and super-complex systems we expect the proposed projrect to attain its goal of formulating fundamental, new concepts with a wide range of applications in both basic and applied sciences, such as Categorical Ontology, Mathematical Biology, Molecular Biology,  Bioinformatics, Interactomics, Translational Oncogenomics, Pharmacogenomics and Therapeutical Medicine.
+
+Specific areas of expertise already covered in the project are: Non-Abelian Algebraic Topology of Biosystems, Categorical Ontology of Super-complex Systems and Advanced Ontology Levels Theory,  Topological Groupoids, Biogroupoids, Supercategories and Organismal Structures, Network Biodynamics, Multi-valued Logic Algebras of Neural and Genetic Networks, Categorical Galois Theory and Galois Groupoids, Lie algebras and Lie Algebroids, Hopf, Grassmann-Hopf, Weak C*-Hopf and Graded Lie algebras, Lie and Weak C*-Hopf algebroids, Quantum Groupoid C*-algebras,  Fundamental Groupoids, Non-commutative Geometry, Tensor Products of Algebroids and Categories, Double Groupoids and Algebroids, Higher Dimensional Quantum Symmetries, Applications of Generalized van Kampen Theorem (GvKT) to studying Phase Space transformation invariants.
+\end{abstract}
+  
+
+\subjclass{Mathematics Classification: Primary 05C38,22A22, 22D25, 43A25, 43A35, 46L87, 15A15; Secondary 05A15, 15A18}
+
+AMS MSC:  55U35 (Algebraic topology :: Applied homological algebra and category theory :: Abstract and axiomatic homotopy theory) 
+  55U40 (Algebraic topology :: Applied homological algebra and category theory :: Topological categories, foundations of homotopy theory) 
+  55U99 (Algebraic topology :: Applied homological algebra and category theory :: Miscellaneous) 
+  18A15 (Category theory; homological algebra :: General theory of categories and functors :: Foundations, relations to logic and deductive systems) 
+  18A20 (Category theory; homological algebra :: General theory of categories and functors :: Epimorphisms, monomorphisms, special classes of morphisms, null morphisms) 
+  18A25 (Category theory; homological algebra :: General theory of categories and functors :: Functor categories, comma categories) 
+  18A30 (Category theory; homological algebra :: General theory of categories and functors :: Limits and colimits ) 
+  18A40 (Category theory; homological algebra :: General theory of categories and functors :: Adjoint functors ) 
+  18A99 (Category theory; homological algebra :: General theory of categories and functors :: Miscellaneous) 
+  18C10 (Category theory; homological algebra :: Categories and theories :: Theories , structure, and semantics) 
+  18C99 (Category theory; homological algebra :: Categories and theories :: Miscellaneous) 
+  18D05 (Category theory; homological algebra :: Categories with structure :: Double categories, $2$-categories, bicategories and generalizations) 
+  18D15 (Category theory; homological algebra :: Categories with structure :: Closed categories ) 
+  18D20 (Category theory; homological algebra :: Categories with structure :: Enriched categories ) 
+  18D25 (Category theory; homological algebra :: Categories with structure :: Strong functors, strong adjunctions) 
+  18D99 (Category theory; homological algebra :: Categories with structure :: Miscellaneous) 
+
+
+\section{Description.}
+Organismic supercategories have flexible, algebraic and topological structures that transform naturally under heteromorphisms or heterofunctors. Different approaches to Relational Biology and Biodynamics, developed by Nicolas Rashevsky, Robert Rosen and by the author, were previously compared with the classical approach to qualitative dynamics of systems. Natural transformations of heterofunctors in organismic supercategories lead to specific modular models of a wide range of life processes involving quantum dynamics in genetic systems, ontogenetic development, fertilization, regeneration, neoplasia and oncogenesis. Axiomatic definitions of categories and supercategories of Complex Biological Systems allow for dynamic computations of cell transformations that may lead to neoplasia, and in certain intriguing cases to malignancy. The concepts of quantum automata and quantum computation are applied in the context of quantum genetics and genetic networks to study their nonlinear dynamics. In a previous publication (Baianu,1971a) the formal concept of quantum automaton was introduced and its possible implications for genetic and metabolic activities in living cells and organisms were considered. This was followed by a report on quantum and abstract, symbolic computation based on the theory of categories, functors and natural transformations (Baianu,1971b). The notions of topological semigroup, quantum automaton,or quantum computer, were then suggested with a view to their potential applications to the analogous simulation of biological systems, and especially genetic activities and nonlinear dynamics in genetic networks. Further, detailed studies of nonlinear dynamics in genetic networks were carried out in categories of n-valued, Lukasiewicz Logic Algebras that showed significant dissimilarities (Baianu, 1977; Baianu et al., 2006-2008) from the oversimplified Boolean models of human neural networks.A categorical and Topos framework for \L ukasiewicz Algebraic Logic models of nonlinear dynamics in complex functional genomes and cell interactomes is proposed. \L ukasiewicz Algebraic Logic models of genetic networks and signaling pathways in cells are formulated in terms of nonlinear dynamic systems with n-state components that allow for the generalization of previous logical models of both genetic activities and neural networks. An algebraic formulation of variable 'next-state functions' is extended to a Lukasiewicz Topos endowed with a many-valued \L ukasiewicz Algebraic Logic subobject classifier description that represents non-random and nonlinear network activities as well as their transformations in developmental processes and carcinogenesis. Novel results and specific applications concerning cell interactomics, dynamics of genetic-proteomic networks and signaling pathways, development, regeneration, the control mechanisms of cell dynamic programming in cells, neoplastic transformations and oncogenesis are then derived on the basis of complex system modeling and biomolecular network representations in categories of \L ukasiewicz Logic Algebras and \L ukasiewicz-Topos. Molecular models in terms of categories, functors and natural transformations were then formulated for unimolecular chemical transformations, as well as multi-molecular chemical and biochemical transformations (Baianu, 1983,2004a). Previous applications of computer modeling, classical automata theory, and relational biology to molecular biology, oncogenesis and medicine were extensively reviewed (Baianu,1987). Novel approaches to solving the realization problems of Relational Biology models in Complex System Biology are introduced in terms of natural transformations between functors of such biomolecular supercategories. Natural transformations of organismic superstructure were developed for modelling protein biosynthesis, embryogenesis and nuclear transplant experiments. Other possible realizations in Molecular Biology and Relational Biology of Organisms are here suggested as a novel approach to Bioinformatics to Interactomics and Relational Quantum Genetics.
+\med
+\section{Fundamental Concepts, Definitions and Examples.}
+\med
+\begin{definition}
+Supercategories are defined axiomatically in terms of ETAS (\cite{ICB3})- a natural extension of Lawvere's
+Elementary Theory of Abstract Categories (ETAC) to non-Abelian structures and hetero-functors (or `heterofunctors').
+This provides a unified conceptual framework for Relational Biology that utilizes flexible, algebraic and topological structures which transform naturally under heteromorphisms 
+or heterofunctors. One of the advantages of the ETAS axiomatic approach, which was inspired by the work of 
+Lawvere (\cite{LW1}, \cite{LW2}), is that ETAS avoids all the antimonies/paradoxes previously reported for sets,
+sets of sets, involving for example the elementhood relation or infinite sets, the axiom of choice, and so on (Russell and Whitehead, 1925, and Russell, 1937; \cite{BBGG1}). ETAS also provides an axiomatic approach to recent Higher Dimensional Algebra (\cite{BHS2}, \cite{BGB2}) applications to Complex Systems Biology (\cite{Bgg2}, \cite{BBGG1}, and references cited therein).
+\end{definition}
+
+\med
+\begin{definition} \emph{ETAC Axioms, \cite{LW2}:} 
+
+0. For any letters $x, y, u, A, B$, and \emph{unary function} symbols $\Delta_0$ and $\Delta_1$,
+and \emph{composition law} $\Gamma$, the following are defined as \emph{formulas}: $\Delta_0 (x) = A$,
+$\Delta_1 (x) = B$, $\Gamma (x,y;u)$, and $ x = y$; These formulas are to be, respectively, interpreted as
+``$A$ is the domain of $x$", ``$B$ is the codomain, or range, of $x$", ``$u$ is the composition $x$ followed by $y$",
+and ``$x$ equals $y$". 
+
+1. If $\Phi$ and $\Psi$ are formulas, then ``$[\Phi]$ and $[\Psi]$'' , ``$[\Phi]$ or$[\Psi]$'', ``$[\Phi] \Rightarrow [\Psi]$'', and ``$[not \Phi]$''  are also formulas.
+
+2. If $\Phi$ is a formula and $x$ is a letter, then ``$ \forall x[\Phi]$'', 
+``$ \exists x[\Phi]$'' are also formulas.
+
+3. A string of symbols is a formula in ETAC iff it follows from the above axioms 0 to 2.
+
+A \emph{sentence} is then defined as any formula in which every occurrence of each letter $x$ is within the scope of a quantifier, such as $\forall x$  or $\exists x $.  The \emph{theorems} of ETAC are defined as all those sentences which can be derived through logical inference from the following ETAC axioms:
+
+4. $\Delta_i(\Delta_j(x))=\Delta_j(x)$ for  $i,j = 0, 1$. 
+
+5a. $\Gamma(x,y;u)$ and $\Gamma(x,y;u')\Rightarrow u = u'$.
+
+5b. $ \exists u [\Gamma(x,y;u)] \Rightarrow \Delta_1(x) =  \Delta_0(y)$;
+
+5c. $\Gamma(x,y;u) \Rightarrow \Delta_0(u) =  \Delta_0(x)$ and $\Delta_1(u) =  \Delta_1(y)$.
+
+6. Identity axiom:
+$ \Gamma(\Delta_0 (x), x;x)$ and  $ \Gamma(x, \Delta_1 (x);x)$  yield always the same result.
+
+7. Associativity axiom: $\Gamma(x,y;u)$ and $\Gamma(y,z;w)$ and $\Gamma(x,w;f)$ and $\Gamma(u,z;g)\Rightarrow f = g $.
+With these axioms in mind, one can see that commutative diagrams can be now regarded as certain 
+\textit{abbreviated} formulas corresponding to systems of equations such as:  
+$\Delta_0(f) = \Delta_0(h) = A$, $\Delta_1(f) = \Delta_0(g) = B$, $\Delta_1(g) = \Delta_1(h) = C$ 
+and $\Gamma(f,g;h)$, instead of $g\circ f = h$ for the arrows f, g, and h, drawn respectively between the 
+`objects' A, B and C, thus forming a `triangular commutative diagram` in the usual sense of category theory. Compared with the ETAC formulas such diagrams have the advantage of a geometric--intuitive image of their equivalent underlying equations. The common property of A of being an object is written in shorthand as the abbreviated formula Obj(A) standing for the following three equations:
+
+8a. $A = \Delta_0(A) = \Delta_1(A)$,
+
+8b. $ \exists x[A = \Delta_0 (x)] \exists y[A = \Delta_1 (y)]$,
+
+and 
+
+8c. $\forall x \forall u [\Gamma (x,A; u)\Rightarrow x = u]$ and 
+$ \forall y  \forall v [\Gamma (A,y; v)] \Rightarrow y = v$ .  
+
+Intuitively, with this terminology and axioms a \textit{category} is meant to be any structure which is a direct interpretation of ETAC. A \textit{functor} is then  understood to be a \textit{triple} consisting of two such categories and of a rule F (`the functor') which assigns to each arrow or morphism $x$ of the first category,
+a unique morphism, written as `$F(x)$' of the second category, in such a way that the usual two conditions on both objects and arrows in the standard functor definition are fulfilled (see for example \cite {ICBM})--  the functor is well behaved, it carries object identities to image object identities, and commutative diagrams to image commmutative diagrams of the corresponding image objects and image morphisms.  At the next level, one then defines \textit{natural transformations} or \textit{functorial morphisms} between functors as metalevel abbreviated formulas and equations pertaining to commutative diagrams of the distinct images of two functors acting on both objects and morphisms. As the name indicates natural transformations are also well--behaved in terms of the ETAC equations satisfied. 
+\end{definition}
+
+\med
+\begin{definition} \textit{Supercategories: }
+In the usual sense, super-categories are defined as categories of categories,
+and the process is repeated in higher dimensions in n-categories. There is however
+a `more geometric', or `gluing' construction of double categories, double groupoids (\cite{BS}, and 
+double algebroids \cite{BM}) that involves additional conditions or axioms leading to non-Abelian higher dimensional structures and Higher Dimensional Algebra (HDA;\cite{BS},\cite{BM} and \cite{BGB2}). Similarly, the construction of \textit{supercategories} (\cite{ICB3}), unlike that of $n$-categories, allows for `gluing' together distinct structures
+and/or their corresponding diagrams (such as algebraic and topological ones), through hetero-morphisms or hetero-functors, which are arrows (not necessarily subject to all of the ETAC axioms) linking distinct structures into the superstructure called a \textit{`supercategory}'; the latter is a generalized type of double groupoid, double category, 2-category,..., n-category or super--category/meta--category, that always involves only diagrams of homo-morphisms at each level, but also includes hetero-morphisms or hetero-functors, and so on, between different types of structures. 
+Proper supercategories could also be called \textit{`n-ary'} super-categories, or \textit{multi-categories}, in the sense of extending double groupoid, double algebroid and double category structures to higher dimensions. 
+Note however that even in a general, abstract supercategory at the level of diagrams of homo-morphisms, homo-functors, natural transformations, or any n-categories with only one type of arrows at each level, all the ETAC axioms still hold. On the other hand, at the levels of supercategorical diagrams, or superdiagrams, involving several types of morphisms, or hetero-morphisms and hetero-functors, several of the rules for connecting diagrams are weakened, and the result is a superstructure which does not have all naturality conditions satisfied by all arrows, and one has additional composition laws, such as $\Gamma', \Gamma'', ...$, and so on,  satisfying new ETAS axioms that are not allowed in ETAC. Thus, additional ETAS axioms are needed to also specify how such distinct composition laws are combined within the
+same superstructure. Any interpretation of ETAS axioms (that may include also the ETAC axioms for the special cases of categories, n-categories, double categories, etc) then defines a \textit{supercategory}.
+\end{definition}
+
+\textit{An Example of ETAS Axioms (\cite{ICB3}):} \\
+a. The eight ETAC axioms introduced by W. F. Lawvere for same type morphisms, functors, natural transformations
+and other arrows in higher dimensions. \\
+b. A family of composition laws $\left\{\Gamma_i\right\}$, with $i= 1, 2, ..., n$, and
+each $\Gamma_i$ being subject to ETAC axioms 5 to 7; \\
+c. The composition law conditions in the ETAC axioms 8a to 8c will apply only to (small) subclasses of homo-morphisms and homo-functors (but will not apply to hetero-morphisms and hetero-functors); \\
+d. Hetero-morphism and hetero-functor axioms specifying how two composition laws interact, involving also objects with different structure or type. 
+
+\begin{definition} \emph{: Organismic Supercategory (\cite{ICBM},\cite{ICB3} and \cite{ICB1}.}
+An example of a supercategory interpreting such ETAS axioms as those stated above
+was previously defined for organismic structures with different levels of complexity (\cite{ICB3}); an \textit{organismic supercategory} was thus defined as a \textit{superstructure interpretation of ETAS} (including ETAC, as appropriate) in terms of triples $\textbf{K} = (\emph{C}, \Pi, \textit{N})$, where \emph{C} is an arbitrary category (interpretation of ETAC axioms, formulas, etc.), $\Pi$ is a category of complete self--reproducing entities, $\pi$, (\cite{LO68}) subject to the negation of the axiom of restriction (for elements of sets):
+$ \exists S: (S \neq \oslash) ~ and ~ \forall u: [u \in S) \Rightarrow \exists v: (v \in u)~ and ~( v \in S)]$, (which is known to be independent from the ordinary logico-mathematical and biological reasoning), 
+and $\textit{N}$ is a category of non-atomic expressions, defined as follows.  An  \textit{atomically self--reproducing entity} is a unit class relation $u$ such that  $\pi \pi \left\langle \pi \right\rangle$, which means 
+``$\pi$ stands in the relation $\pi$ to $\pi$'', $\pi \pi \left\langle \pi , \pi \right\rangle$, etc. 
+An expression that does not contain any such atomically self--reproducing entity is called a \textit{non-atomic expression}. \end{definition}
+\med
+\begin{definition}.
+An Example of Supercategories was recently introduced in Mathematical (or more specifically `Categorified') Physics, 
+on the web's n-Category cafe' s site under \textit{``Supercategories"}, at the http-URL: $golem.ph.utexas.edu/category/2007/07/supercategories.html$. This is a rather `simple' example of supercategories, albeit in a much more restricted sense as it still involves only the standard categorical homo-morphisms, homo-functors, and so on; it begins with a somewhat standard definiton of super-categories, or `super categories' from Category Theory, but then it becomes more interesting as it is being tailored to supersymmetry and extensions of `Lie' superalgebras, or superalgebroids, which are sometimes called graded `Lie' algebras (but not really Lie algebras)
+that are thought to be relevant to Quantum Gravity (\cite{BGB2} and references cited therein). The following is an almost exact quote from the above n-Category cafe' s website posted mainly by Urs:  
+A \textit{super category} is a \textit{diagram} of the form: \\
+$\diamond  \diamond Id_C \diamond \textbf{C} \diamond \diamond s$ in \textbf {Cat}--the category of categories and (homo-) functors between categories-- such that: $\diamond  \diamond \textsl{Id} \diamond \diamond Id_C \diamond \textbf{C} \diamond \textbf{C}\diamond \diamond s \diamond \diamond s = \diamond  \diamond Id_C \diamond Id_C  \diamond  \diamond \textsl{Id}$, \\
+(where the `diamond' symbol should be replaced by the symbol `square', as in the original Urs's postings.) 
+\end{definition} 
+(This specific instance is that of a supercategory which has only \textbf{one object}-- the above quoted superdiagram of diamonds, an arbitrary abstract category \textbf{C} (subject to all ETAC axioms), and the standard category identity (homo-) functor; it can be further specialized to the previously introduced concepts of \textit{supergroupoids} (also definable as crossed complexes of groupoids), and \textit{supergroups} (also definable as crossed modules of groups), which seem to be of great interest to mathematicians involved in `Categorified' Mathematical Physics or Physical Mathematics.) This was then continued with the following interesting example. ``What, in this sense, is a \textit{braided monoidal supercategory ?}''.  Urs, suggested the following answer: like an ordinary braided monoidal catgeory is a 3-category which in lowest degrees looks like the trivial 2-group, a braided monoidal supercategory is a 3-category which in lowest degree looks like the strict 2-group that comes from 
+the crossed module $G(2)=(\diamond 2 \diamond \textsl{Id} \diamond 2)$. Urs called this generalization of stabilization of n-categories, $G(2)$-\textit{stabilization}. So the claim would be that braided monoidal supercategories come from 
+$G(2)$-stabilized 3-categories, with $G(2)$ the above strict 2-group.
+
+\med
+\section{Relevant Websites and URLs:}
+http://www.kli.ac.at/theorylab/Keyword/R/RelationalBio.html
+http://cogprints.org/3674/
+http://www.informatics.bangor.ac.uk/public/mathematics/research/preprints/07/cathom07.html
+http://documents.cern.ch/cgi-bin/setlink?base=preprint-categ=ext-id=ext-2004-060
+http://documents.cern.ch/cgi-bin/setlink?base=preprint-categ=ext-id=ext-2004-057
+http://cogprints.ecs.soton.ac.uk/archive/00003674/
+http://cogprints.ecs.soton.ac.uk/archive/00003676/
+http://cogprints.ecs.soton.ac.uk/archive/00003697/
+http://cdsweb.cern.ch/search.py?recid=746662-ln=en
+http://cogprints.ecs.soton.ac.uk/archive/00003701/
+http://cdsweb.cern.ch/search.py?recid=768088-ln=en
+http://cogprints.org/3675/
+http://cogprints.org/3697/
+http://cogprints.org/3676/
+http://cogprints.org/3718/
+http://cogprints.org/3829/
+http://fs512.fshn.uiuc.edu/ComplexSystemsBiology.htm
+http://bioline.utsc.utoronto.ca/archive/00001979/04/compauto.pdf
+http://biblioteca.universia.net/html-bura/ficha/params/id/3920559.html 
+
+\med
+
+\section{Proposed Starting Date of Project:}
+August $2008$
+
+\section{Proposed Ending Date of Project:}
+September $2015$
+\med
+\begin{thebibliography}{9}
+
+\bibitem{ICBM}
+I.C.Baianu and M. Marinescu: 1968, Organismic Supercategories: Towards a Unitary Theory of Systems. \emph{Bulletin of Mathematical Biophysics} \textbf{30}, 148-159.
+
+\bibitem{ICB3}
+I.C. Baianu: 1970, Organismic Supercategories: II. On Multistable Systems. \emph{Bulletin of Mathematical Biophysics}, \textbf{32}: 539-561.
+
+\bibitem{ICB1}
+I.C. Baianu : 1971a, Organismic Supercategories and Qualitative Dynamics of Systems. \emph{Ibid.}, \textbf{33} (3), 339--354.
+
+\bibitem{ICB71}
+I.C. Baianu: 1971b, Categories, Functors and Quantum Algebraic Computations, in P. Suppes (ed.), \emph{Proceed. Fourth Intl. Congress Logic-Mathematics-Philosophy of Science}, September 1--4, 1971, University of Bucharest.
+
+\bibitem{ICB04b}
+I.C. Baianu: \L ukasiewicz-Topos Models of Neural Networks, Cell Genome and Interactome Nonlinear Dynamics). CERN Preprint EXT-2004-059. \textit{Health Physics and Radiation Effects} (June 29, 2004). 
+
+\bibitem{BBGG1}
+I.C. Baianu, Brown R., J. F. Glazebrook, and Georgescu G.: 2006, Complex Nonlinear Biodynamics in 
+Categories, Higher Dimensional Algebra and \L ukasiewicz--Moisil Topos: Transformations of
+Neuronal, Genetic and Neoplastic networks, \emph{Axiomathes} \textbf{16} Nos. 1--2, 65--122.
+
+\bibitem{ICBs5}
+I.C. Baianu and D. Scripcariu: 1973, On Adjoint Dynamical Systems. \emph{The Bulletin of Mathematical Biophysics}, \textbf{35}(4), 475--486.
+
+\bibitem{ICB5}
+I.C. Baianu: 1973, Some Algebraic Properties of \emph{\textbf{(M,R)}}- Systems. \emph{Bulletin of Mathematical Biophysics} \textbf{35}, 213-217.
+
+\bibitem{ICBm2}
+I.C. Baianu and M. Marinescu: 1974, A Functorial Construction of \emph{\textbf{(M,R)}}-- Systems. \emph{Revue Roumaine de Mathematiques Pures et Appliquees} \textbf{19}: 388-391.
+
+\bibitem{ICB6}
+I.C. Baianu: 1977, A Logical Model of Genetic Activities in \L ukasiewicz Algebras: The Non-linear Theory. \emph{Bulletin of Mathematical Biophysics}, \textbf{39}: 249-258.
+
+\bibitem{ICB7}
+I.C. Baianu: 1980, Natural Transformations of Organismic Structures. \emph{Bulletin of Mathematical Biophysics}
+\textbf{42}: 431-446.
+
+\bibitem{ICB8}
+I.C. Baianu: 1983, Natural Transformation Models in Molecular Biology., in \emph{Proceedings of the SIAM Natl. Meet}., Denver, CO.; Eprint: http://cogprints.org/3675/0l/Naturaltransfmolbionu6.pdf.
+
+\bibitem{ICB9}
+I.C. Baianu: 1984, A Molecular-Set-Variable Model of Structural and Regulatory Activities in Metabolic and Genetic Networks., \emph{FASEB Proceedings} \textbf{43}, 917.
+
+\bibitem{ICB2}
+I.C. Baianu: 1987a, Computer Models and Automata Theory in Biology and Medicine., in M. Witten (ed.), 
+\emph{Mathematical Models in Medicine}, vol. 7., Pergamon Press, New York, 1513-1577; \emph{CERN Preprint No. EXT-2004-072:} http://doe.cern.ch//archive/electronic/other/ext/ext-2004-072.pdf.
+
+\bibitem{ICB9b}
+I.C. Baianu: 1987b, Molecular Models of Genetic and Organismic Structures, in \emph{Proceed. Relational Biology Symp.} Argentina; \emph{CERN Preprint No.EXT-2004-067}: http://doc.cern.ch/archive/electronic/other/ext/ext2004
+67/MolecularModels-ICB3.doc.
+
+\bibitem{Bgg2}
+I.C. Baianu, Glazebrook, J. F. and G. Georgescu: 2004, Categories of Quantum Automata and 
+N-Valued \L ukasiewicz Algebras in Relation to Dynamic Bionetworks, \textbf{(M,R)}--Systems and
+Their Higher Dimensional Algebra, \emph{Abstract and Preprint of Report}: 
+ http://www.ag.uiuc.edu/fs401/QAuto.pdf , and 
+http:www.medicalupapers.com/quantum+automata+math+categories+baianu/
+
+
+\bibitem{BHS2}
+R. Brown R, P.J. Higgins, and R. Sivera.: \textit{``Non--Abelian Algebraic Topology''}, . http://www. bangor.ac.uk/mas010/nonab--a--t.html; http://www.bangor.ac.uk/mas010/nonab--t/partI010604.pdf  (\textit{in preparation}).
+(2008)
+
+\bibitem{BGB2}
+R. Brown, J. F. Glazebrook and I. C. Baianu: A categorical and higher dimensional algebra framework for complex systems and spacetime structures, \emph{Axiomathes} \textbf{17}:409--493.
+(2007).
+
+\bibitem{BM}
+R. Brown and G. H. Mosa: Double algebroids and crossed modules of algebroids, University of Wales--Bangor, Maths Preprint, 1986.
+
+\bibitem{BS}
+R. Brown  and C.B. Spencer: Double groupoids and crossed modules,
+\emph{Cahiers Top. G\'eom.Diff.} \textbf{17} (1976), 343-362.
+
+\bibitem{LW1}
+F. W. Lawvere: 1963. Functorial Semantics of Algebraic Theories. Proc. Natl. Acad. Sci. USA, 50: 869--872
+
+\bibitem{LW2}
+F. WLawvere: 1966. The Category of Categories as a Foundation for Mathematics. , In Proc. Conf. Categorical Algebra--L Jolla, 1965, Eilenberg, S et al., eds. Springer --Verlag: Berlin, Heidelberg and New York, pp. 1--20.
+
+\bibitem{LO68}
+L. L$\ddot{o}$fgren: 1968. On Axiomatic Explanation of Complete Self--Reproduction. \emph{Bull. Math. Biophysics}, 
+\textbf{30}: 317--348. 
+
+\end{thebibliography}
+
+\end{document}
+%%%%%
+\end{document}

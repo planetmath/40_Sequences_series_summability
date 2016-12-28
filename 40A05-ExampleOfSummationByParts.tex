@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfSummationByParts}
+\pmcreated{2013-03-22 17:27:56}
+\pmmodified{2013-03-22 17:27:56}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{example of summation by parts}
+\pmrecord{8}{39849}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmrelated{ExampleOfTelescopingSum}
+\pmrelated{SineIntegralInInfinity}
+\pmrelated{ExampleOfSolvingTheHeatEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{identity}
+\textbf{Proposition.}  The series $\displaystyle\sum_{n=1}^\infty\frac{\sin{n\varphi}}{n}$ and $\displaystyle\sum_{n=1}^\infty\frac{\cos{n\varphi}}{n}$ converge for every complex value $\varphi$ which is not an even multiple of $\pi$.
+
+{\em Proof.}  Let $\varepsilon$ be an arbitrary positive number.  One uses the \PMlinkescapetext{identities}
+\begin{align}
+\sin{\varphi}+\sin{2\varphi}+\ldots+\sin{n\varphi} = 
+\frac{\sin(n+\frac{1}{2})\varphi-\sin\frac{\varphi}{2}}{2\sin\frac{\varphi}{2}},
+\end{align}
+\begin{align}
+\cos{\varphi}+\cos{2\varphi}+\ldots+\cos{n\varphi} = 
+\frac{-\cos(n+\frac{1}{2})\varphi+\cos\frac{\varphi}{2}}{2\sin\frac{\varphi}{2}},
+\end{align}
+proved in the entry ``\PMlinkname{example of telescoping sum}{ExampleOfTelescopingSum}''.  These give the \PMlinkescapetext{estimates}
+$$|\sin{\varphi}+\sin{2\varphi}+\ldots+\sin{n\varphi}| \leqq \frac{2}{2|\sin\frac{\varphi}{2}|}\, :=\, K_\varphi,$$
+$$|\cos{\varphi}+\cos{2\varphi}+\ldots+\cos{n\varphi}| \leqq \frac{2}{2|\sin\frac{\varphi}{2}|}\, :=\, K_\varphi$$
+for any\, $n = 1,\,2,\,3,\,\ldots$.  
+We want to apply to the series $\sum_{n=1}^\infty\frac{\cos{n\varphi}}{n}$ the \PMlinkname{Cauchy general convergence criterion}{CauchyCriterionForConvergence} for series.  Let us use here the short notation
+$$\cos{N\varphi}+\cos{(N\!+\!1)\varphi}+\ldots+\cos{(N\!+\!p)\varphi} := S_{N,N+p}\quad 
+(p = 0,\,1,\,2,\,\ldots).$$
+Then, utilizing Abel's summation by parts, we obtain
+$$\left|\sum_{n=N}^{N+P}\frac{\cos{n\varphi}}{n}\right| = 
+\left|\sum_{p=0}^{P}\frac{1}{N\!+\!p}\cos{(N+p)\varphi}\right| = 
+\left|\sum_{p=0}^{P-1}\left(\frac{1}{N\!+\!p}-\frac{1}{N\!+\!p\!+\!1}\right)S_{N,N+p}+\frac{1}{N\!+\!P}S_{N,N+P}\right| \leqq$$
+$$\leqq \sum_{p=0}^{P-1}\left(\frac{1}{N\!+\!p}-\frac{1}{N\!+\!p\!+\!1}\right)|S_{N,N+P}|
++\frac{1}{N+P}|S_{N,N+P}| <$$ 
+$$< \sum_{p=0}^{P-1}\left(\frac{1}{N\!+\!p}-\frac{1}{N\!+\!p\!+\!1}\right)\cdot2K_\varphi+\frac{1}{N\!+\!P}\cdot2K_\varphi\, =\, \frac{1}{N}\cdot2K_\varphi;$$
+the last form is gotten by \PMlinkname{telescoping}{TelescopingSum} the preceding sum and before that by using the identity
+$$S_{N,N+p} = [\cos\varphi+\cos2\varphi+\ldots+\cos(N\!+\!p)\varphi]-[\cos\varphi+\cos2\varphi+\ldots
++\cos(N\!-\!1)\varphi].$$
+Thus we see that
+$$\left|\sum_{n=N}^{N+P}\frac{\cos{n\varphi}}{n}\right| < \frac{2K_\varphi}{N} < \varepsilon$$
+for all\, natural numbers $P$ as soon as\, $N > \frac{2K_\varphi}{\varepsilon}$.  According to the Cauchy criterion, the latter series is convergent for the mentioned values of $\varphi$.  The former series is handled similarly.
+
+
+
+%%%%%
+%%%%%
+\end{document}

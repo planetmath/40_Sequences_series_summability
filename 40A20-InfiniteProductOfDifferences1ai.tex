@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InfiniteProductOfDifferences1ai}
+\pmcreated{2013-03-22 18:39:45}
+\pmmodified{2013-03-22 18:39:45}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{infinite product of differences $1\!-\!a_i$}
+\pmrecord{12}{41405}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A20}
+\pmclassification{msc}{26E99}
+\pmrelated{HarmonicSeriesOfPrimes}
+\pmrelated{InfiniteProductOfSums1A_I}
+\pmrelated{InfiniteProductOfSums1a_i}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{order}
+
+We consider the infinite products of the form
+\begin{align}
+\prod_{i=1}^\infty(1\!-\!a_i) \,=\, (1\!-\!a_1)(1\!-\!a_2)(1\!-\!a_3)\cdots
+\end{align}
+and the series \,$a_1\!+\!a_2\!+\!a_3\!+\ldots$\, where the numbers $a_i$ are nonnegative reals.
+\begin{itemize}
+\item If the series converges, then also the product converges and has a value which does not depend on the order of the factors and vanishes only when some of the factors is 0.
+\item If\, $\displaystyle\lim_{i\to\infty}a_i = 0$\, but the series diverges, then the value of the infinite product is always zero \PMlinkescapetext{even} though no of the factors were zero.
+\end{itemize}
+
+\textbf{Example.}\; $(1\!-\!\frac{1}{2})(1\!-\!\frac{1}{3})(1\!-\!\frac{1}{4})\cdots \;=\; 0$;\; see the harmonic series.\\
+
+{\em Proof.}\, $1^\circ$.\, Now we have\, $\displaystyle\lim_{i\to\infty}a_i = 0$\, (see the necessary condition of convergence of series), and so\, $a_i < \frac{1}{2}$\, when\, $i \geqq i_0$.\, We write
+\begin{align}
+\prod_{i=1}^\infty(1\!-\!a_i) \,=\, \prod_{i=1}^{i_0-1}(1\!-\!a_i)\prod_{i=i_0}^\infty(1\!-\!a_i)
+\end{align}
+and set in the last product
+$$1\!-\!a_i \;=\; \frac{1}{\frac{1}{1\!-\!a_i}} \,=\, \frac{1}{1+\frac{a_i}{1\!-\!a_i}},$$
+whence 
+\begin{align}
+\prod_{i=i_0}^n (1\!-\!a_i) \,=\, \frac{1}{ \prod_{i=i_0}^n\left(1+\frac{a_i}{1\!-\!a_i}\right) }.
+\end{align}
+As\, $a_i < \frac{1}{2}$, we have\, $\displaystyle\frac{1}{1\!-\!a_i} < 2$\, and thus\, 
+$\displaystyle 0 < \frac{a_i}{1\!-\!a_i} < 2\cdot a_i$,\, and therefore the series
+$\displaystyle \sum_{i=i_0}^\infty \frac{a_i}{1\!-\!a_i}$ with nonnegative \PMlinkescapetext{terms} is absolutely convergent.\, The theorem of the \PMlinkid{parent entry}{6204} then says that the product in the denominator of the right hand side of (3) tends, as\, $n \to \infty$,\, to a finite non-zero limit,  which don't depend on the order of the factors.\, Consequently, the same concerns the product of the left hand side of (3).\, By (2), we now infer that the given product (1) converges, its value is \PMlinkescapetext{independent} on the order and it vanishes only along with some of its factors.\\
+$2^\circ$.\, There is an $i_0$ such that\, $a_i < 1$\, when\, $i \geqq i_0$,\, whence\, $\frac{a_i}{1\!-\!a_i} > a_i$\, and the series\, $\displaystyle \sum_{i=i_0}^\infty\frac{a_i}{1\!-\!a_i}$ diverges.\, The denominator of the right hand side of (3) tends, as\, $n \to \infty$,\, to the infinity and thus the product of the left hand side to 0.\, Hence the value of (1) is necessarily 0, also when all factors were distinct from 0.
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc E. Lindel\"of}: {\em Differentiali- ja integralilasku
+ja sen sovellutukset III.2}.\, Mercatorin Kirjapaino Osakeyhti\"o, Helsinki (1940).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

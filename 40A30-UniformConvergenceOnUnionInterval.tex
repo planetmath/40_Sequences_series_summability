@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UniformConvergenceOnUnionInterval}
+\pmcreated{2013-03-22 17:27:09}
+\pmmodified{2013-03-22 17:27:09}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{uniform convergence on union interval}
+\pmrecord{6}{39834}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A30}
+\pmrelated{MinimalAndMaximalNumber}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}  If\, $a < b < c$\, and the sequence \,$f_1,\,f_2,\,f_3,\,\ldots$\, of real functions converges uniformly both on the interval \,$[a,\,b]$\, and on the interval\, $[b,\,c]$,\, then the function sequence converges uniformly also on the \PMlinkname{union}{Union} interval\, $[a,\,c]$.
+
+{\em Proof.}  We have the limit functions $\displaystyle f_{ab} := \lim_{n\to\infty}f_n$\, on\, $[a,\,b]$\, and\, 
+$\displaystyle f_{bc} := \lim_{n\to\infty}f_n$.  It follows that
+$$f_{ab}(b) = \lim_{n\to\infty}f_n(b) = f_{bc}(b).$$
+Define the new function
+\begin{align*}
+f(x) :=
+\begin{cases}
+f_{ab}(x) \quad \forall x\,\in [a,\,b],\\
+f_{bc}(x) \quad \forall x\,\in [b,\,c].
+\end{cases}
+\end{align*}
+Choose an arbitrary positive number $\varepsilon$.  The supposed uniform convergences on the intervals\, $[a,\,b]$\, and\, $[b,\,c]$\, imply the existence of the numbers $n_1(\varepsilon)$ and $n_2(\varepsilon)$ such that
+$$|f_n(x)-f(x)| < \varepsilon\;\;\forall x\,\in [a,\,b],\quad\mbox{when}\; n > n_1(\varepsilon)$$
+and 
+$$|f_n(x)-f(x)| < \varepsilon\;\;\forall x\,\in [b,\,c],\quad\mbox{when}\; n > n_2(\varepsilon).$$
+If one takes\, $n > \max\{n_1(\varepsilon),\,n_2(\varepsilon)\}$,\, then one has simultaneously on both intervals\, $[a,\,b]$\, and\, $[b,\,c]$,\, i.e. on the whole greater interval\, $[a,\,c]$,\, the condition
+$$|f_n(x)-f(x)| < \varepsilon.$$
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

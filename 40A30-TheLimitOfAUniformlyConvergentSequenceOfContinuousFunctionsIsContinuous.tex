@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheLimitOfAUniformlyConvergentSequenceOfContinuousFunctionsIsContinuous}
+\pmcreated{2013-03-22 15:21:58}
+\pmmodified{2013-03-22 15:21:58}
+\pmowner{neapol1s}{9480}
+\pmmodifier{neapol1s}{9480}
+\pmtitle{the limit of a uniformly convergent sequence of continuous functions is continuous}
+\pmrecord{13}{37191}
+\pmprivacy{1}
+\pmauthor{neapol1s}{9480}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A30}
+\pmrelated{LimitFunctionOfSequence}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+{\bf Theorem.} The limit of a uniformly convergent sequence of continuous functions is continuous. 
+
+\emph{Proof.} Let $f_n,f:X\rightarrow Y$, where $(X,\rho)$ and $(Y,d)$ are metric spaces. Suppose $f_n \rightarrow f$ uniformly and each $f_n$ is continuous. Then given any $\epsilon>0$, there exists $N$ such that $n>N$ implies $d(f(x),f_{n}(x)) < \frac{\epsilon}{3}$ for all $x$. Pick an arbitrary $n$ larger than $N$. Since $f_n$ is continuous, given any point $x_0$, there exists $\delta>0$ such that $0<\rho(x,x_0)<\delta$ implies $d(f_n(x), f_n(x_0))<\frac{\epsilon}{3}$. Therefore, given any $x_0$ and $\epsilon>0$, there exists $\delta>0$ such that 
+\[0<\rho(x,x_0)<\delta\Rightarrow d(f(x),f(x_0)) \leq d(f(x),f_n(x)) + d(f_n(x),f_n(x_0)) + d(f_n(x_0),f(x_0)) < \epsilon.\]
+Therefore, $f$ is continuous.
+
+The theorem also generalizes to when $X$ is an arbitrary topological space. To generalize it to $X$ an arbitrary topological space, note that if $d(f_n(x),f(x))< \epsilon/3$ for all $x$, then
+$x_0\in f_n^{-1}(B_{\epsilon/3}(f_n(x_0)))\subseteq f^{-1}(B_\epsilon(f(x_0)))$,
+so $f^{-1}(B_\epsilon(f(x_0)))$ is a neighbourhood of $x_0$. Here $B_{\epsilon}(y)$ denote the open ball of radius $\epsilon$, centered at $y$. 
+%%%%%
+%%%%%
+\end{document}

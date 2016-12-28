@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfComparisonTest}
+\pmcreated{2013-03-22 13:22:06}
+\pmmodified{2013-03-22 13:22:06}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{proof of comparison test}
+\pmrecord{4}{33895}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Assume $|a_k|\leq b_k$ for all $k>n$. Then we define
+$$s_k:=\sum_{i=k}^\infty |a_i|$$
+and
+$$t_k:=\sum_{i=k}^\infty b_i.$$
+Obviously $s_k\leq t_k$ for all $k>n$. Since by assumption $(t_k)$ is \PMlinkid{convergent}{601} $(t_k)$ is bounded and so is $(s_k)$. Also $(s_k)$ is monotonic and therefore \PMlinkescapeword{convergent}. Therefore $\sum_{i=0}^\infty a_i$ is absolutely convergent.
+
+Now assume $b_k\leq a_k$ for all $k>n$. If $\sum_{i=k}^\infty b_i$ is divergent then so is $\sum_{i=k}^\infty a_i$ because otherwise we could apply the test we just proved and show that $\sum_{i=0}^\infty b_i$ is convergent, which is is not by assumption.
+%%%%%
+%%%%%
+\end{document}

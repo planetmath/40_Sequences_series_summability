@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OnesidedContinuityBySeries}
+\pmcreated{2013-03-22 18:34:03}
+\pmmodified{2013-03-22 18:34:03}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{one-sided continuity by series}
+\pmrecord{10}{41291}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A30}
+\pmclassification{msc}{26A03}
+\pmsynonym{one-sided continuity of series with terms one-sidedly continuous}{OnesidedContinuityBySeries}
+\pmrelated{OneSidedContinuity}
+\pmrelated{SumFunctionOfSeries}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, If the function series
+\begin{align}
+\sum_{n=1}^\infty f_n(x)
+\end{align}
+is uniformly convergent on the interval \,$[a,\,b]$,\, on which the \PMlinkescapetext{terms} $f_n(x)$ are continuous from the right or from the left, then the sum function $S(x)$ of the series has the same property.\\
+
+
+{\em Proof.}\, Suppose that the terms $f_n(x)$ are continuous from the right.\, Let $\varepsilon$ be any positive number and
+               $$S(x) \;:=\; S_n(x)+R_{n+1}(x),$$
+where $S_n(x)$ is the $n^\mathrm{th}$ partial sum of (1) ($n \,=\, 1,\,2,\,\ldots$).\, The uniform convergence implies the existence of a number $n_\varepsilon$ such that on the whole interval we have
+     $$|R_{n+1}(x)| < \frac{\varepsilon}{3} \quad \mathrm{when}\;\; n > n_\varepsilon. $$
+Let now\, $n > n_\varepsilon$\, and\; $x_0,\, x_0\!+\!h \in [a,\,b]$\, with\, $h > 0$.\, Since every $f_n(x)$ is continuous from the right in $x_0$, the same is true for the finite sum $S_n(x)$, and therefore there exists a number $\delta_\varepsilon$ such that
+             $$|S_n(x_0\!+\!h)-S_n(x_0)| < \frac{\varepsilon}{3} \quad \mathrm{when}\;\; 0 < h < \delta_\varepsilon.$$
+Thus we obtain that
+\begin{align*}
+|S(x_0\!+\!h)-S(x_0)| & \;=\; |[S_n(x_0\!+\!h)-S_n(x_0)]+R_{n+1}(x_0\!+\!h)-R_{n+1}(x_0|\\
+                      & \;\leqq\; |S_n(x_0\!+\!h)-S_n(x_0)|+|R_{n+1}(x_0\!+\!h)|+|R_{n+1}(x_0)|\\
+                      & \;<\; \frac{\varepsilon}{3}\!+\!\frac{\varepsilon}{3}\!+\!\frac{\varepsilon}{3} \;=\; \varepsilon
+\end{align*}
+as soon as
+$$0 < h < \delta_\varepsilon.$$
+This means that $S$ is continuous from the right in an arbitrary point $x_0$ of\, $[a,\,b]$.
+
+Analogously, one can prove the assertion concerning the continuity from the left.
+%%%%%
+%%%%%
+\end{document}

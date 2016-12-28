@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfLeibnizsTheoremusingDirichletsConvergenceTest}
+\pmcreated{2013-03-22 13:22:17}
+\pmmodified{2013-03-22 13:22:17}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{proof of Leibniz's theorem (using Dirichlet's convergence test)}
+\pmrecord{7}{33900}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmrelated{AlternatingSeries}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\newcommand{\sN}[0]{\mathbb{N}}
+\emph{Proof.} 
+Let us define the sequence $\alpha_n =(-1)^n$ for
+$n\in \sN=\{0,1,2,\ldots\}.$ Then
+ \[\sum_{i=0}^n \alpha_i =\left\{
+ \begin{array}{ll}
+ 1 &\mbox{for even} \,n, \\
+ 0 & \mbox{for odd}\, n,
+ \end{array}\right.\]
+so the sequence $\sum_{i=0}^n \alpha_i$ is bounded.
+By assumption $\{a_n\}_{n=1}^\infty$ is a bounded decreasing 
+sequence with limit $0$.
+For $n\in \sN$ we set $b_{n}:=a_{n+1}$. 
+Using Dirichlet's convergence test, it follows that the series
+$\sum_{i=0}^{\infty} \alpha_i b_i$ converges. Since 
+$$\sum_{i=0}^{\infty} \alpha_i b_i =\sum_{n=1}^{\infty} (-1)^{n+1} a_n,$$
+the claim follows.
+$\Box$
+%%%%%
+%%%%%
+\end{document}

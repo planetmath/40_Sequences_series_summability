@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RealPartSeriesAndImaginaryPartSeries}
+\pmcreated{2013-03-22 17:28:08}
+\pmmodified{2013-03-22 17:28:08}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{real part series and imaginary part series}
+\pmrecord{10}{39854}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40-00}
+%\pmkeywords{real part}
+%\pmkeywords{imaginary part}
+\pmrelated{SumOfSeries}
+\pmrelated{ModulusOfComplexNumber}
+\pmrelated{AbsoluteConvergenceTheorem}
+\pmrelated{RealAndImaginaryPartsOfContourIntegral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{terms}
+
+\textbf{Theorem 1.} Given the series
+\begin{align}
+      z_1+z_2+z_3+\ldots
+\end{align}
+with the real parts of its terms\, $\Re{z_n} = a_n$\, and the imaginary parts of its terms\, $\Im{z_n} = b_n$\, ($n = 1,\,2,\,3,\,\ldots$).  If the series (1) converges and its sum is $A+iB$, where $A$ and $B$ are real, then also the series
+$$a_1+a_2+a_3+\ldots\;\;\;\mbox{and}\;\;\;b_1+b_2+b_3+\ldots$$
+converge and their sums are $A$ and $B$, respectively.  The converse is valid as well.\\
+
+{\em Proof.}  Let $\varepsilon$ be an arbitrary positive number.  Denote the partial sum of (1) by 
+$$S_n = z_1+\ldots+z_n = (a_1+ib_1)+\ldots+(a_n+ib_n) = (a_1+\ldots+a_n)+i(b_1+\ldots+b_n) := A_n+iB_n$$
+($n = 1,\,2,\,3,\,\ldots$).  When (1) converges to the sum $A+iB$, then there is a number $n_\varepsilon$ such that\, for any integer \,$n > n_\varepsilon$\, we have
+$$|(A_n-A)+i(B_n-B)| = |(A_n+iB_n)-(A+iB)| < \varepsilon.$$
+But a complex number is always absolutely at least equal to the real part (see the inequalities in modulus of complex number), and therefore\, $|A_n-A| \leqq |(A_n-A)+i(B_n-B)| < \varepsilon$, similarly\, $|B_n-B| \leqq |(A_n-A)+i(B_n-B)| < \varepsilon$\, as soon as\, $n > n_\varepsilon$.\, Hence,\, $A_n \to A$\, and\, $B_n \to B$\, as\, $n \to \infty$.\, This means the convergences
+$$a_1+a_2+a_3+\ldots = A\;\;\;\mbox{and}\;\;\;b_1+b_2+b_3+\ldots = B,$$
+Q.E.D.  The converse part is straightforward.\\
+
+\textbf{Theorem 2.}  Notations same as in the preceding theorem.  The series
+$$|z_1|+|z_2|+|z_3|+\ldots$$
+converges if and only if the series
+$$a_1+a_2+a_3+\ldots\;\;\;\mbox{and}\;\;\;b_1+b_2+b_3+\ldots$$
+\PMlinkname{converge absolutely}{AbsoluteConvergence}.\\
+
+{\em Proof.} Use the inequalities
+$$0 \leqq |a_n| \leqq |z_n|,\quad 0 \leqq |b_n| \leqq |z_n|$$
+and
+$$0 \leqq |z_n| \leqq |a_n|+|b_n|$$
+for using the comparison test.\\
+
+\textbf{Theorem 3.}  If the series $\displaystyle\sum_{n=1}^\infty|z_n|$ converges, then also the series 
+$\displaystyle\sum_{n=1}^\infty z_n$ converges and we have
+$$\left|\sum_{n=1}^\infty z_n\right| \leqq \sum_{n=1}^\infty|z_n|.$$
+
+{\em Proof.}  By theorem 2, the convergence of $\sum|z_n|$ implies the convergence of $\sum a_n$ and $\sum b_n$, which, by theorem 1, in turn imply the convergence of $\sum z_n$ .  Since for every $n$ the triangle inequality guarantees the inequality
+$$\left|\sum_{j=1}^n z_j\right| \leqq \sum_{j=1}^n|z_j|,$$
+then we must have the asserted limit inequality, too.
+
+
+%%%%%
+%%%%%
+\end{document}

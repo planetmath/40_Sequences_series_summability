@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CoefficientsOfPartialFractionExpansion1}
+\pmcreated{2013-03-11 19:26:06}
+\pmmodified{2013-03-11 19:26:06}
+\pmowner{swapnizzle}{13346}
+\pmmodifier{}{0}
+\pmtitle{Coefficients of Partial Fraction Expansion}
+\pmrecord{1}{50078}
+\pmprivacy{1}
+\pmauthor{swapnizzle}{0}
+\pmtype{Definition}
+
+%none for now
+\begin{document}
+\documentclass[11pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage[mathcal]{eucal}
+\usepackage{xy}
+\textheight 9in
+\textwidth 7in
+\oddsidemargin 0in
+\evensidemargin 0in
+\topmargin 0in
+\headheight 0in
+\headsep 0in
+\title{Coefficients of Partial Fraction Expansion}
+\author{Swapnil Sunil Jain}
+\date{July 28 2006}
+\begin{document}
+\maketitle
+Let us start with the assumption (or rather a Lemma) that any rational proper function $F(s)$ of the form
+\begin{eqnarray}
+&& F(s) = \frac{P(s)}{(s-q)^{r}(s-p_1)(s-p_2)...(s-p_i)...(s-p_n)}
+\end{eqnarray}
+has a partial fraction expansion given by
+\begin{eqnarray}
+&& F(s) = \frac{a_{0}}{(s-q)^{r}} +  \frac{a_{1}}{(s-q)^{r-1}} + ... +  \frac{a_{j}}{(s-q)^{r-j}} + ... +  \frac{a_{r-1}}{(s-q)} \nonumber \\ 
+&& \qquad +  \frac{k_{1}}{(s-p_{1})} + \frac{k_{2}}{(s-p_{2})} + ... + \frac{k_{i}}{(s-p_{i})} + ... + \frac{k_{n}}{(s-p_{n})} 
+\end{eqnarray}
+where $ j = 0,1,2,...,r-1$ and $i = 1,2,3,...,n$ and $q\neq p_1 \neq p_2 \neq ... \neq p_n$. 
+
+First, we determine the coefficient $k_i$. In order to do so, we multiply both sides of equation (2) by $(s-p_{i})$ which then gives us
+\begin{eqnarray}
+&& (s-p_{i})F(s) = \frac{a_{0}}{(s-q)^{r}}(s-p_{i}) +  \frac{a_{1}}{(s-q)^{r-1}}(s-p_{i}) + ... +  \frac{a_{j}}{(s-q)^{r-j}}(s-p_{i}) + ... +  \frac{a_{r-1}}{(s-q)}(s-p_{i}) \nonumber \\ 
+&& \qquad +  \frac{k_{1}}{(s-p_{1})}(s-p_{i}) + \frac{k_{2}}{(s-p_{2})}(s-p_{i}) + ... + \frac{k_{i}}{(s-p_{i})}(s-p_{i}) + ... + \frac{k_{n}}{(s-p_{n})}(s-p_{i}) 
+\end{eqnarray}
+If we then let $s=p_{i}$, all the terms on the R.H.S drop out except the one containing the coefficient $k_i$ and we get
+\begin{eqnarray}
+&& \Big[(s-p_{i})F(s)\Big] {\Bigg|}_{s=p_{i}} = k_i
+\end{eqnarray}
+
+Now, in order to determine the coefficient $a_j$, we multiply both sides of (2) by $(s-q)^{r}$ which yields
+\begin{eqnarray}
+&& (s-q)^{r} F(s) = \frac{a_{0}}{(s-q)^{r}}(s-q)^{r} +  \frac{a_{1}}{(s-q)^{r-1}}(s-q)^{r} + ... +  \frac{a_{j}}{(s-q)^{r-j}}(s-q)^{r} + ... +  \frac{a_{r-1}}{(s-q)}(s-q)^{r} \nonumber \\ 
+&& \qquad + (s-q)^{r}\Bigg[\frac{k_{1}}{(s-p_{1})} + \frac{k_{2}}{(s-p_{2})} + ... + \frac{k_{i}}{(s-p_{i})} + ... + \frac{k_{n}}{(s-p_{n})} \Bigg] \nonumber \\
+&& \Rightarrow (s-q)^{r} F(s) = a_{0} +  a_{1}(s-q)^{1} + ... +  a_{j}(s-q)^{j} + ... +  a_{r-1}(s-q)^{r-1} +  (s-q)^{r}\frac{A(s)}{B(s)}
+\end{eqnarray}
+where we have defined
+\begin{eqnarray*}
+&& \frac{A(s)}{B(s)} \equiv \frac{k_{1}}{(s-p_{1})} + \frac{k_{2}}{(s-p_{2})} + ... + \frac{k_{i}}{(s-p_{i})} + ... + \frac{k_{n}}{(s-p_{n})} 
+\end{eqnarray*}
+
+Then if we take the derivative of the above equation with respect to $s$ and we obtain
+\begin{eqnarray}
+&& \frac{d}{ds}\Big[(s-q)^{r} F(s)\Big] = a_{1} + a_{2}(2)(s-q)+ ... +  a_{j}(j)(s-q)^{j-1} + ...  \nonumber \\
+&& \qquad +  a_{r-1}(r-1)(s-q)^{r-2} +  \frac{d}{ds}\Big[ (s-q)^{r}\frac{A(s)}{B(s)}\Big]
+\end{eqnarray}
+If we again take the derivative of both sides of the above equation with respect to $s$ we get
+\begin{eqnarray}
+&& \frac{d^2}{ds^2}\Big[(s-q)^{r} F(s)\Big] = 2a_{2} + ... +  a_{j}(j)(j-1)(s-q)^{j-2} + ... \nonumber \\
+&& \qquad + a_{r-1}(r-1)(r-2)(s-q)^{r-3} + \frac{d^2}{ds^2}\Big[ (s-q)^{r}\frac{A(s)}{B(s)}\Big]
+\end{eqnarray}
+If we keep taking derivatives this way until we have taken the derivative $j$ times, we arrive at
+\begin{eqnarray}
+&& \frac{d^j}{ds^j}\Big[(s-q)^{r} F(s)\Big] = a_{j}(j)(j-1)(j-2)...(2)(1)(s-q)^{j-j} + ...  \nonumber \\
+&& \qquad + a_{r-1}(r-1)(r-2)...(r-j)(s-q)^{r-j-1} +  \frac{d^j}{ds^j}\Big[ (s-q)^{r}\frac{A(s)}{B(s)}\Big]
+\end{eqnarray}
+If we then let $s=q$, all the terms on the R.H.S drop out except the one containing the coefficient $a_j$ which yields 
+\begin{eqnarray}
+&& \Bigg(\frac{d^j}{ds^j}\Big[(s-q)F(s)\Big]\Bigg){\Bigg|}_{s=q} = a_{j}j!
+\end{eqnarray}
+or 
+\begin{eqnarray}
+&& a_{j} = \frac{1}{j!} \Bigg(\frac{d^j}{ds^j}\Big[(s-q)F(s)\Big]\Bigg){\Bigg|}_{s=q}
+\end{eqnarray}
+\end{document}
+%%%%%
+\end{document}

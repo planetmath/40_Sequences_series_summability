@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LimitComparisonTest}
+\pmcreated{2013-03-22 15:01:31}
+\pmmodified{2013-03-22 15:01:31}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{limit comparison test}
+\pmrecord{4}{36734}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40-00}
+\pmrelated{DeterminingSeriesConvergence}
+\pmrelated{SequenceDeterminingConvergenceOfSeries}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+The following theorem is a powerful test for convergence of series.
+
+\begin{thm}[Limit \PMlinkescapetext{Comparison Test}] Let $\sum_{n=0}^\infty a_n$ and
+$\sum_{n=0}^\infty b_n$ be two series of positive numbers. \\
+\begin{enumerate}
+\item If the limit $$\lim_{n\to \infty} \frac{a_n}{b_n}=L$$ exists and $L\neq 0$ is a
+non-zero finite number, then both series $\sum_{n=0}^\infty a_n$ and
+$\sum_{n=0}^\infty b_n$ converge or both diverge.\\
+\item If $L=0$ and $\sum_{n=0}^\infty b_n$ converges then $\sum_{n=0}^\infty a_n$ converges as well. If $L=0$ and $\sum_{n=0}^\infty a_n$ diverges then $\sum_{n=0}^\infty b_n$ diverges as well.\\
+\item Similarly, if the limit is infinite (``$L=\infty$'') and  $\sum_{n=0}^\infty a_n$ converges then $\sum_{n=0}^\infty b_n$ converges as well. If $L=\infty$ and $\sum_{n=0}^\infty b_n$ diverges then $\sum_{n=0}^\infty a_n$ diverges as well.
+\end{enumerate}
+\end{thm}
+%%%%%
+%%%%%
+\end{document}

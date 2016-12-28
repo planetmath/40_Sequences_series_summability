@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AddingAndRemovingParenthesesInSeries}
+\pmcreated{2013-03-22 18:54:09}
+\pmmodified{2013-03-22 18:54:09}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{adding and removing parentheses in series}
+\pmrecord{13}{41750}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmrelated{EmptySum}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+We consider series with real or complex terms.
+
+\begin{itemize}
+
+\item If one groups the terms of a convergent series by adding parentheses but not changing the order of the terms, the series remains convergent and its sum the same. (See theorem 3 of the \PMlinkid{parent entry}{6517}.)
+
+\item A divergent series can become convergent if one adds an infinite amount of parentheses; e.g.\\
+$1-1+1-1+1-1+-\ldots$ diverges but $(1-1)+(1-1)+(1-1)+\ldots$ converges.
+
+\item A convergent series can become divergent if one removes an infinite amount of parentheses; cf. the preceding example.
+
+\item If a series \PMlinkescapetext{contains} parentheses, they can be removed if the obtained series converges; in this case also the original series converges and both series have the same sum.
+
+\item If the series
+\begin{align}
+(a_1+\ldots+a_r)+(a_{r+1}+\ldots+a_{2r})+(a_{2r+1}+\ldots+a_{3r})+\ldots
+\end{align}
+converges and
+\begin{align}
+\lim_{n\to\infty}a_n \;=\; 0,
+\end{align}
+then also the series 
+\begin{align}
+a_1+a_2+a_3\ldots
+\end{align}
+converges and has the same sum as (1).\\
+
+\emph{Proof.}\, Let $S$ be the sum of the (1).\, Then for each positive integer $n$, there exists an integer $k$ such that\, $kr < n \leqq (k\!+\!1)r$.\, The partial sum of (3) may be written
+$$a_1+\ldots+a_n \;=\; \underbrace{(a_1+\ldots+a_{kr})}_{s}+\underbrace{(a_{kr+1}+\ldots+a_n)}_{s'}.$$
+When\, $n \to \infty$, we have
+$$s \to S$$
+by the convergence of (1) to $S$, and
+$$s' \to 0$$
+by the condition (2).\, Therefore the whole partial sum will tend to $S$, Q.E.D.\\
+
+
+\textbf{Note.}\, The parenthesis expressions in (1) need not be ``equally long'' --- it suffices that their lengths are under an finite bound.
+
+\end{itemize}
+
+%%%%%
+%%%%%
+\end{document}

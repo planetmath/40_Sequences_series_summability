@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StolzCesaroTheorem}
+\pmcreated{2013-03-22 13:17:16}
+\pmmodified{2013-03-22 13:17:16}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Stolz-Cesaro theorem}
+\pmrecord{9}{33774}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+%\pmkeywords{convergence}
+%\pmkeywords{sequence}
+%\pmkeywords{limit}
+\pmrelated{CesaroMean}
+\pmrelated{ExampleUsingStolzCesaroTheorem}
+\pmrelated{KroneckersLemma}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $(a_n)_{n \geq 1}$ and $(b_n)_{n \geq 1}$ be two sequences of real numbers. If $b_n$ is positive, strictly increasing and unbounded and the following limit exists:
+$$ \lim_{n \rightarrow \infty} \frac{a_{n+1}-a_n}{b_{n+1}-b_n}=l$$
+Then the limit:
+$$\lim_{n \rightarrow \infty} \frac{a_n}{b_n}$$ also exists and it is equal to $l$.
+
+\textbf{Remark.}  This theorem is also valid if $a_n$ and $b_n$ are monotone, tending to $0$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LimitOfSequenceAsSumOfSeries}
+\pmcreated{2013-03-22 17:28:21}
+\pmmodified{2013-03-22 17:28:21}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{limit of sequence as sum of series}
+\pmrecord{4}{39858}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40-00}
+\pmrelated{SumOfSeries}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+If $U$ is the limit of a sequence
+        $$u_1,\,u_2,\,u_3,\,\ldots$$
+of real or complex numbers, then $U$ can be expressed as the series sum
+     $$U = u_1+\sum_{i=1}^\infty(u_{i+1}-u_i).$$
+
+{\em Proof.}  Let\, $\displaystyle s_n := u_1+\sum_{i=1}^{n-1}(u_{i+1}-u_i)$.\, We see that
+$$s_n = u_1+\sum_{i=1}^{n-1}u_{i+1}-\sum_{i=1}^{n-1}u_i = u_1+\sum_{j=2}^nu_j-\sum_{i=1}^{n-1}u_i = u_n$$
+for all\, $n = 1,\,2,\,3,\,\ldots$\, Thus
+$$u_1+\sum_{i=1}^\infty(u_{i+1}-u_i) = \lim_{n\to\infty}s_n = \lim_{n\to\infty}u_n = U,$$
+Q.E.D.
+%%%%%
+%%%%%
+\end{document}

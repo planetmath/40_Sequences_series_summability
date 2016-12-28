@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CesaroSummability}
+\pmcreated{2013-03-22 13:07:01}
+\pmmodified{2013-03-22 13:07:01}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{Ces\`aro summability}
+\pmrecord{6}{33547}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40G05}
+\pmrelated{CesaroMean}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+
+\newtheorem{theorem}[proposition]{Theorem}
+\begin{document}
+Ces\`aro summability is a generalized convergence criterion for infinite
+series.  We say that a series $\sum_{n=0}^\infty a_n$ is
+Ces\`aro summable if the Ces\`aro means of the partial sums converge to
+some limit $L$.  To be more precise, letting $$s_N=\sum_{n=0}^N a_n$$
+denote the $N\supth$ partial sum, we say that $\sum_{n=0}^\infty a_n$
+Ces\`aro converges to a limit $L$, if
+$$\frac{1}{N+1}(s_0+\ldots+s_N) \rightarrow L \quad\text{as}\quad N\rightarrow\infty.$$
+
+Ces\`aro summability is a generalization of the usual definition of the
+limit of an infinite series.  
+\begin{proposition}
+  Suppose that
+  $$\sum_{n=0}^\infty a_n = L,$$
+  in the usual sense that
+  $s_N\rightarrow L$ as $N\rightarrow\infty$.  Then, the series in
+  question Ces\`aro converges to the same
+  limit.
+\end{proposition}
+The converse, however is false.  The standard example of a divergent
+series, that is nonetheless Ces\`aro summable is
+$$\sum_{n=0}^\infty (-1)^n.$$
+The sequence of partial sums
+$1,0,1,0,\ldots$ does not converge.  The Ces\`aro means, namely
+$$\frac{1}{1},\frac{1}{2},\frac{2}{3},\frac{2}{4},\frac{3}{5},\frac{3}{6},
+\ldots$$
+do converge, with $1/2$ as the limit. Hence the series in
+question is Ces\`aro summable.
+
+There is also a relation between Ces\`aro summability and Abel
+summability\footnote{This and similar results are often called Abelian
+  theorems.}.
+\begin{theorem}[Frobenius]
+  A series that is Ces\`aro summable is also Abel summable.  To be more
+  precise, suppose that
+  $$\frac{1}{N+1}(s_0+\ldots+s_N) \rightarrow L \quad\text{as}\quad
+  N\rightarrow\infty.$$
+  Then,
+  $$f(r) = \sum_{n=0}^\infty a_n r^n \rightarrow L \quad\text{as}\quad
+  r\rightarrow 1^{-}$$ as well.
+\end{theorem}
+%%%%%
+%%%%%
+\end{document}

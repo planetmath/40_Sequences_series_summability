@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PTest}
+\pmcreated{2013-03-22 15:08:51}
+\pmmodified{2013-03-22 15:08:51}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{$p$ test}
+\pmrecord{6}{36894}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Corollary}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmsynonym{p-test}{PTest}
+\pmsynonym{$p$-test}{PTest}
+\pmsynonym{p test}{PTest}
+\pmsynonym{p series test}{PTest}
+\pmsynonym{$p$-series test}{PTest}
+\pmsynonym{$p$ series test}{PTest}
+\pmrelated{ExamplesUsingComparisonTestWithoutLimit}
+\pmrelated{ASeriesRelatedToHarmonicSeries}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem*{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\lc}{\lim_{x\to c}}
+\newcommand{\lzero}{\lim_{x\to 0}}
+\newcommand{\lhzero}{\lim_{h\to 0}}
+\newcommand{\linf}{\lim_{x\to \infty}}
+\newcommand{\limn}{\lim_{n\to\infty}}
+\newcommand{\sumi}{\sum_{i=1}^\infty }
+\newcommand{\sumn}{\sum_{n=1}^\infty }
+\newcommand{\sumno}{\sum_{n=0}^\infty }
+\newcommand{\sumio}{\sum_{i=1}^\infty }
+\begin{document}
+The following is an immediate corollary of the integral test.
+
+\begin{cor}[{\bf $p$-Test}]
+A series of the form $\sumn \frac{1}{n^p}$ converges if $p>1$ and diverges if $p\leq 1$.
+\end{cor}
+\begin{proof}
+The case $p=1$ is well-known, for $\sumn \frac{1}{n}$ is the harmonic series, which diverges (see \PMlinkname{this proof}{ProofOfDivergenceOfHarmonicSreies}). From now on, we assume $p\neq 1$ (notice that one could also use the integral test to prove the case $p=1$). In order to apply the integral test, we need to calculate the following improper integral:
+$$\int_1^\infty \frac{1}{x^p} dx=\lim_{n\to \infty}\left[ \frac{x^{1-p}}{1-p} \right]_1^n= \limn \frac{n^{-p+1}}{1-p}-\frac{1}{1-p}.$$
+Since $\limn n^t$ diverges when $t>0$ and converges for $t \leq 0$, the integral above converges for $1-p < 0$, i.e. for $p>1$ and diverges for $p<1$ (and also diverges for $p=1$). Therefore, the corollary follows by the integral test.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AbelsLemma}
+\pmcreated{2013-03-22 13:19:49}
+\pmmodified{2013-03-22 13:19:49}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Abel's lemma}
+\pmrecord{14}{33843}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmsynonym{summation by parts}{AbelsLemma}
+\pmsynonym{Abel's partial summation}{AbelsLemma}
+\pmsynonym{Abel's identity}{AbelsLemma}
+\pmsynonym{Abel's transformation}{AbelsLemma}
+\pmrelated{PartialSummation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{limit}
+{\bf Theorem 1 } Let 
+$\{a_i\}_{i=0}^N$ and $\{b_i\}_{i=0}^N$ be sequences of 
+real  (or complex) numbers with $N\ge 0$. 
+For $n=0,\ldots, N$, let $A_n$ be the  partial sum
+$A_n=\sum_{i=0}^na_i$.
+Then 
+$$\sum_{i=0}^N a_i b_i = \sum_{i=0}^{N-1}A_i(b_i-b_{i+1})+A_N b_N.$$
+
+In the trivial case, when $N=0$, then sum on the right hand side
+should be interpreted as identically zero. In other words, 
+if the upper limit is below the lower limit, there is no summation. 
+
+An inductive proof can be found \PMlinkname{here}{ProofOfAbelsLemmaByInduction}. 
+The result can be found in \cite{guenther} (Exercise 3.3.5).
+
+If the sequences are indexed from $M$ to $N$, we have the following 
+variant:
+
+{\bf Corollary}
+Let $\{a_i\}_{i=M}^N$ and $\{b_i\}_{i=M}^N$ be sequences of 
+real  (or complex) numbers with $0\le M \le N$. 
+For $n=M,\ldots, N$, let $A_n$ be the  partial sum
+$A_n=\sum_{i=M}^na_i$.
+Then 
+$$\sum_{i=M}^N a_i b_i = \sum_{i=M}^{N-1}A_i(b_i-b_{i+1})+A_N b_N.$$
+
+\emph{Proof.} By defining
+$a_0=\ldots =a_{M-1}=b_0=\ldots =b_{M-1} =0$, we can apply Theorem 1
+to the sequences $\{a_i\}_{i=0}^N$ and $\{b_i\}_{i=0}^N$.
+$\Box$
+ 
+\begin{thebibliography}{9}
+\bibitem{guenther}
+R.B. Guenther, L.W. Lee,
+\emph{Partial Differential Equations of Mathematical Physics and Integral Equations},
+Dover Publications, 1988.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

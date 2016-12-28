@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfSilvermanToeplitzTheorem}
+\pmcreated{2013-03-22 14:51:35}
+\pmmodified{2013-03-22 14:51:35}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of Silverman-Toeplitz theorem}
+\pmrecord{27}{36533}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40B05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+First, we shall show that the series $\sum_{n=0}^\infty a_{mn} z_n$ converges.  Since the sequence $\{z_n\}$ converges, it must be bounded in absolute value --- there must exist a constant $K > 0$ 
+such that $|z_n| \le K$ for all $n$.  Hence,  $|a_{mn} z_n| \le K |a_{mn}|.$  Summing this gives
+ $$\sum_{n=0}^\infty |a_{mn} z_n| \le K \sum_{n=0}^\infty |a_{mn}| \le KB.$$
+Hence, the series $\sum_{n=0}^\infty a_{mn} z_n$ is absolutely convergent which, in turn, implies that it converges.
+
+ Let $z$ denote the limit of the sequence $\{z_n\}$ as $n \to \infty$. Then $\vert z \vert \le K$.
+ We need to show that, for every $\epsilon > 0$, there exists an integer $M$ such that
+ $$\left| \sum_{n=0}^\infty a_{mn} z_n - z \right| < \epsilon$$
+whenever $m > M$.
+
+Since the sequence $\{z_n\}$ converges, there must exist an integer $n_1$ such that
+ $|z_n - z| < \frac{\epsilon}{4B}$ whenever $n > n_1$.  
+
+By condition 3, there must exist constants $m_o,m_1,  \ldots , m_{n_1}$ such that 
+\begin{equation}
+|a_{mn}| < {\epsilon \over 4 (n_1 +1)(K+1)} \quad \textrm{for} \quad  0 \le n \le n_1 \quad \textrm{and} \quad  m > m_n.
+\end{equation}
+  
+Choose $m'= \max\{ m_0,m_1,  \ldots, m_{n_1} \}.$  Then 
+\begin{equation}
+\left| \sum_{n=0}^{n_1} a_{mn} z_n \right| \le \sum_{n=0}^{n_1} |a_{mn} z_n| < \sum_{n=0}^{n_1} {|z_n| \epsilon \over 4 (n_1+1) (K+1)} < {\epsilon \over 4}
+\end{equation}
+when $m > m'.$
+
+By condition 2, there  exists a constant $m''$ such that
+ $$\left| \sum_{n=0}^\infty a_{mn} - 1 \right| < {\epsilon \over 6 (|z|+1)}$$
+whenever $m > m''$.  By (1),
+ $$\left| \sum_{n=0}^{n_1} a_{mn} \right| < {\epsilon \over 4(K+1)} \le {\epsilon \over 4(|z|+1)}$$
+when $m > m'$.  Hence, if $m > m'$ and $m > m''$, we have
+\begin{equation}
+\left| \sum_{n=n_1 + 1}^\infty a_{mn} - 1 \right| < {\epsilon \over 2(|z|+1)}.
+\end{equation}
+
+and
+\begin{equation}
+ \left| \sum_{n=n_1 + 1}^\infty a_{mn} (z_n - z) \right| \le \sum_{n=n_1 + 1}^\infty |a_{mn}| ~ |z_n - z| < {\epsilon \over 4B} \sum_{n=0}^\infty |a_{mn}| \le {\epsilon \over 4}.
+\end{equation}
+By the triangle inequality and (2), (3), (4) it follows that
+ $$\left| \sum_{n=0}^\infty a_{mn} z_n - z \right| \le \left| \sum_{n=0}^{n_1} a_{mn} z_n \right| + \left| \sum_{n=n_1 + 1}^\infty a_{mn} (z_n - z) \right| + |z| \left| \sum_{n=n_1 + 1}^\infty a_{mn} - 1 \right|$$
+$$ 
+< \frac{\epsilon}{4} + \frac{\epsilon}{4} + \frac{\epsilon}{2} = \epsilon.
+$$
+
+
+%%%%%
+%%%%%
+\end{document}

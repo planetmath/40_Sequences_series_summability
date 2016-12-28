@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RemainderTermSeries}
+\pmcreated{2014-05-16 21:09:46}
+\pmmodified{2014-05-16 21:09:46}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{remainder term series}
+\pmrecord{13}{88073}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmclassification{msc}{40-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+% \usepackage[utf8]{inputenc}
+ \usepackage{amsthm}
+ \usepackage[T2A]{fontenc}
+ \usepackage[russian, english]{babel}
+
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage[T2A]{fontenc}
+\usepackage[russian,english]{babel}
+
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+For any series
+\begin{align}
+a_1+a_2+a_3+\ldots
+\end{align}
+of real or complex terms $a_j$ one may interpret its $m$'th 
+remainder term 
+\begin{align}
+R_m \;:=\; a_{m+1}+a_{m+2}+\ldots
+\end{align}
+as a series.\, This {\it remainder term series} has its own 
+partial sums
+\begin{align}
+S_m^{(n)}\;:=\; a_{m+1}+a_{m+2}+\ldots+a_{m+n} \qquad 
+(n \;=\; 1,2,\ldots).
+\end{align}
+If\, $m+n =k$, then the $k^{\mathrm{th}}$ partial sum of the original series (1) 
+is
+\begin{align}
+S_k \;=\; S_m+S_m^{(n)}.
+\end{align}
+For a fixed $m$, the limit $\lim_{k\to\infty}S_k$ apparently 
+exists iff the limit 
+$\lim_{n\to\infty}S_m^{(n)}$ exists.\, Thus we can write the\\
+\textbf{Theorem.}\, The series (1) is convergent if and only if 
+each remainder term series (2) is convergent.\\
+
+Cf. the entry ``finite changes in convergent series''.
+
+
+\begin{thebibliography}{9}
+\bibitem{K} \CYRL. \CYRD. 
+\CYRK\cyru\cyrd\cyrr\cyrya\cyrv\cyrc\cyre\cyrv:
+\emph{\CYRM\cyra\cyrt\cyre\cyrm\cyra\cyrt\cyri\cyrch\cyre\cyrs\cyrk\cyri\cyrishrt\,\cyra\cyrn\cyra\cyrl\cyri\cyrz}.\,\CYRI\cyrz\cyrd\cyra\cyrt\cyre\cyrl\cyrsftsn\cyrs\cyrt\cyrv\cyro 
+\, ``\CYRV\cyrery\cyrs\cyrsh\cyra\cyrya \, \cyrsh\cyrk\cyro\cyrl\cyra''. 
+\CYRM\cyro\cyrs\cyrk\cyrv\cyra \,(1970).
+\end{thebibliography} \\
+
+
+\end{document}

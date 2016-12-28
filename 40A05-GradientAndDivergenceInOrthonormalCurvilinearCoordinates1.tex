@@ -1,0 +1,168 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GradientAndDivergenceInOrthonormalCurvilinearCoordinates1}
+\pmcreated{2013-03-11 19:26:23}
+\pmmodified{2013-03-11 19:26:23}
+\pmowner{swapnizzle}{13346}
+\pmmodifier{}{0}
+\pmtitle{Gradient and Divergence in Orthonormal Curvilinear Coordinates}
+\pmrecord{1}{50079}
+\pmprivacy{1}
+\pmauthor{swapnizzle}{0}
+\pmtype{Definition}
+
+%none for now
+\begin{document}
+\documentclass[11pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage[mathcal]{eucal}
+\usepackage{xy}
+\textheight 9in
+\textwidth 6.5in
+\oddsidemargin 0in
+\evensidemargin 0in
+\topmargin 0in
+\headheight 0in
+\headsep 0in
+\title{Gradient and Divergence in Orthonormal Curvilinear Coordinates}
+\author{Swapnil Sunil Jain}
+\date{Aug 7, 2006}
+\begin{document}
+\maketitle
+\subsection*{Gradient in Curvilinear Coordinates}
+In rectangular coordinates (where $f = f(x,y,z)$), an infinitesimal length vector $d\vec{l}$ is given by
+\begin{eqnarray*}
+&& d\vec{l} = dx\hat{x} + dy\hat{y} + dz\hat{z}
+\end{eqnarray*} 
+the gradient is given by 
+\begin{eqnarray*}
+&& \nabla = \frac{\partial}{\partial x}\hat{x} + \frac{\partial}{\partial y}\hat{y} + \frac{\partial}{\partial z}\hat{z}
+\end{eqnarray*} 
+and the differential change in the output is given by 
+\begin{eqnarray*}
+&& df = \nabla f \circ d\vec{l} = \frac{\partial f}{\partial x}dx + \frac{\partial f}{\partial y}dy + \frac{\partial f}{\partial z}dz 
+\end{eqnarray*} 
+Similarly in orthonormal curvilinear coordinates ( where $f = f(q_1,q_2,q_3)$), the infinitesimal length vector is given by\footnote[1]{See my article $\emph{Unit Vectors in Curvilinear Coordinates}$ for an insight into this expression.} 
+\begin{eqnarray*}
+&& d\vec{l} = h_1 dq_1 \hat{q}_1 + h_2 dq_2 \hat{q}_2 + h_3 dq_3 \hat{q}_3
+\end{eqnarray*} 
+where
+\begin{eqnarray*}
+&& h_i = \sqrt{\sum_k \Big(\frac{\partial \vec{x}_k}{\partial q_i}\Big)^2} \mbox{ and }  \hat{q}_i = \frac{1}{h_i} \Big(\frac{\partial \vec{x}_k}{\partial q_i}\Big) \mbox{ for } i\in {1,2,3}
+\end{eqnarray*}  
+So if 
+\begin{eqnarray*}
+&& \nabla = \alpha \frac{\partial}{\partial q_1} \hat{q}_1 + \beta \frac{\partial }{\partial q_2} \hat{q}_2 + \gamma \frac{\partial }{\partial q_3} \hat{q}_3
+\end{eqnarray*} 
+then since we know that 
+\begin{eqnarray*}
+&& df =  \frac{\partial f}{\partial q_1} dq_1 + \frac{\partial f}{\partial q_2} dq_2 + \frac{\partial f}{\partial q_3} dq_3
+\end{eqnarray*} 
+and 
+\begin{eqnarray*}
+&& df = \nabla F \circ d\vec{l} = \alpha h_1 \frac{\partial f}{\partial q_1} dq_1 + \beta h_2 \frac{\partial f}{\partial q_2} dq_2 + \gamma h_3 \frac{\partial f}{\partial q_3} dq_3
+\end{eqnarray*} 
+this implies that 
+\begin{eqnarray*}
+\alpha = \frac{1}{h_i}; \beta = \frac{1}{h_2}; \gamma = \frac{1}{h_3}
+\end{eqnarray*}
+Hence, 
+\begin{eqnarray*}
+\nabla &=& \frac{1}{h_1} \frac{\partial}{\partial q_1} \hat{q}_1 +  \frac{1}{h_2} \frac{\partial }{\partial q_2} \hat{q}_2 +  \frac{1}{h_3} \frac{\partial }{\partial q_3} \hat{q}_3 \\
+&=& \sum_i \frac{1}{h_i} \frac{\partial}{\partial q_i} \hat{q}_i
+\end{eqnarray*}
+ 
+\subsection*{Divergence in Curvilinear Coordinates}
+In the previous section we concluded that in curvilinear coordinates, the gradient operator $\nabla$ is given by 
+\begin{eqnarray*}
+&& \nabla = \sum_i \frac{1}{h_i} \frac{\partial}{\partial q_i} \hat{q}_i
+\end{eqnarray*} 
+Then for $\vec{F} = F_1\hat{q}_1 + F_2\hat{q}_2 + F_3\hat{q}_3$, the divergence of $\vec{F}$ is given by 
+\begin{eqnarray*}
+&& \nabla \circ \vec{F} = \Big( \sum_i \frac{1}{h_i} \frac{\partial}{\partial q_i} \hat{q}_i \Big) \circ \vec{F}
+\end{eqnarray*} 
+which is not equal to 
+\begin{eqnarray*}
+\Big( \sum_i \frac{1}{h_i} \frac{\partial}{\partial q_i} \hat{q}_i \Big) \circ \vec{F} \neq \sum_i \frac{1}{h_i} \frac{\partial F_i}{\partial q_i}
+\end{eqnarray*} 
+as one would think! The real expression can be derived the following way, 
+
+\begin{eqnarray*}
+&& = \sum_i \Big[ \Big(\frac{1}{h_i} \frac{\partial}{\partial q_i} \hat{q}_i \Big) \circ \vec{F}\Big] \\
+&& = \sum_i \Big[ \Big(\frac{1}{h_i} \hat{q}_i \Big) \circ \Big( \frac{\partial \vec{F}}{\partial q_i} \Big) \Big] \\
+&& = \sum_i \Big[ \Big(\frac{1}{h_i} \hat{q}_i \Big) \circ \Big( \frac{\partial}{\partial q_i} \Big(\sum_j F_j \hat{q}_j\Big) \Big) \Big]
+\end{eqnarray*} 
+\begin{eqnarray*}
+&& = \sum_i \Big[ \Big(\frac{1}{h_i} \hat{q}_i \Big) \circ \Big( \sum_j \frac{\partial}{\partial q_i} \Big(F_j \hat{q}_j\Big) \Big) \Big] \\
+&& = \sum_i \Big[ \Big(\frac{1}{h_i} \hat{q}_i \Big) \circ \Big( \sum_j \hat{q}_j \frac{\partial F_j}{\partial q_i} +  F_j \frac{\partial \hat{q}_j}{\partial q_i} \Big) \Big]
+\end{eqnarray*} 
+\begin{eqnarray*}
+&& = \sum_i \Big[ \Big(\frac{1}{h_i} \hat{q}_i \Big) \circ \Big( \sum_j \hat{q}_j \frac{\partial F_j}{\partial q_i} +  \sum_j F_j \frac{\partial \hat{q}_j}{\partial q_i} \Big) \Big] \\
+&& = \sum_i \Big[  \Big(\frac{1}{h_i} \hat{q}_i \Big) \circ \sum_j \hat{q}_j \frac{\partial F_j}{\partial q_i} +  \Big(\frac{1}{h_i} \hat{q}_i \Big)\circ \sum_j F_j \frac{\partial \hat{q}_j}{\partial q_i} \Big]
+\end{eqnarray*} 
+
+\begin{eqnarray*}
+&& = \underbrace{ \sum_i \Big[ \Big(\frac{1}{h_i} \hat{q}_i \Big) \circ \sum_j \hat{q}_j \frac{\partial F_j}{\partial q_i} \Big]}_{\mbox{call it A}} + \underbrace{\sum_i \Big[ \Big(\frac{1}{h_i} \hat{q}_i \Big)\circ \sum_j F_j \frac{\partial \hat{q}_j}{\partial q_i} \Big]}_{\mbox{call it B}}
+\end{eqnarray*} 
+
+\begin{eqnarray*}
+A &=& \sum_i \Big[ \Big(\frac{1}{h_i} \hat{q}_i \Big) \circ \sum_j \hat{q}_j \frac{\partial F_j}{\partial q_i} \Big] \\
+&=& \sum_i \Big[ \frac{1}{h_i}  \sum_j \underbrace{(\hat{q}_i \circ \hat{q}_j)}_{\delta_{ij}} \frac{\partial F_j}{\partial q_i} \Big] \\
+&=& \sum_i \frac{1}{h_i}\frac{\partial F_i}{\partial q_i}
+\end{eqnarray*} 
+
+\begin{eqnarray*}
+B &=& \sum_i \Big[ \Big(\frac{1}{h_i} \hat{q}_i \Big) \circ \sum_j F_j \frac{\partial \hat{q}_j}{\partial q_i} \Big]
+\end{eqnarray*} 
+
+Using the following equality\footnote[2]{The proof of this identity is left as an exercise for the reader.} 
+\begin{eqnarray*}
+\frac{\partial \hat{q}_j}{\partial q_i} = \frac{\hat{q}_i}{h_j}\frac{\partial h_i}{\partial q_j} \qquad \forall i \neq j
+\end{eqnarray*} 
+we can write $B$ as
+\begin{eqnarray*}
+B &=& \sum_i \Big[ \Big(\frac{1}{h_i} \hat{q}_i \Big)\circ \sum_j F_j \Big( \hat{q}_i \frac{1}{h_j}\frac{\partial h_i}{\partial q_j}\Big) \Big] \qquad \forall i \neq j \\
+&=& \sum_i \Big[ \frac{1}{h_i} \sum_j F_j \underbrace{(\hat{q}_i \circ \hat{q}_i)}_{1} \frac{1}{h_j}\frac{\partial h_i}{\partial q_j} \Big] \qquad \forall i \neq j \\
+&=& \sum_i \Big[ \frac{1}{h_i} \sum_j F_j \frac{1}{h_j}\frac{\partial h_i}{\partial q_j} \Big] \qquad \forall i \neq j \\
+&=& \sum_{i\neq j} \frac{F_j}{h_j h_i}\frac{\partial h_i}{\partial q_j} \\
+&=& \sum_{i\neq 1} \frac{F_1}{h_1 h_i}\frac{\partial h_i}{\partial q_1} + \sum_{i\neq 2} \frac{F_2}{h_2 h_i}\frac{\partial h_i}{\partial q_2} + \sum_{i\neq 3} \frac{F_3}{h_3 h_i}\frac{\partial h_i}{\partial q_3}
+\end{eqnarray*} 
+
+\begin{eqnarray*}
+\Rightarrow \nabla \circ \vec{F} &=& A + B \\
+&=& \sum_i \frac{1}{h_i}\frac{\partial F_i}{\partial q_i} + \sum_{i\neq 1} \frac{F_1}{h_1 h_i}\frac{\partial h_i}{\partial q_1} + \sum_{i\neq 2} \frac{F_2}{h_2 h_i}\frac{\partial h_i}{\partial q_2} + \sum_{i\neq 3} \frac{F_3}{h_3 h_i}\frac{\partial h_i}{\partial q_3} \\
+&=& \Big[ \frac{1}{h_1}\frac{\partial F_1}{\partial q_1} + \frac{1}{h_2}\frac{\partial F_2}{\partial q_2} + \frac{1}{h_3}\frac{\partial F_3}{\partial q_3} \Big] \\
+&& + \Big[ \frac{F_1}{h_1 h_2}\frac{\partial h_2}{\partial q_1} + \frac{F_1}{h_1 h_3}\frac{\partial h_3}{\partial q_1} \Big] \\
+&& + \Big[ \frac{F_2}{h_2 h_1}\frac{\partial h_1}{\partial q_2} + \frac{F_2}{h_2 h_3}\frac{\partial h_3}{\partial q_2} \Big] \\
+&& + \Big[ \frac{F_3}{h_3 h_1}\frac{\partial h_1}{\partial q_3} + \frac{F_3}{h_3 h_2}\frac{\partial h_2}{\partial q_3} \Big]
+\end{eqnarray*} 
+
+Collecting similar terms together we get, 
+\begin{eqnarray*}
+\nabla \circ \vec{F} &=& \Big[ \frac{1}{h_1}\frac{\partial F_1}{\partial q_1} +  \frac{F_1}{h_1 h_2}\frac{\partial h_2}{\partial q_1} + \frac{F_1}{h_1 h_3}\frac{\partial h_3}{\partial q_1} \Big] \\
+&& + \Big[ \frac{1}{h_2}\frac{\partial F_2}{\partial q_2} + \frac{F_2}{h_2 h_1}\frac{\partial h_1}{\partial q_2} + \frac{F_2}{h_2 h_3}\frac{\partial h_3}{\partial q_2} \Big] \\
+&& + \Big[ \frac{1}{h_3}\frac{\partial F_3}{\partial q_3} + \frac{F_3}{h_3 h_1}\frac{\partial h_1}{\partial q_3} + \frac{F_3}{h_3 h_2}\frac{\partial h_2}{\partial q_3}\Big]
+\end{eqnarray*} 
+
+If we define $\Omega \equiv \Pi_i h_i$, we can further write the above expression as
+\begin{eqnarray*}
+\nabla \circ \vec{F} &=& \Big[ \frac{h_2 h_3}{\Omega}\frac{\partial F_1}{\partial q_1} +  \frac{F_1 h_3}{\Omega}\frac{\partial h_2}{\partial q_1} + \frac{F_1 h_2}{\Omega}\frac{\partial h_3}{\partial q_1} \Big] \\
+&& + \Big[ \frac{h_1 h_3}{\Omega}\frac{\partial F_2}{\partial q_2} + \frac{F_2 h_3}{\Omega}\frac{\partial h_1}{\partial q_2} + \frac{h_1 F_2}{\Omega}\frac{\partial h_3}{\partial q_2} \Big] \\
+&& + \Big[ \frac{h_1 h_2}{\Omega}\frac{\partial F_3}{\partial q_3} + \frac{h_2 F_3 }{\Omega}\frac{\partial h_1}{\partial q_3} + \frac{h_1 F_3 }{\Omega}\frac{\partial h_2}{\partial q_3}\Big] \\
+&=& \frac{1}{\Omega} \Bigg(\Big[\frac{\partial F_1}{\partial q_1} h_2 h_3 + F_1 h_3\frac{\partial h_2}{\partial q_1} + F_1 h_2 \frac{\partial h_3}{\partial q_1} \Big] \\
+&& + \Big[ h_1 \frac{\partial F_2}{\partial q_2} h_3 + \frac{\partial h_1}{\partial q_2} F_2 h_3 + h_1 F_2 \frac{\partial h_3}{\partial q_2} \Big] \\
+&& + \Big[ h_1 h_2 \frac{\partial F_3}{\partial q_3} + \frac{\partial h_1}{\partial q_3}h_2 F_3 + h_1 \frac{\partial h_2}{\partial q_3} F_3 \Big] \Bigg) \\
+&=& \frac{1}{\Omega} \Big(\frac{\partial}{\partial q_1}(F_1 h_2 h_3)  +  \frac{\partial}{\partial q_2}(h_1 F_2 h_3) + \frac{\partial}{\partial q_3}(h_1 h_2 F_3) \Big) 
+\end{eqnarray*}
+Hence,
+\begin{eqnarray*}
+\nabla \circ \vec{F} &=& \frac{1}{\Omega} \sum_i \frac{\partial}{\partial q_i}\Big(\frac{\Omega}{h_i} F_i \Big) \quad \mbox{ where } \Omega = \Pi_i h_i 
+\end{eqnarray*}
+
+\end{document}
+%%%%%
+\end{document}

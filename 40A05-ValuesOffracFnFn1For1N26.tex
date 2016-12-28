@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ValuesOffracFnFn1For1N26}
+\pmcreated{2013-03-22 17:23:54}
+\pmmodified{2013-03-22 17:23:54}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{values of $\frac{F_n}{F_{n - 1}}$ for $1 < n < 26$}
+\pmrecord{4}{39767}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmclassification{msc}{11B39}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The golden ratio $\phi$ is an irrational number, approximately 1.6180339887498948482045868. Dividing one Fibonacci number by the previous gives better and better approximations to the golden ratio the bigger the numbers get. One division gets a little under, then the next a little over, as the table below shows. 144 divided by 89 is probably good enough for most practical purposes.
+
+\begin{tabular}{|r|r|r|r|}
+$F_n$ & $F_{n - 1}$ & $\frac{F_n}{F_{n - 1}}$ to 20 decimal places & Approximation error \\
+1 & 1 & 1.00000000000000000000 & -0.61803398874989484820 \\
+2 & 1 & 2.00000000000000000000 & 0.38196601125010515179 \\
+3 & 2 & 1.50000000000000000000 & -0.11803398874989484820 \\
+5 & 3 & 1.66666666666666666666 & 0.04863267791677181846 \\
+8 & 5 & 1.60000000000000000000 & -0.01803398874989484820 \\
+13 & 8 & 1.62500000000000000000 & 0.00696601125010515179 \\
+21 & 13 & 1.61538461538461538461 & -0.00264937336527946358 \\
+34 & 21 & 1.61904761904761904761 & 0.00101363029772419941 \\
+55 & 34 & 1.61764705882352941176 & -0.00038692992636543643 \\
+89 & 55 & 1.61818181818181818181 & 0.00014782943192333361 \\
+144 & 89 & 1.61797752808988764044 & -0.00005646066000720775 \\
+233 & 144 & 1.61805555555555555555 & 0.00002156680566070735 \\
+377 & 233 & 1.61802575107296137339 & -0.00000823767693347481 \\
+610 & 377 & 1.61803713527851458885 & 0.00000314652861974065 \\
+987 & 610 & 1.61803278688524590163 & -1.20186464894656524257 \\
+1597 & 987 & 1.61803444782168186423 & 0.00000045907178701603 \\
+2584 & 1597 & 1.61803381340012523481 & -0.00000017534976961338 \\
+4181 & 2584 & 1.61803405572755417956 & 0.00000066977659331361 \\
+6765 & 4181 & 1.61803396316670652953 & -0.00000002558318831866 \\
+10946 & 6765 & 1.61803399852180339985 & 0.00000000977190855164 \\
+17711 & 10946 & 1.61803398501735793897 & -0.00000000373253690923 \\
+28657 & 17711 & 1.61803399017559708655 & 0.00000000142570223835 \\
+46368 & 28657 & 1.61803398820532505147 & -0.00000000054456979673 \\
+75025 & 46368 & 1.61803398895790200138 & 0.00000000020800715317 \\
+\end{tabular}
+%%%%%
+%%%%%
+\end{document}

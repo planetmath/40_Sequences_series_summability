@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfDivergenceOfHarmonicSeriesbyGroupingTerms}
+\pmcreated{2013-03-22 15:08:39}
+\pmmodified{2013-03-22 15:08:39}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of divergence of harmonic series (by grouping terms)}
+\pmrecord{9}{36890}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The harmonic series can be shown to diverge by a simple argument involving grouping terms.  Write
+ \[ \sum_{n=1}^{2^M} \frac{1}{n} = \sum_{m=1}^M \sum_{n=2^{m-1}+1}^{2^m} \frac{1}{n}. \]
+Since $1/n \ge 1/N$ when $n \le N$, we have
+ \[ \sum_{n=2^{m-1}+1}^{2^m} \frac{1}{n} \ge \sum_{n=2^{m-1}+1}^{2^m} 2^{-m} = (2^m - 2^{m-1}) 2^{-m} = \frac{1}{2} \]
+Hence,
+ \[ \sum_{n=1}^{2^M} \frac{1}{n} \ge \frac{M}{2} \]
+so the series diverges in the limit $M \to \infty$.
+%%%%%
+%%%%%
+\end{document}

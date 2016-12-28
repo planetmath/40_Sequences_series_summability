@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BoundednessOfTermsOfPowerSeries}
+\pmcreated{2013-03-22 18:50:44}
+\pmmodified{2013-03-22 18:50:44}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{boundedness of terms of power series}
+\pmrecord{5}{41653}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A30}
+\pmclassification{msc}{30B10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, If the set
+$$\{a_0,\;a_1c,\; a_2c^2,\;\ldots\}$$
+of the \PMlinkescapetext{terms} of a power series 
+$$\sum_{n=0}^\infty a_nz^n$$
+at the point \,$z = c$\, is \PMlinkname{bounded}{BoundedInterval}, then the power series converges, \PMlinkescapetext{even} \PMlinkname{absolutely}{AbsoluteConvergence}, for any value $z$ which satisfies
+$$|z| < |c|.$$\\
+
+\emph{Proof.}\, By the assumption, there exists a positive number $M$ such that
+$$|a_nc^n| < M \quad \forall\, n \,=\, 0,\,1,\,2,\,\ldots$$
+Thus one gets for the coefficients of the series the estimation
+$$|a_n| < \frac{M}{|c|^n}.$$
+If now\, $|z| < |c|$,\, one has
+$$|a_nz^n| < M\left|\frac{z}{c}\right|^n,$$
+and since the geometric series $\displaystyle\sum_{n=0}^\infty\left|\frac{z}{c}\right|^n$ is convergent, then also the real series $\displaystyle\sum_{n=0}^\infty|a_nz^n|$ converges.
+%%%%%
+%%%%%
+\end{document}

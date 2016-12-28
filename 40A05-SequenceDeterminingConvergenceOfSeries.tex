@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SequenceDeterminingConvergenceOfSeries}
+\pmcreated{2013-03-22 19:06:54}
+\pmmodified{2013-03-22 19:06:54}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{sequence determining convergence of series}
+\pmrecord{6}{42008}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmrelated{LimitComparisonTest}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, Let $a_1\!+\!a_2\!+\ldots$ be any series of real \PMlinkescapetext{terms} $a_n$.\, If the positive numbers $r_1,\,r_2,\,\ldots$\, are such that
+\begin{align}
+\lim_{n\to\infty}\frac{a_n}{r_n} \;=\; L \;\neq\, 0,
+\end{align}
+then the series converges simultaneously with the series $r_1\!+\!r_2\!+\ldots$\\
+
+
+\emph{Proof.}\, In the case that the limit (1) is positive, the supposition implies that there is an integer $n_0$ such that 
+\begin{align}
+0.5L \;<\; \frac{a_n}{r_n} \;<\; 1.5L \quad \textrm{for  } n \geqq n_0.
+\end{align}
+Therefore
+$$0 \;<\; 0.5Lr_n \;<\; a_n \;<\; 1.5Lr_n \quad \textrm{for all  } n \geqq n_0,$$
+and since the series $\sum_{n=1}^\infty0.5Lr_n$ and $\sum_{n=1}^\infty1.5Lr_n$ converge simultaneously with the series $r_1\!+\!r_2\!+\ldots$, the comparison test guarantees that the same concerns the given series $a_1\!+\!a_2\!+\ldots$\\
+
+The case where (1) is negative, whence we have
+$$\lim_{n\to\infty}\frac{-a_n}{r_n} \;=\; -L > 0,$$
+may be handled as above.\\
+
+
+\textbf{Note.}\, For the case\, $L = 0$, see the limit comparison test.
+
+
+%%%%%
+%%%%%
+\end{document}

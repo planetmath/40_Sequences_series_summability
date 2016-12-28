@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AbelsMultiplicationRuleForSeries}
+\pmcreated{2014-11-22 21:19:35}
+\pmmodified{2014-11-22 21:19:35}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Abel's multiplication rule for series}
+\pmrecord{8}{40444}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmsynonym{Abel's multiplication rule}{AbelsMultiplicationRuleForSeries}
+\pmrelated{AbelsLimitTheorem}
+\pmrelated{NielsHenrikAbel}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Cauchy has originally presented the multiplication rule 
+\begin{align}
+\sum_{j=1}^\infty{a_j}\cdot\sum_{k=1}^\infty{b_k} = \sum_{n=1}^\infty(a_1b_n+a_2b_{n-1}+\ldots+a_nb_1)
+\end{align}
+for two series. \,His assumption was that both of the multiplicand series should be absolutely convergent.\, Mertens (1875) lightened the assumption requiring that both multiplicands should be convergent but at least one of them absolutely convergent (see the \PMlinkname{parent}{MultiplicationOfSeries} entry).\, N. H. Abel's most general form of the multiplication rule is the
+
+\textbf{Theorem.}\, The rule (1) for multiplication of series with real or complex terms is valid as soon as all three of its series are convergent.\\
+
+{\em Proof.}\, We consider the corresponding power series
+\begin{align}
+\sum_{j=1}^\infty{a_j}x^j, \qquad \sum_{k=1}^\infty{b_k}x^k.
+\end{align}
+When\, $x = 1$,\, they give the series
+$$\sum_{j=1}^\infty{a_j}, \quad \sum_{k=1}^\infty{b_k}$$
+which we assume to converge.\, Thus the power series are absolutely convergent for $|x| < 1$, whence they obey the multiplication rule due to Cauchy:
+\begin{align}
+\sum_{j=1}^\infty{a_j}x^j\cdot\sum_{k=1}^\infty{b_k}x^k = \sum_{n=1}^\infty(a_1b_n+a_2b_{n-1}+\ldots+a_nb_1)x^{n+1}.
+\end{align}
+On the other hand, the sums of the power series (2) are, as is well known, continuous functions on the interval \,$[0,\,1]$;\, the same concerns the right hand side of (3), because for\, $x = 1$\, it becomes the third series which we assume convergent.\, When\, $x \to 1-$, we infer that
+$$\sum_{j=1}^\infty{a_j}x^j \to \sum_{j=1}^\infty{a_j}, \qquad \sum_{k=1}^\infty{b_k}x^k \to \sum_{k=1}^\infty{b_k}$$ 
+and that the limit of the right hand side of (3) is the right hand side of (1).\, Since the equation (3) is true for $|x| < 1$,\, also the limits of both \PMlinkescapetext{sides} of (3), as\, $x \to 1-$, are equal.\, Therefore the equation (1) is in \PMlinkescapetext{force} with the assumptions of the theorem.
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc E. Lindel\"of}: {\em Differentiali- ja integralilasku
+ja sen sovellutukset III. Toinen osa.}\, Mercatorin Kirjapaino Osakeyhti\"o, Helsinki (1940).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

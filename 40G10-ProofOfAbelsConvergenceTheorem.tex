@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfAbelsConvergenceTheorem}
+\pmcreated{2013-03-22 13:07:39}
+\pmmodified{2013-03-22 13:07:39}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{proof of Abel's convergence theorem}
+\pmrecord{9}{33562}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40G10}
+\pmrelated{ProofOfAbelsLimitTheorem}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+
+\newtheorem{theorem}[proposition]{Theorem}
+\begin{document}
+\PMlinkescapeword{term}
+Suppose that
+$$\sum_{n=0}^\infty a_n=L$$
+is a convergent series, and set
+$$f(r) = \sum_{n=0}^\infty a_n r^n.$$
+Convergence of the first series implies that $a_n\rightarrow 0$, and
+hence $f(r)$ converges for $|r|<1$.  We will show that
+$f(r)\rightarrow L$ as $r\rightarrow 1^-$.
+
+Let $$s_N=a_0+\cdots+a_N,\quad N\in\natnums,$$
+denote the corresponding partial sums.  Our proof relies on the
+following identity
+\begin{equation}
+  \label{eq:ident}
+  f(r)=\sum_n a_n r^n = (1-r) \sum_n s_n r^n.  
+\end{equation}
+The above identity obviously works at the level of formal power
+series.  Indeed,
+$$
+\begin{array}{crcrcrc}
+   &a_0 &+& (a_1+a_0)\, r &+& (a_2+a_1+a_0)\,r^2 &+\, \cdots \\
+- \,( &    && a_0\, r &+& (a_1+a_0)\,r^2 &+\,\cdots )\\
+=   &a_0 &+& a_1\, r &+& a_2\, r^2 &+\, \cdots
+\end{array}
+$$
+Since the partial sums $s_n$ converge to $L$, they are bounded, and
+hence $\sum_n s_n r^n$ converges for $|r|<1$.  Hence for $|r|<1$, identity
+\eqref{eq:ident} is also a genuine functional equality.
+
+Let $\epsilon>0$ be given. Choose an $N$ sufficiently large so that
+all partial sums, $s_n$ with $n>N$, satisfy $|s_n-L|\le\epsilon$. Then, for all
+$r$ such that $0<r<1$, one obtains
+$$\left|\sum_{n=N+1}^\infty (s_n - L) r^n\right| \le
+\epsilon\,\frac{r^{N+1}}{1-r}\,.$$
+Note that
+$$f(r) - L = (1-r)\sum_{n=0}^N (s_n - L) r^n
++ (1-r) \sum_{n=N+1}^\infty (s_n - L) r^n.$$
+As $r\rightarrow 1^-$, the first term tends to $0$. The absolute value of the
+second term is estimated by $\epsilon\, r^{N+1}\le \epsilon$. Hence,
+$$\limsup_{r\rightarrow 1^-} |f(r) - L| \le \epsilon.$$ Since $\epsilon>0$ was
+arbitrary, it follows that $f(r)\rightarrow L$ as $r\rightarrow 1^-$.
+QED
+
+%%%%%
+%%%%%
+\end{document}

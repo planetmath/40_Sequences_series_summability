@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ApplicationOfCauchyCriterionForConvergence}
+\pmcreated{2013-03-22 19:03:22}
+\pmmodified{2013-03-22 19:03:22}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{application of Cauchy criterion for convergence}
+\pmrecord{9}{41936}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+\pmrelated{RealNumber}
+\pmrelated{GeometricSeries}
+\pmrelated{LogarithmusBinaris}
+\pmrelated{NapiersConstant}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Without using the methods of the entry determining series convergence, we show that the real-term series
+$$\sum_{n=0}^\infty\frac{1}{n!} \;=\; 1+\frac{1}{1!}+\frac{1}{2!}+\ldots$$
+is convergent by using Cauchy criterion for convergence, being in \PMlinkescapetext{force} in $\mathbb{R}$ equipped with the usual absolute value $|.|$ as \PMlinkid{norm}{1604}.\\
+
+Let $\varepsilon$ be an arbitrary positive number.\, For any positive integer $n$, we have
+$$\frac{1}{n!} \;\leqq\; \frac{1}{1\cdot2\cdot2\cdots2} \;=\; \frac{1}{2^{n-1}},$$
+whence we can \PMlinkescapetext{estimate} as follows.
+\begin{align*}
+\left|\frac{1}{(n\!+\!1)!}+\ldots+\frac{1}{(n\!+\!p)!}\right| &\;=\; \frac{1}{(n\!+\!1)!}+\ldots+\frac{1}{(n\!+\!p)!}\\
+&\;\leqq\; \frac{1}{2^n}+\ldots+\frac{1}{2^{n+p-1}}\\
+&\;=\; \frac{1}{2^n}\left(1+\frac{1}{2}+\ldots+\frac{1}{2^{p-1}}\right)\\
+&\;=\; \frac{1}{2^n}\cdot\frac{1-(1/2)^p}{1-1/2}\\
+&\;<\; \frac{1}{2^{n-1}} \;<\; \varepsilon
+\end{align*}
+The last inequality is true for all positive integers $p$, when\, $n \;>\; 1-\mbox{lb}\,{\varepsilon}$.\, Thus the Cauchy criterion implies that the series converges.
+%%%%%
+%%%%%
+\end{document}

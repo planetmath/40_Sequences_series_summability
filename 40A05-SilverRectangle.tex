@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SilverRectangle}
+\pmcreated{2013-03-22 16:42:12}
+\pmmodified{2013-03-22 16:42:12}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{silver rectangle}
+\pmrecord{6}{38918}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{pstricks}
+\newcommand{\smallbox}{\psframe*(0,0)(0.9,0.9)}
+\begin{document}
+A {\em silver rectangle} is a rectangle with either the silver ratio for its width-to-length ratio or the ratio $1 : \sqrt{2}$. Like the golden rectangle, both silver rectangles have the property that if we remove from them a square, their ratio remains the same.
+
+% A silver rectangle using psframe. Code by mps
+
+\begin{figure}[A silver rectangle]
+\begin{center}
+\begin{pspicture*}(-1,-1)(15.142135623730950488,11)
+\psset{unit=0.5cm}
+\psframe(0,0)(14.142135623730950488,10)
+\psline[linestyle=dotted](10,0)(10,10)
+\end{pspicture*}
+\caption{Removing the square on the left (demarcated by the dotted line) leaves a smaller silver rectangle on the right.}
+\end{center}
+\end{figure}
+
+%%%%%
+%%%%%
+\end{document}

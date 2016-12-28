@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EulerProductFormula}
+\pmcreated{2013-03-22 18:39:38}
+\pmmodified{2013-03-22 18:39:38}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Euler product formula}
+\pmrecord{6}{41404}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A20}
+\pmclassification{msc}{11M06}
+\pmclassification{msc}{11A51}
+\pmclassification{msc}{11A41}
+\pmrelated{RiemannZetaFunction}
+\pmrelated{EulerProduct}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{terms}
+
+\textbf{Theorem (Euler).}\, If\, $s > 1$,\, the infinite product
+\begin{align}
+\prod_{p}\frac{1}{1-\frac{1}{p^s}}
+\end{align}
+where $p$ runs the positive rational primes, converges to the sum of the over-harmonic series
+\begin{align}
+\sum_{n=1}^\infty\frac{1}{n^s} \,=\, \zeta(s).
+\end{align}
+
+
+{\em Proof.}\, Denote the sequence of prime numbers by $p_1 < p_2 < p_3 <\,\ldots$\, For any\, $s > 0$,\, we can form convergent geometric series
+$$\frac{1}{1-\frac{1}{p_1^s}} \,=\, 1+\frac{1}{p_1^s}+\frac{1}{p_1^{2s}}+\ldots 
+\,=\, \sum_{\nu_1=0}^\infty\frac{1}{p_1^{\nu_1s}},$$
+$$\frac{1}{1-\frac{1}{p_2^s}} \,=\, 1+\frac{1}{p_2^s}+\frac{1}{p_2^{2s}}+\ldots
+\,=\, \sum_{\nu_2=0}^\infty\frac{1}{p_2^{\nu_2s}}.$$
+Since these series are absolutely convergent, their product (see multiplication of series) may be written as
+$$\frac{1}{1-\frac{1}{p_1^s}}\cdot\frac{1}{1-\frac{1}{p_2^s}} 
+\;=\; \sum_{\nu_1,\nu_2=0}^\infty\frac{1}{p_1^{\nu_1s}}\cdot\frac{1}{p_2^{\nu_2s}} 
+\;=\; \sum_{\nu_1,\nu_2=0}^\infty\frac{1}{\left(p_1^{\nu_1}p_2^{\nu_2}\right)^s}$$
+where $\nu_1$ and $\nu_2$ independently on each other run all nonnegative integers.\, This equation can be generalised by induction to
+\begin{align}
+\prod_{\nu=1}^k \frac{1}{1-\frac{1}{p_\nu^s}} \;=\; 
+\sum_{\nu_1,\nu_2,\ldots,\nu_k=0}^\infty\frac{1}{\left(p_1^{\nu_1}p_2^{\nu_2}\cdots p_k^{\nu_k}\right)^s}
+\end{align}
+for\, $s > 0$\, and for arbitrarily great $k$; the exponents \,$\nu_1,\,\nu_2,\,\ldots,\,\nu_k$\, run independently all nonnegative integers.
+
+Because the prime factorization of positive integers is \PMlinkname{unique}{FundamentalTheoremOfArithmetic}, we can rewrite (3) as
+\begin{align}
+\prod_{\nu=1}^k \frac{1}{1-\frac{1}{p_\nu^s}} \;=\; \sum_{(n)}\frac{1}{n^s},
+\end{align}
+where $n$ runs all positive integers not containing greater prime factors than $p_k$.\, Then the inequality
+\begin{align}
+\sum_{n=1}^{p_k}\frac{1}{n^s} < \prod_{\nu=1}^k \frac{1}{1-\frac{1}{p_\nu^s}},
+\end{align}
+holds for every $k$, since all the terms \,$1,\,\frac{1}{p_1^s},\,\ldots,\,\frac{1}{p_k^s}$\, are in the series of the right hand side of (4).\, On the other hand, this series contains only a part of the terms of (2).\, Thus, for\, $s > 1$,\, the product (3) is less than the sum $\zeta(s)$ of the series (2), and consequently
+\begin{align}
+\sum_{n=1}^{p_k}\frac{1}{n^s} < \prod_{\nu=1}^k \frac{1}{1-\frac{1}{p_\nu^s}} < \zeta(s).
+\end{align}
+Letting\, $k \to \infty$,\, we have\, $p_k \to \infty$,\, and the sum on the left hand side of (6) tends to the limit $\zeta(s)$, therefore also tends the product (3).\, Hence we get the limit equation
+\begin{align}
+\prod_{p}\frac{1}{1-\frac{1}{p^s}} \;=\; \zeta(s) \qquad (s > 1).
+\end{align}
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc E. Lindel\"of}: {\em Differentiali- ja integralilasku
+ja sen sovellutukset III.2}.\, Mercatorin Kirjapaino Osakeyhti\"o, Helsinki (1940).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

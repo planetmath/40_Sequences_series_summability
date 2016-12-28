@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PrimeTheoremOfAConvergentSequenceA}
+\pmcreated{2013-03-22 14:49:45}
+\pmmodified{2013-03-22 14:49:45}
+\pmowner{georgiosl}{7242}
+\pmmodifier{georgiosl}{7242}
+\pmtitle{prime theorem of a convergent sequence, a}
+\pmrecord{24}{36494}
+\pmprivacy{1}
+\pmauthor{georgiosl}{7242}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40-00}
+\pmrelated{ArithmeticMean}
+\pmrelated{GeometricMean}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\def\N{\mathbb{N}}
+\def\R{\mathbb{R}}
+\begin{document}
+\PMlinkescapeword{time}
+
+\begin{theorem*}
+Suppose $(a_n)$ is a positive real sequence that converges to $L$.  Then 
+the sequence of arithmetic means $(b_n)=(n^{-1}\sum_{k=1}^na_k)$ and the sequence of geometric means $(c_n)=(\sqrt[n]{a_1\cdots a_n})$ also converge to $L$.
+\end{theorem*}
+
+\begin{proof}
+We first show that $(b_n)$ converges to $L$.  Let $\varepsilon>0$.  Select a positive integer $N_0$ such that $n\ge N_0$ implies $|a_n-L|<\varepsilon/2$.  Since $(a_n)$ converges to a finite value, there is a finite $M$ such that 
+$|a_n-L|<M$ for all $n$.  Thus we can select a positive integer $N\ge N_0$ for which $(N_0-1)M/N<\varepsilon/2$.  
+
+By the triangle inequality,
+\begin{align*}
+|b_n-L|
+&\le\frac{1}{n}\sum_{k=1}^n|a_k-L| \\
+&<\frac{(N_0-1)M}{n}+\frac{(n-N_0+1)\varepsilon}{2n} \\
+&<\varepsilon/2+\varepsilon/2.
+\end{align*}
+Hence $(b_n)$ converges to $L$.
+
+To show that $(c_n)$ converges to $L$, we first define the sequence $(d_n)$ 
+by $d_n=c_n^n=a_1\cdots a_n$.  Since $d_n$ is a positive real sequence, we have that
+\[
+\liminf \frac{d_{n+1}}{d_n} \le
+\liminf \sqrt[n]{d_n}       \le
+\limsup \sqrt[n]{d_n}       \le
+\limsup \frac{d_{n+1}}{d_n},
+\]
+a proof of which can be found in~\cite{Ru}.  But $d_{n+1}/d_n=a_{n+1}$, which by assumption converges to $L$.  Hence $\sqrt[n]{d_n}=c_n$ must also converge to $L$.
+\end{proof}
+
+\begin{thebibliography}{1}
+\bibitem{Ru}
+Rudin, W., \emph{Principles of Mathematical Analysis}, 3rd ed., McGraw-Hill, New York, 1976.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

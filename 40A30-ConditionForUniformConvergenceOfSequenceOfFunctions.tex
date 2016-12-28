@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConditionForUniformConvergenceOfSequenceOfFunctions}
+\pmcreated{2013-03-22 17:07:49}
+\pmmodified{2013-03-22 17:07:49}
+\pmowner{fernsanz}{8869}
+\pmmodifier{fernsanz}{8869}
+\pmtitle{condition for uniform convergence of sequence of functions}
+\pmrecord{6}{39435}
+\pmprivacy{1}
+\pmauthor{fernsanz}{8869}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{40A30}
+\pmclassification{msc}{26A15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+\begin{document}
+\title{Proof of limits of functions}%
+\author{Fernando Sanz Gamiz}%
+
+\begin{thm}
+Let\, $f_1,\,f_2,\,\ldots$\, be a sequence of real or complex
+functions defined on the interval\, $[a,\,b]$.\, The sequence
+converges uniformly to the \emph{limit function} $f$ on the
+interval\, $[a,\,b]$ if and only if
+$$\lim_{n\to\infty}\sup\{|f_n(x)-f(x)|, \,\, a \leq x \leq b\} = 0.$$
+\end{thm}
+
+\bigskip
+
+\begin{proof}
+
+Suppose the sequence converges uniformly. By the very definition of
+uniform convergence, we have that for any $\epsilon$ there exist $N$
+such that $$\abs{f_n(x)-f(x)}<\frac{\epsilon}{2}, \,\,\, a \leq x
+\leq b \hspace{13 pt} \mbox{ for } n>N$$
+
+\noindent hence $$\sup\{\abs{f_n(x)-f(x)}, \,\,\, a \leq x \leq b\}
+<\epsilon \hspace{13 pt} \mbox{ for } n>N $$
+
+\bigskip
+
+\noindent Conversely, suppose the sequence does not converge
+uniformly. This means that there is an $\epsilon$ for which there is
+a sequence of increasing integers $n_i, i=1,2,...$ and points
+$x_{n_i}$ with the corresponding subsequence of functions $f_{n_i}$
+such that
+$$\abs{f(x_{n_i})-f_{n_i}(x_{n_i})}>\epsilon \hspace{13 pt} \mbox{for all } i=1,2,...$$
+therefore $$\sup\{\abs{f_n(x)-f(x)}, \,\,\, a \leq x \leq b\}
+>\epsilon \hspace{13 pt} \mbox{ for infinitely many } n.$$
+Consequently, it is not the case that
+$$\lim_{n\to\infty}\sup\{|f_n(x)-f(x)|, \,\, a \leq x \leq b\} =
+0.$$
+
+\end{proof}
+
+\begin{thm}
+The uniform limit of a sequence of continuous complex or real
+functions $f_n$ in the interval $[a,b]$ is continuous in $[a,b]$
+\end{thm}
+
+The proof is
+\PMlinkname{here}{LimitOfAUniformlyConvergentSequenceOfContinuousFunctionsIsContinuous}
+%%%%%
+%%%%%
+\end{document}

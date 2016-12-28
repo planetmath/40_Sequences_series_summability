@@ -1,0 +1,329 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{XypicExamples1}
+\pmcreated{2013-03-11 19:35:58}
+\pmmodified{2013-03-11 19:35:58}
+\pmowner{CWoo}{3771}
+\pmmodifier{}{0}
+\pmtitle{Xypic Examples}
+\pmrecord{1}{50138}
+\pmprivacy{1}
+\pmauthor{CWoo}{0}
+\pmtype{Definition}
+
+%none for now
+\begin{document}
+\documentclass[12pt]{article}
+\usepackage{html}
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{multicol}
+\usepackage{xypic}
+\pagestyle{empty}
+
+\begin{document}
+
+This documentation serves to illustrate the use of the xypic package, by giving examples of actual code and the corresponding results.  Before proceeding to add graphs, it is important to remember to add 
+\begin{quote}\begin{verbatim}\usepackage{xypic}\end{verbatim}\end{quote}
+to the preamble first!
+
+\subsection{Basic Examples}
+
+\begin{enumerate}
+\item
+
+\begin{multicols}{2}
+
+\begin{verbatim}
+\begin{center}
+$\xymatrix{a\ar[r] & b}$
+\end{center}
+\end{verbatim}
+
+\columnbreak
+
+\begin{center}
+$\xymatrix{a\ar[r] & b}$
+\end{center}
+\end{multicols}
+
+\item
+
+\begin{multicols}{2}
+
+\begin{verbatim}
+\begin{center}
+$\xymatrix{a\ar[r] & b\ar[r] & c}$
+\end{center}
+\end{verbatim}
+
+\columnbreak
+
+\begin{center}
+$\xymatrix{a\ar[r] & b\ar[r] & c}$
+\end{center}
+\end{multicols}
+
+
+\item
+
+\begin{multicols}{2}
+
+\begin{verbatim}
+\begin{center}
+$\xymatrix{a & b\ar[l]}$
+\end{center}
+\end{verbatim}
+
+\columnbreak
+
+\begin{center}
+$\xymatrix{a & b\ar[l]}$
+\end{center}
+\end{multicols}
+
+\item
+
+\begin{multicols}{2}
+
+\begin{verbatim}
+\begin{center}
+$\xymatrix{a & b\ar[l] & c\ar[l]}$
+\end{center}
+\end{verbatim}
+
+\columnbreak
+
+\begin{center}
+$\xymatrix{a & b\ar[l] & c\ar[l]}$
+\end{center}
+\end{multicols}
+
+\item
+
+\begin{multicols}{2}
+
+\begin{verbatim}
+\begin{center}
+$\xymatrix{a\ar[r]^{f} & b}$
+\end{center}
+\end{verbatim}
+
+\columnbreak
+
+\begin{center}
+$\xymatrix{a\ar[r]^{f} & b}$
+\end{center}
+\end{multicols}
+
+\item
+
+\begin{multicols}{2}
+
+\begin{verbatim}
+\begin{center}
+$\xymatrix{a\ar[r]_{f} & b}$
+\end{center}
+\end{verbatim}
+
+\columnbreak
+
+\begin{center}
+$\xymatrix{a\ar[r]_{f} & b}$
+\end{center}
+\end{multicols}
+
+\item
+
+\begin{multicols}{2}
+
+\begin{verbatim}
+\begin{center}
+$\xymatrix{a & b\ar[l]^{g}}$
+\end{center}
+\end{verbatim}
+
+\columnbreak
+
+\begin{center}
+$\xymatrix{a & b\ar[l]^{g}}$
+\end{center}
+\end{multicols}
+
+\pagebreak
+
+\item
+
+\begin{multicols}{2}
+
+\begin{verbatim}
+\begin{center}
+$\xymatrix{a & b\ar[l]_{g}}$
+\end{center}
+\end{verbatim}
+
+\columnbreak
+
+\begin{center}
+$\xymatrix{a & b\ar[l]_{g}}$
+\end{center}
+\end{multicols}
+
+\item
+
+\begin{multicols}{2}
+
+\begin{verbatim}
+\begin{center}
+$\xymatrix{a\ar[d] \\ b}$
+\end{center}
+\end{verbatim}
+
+\columnbreak
+
+\begin{center}
+$\xymatrix{a\ar[d] \\ b}$
+\end{center}
+\end{multicols}
+
+\item
+
+\begin{multicols}{2}
+
+\begin{verbatim}
+\begin{center}
+$\xymatrix{a \\ b\ar[u]}$
+\end{center}
+\end{verbatim}
+
+\columnbreak
+
+\begin{center}
+$\xymatrix{a \\ b\ar[u]}$
+\end{center}
+\end{multicols}
+
+\item
+
+\begin{multicols}{2}
+
+\begin{verbatim}
+\begin{center}
+$\xymatrix{a\ar[dr] & \\ & b}$
+\end{center}
+\end{verbatim}
+
+\columnbreak
+
+\begin{center}
+$\xymatrix{a\ar[dr] & \\ & b}$
+\end{center}
+\end{multicols}
+
+\item
+
+\begin{multicols}{2}
+
+\begin{verbatim}
+\begin{center}
+$\xymatrix{& a\ar[dl] \\ b &}$
+\end{center}
+\end{verbatim}
+
+\columnbreak
+
+\begin{center}
+$\xymatrix{& a\ar[dl] \\ b &}$
+\end{center}
+\end{multicols}
+
+\item
+
+\begin{multicols}{2}
+
+\begin{verbatim}
+\begin{center}
+$\xymatrix{& b \\ a\ar[ur] &}$
+\end{center}
+\end{verbatim}
+
+\columnbreak
+
+\begin{center}
+$\xymatrix{& b \\ a\ar[ur] &}$
+\end{center}
+\end{multicols}
+
+\item
+
+\begin{multicols}{2}
+
+\begin{verbatim}
+\begin{center}
+$\xymatrix{b & \\ & a\ar[ul]}$
+\end{center}
+\end{verbatim}
+
+\columnbreak
+
+\begin{center}
+$\xymatrix{b & \\ & a\ar[ul]}$
+\end{center}
+\end{multicols}
+
+\item
+
+\begin{multicols}{2}
+
+\begin{verbatim}
+\begin{center}
+$\xymatrix{
+a\ar[dr]\\
+&c\\
+b\ar[ur]
+}$
+\end{center}
+\end{verbatim}
+
+\columnbreak
+
+\begin{center}
+$\xymatrix{
+a\ar[dr]\\
+&c\\
+b\ar[ur]
+}$
+\end{center}
+\end{multicols}
+
+\item
+
+\begin{multicols}{2}
+
+\begin{verbatim}
+\begin{center}
+$\xymatrix{
+&a\ar[dr]\\
+x\ar[ur]\ar[dr] &&c\\
+&b\ar[ur]&
+}$
+\end{center}
+\end{verbatim}
+
+\columnbreak
+
+\begin{center}
+$\xymatrix@R-=10pt{
+&a\ar[dr]\\
+x\ar[ur]\ar[dr] &&c\\
+&b\ar[ur]&
+}$
+\end{center}
+\end{multicols}
+
+\end{enumerate}
+
+\end{document}
+%%%%%
+\end{document}

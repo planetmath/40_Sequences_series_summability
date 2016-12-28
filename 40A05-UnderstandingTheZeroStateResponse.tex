@@ -1,0 +1,181 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UnderstandingTheZeroStateResponse}
+\pmcreated{2013-03-11 19:27:00}
+\pmmodified{2013-03-11 19:27:00}
+\pmowner{swapnizzle}{13346}
+\pmmodifier{}{0}
+\pmtitle{Understanding the Zero-State Response}
+\pmrecord{1}{50081}
+\pmprivacy{1}
+\pmauthor{swapnizzle}{0}
+\pmtype{Definition}
+
+%none for now
+\begin{document}
+\documentclass[11pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage[mathcal]{eucal}
+\usepackage{xy}
+\textheight 9in
+\textwidth 7in
+\oddsidemargin 0in
+\evensidemargin 0in
+\topmargin 0in
+\headheight 0in
+\headsep 0in
+\title{Understanding the Zero-State Response}
+\author{Swapnil Sunil Jain}
+\date{15 January, 2007}
+\begin{document}
+\maketitle
+By definition we know that the $\mbox{ZSR}(t)$ is the response of the system due to the input $x(t)$ when all the initial conditions are set to zero.
+
+Now, let a LTI system $\mathbb{S}$ with input $x(t)$ and output $y(t)$ be described by the following differential equation
+\begin{eqnarray}
+&& a(D)y(t) = b(D)x(t)
+\end{eqnarray}
+where
+\begin{eqnarray*}
+&& a(D) = D^n + a_1 D^{n-1} + ... + a_n \\
+&& b(D) = b_0 D^m + b_1 D^{m-1} + ... + b_n
+\end{eqnarray*} 
+and the initial conditions: $y^{(n-1)}(0^-), y^{(n-2)}(0^-), ..., y(0^-)$.
+ 
+To find the zero-state response, we first set all the initial conditions to zero i.e. 
+\begin{eqnarray*}
+&& y^{(n-1)}(0^-)=0, \\
+&& y^{(n-2)}(0^-)=0, \\
+&& .\\
+&& .\\
+&& .\\
+&& y(0^-)=0
+\end{eqnarray*}
+
+Then we note that x(t) can be written in the following way (due to the shifting property of $\delta(t)$):
+\begin{eqnarray}
+&& x(t) = \int_{-\infty}^{\infty} \delta(t-u)x(u) du
+\end{eqnarray}
+
+Now, we define a new function h(t) (known as the $\emph{impulse response}$ of the LTI system $\mathbb{S}$) the following way\footnote[1]{Simply put, the impulse response of a system $\mathbb{S}$ is the output we get when we drive the input by the impulse function $\delta(t)$} 
+\begin{eqnarray}
+&& \delta(t) \overset{\mathbb{S}}{\longrightarrow} h(t)
+\end{eqnarray}
+
+Then, due to the time-invariance property of the LTI system $\mathbb{S}$, it is true that, for some constant $t_0,$ 
+\begin{eqnarray}
+&& \delta(t-t_0) \overset{\mathbb{S}}{\longrightarrow} h(t-t_0)
+\end{eqnarray}
+and due to the linearity property of the LTI system $\mathbb{S}$, it is also follows that, for some constant $C_1$,
+\begin{eqnarray}
+&& C_1\delta(t)\overset{\mathbb{S}}{\longrightarrow} C_1 h(t)
+\end{eqnarray}
+
+Then, it follows from (2), (4) and (5) that\footnote[2]{This result makes sense if we think of the integral as an infinite sum and treat x(u) as some constant with respect to time t.}
+\begin{eqnarray}
+&& x(t) = \int_{-\infty}^{\infty} \delta(t-u)x(u) du \overset{\mathbb{S}}{\longrightarrow} y(t) = \int_{-\infty}^{\infty} h(t-u)x(u) du
+\end{eqnarray}
+
+Now, we define the output $y(t)$ in (6) as the zero-state response of x(t) i.e. 
+\begin{eqnarray*}
+&& \mbox{ZSR}(t) = \int_{-\infty}^{\infty} h(t-u)x(u) du
+\end{eqnarray*}
+and we also define a new binary operation '*', called the $\emph{convolution}$, as
+\begin{eqnarray*}
+&& h(t)*x(t) \equiv \int_{-\infty}^{\infty} h(t-u)x(u) du
+\end{eqnarray*}
+Using this notation, 
+\begin{eqnarray}
+&& \mbox{ZSR}(t) = h(t)*x(t) 
+\end{eqnarray}
+
+Thus, in order to find $\mbox{ZSR}_{(t)}$ for a given input $x(t)$, we need to find $h(t)$. In order to do this, we first define a function $z(t)$ that satisfies the following equality:
+\begin{eqnarray}
+&& a(D)z(t) = \delta(t)
+\end{eqnarray}
+
+Then the following also holds:
+\begin{eqnarray*}
+&& b_m[a(D)D^{0}(z(t))] = b_m[D^{0}(\delta(t))] \\
+&& b_{m-1}[a(D)D^{1}(z(t))] = b_{m-1}[D^{1}(\delta(t))] \\
+&& . \\
+&& . \\
+&& . \\
+&& b_{m-k}[a(D)D^{k}(z(t))] = b_{m-k}[D^{k}(\delta(t))] \\
+&& . \\
+&& . \\
+&& . \\
+&& b_1[a(D)D^{m-1}(z(t))] = b_0[D^{m-1}(\delta(t))] \\
+&& b_0[a(D)D^{m}(z(t))] = b_0[D^{m}(\delta(t))]
+\end{eqnarray*}
+
+Adding all the above equations together we get
+\begin{eqnarray*}
+&& a(D)[b_{0}D^{m}(z(t)) + b_{1}D^{m-1}(z(t)) + ... + b_{m}D^{0}(z(t))] \\
+&& = b_{0}D^{m}(\delta(t)) + b_{1}D^{m-1}(\delta(t)) + ... + b_{m}D^{0}(\delta(t))
+\end{eqnarray*}
+or equivalently,\footnote[3]{One could have also easily come up with the following result by simply operating b(D) on both sides of (8)}
+\begin{eqnarray*}
+&& a(D)[b(D)z(t)] = b(D)\delta(t)
+\end{eqnarray*}
+
+Since the above equation has the same form as (1) with $x(t)=\delta(t)$, it follows that $h(t)=b(D)z(t)$ (since h(t), by definition, is the output when the input is the impulse function). Hence, 
+\begin{eqnarray}
+&& h(t) = b(D)z(t)
+\end{eqnarray}
+where $z(t)$ is given by 
+\begin{eqnarray}
+&& a(D)z(t)=\delta(t)
+\end{eqnarray}
+Thus, in order to find $h(t)$, we need to find $z(t)$ first. We will do this with the help of an example. Given,
+\begin{eqnarray*}
+&& a(D) = D^2 + 5D + 6 \\
+&& \Rightarrow (D^2 + 5D + 6)z(t) = \delta(t) \\
+&& \Rightarrow z''(t) + 5z'(t) + 6z(t) = \delta(t)
+\end{eqnarray*}
+with initial conditions $z'(0^-)=0, z(0^-)=0$. In order to get $\delta(t)$ on the R.H.S, $z''(t)$ must be $\delta(t)$ plus some ordinary function $m(t)$ i.e. 
+\begin{eqnarray*}
+&& z''(t) = \delta(t) + m(t) \\
+&& \Rightarrow z'(t) = u(t) + \int_{0^-}^{t} m(a) da \\
+&& \Rightarrow z(t) = r(t) +  \int_{0^-}^{t} db \int_{0^-}^{b} m(a) da 
+\end{eqnarray*}
+
+For $t \geq 0^+$, we have
+\begin{eqnarray*}
+&& z''(t) + 5z'(t) + 6z(t) = 0
+\end{eqnarray*}
+since $\delta(t)=0$ for $t \geq 0^+$. Furthermore, we now get new initial conditions at $t = 0^+$. Thus,
+\begin{eqnarray*}
+&& z'(t){\Big|}_{t=0^+} = 1 + 0 = 1 \\
+&& z(t){\Big|}_{t=0^+} = 0 + 0 = 0 \\
+\end{eqnarray*}
+
+In general, for $t \geq 0^+$, the initial condition involving the n-1 derivative would be equal to 1 and all the other initial conditions would be 0. Thus, if
+\begin{eqnarray*}
+&& a(D)z(t) = \delta(t) \quad \mbox{with initial conditions } z^{(n-1)}(0^-)=0, z^{(n-2)}(0^-)=0, ..., z(0^-)=0 
+\end{eqnarray*}
+then for $t \geq 0^+$,
+\begin{eqnarray*}
+&& a(D)z(t) = 0 \quad \mbox{with initial conditions } z^{(n-1)}(0^+)=1, z^{(n-2)}(0^+)=0, ..., z(0^+)=0 
+\end{eqnarray*}
+
+In summary, we found out that the zero-state response is given by 
+\begin{eqnarray}
+&& \mbox{ZSR}(t) = h(t)*x(t)
+\end{eqnarray}
+where $h(t)$ is the impulse response of the system $\mathbb{S}$ and is given by
+\begin{eqnarray}
+&& h(t) = b(D)z(t)
+\end{eqnarray}
+where $z(t)$ is the solution of the differential equation
+\begin{eqnarray}
+&& a(D)z(t)=0
+\end{eqnarray}
+with initial conditions $z^{(n-1)}(0^+)=1, z^{(n-2)}(0^+)=0, ..., z'(0^+)=0, z(0^+)=0$. 
+\end{document}
+%%%%%
+\end{document}
