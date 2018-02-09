@@ -1,0 +1,117 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of composition limit law for uniform convergence</title>
+<!--Generated on Fri Feb  9 21:24:10 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of composition limit law for uniform convergence</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="Thmthm1" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 1</span>.</h6>
+<div id="Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmthm1.p1.m1" class="ltx_Math" alttext="X,Y,Z" display="inline"><mrow><mi>X</mi><mo mathvariant="normal">,</mo><mi>Y</mi><mo mathvariant="normal">,</mo><mi>Z</mi></mrow></math> be metric spaces, with <math id="Thmthm1.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> compact and <math id="Thmthm1.p1.m3" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> locally compact.
+If <math id="Thmthm1.p1.m4" class="ltx_Math" alttext="f_{n}\colon X\to Y" display="inline"><mrow><msub><mi>f</mi><mi>n</mi></msub><mo mathvariant="normal">:</mo><mrow><mi>X</mi><mo mathvariant="normal">→</mo><mi>Y</mi></mrow></mrow></math> is a sequence of functions converging uniformly
+to a continuous function <math id="Thmthm1.p1.m5" class="ltx_Math" alttext="f\colon X\to Y" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi>X</mi><mo mathvariant="normal">→</mo><mi>Y</mi></mrow></mrow></math>, and <math id="Thmthm1.p1.m6" class="ltx_Math" alttext="h\colon Y\to Z" display="inline"><mrow><mi>h</mi><mo mathvariant="normal">:</mo><mrow><mi>Y</mi><mo mathvariant="normal">→</mo><mi>Z</mi></mrow></mrow></math>
+is continuous, then <math id="Thmthm1.p1.m7" class="ltx_Math" alttext="h\circ f_{n}" display="inline"><mrow><mi>h</mi><mo mathvariant="normal">∘</mo><msub><mi>f</mi><mi>n</mi></msub></mrow></math> converge to <math id="Thmthm1.p1.m8" class="ltx_Math" alttext="h\circ f" display="inline"><mrow><mi>h</mi><mo mathvariant="normal">∘</mo><mi>f</mi></mrow></math> uniformly.</span></p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="Thmthm1.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="Thmthm1.p2.m1" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> denote the compact set <math id="Thmthm1.p2.m2" class="ltx_Math" alttext="f(X)\subseteq Y" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mi>Y</mi></mrow></math>. By local compactness of <math id="Thmthm1.p2.m3" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>,for each point <math id="Thmthm1.p2.m4" class="ltx_Math" alttext="y\in K" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>K</mi></mrow></math>, there is an open neighbourhood <math id="Thmthm1.p2.m5" class="ltx_Math" alttext="U_{y}" display="inline"><msub><mi>U</mi><mi>y</mi></msub></math> of <math id="Thmthm1.p2.m6" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> such that
+<math id="Thmthm1.p2.m7" class="ltx_Math" alttext="\overline{U_{y}}" display="inline"><mover accent="true"><msub><mi>U</mi><mi>y</mi></msub><mo>¯</mo></mover></math> is compact. The neighbourhoods <math id="Thmthm1.p2.m8" class="ltx_Math" alttext="U_{y}" display="inline"><msub><mi>U</mi><mi>y</mi></msub></math> cover <math id="Thmthm1.p2.m9" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>, so there is a finite
+subcover <math id="Thmthm1.p2.m10" class="ltx_Math" alttext="U_{y_{1}},\ldots,U_{y_{n}}" display="inline"><mrow><msub><mi>U</mi><msub><mi>y</mi><mn>1</mn></msub></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>U</mi><msub><mi>y</mi><mi>n</mi></msub></msub></mrow></math> covering <math id="Thmthm1.p2.m11" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>. Let
+<math id="Thmthm1.p2.m12" class="ltx_Math" alttext="U=\bigcup_{i}U_{y_{i}}\supseteq K" display="inline"><mrow><mi>U</mi><mo>=</mo><mrow><msub><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋃</mo><mi>i</mi></msub><msub><mi>U</mi><msub><mi>y</mi><mi>i</mi></msub></msub></mrow><mo>⊇</mo><mi>K</mi></mrow></math>. Evidently
+<math id="Thmthm1.p2.m13" class="ltx_Math" alttext="\overline{U}=\bigcup_{i}\overline{U_{y_{i}}}" display="inline"><mrow><mover accent="true"><mi>U</mi><mo>¯</mo></mover><mo>=</mo><mrow><msub><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋃</mo><mi>i</mi></msub><mover accent="true"><msub><mi>U</mi><msub><mi>y</mi><mi>i</mi></msub></msub><mo>¯</mo></mover></mrow></mrow></math> is compact.</p>
+</div>
+<div id="Thmthm1.p3" class="ltx_para">
+<p class="ltx_p">Next, let <math id="Thmthm1.p3.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> be the <math id="Thmthm1.p3.m2" class="ltx_Math" alttext="\delta_{0}" display="inline"><msub><mi>δ</mi><mn>0</mn></msub></math>-neighbourhood of <math id="Thmthm1.p3.m3" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>
+contained in <math id="Thmthm1.p3.m4" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>, for some <math id="Thmthm1.p3.m5" class="ltx_Math" alttext="\delta_{0}&gt;0" display="inline"><mrow><msub><mi>δ</mi><mn>0</mn></msub><mo>&gt;</mo><mn>0</mn></mrow></math>.
+<math id="Thmthm1.p3.m6" class="ltx_Math" alttext="\overline{V}" display="inline"><mover accent="true"><mi>V</mi><mo>¯</mo></mover></math> is compact, since it is contained in <math id="Thmthm1.p3.m7" class="ltx_Math" alttext="\overline{U}" display="inline"><mover accent="true"><mi>U</mi><mo>¯</mo></mover></math>.</p>
+</div>
+<div id="Thmthm1.p4" class="ltx_para">
+<p class="ltx_p">Now let <math id="Thmthm1.p4.m1" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> be given.
+<math id="Thmthm1.p4.m2" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> is uniformly continuous on <math id="Thmthm1.p4.m3" class="ltx_Math" alttext="\overline{V}" display="inline"><mover accent="true"><mi>V</mi><mo>¯</mo></mover></math>, so
+there exists a <math id="Thmthm1.p4.m4" class="ltx_Math" alttext="\delta&gt;0" display="inline"><mrow><mi>δ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> such that
+when <math id="Thmthm1.p4.m5" class="ltx_Math" alttext="y,y^{\prime}\in\overline{V}" display="inline"><mrow><mrow><mi>y</mi><mo>,</mo><msup><mi>y</mi><mo>′</mo></msup></mrow><mo>∈</mo><mover accent="true"><mi>V</mi><mo>¯</mo></mover></mrow></math> and <math id="Thmthm1.p4.m6" class="ltx_Math" alttext="d(y,y^{\prime})&lt;\delta" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><msup><mi>y</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mi>δ</mi></mrow></math>,
+we have <math id="Thmthm1.p4.m7" class="ltx_Math" alttext="d(g(y),g(y^{\prime}))&lt;\epsilon" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>y</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mi>ϵ</mi></mrow></math>.</p>
+</div>
+<div id="Thmthm1.p5" class="ltx_para">
+<p class="ltx_p">From the uniform convergence of <math id="Thmthm1.p5.m1" class="ltx_Math" alttext="f_{n}" display="inline"><msub><mi>f</mi><mi>n</mi></msub></math>, choose <math id="Thmthm1.p5.m2" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> so that
+when <math id="Thmthm1.p5.m3" class="ltx_Math" alttext="n\geq N" display="inline"><mrow><mi>n</mi><mo>≥</mo><mi>N</mi></mrow></math>, <math id="Thmthm1.p5.m4" class="ltx_Math" alttext="d(f_{n}(x),f(x))&lt;\min(\delta,\delta_{0})" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mrow><mi>min</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>δ</mi><mo>,</mo><msub><mi>δ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+for all <math id="Thmthm1.p5.m5" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math>.
+Since <math id="Thmthm1.p5.m6" class="ltx_Math" alttext="f(x)\in K" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi>K</mi></mrow></math>, it follows that <math id="Thmthm1.p5.m7" class="ltx_Math" alttext="f_{n}(x)" display="inline"><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is inside the
+<math id="Thmthm1.p5.m8" class="ltx_Math" alttext="\delta_{0}" display="inline"><msub><mi>δ</mi><mn>0</mn></msub></math>-neighbourhood of <math id="Thmthm1.p5.m9" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>, i.e. both <math id="Thmthm1.p5.m10" class="ltx_Math" alttext="y=f_{n}(x)" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="Thmthm1.p5.m11" class="ltx_Math" alttext="y^{\prime}=f(x)" display="inline"><mrow><msup><mi>y</mi><mo>′</mo></msup><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+are both in <math id="Thmthm1.p5.m12" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. Thus <math id="Thmthm1.p5.m13" class="ltx_Math" alttext="d(g(f_{n}(x)),g(f(x)))&lt;\epsilon" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mi>ϵ</mi></mrow></math> when <math id="Thmthm1.p5.m14" class="ltx_Math" alttext="n\geq N" display="inline"><mrow><mi>n</mi><mo>≥</mo><mi>N</mi></mrow></math>,
+uniformly for all <math id="Thmthm1.p5.m15" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math>.
+∎</p>
+</div>
+</div>
+</div>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of composition limit law for uniform convergence</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfCompositionLimitLawForUniformConvergence</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:23:08</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:23:08</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 40A30</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:24:10 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

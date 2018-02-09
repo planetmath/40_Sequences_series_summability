@@ -1,0 +1,370 @@
+<!DOCTYPE html><html>
+<head>
+<title>Internationalization</title>
+<!--Generated on Fri Feb  9 21:14:19 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Internationalization</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Internationalization
+
+
+</p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Introduction</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Currently Noosphere does not support entries written in languages other than English, but it is possible to include text in foreign languages. This document explains how to do that.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Accents</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Most Latin languages use accents above the letters. In English there are two letters that have accents, ‘i’ and ‘j’, and they can be typeset by typing them directly. Any other letter can be typed as <span class="ltx_text ltx_font_typewriter">\{accent}{letter}</span> where <span class="ltx_text ltx_font_typewriter">accent</span> is any one of the accents in the table below and <span class="ltx_text ltx_font_typewriter">letter</span> is any letter except ‘i’ and ‘j’. That would produce accent <span class="ltx_text ltx_font_typewriter">accent</span> on top of letter <span class="ltx_text ltx_font_typewriter">letter</span>. In order to replace the dot in ‘i’ or ‘j’ by some other accent use <span class="ltx_text ltx_font_typewriter">\{accent}\i</span> and <span class="ltx_text ltx_font_typewriter">\{accent}\j</span>. If <span class="ltx_text ltx_font_typewriter">accent</span> is a letter, then the <span class="ltx_text ltx_font_typewriter">letter</span> has to be enclosed in braces.</p>
+</div>
+<div id="S2.p2" class="ltx_para ltx_centering">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle" style="width:346.9pt;">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column"><span class="ltx_text ltx_font_bold">Accent</span></th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column"><span class="ltx_text ltx_font_bold">Code</span></th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column"><span class="ltx_text ltx_font_bold">Example(code)</span></th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column"><span class="ltx_text ltx_font_bold">Example(result)</span></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_t">Acute</td>
+<td class="ltx_td ltx_align_left ltx_border_t"><code class="ltx_verbatim ltx_font_typewriter">\’</code></td>
+<td class="ltx_td ltx_align_left ltx_border_t"><code class="ltx_verbatim ltx_font_typewriter">\’a \’\i</code></td>
+<td class="ltx_td ltx_align_left ltx_border_t">á í</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">Grave</td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\‘</code></td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\‘a \‘\i</code></td>
+<td class="ltx_td ltx_align_left">à ì</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">Circumflex</td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\^</code></td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\^a \^\i</code></td>
+<td class="ltx_td ltx_align_left">â î</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">Tilde</td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\~</code></td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\~a \~\i</code></td>
+<td class="ltx_td ltx_align_left">ã ĩ</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">Diaeresis</td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\"</code></td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\"a \"\i</code></td>
+<td class="ltx_td ltx_align_left">ä ï</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">Double acute</td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\H</code></td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\H{o} \H{e}</code></td>
+<td class="ltx_td ltx_align_left">ő e̋</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">Caron</td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\v</code></td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\v{c} \v{D}</code></td>
+<td class="ltx_td ltx_align_left">č Ď</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Typing directly</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">If your keyboard allows the input of characters in latin alphabet like ÃÂ©, ÃÂ±, ÃÂ^2, ÃÂ, ÃÂ«, you may use them directly in your entries by including</p>
+<blockquote class="ltx_quote">
+<pre class="ltx_verbatim ltx_font_typewriter">
+\usepackage[latin1]{inputenc}
+</pre>
+</blockquote>
+<p class="ltx_p">on your document preamble. Users of Macintosh computers should use <span class="ltx_text ltx_font_typewriter">applemac</span> instead of <span class="ltx_text ltx_font_typewriter">latin1</span>. Some other available encondings are <span class="ltx_text ltx_font_typewriter">cp1250, cp1257, macce</span> for users of eastern and central europe, baltic, Macintosh central Europe encodings.
+Package <span class="ltx_text ltx_font_typewriter">inputenc.sty</span> obsoletes the packages <span class="ltx_text ltx_font_typewriter">isolatin.sty</span> and <span class="ltx_text ltx_font_typewriter">umlaut.sty</span> (see <a href="http://www.tug.org/tex-archive/info/l2tabu/english/l2tabuen.pdf" title="" class="ltx_ref ltx_href">An essential guide to LaTex <math id="S3.p1.m1" class="ltx_Math" alttext="2_{\varepsilon}" display="inline"><msub><mn>2</mn><mi>ε</mi></msub></math> usage</a> )</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">If you have a Unicode-complaint browser and you know how to type the foreign characters directly, you may do so. Currently, this is only supported for most characters found in Latin languages, and for Russian language. If you would like to see support for another language, please file <a href="http://bugs.planetmath.org/" title="" class="ltx_ref ltx_href">a bug report</a> which includes the <a href="http://www.unicode.org/charts/" title="" class="ltx_ref ltx_href">Unicode range</a> of the characters you want and their TeX encodings. <em class="ltx_emph ltx_font_italic">Note:</em> Noosphere does not support direct typing of foreign characters in titles. Please, use accent commands and \cyrXXX commands (see below).</p>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Russian</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">In order to type Russian text the following lines have to be added to the preamble:</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<blockquote class="ltx_quote">
+<pre class="ltx_verbatim ltx_font_typewriter">
+\usepackage[T2A]{fontenc}
+\usepackage[russian,english]{babel}
+</pre>
+</blockquote>
+</div>
+<div id="S4.p3" class="ltx_para">
+<p class="ltx_p">Russian text can be entered directly or if your browser or operating system does not support Unicode, by means of the following commands:</p>
+</div>
+<div id="S4.p4" class="ltx_para">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle" style="width:433.6pt;">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column"><span class="ltx_text ltx_font_bold">Name</span></th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column"><span class="ltx_text ltx_font_bold">Look</span></th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_border_r"><span class="ltx_text ltx_font_bold">Code</span></th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column"><span class="ltx_text ltx_font_bold">Name</span></th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column"><span class="ltx_text ltx_font_bold">Look</span></th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column"><span class="ltx_text ltx_font_bold">Code</span></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_t">A</td>
+<td class="ltx_td ltx_align_left ltx_border_t">а А</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><code class="ltx_verbatim ltx_font_typewriter">\cyra \CYRA</code></td>
+<td class="ltx_td ltx_align_left ltx_border_t">Er</td>
+<td class="ltx_td ltx_align_left ltx_border_t">р Р</td>
+<td class="ltx_td ltx_align_left ltx_border_t"><code class="ltx_verbatim ltx_font_typewriter">\cyrr \CYRR</code></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">Be</td>
+<td class="ltx_td ltx_align_left">б Б</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><code class="ltx_verbatim ltx_font_typewriter">\cyrb \CYRB</code></td>
+<td class="ltx_td ltx_align_left">Es</td>
+<td class="ltx_td ltx_align_left">с С</td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\cyrs \CYRS</code></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">Ve</td>
+<td class="ltx_td ltx_align_left">в В</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><code class="ltx_verbatim ltx_font_typewriter">\cyrv \CYRV</code></td>
+<td class="ltx_td ltx_align_left">Te</td>
+<td class="ltx_td ltx_align_left">т Т</td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\cyrt \CYRT</code></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">Ghe</td>
+<td class="ltx_td ltx_align_left">г Г</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><code class="ltx_verbatim ltx_font_typewriter">\cyrg \CYRG</code></td>
+<td class="ltx_td ltx_align_left">U</td>
+<td class="ltx_td ltx_align_left">у У</td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\cyru \CYRU</code></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">De</td>
+<td class="ltx_td ltx_align_left">д Д</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><code class="ltx_verbatim ltx_font_typewriter">\cyrd \CYRD</code></td>
+<td class="ltx_td ltx_align_left">Ef</td>
+<td class="ltx_td ltx_align_left">ф Ф</td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\cyrf \CYRF</code></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">Ye</td>
+<td class="ltx_td ltx_align_left">е Е</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><code class="ltx_verbatim ltx_font_typewriter">\cyre \CYRE</code></td>
+<td class="ltx_td ltx_align_left">Ha</td>
+<td class="ltx_td ltx_align_left">х Х</td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\cyrh \CYRH</code></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">Yo</td>
+<td class="ltx_td ltx_align_left">ё Ё</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><code class="ltx_verbatim ltx_font_typewriter">\cyryo \CYRYO</code></td>
+<td class="ltx_td ltx_align_left">Tse</td>
+<td class="ltx_td ltx_align_left">ц Ц</td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\cyrc \CYRC</code></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">Zhe</td>
+<td class="ltx_td ltx_align_left">ж Ж</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><code class="ltx_verbatim ltx_font_typewriter">\cyrzh \CYRZH</code></td>
+<td class="ltx_td ltx_align_left">Che</td>
+<td class="ltx_td ltx_align_left">ч Ч</td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\cyrch \CYRCH</code></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">Ze</td>
+<td class="ltx_td ltx_align_left">з З</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><code class="ltx_verbatim ltx_font_typewriter">\cyrz \CYRZ</code></td>
+<td class="ltx_td ltx_align_left">Sha</td>
+<td class="ltx_td ltx_align_left">ш Ш</td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\cyrsh \CYRSH</code></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">I</td>
+<td class="ltx_td ltx_align_left">и И</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><code class="ltx_verbatim ltx_font_typewriter">\cyri \CYRI</code></td>
+<td class="ltx_td ltx_align_left">Shcha</td>
+<td class="ltx_td ltx_align_left">щ Щ</td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\cyrchsh \CYRCHSH</code></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">I short</td>
+<td class="ltx_td ltx_align_left">й Й</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><code class="ltx_verbatim ltx_font_typewriter">\cyrishrt \CYRISHRT</code></td>
+<td class="ltx_td ltx_align_left">Hard sign</td>
+<td class="ltx_td ltx_align_left">ъ Ъ</td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\cyrhrdsn \CYRHRDSN</code></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">Ka</td>
+<td class="ltx_td ltx_align_left">к К</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><code class="ltx_verbatim ltx_font_typewriter">\cyrk \CYRK</code></td>
+<td class="ltx_td ltx_align_left">Yeru</td>
+<td class="ltx_td ltx_align_left">ы Ы</td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\cyrery \CYRERY</code></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">El</td>
+<td class="ltx_td ltx_align_left">л Л</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><code class="ltx_verbatim ltx_font_typewriter">\cyrl \CYRL</code></td>
+<td class="ltx_td ltx_align_left">Soft sign</td>
+<td class="ltx_td ltx_align_left">ь Ь</td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\cyrsftsn \CYRSFTSN</code></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">Em</td>
+<td class="ltx_td ltx_align_left">м М</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><code class="ltx_verbatim ltx_font_typewriter">\cyrm \CYRM</code></td>
+<td class="ltx_td ltx_align_left">E</td>
+<td class="ltx_td ltx_align_left">э Э</td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\cyrever \CYREREV</code></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">En</td>
+<td class="ltx_td ltx_align_left">н Н</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><code class="ltx_verbatim ltx_font_typewriter">\cyrn \CYRN</code></td>
+<td class="ltx_td ltx_align_left">Yu</td>
+<td class="ltx_td ltx_align_left">ю Ю</td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\cyryu \CYRYU</code></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">O</td>
+<td class="ltx_td ltx_align_left">о О</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><code class="ltx_verbatim ltx_font_typewriter">\cyro \CYRO</code></td>
+<td class="ltx_td ltx_align_left">Ya</td>
+<td class="ltx_td ltx_align_left">я Я</td>
+<td class="ltx_td ltx_align_left"><code class="ltx_verbatim ltx_font_typewriter">\cyrya \CYRYA</code></td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left">Pe</td>
+<td class="ltx_td ltx_align_left">п П</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><code class="ltx_verbatim ltx_font_typewriter">\cyrp \CYRP</code></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+<td class="ltx_td"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Cédilles</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">French, Portuguese, and Romanian use letters containing diacritical markings called cédilles.</p>
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle" style="width:346.9pt;">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column"><span class="ltx_text ltx_font_bold">Name</span></th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column"><span class="ltx_text ltx_font_bold">Code</span></th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column"><span class="ltx_text ltx_font_bold">Example(code)</span></th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column"><span class="ltx_text ltx_font_bold">Example(result)</span></th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_t">cédille</td>
+<td class="ltx_td ltx_align_left ltx_border_t"><code class="ltx_verbatim ltx_font_typewriter">\c</code></td>
+<td class="ltx_td ltx_align_left ltx_border_t"><code class="ltx_verbatim ltx_font_typewriter">\c{c} \c{s} \c{t}</code></td>
+<td class="ltx_td ltx_align_left ltx_border_t">ç ş ţ</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="S6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6 </span>Ligatures</h2>
+
+<div id="S6.p1" class="ltx_para">
+<p class="ltx_p">TeX will make the ligatures for ‘‘fi’’ and ‘‘fl’’ automatically. The German ligature ‘‘ß’’ (for ‘‘ss’’) will only be made if explicitly indicated, by <code class="ltx_verbatim ltx_font_typewriter">{\ss}</code>. (There is one other way, but this way generally works better with Noosphere.)</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Internationalization</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Internationalization1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-11 19:21:09</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-11 19:21:09</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">bbukh (348)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">(0)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">bbukh (0)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Definition</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:14:19 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,1115 @@
+<!DOCTYPE html><html>
+<head>
+<title>Principios de álgebra multilineal</title>
+<!--Generated on Fri Feb  9 21:16:33 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Principios de álgebra multilineal</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p ltx_align_center"><span class="ltx_text ltx_font_typewriter">ÁLGEBRA MULTILINEAL</span></p>
+<p class="ltx_p ltx_align_center"><span class="ltx_text ltx_font_typewriter">DE ESPACIOS VECTORIALES REALES</span></p>
+<p class="ltx_p ltx_align_center"><span class="ltx_text ltx_font_typewriter">CON PRODUCTO INTERIOR</span></p>
+<p class="ltx_p"><span class="ltx_text ltx_font_slanted">Juan M. Márquez B.</span></p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Principios de álgebra multilineal
+
+<span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Sea <math id="p3.m1" class="ltx_Math" alttext="V" display="inline"><mi mathvariant="normal">V</mi></math> un espacio vectorial sobre los reales <math id="p3.m2" class="ltx_Math" alttext="\Bbb{R}" display="inline"><mi mathvariant="normal">R</mi></math> de dimensión <math id="p3.m3" class="ltx_Math" alttext="n" display="inline"><mi mathvariant="normal">n</mi></math>. Si los objetos <math id="p3.m4" class="ltx_Math" alttext="b_{1},b_{2},...,b_{n}" display="inline"><mrow><msub><mi mathvariant="normal">b</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><msub><mi mathvariant="normal">b</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi mathvariant="normal">b</mi><mi mathvariant="normal">n</mi></msub></mrow></math> es una base
+entonces usamos la notación</span></p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="V=\langle\{b_{i}\}\rangle=\langle\{b_{1},b_{2},...,b_{n}\}\rangle" display="block"><mrow><mi mathsize="90%">V</mi><mo mathsize="90%" stretchy="false">=</mo><mrow><mo maxsize="90%" minsize="90%">⟨</mo><mrow><mo maxsize="90%" minsize="90%">{</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">i</mi></msub><mo maxsize="90%" minsize="90%">}</mo></mrow><mo maxsize="90%" minsize="90%">⟩</mo></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mo maxsize="90%" minsize="90%">⟨</mo><mrow><mo maxsize="90%" minsize="90%">{</mo><msub><mi mathsize="90%">b</mi><mn mathsize="90%">1</mn></msub><mo mathsize="90%" stretchy="false">,</mo><msub><mi mathsize="90%">b</mi><mn mathsize="90%">2</mn></msub><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%" mathvariant="normal">…</mi><mo mathsize="90%" stretchy="false">,</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">n</mi></msub><mo maxsize="90%" minsize="90%">}</mo></mrow><mo maxsize="90%" minsize="90%">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">para indicar que cada <math id="p3.m5" class="ltx_Math" alttext="X" display="inline"><mi mathvariant="normal">X</mi></math> vector en <math id="p3.m6" class="ltx_Math" alttext="V" display="inline"><mi mathvariant="normal">V</mi></math> se escribe como combinación lineal de los <math id="p3.m7" class="ltx_Math" alttext="b_{i}" display="inline"><msub><mi mathvariant="normal">b</mi><mi mathvariant="normal">i</mi></msub></math>.</span></p>
+</div>
+<div id="p4" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p ltx_align_center"><span class="ltx_text ltx_font_bold" style="font-size:90%;">Espacio dual</span></p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">El <span class="ltx_text ltx_font_serif ltx_font_italic">espacio dual</span> de <math id="p6.m1" class="ltx_Math" alttext="V" display="inline"><mi mathvariant="normal">V</mi></math> se define como el conjunto <math id="p6.m2" class="ltx_Math" alttext="V^{*}" display="inline"><msup><mi mathvariant="normal">V</mi><mo mathvariant="normal">*</mo></msup></math> de los funcionales lineales <math id="p6.m3" class="ltx_Math" alttext="V\to\Bbb{R}" display="inline"><mrow><mi mathvariant="normal">V</mi><mo mathvariant="normal">→</mo><mi mathvariant="normal">R</mi></mrow></math>.
+Resulta que <math id="p6.m4" class="ltx_Math" alttext="V^{*}" display="inline"><msup><mi mathvariant="normal">V</mi><mo mathvariant="normal">*</mo></msup></math> también es una espacio vectorial.</span></p>
+</div>
+<div id="p7" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">?‘ Cuál es una base y la dimensión de este espacio?</span></p>
+</div>
+<div id="p9" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Considere las transformaciones (una para cada <math id="p10.m1" class="ltx_Math" alttext="i" display="inline"><mi mathvariant="normal">i</mi></math>)</span></p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\beta^{i}:V\to\Bbb{R}" display="block"><mrow><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup><mo mathsize="90%" stretchy="false">:</mo><mrow><mi mathsize="90%">V</mi><mo mathsize="90%" stretchy="false">→</mo><mi mathsize="90%">R</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">definida por</span></p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="X\mapsto\beta^{i}(X)=X^{i}," display="block"><mrow><mrow><mi mathsize="90%">X</mi><mo mathsize="90%" stretchy="false">↦</mo><mrow><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">X</mi><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow><mo mathsize="90%" stretchy="false">=</mo><msup><mi mathsize="90%">X</mi><mi mathsize="90%">i</mi></msup></mrow><mo mathsize="90%" stretchy="false">,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">donde <math id="p10.m2" class="ltx_Math" alttext="X=X^{s}b_{s}" display="inline"><mrow><mi mathvariant="normal">X</mi><mo mathvariant="normal">=</mo><mrow><msup><mi mathvariant="normal">X</mi><mi mathvariant="normal">s</mi></msup><mo mathvariant="sans-serif">⁢</mo><msub><mi mathvariant="normal">b</mi><mi mathvariant="normal">s</mi></msub></mrow></mrow></math> (convención de la suma de Einstein).</span></p>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Así <math id="p11.m1" class="ltx_Math" alttext="\beta^{i}" display="inline"><msup><mi mathvariant="normal">β</mi><mi mathvariant="normal">i</mi></msup></math> es una función lineal.
+En otras palabras, el funcional <math id="p11.m2" class="ltx_Math" alttext="\beta^{i}" display="inline"><msup><mi mathvariant="normal">β</mi><mi mathvariant="normal">i</mi></msup></math> ”extrae” el <math id="p11.m3" class="ltx_Math" alttext="i" display="inline"><mi mathvariant="normal">i</mi></math>-esimo componente de <math id="p11.m4" class="ltx_Math" alttext="X" display="inline"><mi mathvariant="normal">X</mi></math> y cumple linealidad:</span></p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\beta^{i}(aX)=a\beta^{i}(X)" display="block"><mrow><mrow><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mrow><mi mathsize="90%">a</mi><mo>⁢</mo><mi mathsize="90%">X</mi></mrow><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mi mathsize="90%">a</mi><mo>⁢</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">X</mi><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\beta^{i}(X+Y)=\beta^{i}(X)+\beta^{i}(Y)" display="block"><mrow><mrow><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mrow><mi mathsize="90%">X</mi><mo mathsize="90%" stretchy="false">+</mo><mi mathsize="90%">Y</mi></mrow><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mrow><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">X</mi><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow><mo mathsize="90%" stretchy="false">+</mo><mrow><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">Y</mi><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">para cualesquiera escalar <math id="p11.m5" class="ltx_Math" alttext="a" display="inline"><mi mathvariant="normal">a</mi></math> y vectores <math id="p11.m6" class="ltx_Math" alttext="X,Y" display="inline"><mrow><mi mathvariant="normal">X</mi><mo mathvariant="normal">,</mo><mi mathvariant="normal">Y</mi></mrow></math>.</span></p>
+</div>
+<div id="p12" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p13" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Los elementos de <math id="p13.m1" class="ltx_Math" alttext="V^{*}" display="inline"><msup><mi mathvariant="normal">V</mi><mo mathvariant="normal">*</mo></msup></math> también se llaman <span class="ltx_text ltx_font_serif ltx_font_italic">covectores</span>.</span></p>
+</div>
+<div id="p14" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p15" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Todo elemento <math id="p15.m1" class="ltx_Math" alttext="f\in V^{*}" display="inline"><mrow><mi mathvariant="normal">f</mi><mo mathvariant="normal">∈</mo><msup><mi mathvariant="normal">V</mi><mo mathvariant="normal">*</mo></msup></mrow></math> se escribe así ;</span></p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="f=f_{s}\beta^{s}" display="block"><mrow><mi mathsize="90%">f</mi><mo mathsize="90%" stretchy="false">=</mo><mrow><msub><mi mathsize="90%">f</mi><mi mathsize="90%">s</mi></msub><mo>⁢</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">s</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">donde los componentes satisfacen <math id="p15.m2" class="ltx_Math" alttext="f_{s}=f(b_{s})" display="inline"><mrow><msub><mi mathvariant="normal">f</mi><mi mathvariant="normal">s</mi></msub><mo mathvariant="normal">=</mo><mrow><mi mathvariant="normal">f</mi><mo mathvariant="sans-serif">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi mathvariant="normal">b</mi><mi mathvariant="normal">s</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math></span></p>
+</div>
+<div id="p16" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p17" class="ltx_para">
+<p class="ltx_p ltx_align_center"><span class="ltx_text ltx_font_bold" style="font-size:90%;">Producto tensorial</span></p>
+</div>
+<div id="p18" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Sean <math id="p18.m1" class="ltx_Math" alttext="V,W" display="inline"><mrow><mi mathvariant="normal">V</mi><mo mathvariant="normal">,</mo><mi mathvariant="normal">W</mi></mrow></math> dos espacios vectoriales sobre los reales <math id="p18.m2" class="ltx_Math" alttext="\Bbb{R}" display="inline"><mi mathvariant="normal">R</mi></math>.
+Indicamos con</span></p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="V=\langle\{b_{1},...,b_{n}\}\rangle" display="block"><mrow><mi mathsize="90%">V</mi><mo mathsize="90%" stretchy="false">=</mo><mrow><mo maxsize="90%" minsize="90%">⟨</mo><mrow><mo maxsize="90%" minsize="90%">{</mo><msub><mi mathsize="90%">b</mi><mn mathsize="90%">1</mn></msub><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%" mathvariant="normal">…</mi><mo mathsize="90%" stretchy="false">,</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">n</mi></msub><mo maxsize="90%" minsize="90%">}</mo></mrow><mo maxsize="90%" minsize="90%">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">que el espacio <math id="p18.m3" class="ltx_Math" alttext="V" display="inline"><mi mathvariant="normal">V</mi></math> está generado por los vectores básicos <math id="p18.m4" class="ltx_Math" alttext="b_{i}" display="inline"><msub><mi mathvariant="normal">b</mi><mi mathvariant="normal">i</mi></msub></math>.
+En otras palabras; si <math id="p18.m5" class="ltx_Math" alttext="X\in V" display="inline"><mrow><mi mathvariant="normal">X</mi><mo mathvariant="normal">∈</mo><mi mathvariant="normal">V</mi></mrow></math> entonces</span></p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="X=X^{s}b_{s}" display="block"><mrow><mi mathsize="90%">X</mi><mo mathsize="90%" stretchy="false">=</mo><mrow><msup><mi mathsize="90%">X</mi><mi mathsize="90%">s</mi></msup><mo>⁢</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">s</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">es la combinación lineal
+<math id="p18.m6" class="ltx_Math" alttext="X=X^{1}b_{1}+X^{2}b_{2}+\cdots+X^{n}b_{n}" display="inline"><mrow><mi mathvariant="normal">X</mi><mo mathvariant="normal">=</mo><mrow><mrow><msup><mi mathvariant="normal">X</mi><mn mathvariant="normal">1</mn></msup><mo mathvariant="sans-serif">⁢</mo><msub><mi mathvariant="normal">b</mi><mn mathvariant="normal">1</mn></msub></mrow><mo mathvariant="normal">+</mo><mrow><msup><mi mathvariant="normal">X</mi><mn mathvariant="normal">2</mn></msup><mo mathvariant="sans-serif">⁢</mo><msub><mi mathvariant="normal">b</mi><mn mathvariant="normal">2</mn></msub></mrow><mo mathvariant="normal">+</mo><mi mathvariant="normal">⋯</mi><mo mathvariant="normal">+</mo><mrow><msup><mi mathvariant="normal">X</mi><mi mathvariant="normal">n</mi></msup><mo mathvariant="sans-serif">⁢</mo><msub><mi mathvariant="normal">b</mi><mi mathvariant="normal">n</mi></msub></mrow></mrow></mrow></math>.</span></p>
+</div>
+<div id="p19" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p20" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Si <math id="p20.m1" class="ltx_Math" alttext="W=\langle\{d_{1},...,d_{m}\}\rangle" display="inline"><mrow><mi mathvariant="normal">W</mi><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">⟨</mo><mrow><mo mathvariant="normal" stretchy="false">{</mo><msub><mi mathvariant="normal">d</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi mathvariant="normal">d</mi><mi mathvariant="normal">m</mi></msub><mo mathvariant="normal" stretchy="false">}</mo></mrow><mo mathvariant="normal" stretchy="false">⟩</mo></mrow></mrow></math> es otro espacio vectorial, entonces definimos</span></p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="V\otimes W=\langle\{b_{1}\otimes d_{1},b_{1}\otimes d_{2},...,b_{n}\otimes d_{%
+m},\}\rangle," display="block"><mrow><mi mathsize="90%">V</mi><mo mathsize="90%" stretchy="false">⊗</mo><mi mathsize="90%">W</mi><mo mathsize="90%" stretchy="false">=</mo><mrow><mo maxsize="90%" minsize="90%">⟨</mo><mrow><mo maxsize="90%" minsize="90%">{</mo><msub><mi mathsize="90%">b</mi><mn mathsize="90%">1</mn></msub><mo mathsize="90%" stretchy="false">⊗</mo><msub><mi mathsize="90%">d</mi><mn mathsize="90%">1</mn></msub><mo mathsize="90%" stretchy="false">,</mo><msub><mi mathsize="90%">b</mi><mn mathsize="90%">1</mn></msub><mo mathsize="90%" stretchy="false">⊗</mo><msub><mi mathsize="90%">d</mi><mn mathsize="90%">2</mn></msub><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%" mathvariant="normal">…</mi><mo mathsize="90%" stretchy="false">,</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">n</mi></msub><mo mathsize="90%" stretchy="false">⊗</mo><msub><mi mathsize="90%">d</mi><mi mathsize="90%">m</mi></msub><mo mathsize="90%" stretchy="false">,</mo><mo maxsize="90%" minsize="90%">}</mo></mrow><mo maxsize="90%" minsize="90%">⟩</mo></mrow><mo mathsize="90%" stretchy="false">,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">esto implica que si <math id="p20.m2" class="ltx_Math" alttext="B\in V\otimes W" display="inline"><mrow><mi mathvariant="normal">B</mi><mo mathvariant="normal">∈</mo><mrow><mi mathvariant="normal">V</mi><mo mathvariant="normal">⊗</mo><mi mathvariant="normal">W</mi></mrow></mrow></math> entonces</span></p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="B=B^{st}b_{s}\otimes d_{t}" display="block"><mrow><mi mathsize="90%">B</mi><mo mathsize="90%" stretchy="false">=</mo><mrow><mrow><msup><mi mathsize="90%">B</mi><mrow><mi mathsize="90%">s</mi><mo>⁢</mo><mi mathsize="90%">t</mi></mrow></msup><mo>⁢</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">s</mi></msub></mrow><mo mathsize="90%" stretchy="false">⊗</mo><msub><mi mathsize="90%">d</mi><mi mathsize="90%">t</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">lo cual es la <span class="ltx_text ltx_font_serif ltx_font_italic">combinación lineal bi-indexada</span>:</span></p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="B=B^{11}b_{1}\otimes d_{1}+B^{12}b_{1}\otimes d_{2}+\cdots+B^{nm}b_{n}\otimes d%
+_{m}" display="block"><mrow><mi mathsize="90%">B</mi><mo mathsize="90%" stretchy="false">=</mo><mrow><mrow><mrow><msup><mi mathsize="90%">B</mi><mn mathsize="90%">11</mn></msup><mo>⁢</mo><msub><mi mathsize="90%">b</mi><mn mathsize="90%">1</mn></msub></mrow><mo mathsize="90%" stretchy="false">⊗</mo><msub><mi mathsize="90%">d</mi><mn mathsize="90%">1</mn></msub></mrow><mo mathsize="90%" stretchy="false">+</mo><mrow><mrow><msup><mi mathsize="90%">B</mi><mn mathsize="90%">12</mn></msup><mo>⁢</mo><msub><mi mathsize="90%">b</mi><mn mathsize="90%">1</mn></msub></mrow><mo mathsize="90%" stretchy="false">⊗</mo><msub><mi mathsize="90%">d</mi><mn mathsize="90%">2</mn></msub></mrow><mo mathsize="90%" stretchy="false">+</mo><mi mathsize="90%" mathvariant="normal">⋯</mi><mo mathsize="90%" stretchy="false">+</mo><mrow><mrow><msup><mi mathsize="90%">B</mi><mrow><mi mathsize="90%">n</mi><mo>⁢</mo><mi mathsize="90%">m</mi></mrow></msup><mo>⁢</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">n</mi></msub></mrow><mo mathsize="90%" stretchy="false">⊗</mo><msub><mi mathsize="90%">d</mi><mi mathsize="90%">m</mi></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p21" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p22" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Los objetos en <math id="p22.m1" class="ltx_Math" alttext="V\otimes V" display="inline"><mrow><mi mathvariant="normal">V</mi><mo mathvariant="normal">⊗</mo><mi mathvariant="normal">V</mi></mrow></math> se llaman <span class="ltx_text ltx_font_serif ltx_font_italic">tensor contravariante de rango 2</span> en <math id="p22.m2" class="ltx_Math" alttext="V" display="inline"><mi mathvariant="normal">V</mi></math> o bien un
+<span class="ltx_text ltx_font_serif ltx_font_italic">2-contratensor</span>.</span></p>
+</div>
+<div id="p23" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Los objetos en <math id="p23.m1" class="ltx_Math" alttext="V^{*}\otimes V^{*}" display="inline"><mrow><msup><mi mathvariant="normal">V</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="normal">⊗</mo><msup><mi mathvariant="normal">V</mi><mo mathvariant="normal">*</mo></msup></mrow></math> se llaman <span class="ltx_text ltx_font_serif ltx_font_italic">tensor covariante de rango 2</span> en <math id="p23.m2" class="ltx_Math" alttext="V" display="inline"><mi mathvariant="normal">V</mi></math> o bien un
+<span class="ltx_text ltx_font_serif ltx_font_italic">2-cotensor</span>.</span></p>
+</div>
+<div id="p24" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Los objetos en <math id="p24.m1" class="ltx_Math" alttext="V^{*}\otimes V" display="inline"><mrow><msup><mi mathvariant="normal">V</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="normal">⊗</mo><mi mathvariant="normal">V</mi></mrow></math> se llaman <span class="ltx_text ltx_font_serif ltx_font_italic">tensor mixto de rango 2</span> en <math id="p24.m2" class="ltx_Math" alttext="V" display="inline"><mi mathvariant="normal">V</mi></math>.</span></p>
+</div>
+<div id="p25" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p26" class="ltx_para">
+<p class="ltx_p ltx_align_center"><span class="ltx_text ltx_font_bold" style="font-size:90%;">Multilinealidad</span></p>
+</div>
+<div id="p27" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Los elementos básicos de <math id="p27.m1" class="ltx_Math" alttext="V^{*}\otimes V^{*}" display="inline"><mrow><msup><mi mathvariant="normal">V</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="normal">⊗</mo><msup><mi mathvariant="normal">V</mi><mo mathvariant="normal">*</mo></msup></mrow></math> pueden ser visualizados como transformaciones bilineales</span></p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="\beta^{i}\otimes\beta^{j}:V\times V\to\Bbb{R}" display="block"><mrow><mrow><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup><mo mathsize="90%" stretchy="false">⊗</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">j</mi></msup></mrow><mo mathsize="90%" stretchy="false">:</mo><mrow><mrow><mi mathsize="90%">V</mi><mo mathsize="90%" stretchy="false">×</mo><mi mathsize="90%">V</mi></mrow><mo mathsize="90%" stretchy="false">→</mo><mi mathsize="90%">R</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">mediante la asignación dada por
+</span></p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="(X,Y)\mapsto\beta^{i}\otimes\beta^{j}(X,Y)=\beta^{i}(X)\beta^{j}(Y)=X^{i}Y^{j}" display="block"><mrow><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">X</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">Y</mi><mo maxsize="90%" minsize="90%">)</mo></mrow><mo mathsize="90%" stretchy="false">↦</mo><mrow><mrow><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup><mo mathsize="90%" stretchy="false">⊗</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">j</mi></msup></mrow><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">X</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">Y</mi><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">X</mi><mo maxsize="90%" minsize="90%">)</mo></mrow><mo>⁢</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">j</mi></msup><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">Y</mi><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><msup><mi mathsize="90%">X</mi><mi mathsize="90%">i</mi></msup><mo>⁢</mo><msup><mi mathsize="90%">Y</mi><mi mathsize="90%">j</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p28" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p29" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Similarmente los elementos básicos de <math id="p29.m1" class="ltx_Math" alttext="V\otimes V" display="inline"><mrow><mi mathvariant="normal">V</mi><mo mathvariant="normal">⊗</mo><mi mathvariant="normal">V</mi></mrow></math> pueden ser considerados como mapas bilineales</span></p>
+<table id="S0.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex14.m1" class="ltx_Math" alttext="b_{i}\otimes b_{j}:V^{*}\otimes V^{*}\to\Bbb{R}" display="block"><mrow><mrow><msub><mi mathsize="90%">b</mi><mi mathsize="90%">i</mi></msub><mo mathsize="90%" stretchy="false">⊗</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">j</mi></msub></mrow><mo mathsize="90%" stretchy="false">:</mo><mrow><mrow><msup><mi mathsize="90%">V</mi><mo mathsize="90%" stretchy="false">*</mo></msup><mo mathsize="90%" stretchy="false">⊗</mo><msup><mi mathsize="90%">V</mi><mo mathsize="90%" stretchy="false">*</mo></msup></mrow><mo mathsize="90%" stretchy="false">→</mo><mi mathsize="90%">R</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">mediante la asignación</span></p>
+<table id="S0.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex15.m1" class="ltx_Math" alttext="(f,g)\mapsto b_{i}\otimes b_{j}(f,g)=f(b_{i})g(b_{j})=f_{i}g_{j}" display="block"><mrow><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">f</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">g</mi><mo maxsize="90%" minsize="90%">)</mo></mrow><mo mathsize="90%" stretchy="false">↦</mo><mrow><mrow><msub><mi mathsize="90%">b</mi><mi mathsize="90%">i</mi></msub><mo mathsize="90%" stretchy="false">⊗</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">j</mi></msub></mrow><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">f</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">g</mi><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mi mathsize="90%">f</mi><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">i</mi></msub><mo maxsize="90%" minsize="90%">)</mo></mrow><mo>⁢</mo><mi mathsize="90%">g</mi><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">j</mi></msub><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><msub><mi mathsize="90%">f</mi><mi mathsize="90%">i</mi></msub><mo>⁢</mo><msub><mi mathsize="90%">g</mi><mi mathsize="90%">j</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p30" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Un elemento básico de <math id="p30.m1" class="ltx_Math" alttext="V^{*}\otimes V" display="inline"><mrow><msup><mi mathvariant="normal">V</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="normal">⊗</mo><mi mathvariant="normal">V</mi></mrow></math> se puede ver como un mapa bilineal</span></p>
+<table id="S0.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex16.m1" class="ltx_Math" alttext="V\times V^{*}\to\Bbb{R}" display="block"><mrow><mrow><mi mathsize="90%">V</mi><mo mathsize="90%" stretchy="false">×</mo><msup><mi mathsize="90%">V</mi><mo mathsize="90%" stretchy="false">*</mo></msup></mrow><mo mathsize="90%" stretchy="false">→</mo><mi mathsize="90%">R</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">mediante la fórmula</span></p>
+<table id="S0.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex17.m1" class="ltx_Math" alttext="(X,f)\mapsto\beta^{i}\otimes b_{j}(X,f)=\beta^{i}(X)f(b_{j})=X^{i}f_{j}" display="block"><mrow><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">X</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">f</mi><mo maxsize="90%" minsize="90%">)</mo></mrow><mo mathsize="90%" stretchy="false">↦</mo><mrow><mrow><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup><mo mathsize="90%" stretchy="false">⊗</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">j</mi></msub></mrow><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">X</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">f</mi><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">X</mi><mo maxsize="90%" minsize="90%">)</mo></mrow><mo>⁢</mo><mi mathsize="90%">f</mi><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">j</mi></msub><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><msup><mi mathsize="90%">X</mi><mi mathsize="90%">i</mi></msup><mo>⁢</mo><msub><mi mathsize="90%">f</mi><mi mathsize="90%">j</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p31" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p32" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Efectivamente estas reglas son bilineales, pues por ejemplo,
+para cualesquiera escalares <math id="p32.m1" class="ltx_Math" alttext="a,c\in\Bbb{R}" display="inline"><mrow><mrow><mi mathvariant="normal">a</mi><mo mathvariant="normal">,</mo><mi mathvariant="normal">c</mi></mrow><mo mathvariant="normal">∈</mo><mi mathvariant="normal">R</mi></mrow></math> y vectores <math id="p32.m2" class="ltx_Math" alttext="X,Y,Z\in V" display="inline"><mrow><mrow><mi mathvariant="normal">X</mi><mo mathvariant="normal">,</mo><mi mathvariant="normal">Y</mi><mo mathvariant="normal">,</mo><mi mathvariant="normal">Z</mi></mrow><mo mathvariant="normal">∈</mo><mi mathvariant="normal">V</mi></mrow></math>
+tenemos</span></p>
+<table id="S0.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex18.m1" class="ltx_Math" alttext="\beta^{i}\otimes\beta^{j}(aX+cY,Z)=a\beta^{i}\otimes\beta^{j}(X,Z)+c\beta^{i}%
+\otimes\beta^{j}(Y,Z)" display="block"><mrow><mrow><mrow><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup><mo mathsize="90%" stretchy="false">⊗</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">j</mi></msup></mrow><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mrow><mrow><mi mathsize="90%">a</mi><mo>⁢</mo><mi mathsize="90%">X</mi></mrow><mo mathsize="90%" stretchy="false">+</mo><mrow><mi mathsize="90%">c</mi><mo>⁢</mo><mi mathsize="90%">Y</mi></mrow></mrow><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">Z</mi><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mrow><mrow><mrow><mi mathsize="90%">a</mi><mo>⁢</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup></mrow><mo mathsize="90%" stretchy="false">⊗</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">j</mi></msup></mrow><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">X</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">Z</mi><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow><mo mathsize="90%" stretchy="false">+</mo><mrow><mrow><mrow><mi mathsize="90%">c</mi><mo>⁢</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup></mrow><mo mathsize="90%" stretchy="false">⊗</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">j</mi></msup></mrow><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">Y</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">Z</mi><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex19.m1" class="ltx_Math" alttext="\beta^{i}\otimes\beta^{j}(X,aY+cZ)=a\beta^{i}\otimes\beta^{j}(X,Y)+c\beta^{i}%
+\otimes\beta^{j}(X,Z)" display="block"><mrow><mrow><mrow><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup><mo mathsize="90%" stretchy="false">⊗</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">j</mi></msup></mrow><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">X</mi><mo mathsize="90%" stretchy="false">,</mo><mrow><mrow><mi mathsize="90%">a</mi><mo>⁢</mo><mi mathsize="90%">Y</mi></mrow><mo mathsize="90%" stretchy="false">+</mo><mrow><mi mathsize="90%">c</mi><mo>⁢</mo><mi mathsize="90%">Z</mi></mrow></mrow><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mrow><mrow><mrow><mi mathsize="90%">a</mi><mo>⁢</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup></mrow><mo mathsize="90%" stretchy="false">⊗</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">j</mi></msup></mrow><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">X</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">Y</mi><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow><mo mathsize="90%" stretchy="false">+</mo><mrow><mrow><mrow><mi mathsize="90%">c</mi><mo>⁢</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup></mrow><mo mathsize="90%" stretchy="false">⊗</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">j</mi></msup></mrow><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">X</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">Z</mi><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">que son respectivamente</span></p>
+<table id="S0.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex20.m1" class="ltx_Math" alttext="(aX^{i}+cY^{i})z^{j}=aX^{i}Z^{j}+cY^{i}Z^{j}" display="block"><mrow><mrow><mrow><mo maxsize="90%" minsize="90%">(</mo><mrow><mrow><mi mathsize="90%">a</mi><mo>⁢</mo><msup><mi mathsize="90%">X</mi><mi mathsize="90%">i</mi></msup></mrow><mo mathsize="90%" stretchy="false">+</mo><mrow><mi mathsize="90%">c</mi><mo>⁢</mo><msup><mi mathsize="90%">Y</mi><mi mathsize="90%">i</mi></msup></mrow></mrow><mo maxsize="90%" minsize="90%">)</mo></mrow><mo>⁢</mo><msup><mi mathsize="90%">z</mi><mi mathsize="90%">j</mi></msup></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mrow><mi mathsize="90%">a</mi><mo>⁢</mo><msup><mi mathsize="90%">X</mi><mi mathsize="90%">i</mi></msup><mo>⁢</mo><msup><mi mathsize="90%">Z</mi><mi mathsize="90%">j</mi></msup></mrow><mo mathsize="90%" stretchy="false">+</mo><mrow><mi mathsize="90%">c</mi><mo>⁢</mo><msup><mi mathsize="90%">Y</mi><mi mathsize="90%">i</mi></msup><mo>⁢</mo><msup><mi mathsize="90%">Z</mi><mi mathsize="90%">j</mi></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex21.m1" class="ltx_Math" alttext="X^{i}(aY^{j}+cZ^{j})=aX^{i}Y^{j}+cX^{i}Z^{j}" display="block"><mrow><mrow><msup><mi mathsize="90%">X</mi><mi mathsize="90%">i</mi></msup><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mrow><mrow><mi mathsize="90%">a</mi><mo>⁢</mo><msup><mi mathsize="90%">Y</mi><mi mathsize="90%">j</mi></msup></mrow><mo mathsize="90%" stretchy="false">+</mo><mrow><mi mathsize="90%">c</mi><mo>⁢</mo><msup><mi mathsize="90%">Z</mi><mi mathsize="90%">j</mi></msup></mrow></mrow><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mrow><mi mathsize="90%">a</mi><mo>⁢</mo><msup><mi mathsize="90%">X</mi><mi mathsize="90%">i</mi></msup><mo>⁢</mo><msup><mi mathsize="90%">Y</mi><mi mathsize="90%">j</mi></msup></mrow><mo mathsize="90%" stretchy="false">+</mo><mrow><mi mathsize="90%">c</mi><mo>⁢</mo><msup><mi mathsize="90%">X</mi><mi mathsize="90%">i</mi></msup><mo>⁢</mo><msup><mi mathsize="90%">Z</mi><mi mathsize="90%">j</mi></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p33" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p34" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Toda transformación bilineal <math id="p34.m1" class="ltx_Math" alttext="V\times V\to\Bbb{R}" display="inline"><mrow><mrow><mi mathvariant="normal">V</mi><mo mathvariant="normal">×</mo><mi mathvariant="normal">V</mi></mrow><mo mathvariant="normal">→</mo><mi mathvariant="normal">R</mi></mrow></math> está generada por los <math id="p34.m2" class="ltx_Math" alttext="\beta^{i}\otimes\beta^{j}" display="inline"><mrow><msup><mi mathvariant="normal">β</mi><mi mathvariant="normal">i</mi></msup><mo mathvariant="normal">⊗</mo><msup><mi mathvariant="normal">β</mi><mi mathvariant="normal">j</mi></msup></mrow></math> pues
+si <math id="p34.m3" class="ltx_Math" alttext="B:V\times V\to\Bbb{R}" display="inline"><mrow><mi mathvariant="normal">B</mi><mo mathvariant="normal">:</mo><mrow><mrow><mi mathvariant="normal">V</mi><mo mathvariant="normal">×</mo><mi mathvariant="normal">V</mi></mrow><mo mathvariant="normal">→</mo><mi mathvariant="normal">R</mi></mrow></mrow></math> es un mapeo bilineal arbitario, este se expresará como</span></p>
+<table id="S0.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex22.m1" class="ltx_Math" alttext="B=B_{st}\beta^{s}\otimes\beta^{t}" display="block"><mrow><mi mathsize="90%">B</mi><mo mathsize="90%" stretchy="false">=</mo><mrow><mrow><msub><mi mathsize="90%">B</mi><mrow><mi mathsize="90%">s</mi><mo>⁢</mo><mi mathsize="90%">t</mi></mrow></msub><mo>⁢</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">s</mi></msup></mrow><mo mathsize="90%" stretchy="false">⊗</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">t</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">y denotaremos con <math id="p34.m4" class="ltx_Math" alttext="T^{(2,0)}V" display="inline"><mrow><msup><mi mathvariant="normal">T</mi><mrow><mo mathvariant="normal" stretchy="false">(</mo><mn mathvariant="normal">2</mn><mo mathvariant="normal">,</mo><mn mathvariant="normal">0</mn><mo mathvariant="normal" stretchy="false">)</mo></mrow></msup><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">V</mi></mrow></math> el espacio vectorial generado por los <math id="p34.m5" class="ltx_Math" alttext="\beta^{i}\otimes\beta^{j}" display="inline"><mrow><msup><mi mathvariant="normal">β</mi><mi mathvariant="normal">i</mi></msup><mo mathvariant="normal">⊗</mo><msup><mi mathvariant="normal">β</mi><mi mathvariant="normal">j</mi></msup></mrow></math>, en otras palabras</span></p>
+<table id="S0.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex23.m1" class="ltx_Math" alttext="T^{(2,0)}V=\langle\{\beta^{i}\otimes\beta^{j}\}\rangle" display="block"><mrow><mrow><msup><mi mathsize="90%">T</mi><mrow><mo maxsize="90%" minsize="90%">(</mo><mn mathsize="90%">2</mn><mo mathsize="90%" stretchy="false">,</mo><mn mathsize="90%">0</mn><mo maxsize="90%" minsize="90%">)</mo></mrow></msup><mo>⁢</mo><mi mathsize="90%">V</mi></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mo maxsize="90%" minsize="90%">⟨</mo><mrow><mo maxsize="90%" minsize="90%">{</mo><mrow><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup><mo mathsize="90%" stretchy="false">⊗</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">j</mi></msup></mrow><mo maxsize="90%" minsize="90%">}</mo></mrow><mo maxsize="90%" minsize="90%">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p35" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p36" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Similarmente el conjunto de los mapas tri-lineales</span></p>
+<table id="S0.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex24.m1" class="ltx_Math" alttext="T^{(3,0)}V=\langle\{\beta^{i}\otimes\beta^{j}\otimes\beta^{k}\}\rangle" display="block"><mrow><mrow><msup><mi mathsize="90%">T</mi><mrow><mo maxsize="90%" minsize="90%">(</mo><mn mathsize="90%">3</mn><mo mathsize="90%" stretchy="false">,</mo><mn mathsize="90%">0</mn><mo maxsize="90%" minsize="90%">)</mo></mrow></msup><mo>⁢</mo><mi mathsize="90%">V</mi></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mo maxsize="90%" minsize="90%">⟨</mo><mrow><mo maxsize="90%" minsize="90%">{</mo><mrow><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup><mo mathsize="90%" stretchy="false">⊗</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">j</mi></msup><mo mathsize="90%" stretchy="false">⊗</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">k</mi></msup></mrow><mo maxsize="90%" minsize="90%">}</mo></mrow><mo maxsize="90%" minsize="90%">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">donde <math id="p36.m1" class="ltx_Math" alttext="\beta^{i}\otimes\beta^{j}\otimes\beta^{k}(X,Y,Z)=X^{i}Y^{j}Z^{k}" display="inline"><mrow><mrow><mrow><msup><mi mathvariant="normal">β</mi><mi mathvariant="normal">i</mi></msup><mo mathvariant="normal">⊗</mo><msup><mi mathvariant="normal">β</mi><mi mathvariant="normal">j</mi></msup><mo mathvariant="normal">⊗</mo><msup><mi mathvariant="normal">β</mi><mi mathvariant="normal">k</mi></msup></mrow><mo mathvariant="sans-serif">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi mathvariant="normal">X</mi><mo mathvariant="normal">,</mo><mi mathvariant="normal">Y</mi><mo mathvariant="normal">,</mo><mi mathvariant="normal">Z</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mrow><msup><mi mathvariant="normal">X</mi><mi mathvariant="normal">i</mi></msup><mo mathvariant="sans-serif">⁢</mo><msup><mi mathvariant="normal">Y</mi><mi mathvariant="normal">j</mi></msup><mo mathvariant="sans-serif">⁢</mo><msup><mi mathvariant="normal">Z</mi><mi mathvariant="normal">k</mi></msup></mrow></mrow></math> es una construcción tri-lineal básica.
+Así cualquier otro mapa trilineal <math id="p36.m2" class="ltx_Math" alttext="T:V\times V\times V\to\Bbb{R}" display="inline"><mrow><mi mathvariant="normal">T</mi><mo mathvariant="normal">:</mo><mrow><mrow><mi mathvariant="normal">V</mi><mo mathvariant="normal">×</mo><mi mathvariant="normal">V</mi><mo mathvariant="normal">×</mo><mi mathvariant="normal">V</mi></mrow><mo mathvariant="normal">→</mo><mi mathvariant="normal">R</mi></mrow></mrow></math> se escribe conforme a</span></p>
+<table id="S0.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex25.m1" class="ltx_Math" alttext="T=T_{stu}\beta^{s}\otimes\beta^{t}\otimes\beta^{u}" display="block"><mrow><mi mathsize="90%">T</mi><mo mathsize="90%" stretchy="false">=</mo><mrow><mrow><msub><mi mathsize="90%">T</mi><mrow><mi mathsize="90%">s</mi><mo>⁢</mo><mi mathsize="90%">t</mi><mo>⁢</mo><mi mathsize="90%">u</mi></mrow></msub><mo>⁢</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">s</mi></msup></mrow><mo mathsize="90%" stretchy="false">⊗</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">t</mi></msup><mo mathsize="90%" stretchy="false">⊗</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">u</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p37" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p38" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">No es difícil visualizar lo qué hay en el espacio vectorial <math id="p38.m1" class="ltx_Math" alttext="T^{(k,0)}V" display="inline"><mrow><msup><mi mathvariant="normal">T</mi><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi mathvariant="normal">k</mi><mo mathvariant="normal">,</mo><mn mathvariant="normal">0</mn><mo mathvariant="normal" stretchy="false">)</mo></mrow></msup><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">V</mi></mrow></math> y cuál es una base para él.
+?‘puede ud. decir cuál es las dimensión de cada uno de estos espacios vectoriales?</span></p>
+</div>
+<div id="p39" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p40" class="ltx_para">
+<p class="ltx_p ltx_align_center"><span class="ltx_text ltx_font_bold" style="font-size:90%;">Álgebra de Grassmann</span></p>
+</div>
+<div id="p41" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Importantes son las transformaciones multilineales que son <span class="ltx_text ltx_font_serif ltx_font_italic">antisimétricas</span>, es decir transformaciones multilieales
+que cambian de signo cuando intercambiamos (transponemos) dos de sus argumentos.
+Por ejemplo un mapa bilineal <math id="p41.m1" class="ltx_Math" alttext="B:V\times V\to\Bbb{R}" display="inline"><mrow><mi mathvariant="normal">B</mi><mo mathvariant="normal">:</mo><mrow><mrow><mi mathvariant="normal">V</mi><mo mathvariant="normal">×</mo><mi mathvariant="normal">V</mi></mrow><mo mathvariant="normal">→</mo><mi mathvariant="normal">R</mi></mrow></mrow></math> es antisimétrico (o alternante) si satisface</span></p>
+<table id="S0.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex26.m1" class="ltx_Math" alttext="B(X,Y)=-B(Y,X)" display="block"><mrow><mrow><mi mathsize="90%">B</mi><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">X</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">Y</mi><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mo mathsize="90%" stretchy="false">-</mo><mrow><mi mathsize="90%">B</mi><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">Y</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">X</mi><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">un trilineal alternante cumple</span></p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex29" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex27.m1" class="ltx_Math" alttext="\displaystyle T(X,Y,Z)" display="inline"><mrow><mi mathsize="90%">T</mi><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">X</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">Y</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">Z</mi><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex27.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo mathsize="90%" stretchy="false">=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex27.m3" class="ltx_Math" alttext="\displaystyle-T(Y,X,Z)" display="inline"><mrow><mo mathsize="90%" stretchy="false">-</mo><mrow><mi mathsize="90%">T</mi><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">Y</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">X</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">Z</mi><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex28.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo mathsize="90%" stretchy="false">=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex28.m3" class="ltx_Math" alttext="\displaystyle T(Y,Z,X)" display="inline"><mrow><mi mathsize="90%">T</mi><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">Y</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">Z</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">X</mi><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex29.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo mathsize="90%" stretchy="false">=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex29.m3" class="ltx_Math" alttext="\displaystyle-T(Z,Y,X)" display="inline"><mrow><mo mathsize="90%" stretchy="false">-</mo><mrow><mi mathsize="90%">T</mi><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">Z</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">Y</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">X</mi><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p42" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p43" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">La construcción</span></p>
+<table id="S0.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex30.m1" class="ltx_Math" alttext="\beta^{i}\wedge\beta^{j}=\beta\otimes\beta^{j}-\beta^{j}\otimes\beta^{i}" display="block"><mrow><mrow><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup><mo mathsize="90%" stretchy="false">∧</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">j</mi></msup></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mrow><mi mathsize="90%">β</mi><mo mathsize="90%" stretchy="false">⊗</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">j</mi></msup></mrow><mo mathsize="90%" stretchy="false">-</mo><mrow><msup><mi mathsize="90%">β</mi><mi mathsize="90%">j</mi></msup><mo mathsize="90%" stretchy="false">⊗</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">define un operador bilineal antisimétrico básico
+y satisface</span></p>
+<table id="S0.Ex31" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex31.m1" class="ltx_Math" alttext="\beta^{i}\wedge\beta^{j}(X,Y)=X^{i}Y^{j}-X^{j}Y^{i}" display="block"><mrow><mrow><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup><mo mathsize="90%" stretchy="false">∧</mo><mrow><msup><mi mathsize="90%">β</mi><mi mathsize="90%">j</mi></msup><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">X</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">Y</mi><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mrow><msup><mi mathsize="90%">X</mi><mi mathsize="90%">i</mi></msup><mo>⁢</mo><msup><mi mathsize="90%">Y</mi><mi mathsize="90%">j</mi></msup></mrow><mo mathsize="90%" stretchy="false">-</mo><mrow><msup><mi mathsize="90%">X</mi><mi mathsize="90%">j</mi></msup><mo>⁢</mo><msup><mi mathsize="90%">Y</mi><mi mathsize="90%">i</mi></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Otra notación es</span></p>
+<table id="S0.Ex32" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex32.m1" class="ltx_Math" alttext="\beta^{i}\wedge\beta^{j}=\beta^{[i}\otimes\beta^{j]}" display="block"><mrow><mrow><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup><mo mathsize="90%" stretchy="false">∧</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">j</mi></msup></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><msup><mi mathsize="90%">β</mi><mrow><mo maxsize="90%" minsize="90%">[</mo><mi mathsize="90%">i</mi></mrow></msup><mo mathsize="90%" stretchy="false">⊗</mo><msup><mi mathsize="90%">β</mi><mrow><mi mathsize="90%">j</mi><mo maxsize="90%" minsize="90%">]</mo></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p44" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p45" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Estos objetos generan un subespacio de mapas bilineales –también llamados <span class="ltx_text ltx_font_serif ltx_font_italic">bivectores</span> o <span class="ltx_text ltx_font_serif ltx_font_italic">2-formas</span>–
+y los simbolizamos con</span></p>
+<table id="S0.Ex33" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex33.m1" class="ltx_Math" alttext="\Lambda^{2}V=\langle\{\beta^{i}\wedge\beta^{j}\}\rangle" display="block"><mrow><mrow><msup><mi mathsize="90%" mathvariant="normal">Λ</mi><mn mathsize="90%">2</mn></msup><mo>⁢</mo><mi mathsize="90%">V</mi></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mo maxsize="90%" minsize="90%">⟨</mo><mrow><mo maxsize="90%" minsize="90%">{</mo><mrow><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup><mo mathsize="90%" stretchy="false">∧</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">j</mi></msup></mrow><mo maxsize="90%" minsize="90%">}</mo></mrow><mo maxsize="90%" minsize="90%">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">esto implica que si <math id="p45.m1" class="ltx_Math" alttext="B\in\Lambda^{2}V" display="inline"><mrow><mi mathvariant="normal">B</mi><mo mathvariant="normal">∈</mo><mrow><msup><mi mathvariant="normal">Λ</mi><mn mathvariant="normal">2</mn></msup><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">V</mi></mrow></mrow></math> entonces <math id="p45.m2" class="ltx_Math" alttext="B=B_{st}\beta^{s}\wedge\beta^{t}" display="inline"><mrow><mi mathvariant="normal">B</mi><mo mathvariant="normal">=</mo><mrow><mrow><msub><mi mathvariant="normal">B</mi><mrow><mi mathvariant="normal">s</mi><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">t</mi></mrow></msub><mo mathvariant="sans-serif">⁢</mo><msup><mi mathvariant="normal">β</mi><mi mathvariant="normal">s</mi></msup></mrow><mo mathvariant="normal">∧</mo><msup><mi mathvariant="normal">β</mi><mi mathvariant="normal">t</mi></msup></mrow></mrow></math></span></p>
+</div>
+<div id="p46" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p47" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Observe que <math id="p47.m1" class="ltx_Math" alttext="\beta^{i}\wedge\beta^{i}=0" display="inline"><mrow><mrow><msup><mi mathvariant="normal">β</mi><mi mathvariant="normal">i</mi></msup><mo mathvariant="normal">∧</mo><msup><mi mathvariant="normal">β</mi><mi mathvariant="normal">i</mi></msup></mrow><mo mathvariant="normal">=</mo><mn mathvariant="normal">0</mn></mrow></math> para cada <math id="p47.m2" class="ltx_Math" alttext="i" display="inline"><mi mathvariant="normal">i</mi></math>.</span></p>
+</div>
+<div id="p48" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p49" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Ahora, si <math id="p49.m1" class="ltx_Math" alttext="\dim V=n" display="inline"><mrow><mrow><mo mathvariant="normal">dim</mo><mo mathvariant="sans-serif">⁡</mo><mi mathvariant="normal">V</mi></mrow><mo mathvariant="normal">=</mo><mi mathvariant="normal">n</mi></mrow></math> entonces</span></p>
+<table id="S0.Ex34" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex34.m1" class="ltx_Math" alttext="\beta^{1}\wedge\beta^{2},\beta^{1}\wedge\beta^{3},...,\beta^{1}\wedge\beta^{n}%
+,\beta^{2}\wedge\beta^{3},...,\beta^{n-1}\wedge\beta^{n}" display="block"><mrow><mrow><msup><mi mathsize="90%">β</mi><mn mathsize="90%">1</mn></msup><mo mathsize="90%" stretchy="false">∧</mo><msup><mi mathsize="90%">β</mi><mn mathsize="90%">2</mn></msup></mrow><mo mathsize="90%" stretchy="false">,</mo><mrow><msup><mi mathsize="90%">β</mi><mn mathsize="90%">1</mn></msup><mo mathsize="90%" stretchy="false">∧</mo><msup><mi mathsize="90%">β</mi><mn mathsize="90%">3</mn></msup></mrow><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%" mathvariant="normal">…</mi><mo mathsize="90%" stretchy="false">,</mo><mrow><msup><mi mathsize="90%">β</mi><mn mathsize="90%">1</mn></msup><mo mathsize="90%" stretchy="false">∧</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">n</mi></msup></mrow><mo mathsize="90%" stretchy="false">,</mo><mrow><msup><mi mathsize="90%">β</mi><mn mathsize="90%">2</mn></msup><mo mathsize="90%" stretchy="false">∧</mo><msup><mi mathsize="90%">β</mi><mn mathsize="90%">3</mn></msup></mrow><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%" mathvariant="normal">…</mi><mo mathsize="90%" stretchy="false">,</mo><mrow><msup><mi mathsize="90%">β</mi><mrow><mi mathsize="90%">n</mi><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">1</mn></mrow></msup><mo mathsize="90%" stretchy="false">∧</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">n</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">son los únicos bivectores básicos
+por lo tanto <math id="p49.m2" class="ltx_Math" alttext="\dim\Lambda^{2}V={n\choose 2}" display="inline"><mrow><mrow><mo mathvariant="normal">dim</mo><mo mathvariant="sans-serif">⁡</mo><mrow><msup><mi mathvariant="normal">Λ</mi><mn mathvariant="normal">2</mn></msup><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">V</mi></mrow></mrow><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal">(</mo><mfrac linethickness="0pt"><mi mathvariant="normal">n</mi><mn mathvariant="normal">2</mn></mfrac><mo mathvariant="normal">)</mo></mrow></mrow></math></span></p>
+</div>
+<div id="p50" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p51" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">El espacio vectorial <math id="p51.m1" class="ltx_Math" alttext="\Lambda^{k}V" display="inline"><mrow><msup><mi mathvariant="normal">Λ</mi><mi mathvariant="normal">k</mi></msup><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">V</mi></mrow></math> generado por los productos exteriores de <math id="p51.m2" class="ltx_Math" alttext="k" display="inline"><mi mathvariant="normal">k</mi></math> covectores básicos</span></p>
+<table id="S0.Ex35" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex35.m1" class="ltx_Math" alttext="\beta^{i_{1}}\wedge\beta^{i_{2}}\wedge\cdots\wedge\beta^{i_{k}}" display="block"><mrow><msup><mi mathsize="90%">β</mi><msub><mi mathsize="90%">i</mi><mn mathsize="90%">1</mn></msub></msup><mo mathsize="90%" stretchy="false">∧</mo><msup><mi mathsize="90%">β</mi><msub><mi mathsize="90%">i</mi><mn mathsize="90%">2</mn></msub></msup><mo mathsize="90%" stretchy="false">∧</mo><mi mathsize="90%" mathvariant="normal">⋯</mi><mo mathsize="90%" stretchy="false">∧</mo><msup><mi mathsize="90%">β</mi><msub><mi mathsize="90%">i</mi><mi mathsize="90%">k</mi></msub></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">donde los indices cumplen <math id="p51.m3" class="ltx_Math" alttext="i_{1}&lt;i_{2}&lt;\cdots&lt;i_{k}" display="inline"><mrow><msub><mi mathvariant="normal">i</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">&lt;</mo><msub><mi mathvariant="normal">i</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">&lt;</mo><mi mathvariant="normal">⋯</mi><mo mathvariant="normal">&lt;</mo><msub><mi mathvariant="normal">i</mi><mi mathvariant="normal">k</mi></msub></mrow></math>, tiene dimensión <math id="p51.m4" class="ltx_Math" alttext="{n\choose k}" display="inline"><mrow><mo mathvariant="normal">(</mo><mfrac linethickness="0pt"><mi mathvariant="normal">n</mi><mi mathvariant="normal">k</mi></mfrac><mo mathvariant="normal">)</mo></mrow></math>
+i.e.</span></p>
+<table id="S0.Ex36" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex36.m1" class="ltx_Math" alttext="\dim(\Lambda^{k}V)={\dim V\choose k}" display="block"><mrow><mrow><mo mathsize="90%" stretchy="false">dim</mo><mo>⁡</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mrow><msup><mi mathsize="90%" mathvariant="normal">Λ</mi><mi mathsize="90%">k</mi></msup><mo>⁢</mo><mi mathsize="90%">V</mi></mrow><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mo>(</mo><mfrac linethickness="0pt"><mrow><mo mathsize="90%" stretchy="false">dim</mo><mo>⁡</mo><mi mathsize="90%">V</mi></mrow><mi mathsize="90%">k</mi></mfrac><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p52" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p53" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">El espacio <math id="p53.m1" class="ltx_Math" alttext="\Lambda^{n}V" display="inline"><mrow><msup><mi mathvariant="normal">Λ</mi><mi mathvariant="normal">n</mi></msup><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">V</mi></mrow></math> está generado por la única <span class="ltx_text ltx_font_serif ltx_font_italic">n-forma</span> <math id="p53.m2" class="ltx_Math" alttext="\beta^{1}\wedge\beta^{2}\wedge\cdots\wedge\beta^{n}" display="inline"><mrow><msup><mi mathvariant="normal">β</mi><mn mathvariant="normal">1</mn></msup><mo mathvariant="normal">∧</mo><msup><mi mathvariant="normal">β</mi><mn mathvariant="normal">2</mn></msup><mo mathvariant="normal">∧</mo><mi mathvariant="normal">⋯</mi><mo mathvariant="normal">∧</mo><msup><mi mathvariant="normal">β</mi><mi mathvariant="normal">n</mi></msup></mrow></math>
+por lo que <math id="p53.m3" class="ltx_Math" alttext="\dim(\Lambda^{n}V)=1" display="inline"><mrow><mrow><mo mathvariant="normal">dim</mo><mo mathvariant="sans-serif">⁡</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><msup><mi mathvariant="normal">Λ</mi><mi mathvariant="normal">n</mi></msup><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">V</mi></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mn mathvariant="normal">1</mn></mrow></math>.</span></p>
+</div>
+<div id="p54" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p55" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">El espacio vectorial</span></p>
+<table id="S0.Ex37" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex37.m1" class="ltx_Math" alttext="\Lambda V=\Lambda^{0}V\oplus\Lambda^{1}V\oplus\cdots\oplus\Lambda^{n-1}V\oplus%
+\Lambda^{n}V" display="block"><mrow><mrow><mi mathsize="90%" mathvariant="normal">Λ</mi><mo>⁢</mo><mi mathsize="90%">V</mi></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mrow><msup><mi mathsize="90%" mathvariant="normal">Λ</mi><mn mathsize="90%">0</mn></msup><mo>⁢</mo><mi mathsize="90%">V</mi></mrow><mo mathsize="90%" stretchy="false">⊕</mo><mrow><msup><mi mathsize="90%" mathvariant="normal">Λ</mi><mn mathsize="90%">1</mn></msup><mo>⁢</mo><mi mathsize="90%">V</mi></mrow><mo mathsize="90%" stretchy="false">⊕</mo><mi mathsize="90%" mathvariant="normal">⋯</mi><mo mathsize="90%" stretchy="false">⊕</mo><mrow><msup><mi mathsize="90%" mathvariant="normal">Λ</mi><mrow><mi mathsize="90%">n</mi><mo mathsize="90%" stretchy="false">-</mo><mn mathsize="90%">1</mn></mrow></msup><mo>⁢</mo><mi mathsize="90%">V</mi></mrow><mo mathsize="90%" stretchy="false">⊕</mo><mrow><msup><mi mathsize="90%" mathvariant="normal">Λ</mi><mi mathsize="90%">n</mi></msup><mo>⁢</mo><mi mathsize="90%">V</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">junto con el producto exterior <math id="p55.m1" class="ltx_Math" alttext="\wedge" display="inline"><mo mathvariant="normal">∧</mo></math> constituyen un <span class="ltx_text ltx_font_serif ltx_font_italic">álgebra</span> que recibe el nombre de álgebra de Grassmann
+(o álgebra exterior) de <math id="p55.m2" class="ltx_Math" alttext="V" display="inline"><mi mathvariant="normal">V</mi></math></span></p>
+</div>
+<div id="p56" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p57" class="ltx_para">
+<p class="ltx_p ltx_align_center"><span class="ltx_text ltx_font_bold" style="font-size:90%;">Espacios vectoriales con producto interior.</span></p>
+</div>
+<div id="p58" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Sea <math id="p58.m1" class="ltx_Math" alttext="V" display="inline"><mi mathvariant="normal">V</mi></math> un espacio vectorial sobre los reales <math id="p58.m2" class="ltx_Math" alttext="\Bbb{R}" display="inline"><mi mathvariant="normal">R</mi></math> generado por los objetos
+<math id="p58.m3" class="ltx_Math" alttext="\{b_{1},b_{2},...,b_{n}\}" display="inline"><mrow><mo mathvariant="normal" stretchy="false">{</mo><msub><mi mathvariant="normal">b</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><msub><mi mathvariant="normal">b</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi mathvariant="normal">b</mi><mi mathvariant="normal">n</mi></msub><mo mathvariant="normal" stretchy="false">}</mo></mrow></math>. Suponga que existe un <span class="ltx_text ltx_font_serif ltx_font_italic">producto interior</span> en <math id="p58.m4" class="ltx_Math" alttext="V" display="inline"><mi mathvariant="normal">V</mi></math> i.e. hay un mapa</span></p>
+<table id="S0.Ex38" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex38.m1" class="ltx_Math" alttext="\langle\quad,\quad\rangle:V\times V\to\Bbb{R}" display="block"><mrow><mrow><mo maxsize="90%" minsize="90%">⟨</mo><mo mathsize="90%" mathvariant="italic" separator="true" stretchy="false"> </mo><mo mathsize="90%" rspace="12.5pt" stretchy="false">,</mo><mo maxsize="90%" minsize="90%">⟩</mo></mrow><mo mathsize="90%" stretchy="false">:</mo><mi mathsize="90%">V</mi><mo mathsize="90%" stretchy="false">×</mo><mi mathsize="90%">V</mi><mo mathsize="90%" stretchy="false">→</mo><mi mathsize="90%">R</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">el cual es bilineal, simétrico y positivo definido no degenerado:
+repectivamente</span></p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">1.</span></span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="\langle aX+cY,Z\rangle=a\langle X,Z\rangle+c\langle Y,Z\rangle" display="inline"><mrow><mrow><mo maxsize="90%" minsize="90%">⟨</mo><mrow><mrow><mi mathsize="90%">a</mi><mo>⁢</mo><mi mathsize="90%">X</mi></mrow><mo mathsize="90%" stretchy="false">+</mo><mrow><mi mathsize="90%">c</mi><mo>⁢</mo><mi mathsize="90%">Y</mi></mrow></mrow><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">Z</mi><mo maxsize="90%" minsize="90%">⟩</mo></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mrow><mi mathsize="90%">a</mi><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">⟨</mo><mi mathsize="90%">X</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">Z</mi><mo maxsize="90%" minsize="90%">⟩</mo></mrow></mrow><mo mathsize="90%" stretchy="false">+</mo><mrow><mi mathsize="90%">c</mi><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">⟨</mo><mi mathsize="90%">Y</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">Z</mi><mo maxsize="90%" minsize="90%">⟩</mo></mrow></mrow></mrow></mrow></math><span class="ltx_text ltx_font_sansserif" style="font-size:90%;"></span></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">2.</span></span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="\langle X,aY+cZ\rangle=a\langle X,Y\rangle+c\langle X,Z\rangle" display="inline"><mrow><mrow><mo maxsize="90%" minsize="90%">⟨</mo><mi mathsize="90%">X</mi><mo mathsize="90%" stretchy="false">,</mo><mrow><mrow><mi mathsize="90%">a</mi><mo>⁢</mo><mi mathsize="90%">Y</mi></mrow><mo mathsize="90%" stretchy="false">+</mo><mrow><mi mathsize="90%">c</mi><mo>⁢</mo><mi mathsize="90%">Z</mi></mrow></mrow><mo maxsize="90%" minsize="90%">⟩</mo></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mrow><mi mathsize="90%">a</mi><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">⟨</mo><mi mathsize="90%">X</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">Y</mi><mo maxsize="90%" minsize="90%">⟩</mo></mrow></mrow><mo mathsize="90%" stretchy="false">+</mo><mrow><mi mathsize="90%">c</mi><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">⟨</mo><mi mathsize="90%">X</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">Z</mi><mo maxsize="90%" minsize="90%">⟩</mo></mrow></mrow></mrow></mrow></math><span class="ltx_text ltx_font_sansserif" style="font-size:90%;"></span></p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">3.</span></span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="\langle X,Y\rangle=\langle Y,Z\rangle" display="inline"><mrow><mrow><mo maxsize="90%" minsize="90%">⟨</mo><mi mathsize="90%">X</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">Y</mi><mo maxsize="90%" minsize="90%">⟩</mo></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mo maxsize="90%" minsize="90%">⟨</mo><mi mathsize="90%">Y</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">Z</mi><mo maxsize="90%" minsize="90%">⟩</mo></mrow></mrow></math><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">
+</span></p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">4.</span></span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i4.p1.m1" class="ltx_Math" alttext="\langle X,X\rangle\geq 0" display="inline"><mrow><mrow><mo maxsize="90%" minsize="90%">⟨</mo><mi mathsize="90%">X</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">X</mi><mo maxsize="90%" minsize="90%">⟩</mo></mrow><mo mathsize="90%" stretchy="false">≥</mo><mn mathsize="90%">0</mn></mrow></math><span class="ltx_text ltx_font_sansserif" style="font-size:90%;"></span></p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">5.</span></span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i5.p1.m1" class="ltx_Math" alttext="\langle X,X\rangle=0" display="inline"><mrow><mrow><mo maxsize="90%" minsize="90%">⟨</mo><mi mathsize="90%">X</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">X</mi><mo maxsize="90%" minsize="90%">⟩</mo></mrow><mo mathsize="90%" stretchy="false">=</mo><mn mathsize="90%">0</mn></mrow></math><span class="ltx_text ltx_font_sansserif" style="font-size:90%;"> si y sólo si </span><math id="I1.i5.p1.m2" class="ltx_Math" alttext="X=0" display="inline"><mrow><mi mathsize="90%">X</mi><mo mathsize="90%" stretchy="false">=</mo><mn mathsize="90%">0</mn></mrow></math><span class="ltx_text ltx_font_sansserif" style="font-size:90%;"></span></p>
+</div>
+</li>
+</ol>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">donde <math id="p58.m5" class="ltx_Math" alttext="a,c" display="inline"><mrow><mi mathvariant="normal">a</mi><mo mathvariant="normal">,</mo><mi mathvariant="normal">c</mi></mrow></math> son escalares reales y <math id="p58.m6" class="ltx_Math" alttext="X,Y,Z" display="inline"><mrow><mi mathvariant="normal">X</mi><mo mathvariant="normal">,</mo><mi mathvariant="normal">Y</mi><mo mathvariant="normal">,</mo><mi mathvariant="normal">Z</mi></mrow></math> vectores arbitarios en <math id="p58.m7" class="ltx_Math" alttext="V" display="inline"><mi mathvariant="normal">V</mi></math>.</span></p>
+</div>
+<div id="p59" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p60" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">El <span class="ltx_text ltx_font_serif ltx_font_italic">tensor métrico</span> es la matriz</span></p>
+<table id="S0.Ex39" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex39.m1" class="ltx_Math" alttext="G=\left(\begin{array}[]{cccc}g_{11}&amp;g_{12}&amp;\cdots&amp;g_{1n}\\
+g_{21}&amp;g_{22}&amp;\cdots&amp;g_{2n}\\
+\vdots&amp;&amp;\ddots&amp;\vdots\\
+g_{n1}&amp;&amp;&amp;g_{nn}\end{array}\right)" display="block"><mrow><mi mathsize="90%">G</mi><mo mathsize="90%" stretchy="false">=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msub><mi mathsize="90%">g</mi><mn mathsize="90%">11</mn></msub></mtd><mtd columnalign="center"><msub><mi mathsize="90%">g</mi><mn mathsize="90%">12</mn></msub></mtd><mtd columnalign="center"><mi mathsize="90%" mathvariant="normal">⋯</mi></mtd><mtd columnalign="center"><msub><mi mathsize="90%">g</mi><mrow><mn mathsize="90%">1</mn><mo>⁢</mo><mi mathsize="90%">n</mi></mrow></msub></mtd></mtr><mtr><mtd columnalign="center"><msub><mi mathsize="90%">g</mi><mn mathsize="90%">21</mn></msub></mtd><mtd columnalign="center"><msub><mi mathsize="90%">g</mi><mn mathsize="90%">22</mn></msub></mtd><mtd columnalign="center"><mi mathsize="90%" mathvariant="normal">⋯</mi></mtd><mtd columnalign="center"><msub><mi mathsize="90%">g</mi><mrow><mn mathsize="90%">2</mn><mo>⁢</mo><mi mathsize="90%">n</mi></mrow></msub></mtd></mtr><mtr><mtd columnalign="center"><mi mathsize="90%" mathvariant="normal">⋮</mi></mtd><mtd></mtd><mtd columnalign="center"><mi mathsize="90%" mathvariant="normal">⋱</mi></mtd><mtd columnalign="center"><mi mathsize="90%" mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><msub><mi mathsize="90%">g</mi><mrow><mi mathsize="90%">n</mi><mo>⁢</mo><mn mathsize="90%">1</mn></mrow></msub></mtd><mtd></mtd><mtd></mtd><mtd columnalign="center"><msub><mi mathsize="90%">g</mi><mrow><mi mathsize="90%">n</mi><mo>⁢</mo><mi mathsize="90%">n</mi></mrow></msub></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">donde <math id="p60.m1" class="ltx_Math" alttext="g_{ij}=\langle b_{i},b_{j}\rangle" display="inline"><mrow><msub><mi mathvariant="normal">g</mi><mrow><mi mathvariant="normal">i</mi><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">j</mi></mrow></msub><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">⟨</mo><msub><mi mathvariant="normal">b</mi><mi mathvariant="normal">i</mi></msub><mo mathvariant="normal">,</mo><msub><mi mathvariant="normal">b</mi><mi mathvariant="normal">j</mi></msub><mo mathvariant="normal" stretchy="false">⟩</mo></mrow></mrow></math>.</span></p>
+</div>
+<div id="p61" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p62" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">La matriz inversa <math id="p62.m1" class="ltx_Math" alttext="G^{-1}" display="inline"><msup><mi mathvariant="normal">G</mi><mrow><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></msup></math> se llama <span class="ltx_text ltx_font_serif ltx_font_italic">cotensor métrico</span> y sus entradas se indexan
+<math id="p62.m2" class="ltx_Math" alttext="G^{-1}=[g^{ij}]" display="inline"><mrow><msup><mi mathvariant="normal">G</mi><mrow><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></msup><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">[</mo><msup><mi mathvariant="normal">g</mi><mrow><mi mathvariant="normal">i</mi><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">j</mi></mrow></msup><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></math>,
+por lo que al multiplicar <math id="p62.m3" class="ltx_Math" alttext="G" display="inline"><mi mathvariant="normal">G</mi></math> y <math id="p62.m4" class="ltx_Math" alttext="G^{-1}" display="inline"><msup><mi mathvariant="normal">G</mi><mrow><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></msup></math> se obtienen las relaciones</span></p>
+<table id="S0.Ex40" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex40.m1" class="ltx_Math" alttext="{\delta_{i}}^{j}=g_{is}g^{sj}=g_{i1}g^{1j}+g_{i2}g^{2j}+\cdots g_{in}g^{nj}" display="block"><mrow><mmultiscripts><mi mathsize="90%">δ</mi><mi mathsize="90%">i</mi><none></none><none></none><mi mathsize="90%">j</mi></mmultiscripts><mo mathsize="90%" stretchy="false">=</mo><mrow><msub><mi mathsize="90%">g</mi><mrow><mi mathsize="90%">i</mi><mo>⁢</mo><mi mathsize="90%">s</mi></mrow></msub><mo>⁢</mo><msup><mi mathsize="90%">g</mi><mrow><mi mathsize="90%">s</mi><mo>⁢</mo><mi mathsize="90%">j</mi></mrow></msup></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mrow><msub><mi mathsize="90%">g</mi><mrow><mi mathsize="90%">i</mi><mo>⁢</mo><mn mathsize="90%">1</mn></mrow></msub><mo>⁢</mo><msup><mi mathsize="90%">g</mi><mrow><mn mathsize="90%">1</mn><mo>⁢</mo><mi mathsize="90%">j</mi></mrow></msup></mrow><mo mathsize="90%" stretchy="false">+</mo><mrow><msub><mi mathsize="90%">g</mi><mrow><mi mathsize="90%">i</mi><mo>⁢</mo><mn mathsize="90%">2</mn></mrow></msub><mo>⁢</mo><msup><mi mathsize="90%">g</mi><mrow><mn mathsize="90%">2</mn><mo>⁢</mo><mi mathsize="90%">j</mi></mrow></msup></mrow><mo mathsize="90%" stretchy="false">+</mo><mrow><mi mathsize="90%" mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi mathsize="90%">g</mi><mrow><mi mathsize="90%">i</mi><mo>⁢</mo><mi mathsize="90%">n</mi></mrow></msub><mo>⁢</mo><msup><mi mathsize="90%">g</mi><mrow><mi mathsize="90%">n</mi><mo>⁢</mo><mi mathsize="90%">j</mi></mrow></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p63" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p64" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold" style="font-size:90%;">Lema de Representación de Riesz<span class="ltx_text ltx_font_sansserif ltx_font_medium"> <span class="ltx_text ltx_font_serif ltx_font_italic">Sea <math id="p64.m1" class="ltx_Math" alttext="f\colon V\to\Bbb{R}" display="inline"><mrow><mi mathvariant="normal">f</mi><mo mathvariant="normal">:</mo><mrow><mi mathvariant="normal">V</mi><mo mathvariant="normal">→</mo><mi mathvariant="normal">R</mi></mrow></mrow></math> un covector en <math id="p64.m2" class="ltx_Math" alttext="V" display="inline"><mi mathvariant="normal">V</mi></math> con producto interior
+<math id="p64.m3" class="ltx_Math" alttext="\langle\quad,\quad\rangle" display="inline"><mrow><mo mathvariant="normal" stretchy="false">⟨</mo><mo mathvariant="normal" separator="true"> </mo><mo mathvariant="normal" rspace="12.5pt">,</mo><mo mathvariant="normal" stretchy="false">⟩</mo></mrow></math>.
+Entonces existe un único vector <math id="p64.m4" class="ltx_Math" alttext="a\in V" display="inline"><mrow><mi mathvariant="normal">a</mi><mo mathvariant="normal">∈</mo><mi mathvariant="normal">V</mi></mrow></math> el cual determina a <math id="p64.m5" class="ltx_Math" alttext="f" display="inline"><mi mathvariant="normal">f</mi></math>, esto es:</span></span></span></p>
+<table id="S0.Ex41" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex41.m1" class="ltx_Math" alttext="f(\quad)=\langle a,\quad\rangle" display="block"><mrow><mi mathsize="90%">f</mi><mrow><mo maxsize="90%" minsize="90%">(</mo><mo mathsize="90%" mathvariant="italic" separator="true" stretchy="false"> </mo><mo maxsize="90%" minsize="90%">)</mo></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mo maxsize="90%" minsize="90%">⟨</mo><mi mathsize="90%">a</mi><mo mathsize="90%" rspace="12.5pt" stretchy="false">,</mo><mo maxsize="90%" minsize="90%">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p65" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p66" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Para los covectores básicos <math id="p66.m1" class="ltx_Math" alttext="\beta^{i}" display="inline"><msup><mi mathvariant="normal">β</mi><mi mathvariant="normal">i</mi></msup></math> resulta que el vector <math id="p66.m2" class="ltx_Math" alttext="b^{i}=g^{is}b_{s}" display="inline"><mrow><msup><mi mathvariant="normal">b</mi><mi mathvariant="normal">i</mi></msup><mo mathvariant="normal">=</mo><mrow><msup><mi mathvariant="normal">g</mi><mrow><mi mathvariant="normal">i</mi><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">s</mi></mrow></msup><mo mathvariant="sans-serif">⁢</mo><msub><mi mathvariant="normal">b</mi><mi mathvariant="normal">s</mi></msub></mrow></mrow></math> (suma sobre <math id="p66.m3" class="ltx_Math" alttext="s" display="inline"><mi mathvariant="normal">s</mi></math>) satisface</span></p>
+<table id="S0.Ex42" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex42.m1" class="ltx_Math" alttext="\beta^{i}(\quad)=\langle b^{i},\quad\rangle" display="block"><mrow><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup><mrow><mo maxsize="90%" minsize="90%">(</mo><mo mathsize="90%" mathvariant="italic" separator="true" stretchy="false"> </mo><mo maxsize="90%" minsize="90%">)</mo></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mo maxsize="90%" minsize="90%">⟨</mo><msup><mi mathsize="90%">b</mi><mi mathsize="90%">i</mi></msup><mo mathsize="90%" rspace="12.5pt" stretchy="false">,</mo><mo maxsize="90%" minsize="90%">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">pues si <math id="p66.m4" class="ltx_Math" alttext="\beta^{i}" display="inline"><msup><mi mathvariant="normal">β</mi><mi mathvariant="normal">i</mi></msup></math> se aplica a el básico <math id="p66.m5" class="ltx_Math" alttext="b_{t}" display="inline"><msub><mi mathvariant="normal">b</mi><mi mathvariant="normal">t</mi></msub></math> tenemos</span></p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex47" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex43.m1" class="ltx_Math" alttext="\displaystyle\beta^{i}(b_{t})" display="inline"><mrow><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">t</mi></msub><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex43.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo mathsize="90%" stretchy="false">=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex43.m3" class="ltx_Math" alttext="\displaystyle\langle b^{i},b_{t}\rangle" display="inline"><mrow><mo maxsize="90%" minsize="90%">⟨</mo><msup><mi mathsize="90%">b</mi><mi mathsize="90%">i</mi></msup><mo mathsize="90%" stretchy="false">,</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">t</mi></msub><mo maxsize="90%" minsize="90%">⟩</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex44.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo mathsize="90%" stretchy="false">=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex44.m3" class="ltx_Math" alttext="\displaystyle\langle g^{is}b_{s},b_{t}\rangle" display="inline"><mrow><mo maxsize="90%" minsize="90%">⟨</mo><mrow><msup><mi mathsize="90%">g</mi><mrow><mi mathsize="90%">i</mi><mo>⁢</mo><mi mathsize="90%">s</mi></mrow></msup><mo>⁢</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">s</mi></msub></mrow><mo mathsize="90%" stretchy="false">,</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">t</mi></msub><mo maxsize="90%" minsize="90%">⟩</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex45.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo mathsize="90%" stretchy="false">=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex45.m3" class="ltx_Math" alttext="\displaystyle g^{is}\langle b_{s},b_{t}\rangle" display="inline"><mrow><msup><mi mathsize="90%">g</mi><mrow><mi mathsize="90%">i</mi><mo>⁢</mo><mi mathsize="90%">s</mi></mrow></msup><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">⟨</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">s</mi></msub><mo mathsize="90%" stretchy="false">,</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">t</mi></msub><mo maxsize="90%" minsize="90%">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex46.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo mathsize="90%" stretchy="false">=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex46.m3" class="ltx_Math" alttext="\displaystyle g^{is}g_{st}" display="inline"><mrow><msup><mi mathsize="90%">g</mi><mrow><mi mathsize="90%">i</mi><mo>⁢</mo><mi mathsize="90%">s</mi></mrow></msup><mo>⁢</mo><msub><mi mathsize="90%">g</mi><mrow><mi mathsize="90%">s</mi><mo>⁢</mo><mi mathsize="90%">t</mi></mrow></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex47.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo mathsize="90%" stretchy="false">=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex47.m3" class="ltx_Math" alttext="\displaystyle{\delta^{i}}_{t}" display="inline"><mmultiscripts><mi mathsize="90%">δ</mi><none></none><mi mathsize="90%">i</mi><mi mathsize="90%">t</mi><none></none></mmultiscripts></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">por lo que aplicado a un vector <math id="p66.m6" class="ltx_Math" alttext="X=X^{\mu}b_{\mu}" display="inline"><mrow><mi mathvariant="normal">X</mi><mo mathvariant="normal">=</mo><mrow><msup><mi mathvariant="normal">X</mi><mi mathvariant="normal">μ</mi></msup><mo mathvariant="sans-serif">⁢</mo><msub><mi mathvariant="normal">b</mi><mi mathvariant="normal">μ</mi></msub></mrow></mrow></math> arbitario tenemos</span></p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex51" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex48.m1" class="ltx_Math" alttext="\displaystyle\beta^{i}(X)" display="inline"><mrow><msup><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msup><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mi mathsize="90%">X</mi><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex48.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo mathsize="90%" stretchy="false">=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex48.m3" class="ltx_Math" alttext="\displaystyle\langle b^{i},X^{\mu}b_{\mu}\rangle" display="inline"><mrow><mo maxsize="90%" minsize="90%">⟨</mo><msup><mi mathsize="90%">b</mi><mi mathsize="90%">i</mi></msup><mo mathsize="90%" stretchy="false">,</mo><mrow><msup><mi mathsize="90%">X</mi><mi mathsize="90%">μ</mi></msup><mo>⁢</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">μ</mi></msub></mrow><mo maxsize="90%" minsize="90%">⟩</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex49.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo mathsize="90%" stretchy="false">=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex49.m3" class="ltx_Math" alttext="\displaystyle X^{\mu}\langle b^{i},b_{\mu}\rangle" display="inline"><mrow><msup><mi mathsize="90%">X</mi><mi mathsize="90%">μ</mi></msup><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">⟨</mo><msup><mi mathsize="90%">b</mi><mi mathsize="90%">i</mi></msup><mo mathsize="90%" stretchy="false">,</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">μ</mi></msub><mo maxsize="90%" minsize="90%">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex50.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo mathsize="90%" stretchy="false">=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex50.m3" class="ltx_Math" alttext="\displaystyle X^{\mu}{\delta^{i}}_{\mu}" display="inline"><mrow><msup><mi mathsize="90%">X</mi><mi mathsize="90%">μ</mi></msup><mo>⁢</mo><mmultiscripts><mi mathsize="90%">δ</mi><none></none><mi mathsize="90%">i</mi><mi mathsize="90%">μ</mi><none></none></mmultiscripts></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex51.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo mathsize="90%" stretchy="false">=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex51.m3" class="ltx_Math" alttext="\displaystyle X^{i}" display="inline"><msup><mi mathsize="90%">X</mi><mi mathsize="90%">i</mi></msup></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Los vectores <math id="p66.m7" class="ltx_Math" alttext="b^{1},b^{2},...,b^{n}" display="inline"><mrow><msup><mi mathvariant="normal">b</mi><mn mathvariant="normal">1</mn></msup><mo mathvariant="normal">,</mo><msup><mi mathvariant="normal">b</mi><mn mathvariant="normal">2</mn></msup><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msup><mi mathvariant="normal">b</mi><mi mathvariant="normal">n</mi></msup></mrow></math> son linealmente independientes, forman también una base para <math id="p66.m8" class="ltx_Math" alttext="V" display="inline"><mi mathvariant="normal">V</mi></math> y se llaman
+<span class="ltx_text ltx_font_serif ltx_font_italic">básicos reciprocos</span>.</span></p>
+</div>
+<div id="p67" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p68" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Siendo <math id="p68.m1" class="ltx_Math" alttext="T^{(2,0)}V" display="inline"><mrow><msup><mi mathvariant="normal">T</mi><mrow><mo mathvariant="normal" stretchy="false">(</mo><mn mathvariant="normal">2</mn><mo mathvariant="normal">,</mo><mn mathvariant="normal">0</mn><mo mathvariant="normal" stretchy="false">)</mo></mrow></msup><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">V</mi></mrow></math> el conjunto de los mapeos bilineales <math id="p68.m2" class="ltx_Math" alttext="V\times V\to\Bbb{R}" display="inline"><mrow><mrow><mi mathvariant="normal">V</mi><mo mathvariant="normal">×</mo><mi mathvariant="normal">V</mi></mrow><mo mathvariant="normal">→</mo><mi mathvariant="normal">R</mi></mrow></math> y si <math id="p68.m3" class="ltx_Math" alttext="B\in T^{(2,0)}V" display="inline"><mrow><mi mathvariant="normal">B</mi><mo mathvariant="normal">∈</mo><mrow><msup><mi mathvariant="normal">T</mi><mrow><mo mathvariant="normal" stretchy="false">(</mo><mn mathvariant="normal">2</mn><mo mathvariant="normal">,</mo><mn mathvariant="normal">0</mn><mo mathvariant="normal" stretchy="false">)</mo></mrow></msup><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">V</mi></mrow></mrow></math> entonces
+<math id="p68.m4" class="ltx_Math" alttext="B=B_{\mu\nu}\beta^{\mu}\otimes\beta^{\nu}" display="inline"><mrow><mi mathvariant="normal">B</mi><mo mathvariant="normal">=</mo><mrow><mrow><msub><mi mathvariant="normal">B</mi><mrow><mi mathvariant="normal">μ</mi><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">ν</mi></mrow></msub><mo mathvariant="sans-serif">⁢</mo><msup><mi mathvariant="normal">β</mi><mi mathvariant="normal">μ</mi></msup></mrow><mo mathvariant="normal">⊗</mo><msup><mi mathvariant="normal">β</mi><mi mathvariant="normal">ν</mi></msup></mrow></mrow></math>.</span></p>
+</div>
+<div id="p69" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">En el conjunto <math id="p69.m1" class="ltx_Math" alttext="T^{(0,2)}V" display="inline"><mrow><msup><mi mathvariant="normal">T</mi><mrow><mo mathvariant="normal" stretchy="false">(</mo><mn mathvariant="normal">0</mn><mo mathvariant="normal">,</mo><mn mathvariant="normal">2</mn><mo mathvariant="normal" stretchy="false">)</mo></mrow></msup><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">V</mi></mrow></math> está el mapeo bilineal
+<math id="p69.m2" class="ltx_Math" alttext="\bar{B}=B^{\mu\nu}b_{\mu}\otimes b_{\nu}" display="inline"><mrow><mover accent="true"><mi mathvariant="normal">B</mi><mo mathvariant="normal" stretchy="false">¯</mo></mover><mo mathvariant="normal">=</mo><mrow><mrow><msup><mi mathvariant="normal">B</mi><mrow><mi mathvariant="normal">μ</mi><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">ν</mi></mrow></msup><mo mathvariant="sans-serif">⁢</mo><msub><mi mathvariant="normal">b</mi><mi mathvariant="normal">μ</mi></msub></mrow><mo mathvariant="normal">⊗</mo><msub><mi mathvariant="normal">b</mi><mi mathvariant="normal">ν</mi></msub></mrow></mrow></math>.</span></p>
+</div>
+<div id="p70" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Y en <math id="p70.m1" class="ltx_Math" alttext="T^{(1,1)}V" display="inline"><mrow><msup><mi mathvariant="normal">T</mi><mrow><mo mathvariant="normal" stretchy="false">(</mo><mn mathvariant="normal">1</mn><mo mathvariant="normal">,</mo><mn mathvariant="normal">1</mn><mo mathvariant="normal" stretchy="false">)</mo></mrow></msup><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">V</mi></mrow></math> está <math id="p70.m2" class="ltx_Math" alttext="\bar{\bar{B}}={B_{\mu}}^{\nu}\beta^{\mu}\otimes b_{\nu}" display="inline"><mrow><mover accent="true"><mover accent="true"><mi mathvariant="normal">B</mi><mo mathvariant="normal" stretchy="false">¯</mo></mover><mo mathvariant="normal" stretchy="false">¯</mo></mover><mo mathvariant="normal">=</mo><mrow><mrow><mmultiscripts><mi mathvariant="normal">B</mi><mi mathvariant="normal">μ</mi><none></none><none></none><mi mathvariant="normal">ν</mi></mmultiscripts><mo mathvariant="sans-serif">⁢</mo><msup><mi mathvariant="normal">β</mi><mi mathvariant="normal">μ</mi></msup></mrow><mo mathvariant="normal">⊗</mo><msub><mi mathvariant="normal">b</mi><mi mathvariant="normal">ν</mi></msub></mrow></mrow></math>.</span></p>
+</div>
+<div id="p71" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p72" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Ahora si construimos los <span class="ltx_text ltx_font_serif ltx_font_italic">básicos reciprocos duales</span></span></p>
+<table id="S0.Ex52" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex52.m1" class="ltx_Math" alttext="\beta_{i}=g_{is}\beta^{s}" display="block"><mrow><msub><mi mathsize="90%">β</mi><mi mathsize="90%">i</mi></msub><mo mathsize="90%" stretchy="false">=</mo><mrow><msub><mi mathsize="90%">g</mi><mrow><mi mathsize="90%">i</mi><mo>⁢</mo><mi mathsize="90%">s</mi></mrow></msub><mo>⁢</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">s</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">vamos a poder calcular que</span></p>
+<table id="S0.Ex53" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex53.m1" class="ltx_Math" alttext="B(b_{s},b_{t})=\bar{B}(\beta_{s},\beta_{t})=\bar{\bar{B}}(b_{s},\beta_{t})=B_{st}" display="block"><mrow><mrow><mi mathsize="90%">B</mi><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">s</mi></msub><mo mathsize="90%" stretchy="false">,</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">t</mi></msub><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mover accent="true"><mi mathsize="90%">B</mi><mo mathsize="90%" stretchy="false">¯</mo></mover><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><msub><mi mathsize="90%">β</mi><mi mathsize="90%">s</mi></msub><mo mathsize="90%" stretchy="false">,</mo><msub><mi mathsize="90%">β</mi><mi mathsize="90%">t</mi></msub><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mover accent="true"><mover accent="true"><mi mathsize="90%">B</mi><mo mathsize="90%" stretchy="false">¯</mo></mover><mo mathsize="90%" stretchy="false">¯</mo></mover><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">s</mi></msub><mo mathsize="90%" stretchy="false">,</mo><msub><mi mathsize="90%">β</mi><mi mathsize="90%">t</mi></msub><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow><mo mathsize="90%" stretchy="false">=</mo><msub><mi mathsize="90%">B</mi><mrow><mi mathsize="90%">s</mi><mo>⁢</mo><mi mathsize="90%">t</mi></mrow></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">donde los componentes se relacionan mediante el cotensor métrico así:</span></p>
+<table id="S0.Ex54" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex54.m1" class="ltx_Math" alttext="{B^{i}}_{j}=B_{sj}g^{si}" display="block"><mrow><mmultiscripts><mi mathsize="90%">B</mi><none></none><mi mathsize="90%">i</mi><mi mathsize="90%">j</mi><none></none></mmultiscripts><mo mathsize="90%" stretchy="false">=</mo><mrow><msub><mi mathsize="90%">B</mi><mrow><mi mathsize="90%">s</mi><mo>⁢</mo><mi mathsize="90%">j</mi></mrow></msub><mo>⁢</mo><msup><mi mathsize="90%">g</mi><mrow><mi mathsize="90%">s</mi><mo>⁢</mo><mi mathsize="90%">i</mi></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">con suma sobre <math id="p72.m1" class="ltx_Math" alttext="s" display="inline"><mi mathvariant="normal">s</mi></math>, y</span></p>
+<table id="S0.Ex55" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex55.m1" class="ltx_Math" alttext="B^{ij}={B^{i}}_{s}g^{sj}=B_{st}g^{si}g^{tj}" display="block"><mrow><msup><mi mathsize="90%">B</mi><mrow><mi mathsize="90%">i</mi><mo>⁢</mo><mi mathsize="90%">j</mi></mrow></msup><mo mathsize="90%" stretchy="false">=</mo><mrow><mmultiscripts><mi mathsize="90%">B</mi><none></none><mi mathsize="90%">i</mi><mi mathsize="90%">s</mi><none></none></mmultiscripts><mo>⁢</mo><msup><mi mathsize="90%">g</mi><mrow><mi mathsize="90%">s</mi><mo>⁢</mo><mi mathsize="90%">j</mi></mrow></msup></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><msub><mi mathsize="90%">B</mi><mrow><mi mathsize="90%">s</mi><mo>⁢</mo><mi mathsize="90%">t</mi></mrow></msub><mo>⁢</mo><msup><mi mathsize="90%">g</mi><mrow><mi mathsize="90%">s</mi><mo>⁢</mo><mi mathsize="90%">i</mi></mrow></msup><mo>⁢</mo><msup><mi mathsize="90%">g</mi><mrow><mi mathsize="90%">t</mi><mo>⁢</mo><mi mathsize="90%">j</mi></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">con suma sobre <math id="p72.m2" class="ltx_Math" alttext="t" display="inline"><mi mathvariant="normal">t</mi></math> y <math id="p72.m3" class="ltx_Math" alttext="s,t" display="inline"><mrow><mi mathvariant="normal">s</mi><mo mathvariant="normal">,</mo><mi mathvariant="normal">t</mi></mrow></math> respectivamente.
+O bien <math id="p72.m4" class="ltx_Math" alttext="{B_{i}}^{j}=B^{sj}g_{si}" display="inline"><mrow><mmultiscripts><mi mathvariant="normal">B</mi><mi mathvariant="normal">i</mi><none></none><none></none><mi mathvariant="normal">j</mi></mmultiscripts><mo mathvariant="normal">=</mo><mrow><msup><mi mathvariant="normal">B</mi><mrow><mi mathvariant="normal">s</mi><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">j</mi></mrow></msup><mo mathvariant="sans-serif">⁢</mo><msub><mi mathvariant="normal">g</mi><mrow><mi mathvariant="normal">s</mi><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">i</mi></mrow></msub></mrow></mrow></math> y <math id="p72.m5" class="ltx_Math" alttext="B_{ij}={B_{i}}^{s}g_{sj}" display="inline"><mrow><msub><mi mathvariant="normal">B</mi><mrow><mi mathvariant="normal">i</mi><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">j</mi></mrow></msub><mo mathvariant="normal">=</mo><mrow><mmultiscripts><mi mathvariant="normal">B</mi><mi mathvariant="normal">i</mi><none></none><none></none><mi mathvariant="normal">s</mi></mmultiscripts><mo mathvariant="sans-serif">⁢</mo><msub><mi mathvariant="normal">g</mi><mrow><mi mathvariant="normal">s</mi><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">j</mi></mrow></msub></mrow></mrow></math>.
+</span></p>
+</div>
+<div id="p73" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p74" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Todas estas relaciones entre los componentes con respecto al tensor y cotensor métricos reciben el nombre de
+<span class="ltx_text ltx_font_serif ltx_font_italic">leyes de subir y bajar índices</span>.</span></p>
+</div>
+<div id="p75" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p76" class="ltx_para">
+<p class="ltx_p ltx_align_center"><span class="ltx_text ltx_font_bold" style="font-size:90%;">Las formas tiene un producto interior también</span></p>
+</div>
+<div id="p77" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Es posible inducir un producto interior en los espacios <math id="p77.m1" class="ltx_Math" alttext="\Lambda^{k}V" display="inline"><mrow><msup><mi mathvariant="normal">Λ</mi><mi mathvariant="normal">k</mi></msup><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">V</mi></mrow></math>. Si
+<math id="p77.m2" class="ltx_Math" alttext="A=A_{i_{1}...i_{k}}\beta^{i_{1}}\wedge\dots\wedge\beta^{i_{k}}" display="inline"><mrow><mi mathvariant="normal">A</mi><mo mathvariant="normal">=</mo><mrow><mrow><msub><mi mathvariant="normal">A</mi><mrow><msub><mi mathvariant="normal">i</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">…</mi><mo mathvariant="sans-serif">⁢</mo><msub><mi mathvariant="normal">i</mi><mi mathvariant="normal">k</mi></msub></mrow></msub><mo mathvariant="sans-serif">⁢</mo><msup><mi mathvariant="normal">β</mi><msub><mi mathvariant="normal">i</mi><mn mathvariant="normal">1</mn></msub></msup></mrow><mo mathvariant="normal">∧</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">∧</mo><msup><mi mathvariant="normal">β</mi><msub><mi mathvariant="normal">i</mi><mi mathvariant="normal">k</mi></msub></msup></mrow></mrow></math> y
+<math id="p77.m3" class="ltx_Math" alttext="C=C_{j_{1}...j_{k}}\beta^{j_{1}}\wedge\dots\wedge\beta^{j_{k}}" display="inline"><mrow><mi mathvariant="normal">C</mi><mo mathvariant="normal">=</mo><mrow><mrow><msub><mi mathvariant="normal">C</mi><mrow><msub><mi mathvariant="normal">j</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">…</mi><mo mathvariant="sans-serif">⁢</mo><msub><mi mathvariant="normal">j</mi><mi mathvariant="normal">k</mi></msub></mrow></msub><mo mathvariant="sans-serif">⁢</mo><msup><mi mathvariant="normal">β</mi><msub><mi mathvariant="normal">j</mi><mn mathvariant="normal">1</mn></msub></msup></mrow><mo mathvariant="normal">∧</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">∧</mo><msup><mi mathvariant="normal">β</mi><msub><mi mathvariant="normal">j</mi><mi mathvariant="normal">k</mi></msub></msup></mrow></mrow></math> entonces</span></p>
+<table id="S0.Ex56" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex56.m1" class="ltx_Math" alttext="\langle A,C\rangle=g^{i_{1}j_{1}}\cdots g^{i_{k}j_{k}}A_{i_{1}...i_{k}}C_{j_{1%
+}...j_{k}}" display="block"><mrow><mrow><mo maxsize="90%" minsize="90%">⟨</mo><mi mathsize="90%">A</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">C</mi><mo maxsize="90%" minsize="90%">⟩</mo></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><msup><mi mathsize="90%">g</mi><mrow><msub><mi mathsize="90%">i</mi><mn mathsize="90%">1</mn></msub><mo>⁢</mo><msub><mi mathsize="90%">j</mi><mn mathsize="90%">1</mn></msub></mrow></msup><mo>⁢</mo><mi mathsize="90%" mathvariant="normal">⋯</mi><mo>⁢</mo><msup><mi mathsize="90%">g</mi><mrow><msub><mi mathsize="90%">i</mi><mi mathsize="90%">k</mi></msub><mo>⁢</mo><msub><mi mathsize="90%">j</mi><mi mathsize="90%">k</mi></msub></mrow></msup><mo>⁢</mo><msub><mi mathsize="90%">A</mi><mrow><msub><mi mathsize="90%">i</mi><mn mathsize="90%">1</mn></msub><mo>⁢</mo><mi mathsize="90%" mathvariant="normal">…</mi><mo>⁢</mo><msub><mi mathsize="90%">i</mi><mi mathsize="90%">k</mi></msub></mrow></msub><mo>⁢</mo><msub><mi mathsize="90%">C</mi><mrow><msub><mi mathsize="90%">j</mi><mn mathsize="90%">1</mn></msub><mo>⁢</mo><mi mathsize="90%" mathvariant="normal">…</mi><mo>⁢</mo><msub><mi mathsize="90%">j</mi><mi mathsize="90%">k</mi></msub></mrow></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p78" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Por ejemplo para 1-formas tenemos</span></p>
+<table id="S0.EGx4" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex58" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex57.m1" class="ltx_Math" alttext="\displaystyle\langle A,C\rangle" display="inline"><mrow><mo maxsize="90%" minsize="90%">⟨</mo><mi mathsize="90%">A</mi><mo mathsize="90%" stretchy="false">,</mo><mi mathsize="90%">C</mi><mo maxsize="90%" minsize="90%">⟩</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex57.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo mathsize="90%" stretchy="false">=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex57.m3" class="ltx_Math" alttext="\displaystyle g^{i_{1}j_{1}}A_{i_{1}}C_{j_{1}}" display="inline"><mrow><msup><mi mathsize="90%">g</mi><mrow><msub><mi mathsize="90%">i</mi><mn mathsize="90%">1</mn></msub><mo>⁢</mo><msub><mi mathsize="90%">j</mi><mn mathsize="90%">1</mn></msub></mrow></msup><mo>⁢</mo><msub><mi mathsize="90%">A</mi><msub><mi mathsize="90%">i</mi><mn mathsize="90%">1</mn></msub></msub><mo>⁢</mo><msub><mi mathsize="90%">C</mi><msub><mi mathsize="90%">j</mi><mn mathsize="90%">1</mn></msub></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex58.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo mathsize="90%" stretchy="false">=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex58.m3" class="ltx_Math" alttext="\displaystyle A_{i_{1}}C^{i_{1}}" display="inline"><mrow><msub><mi mathsize="90%">A</mi><msub><mi mathsize="90%">i</mi><mn mathsize="90%">1</mn></msub></msub><mo>⁢</mo><msup><mi mathsize="90%">C</mi><msub><mi mathsize="90%">i</mi><mn mathsize="90%">1</mn></msub></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">que satisface los 5 axiomas de producto interior.</span></p>
+</div>
+<div id="p79" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p80" class="ltx_para">
+<p class="ltx_p ltx_align_center"><span class="ltx_text ltx_font_bold" style="font-size:90%;">Pullback</span></p>
+</div>
+<div id="p81" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Teniendo una transformación lineal <math id="p81.m1" class="ltx_Math" alttext="L\colon V\to W" display="inline"><mrow><mi mathvariant="normal">L</mi><mo mathvariant="normal">:</mo><mrow><mi mathvariant="normal">V</mi><mo mathvariant="normal">→</mo><mi mathvariant="normal">W</mi></mrow></mrow></math> podemos construir por cada forma en <math id="p81.m2" class="ltx_Math" alttext="W" display="inline"><mi mathvariant="normal">W</mi></math> otra forma en <math id="p81.m3" class="ltx_Math" alttext="V" display="inline"><mi mathvariant="normal">V</mi></math>.
+Pues si <math id="p81.m4" class="ltx_Math" alttext="\phi\in W^{*}=\Lambda^{1}V" display="inline"><mrow><mi mathvariant="normal">ϕ</mi><mo mathvariant="normal">∈</mo><msup><mi mathvariant="normal">W</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="normal">=</mo><mrow><msup><mi mathvariant="normal">Λ</mi><mn mathvariant="normal">1</mn></msup><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">V</mi></mrow></mrow></math> es decir <math id="p81.m5" class="ltx_Math" alttext="\phi\colon W\to\Bbb{R}" display="inline"><mrow><mi mathvariant="normal">ϕ</mi><mo mathvariant="normal">:</mo><mrow><mi mathvariant="normal">W</mi><mo mathvariant="normal">→</mo><mi mathvariant="normal">R</mi></mrow></mrow></math> es covector en <math id="p81.m6" class="ltx_Math" alttext="W" display="inline"><mi mathvariant="normal">W</mi></math> entonces podemos construir otra transformación lineal <math id="p81.m7" class="ltx_Math" alttext="\phi\circ L\colon V\to\Bbb{R}" display="inline"><mrow><mrow><mi mathvariant="normal">ϕ</mi><mo mathvariant="normal">∘</mo><mi mathvariant="normal">L</mi></mrow><mo mathvariant="normal">:</mo><mrow><mi mathvariant="normal">V</mi><mo mathvariant="normal">→</mo><mi mathvariant="normal">R</mi></mrow></mrow></math>, es decir <math id="p81.m8" class="ltx_Math" alttext="\phi\circ L\in V^{*}=\Lambda^{1}V" display="inline"><mrow><mrow><mi mathvariant="normal">ϕ</mi><mo mathvariant="normal">∘</mo><mi mathvariant="normal">L</mi></mrow><mo mathvariant="normal">∈</mo><msup><mi mathvariant="normal">V</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="normal">=</mo><mrow><msup><mi mathvariant="normal">Λ</mi><mn mathvariant="normal">1</mn></msup><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">V</mi></mrow></mrow></math>.
+Así hemos definido
+una transformación lineal</span></p>
+<table id="S0.Ex59" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex59.m1" class="ltx_Math" alttext="L^{*}\colon W^{*}\to V^{*}" display="block"><mrow><msup><mi mathsize="90%">L</mi><mo mathsize="90%" stretchy="false">*</mo></msup><mo mathsize="90%" stretchy="false">:</mo><mrow><msup><mi mathsize="90%">W</mi><mo mathsize="90%" stretchy="false">*</mo></msup><mo mathsize="90%" stretchy="false">→</mo><msup><mi mathsize="90%">V</mi><mo mathsize="90%" stretchy="false">*</mo></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">vía</span></p>
+<table id="S0.Ex60" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex60.m1" class="ltx_Math" alttext="\phi\mapsto L^{*}\phi=\phi\circ L" display="block"><mrow><mi mathsize="90%">ϕ</mi><mo mathsize="90%" stretchy="false">↦</mo><mrow><msup><mi mathsize="90%">L</mi><mo mathsize="90%" stretchy="false">*</mo></msup><mo>⁢</mo><mi mathsize="90%">ϕ</mi></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mi mathsize="90%">ϕ</mi><mo mathsize="90%" stretchy="false">∘</mo><mi mathsize="90%">L</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">la regla de asignación <math id="p81.m9" class="ltx_Math" alttext="L^{*}" display="inline"><msup><mi mathvariant="normal">L</mi><mo mathvariant="normal">*</mo></msup></math> es el <span class="ltx_text ltx_font_serif ltx_font_italic">pullback</span> de <math id="p81.m10" class="ltx_Math" alttext="L" display="inline"><mi mathvariant="normal">L</mi></math>.</span></p>
+</div>
+<div id="p82" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p83" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Supongamos que <math id="p83.m1" class="ltx_Math" alttext="V=\langle\{b_{1},...,b_{n}\}\rangle" display="inline"><mrow><mi mathvariant="normal">V</mi><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">⟨</mo><mrow><mo mathvariant="normal" stretchy="false">{</mo><msub><mi mathvariant="normal">b</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi mathvariant="normal">b</mi><mi mathvariant="normal">n</mi></msub><mo mathvariant="normal" stretchy="false">}</mo></mrow><mo mathvariant="normal" stretchy="false">⟩</mo></mrow></mrow></math> y <math id="p83.m2" class="ltx_Math" alttext="W=\langle\{c_{1},...,c_{m}\}\rangle" display="inline"><mrow><mi mathvariant="normal">W</mi><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">⟨</mo><mrow><mo mathvariant="normal" stretchy="false">{</mo><msub><mi mathvariant="normal">c</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi mathvariant="normal">c</mi><mi mathvariant="normal">m</mi></msub><mo mathvariant="normal" stretchy="false">}</mo></mrow><mo mathvariant="normal" stretchy="false">⟩</mo></mrow></mrow></math>, así tendremos que</span></p>
+<table id="S0.Ex61" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex61.m1" class="ltx_Math" alttext="Lb_{k}={L^{s}}_{k}c_{s}," display="block"><mrow><mrow><mrow><mi mathsize="90%">L</mi><mo>⁢</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">k</mi></msub></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mmultiscripts><mi mathsize="90%">L</mi><none></none><mi mathsize="90%">s</mi><mi mathsize="90%">k</mi><none></none></mmultiscripts><mo>⁢</mo><msub><mi mathsize="90%">c</mi><mi mathsize="90%">s</mi></msub></mrow></mrow><mo mathsize="90%" stretchy="false">,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">A</span></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">es la forma en que las bases se relacionan.</span></p>
+</div>
+<div id="p84" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p85" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">?‘Cómo se relacionan las base de covectores?</span></p>
+</div>
+<div id="p86" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p87" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Sean <math id="p87.m1" class="ltx_Math" alttext="V^{*}=\langle\{\beta^{1},...,\beta^{n}\}\rangle" display="inline"><mrow><msup><mi mathvariant="normal">V</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">⟨</mo><mrow><mo mathvariant="normal" stretchy="false">{</mo><msup><mi mathvariant="normal">β</mi><mn mathvariant="normal">1</mn></msup><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msup><mi mathvariant="normal">β</mi><mi mathvariant="normal">n</mi></msup><mo mathvariant="normal" stretchy="false">}</mo></mrow><mo mathvariant="normal" stretchy="false">⟩</mo></mrow></mrow></math> y <math id="p87.m2" class="ltx_Math" alttext="W=\langle\{\gamma^{1},...,\gamma^{m}\}\rangle" display="inline"><mrow><mi mathvariant="normal">W</mi><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">⟨</mo><mrow><mo mathvariant="normal" stretchy="false">{</mo><msup><mi mathvariant="normal">γ</mi><mn mathvariant="normal">1</mn></msup><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msup><mi mathvariant="normal">γ</mi><mi mathvariant="normal">m</mi></msup><mo mathvariant="normal" stretchy="false">}</mo></mrow><mo mathvariant="normal" stretchy="false">⟩</mo></mrow></mrow></math>. Sean
+<math id="p87.m3" class="ltx_Math" alttext="g_{ij}=\langle b_{i},b_{j}\rangle" display="inline"><mrow><msub><mi mathvariant="normal">g</mi><mrow><mi mathvariant="normal">i</mi><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">j</mi></mrow></msub><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">⟨</mo><msub><mi mathvariant="normal">b</mi><mi mathvariant="normal">i</mi></msub><mo mathvariant="normal">,</mo><msub><mi mathvariant="normal">b</mi><mi mathvariant="normal">j</mi></msub><mo mathvariant="normal" stretchy="false">⟩</mo></mrow></mrow></math> y <math id="p87.m4" class="ltx_Math" alttext="h_{kl}=\langle c_{k},c_{l}\rangle" display="inline"><mrow><msub><mi mathvariant="normal">h</mi><mrow><mi mathvariant="normal">k</mi><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">l</mi></mrow></msub><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">⟨</mo><msub><mi mathvariant="normal">c</mi><mi mathvariant="normal">k</mi></msub><mo mathvariant="normal">,</mo><msub><mi mathvariant="normal">c</mi><mi mathvariant="normal">l</mi></msub><mo mathvariant="normal" stretchy="false">⟩</mo></mrow></mrow></math> los componentes de los tensores métricos de <math id="p87.m5" class="ltx_Math" alttext="V" display="inline"><mi mathvariant="normal">V</mi></math> y <math id="p87.m6" class="ltx_Math" alttext="W" display="inline"><mi mathvariant="normal">W</mi></math> respectivamente.</span></p>
+</div>
+<div id="p88" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Por lo que</span></p>
+<table id="S0.EGx5" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex68" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex62.m1" class="ltx_Math" alttext="\displaystyle L^{*}\gamma^{i}(b_{k})" display="inline"><mrow><msup><mi mathsize="90%">L</mi><mo mathsize="90%" stretchy="false">*</mo></msup><mo>⁢</mo><msup><mi mathsize="90%">γ</mi><mi mathsize="90%">i</mi></msup><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">k</mi></msub><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex62.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo mathsize="90%" stretchy="false">=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex62.m3" class="ltx_Math" alttext="\displaystyle\gamma^{i}\circ L(b_{k})" display="inline"><mrow><mrow><msup><mi mathsize="90%">γ</mi><mi mathsize="90%">i</mi></msup><mo mathsize="90%" stretchy="false">∘</mo><mi mathsize="90%">L</mi></mrow><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">k</mi></msub><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex63.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo mathsize="90%" stretchy="false">=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex63.m3" class="ltx_Math" alttext="\displaystyle\gamma^{i}(Lb_{k})" display="inline"><mrow><msup><mi mathsize="90%">γ</mi><mi mathsize="90%">i</mi></msup><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mrow><mi mathsize="90%">L</mi><mo>⁢</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">k</mi></msub></mrow><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex64.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo mathsize="90%" stretchy="false">=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex64.m3" class="ltx_Math" alttext="\displaystyle\gamma^{i}({L^{s}}_{k}c_{s})" display="inline"><mrow><msup><mi mathsize="90%">γ</mi><mi mathsize="90%">i</mi></msup><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><mrow><mmultiscripts><mi mathsize="90%">L</mi><none></none><mi mathsize="90%">s</mi><mi mathsize="90%">k</mi><none></none></mmultiscripts><mo>⁢</mo><msub><mi mathsize="90%">c</mi><mi mathsize="90%">s</mi></msub></mrow><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex65.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo mathsize="90%" stretchy="false">=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex65.m3" class="ltx_Math" alttext="\displaystyle{L^{s}}_{k}\gamma^{i}(c_{s})" display="inline"><mrow><mmultiscripts><mi mathsize="90%">L</mi><none></none><mi mathsize="90%">s</mi><mi mathsize="90%">k</mi><none></none></mmultiscripts><mo>⁢</mo><msup><mi mathsize="90%">γ</mi><mi mathsize="90%">i</mi></msup><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><msub><mi mathsize="90%">c</mi><mi mathsize="90%">s</mi></msub><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex66.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo mathsize="90%" stretchy="false">=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex66.m3" class="ltx_Math" alttext="\displaystyle{L^{s}}_{k}\gamma^{i}(c_{s})" display="inline"><mrow><mmultiscripts><mi mathsize="90%">L</mi><none></none><mi mathsize="90%">s</mi><mi mathsize="90%">k</mi><none></none></mmultiscripts><mo>⁢</mo><msup><mi mathsize="90%">γ</mi><mi mathsize="90%">i</mi></msup><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><msub><mi mathsize="90%">c</mi><mi mathsize="90%">s</mi></msub><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex67.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo mathsize="90%" stretchy="false">=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex67.m3" class="ltx_Math" alttext="\displaystyle{L^{s}}_{k}{\delta^{i}}_{s}" display="inline"><mrow><mmultiscripts><mi mathsize="90%">L</mi><none></none><mi mathsize="90%">s</mi><mi mathsize="90%">k</mi><none></none></mmultiscripts><mo>⁢</mo><mmultiscripts><mi mathsize="90%">δ</mi><none></none><mi mathsize="90%">i</mi><mi mathsize="90%">s</mi><none></none></mmultiscripts></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex68.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo mathsize="90%" stretchy="false">=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex68.m3" class="ltx_Math" alttext="\displaystyle{L^{i}}_{k}" display="inline"><mmultiscripts><mi mathsize="90%">L</mi><none></none><mi mathsize="90%">i</mi><mi mathsize="90%">k</mi><none></none></mmultiscripts></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Pero también</span></p>
+<table id="S0.EGx6" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex70" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex69.m1" class="ltx_Math" alttext="\displaystyle{L^{i}}_{t}\beta^{t}(b_{k})" display="inline"><mrow><mmultiscripts><mi mathsize="90%">L</mi><none></none><mi mathsize="90%">i</mi><mi mathsize="90%">t</mi><none></none></mmultiscripts><mo>⁢</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">t</mi></msup><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">k</mi></msub><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex69.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo mathsize="90%" stretchy="false">=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex69.m3" class="ltx_Math" alttext="\displaystyle{L^{i}}_{t}{\delta^{t}}_{k}" display="inline"><mrow><mmultiscripts><mi mathsize="90%">L</mi><none></none><mi mathsize="90%">i</mi><mi mathsize="90%">t</mi><none></none></mmultiscripts><mo>⁢</mo><mmultiscripts><mi mathsize="90%">δ</mi><none></none><mi mathsize="90%">t</mi><mi mathsize="90%">k</mi><none></none></mmultiscripts></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex70.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo mathsize="90%" stretchy="false">=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex70.m3" class="ltx_Math" alttext="\displaystyle{L^{i}}_{k}" display="inline"><mmultiscripts><mi mathsize="90%">L</mi><none></none><mi mathsize="90%">i</mi><mi mathsize="90%">k</mi><none></none></mmultiscripts></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p89" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Es decir</span></p>
+<table id="S0.Ex71" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex71.m1" class="ltx_Math" alttext="L^{*}\gamma^{i}(b_{k})={L^{i}}_{t}\beta^{t}(b_{k})" display="block"><mrow><mrow><msup><mi mathsize="90%">L</mi><mo mathsize="90%" stretchy="false">*</mo></msup><mo>⁢</mo><msup><mi mathsize="90%">γ</mi><mi mathsize="90%">i</mi></msup><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">k</mi></msub><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mmultiscripts><mi mathsize="90%">L</mi><none></none><mi mathsize="90%">i</mi><mi mathsize="90%">t</mi><none></none></mmultiscripts><mo>⁢</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">t</mi></msup><mo>⁢</mo><mrow><mo maxsize="90%" minsize="90%">(</mo><msub><mi mathsize="90%">b</mi><mi mathsize="90%">k</mi></msub><mo maxsize="90%" minsize="90%">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">para todo básico <math id="p89.m1" class="ltx_Math" alttext="b_{k}" display="inline"><msub><mi mathvariant="normal">b</mi><mi mathvariant="normal">k</mi></msub></math>, por lo que las transformaciones
+son iguales, i.e.</span></p>
+<table id="S0.Ex72" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex72.m1" class="ltx_Math" alttext="L^{*}\gamma^{i}={L^{i}}_{t}\beta^{t}," display="block"><mrow><mrow><mrow><msup><mi mathsize="90%">L</mi><mo mathsize="90%" stretchy="false">*</mo></msup><mo>⁢</mo><msup><mi mathsize="90%">γ</mi><mi mathsize="90%">i</mi></msup></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mmultiscripts><mi mathsize="90%">L</mi><none></none><mi mathsize="90%">i</mi><mi mathsize="90%">t</mi><none></none></mmultiscripts><mo>⁢</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">t</mi></msup></mrow></mrow><mo mathsize="90%" stretchy="false">,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">B</span></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">lo que nos indica como se relacionan las bases duales de <math id="p89.m2" class="ltx_Math" alttext="W,V" display="inline"><mrow><mi mathvariant="normal">W</mi><mo mathvariant="normal">,</mo><mi mathvariant="normal">V</mi></mrow></math> respectivamente (cf. <math id="p89.m3" class="ltx_Math" alttext="(A)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi mathvariant="normal">A</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> arriba).</span></p>
+</div>
+<div id="p90" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p91" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Finalmente, si <math id="p91.m1" class="ltx_Math" alttext="\varphi\in W^{*}" display="inline"><mrow><mi mathvariant="normal">φ</mi><mo mathvariant="normal">∈</mo><msup><mi mathvariant="normal">W</mi><mo mathvariant="normal">*</mo></msup></mrow></math> este se expresa como <math id="p91.m2" class="ltx_Math" alttext="\varphi=\varphi_{\mu}\gamma^{\mu}" display="inline"><mrow><mi mathvariant="normal">φ</mi><mo mathvariant="normal">=</mo><mrow><msub><mi mathvariant="normal">φ</mi><mi mathvariant="normal">μ</mi></msub><mo mathvariant="sans-serif">⁢</mo><msup><mi mathvariant="normal">γ</mi><mi mathvariant="normal">μ</mi></msup></mrow></mrow></math> y entonces</span></p>
+<table id="S0.Ex73" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex73.m1" class="ltx_Math" alttext="L^{*}\varphi=\varphi_{\mu}L^{*}\gamma^{\mu}=\varphi_{\mu}{L^{\mu}}_{t}\beta^{t}" display="block"><mrow><mrow><msup><mi mathsize="90%">L</mi><mo mathsize="90%" stretchy="false">*</mo></msup><mo>⁢</mo><mi mathsize="90%">φ</mi></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><msub><mi mathsize="90%">φ</mi><mi mathsize="90%">μ</mi></msub><mo>⁢</mo><msup><mi mathsize="90%">L</mi><mo mathsize="90%" stretchy="false">*</mo></msup><mo>⁢</mo><msup><mi mathsize="90%">γ</mi><mi mathsize="90%">μ</mi></msup></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><msub><mi mathsize="90%">φ</mi><mi mathsize="90%">μ</mi></msub><mo>⁢</mo><mmultiscripts><mi mathsize="90%">L</mi><none></none><mi mathsize="90%">μ</mi><mi mathsize="90%">t</mi><none></none></mmultiscripts><mo>⁢</mo><msup><mi mathsize="90%">β</mi><mi mathsize="90%">t</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">lo cual muestra que los componentes de <math id="p91.m3" class="ltx_Math" alttext="L^{*}\varphi" display="inline"><mrow><msup><mi mathvariant="normal">L</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="sans-serif">⁢</mo><mi mathvariant="normal">φ</mi></mrow></math> son</span></p>
+<table id="S0.Ex74" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex74.m1" class="ltx_Math" alttext="\varphi_{\mu}{L^{\mu}}_{t}" display="block"><mrow><msub><mi mathsize="90%">φ</mi><mi mathsize="90%">μ</mi></msub><mo>⁢</mo><mmultiscripts><mi mathsize="90%">L</mi><none></none><mi mathsize="90%">μ</mi><mi mathsize="90%">t</mi><none></none></mmultiscripts></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p92" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p93" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p94" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p95" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold" style="font-size:90%;">Ejercicios<span class="ltx_text ltx_font_sansserif ltx_font_medium"></span></span></p>
+</div>
+<div id="p96" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p97" class="ltx_para">
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">1.</span></span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Demuestre que si </span><math id="I2.i1.p1.m1" class="ltx_Math" alttext="V\lx@stackrel{{\scriptstyle L}}{{\to}}W\lx@stackrel{{\scriptstyle M}}{{\to}}U" display="inline"><mrow><mi mathsize="90%">V</mi><mover><mo mathsize="90%" movablelimits="false" stretchy="false">→</mo><mi mathsize="90%">L</mi></mover><mi mathsize="90%">W</mi><mover><mo mathsize="90%" movablelimits="false" stretchy="false">→</mo><mi mathsize="90%">M</mi></mover><mi mathsize="90%">U</mi></mrow></math><span class="ltx_text ltx_font_sansserif" style="font-size:90%;"> es una composición de transformaciones lineales,
+entonces el correspondiente diagrama de pullbacks es</span></p>
+<table id="S0.Ex75" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex75.m1" class="ltx_Math" alttext="U^{*}\lx@stackrel{{\scriptstyle M^{*}}}{{\to}}W^{*}\lx@stackrel{{\scriptstyle L%
+^{*}}}{{\to}}V^{*}" display="block"><mrow><msup><mi mathsize="90%">U</mi><mo mathsize="90%" stretchy="false">*</mo></msup><mover><mo mathsize="90%" movablelimits="false" stretchy="false">→</mo><msup><mi mathsize="90%">M</mi><mo mathsize="90%" stretchy="false">*</mo></msup></mover><msup><mi mathsize="90%">W</mi><mo mathsize="90%" stretchy="false">*</mo></msup><mover><mo mathsize="90%" movablelimits="false" stretchy="false">→</mo><msup><mi mathsize="90%">L</mi><mo mathsize="90%" stretchy="false">*</mo></msup></mover><msup><mi mathsize="90%">V</mi><mo mathsize="90%" stretchy="false">*</mo></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="I2.i1.p2" class="ltx_para">
+<br class="ltx_break">
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">2.</span></span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Escriba todo el ejercicio 1 en términos de componentes.
+</span></p>
+</div>
+<div id="I2.i2.p2" class="ltx_para">
+<br class="ltx_break">
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">3.</span></span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Si el covector </span><math id="I2.i3.p1.m1" class="ltx_Math" alttext="\varphi\in W^{*}" display="inline"><mrow><mi mathsize="90%">φ</mi><mo mathsize="90%" stretchy="false">∈</mo><msup><mi mathsize="90%">W</mi><mo mathsize="90%" stretchy="false">*</mo></msup></mrow></math><span class="ltx_text ltx_font_sansserif" style="font-size:90%;"> tiene una representación </span><math id="I2.i3.p1.m2" class="ltx_Math" alttext="\varphi(\quad)=\langle\xi,\quad\rangle" display="inline"><mrow><mi mathsize="90%">φ</mi><mrow><mo maxsize="90%" minsize="90%">(</mo><mo mathsize="90%" mathvariant="italic" separator="true" stretchy="false"> </mo><mo maxsize="90%" minsize="90%">)</mo></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mo maxsize="90%" minsize="90%">⟨</mo><mi mathsize="90%">ξ</mi><mo mathsize="90%" rspace="12.5pt" stretchy="false">,</mo><mo maxsize="90%" minsize="90%">⟩</mo></mrow></mrow></math><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">
+y covector </span><math id="I2.i3.p1.m3" class="ltx_Math" alttext="L^{*}\varphi\in V^{*}" display="inline"><mrow><mrow><msup><mi mathsize="90%">L</mi><mo mathsize="90%" stretchy="false">*</mo></msup><mo>⁢</mo><mi mathsize="90%">φ</mi></mrow><mo mathsize="90%" stretchy="false">∈</mo><msup><mi mathsize="90%">V</mi><mo mathsize="90%" stretchy="false">*</mo></msup></mrow></math><span class="ltx_text ltx_font_sansserif" style="font-size:90%;"> tiene </span><math id="I2.i3.p1.m4" class="ltx_Math" alttext="L^{*}\varphi(\quad)=\langle\zeta,\quad\rangle" display="inline"><mrow><msup><mi mathsize="90%">L</mi><mo mathsize="90%" stretchy="false">*</mo></msup><mi mathsize="90%">φ</mi><mrow><mo maxsize="90%" minsize="90%">(</mo><mo mathsize="90%" mathvariant="italic" separator="true" stretchy="false"> </mo><mo maxsize="90%" minsize="90%">)</mo></mrow><mo mathsize="90%" stretchy="false">=</mo><mrow><mo maxsize="90%" minsize="90%">⟨</mo><mi mathsize="90%">ζ</mi><mo mathsize="90%" rspace="12.5pt" stretchy="false">,</mo><mo maxsize="90%" minsize="90%">⟩</mo></mrow></mrow></math><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">, con </span><math id="I2.i3.p1.m5" class="ltx_Math" alttext="\xi\in W" display="inline"><mrow><mi mathsize="90%">ξ</mi><mo mathsize="90%" stretchy="false">∈</mo><mi mathsize="90%">W</mi></mrow></math><span class="ltx_text ltx_font_sansserif" style="font-size:90%;"> y </span><math id="I2.i3.p1.m6" class="ltx_Math" alttext="\zeta\in V" display="inline"><mrow><mi mathsize="90%">ζ</mi><mo mathsize="90%" stretchy="false">∈</mo><mi mathsize="90%">V</mi></mrow></math><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">,
+?‘Cuál es la relación entre los componentes de </span><math id="I2.i3.p1.m7" class="ltx_Math" alttext="L" display="inline"><mi mathsize="90%">L</mi></math><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">, </span><math id="I2.i3.p1.m8" class="ltx_Math" alttext="\xi" display="inline"><mi mathsize="90%">ξ</mi></math><span class="ltx_text ltx_font_sansserif" style="font-size:90%;"> y </span><math id="I2.i3.p1.m9" class="ltx_Math" alttext="\zeta" display="inline"><mi mathsize="90%">ζ</mi></math><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">?</span></p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p98" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Title</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Principios de álgebra multilineal</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Canonical name</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">PrincipiosDealgebraMultilineal</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Date of creation</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">2013-03-11 19:27:49</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Last modified on</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">2013-03-11 19:27:49</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Owner</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">juanman (12619)</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Last modified by</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">(0)</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Numerical id</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">1</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Author</span></th>
+<td class="ltx_td ltx_align_left ltx_border_r"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">juanman (0)</span></td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Entry type</span></th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r"><span class="ltx_text ltx_font_sansserif" style="font-size:90%;">Definition</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:16:33 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

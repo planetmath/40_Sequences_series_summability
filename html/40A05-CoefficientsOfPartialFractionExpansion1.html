@@ -1,0 +1,248 @@
+<!DOCTYPE html><html>
+<head>
+<title>Coefficients of Partial Fraction Expansion</title>
+<!--Generated on Fri Feb  9 21:12:16 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Coefficients of Partial Fraction Expansion</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Coefficients of Partial Fraction Expansion
+Swapnil Sunil Jain
+July 28 2006</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Coefficients of Partial Fraction Expansion
+
+Let us start with the assumption (or rather a Lemma) that any rational proper function <math id="p2.m1" class="ltx_Math" alttext="F(s)" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></math> of the form</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E1.m3" class="ltx_Math" alttext="\displaystyle F(s)=\frac{P(s)}{(s-q)^{r}(s-p_{1})(s-p_{2})...(s-p_{i})...(s-p_%
+{n})}" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mi>r</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">has a partial fraction expansion given by</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m3" class="ltx_Math" alttext="\displaystyle F(s)=\frac{a_{0}}{(s-q)^{r}}+\frac{a_{1}}{(s-q)^{r-1}}+...+\frac%
+{a_{j}}{(s-q)^{r-j}}+...+\frac{a_{r-1}}{(s-q)}" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><msub><mi>a</mi><mn>0</mn></msub><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mi>r</mi></msup></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><msub><mi>a</mi><mn>1</mn></msub><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow></msup></mfrac></mstyle><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mstyle displaystyle="true"><mfrac><msub><mi>a</mi><mi>j</mi></msub><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>r</mi><mo>-</mo><mi>j</mi></mrow></msup></mfrac></mstyle><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mstyle displaystyle="true"><mfrac><msub><mi>a</mi><mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow></msub><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E2.m3" class="ltx_Math" alttext="\displaystyle\qquad+\frac{k_{1}}{(s-p_{1})}+\frac{k_{2}}{(s-p_{2})}+...+\frac{%
+k_{i}}{(s-p_{i})}+...+\frac{k_{n}}{(s-p_{n})}" display="inline"><mrow><mi>  </mi><mo>+</mo><mstyle displaystyle="true"><mfrac><msub><mi>k</mi><mn>1</mn></msub><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><msub><mi>k</mi><mn>2</mn></msub><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mfrac></mstyle><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mstyle displaystyle="true"><mfrac><msub><mi>k</mi><mi>i</mi></msub><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mfrac></mstyle><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mstyle displaystyle="true"><mfrac><msub><mi>k</mi><mi>n</mi></msub><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="p2.m2" class="ltx_Math" alttext="j=0,1,2,...,r-1" display="inline"><mrow><mi>j</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow></mrow></mrow></math> and <math id="p2.m3" class="ltx_Math" alttext="i=1,2,3,...,n" display="inline"><mrow><mi>i</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow></math> and <math id="p2.m4" class="ltx_Math" alttext="q\neq p_{1}\neq p_{2}\neq...\neq p_{n}" display="inline"><mrow><mi>q</mi><mo>≠</mo><msub><mi>p</mi><mn>1</mn></msub><mo>≠</mo><msub><mi>p</mi><mn>2</mn></msub><mo>≠</mo><mi mathvariant="normal">…</mi><mo>≠</mo><msub><mi>p</mi><mi>n</mi></msub></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">First, we determine the coefficient <math id="p3.m1" class="ltx_Math" alttext="k_{i}" display="inline"><msub><mi>k</mi><mi>i</mi></msub></math>. In order to do so, we multiply both sides of equation (2) by <math id="p3.m2" class="ltx_Math" alttext="(s-p_{i})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></math> which then gives us
+</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m3" class="ltx_Math" alttext="\displaystyle(s-p_{i})F(s)=\frac{a_{0}}{(s-q)^{r}}(s-p_{i})+\frac{a_{1}}{(s-q)%
+^{r-1}}(s-p_{i})+...+\frac{a_{j}}{(s-q)^{r-j}}(s-p_{i})+...+\frac{a_{r-1}}{(s-%
+q)}(s-p_{i})" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><msub><mi>a</mi><mn>0</mn></msub><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mi>r</mi></msup></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><msub><mi>a</mi><mn>1</mn></msub><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow></msup></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><msub><mi>a</mi><mi>j</mi></msub><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>r</mi><mo>-</mo><mi>j</mi></mrow></msup></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><msub><mi>a</mi><mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow></msub><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E3.m3" class="ltx_Math" alttext="\displaystyle\qquad+\frac{k_{1}}{(s-p_{1})}(s-p_{i})+\frac{k_{2}}{(s-p_{2})}(s%
+-p_{i})+...+\frac{k_{i}}{(s-p_{i})}(s-p_{i})+...+\frac{k_{n}}{(s-p_{n})}(s-p_{%
+i})" display="inline"><mrow><mi>  </mi><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><msub><mi>k</mi><mn>1</mn></msub><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><msub><mi>k</mi><mn>2</mn></msub><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><msub><mi>k</mi><mi>i</mi></msub><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><msub><mi>k</mi><mi>n</mi></msub><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">If we then let <math id="p3.m3" class="ltx_Math" alttext="s=p_{i}" display="inline"><mrow><mi>s</mi><mo>=</mo><msub><mi>p</mi><mi>i</mi></msub></mrow></math>, all the terms on the R.H.S drop out except the one containing the coefficient <math id="p3.m4" class="ltx_Math" alttext="k_{i}" display="inline"><msub><mi>k</mi><mi>i</mi></msub></math> and we get</p>
+<table id="S0.EGx4" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S0.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E4.m3" class="ltx_Math" alttext="\displaystyle\Big{[}(s-p_{i})F(s)\Big{]}{\Bigg{|}}_{s=p_{i}}=k_{i}" display="inline"><mrow><msub><mrow><mrow><mo maxsize="160%" minsize="160%">[</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="160%" minsize="160%">]</mo></mrow><mo fence="true" maxsize="260%" minsize="260%">|</mo></mrow><mrow><mi>s</mi><mo>=</mo><msub><mi>p</mi><mi>i</mi></msub></mrow></msub><mo>=</mo><msub><mi>k</mi><mi>i</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Now, in order to determine the coefficient <math id="p4.m1" class="ltx_Math" alttext="a_{j}" display="inline"><msub><mi>a</mi><mi>j</mi></msub></math>, we multiply both sides of (2) by <math id="p4.m2" class="ltx_Math" alttext="(s-q)^{r}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mi>r</mi></msup></math> which yields</p>
+<table id="S0.EGx5" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m3" class="ltx_Math" alttext="\displaystyle(s-q)^{r}F(s)=\frac{a_{0}}{(s-q)^{r}}(s-q)^{r}+\frac{a_{1}}{(s-q)%
+^{r-1}}(s-q)^{r}+...+\frac{a_{j}}{(s-q)^{r-j}}(s-q)^{r}+...+\frac{a_{r-1}}{(s-%
+q)}(s-q)^{r}" display="inline"><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mi>r</mi></msup><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><msub><mi>a</mi><mn>0</mn></msub><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mi>r</mi></msup></mfrac></mstyle><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mi>r</mi></msup></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><msub><mi>a</mi><mn>1</mn></msub><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow></msup></mfrac></mstyle><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mi>r</mi></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><msub><mi>a</mi><mi>j</mi></msub><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>r</mi><mo>-</mo><mi>j</mi></mrow></msup></mfrac></mstyle><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mi>r</mi></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><msub><mi>a</mi><mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow></msub><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow></mfrac></mstyle><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mi>r</mi></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle\qquad+(s-q)^{r}\Bigg{[}\frac{k_{1}}{(s-p_{1})}+\frac{k_{2}}{(s-p%
+_{2})}+...+\frac{k_{i}}{(s-p_{i})}+...+\frac{k_{n}}{(s-p_{n})}\Bigg{]}" display="inline"><mrow><mi>  </mi><mo>+</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mi>r</mi></msup><mo>⁢</mo><mrow><mo maxsize="260%" minsize="260%">[</mo><mrow><mstyle displaystyle="true"><mfrac><msub><mi>k</mi><mn>1</mn></msub><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><msub><mi>k</mi><mn>2</mn></msub><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mfrac></mstyle><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mstyle displaystyle="true"><mfrac><msub><mi>k</mi><mi>i</mi></msub><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mfrac></mstyle><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mstyle displaystyle="true"><mfrac><msub><mi>k</mi><mi>n</mi></msub><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mfrac></mstyle></mrow><mo maxsize="260%" minsize="260%">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tbody id="S0.E5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E5.m3" class="ltx_Math" alttext="\displaystyle\Rightarrow(s-q)^{r}F(s)=a_{0}+a_{1}(s-q)^{1}+...+a_{j}(s-q)^{j}+%
+...+a_{r-1}(s-q)^{r-1}+(s-q)^{r}\frac{A(s)}{B(s)}" display="inline"><mrow><mi></mi><mo>⇒</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mi>r</mi></msup><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mn>1</mn></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>j</mi></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mi>j</mi></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>a</mi><mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mi>r</mi></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where we have defined</p>
+<table id="S0.EGx6" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m3" class="ltx_Math" alttext="\displaystyle\frac{A(s)}{B(s)}\equiv\frac{k_{1}}{(s-p_{1})}+\frac{k_{2}}{(s-p_%
+{2})}+...+\frac{k_{i}}{(s-p_{i})}+...+\frac{k_{n}}{(s-p_{n})}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle><mo>≡</mo><mrow><mstyle displaystyle="true"><mfrac><msub><mi>k</mi><mn>1</mn></msub><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><msub><mi>k</mi><mn>2</mn></msub><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mfrac></mstyle><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mstyle displaystyle="true"><mfrac><msub><mi>k</mi><mi>i</mi></msub><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mfrac></mstyle><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mstyle displaystyle="true"><mfrac><msub><mi>k</mi><mi>n</mi></msub><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><msub><mi>p</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Then if we take the derivative of the above equation with respect to <math id="p5.m1" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> and we obtain</p>
+<table id="S0.EGx7" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m3" class="ltx_Math" alttext="\displaystyle\frac{d}{ds}\Big{[}(s-q)^{r}F(s)\Big{]}=a_{1}+a_{2}(2)(s-q)+...+a%
+_{j}(j)(s-q)^{j-1}+..." display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>s</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">[</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mi>r</mi></msup><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="160%" minsize="160%">]</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>j</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>j</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tbody id="S0.E6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E6.m3" class="ltx_Math" alttext="\displaystyle\qquad+a_{r-1}(r-1)(s-q)^{r-2}+\frac{d}{ds}\Big{[}(s-q)^{r}\frac{%
+A(s)}{B(s)}\Big{]}" display="inline"><mrow><mi>  </mi><mo>+</mo><mrow><msub><mi>a</mi><mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>r</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>s</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">[</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mi>r</mi></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle></mrow><mo maxsize="160%" minsize="160%">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">If we again take the derivative of both sides of the above equation with respect to <math id="p5.m2" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> we get</p>
+<table id="S0.EGx8" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m3" class="ltx_Math" alttext="\displaystyle\frac{d^{2}}{ds^{2}}\Big{[}(s-q)^{r}F(s)\Big{]}=2a_{2}+...+a_{j}(%
+j)(j-1)(s-q)^{j-2}+..." display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><msup><mi>d</mi><mn>2</mn></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>s</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">[</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mi>r</mi></msup><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="160%" minsize="160%">]</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mi>a</mi><mn>2</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>j</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>j</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>j</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tbody id="S0.E7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E7.m3" class="ltx_Math" alttext="\displaystyle\qquad+a_{r-1}(r-1)(r-2)(s-q)^{r-3}+\frac{d^{2}}{ds^{2}}\Big{[}(s%
+-q)^{r}\frac{A(s)}{B(s)}\Big{]}" display="inline"><mrow><mi>  </mi><mo>+</mo><mrow><msub><mi>a</mi><mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>r</mi><mo>-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>r</mi><mo>-</mo><mn>3</mn></mrow></msup></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi>d</mi><mn>2</mn></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>s</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">[</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mi>r</mi></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle></mrow><mo maxsize="160%" minsize="160%">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">If we keep taking derivatives this way until we have taken the derivative <math id="p5.m3" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> times, we arrive at</p>
+<table id="S0.EGx9" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m3" class="ltx_Math" alttext="\displaystyle\frac{d^{j}}{ds^{j}}\Big{[}(s-q)^{r}F(s)\Big{]}=a_{j}(j)(j-1)(j-2%
+)...(2)(1)(s-q)^{j-j}+..." display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><msup><mi>d</mi><mi>j</mi></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>s</mi><mi>j</mi></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">[</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mi>r</mi></msup><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="160%" minsize="160%">]</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>a</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>j</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>j</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>j</mi><mo>-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>j</mi><mo>-</mo><mi>j</mi></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tbody id="S0.E8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E8.m3" class="ltx_Math" alttext="\displaystyle\qquad+a_{r-1}(r-1)(r-2)...(r-j)(s-q)^{r-j-1}+\frac{d^{j}}{ds^{j}%
+}\Big{[}(s-q)^{r}\frac{A(s)}{B(s)}\Big{]}" display="inline"><mrow><mi>  </mi><mo>+</mo><mrow><msub><mi>a</mi><mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>r</mi><mo>-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>r</mi><mo>-</mo><mi>j</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>r</mi><mo>-</mo><mi>j</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi>d</mi><mi>j</mi></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>s</mi><mi>j</mi></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">[</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mi>r</mi></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle></mrow><mo maxsize="160%" minsize="160%">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">If we then let <math id="p5.m4" class="ltx_Math" alttext="s=q" display="inline"><mrow><mi>s</mi><mo>=</mo><mi>q</mi></mrow></math>, all the terms on the R.H.S drop out except the one containing the coefficient <math id="p5.m5" class="ltx_Math" alttext="a_{j}" display="inline"><msub><mi>a</mi><mi>j</mi></msub></math> which yields</p>
+<table id="S0.EGx10" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S0.E9"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E9.m3" class="ltx_Math" alttext="\displaystyle\Bigg{(}\frac{d^{j}}{ds^{j}}\Big{[}(s-q)F(s)\Big{]}\Bigg{)}{\Bigg%
+{|}}_{s=q}=a_{j}j!" display="inline"><mrow><msub><mrow><mrow><mo maxsize="260%" minsize="260%">(</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi>d</mi><mi>j</mi></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>s</mi><mi>j</mi></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">[</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="160%" minsize="160%">]</mo></mrow></mrow><mo maxsize="260%" minsize="260%">)</mo></mrow><mo fence="true" maxsize="260%" minsize="260%">|</mo></mrow><mrow><mi>s</mi><mo>=</mo><mi>q</mi></mrow></msub><mo>=</mo><mrow><msub><mi>a</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mi>j</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">or</p>
+<table id="S0.EGx11" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S0.E10"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E10.m3" class="ltx_Math" alttext="\displaystyle a_{j}=\frac{1}{j!}\Bigg{(}\frac{d^{j}}{ds^{j}}\Big{[}(s-q)F(s)%
+\Big{]}\Bigg{)}{\Bigg{|}}_{s=q}" display="inline"><mrow><msub><mi>a</mi><mi>j</mi></msub><mo>=</mo><msub><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>j</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="260%" minsize="260%">(</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi>d</mi><mi>j</mi></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>s</mi><mi>j</mi></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">[</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="160%" minsize="160%">]</mo></mrow></mrow><mo maxsize="260%" minsize="260%">)</mo></mrow></mrow><mo fence="true" maxsize="260%" minsize="260%">|</mo></mrow><mrow><mi>s</mi><mo>=</mo><mi>q</mi></mrow></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(10)</span></td>
+</tr></tbody>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Coefficients of Partial Fraction Expansion</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CoefficientsOfPartialFractionExpansion1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-11 19:26:06</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-11 19:26:06</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">swapnizzle (13346)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">(0)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">swapnizzle (0)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Definition</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:12:16 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

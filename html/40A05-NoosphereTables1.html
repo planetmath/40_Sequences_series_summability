@@ -1,0 +1,3077 @@
+<!DOCTYPE html><html>
+<head>
+<title>Noosphere Tables</title>
+<!--Generated on Fri Feb  9 21:15:36 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Noosphere Tables</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Noosphere Tables</p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>acl_default_uid_seq</h2>
+
+<div id="S1.p1" class="ltx_para">
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">val</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL AUTO_INCREMENT</span>]: acl_default unique ID counter sequence.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>acl_default</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">This table stores each user’s default ACL rules. These rules are applied to that user’s objects when new objects are created. This table is virtually the same as the ACL table, which makes sense: you can think of its function as having some of its rows copied to the ACL table upon object creation events.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL AUTO_INCREMENT</span>]:
+unique ID of row</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]:
+user who owns this ACL entry.</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">_write</span> [<span class="ltx_text ltx_font_typewriter">tinyint(4) NOT NULL default '0'</span>]:
+write flag.</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">_read</span> [<span class="ltx_text ltx_font_typewriter">tinyint(4) NOT NULL default '1'</span>]:
+read flag.</p>
+</div>
+</li>
+<li id="I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">_acl</span> [<span class="ltx_text ltx_font_typewriter">tinyint(4) NOT NULL default '0'</span>]: can change ACL flag.</p>
+</div>
+</li>
+<li id="I2.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">subjectid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]:
+subject (user or group) ID this entry pertains to.</p>
+</div>
+</li>
+<li id="I2.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">user_or_group</span> [<span class="ltx_text ltx_font_typewriter">char(1) NOT NULL default 'u'</span>]:
+is the above ID a user or group.</p>
+</div>
+</li>
+<li id="I2.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">default_or_normal</span> [<span class="ltx_text ltx_font_typewriter">char(1) NOT NULL default 'n'</span>]
+is this a normal (specific) rule or a default rule for when no specific rule is found?</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>acl_uid_seq</h2>
+
+<div id="S3.p1" class="ltx_para">
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">val</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL auto_increment</span>]
+counter for unique IDs in acl table.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>acl</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">This table stores access control rules. Every Noosphere object
+has associated to it one or more entries in this table which
+describe who has what permissions to read the object, write to it,
+or control access to it (change ACLs).</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<ul id="I4" class="ltx_itemize">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]:
+Unique ID of this rule.</p>
+</div>
+</li>
+<li id="I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">user_or_group</span> [<span class="ltx_text ltx_font_typewriter">char(1) default 'u'</span>]:
+Does this rule pertain to access by a user (u) or a group (g)?</p>
+</div>
+</li>
+<li id="I4.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">_write</span> [<span class="ltx_text ltx_font_typewriter">int(11) default '0'</span>]:
+Flag describing write access.</p>
+</div>
+</li>
+<li id="I4.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">_read</span> [<span class="ltx_text ltx_font_typewriter">int(11) default '1'</span>]:
+Flag describing read access.</p>
+</div>
+</li>
+<li id="I4.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">objectid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]:
+Identifier of object to which access rule applies.</p>
+</div>
+</li>
+<li id="I4.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">subjectid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]:
+Identifier of user or group who is being granted access.</p>
+</div>
+</li>
+<li id="I4.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">_acl</span> [<span class="ltx_text ltx_font_typewriter">int(11) default '0'</span>]:
+Flag describing permission to control access.</p>
+</div>
+</li>
+<li id="I4.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">tbl</span> [<span class="ltx_text ltx_font_typewriter">varchar(16) NOT NULL default ''</span>]:
+Table in which the object to which the rule applies resides (also can be thought of as object type).</p>
+</div>
+</li>
+<li id="I4.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I4.i9.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">default_or_normal</span> [<span class="ltx_text ltx_font_typewriter">char(1) default 'n'</span>]:
+Is this a default rule or a normal rule? Default rules apply when no specific rule is found (group ID or user ID of the accessing user does not match anything).</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>actions_uid_seq</h2>
+
+<div id="S5.p1" class="ltx_para">
+<ul id="I5" class="ltx_itemize">
+<li id="I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I5.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">val</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL auto_increment</span>]: unique ID counter for ’actions’ table.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6 </span>actions</h2>
+
+<div id="S6.p1" class="ltx_para">
+<p class="ltx_p">This table exists to keep track of user actions such as voting
+in polls. Each action gets a separate entry in the table so
+as to make it possible to do things like ensure that no one votes twice.</p>
+</div>
+<div id="S6.p2" class="ltx_para">
+<ul id="I6" class="ltx_itemize">
+<li id="I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I6.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">created</span> [<span class="ltx_text ltx_font_typewriter">timestamp(14) NOT NULL</span>]:
+Date of action.</p>
+</div>
+</li>
+<li id="I6.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I6.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]:
+Unique numerical identifier of action.</p>
+</div>
+</li>
+<li id="I6.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I6.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userid</span> [<span class="ltx_text ltx_font_typewriter">int(11) default NULL</span>]:
+Identifier
+of the user performing the action.</p>
+</div>
+</li>
+<li id="I6.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I6.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">score</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]:
+Score change conferred by action (can be zero if not applicable).</p>
+</div>
+</li>
+<li id="I6.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I6.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">data</span> [<span class="ltx_text ltx_font_typewriter">text</span>]:
+Any text data that went with the action (can be a descriptive message).</p>
+</div>
+</li>
+<li id="I6.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I6.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">type</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]:
+Type of action – ‘1’ is voting for example (the only action type yet defined; lookup is stored in the main config in the code.)</p>
+</div>
+</li>
+<li id="I6.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I6.i7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">objectid</span> [<span class="ltx_text ltx_font_typewriter">int(11) default NULL</span>]:
+Identifier of the object on which the action was performed if applicable.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S7" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">7 </span>authors</h2>
+
+<div id="S7.p1" class="ltx_para">
+<p class="ltx_p">This table documents the authors of an object (anyone who has written to an object will be in here). There is a separate entry for each combination of author and object.</p>
+</div>
+<div id="S7.p2" class="ltx_para">
+<ul id="I7" class="ltx_itemize">
+<li id="I7.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I7.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">tbl</span> [<span class="ltx_text ltx_font_typewriter">varchar(16) NOT NULL default ''</span>]:
+Table in which the object authored is to be found.</p>
+</div>
+</li>
+<li id="I7.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I7.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">ts</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]:
+The date on which the author made the most recent edit.
+</p>
+</div>
+</li>
+<li id="I7.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I7.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]:
+The user number of the author.</p>
+</div>
+</li>
+<li id="I7.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I7.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">objectid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]:
+Identifier of the object authored within its table.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S8" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">8 </span>blacklist_uid_seq</h2>
+
+<div id="S8.p1" class="ltx_para">
+<ul id="I8" class="ltx_itemize">
+<li id="I8.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I8.i1.p1" class="ltx_para">
+<p class="ltx_p">textbfval [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL auto_increment</span>]:
+Unique ID counter for the blacklist entries.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S9" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">9 </span>blacklist</h2>
+
+<div id="S9.p1" class="ltx_para">
+<p class="ltx_p">The blacklist is a list of perl regular expression masks which are checked against the email address of each new user. When there is a match, the user’s application is rejected. This can be used to prevent attacks where one person creates many accounts, each with an email address that fits a regular pattern.</p>
+</div>
+<div id="S9.p2" class="ltx_para">
+<ul id="I9" class="ltx_itemize">
+<li id="I9.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I9.i1.p1" class="ltx_para">
+<p class="ltx_p">textbfuid [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]:
+Numerical identifier for record.</p>
+</div>
+</li>
+<li id="I9.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I9.i2.p1" class="ltx_para">
+<p class="ltx_p">textbfmask [<span class="ltx_text ltx_font_typewriter">varchar(128) NOT NULL default ''</span>]:
+Regular expression describing some addresses to be blocked.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S10" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">10 </span>books_uid_seq</h2>
+
+<div id="S10.p1" class="ltx_para">
+<ul id="I10" class="ltx_itemize">
+<li id="I10.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I10.i1.p1" class="ltx_para">
+<p class="ltx_p">textbfval [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL auto_increment</span>]:
+Unique ID counter for the books table.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S11" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">11 </span>books</h2>
+
+<div id="S11.p1" class="ltx_para">
+<p class="ltx_p">This table stores the content of the books section of PM.</p>
+</div>
+<div id="S11.p2" class="ltx_para">
+<ul id="I11" class="ltx_itemize">
+<li id="I11.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I11.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">rights</span> [<span class="ltx_text ltx_font_typewriter">text</span>]: Copyright terms for book.</p>
+</div>
+</li>
+<li id="I11.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I11.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">authors</span> [<span class="ltx_text ltx_font_typewriter">varchar(255) default NULL</span>]: Author(s) of book.</p>
+</div>
+</li>
+<li id="I11.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I11.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">msc</span> [<span class="ltx_text ltx_font_typewriter">varchar(16) default NULL</span>]: MSC number(s) describing subject of book.</p>
+</div>
+</li>
+<li id="I11.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I11.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Numerical identifier for record.</p>
+</div>
+</li>
+<li id="I11.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I11.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Number of user who made this record.</p>
+</div>
+</li>
+<li id="I11.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I11.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">data</span> [<span class="ltx_text ltx_font_typewriter">text</span>]: Description of book.</p>
+</div>
+</li>
+<li id="I11.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I11.i7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">urls</span> [<span class="ltx_text ltx_font_typewriter">text</span>]: URL’s for links to copy of book.</p>
+</div>
+</li>
+<li id="I11.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I11.i8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">comments</span> [<span class="ltx_text ltx_font_typewriter">varchar(128) default NULL</span>]: Comments about book.</p>
+</div>
+</li>
+<li id="I11.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I11.i9.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">modified</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: Date record was last modified.</p>
+</div>
+</li>
+<li id="I11.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I11.i10.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">created</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: Date record was added to books section.</p>
+</div>
+</li>
+<li id="I11.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I11.i11.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">keywords</span> [<span class="ltx_text ltx_font_typewriter">varchar(128) default ''</span>]: Keywords for use in search.</p>
+</div>
+</li>
+<li id="I11.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I11.i12.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">hits</span> [<span class="ltx_text ltx_font_typewriter">int(11) default '0'</span>]: How many times record has been accessed.</p>
+</div>
+</li>
+<li id="I11.i13" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I11.i13.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">loc</span> [<span class="ltx_text ltx_font_typewriter">varchar(32) default NULL</span>]: Library of Congress catalogue number.</p>
+</div>
+</li>
+<li id="I11.i14" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I11.i14.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">isbn</span> [<span class="ltx_text ltx_font_typewriter">varchar(32) default NULL</span>]: ISBN number for book.
+</p>
+</div>
+</li>
+<li id="I11.i15" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I11.i15.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">title</span> [<span class="ltx_text ltx_font_typewriter">varchar(255) NOT NULL default ''</span>]: Title of book.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S12" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">12 </span>cache</h2>
+
+<div id="S12.p1" class="ltx_para">
+<p class="ltx_p">The cache table is the structure necessary to maintain an accurate cache. It
+works like this: The table starts off empty. A user requests an object from
+browsing PlanetMath. The request is served by a perl function which checks
+the cache table for the ’name’. If the name is not present, it then calls a
+procedure which generates the page to the cache directory and proper sub
+directories (based on the namespace id string). In the meantime, the entry
+in the database is still ”0” for invalid, but ”1” for build. this means all
+subsequent requests will end up waiting and rechecking the database every
+(some interval) for valid to go to ”1”, at which point the page will be
+served from the cache location. when the page is doing being built, build
+goes to 0 and valid goes to 1.</p>
+</div>
+<div id="S12.p2" class="ltx_para">
+<p class="ltx_p">The ’rrequests’ column tallies the outstanding render requests, and re-renders are prioritized to the objects with the most requests.</p>
+</div>
+<div id="S12.p3" class="ltx_para">
+<p class="ltx_p">Note: If the object is not in the table, this is essentially equivalent to a value of ”0” for valid, except after the object goes valid, It should always have an entry in the table. This will not hold if the entire cache table is cleared—which is never normally done, but should be safe and can be used to “reset” the system if necessary.</p>
+</div>
+<div id="S12.p4" class="ltx_para">
+<ul id="I12" class="ltx_itemize">
+<li id="I12.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I12.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">build</span> [<span class="ltx_text ltx_font_typewriter">int(11) default '0'</span>]: 1 if object is
+being built, 0 if not.</p>
+</div>
+</li>
+<li id="I12.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I12.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">objectid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]:
+Identifier of objects stored in cache.</p>
+</div>
+</li>
+<li id="I12.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I12.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">tbl</span> [<span class="ltx_text ltx_font_typewriter">varchar(16) default NULL</span>]: Table in which
+object being cached resides (can be thought of as object type).</p>
+</div>
+</li>
+<li id="I12.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I12.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">valid</span> [<span class="ltx_text ltx_font_typewriter">int(11) default '0'</span>]: 1 if valid in cache,
+0 if not</p>
+</div>
+</li>
+<li id="I12.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I12.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">bad</span> [<span class="ltx_text ltx_font_typewriter">int default 0</span>]:
+The object can be marked “bad” if it will not render; in which case the system will ignore it and output a special message when an attempt to display it is made. As of now, this flag can only be set through the database, as there is no front-end provision for it.</p>
+</div>
+</li>
+<li id="I12.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I12.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">rrequests</span> [<span class="ltx_text ltx_font_typewriter">int(11) default '0'</span>]: Number of re-render requests outstanding; used to prioritize rendering.</p>
+</div>
+</li>
+<li id="I12.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I12.i7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">method</span> [<span class="ltx_text ltx_font_typewriter">char(3) default NULL</span>]: Rendering “method”—“l2h”, “png”, “src” for now—potentially other in the future (such as MathML, which could be encoded as “mml”).</p>
+</div>
+</li>
+<li id="I12.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I12.i8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">touched</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: When the the cache entry was last modified; used to determine which entries have “timed out” rendering.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S13" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">13 </span>catlinks</h2>
+
+<div id="S13.p1" class="ltx_para">
+<p class="ltx_p">This table stores intra-category scheme links. These are interpreted as directed links, going from a to b (or left-hand to right-hand).</p>
+</div>
+<div id="S13.p2" class="ltx_para">
+<ul id="I13" class="ltx_itemize">
+<li id="I13.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I13.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">nsb</span> [<span class="ltx_text ltx_font_typewriter">int(11) default NULL</span>]: Namespace ’a’ (left-hand side). The Namespace is a particular category scheme.</p>
+</div>
+</li>
+<li id="I13.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I13.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">nsa</span> [<span class="ltx_text ltx_font_typewriter">int(11) default NULL</span>]: Namespace ’b’ (right-hand side).</p>
+</div>
+</li>
+<li id="I13.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I13.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">a</span> [<span class="ltx_text ltx_font_typewriter">int(11) default NULL</span>]: Left-hand category (by ID).</p>
+</div>
+</li>
+<li id="I13.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I13.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">b</span> [<span class="ltx_text ltx_font_typewriter">int(11) default NULL</span>]: Right-hand category.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S14" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">14 </span>classification</h2>
+
+<div id="S14.p1" class="ltx_para">
+<p class="ltx_p">This table describes how objects such as encyclopaedia entries
+and books are classified. Note that each record describes the
+assignment of a single classification number to a given object
+so there may be multiple records pertaining to the same object
+if it is assigned multiple categories.</p>
+</div>
+<div id="S14.p2" class="ltx_para">
+<ul id="I14" class="ltx_itemize">
+<li id="I14.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I14.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">ns</span> [<span class="ltx_text ltx_font_typewriter">varchar(16) NOT NULL default ''</span>]: Table describing the classification scheme (namespace).</p>
+</div>
+</li>
+<li id="I14.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I14.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">tbl</span> [<span class="ltx_text ltx_font_typewriter">varchar(32) NOT NULL default ''</span>]: Table in which object being classified is found.</p>
+</div>
+</li>
+<li id="I14.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I14.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">ord</span> [<span class="ltx_text ltx_font_typewriter">int(11) default NULL</span>]: In case of multiple categories, this specifies the place (ordinal value) in the list of category codes.</p>
+</div>
+</li>
+<li id="I14.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I14.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">nsid</span> [<span class="ltx_text ltx_font_typewriter">int(11) default NULL</span>]: Namespace (scheme) ID.</p>
+</div>
+</li>
+<li id="I14.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I14.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">catid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Identifier of the classification code within the
+table describing the classification scheme.</p>
+</div>
+</li>
+<li id="I14.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I14.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">objectid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Numerical identifier of object being classified
+within its table.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S15" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">15 </span>collab_uid_seq</h2>
+
+<div id="S15.p1" class="ltx_para">
+<ul id="I15" class="ltx_itemize">
+<li id="I15.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I15.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">val</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL auto_increment</span>]: Unique ID counter for collab objects table.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S16" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">16 </span>collab</h2>
+
+<div id="S16.p1" class="ltx_para">
+<p class="ltx_p">All data pertaining to collaboration objects is stored in this table with one
+record per collaboration object.</p>
+</div>
+<div id="S16.p2" class="ltx_para">
+<ul id="I16" class="ltx_itemize">
+<li id="I16.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I16.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Numerical identifier of collaboration object.</p>
+</div>
+</li>
+<li id="I16.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I16.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">version</span> [<span class="ltx_text ltx_font_typewriter">int(11) default '1'</span>]: Version of object.</p>
+</div>
+</li>
+<li id="I16.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I16.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Number of owner of collaboration.</p>
+</div>
+</li>
+<li id="I16.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I16.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">data</span> [<span class="ltx_text ltx_font_typewriter">text]</span>: Text of collaboration (complete TeX document).</p>
+</div>
+</li>
+<li id="I16.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I16.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">locktime</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: If locked, the time when the lock was placed; otherwise empty.</p>
+</div>
+</li>
+<li id="I16.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I16.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">modified</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: Date the object was last modified.</p>
+</div>
+</li>
+<li id="I16.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I16.i7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">published</span> [<span class="ltx_text ltx_font_typewriter">tinyint(4) default '0'</span>]: Flag indication whether collaboration has been published.</p>
+</div>
+</li>
+<li id="I16.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I16.i8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">_lock</span> [<span class="ltx_text ltx_font_typewriter">int(11) default '0'</span>]: Flag indication whether collaboration is locked.</p>
+</div>
+</li>
+<li id="I16.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I16.i9.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">created</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: Date collaboration was begun.</p>
+</div>
+</li>
+<li id="I16.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I16.i10.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">hits</span> [<span class="ltx_text ltx_font_typewriter">int(11) default '0'</span>]: How many times it has been viewed.</p>
+</div>
+</li>
+<li id="I16.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I16.i11.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">sitedoc</span> [<span class="ltx_text ltx_font_typewriter">tinyint(4) default '0'</span>]: Flag indication whether collaboration is site document.</p>
+</div>
+</li>
+<li id="I16.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I16.i12.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">title</span> [<span class="ltx_text ltx_font_typewriter">varchar(255) NOT NULL default ''</span>]: Title of collaboration.</p>
+</div>
+</li>
+<li id="I16.i13" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I16.i13.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">abstract</span> [<span class="ltx_text ltx_font_typewriter">text</span>]: Abstract of Collaboration document.</p>
+</div>
+</li>
+<li id="I16.i14" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I16.i14.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">lockuser</span> [<span class="ltx_text ltx_font_typewriter">int(11) default NULL</span>]: If locked, ID of user who locked the collaboration. otherwise empty.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S17" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">17 </span>concepts_id_seq</h2>
+
+<div id="S17.p1" class="ltx_para">
+<ul id="I17" class="ltx_itemize">
+<li id="I17.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I17.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">val</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL auto_increment</span>]: Concepts unique ID counter.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S18" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">18 </span>concepts</h2>
+
+<div id="S18.p1" class="ltx_para">
+<p class="ltx_p">This table lists all the concepts defined in the encyclopaedia.</p>
+</div>
+<div id="S18.p2" class="ltx_para">
+<ul id="I18" class="ltx_itemize">
+<li id="I18.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I18.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">istitle</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Indicating whether concept is defined in entry/object title.</p>
+</div>
+</li>
+<li id="I18.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I18.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">isprimary</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Indicates whether is specified as a synonym in entry (’0’ value) or whether it is a main definition instance</p>
+</div>
+</li>
+<li id="I18.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I18.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">name</span> [<span class="ltx_text ltx_font_typewriter">varchar(255) NOT NULL default ''</span>]: Name of concept.</p>
+</div>
+</li>
+<li id="I18.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I18.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">id</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Numerical identifier of concept.</p>
+</div>
+</li>
+<li id="I18.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I18.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">objectid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Number of entry in which concept is defined.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S19" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">19 </span>corrections_uid_seq</h2>
+
+<div id="S19.p1" class="ltx_para">
+<ul id="I19" class="ltx_itemize">
+<li id="I19.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I19.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">val</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL auto_increment</span>]:
+Corrections table unique ID counter.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S20" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">20 </span>corrections</h2>
+
+<div id="S20.p1" class="ltx_para">
+<p class="ltx_p">This table contains all corrections filed to entries.</p>
+</div>
+<div id="S20.p2" class="ltx_para">
+<ul id="I20" class="ltx_itemize">
+<li id="I20.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I20.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">closed</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: If the correction is closed, the date on which it was
+closed, otherwise empty.</p>
+</div>
+</li>
+<li id="I20.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I20.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Numerical identifier of correction.</p>
+</div>
+</li>
+<li id="I20.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I20.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Number of user filing the correction.</p>
+</div>
+</li>
+<li id="I20.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I20.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">data</span> [<span class="ltx_text ltx_font_typewriter">text NOT NULL</span>]: Text of correction.</p>
+</div>
+</li>
+<li id="I20.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I20.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">objectid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Number of entry to which correction is posted.</p>
+</div>
+</li>
+<li id="I20.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I20.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">comment</span> [<span class="ltx_text ltx_font_typewriter">text</span>]: Optional comment by the user who closed the correction.</p>
+</div>
+</li>
+<li id="I20.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I20.i7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">filed</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: Date on which the correction was filed.</p>
+</div>
+</li>
+<li id="I20.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I20.i8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">accepted</span> [<span class="ltx_text ltx_font_typewriter">int(11) default NULL</span>]: Indication whether the correction has been accepted (1)
+rejected (0), or retracted (2).</p>
+</div>
+</li>
+<li id="I20.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I20.i9.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">type</span> [<span class="ltx_text ltx_font_typewriter">char(3) NOT NULL default ''</span>]: Type of correction.</p>
+</div>
+</li>
+<li id="I20.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I20.i10.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">title</span> [<span class="ltx_text ltx_font_typewriter">varchar(128) default NULL</span>]: Title of correction.</p>
+</div>
+</li>
+<li id="I20.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I20.i11.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">closedbyid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: number of user who closed the correction, blank is still open.</p>
+</div>
+</li>
+<li id="I20.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I20.i12.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">graceint</span> [<span class="ltx_text ltx_font_typewriter">int(11) default NULL</span>]: Grace interval: applied when calculating time till the correction becomes outstanding. This is applied when ownership changes.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S21" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">21 </span>corstat</h2>
+
+<div id="S21.p1" class="ltx_para">
+<p class="ltx_p">This table is part of the reputations system plugin.</p>
+</div>
+<div id="S21.p2" class="ltx_para">
+<ul id="I21" class="ltx_itemize">
+<li id="I21.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I21.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">objectid</span> [<span class="ltx_text ltx_font_typewriter">??????</span>]: ??????</p>
+</div>
+</li>
+<li id="I21.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I21.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">cnt</span> [<span class="ltx_text ltx_font_typewriter">?????</span>]: ??????</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S22" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">22 </span>forums_uid_seq</h2>
+
+<div id="S22.p1" class="ltx_para">
+<ul id="I22" class="ltx_itemize">
+<li id="I22.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I22.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">val</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL auto_increment</span>]: Forums unique ID counter.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S23" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">23 </span>forums</h2>
+
+<div id="S23.p1" class="ltx_para">
+<p class="ltx_p">Each entry in this table describes a forum.</p>
+</div>
+<div id="S23.p2" class="ltx_para">
+<ul id="I23" class="ltx_itemize">
+<li id="I23.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I23.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">created</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: Date forum was created.</p>
+</div>
+</li>
+<li id="I23.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I23.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Numerical identifier for forum.</p>
+</div>
+</li>
+<li id="I23.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I23.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: ID of user who created the forum.</p>
+</div>
+</li>
+<li id="I23.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I23.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">data</span> [<span class="ltx_text ltx_font_typewriter">text NOT NULL</span>]: Human-readable description of the forum.</p>
+</div>
+</li>
+<li id="I23.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I23.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">title</span> [<span class="ltx_text ltx_font_typewriter">varchar(128) NOT NULL default ''</span>]: Name of forum.</p>
+</div>
+</li>
+<li id="I23.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I23.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">parentid</span> [<span class="ltx_text ltx_font_typewriter">int(11) default NULL</span>]: Parent forum (for hierarchy), if any.</p>
+</div>
+</li>
+<li id="I23.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I23.i7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">modified</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: Date forum was last modified.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S24" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">24 </span>group_members</h2>
+
+<div id="S24.p1" class="ltx_para">
+<p class="ltx_p">This table describes membership in editor groups. Each
+record states that a certain user belongs to a certain froup.</p>
+</div>
+<div id="S24.p2" class="ltx_para">
+<ul id="I24" class="ltx_itemize">
+<li id="I24.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I24.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Number of user.</p>
+</div>
+</li>
+<li id="I24.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I24.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">groupid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: number of group to which user belongs.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S25" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">25 </span>groups_groupid_seq</h2>
+
+<div id="S25.p1" class="ltx_para">
+<ul id="I25" class="ltx_itemize">
+<li id="I25.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I25.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">val</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL auto_increment</span>]: Group table unique identifier.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S26" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">26 </span>groups</h2>
+
+<div id="S26.p1" class="ltx_para">
+<p class="ltx_p">This table lists all the editor groups in PM.</p>
+</div>
+<div id="S26.p2" class="ltx_para">
+<ul id="I26" class="ltx_itemize">
+<li id="I26.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I26.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">groupname</span> [<span class="ltx_text ltx_font_typewriter">varchar(128) default NULL</span>]: Name of group.</p>
+</div>
+</li>
+<li id="I26.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I26.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Number of user who founded the group.</p>
+</div>
+</li>
+<li id="I26.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I26.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">groupid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: ID number of the group.</p>
+</div>
+</li>
+<li id="I26.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I26.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">description</span> [<span class="ltx_text ltx_font_typewriter">text</span>]: Description of the group.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S27" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">27 </span>hits</h2>
+
+<div id="S27.p1" class="ltx_para">
+<p class="ltx_p">This table records individual access events to PM objects.
+</p>
+</div>
+<div id="S27.p2" class="ltx_para">
+<ul id="I27" class="ltx_itemize">
+<li id="I27.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I27.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL auto_increment</span>]:
+Numerical identifer of access event.</p>
+</div>
+</li>
+<li id="I27.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I27.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">objectid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]:
+Identifier of object being accessed.</p>
+</div>
+</li>
+<li id="I27.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I27.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">tblid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]:
+Numerical identifier of table in which object accessed resides
+(as per tdesc table).</p>
+</div>
+</li>
+<li id="I27.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I27.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">at</span> [<span class="ltx_text ltx_font_typewriter">timestamp(14) NOT NULL</span>]:
+Time of access.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S28" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">28 </span>inv_dfs</h2>
+
+<div id="S28.p1" class="ltx_para">
+<p class="ltx_p">Invalidation table – document frequencies.</p>
+</div>
+<div id="S28.p2" class="ltx_para">
+<p class="ltx_p">The invalidation system maps word tuples to entries so that the system can
+invalidate (in terms of rendering cache) entries that may be effected by the
+addition or removal of terms to the corpus.</p>
+</div>
+<div id="S28.p3" class="ltx_para">
+<p class="ltx_p">This table primarily keeps track of document frequencies – the number of
+documents (objects) a word or phrase appears in. This is used for determining
+whether even longer phrases (generated by adding one word to the current phrase)
+need to also be indexed. This is key in making this into an <em class="ltx_emph ltx_font_italic">adaptive</em>
+inverted index tracking tuples, not just single worlds.</p>
+</div>
+<div id="S28.p4" class="ltx_para">
+<ul id="I28" class="ltx_itemize">
+<li id="I28.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I28.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">id</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL</span>]: The word or phrase ID.</p>
+</div>
+</li>
+<li id="I28.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I28.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">word_or_phrase</span> [<span class="ltx_text ltx_font_typewriter">tinyint(4) NOT NULL</span>]: Whether this is a single word or phrase (tells us which table to look it up in).</p>
+</div>
+</li>
+<li id="I28.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I28.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">count</span> [<span class="ltx_text ltx_font_typewriter">tinyint(4) NOT NULL</span>]: Document frequency count.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S29" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">29 </span>inv_idx</h2>
+
+<div id="S29.p1" class="ltx_para">
+<p class="ltx_p">Main invalidation index of occurrences.</p>
+</div>
+<div id="S29.p2" class="ltx_para">
+<p class="ltx_p">Note that unlike a search engine index, we do not bother tracking term frequency (the actual count of occurrences in the document). This is because we only care about whether the phrase occurs at all in the record (if so; we may need to invalidate the object; if not, then we can ignore it).</p>
+</div>
+<div id="S29.p3" class="ltx_para">
+<ul id="I29" class="ltx_itemize">
+<li id="I29.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I29.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">id</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL</span>]: Word or phrase ID.</p>
+</div>
+</li>
+<li id="I29.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I29.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">word_or_phrase</span> [<span class="ltx_text ltx_font_typewriter">tinyint(4) NOT NULL</span>]: Whether the current record is for a word or phrase (tells us what table to look it up in).</p>
+</div>
+</li>
+<li id="I29.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I29.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">objectid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL</span>]: The object ID the word or phrase occurs in.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S30" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">30 </span>inv_phrases</h2>
+
+<div id="S30.p1" class="ltx_para">
+<p class="ltx_p">Dictionary of invalidation index phrases (multi-word tuples).</p>
+</div>
+<div id="S30.p2" class="ltx_para">
+<ul id="I30" class="ltx_itemize">
+<li id="I30.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I30.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">id</span> [<span class="ltx_text ltx_font_typewriter">mediumint(8) unsigned not null auto_increment</span>]:
+Unique ID of this phrase.</p>
+</div>
+</li>
+<li id="I30.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I30.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">phrase</span> [<span class="ltx_text ltx_font_typewriter">char(255) not null</span>]:
+The phrase itself (as a text string).</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S31" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">31 </span>inv_words</h2>
+
+<div id="S31.p1" class="ltx_para">
+<p class="ltx_p">Invalidation index words dictionary (as in single words; one-word “tuples”, which is just like a normal inverted index).</p>
+</div>
+<div id="S31.p2" class="ltx_para">
+<ul id="I31" class="ltx_itemize">
+<li id="I31.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I31.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">word</span> [<span class="ltx_text ltx_font_typewriter">char(32) NOT NULL UNIQUE</span>]:
+The word (human-readable text form).</p>
+</div>
+</li>
+<li id="I31.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I31.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">id</span> [<span class="ltx_text ltx_font_typewriter">mediumint unsigned not null auto_increment</span>]:
+Unique identifier of the word.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S32" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">32 </span>lastmsg</h2>
+
+<div id="S32.p1" class="ltx_para">
+<p class="ltx_p">This table contains the ID of the last message posted to a forum when last
+viewed by each user. This is used to determine if there have been new messages
+since last view.</p>
+</div>
+<div id="S32.p2" class="ltx_para">
+<ul id="I32" class="ltx_itemize">
+<li id="I32.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I32.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">objid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]:
+The forum object ID.</p>
+</div>
+</li>
+<li id="I32.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I32.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">tbl</span> [<span class="ltx_text ltx_font_typewriter">varchar(32) NOT NULL default ''</span>]:
+Table of the forum object (always ’forums’ for now).</p>
+</div>
+</li>
+<li id="I32.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I32.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">lastmsg</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]:
+Last-seen message ID.</p>
+</div>
+</li>
+<li id="I32.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I32.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]:
+User ID for this record.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S33" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">33 </span>lec_uid_seq</h2>
+
+<div id="S33.p1" class="ltx_para">
+<ul id="I33" class="ltx_itemize">
+<li id="I33.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I33.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">val</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL auto_increment</span>]: Lectures/expositions unique ID counter.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S34" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">34 </span>lec</h2>
+
+<div id="S34.p1" class="ltx_para">
+<p class="ltx_p">The contents of the Expositions (lectures) section of PM are stored in this table.</p>
+</div>
+<div id="S34.p2" class="ltx_para">
+<ul id="I34" class="ltx_itemize">
+<li id="I34.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I34.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">rights</span> [<span class="ltx_text ltx_font_typewriter">varchar(255) default ''</span>]: Copyright terms for the exposition.</p>
+</div>
+</li>
+<li id="I34.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I34.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">authors</span> [<span class="ltx_text ltx_font_typewriter">varchar(255) default NULL</span>]: Author(s) of the exposition.</p>
+</div>
+</li>
+<li id="I34.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I34.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">msc</span> [<span class="ltx_text ltx_font_typewriter">varchar(16) default NULL</span>]: MSC number(s) describing the subject matter of the exposition.</p>
+</div>
+</li>
+<li id="I34.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I34.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Numerical identifier of record.</p>
+</div>
+</li>
+<li id="I34.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I34.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Number of user who added the record.
+</p>
+</div>
+</li>
+<li id="I34.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I34.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">data</span> [<span class="ltx_text ltx_font_typewriter">text NOT NULL</span>]: Summary of exposition.</p>
+</div>
+</li>
+<li id="I34.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I34.i7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">urls</span> [<span class="ltx_text ltx_font_typewriter">text</span>]: URL’s for links to exposition.</p>
+</div>
+</li>
+<li id="I34.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I34.i8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">comments</span> [<span class="ltx_text ltx_font_typewriter">varchar(128) default NULL</span>]: Comments about exposition.</p>
+</div>
+</li>
+<li id="I34.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I34.i9.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">modified</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: Date the record was last modified.</p>
+</div>
+</li>
+<li id="I34.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I34.i10.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">created</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: Date the record was added to the Expositions section.</p>
+</div>
+</li>
+<li id="I34.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I34.i11.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">keywords</span> [<span class="ltx_text ltx_font_typewriter">varchar(128) default ''</span>]: Keywords for search purposes.</p>
+</div>
+</li>
+<li id="I34.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I34.i12.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">hits</span> [<span class="ltx_text ltx_font_typewriter">int(11) default '0'</span>]: How many times this has been accessed.</p>
+</div>
+</li>
+<li id="I34.i13" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I34.i13.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">title</span> [<span class="ltx_text ltx_font_typewriter">varchar(255) NOT NULL default ''</span>]: Title of the exposition.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S35" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">35 </span>links</h2>
+
+<div id="S35.p1" class="ltx_para">
+<p class="ltx_p">This table records links between encyclopedia objects, which for the most
+part are automatically generated.</p>
+</div>
+<div id="S35.p2" class="ltx_para">
+<ul id="I35" class="ltx_itemize">
+<li id="I35.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I35.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">totbl</span> [<span class="ltx_text ltx_font_typewriter">varchar(16) NOT NULL default ''</span>]:
+Table in which object to which link points resides (always ’objects’ for now, which is encyclopedia objects).</p>
+</div>
+</li>
+<li id="I35.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I35.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">fromid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]:
+Identifier of object from which link points.</p>
+</div>
+</li>
+<li id="I35.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I35.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">toid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]:
+Identifier of object to which link points.</p>
+</div>
+</li>
+<li id="I35.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I35.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">fromtbl</span> [<span class="ltx_text ltx_font_typewriter">varchar(16) NOT NULL default ''</span>]:
+Table in which object from which link points resides (also always ’objects’).</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S36" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">36 </span>mail_uid_seq</h2>
+
+<div id="S36.p1" class="ltx_para">
+<ul id="I36" class="ltx_itemize">
+<li id="I36.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I36.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">val</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL auto_increment</span>]: Noosphere mail unique ID counter.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S37" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">37 </span>mail</h2>
+
+<div id="S37.p1" class="ltx_para">
+<p class="ltx_p">This table stores all the Noosphere internal mails sent between users.</p>
+</div>
+<div id="S37.p2" class="ltx_para">
+<ul id="I37" class="ltx_itemize">
+<li id="I37.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I37.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">body</span> [<span class="ltx_text ltx_font_typewriter">text NOT NULL</span>]: Text of letter.</p>
+</div>
+</li>
+<li id="I37.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I37.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userfrom</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Number of user sending the letter.</p>
+</div>
+</li>
+<li id="I37.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I37.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userto</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Number of user receiving the letter.</p>
+</div>
+</li>
+<li id="I37.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I37.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">:int(11) NOT NULL default '0'</span>] Identifier for this particular letter.</p>
+</div>
+</li>
+<li id="I37.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I37.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">subject</span> [<span class="ltx_text ltx_font_typewriter">varchar(128) NOT NULL default ''</span>]: Subject heading of letter.</p>
+</div>
+</li>
+<li id="I37.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I37.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">sent</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: Date when letter was sent.</p>
+</div>
+</li>
+<li id="I37.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I37.i7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">_read</span> [<span class="ltx_text ltx_font_typewriter">int(11) default NULL</span>]: Flag indicating whether letter was read by recipient.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S38" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">38 </span>messages_uid_seq</h2>
+
+<div id="S38.p1" class="ltx_para">
+<ul id="I38" class="ltx_itemize">
+<li id="I38.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I38.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">val</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL auto_increment</span>]: Forum (and object-attached) messages unique ID counter.
+</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S39" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">39 </span>messages</h2>
+
+<div id="S39.p1" class="ltx_para">
+<p class="ltx_p">This table contains all messages posted to fora, entries,
+corrections and anywhere else one can post a message on PM.</p>
+</div>
+<div id="S39.p2" class="ltx_para">
+<ul id="I39" class="ltx_itemize">
+<li id="I39.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I39.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">visible</span> [<span class="ltx_text ltx_font_typewriter">tinyint(4) not null default '1'</span>]: This flag may not be in use.</p>
+</div>
+</li>
+<li id="I39.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I39.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Unique identifier of message.</p>
+</div>
+</li>
+<li id="I39.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I39.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">subject</span> [<span class="ltx_text ltx_font_typewriter">varchar(128) default 'none'</span>]: Subject heading of message.</p>
+</div>
+</li>
+<li id="I39.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I39.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: ID of user posting message.</p>
+</div>
+</li>
+<li id="I39.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I39.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">objectid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Identifier of object to which message is posted.</p>
+</div>
+</li>
+<li id="I39.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I39.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">tbl</span> [<span class="ltx_text ltx_font_typewriter">varchar(16) default NULL</span>]: Table in which object to which message was posted is located.</p>
+</div>
+</li>
+<li id="I39.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I39.i7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">created</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: Date on which message was posted.</p>
+</div>
+</li>
+<li id="I39.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I39.i8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">body</span> [<span class="ltx_text ltx_font_typewriter">text</span>]: Text of message.</p>
+</div>
+</li>
+<li id="I39.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I39.i9.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">threadid</span> [<span class="ltx_text ltx_font_typewriter">int(11) default NULL</span>]: Number of first message in thread to which message
+belongs; same as uid if message is directly posted to a forum or similar
+place as opposed to replying to another message (in other words, if this is the first message in the thread, then threadid = uid).</p>
+</div>
+</li>
+<li id="I39.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I39.i10.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">replyto</span> [<span class="ltx_text ltx_font_typewriter">int(11) default '-1'</span>]: If message is a reply to some other message, the identifier
+of that message, otherwise -1.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S40" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">40 </span>msc</h2>
+
+<div id="S40.p1" class="ltx_para">
+<p class="ltx_p">The local copy of the MSC resides in this table. Each record
+pertains to a specific category.</p>
+</div>
+<div id="S40.p2" class="ltx_para">
+<ul id="I40" class="ltx_itemize">
+<li id="I40.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I40.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]:
+Internal Unique ID of this category.</p>
+</div>
+</li>
+<li id="I40.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I40.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">id</span> [<span class="ltx_text ltx_font_typewriter">varchar(6) NOT NULL default ''</span>]:
+Public unambiguous ’code’ for the category.</p>
+</div>
+</li>
+<li id="I40.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I40.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">parent</span> [<span class="ltx_text ltx_font_typewriter">varchar(6) default NULL</span>]:
+Parent category of this category (if applicable).</p>
+</div>
+</li>
+<li id="I40.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I40.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">comment</span> [<span class="ltx_text ltx_font_typewriter">varchar(128) default NULL</span>]:
+Description of the category.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S41" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">41 </span>nag</h2>
+
+<div id="S41.p1" class="ltx_para">
+<p class="ltx_p">This table keeps track of automated nags for outstanding corrections.</p>
+</div>
+<div id="S41.p2" class="ltx_para">
+<ul id="I41" class="ltx_itemize">
+<li id="I41.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I41.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">lastnag</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]:
+Date of most recent automatically generated nag.</p>
+</div>
+</li>
+<li id="I41.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I41.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">cid</span> [<span class="ltx_text ltx_font_typewriter">int(11) default NULL</span>]:
+Identifier of correction which is subject of nag.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S42" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">42 </span>news_uid_seq</h2>
+
+<div id="S42.p1" class="ltx_para">
+<ul id="I42" class="ltx_itemize">
+<li id="I42.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I42.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">val</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL auto_increment</span>]: News items unique ID counter.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S43" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">43 </span>news</h2>
+
+<div id="S43.p1" class="ltx_para">
+<p class="ltx_p">This table stores news items posted in the box on the home page (or in blog mode, scrolling down the whole front page).</p>
+</div>
+<div id="S43.p2" class="ltx_para">
+<ul id="I43" class="ltx_itemize">
+<li id="I43.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I43.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]:
+Unique identifier of news item.</p>
+</div>
+</li>
+<li id="I43.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I43.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">intro</span> [<span class="ltx_text ltx_font_typewriter">text</span>]:
+Lead-in ’teaser’ which shows up on the main page or which could be pulled as
+a description for an RSS feed or similar.</p>
+</div>
+</li>
+<li id="I43.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I43.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]:
+Number of user posting the news item.</p>
+</div>
+</li>
+<li id="I43.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I43.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">modified</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]:
+Date the news item was last modified.</p>
+</div>
+</li>
+<li id="I43.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I43.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">created</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]:
+Date the news item was posted.</p>
+</div>
+</li>
+<li id="I43.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I43.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">body</span> [<span class="ltx_text ltx_font_typewriter">text</span>]:
+Main text of news item.</p>
+</div>
+</li>
+<li id="I43.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I43.i7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">hits</span> [<span class="ltx_text ltx_font_typewriter">int(11) default '0'</span>]:
+How many times this news item has been accessed.</p>
+</div>
+</li>
+<li id="I43.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I43.i8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">title</span> [<span class="ltx_text ltx_font_typewriter">varchar(128) NOT NULL default ''</span>]:
+Headline of news item.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S44" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">44 </span>notices_uid_seq</h2>
+
+<div id="S44.p1" class="ltx_para">
+<ul id="I44" class="ltx_itemize">
+<li id="I44.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I44.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">val</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL auto_increment</span>]: Notices table unique ID counter.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S45" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">45 </span>notices</h2>
+
+<div id="S45.p1" class="ltx_para">
+<p class="ltx_p">Notices sent to users are stored in this table. These record events like post replies, any posts to objects being watched, corrections, and so forth.</p>
+</div>
+<div id="S45.p2" class="ltx_para">
+<ul id="I45" class="ltx_itemize">
+<li id="I45.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I45.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">choice_action</span> [<span class="ltx_text ltx_font_typewriter">text</span>]:
+A menu of possible responses to the notice, if applicable (these are URLs encoded into the text field).</p>
+</div>
+</li>
+<li id="I45.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I45.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]:
+Unique ID of notice.</p>
+</div>
+</li>
+<li id="I45.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I45.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]:
+ID of user being notified</p>
+</div>
+</li>
+<li id="I45.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I45.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">choice_default</span> [<span class="ltx_text ltx_font_typewriter">int(11) default NULL</span>]:
+Indication of which of the menu options is
+the default action which will happen should the recipient of the notice
+not chose an option within a certain time from when the notice was issued.</p>
+</div>
+</li>
+<li id="I45.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I45.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">data</span> [<span class="ltx_text ltx_font_typewriter">text</span>]:
+Text description of notice</p>
+</div>
+</li>
+<li id="I45.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I45.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">created</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]:
+Date of notice issue.</p>
+</div>
+</li>
+<li id="I45.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I45.i7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userfrom</span> [<span class="ltx_text ltx_font_typewriter">int(11) default NULL</span>]:
+ID of user who caused the action leading to the notice, if applicable.</p>
+</div>
+</li>
+<li id="I45.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I45.i8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">viewed</span> [<span class="ltx_text ltx_font_typewriter">int(11) default '0'</span>]:
+Flag indicating whether the notice has been viewed.</p>
+</div>
+</li>
+<li id="I45.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I45.i9.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">title</span> [<span class="ltx_text ltx_font_typewriter">varchar(128) default NULL</span>]:
+Title of notice.</p>
+</div>
+</li>
+<li id="I45.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I45.i10.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">choice_title</span> [<span class="ltx_text ltx_font_typewriter">text</span>]:
+A list of titles for the actions in the menu.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S46" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">46 </span>ns</h2>
+
+<div id="S46.p1" class="ltx_para">
+<p class="ltx_p">Category namespaces (schemes) supported.</p>
+</div>
+<div id="S46.p2" class="ltx_para">
+<ul id="I46" class="ltx_itemize">
+<li id="I46.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I46.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">link</span> [<span class="ltx_text ltx_font_typewriter">varchar(255) default NULL</span>]: Link to web site which is the authority on this scheme.</p>
+</div>
+</li>
+<li id="I46.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I46.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">shortdesc</span> [<span class="ltx_text ltx_font_typewriter">varchar(64) NOT NULL default ''</span>]:
+Short descriptor of the scheme.</p>
+</div>
+</li>
+<li id="I46.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I46.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">longdesc</span> [<span class="ltx_text ltx_font_typewriter">varchar(255) NOT NULL default ''</span>]:
+Long description of the scheme.
+</p>
+</div>
+</li>
+<li id="I46.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I46.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">name</span> [<span class="ltx_text ltx_font_typewriter">varchar(16) NOT NULL default ''</span>]:
+Name of the scheme.</p>
+</div>
+</li>
+<li id="I46.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I46.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">id</span> [<span class="ltx_text ltx_font_typewriter">int(11) default NULL</span>]:
+Unique ID for the scheme.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S47" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">47 </span>object_rating_all</h2>
+
+<div id="S47.p1" class="ltx_para">
+<p class="ltx_p">This table is for the ratings/reputation subsystem and is not part of Noosphere proper.</p>
+</div>
+<div id="S47.p2" class="ltx_para">
+<ul id="I47" class="ltx_itemize">
+<li id="I47.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I47.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userid</span> [<span class="ltx_text ltx_font_typewriter">???????</span>]: ???????</p>
+</div>
+</li>
+<li id="I47.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I47.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">answer</span> [<span class="ltx_text ltx_font_typewriter">???????</span>]: ???????</p>
+</div>
+</li>
+<li id="I47.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I47.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">weight</span> [<span class="ltx_text ltx_font_typewriter">???????</span>]: ???????</p>
+</div>
+</li>
+<li id="I47.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I47.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">ratid</span> [<span class="ltx_text ltx_font_typewriter">???????</span>]: ???????</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S48" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">48 </span>object_rating</h2>
+
+<div id="S48.p1" class="ltx_para">
+<p class="ltx_p">This table is for the ratings/reputation subsystem and is not part of Noosphere proper.</p>
+</div>
+<div id="S48.p2" class="ltx_para">
+<ul id="I48" class="ltx_itemize">
+<li id="I48.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I48.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">???????</span>]: ???????</p>
+</div>
+</li>
+<li id="I48.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I48.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userid</span> [<span class="ltx_text ltx_font_typewriter">???????</span>]: ???????</p>
+</div>
+</li>
+<li id="I48.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I48.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">value</span> [<span class="ltx_text ltx_font_typewriter">???????</span>]: ???????
+</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S49" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">49 </span>objects_uid_seq</h2>
+
+<div id="S49.p1" class="ltx_para">
+<ul id="I49" class="ltx_itemize">
+<li id="I49.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I49.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">val</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL auto_increment</span>]: Encyclopedia objects unique ID counter.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S50" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">50 </span>objects</h2>
+
+<div id="S50.p1" class="ltx_para">
+<p class="ltx_p">Encyclopaedia entries are stored in this table. Each record
+corresponds to a particular entry. The generic-seeming name of the table is due
+to its origins as the first object table (before books, expositions, papers, etc.).</p>
+</div>
+<div id="S50.p2" class="ltx_para">
+<ul id="I50" class="ltx_itemize">
+<li id="I50.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I50.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: A numerical identifier unique to the entry.</p>
+</div>
+</li>
+<li id="I50.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I50.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">title</span> [<span class="ltx_text ltx_font_typewriter">varchar(255) NOT NULL default ''</span>]: The title of the entry.</p>
+</div>
+</li>
+<li id="I50.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I50.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">type</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: What type of entry is this, e.g. theorem, proof, definition… (the numerical codes for this field are defined in Config.pm)</p>
+</div>
+</li>
+<li id="I50.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I50.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">parentid</span> [<span class="ltx_text ltx_font_typewriter">int(11) default NULL</span>]: If the entry happens to be attached to another entry, the
+unique numerical identifier or canonical name of that entry, otherwise blank.</p>
+</div>
+</li>
+<li id="I50.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I50.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: The numerical identifier of the current owner of the entry.</p>
+</div>
+</li>
+<li id="I50.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I50.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">self</span> [<span class="ltx_text ltx_font_typewriter">int(11) default NULL</span>]: Contains proof for self?</p>
+</div>
+</li>
+<li id="I50.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I50.i7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">keywords</span> [<span class="ltx_text ltx_font_typewriter">text</span>]: A list of terms associated to the subject of the entry which
+to be used in searching separated by commas; note that synonyms should not
+be repeated in this list.
+</p>
+</div>
+</li>
+<li id="I50.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I50.i8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">hits</span> [<span class="ltx_text ltx_font_typewriter">int(11) default '0'</span>]: How many times the entry has been accessed.</p>
+</div>
+</li>
+<li id="I50.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I50.i9.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">synonyms</span> [<span class="ltx_text ltx_font_typewriter">text</span>]: A list of commonly-used terms synonymous with the titular concept of the entry.</p>
+</div>
+</li>
+<li id="I50.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I50.i10.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">defines</span> [<span class="ltx_text ltx_font_typewriter">text</span>]: A list of additional terms defined in the entry separated by commas;
+by default, the title is considered as being defined by the entry, so it
+need not be listed here.</p>
+</div>
+</li>
+<li id="I50.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I50.i11.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">linkpolicy</span> [<span class="ltx_text ltx_font_typewriter">text</span>]: The linking policy of the entry in question (modifies automatic linking behavior to the entry).</p>
+</div>
+</li>
+<li id="I50.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I50.i12.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">pronounce</span> [<span class="ltx_text ltx_font_typewriter">varchar(255) default NULL</span>]: Pronounciation guide for the title.</p>
+</div>
+</li>
+<li id="I50.i13" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I50.i13.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">version</span> [<span class="ltx_text ltx_font_typewriter">int(11) default NULL</span>]: Number of current version (due to edit history).</p>
+</div>
+</li>
+<li id="I50.i14" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I50.i14.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">preamble</span> [<span class="ltx_text ltx_font_typewriter">text</span>]: The TeX preamble for the entry. This contains
+definitions and instructions to load packages.</p>
+</div>
+</li>
+<li id="I50.i15" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I50.i15.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">name</span> [<span class="ltx_text ltx_font_typewriter">varchar(255) NOT NULL default ''</span>]: A unique canonical name which identifies the entry (the html page for the entry is derived from this).</p>
+</div>
+</li>
+<li id="I50.i16" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I50.i16.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">data</span> [<span class="ltx_text ltx_font_typewriter">text NOT NULL</span>]: The TeX source for the entry. Note that this should
+not include instructions to begin and end the document, macro definitions,
+or instructions to include packages. Rather, the code specified here is
+combined with the preamble to produce a complete TeX file which is
+then processed to produce a viewable version of the entry.</p>
+</div>
+</li>
+<li id="I50.i17" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I50.i17.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">modified</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: Date on which the current version was made.</p>
+</div>
+</li>
+<li id="I50.i18" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I50.i18.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">created</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: Date on whhich the original version of the entry was
+added to the collection.</p>
+</div>
+</li>
+<li id="I50.i19" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I50.i19.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">related</span> [<span class="ltx_text ltx_font_typewriter">text</span>]: A list of canonical names of entries which discuss
+related material separated by commas.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S51" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">51 </span>objindex</h2>
+
+<div id="S51.p1" class="ltx_para">
+<p class="ltx_p">This table lists various information for Noosphere objects (this table mostly exists to provide in one place metadata for searchable objects).</p>
+</div>
+<div id="S51.p2" class="ltx_para">
+<ul id="I51" class="ltx_itemize">
+<li id="I51.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I51.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">objectid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Unique identifier of the object in its table.</p>
+</div>
+</li>
+<li id="I51.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I51.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">tbl</span> [<span class="ltx_text ltx_font_typewriter">varchar(16) NOT NULL default ''</span>]: Table in which object is located.</p>
+</div>
+</li>
+<li id="I51.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I51.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: ID of user who owns the object.</p>
+</div>
+</li>
+<li id="I51.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I51.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">ichar</span> [<span class="ltx_text ltx_font_typewriter">char(1) default NULL</span>]: First letter of object name for alphabetical listing.</p>
+</div>
+</li>
+<li id="I51.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I51.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">type</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '1'</span>]: Whether this is a primary entry for the object, or a synonym or defines (2 and 3) for the same object.</p>
+</div>
+</li>
+<li id="I51.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I51.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">source</span> [<span class="ltx_text ltx_font_typewriter">varchar(16) default NULL</span>]: Short name of digital library source originating this object (for provenance). See ’source’ table.</p>
+</div>
+</li>
+<li id="I51.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I51.i7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">title</span> [<span class="ltx_text ltx_font_typewriter">varchar(128) NOT NULL default ''</span>]: Title of object.</p>
+</div>
+</li>
+<li id="I51.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I51.i8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">cname</span> [<span class="ltx_text ltx_font_typewriter">varchar(128) NOT NULL default ''</span>]: Canonical name, where relevant.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S52" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">52 </span>objlinks</h2>
+
+<div id="S52.p1" class="ltx_para">
+<p class="ltx_p">This table contains various sorts of administrative links (as opposed to user-facing definitional links) such as links from a request to the object requested.</p>
+</div>
+<div id="S52.p2" class="ltx_para">
+<ul id="I52" class="ltx_itemize">
+<li id="I52.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I52.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL auto_increment</span>]:
+Unique numerical identifier of this link.</p>
+</div>
+</li>
+<li id="I52.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I52.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">srcid</span> [<span class="ltx_text ltx_font_typewriter">varchar(32) NOT NULL default ''</span>]:
+Indentifier of source of link.</p>
+</div>
+</li>
+<li id="I52.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I52.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">destid</span> [<span class="ltx_text ltx_font_typewriter">varchar(32) NOT NULL default ''</span>]:
+Identifier of destination of link.</p>
+</div>
+</li>
+<li id="I52.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I52.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">desttbl</span> [<span class="ltx_text ltx_font_typewriter">varchar(32) NOT NULL default ''</span>]:
+Table in which destination resides.</p>
+</div>
+</li>
+<li id="I52.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I52.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">srctbl</span> [<span class="ltx_text ltx_font_typewriter">varchar(32) NOT NULL default ''</span>]:
+Table in which source resides.</p>
+</div>
+</li>
+<li id="I52.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I52.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">note</span> [<span class="ltx_text ltx_font_typewriter">varchar(128) default NULL</span>]: ?????</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S53" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">53 </span>ownerlog</h2>
+
+<div id="S53.p1" class="ltx_para">
+<p class="ltx_p">This table documents changes of ownership of Noosphere objects.
+Each record corresponds to a single change of ownership of an object.</p>
+</div>
+<div id="S53.p2" class="ltx_para">
+<ul id="I53" class="ltx_itemize">
+<li id="I53.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I53.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">objectid</span> [<span class="ltx_text ltx_font_typewriter">integer</span>]: Numerical identifier of object whose ownership changed.</p>
+</div>
+</li>
+<li id="I53.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I53.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">tbl</span> [<span class="ltx_text ltx_font_typewriter">varchar(16)</span>]: Table in which object in question resides.</p>
+</div>
+</li>
+<li id="I53.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I53.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">ts</span> [<span class="ltx_text ltx_font_typewriter">datetime</span>]: Date on which ownership of object changed hands.</p>
+</div>
+</li>
+<li id="I53.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I53.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userid</span> [<span class="ltx_text ltx_font_typewriter">integer</span>]: User ID of former owner.</p>
+</div>
+</li>
+<li id="I53.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I53.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">action</span> [<span class="ltx_text ltx_font_typewriter">varchar(1)</span>]: Why ownership changed — “o” for orphaning,“t” for transfer, “a” for abandon.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S54" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">54 </span>papers_uid_seq</h2>
+
+<div id="S54.p1" class="ltx_para">
+<ul id="I54" class="ltx_itemize">
+<li id="I54.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I54.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">val</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL auto_increment</span>]: Counter for paper object unique IDs.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S55" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">55 </span>papers</h2>
+
+<div id="S55.p1" class="ltx_para">
+<p class="ltx_p">The contents of the papers section of Noosphere are stored in this table.</p>
+</div>
+<div id="S55.p2" class="ltx_para">
+<ul id="I55" class="ltx_itemize">
+<li id="I55.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I55.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">rights</span> [<span class="ltx_text ltx_font_typewriter">varchar(255) default ''</span>]: Copyright terms of paper.</p>
+</div>
+</li>
+<li id="I55.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I55.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">authors</span> [<span class="ltx_text ltx_font_typewriter">varchar(255) default NULL</span>]: Author(s) of paper.</p>
+</div>
+</li>
+<li id="I55.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I55.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">msc</span> [<span class="ltx_text ltx_font_typewriter">varchar(16) default NULL</span>]: MSC number(s) classifying subject of paper.</p>
+</div>
+</li>
+<li id="I55.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I55.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Number identifying record.</p>
+</div>
+</li>
+<li id="I55.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I55.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: number of user who made the record.</p>
+</div>
+</li>
+<li id="I55.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I55.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">data</span> [<span class="ltx_text ltx_font_typewriter">text NOT NULL</span>]: Abstract of paper.</p>
+</div>
+</li>
+<li id="I55.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I55.i7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">comments</span> [<span class="ltx_text ltx_font_typewriter">varchar(128) default NULL</span>]: Comments about paper.</p>
+</div>
+</li>
+<li id="I55.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I55.i8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">modified</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: Date record was last modified.</p>
+</div>
+</li>
+<li id="I55.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I55.i9.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">created</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: Date record was added to papers section.</p>
+</div>
+</li>
+<li id="I55.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I55.i10.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">keyword</span> [<span class="ltx_text ltx_font_typewriter">varchar(128) default ''</span>]: Keywords for search purposes.</p>
+</div>
+</li>
+<li id="I55.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I55.i11.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">hits</span> [<span class="ltx_text ltx_font_typewriter">int(11) default '0'</span>]: How many times this has been accessed.</p>
+</div>
+</li>
+<li id="I55.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I55.i12.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">title</span> [<span class="ltx_text ltx_font_typewriter">varchar(255) NOT NULL default ''</span>]: Title of paper.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S56" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">56 </span>polls_uid_seq</h2>
+
+<div id="S56.p1" class="ltx_para">
+<ul id="I56" class="ltx_itemize">
+<li id="I56.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I56.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">val</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL auto_increment</span>]: Counter yielding unique IDs for poll objects.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S57" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">57 </span>polls</h2>
+
+<div id="S57.p1" class="ltx_para">
+<p class="ltx_p">This table contains the polls conducted on PM.</p>
+</div>
+<div id="S57.p2" class="ltx_para">
+<ul id="I57" class="ltx_itemize">
+<li id="I57.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I57.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">options</span> [<span class="ltx_text ltx_font_typewriter">varchar(255) NOT NULL default ''</span>]: The list of possible responses to the poll separated by commas.</p>
+</div>
+</li>
+<li id="I57.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I57.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Numerical identifier of poll.</p>
+</div>
+</li>
+<li id="I57.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I57.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">finish</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: Date on which poll ends.</p>
+</div>
+</li>
+<li id="I57.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I57.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Number of user who made the poll.</p>
+</div>
+</li>
+<li id="I57.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I57.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">title</span> [<span class="ltx_text ltx_font_typewriter">varchar(128) NOT NULL default ''</span>]: Title of poll.</p>
+</div>
+</li>
+<li id="I57.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I57.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">start</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: Date on which poll starts.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S58" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">58 </span>relsuggest</h2>
+
+<div id="S58.p1" class="ltx_para">
+<p class="ltx_p">This table exists to keep track of suggestions regarding reciprocal “related” links (the contents of “see also” fields when an object is viewed). When a related link is created, the owner of the destination object needs to receive a notice asking whether the reciprocal link should be created. When this happens, an entry is added to this table, so that the owner of that object is not asked again whenever the related list of that object is edited.</p>
+</div>
+<div id="S58.p2" class="ltx_para">
+<ul id="I58" class="ltx_itemize">
+<li id="I58.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I58.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">related</span> [<span class="ltx_text ltx_font_typewriter">varchar(255) NOT NULL default ''</span>]: Canonical name of the related object under consideration.</p>
+</div>
+</li>
+<li id="I58.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I58.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">objectid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Object ID of the outgoing related link in question.</p>
+</div>
+</li>
+<li id="I58.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I58.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">tbl</span> [<span class="ltx_text ltx_font_typewriter">varchar(16) NOT NULL default ''</span>]: Table ID of the above object.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S59" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">59 </span>rendered_images</h2>
+
+<div id="S59.p1" class="ltx_para">
+<p class="ltx_p">This table contains a cache of rendered equation images (for metadata such as titles, not entry content).</p>
+</div>
+<div id="S59.p2" class="ltx_para">
+<ul id="I59" class="ltx_itemize">
+<li id="I59.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I59.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL auto_increment</span>]:
+Unique ID of this image rendering.</p>
+</div>
+</li>
+<li id="I59.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I59.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">align</span> [<span class="ltx_text ltx_font_typewriter">varchar(10) default NULL</span>]:
+HTML vertical alignment meta-information (extracted from latex2html).</p>
+</div>
+</li>
+<li id="I59.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I59.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">variant</span> [<span class="ltx_text ltx_font_typewriter">varchar(16) NOT NULL</span>]:
+If this is a stylistic variant, which one (i.e. title colors, hyperlink, normal).</p>
+</div>
+</li>
+<li id="I59.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I59.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">imagekey</span> [<span class="ltx_text ltx_font_typewriter">varchar(128) NOT NULL</span>]:
+Image key (derived from the equation TeX segment).</p>
+</div>
+</li>
+<li id="I59.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I59.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">image</span> [<span class="ltx_text ltx_font_typewriter">blob</span>]:
+The rendered image itself (binary data).</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S60" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">60 </span>requests_uid_seq</h2>
+
+<div id="S60.p1" class="ltx_para">
+<ul id="I60" class="ltx_itemize">
+<li id="I60.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I60.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">val</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL auto_increment</span>]: Encyclopedia requests unique ID counter.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S61" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">61 </span>requests</h2>
+
+<div id="S61.p1" class="ltx_para">
+<p class="ltx_p">This table stores the user requests for new encyclopaedia entries.
+Each entry documents a single request.
+</p>
+</div>
+<div id="S61.p2" class="ltx_para">
+<ul id="I61" class="ltx_itemize">
+<li id="I61.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I61.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Unique ID of this entry.</p>
+</div>
+</li>
+<li id="I61.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I61.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">closed</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: Date on which the request was confirmed.
+(empty if unfilled or filled but unconfirmed.)</p>
+</div>
+</li>
+<li id="I61.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I61.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">creatorid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: numerical id of the user making the request.</p>
+</div>
+</li>
+<li id="I61.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I61.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">data</span> [<span class="ltx_text ltx_font_typewriter">text</span>]: The human-readable text of the request.</p>
+</div>
+</li>
+<li id="I61.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I61.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">created</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: Date on which the request was made.</p>
+</div>
+</li>
+<li id="I61.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I61.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">title</span> [<span class="ltx_text ltx_font_typewriter">varchar(128) NOT NULL default ''</span>]: Title of the request.</p>
+</div>
+</li>
+<li id="I61.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I61.i7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">fulfilled</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: Date on which the request was filled.</p>
+</div>
+</li>
+<li id="I61.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I61.i8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">fulfillerid</span> [<span class="ltx_text ltx_font_typewriter">int(11) default NULL</span>]: Number identifying the owner of the
+entry fulfilling the request.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S62" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">62 </span>score</h2>
+
+<div id="S62.p1" class="ltx_para">
+<p class="ltx_p">This table contains a detailed accounting of how users’
+scores change. Each record corresponds to a particular
+event in which a user gains (or loses) points.</p>
+</div>
+<div id="S62.p2" class="ltx_para">
+<ul id="I62" class="ltx_itemize">
+<li id="I62.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I62.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">delta</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Number of points awarded (or forfeited).</p>
+</div>
+</li>
+<li id="I62.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I62.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL auto_increment</span>]: Numerical identifier specific to this table.</p>
+</div>
+</li>
+<li id="I62.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I62.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: User whose score changed.</p>
+</div>
+</li>
+<li id="I62.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I62.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">occured</span> [<span class="ltx_text ltx_font_typewriter">timestamp(14) NOT NULL</span>]: Date on which the event happened.
+</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S63" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">63 </span>searchresults</h2>
+
+<div id="S63.p1" class="ltx_para">
+<p class="ltx_p">This table temporarily stores basic information for search engine results (no matter whether it is the built-in search engine as originally the case, or an external search engine such as ESSEX or Lucene).</p>
+</div>
+<div id="S63.p2" class="ltx_para">
+<p class="ltx_p">The ’ts’ (timestamp) field is used by a background process to determine whether to delete the search result.</p>
+</div>
+<div id="S63.p3" class="ltx_para">
+<ul id="I63" class="ltx_itemize">
+<li id="I63.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I63.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">objectid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Unique ID of the result object.</p>
+</div>
+</li>
+<li id="I63.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I63.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">tbl</span> [<span class="ltx_text ltx_font_typewriter">varchar(16) NOT NULL default ''</span>]: Table of the result object.</p>
+</div>
+</li>
+<li id="I63.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I63.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">ts</span> [<span class="ltx_text ltx_font_typewriter">timestamp(14) NOT NULL</span>]: Timestamp of the search.</p>
+</div>
+</li>
+<li id="I63.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I63.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">token</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Unique token of the search.</p>
+</div>
+</li>
+<li id="I63.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I63.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">rank</span> [<span class="ltx_text ltx_font_typewriter">double NOT NULL default '0'</span>]: Numerical rank (assigned by the search engine itself, not Noosphere).</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S64" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">64 </span>source</h2>
+
+<div id="S64.p1" class="ltx_para">
+<p class="ltx_p">Digital library provenance sources of objects (for objects that have been imported).</p>
+</div>
+<div id="S64.p2" class="ltx_para">
+<ul id="I64" class="ltx_itemize">
+<li id="I64.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I64.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">integer</span>]: Unique ID of this source.</p>
+</div>
+</li>
+<li id="I64.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I64.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">nickname</span> [<span class="ltx_text ltx_font_typewriter">varchar(16)</span>]: Short name of source.</p>
+</div>
+</li>
+<li id="I64.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I64.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">url</span> [<span class="ltx_text ltx_font_typewriter">varchar(255)</span>]: Reference URL of source.</p>
+</div>
+</li>
+<li id="I64.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I64.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">name</span> [<span class="ltx_text ltx_font_typewriter">varchar(255)</span>]: Full name of source.
+</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S65" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">65 </span>storage</h2>
+
+<div id="S65.p1" class="ltx_para">
+<p class="ltx_p">This table stores cached statistics (typically, statistics which require long-running queries to generate). It is the main table of the StatCache subsystem.</p>
+</div>
+<div id="S65.p2" class="ltx_para">
+<ul id="I65" class="ltx_itemize">
+<li id="I65.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I65.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">_key</span> [<span class="ltx_text ltx_font_typewriter">varchar(64) NOT NULL default ''</span>]: Unique key of this statistic.</p>
+</div>
+</li>
+<li id="I65.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I65.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">_val</span> [<span class="ltx_text ltx_font_typewriter">text</span>]: Current value of this statistic.</p>
+</div>
+</li>
+<li id="I65.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I65.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">valid</span> [<span class="ltx_text ltx_font_typewriter">int(11) default '1'</span>]: Is this statistic valid?</p>
+</div>
+</li>
+<li id="I65.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I65.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">timeout</span> [<span class="ltx_text ltx_font_typewriter">varchar(32) default NULL</span>]: How long the statistic is valid for (or NULL for forever/until triggered by an pertinent event).</p>
+</div>
+</li>
+<li id="I65.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I65.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">callback</span> [<span class="ltx_text ltx_font_typewriter">varchar(32) default NULL</span>]: Callback function that generates this statistic (function pointer).</p>
+</div>
+</li>
+<li id="I65.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I65.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">lastupdate</span> [<span class="ltx_text ltx_font_typewriter">varchar(32) default NULL</span>]: When this statistic was last refreshed. Combined with timeout to determine invalidation.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S66" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">66 </span>tdesc</h2>
+
+<div id="S66.p1" class="ltx_para">
+<p class="ltx_p">User-friendly titles for some Noosphere tables.</p>
+</div>
+<div id="S66.p2" class="ltx_para">
+<ul id="I66" class="ltx_itemize">
+<li id="I66.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I66.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">int(11) default NULL</span>]: Numerical identifier labeling rows of this table.</p>
+</div>
+</li>
+<li id="I66.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I66.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">description</span> [<span class="ltx_text ltx_font_typewriter">varchar(128) NOT NULL default ''</span>]: User-friendly name.</p>
+</div>
+</li>
+<li id="I66.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I66.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">tname</span> [<span class="ltx_text ltx_font_typewriter">varchar(32) NOT NULL default ''</span>]: Name which SQL recognizes.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S67" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">67 </span>users_rating</h2>
+
+<div id="S67.p1" class="ltx_para">
+<p class="ltx_p">This belongs to the ratings/reputation module and is not part of Noosphere proper.</p>
+</div>
+<div id="S67.p2" class="ltx_para">
+<ul id="I67" class="ltx_itemize">
+<li id="I67.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I67.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">ranking</span> [<span class="ltx_text ltx_font_typewriter">??????</span>]:</p>
+</div>
+</li>
+<li id="I67.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I67.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">value</span> [<span class="ltx_text ltx_font_typewriter">??????</span>]:</p>
+</div>
+</li>
+<li id="I67.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I67.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userid</span> [<span class="ltx_text ltx_font_typewriter">??????</span>]:</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S68" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">68 </span>users_uid_seq</h2>
+
+<div id="S68.p1" class="ltx_para">
+<ul id="I68" class="ltx_itemize">
+<li id="I68.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I68.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">val</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL auto_increment</span>]: User unique ID counter.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S69" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">69 </span>users</h2>
+
+<div id="S69.p1" class="ltx_para">
+<p class="ltx_p">This table contains the records of all user accounts on PM.</p>
+</div>
+<div id="S69.p2" class="ltx_para">
+<ul id="I69" class="ltx_itemize">
+<li id="I69.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I69.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">forename</span> [<span class="ltx_text ltx_font_typewriter">varchar(64) default ''</span>]: First Name</p>
+</div>
+</li>
+<li id="I69.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I69.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">lastip</span> [<span class="ltx_text ltx_font_typewriter">varchar(15)</span>]: Last IP address from which this user logged in.</p>
+</div>
+</li>
+<li id="I69.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I69.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">state</span> [<span class="ltx_text ltx_font_typewriter">varchar(128) default ''</span>]: State where user is located</p>
+</div>
+</li>
+<li id="I69.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I69.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">email</span> [<span class="ltx_text ltx_font_typewriter">varchar(255) NOT NULL default ''</span>]: e-mail address of user
+</p>
+</div>
+</li>
+<li id="I69.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I69.i5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">password</span> [<span class="ltx_text ltx_font_typewriter">varchar(32) NOT NULL default ''</span>]: PM password</p>
+</div>
+</li>
+<li id="I69.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I69.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">city</span> [<span class="ltx_text ltx_font_typewriter">varchar(128) default ''</span>]: City in which user is located</p>
+</div>
+</li>
+<li id="I69.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I69.i7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">prefs</span> [<span class="ltx_text ltx_font_typewriter">text</span>]: System-wide preferences set by user</p>
+</div>
+</li>
+<li id="I69.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I69.i8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">bio</span> [<span class="ltx_text ltx_font_typewriter">text</span>]: Biography of user</p>
+</div>
+</li>
+<li id="I69.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I69.i9.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">country</span> [<span class="ltx_text ltx_font_typewriter">varchar(128) default ''</span>]: Country where user is located</p>
+</div>
+</li>
+<li id="I69.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I69.i10.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Unique number used to identify user
+throughout PM.</p>
+</div>
+</li>
+<li id="I69.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I69.i11.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">access</span> [<span class="ltx_text ltx_font_typewriter">int(11) default '10'</span>]: Access level of user</p>
+</div>
+</li>
+<li id="I69.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I69.i12.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">active</span> [<span class="ltx_text ltx_font_typewriter">int(11) default '1'</span>]: Flag indicating whether user is
+active</p>
+</div>
+</li>
+<li id="I69.i13" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I69.i13.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">preamble</span> [<span class="ltx_text ltx_font_typewriter">text</span>]: Default TeX preamble for encyclopaedia
+entries added by the user.</p>
+</div>
+</li>
+<li id="I69.i14" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I69.i14.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">last</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: Last date on which the user did something
+while logged in.</p>
+</div>
+</li>
+<li id="I69.i15" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I69.i15.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">score</span> [<span class="ltx_text ltx_font_typewriter">int(11) default '0'</span>]: Score of the user</p>
+</div>
+</li>
+<li id="I69.i16" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I69.i16.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">username</span> [<span class="ltx_text ltx_font_typewriter">varchar(32) NOT NULL default ''</span>]: Screenname by which user is known.</p>
+</div>
+</li>
+<li id="I69.i17" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I69.i17.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">joined</span> [<span class="ltx_text ltx_font_typewriter">datetime default NULL</span>]: Date on which user joined PM.</p>
+</div>
+</li>
+<li id="I69.i18" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I69.i18.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">surname</span> [<span class="ltx_text ltx_font_typewriter">varchar(64) default ''</span>]: Last name of user</p>
+</div>
+</li>
+<li id="I69.i19" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I69.i19.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">homepage</span> [<span class="ltx_text ltx_font_typewriter">varchar(255) default ''</span>]: Home web page of user</p>
+</div>
+</li>
+<li id="I69.i20" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I69.i20.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">sig</span> [<span class="ltx_text ltx_font_typewriter">text</span>]: Signature file appended to forum posts
+by user</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S70" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">70 </span>watches</h2>
+
+<div id="S70.p1" class="ltx_para">
+<p class="ltx_p">This table keeps track of watches placed on objects (most of which are placed by default as per the user’s settings).</p>
+</div>
+<div id="S70.p2" class="ltx_para">
+<ul id="I70" class="ltx_itemize">
+<li id="I70.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I70.i1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">uid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL auto_increment</span>]: Unique ID of this watch.</p>
+</div>
+</li>
+<li id="I70.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I70.i2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">tbl</span> [<span class="ltx_text ltx_font_typewriter">varchar(16) NOT NULL default ''</span>]: Table in which watched
+object is to be found.</p>
+</div>
+</li>
+<li id="I70.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I70.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">objectid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: Numerical identifier specifying the
+watched object within its table.</p>
+</div>
+</li>
+<li id="I70.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I70.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">userid</span> [<span class="ltx_text ltx_font_typewriter">int(11) NOT NULL default '0'</span>]: The numerical identifier of the
+user watching the object.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S70.p3" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Noosphere Tables</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">NoosphereTables1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-11 19:36:34</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-11 19:36:34</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">(0)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (0)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Definition</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:15:36 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html><html>
+<head>
+<title>Proof of Stolz-Cesaro theorem</title>
+<!--Generated on Fri Feb  9 21:17:11 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Proof of Stolz-Cesaro theorem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">From the definition of convergence , for every <math id="p1.m1" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> there is <math id="p1.m2" class="ltx_Math" alttext="N(\epsilon)\in\mathbb{N}" display="inline"><mrow><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi>ℕ</mi></mrow></math> such that <math id="p1.m3" class="ltx_Math" alttext="(\forall)n\geq N(\epsilon)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mo>∀</mo><mo stretchy="false">)</mo></mrow><mo>⁡</mo><mi>n</mi></mrow><mo>≥</mo><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> , we have :</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="l-\epsilon&lt;\frac{a_{n+1}-a_{n}}{b_{n+1}-b_{n}}&lt;l+\epsilon" display="block"><mrow><mrow><mi>l</mi><mo>-</mo><mi>ϵ</mi></mrow><mo>&lt;</mo><mfrac><mrow><msub><mi>a</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>-</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><mrow><msub><mi>b</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>-</mo><msub><mi>b</mi><mi>n</mi></msub></mrow></mfrac><mo>&lt;</mo><mrow><mi>l</mi><mo>+</mo><mi>ϵ</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Because <math id="p1.m4" class="ltx_Math" alttext="b_{n}" display="inline"><msub><mi>b</mi><mi>n</mi></msub></math> is strictly increasing we can multiply the last equation with <math id="p1.m5" class="ltx_Math" alttext="b_{n+1}-b_{n}" display="inline"><mrow><msub><mi>b</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>-</mo><msub><mi>b</mi><mi>n</mi></msub></mrow></math> to get :</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="(l-\epsilon)(b_{n+1}-b_{n})&lt;a_{n+1}-a_{n}&lt;(l+\epsilon)(b_{n+1}-b_{n})" display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>l</mi><mo>-</mo><mi>ϵ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>b</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>-</mo><msub><mi>b</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mrow><msub><mi>a</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>-</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><mo>&lt;</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>l</mi><mo>+</mo><mi>ϵ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>b</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>-</mo><msub><mi>b</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let <math id="p1.m6" class="ltx_Math" alttext="k&gt;N(\epsilon)" display="inline"><mrow><mi>k</mi><mo>&gt;</mo><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> be a natural number . Summing the last relation we get :</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="(l-\epsilon)\sum_{i=N(\epsilon)}^{k}(b_{i+1}-b_{i})&lt;\sum_{i=N(\epsilon)}^{k}(a%
+_{n+1}-a_{n})&lt;(l+\epsilon)\sum_{i=N(\epsilon)}^{k}(b_{i+1}-b_{i})\Rightarrow" display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>l</mi><mo>-</mo><mi>ϵ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>k</mi></munderover><mrow><mo stretchy="false">(</mo><mrow><msub><mi>b</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>-</mo><msub><mi>b</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>&lt;</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>k</mi></munderover><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>-</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>l</mi><mo>+</mo><mi>ϵ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>k</mi></munderover><mrow><mo stretchy="false">(</mo><mrow><msub><mi>b</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>-</mo><msub><mi>b</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>⇒</mo><mi></mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="(l-\epsilon)(b_{k+1}-b_{N(\epsilon)})&lt;a_{k+1}-a_{N(\epsilon)}&lt;(l+\epsilon)(b_{%
+k+1}-b_{N(\epsilon)})" display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>l</mi><mo>-</mo><mi>ϵ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>b</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>-</mo><msub><mi>b</mi><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mrow><msub><mi>a</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>-</mo><msub><mi>a</mi><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow></mrow></msub></mrow><mo>&lt;</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>l</mi><mo>+</mo><mi>ϵ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>b</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>-</mo><msub><mi>b</mi><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Divide the last relation by <math id="p1.m7" class="ltx_Math" alttext="b_{k+1}&gt;0" display="inline"><mrow><msub><mi>b</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>&gt;</mo><mn>0</mn></mrow></math> to get :</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="(l-\epsilon)(1-\frac{b_{N(\epsilon)}}{b_{k+1}})&lt;\frac{a_{k+1}}{b_{k+1}}-\frac{%
+a_{N(\epsilon)}}{b_{k+1}}&lt;(l+\epsilon)(1-\frac{b_{N(\epsilon)}}{b_{k+1}})\Leftrightarrow" display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>l</mi><mo>-</mo><mi>ϵ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mfrac><msub><mi>b</mi><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow></mrow></msub><msub><mi>b</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mrow><mfrac><msub><mi>a</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><msub><mi>b</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mfrac><mo>-</mo><mfrac><msub><mi>a</mi><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow></mrow></msub><msub><mi>b</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mfrac></mrow><mo>&lt;</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>l</mi><mo>+</mo><mi>ϵ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mfrac><msub><mi>b</mi><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow></mrow></msub><msub><mi>b</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>⇔</mo><mi></mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="(l-\epsilon)(1-\frac{b_{N(\epsilon)}}{b_{k+1}})+\frac{a_{N(\epsilon)}}{b_{k+1}%
+}&lt;\frac{a_{k+1}}{b_{k+1}}&lt;(l+\epsilon)(1-\frac{b_{N(\epsilon)}}{b_{k+1}})+%
+\frac{a_{N(\epsilon)}}{b_{k+1}}" display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>l</mi><mo>-</mo><mi>ϵ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mfrac><msub><mi>b</mi><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow></mrow></msub><msub><mi>b</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mfrac><msub><mi>a</mi><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow></mrow></msub><msub><mi>b</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mfrac></mrow><mo>&lt;</mo><mfrac><msub><mi>a</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><msub><mi>b</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mfrac><mo>&lt;</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>l</mi><mo>+</mo><mi>ϵ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mfrac><msub><mi>b</mi><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow></mrow></msub><msub><mi>b</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mfrac><msub><mi>a</mi><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow></mrow></msub><msub><mi>b</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This means that there is some <math id="p1.m8" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> such that for <math id="p1.m9" class="ltx_Math" alttext="k\geq K" display="inline"><mrow><mi>k</mi><mo>≥</mo><mi>K</mi></mrow></math> we have :</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="(l-\epsilon)&lt;\frac{a_{k+1}}{b_{k+1}}&lt;(l+\epsilon)" display="block"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>l</mi><mo>-</mo><mi>ϵ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>&lt;</mo><mfrac><msub><mi>a</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><msub><mi>b</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></mfrac><mo>&lt;</mo><mrow><mo stretchy="false">(</mo><mrow><mi>l</mi><mo>+</mo><mi>ϵ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(since the other terms who were left out converge to 0)</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">This obviously means that :</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\lim_{n\rightarrow\infty}\frac{a_{n}}{b_{n}}=l" display="block"><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mfrac><msub><mi>a</mi><mi>n</mi></msub><msub><mi>b</mi><mi>n</mi></msub></mfrac></mrow><mo>=</mo><mi>l</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and we are done .
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Proof of Stolz-Cesaro theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfStolzCesaroTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:17:45</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:17:45</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">slash (33)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">slash (33)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">slash (33)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 40A05</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:17:11 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

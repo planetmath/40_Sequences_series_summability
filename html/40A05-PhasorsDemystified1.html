@@ -1,0 +1,238 @@
+<!DOCTYPE html><html>
+<head>
+<title>Phasors Demystified</title>
+<!--Generated on Fri Feb  9 21:16:02 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Phasors Demystified</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Phasors Demystified
+Swapnil Sunil Jain
+Aug 7, 2006</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Phasors Demystified</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Suppose the following integro-differential equation is given in the time-domain<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>This is not the most general integro-differential equation but it has all the basic elements required for this discussion and hence the reader can easily extend this discussion for the more generalized case.</span></span></span>:</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E1.m3" class="ltx_Math" alttext="\displaystyle C_{1}\frac{d}{dt}y(t)+C_{2}\int_{-\infty}^{t}y(t)dt+C_{3}y(t)=x(t)" display="inline"><mrow><mrow><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi>t</mi></msubsup></mstyle><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>t</mi></mrow></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi>C</mi><mn>3</mn></msub><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="p3.m1" class="ltx_Math" alttext="y(t)" display="inline"><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="p3.m2" class="ltx_Math" alttext="x(t)" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> are sinusoidal waveforms of the same frequency. Now, since <math id="p3.m3" class="ltx_Math" alttext="y(t)" display="inline"><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a sinusoidal function it can be represented as <math id="p3.m4" class="ltx_Math" alttext="A_{y}\cos(\omega t+\phi_{y})" display="inline"><mrow><msub><mi>A</mi><mi>y</mi></msub><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><msub><mi>ϕ</mi><mi>y</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and, similarly, x(t) can be represented as <math id="p3.m5" class="ltx_Math" alttext="A_{x}\cos(\omega t+\phi_{x})" display="inline"><mrow><msub><mi>A</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><msub><mi>ϕ</mi><mi>x</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Furthermore, using the properties of complex numbers we can write</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m3" class="ltx_Math" alttext="\displaystyle y(t)=A_{y}\cos(\omega t+\phi_{y})=\Re(A_{y}e^{j\phi_{y}}e^{j%
+\omega t})" display="inline"><mrow><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>A</mi><mi>y</mi></msub><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><msub><mi>ϕ</mi><mi>y</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>A</mi><mi>y</mi></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><msub><mi>ϕ</mi><mi>y</mi></msub></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m3" class="ltx_Math" alttext="\displaystyle x(t)=A_{x}\cos(\omega t+\phi_{x})=\Re(A_{x}e^{j\phi_{x}}e^{j%
+\omega t})" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>A</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><msub><mi>ϕ</mi><mi>x</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>A</mi><mi>x</mi></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><msub><mi>ϕ</mi><mi>x</mi></msub></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Now if we define the quantities <math id="p4.m1" class="ltx_Math" alttext="\tilde{Y}" display="inline"><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover></math> as <math id="p4.m2" class="ltx_Math" alttext="A_{y}e^{j\phi_{y}}" display="inline"><mrow><msub><mi>A</mi><mi>y</mi></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><msub><mi>ϕ</mi><mi>y</mi></msub></mrow></msup></mrow></math> and <math id="p4.m3" class="ltx_Math" alttext="\tilde{X}" display="inline"><mover accent="true"><mi>X</mi><mo stretchy="false">~</mo></mover></math> as <math id="p4.m4" class="ltx_Math" alttext="A_{x}e^{j\phi_{x}}" display="inline"><mrow><msub><mi>A</mi><mi>x</mi></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><msub><mi>ϕ</mi><mi>x</mi></msub></mrow></msup></mrow></math> (where <math id="p4.m5" class="ltx_Math" alttext="\tilde{Y}" display="inline"><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover></math> and <math id="p4.m6" class="ltx_Math" alttext="\tilde{X}" display="inline"><mover accent="true"><mi>X</mi><mo stretchy="false">~</mo></mover></math> are called <em class="ltx_emph ltx_markedasmath ltx_font_italic">phasors</em>), then we can write the above expression in a more compact form as
+</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle y(t)=\Re(\tilde{Y}e^{j\omega t})" display="inline"><mrow><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m3" class="ltx_Math" alttext="\displaystyle x(t)=\Re(\tilde{X}e^{j\omega t})" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>X</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Now, using the above expression for <math id="p5.m1" class="ltx_Math" alttext="y(t)" display="inline"><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="p5.m2" class="ltx_Math" alttext="x(t)" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> we can rewrite our original integro-differential equation as</p>
+<table id="S0.EGx4" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m3" class="ltx_Math" alttext="\displaystyle C_{1}\frac{d}{dt}\Re[\tilde{Y}e^{j\omega t}]+C_{2}\int_{-\infty}%
+^{t}\Re[\tilde{Y}e^{j\omega t}]dt+C_{3}\Re[\tilde{Y}e^{j\omega t}]=\Re[\tilde{%
+X}e^{j\omega t}]" display="inline"><mrow><mrow><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi>t</mi></msubsup></mstyle><mrow><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo stretchy="false">]</mo></mrow></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>t</mi></mrow></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi>C</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mrow><mover accent="true"><mi>X</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Moving the derivative and the integral inside the <math id="p5.m3" class="ltx_Math" alttext="\Re" display="inline"><mi mathvariant="normal">ℜ</mi></math> operator we get</p>
+<table id="S0.EGx5" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m3" class="ltx_Math" alttext="\displaystyle C_{1}\Re\Big{[}\frac{d}{dt}\tilde{Y}e^{j\omega t}\Big{]}+C_{2}%
+\Re\Bigg{[}\int_{-\infty}^{t}\tilde{Y}e^{j\omega t}dt\Bigg{]}+C_{3}\Re[\tilde{%
+Y}e^{j\omega t}]=\Re[\tilde{X}e^{j\omega t}]" display="inline"><mrow><mrow><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo maxsize="160%" minsize="160%">[</mo><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo maxsize="160%" minsize="160%">]</mo></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo maxsize="260%" minsize="260%">[</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi>t</mi></msubsup></mstyle><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup><mo>⁢</mo><mrow><mo>𝑑</mo><mi>t</mi></mrow></mrow></mrow><mo maxsize="260%" minsize="260%">]</mo></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi>C</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mrow><mover accent="true"><mi>X</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex9.m3" class="ltx_Math" alttext="\displaystyle\Rightarrow C_{1}\Re[\tilde{Y}j\omega e^{j\omega t}]+C_{2}\Re[%
+\tilde{Y}\frac{e^{j\omega t}}{j\omega}]+C_{3}\Re[\tilde{Y}e^{j\omega t}]=\Re[%
+\tilde{X}e^{j\omega t}]" display="inline"><mrow><mi></mi><mo>⇒</mo><mrow><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><mstyle displaystyle="true"><mfrac><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi></mrow></mfrac></mstyle></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi>C</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mrow><mover accent="true"><mi>X</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex10.m3" class="ltx_Math" alttext="\displaystyle\Rightarrow\Re[\tilde{Y}j\omega C_{1}e^{j\omega t}]+\Re[\frac{%
+\tilde{Y}C_{2}}{j\omega}e^{j\omega t}]+\Re[\tilde{Y}C_{3}e^{j\omega t}]-\Re[%
+\tilde{X}e^{j\omega t}]=0" display="inline"><mrow><mi></mi><mo>⇒</mo><mrow><mrow><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><msub><mi>C</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo stretchy="false">]</mo></mrow></mrow><mo>+</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msub><mi>C</mi><mn>2</mn></msub></mrow><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo stretchy="false">]</mo></mrow></mrow><mo>+</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msub><mi>C</mi><mn>3</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>-</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mrow><mover accent="true"><mi>X</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.EGx6" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex11" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex11.m3" class="ltx_Math" alttext="\displaystyle\Rightarrow\Re\Big{[}\tilde{Y}j\omega C_{1}e^{j\omega t}+\frac{%
+\tilde{Y}C_{2}}{j\omega}e^{j\omega t}+\tilde{Y}C_{3}e^{j\omega t}-\tilde{X}e^{%
+j\omega t}\Big{]}=0" display="inline"><mrow><mi></mi><mo>⇒</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo maxsize="160%" minsize="160%">[</mo><mrow><mrow><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><msub><mi>C</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msub><mi>C</mi><mn>2</mn></msub></mrow><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo>+</mo><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msub><mi>C</mi><mn>3</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow></mrow><mo>-</mo><mrow><mover accent="true"><mi>X</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow></mrow><mo maxsize="160%" minsize="160%">]</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex12" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex12.m3" class="ltx_Math" alttext="\displaystyle\Rightarrow\Re\Big{[}e^{j\omega t}\Big{(}\tilde{Y}j\omega C_{1}+%
+\frac{\tilde{Y}C_{2}}{j\omega}+\tilde{Y}C_{3}-\tilde{X}\Big{)}\Big{]}=\Re[0]+j%
+\Im[0]" display="inline"><mrow><mi></mi><mo>⇒</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo maxsize="160%" minsize="160%">[</mo><mrow><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><mrow><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><msub><mi>C</mi><mn>1</mn></msub></mrow><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msub><mi>C</mi><mn>2</mn></msub></mrow><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi></mrow></mfrac></mstyle><mo>+</mo><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msub><mi>C</mi><mn>3</mn></msub></mrow></mrow><mo>-</mo><mover accent="true"><mi>X</mi><mo stretchy="false">~</mo></mover></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow><mo maxsize="160%" minsize="160%">]</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow></mrow><mo>+</mo><mrow><mi>j</mi><mo>⁢</mo><mrow><mi mathvariant="normal">ℑ</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo stretchy="false">]</mo></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Equating the real parts above we get,</p>
+<table id="S0.EGx7" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex13" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex13.m3" class="ltx_Math" alttext="\displaystyle\Rightarrow e^{j\omega t}\Big{(}\tilde{Y}j\omega C_{1}+\frac{%
+\tilde{Y}C_{2}}{j\omega}+\tilde{Y}C_{3}-\tilde{X}\Big{)}=0" display="inline"><mrow><mi></mi><mo>⇒</mo><mrow><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><mrow><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><msub><mi>C</mi><mn>1</mn></msub></mrow><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msub><mi>C</mi><mn>2</mn></msub></mrow><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi></mrow></mfrac></mstyle><mo>+</mo><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msub><mi>C</mi><mn>3</mn></msub></mrow></mrow><mo>-</mo><mover accent="true"><mi>X</mi><mo stretchy="false">~</mo></mover></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.EGx8" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.E2.m3" class="ltx_Math" alttext="\displaystyle\Rightarrow\tilde{Y}j\omega C_{1}+\frac{\tilde{Y}C_{2}}{j\omega}+%
+\tilde{Y}C_{3}-\tilde{X}=0\quad\mbox{(for $t\neq-\infty$)}" display="inline"><mrow><mrow><mi></mi><mo>⇒</mo><mrow><mrow><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><msub><mi>C</mi><mn>1</mn></msub></mrow><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msub><mi>C</mi><mn>2</mn></msub></mrow><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi></mrow></mfrac></mstyle><mo>+</mo><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msub><mi>C</mi><mn>3</mn></msub></mrow></mrow><mo>-</mo><mover accent="true"><mi>X</mi><mo stretchy="false">~</mo></mover></mrow><mo>=</mo><mn>0</mn></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mtext>(for </mtext><mrow><mi>t</mi><mo>≠</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mtext>)</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Hence, we have now arrive at the phasor domain expression for (1). You can see from the analysis above that we aren’t adding or losing any information when we transform equation (1) into the <span class="ltx_text ltx_markedasmath">”phasor domain”</span> and arrive at equation (2). One can easily get to (2) by using simple algebraic properties of real and complex numbers. Furthermore, since (2) can be derived readily from (1), in practice we don’t even bother to do all the intermediate steps and just skip straight to (2) calling this ”skipping of steps” as ”transforming the equation into the phasor domain.”</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">We can now continue the analysis even further and solve for <math id="p7.m1" class="ltx_Math" alttext="y(t)" display="inline"><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> which is the whole motivation behind the use of phasors. Solving for <math id="p7.m2" class="ltx_Math" alttext="\tilde{Y}" display="inline"><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover></math> in (2) we get</p>
+<table id="S0.EGx9" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex15" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex15.m3" class="ltx_Math" alttext="\displaystyle\Rightarrow\tilde{Y}=\frac{\tilde{X}}{\Big{(}j\omega C_{1}+\frac{%
+C_{2}}{j\omega}+C_{3}\Big{)}}" display="inline"><mrow><mi></mi><mo>⇒</mo><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>=</mo><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>X</mi><mo stretchy="false">~</mo></mover><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><msub><mi>C</mi><mn>1</mn></msub></mrow><mo>+</mo><mfrac><msub><mi>C</mi><mn>2</mn></msub><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi></mrow></mfrac><mo>+</mo><msub><mi>C</mi><mn>3</mn></msub></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Now, since</p>
+<table id="S0.EGx10" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex16" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex16.m3" class="ltx_Math" alttext="\displaystyle y(t)=\Re[\tilde{Y}e^{j\omega t}]" display="inline"><mrow><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mrow><mover accent="true"><mi>Y</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">we have</p>
+<table id="S0.EGx11" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex17" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex17.m3" class="ltx_Math" alttext="\displaystyle y(t)=\Re\Bigg{[}\frac{\tilde{X}e^{j\omega t}}{\Big{(}j\omega C_{%
+1}+\frac{C_{2}}{j\omega}+C_{3}\Big{)}}\Bigg{]}" display="inline"><mrow><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo maxsize="260%" minsize="260%">[</mo><mstyle displaystyle="true"><mfrac><mrow><mover accent="true"><mi>X</mi><mo stretchy="false">~</mo></mover><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><msub><mi>C</mi><mn>1</mn></msub></mrow><mo>+</mo><mfrac><msub><mi>C</mi><mn>2</mn></msub><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi></mrow></mfrac><mo>+</mo><msub><mi>C</mi><mn>3</mn></msub></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow></mfrac></mstyle><mo maxsize="260%" minsize="260%">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex18" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex18.m3" class="ltx_Math" alttext="\displaystyle\Rightarrow y(t)=\Re\Bigg{[}\frac{A_{x}e^{j\phi_{x}}e^{j\omega t}%
+}{\Big{(}j\omega C_{1}+\frac{C_{2}}{j\omega}+C_{3}\Big{)}}\Bigg{]}" display="inline"><mrow><mi></mi><mo>⇒</mo><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo maxsize="260%" minsize="260%">[</mo><mstyle displaystyle="true"><mfrac><mrow><msub><mi>A</mi><mi>x</mi></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><msub><mi>ϕ</mi><mi>x</mi></msub></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><msub><mi>C</mi><mn>1</mn></msub></mrow><mo>+</mo><mfrac><msub><mi>C</mi><mn>2</mn></msub><mrow><mi>j</mi><mo>⁢</mo><mi>ω</mi></mrow></mfrac><mo>+</mo><msub><mi>C</mi><mn>3</mn></msub></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow></mfrac></mstyle><mo maxsize="260%" minsize="260%">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">The above equation makes sense because you can see that the output y(t) is given completely in terms of the variables <math id="p8.m1" class="ltx_Math" alttext="A_{x}" display="inline"><msub><mi>A</mi><mi>x</mi></msub></math> and <math id="p8.m2" class="ltx_Math" alttext="\phi_{x}" display="inline"><msub><mi>ϕ</mi><mi>x</mi></msub></math> (which depend only on the input sinusoid <math id="p8.m3" class="ltx_Math" alttext="x(t)" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>) and the constants <math id="p8.m4" class="ltx_Math" alttext="C_{1}" display="inline"><msub><mi>C</mi><mn>1</mn></msub></math>, <math id="p8.m5" class="ltx_Math" alttext="C_{2}" display="inline"><msub><mi>C</mi><mn>2</mn></msub></math> and <math id="p8.m6" class="ltx_Math" alttext="C_{3}" display="inline"><msub><mi>C</mi><mn>3</mn></msub></math>—as we expected! So by converting the integro-differential equation (1) into the phasor domain (2), all the complicated integration and differentiation operations become simple manipulation of complex variables—which is why phasors are so useful!</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Phasors Demystified</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PhasorsDemystified1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-11 19:26:47</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-11 19:26:47</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">swapnizzle (13346)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">(0)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">swapnizzle (0)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Definition</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:16:02 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html><html>
+<head>
+<title>power series</title>
+<!--Generated on Fri Feb  9 21:24:04 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">power series</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">power series</em> is a series of the form</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\sum_{k=0}^{\infty}a_{k}(x-x_{0})^{k}," display="block"><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mi>k</mi></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">with <math id="p1.m1" class="ltx_Math" alttext="a_{k},x_{0}\in\mathbb{R}" display="inline"><mrow><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>,</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math> or <math id="p1.m2" class="ltx_Math" alttext="\in\mathbb{C}" display="inline"><mrow><mi></mi><mo>∈</mo><mi>ℂ</mi></mrow></math>. The <math id="p1.m3" class="ltx_Math" alttext="a_{k}" display="inline"><msub><mi>a</mi><mi>k</mi></msub></math> are called the coefficients and <math id="p1.m4" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math> the center of the power series. <math id="p1.m5" class="ltx_Math" alttext="a_{0}" display="inline"><msub><mi>a</mi><mn>0</mn></msub></math> is called the <em class="ltx_emph ltx_font_italic">constant term</em>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Where it converges the power series defines a function, which can thus be represented by a power series. This is what power series are usually used for.
+Every power series is convergent at least at <math id="p2.m1" class="ltx_Math" alttext="x=x_{0}" display="inline"><mrow><mi>x</mi><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></math> where it converges to <math id="p2.m2" class="ltx_Math" alttext="a_{0}" display="inline"><msub><mi>a</mi><mn>0</mn></msub></math>. In addition it is absolutely and uniformly convergent in the region <math id="p2.m3" class="ltx_Math" alttext="\{x\mid|x-x_{0}|&lt;r\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>x</mi><mo>∣</mo><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>r</mi></mrow><mo stretchy="false">}</mo></mrow></math>, with</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="r=\liminf_{k\to\infty}\frac{1}{\sqrt[k]{|a_{k}|}}" display="block"><mrow><mi>r</mi><mo>=</mo><mrow><munder><mo movablelimits="false">lim inf</mo><mrow><mi>k</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mfrac><mn>1</mn><mroot><mrow><mo stretchy="false">|</mo><msub><mi>a</mi><mi>k</mi></msub><mo stretchy="false">|</mo></mrow><mi>k</mi></mroot></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It is divergent for every <math id="p2.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> with <math id="p2.m5" class="ltx_Math" alttext="|x-x_{0}|&gt;r" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">|</mo></mrow><mo>&gt;</mo><mi>r</mi></mrow></math>. For <math id="p2.m6" class="ltx_Math" alttext="|x-x_{0}|=r" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mi>r</mi></mrow></math> no general predictions can be made. If <math id="p2.m7" class="ltx_Math" alttext="r=\infty" display="inline"><mrow><mi>r</mi><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math>, the power series converges absolutely and uniformly for every real or complex <math id="p2.m8" class="ltx_Math" alttext="x." display="inline"><mrow><mi>x</mi><mo>.</mo></mrow></math> The real number <math id="p2.m9" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is called the <span class="ltx_text ltx_font_bold">radius of convergence</span> of the power series.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Examples of power series are:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Taylor series, for example:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="e^{x}=\sum_{k=0}^{\infty}\frac{x^{k}}{k!}." display="block"><mrow><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><msup><mi>x</mi><mi>k</mi></msup><mrow><mi>k</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">The geometric series:</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\frac{1}{1-x}=\sum_{k=0}^{\infty}x^{k}," display="block"><mrow><mrow><mfrac><mn>1</mn><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mfrac><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><msup><mi>x</mi><mi>k</mi></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">with <math id="I1.i2.p1.m1" class="ltx_Math" alttext="|x|&lt;1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Power series have some important :</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">If a power series converges for a <math id="I2.i1.p1.m1" class="ltx_Math" alttext="z_{0}\in\mathbb{C}" display="inline"><mrow><msub><mi>z</mi><mn>0</mn></msub><mo>∈</mo><mi>ℂ</mi></mrow></math> then it also converges for all <math id="I2.i1.p1.m2" class="ltx_Math" alttext="z\in\mathbb{C}" display="inline"><mrow><mi>z</mi><mo>∈</mo><mi>ℂ</mi></mrow></math> with <math id="I2.i1.p1.m3" class="ltx_Math" alttext="|z-x_{0}|&lt;|z_{0}-x_{0}|" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>z</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>z</mi><mn>0</mn></msub><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">|</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Also, if a power series diverges for some <math id="I2.i2.p1.m1" class="ltx_Math" alttext="z_{0}\in\mathbb{C}" display="inline"><mrow><msub><mi>z</mi><mn>0</mn></msub><mo>∈</mo><mi>ℂ</mi></mrow></math> then it diverges for all <math id="I2.i2.p1.m2" class="ltx_Math" alttext="z\in\mathbb{C}" display="inline"><mrow><mi>z</mi><mo>∈</mo><mi>ℂ</mi></mrow></math> with <math id="I2.i2.p1.m3" class="ltx_Math" alttext="|z-x_{0}|&gt;|z_{0}-x_{0}|" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>z</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">|</mo></mrow><mo>&gt;</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>z</mi><mn>0</mn></msub><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">|</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">For <math id="I2.i3.p1.m1" class="ltx_Math" alttext="|x-x_{0}|&lt;r" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>r</mi></mrow></math> Power series can be added by adding coefficients and multiplied in the obvious way:</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\sum_{k=0}^{\infty}a_{k}(x-x_{o})^{k}\cdot\sum_{l=0}^{\infty}b_{j}(x-x_{0})^{j%
+}=a_{0}b_{0}+(a_{0}b_{1}+a_{1}b_{0})(x-x_{0})+(a_{0}b_{2}+a_{1}b_{1}+a_{2}b_{0%
+})(x-x_{0})^{2}\ldots." display="block"><mrow><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mi>o</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mi>k</mi></msup></mrow><mo>⋅</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>l</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msub><mi>b</mi><mi>j</mi></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mi>j</mi></msup></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>b</mi><mn>0</mn></msub></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>b</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>b</mi><mn>0</mn></msub></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>b</mi><mn>2</mn></msub></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>b</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>b</mi><mn>0</mn></msub></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mi mathvariant="normal">…</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p">(Uniqueness) If two power series are equal and their  are the same, then their coefficients must be equal.</p>
+</div>
+</li>
+<li id="I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i5.p1" class="ltx_para">
+<p class="ltx_p">Power series can be termwise differentiated and integrated. These operations keep the radius of convergence.</p>
+</div>
+</li>
+</ul>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">power series</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">PowerSeries</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:32:55</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:32:55</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">azdbacks4234 (14155)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">azdbacks4234 (14155)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">23</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">azdbacks4234 (14155)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 40A30</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 30B10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">TaylorSeries</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">FormalPowerSeries</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">TermwiseDifferentiation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AbelsLimitTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">constant term</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:24:04 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

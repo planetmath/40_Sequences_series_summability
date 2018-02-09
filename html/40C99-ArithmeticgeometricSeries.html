@@ -1,0 +1,191 @@
+<!DOCTYPE html><html>
+<head>
+<title>arithmetic-geometric series</title>
+<!--Generated on Fri Feb  9 21:24:41 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">arithmetic-geometric series</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">It is well known that a finite geometric series is given by</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle G_{n}(q)=\sum_{k=1}^{n}q^{k}=\frac{q}{1-q}(1-q^{n}),\qquad q\neq
+1," display="inline"><mrow><mrow><mrow><mrow><msub><mi>G</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msup><mi>q</mi><mi>k</mi></msup></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mi>q</mi><mrow><mn>1</mn><mo>-</mo><mi>q</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>q</mi><mi>n</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mi>q</mi><mo>≠</mo><mn>1</mn></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where in general <math id="p1.m1" class="ltx_Math" alttext="q=re^{i\theta}" display="inline"><mrow><mi>q</mi><mo>=</mo><mrow><mi>r</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>θ</mi></mrow></msup></mrow></mrow></math> is complex.
+When we are dealing with such sums it is common to consider the expression</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle H_{n}(q):=\sum_{k=1}^{n}kq^{k},\qquad q\neq 1," display="inline"><mrow><mrow><mrow><mrow><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mi>k</mi><mo>⁢</mo><msup><mi>q</mi><mi>k</mi></msup></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mi>q</mi><mo>≠</mo><mn>1</mn></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">which we shall call an <span class="ltx_text ltx_font_italic">arithmetic-geometric series</span>. Let us derive a formula for <math id="p1.m2" class="ltx_Math" alttext="H_{n}(q)" display="inline"><mrow><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle H_{n}(q)=\sum_{k=1}^{n}kq^{k},\qquad qH_{n}(q)=\sum_{k=1}^{n}kq^%
+{k+1}." display="inline"><mrow><mrow><mrow><mrow><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mi>k</mi><mo>⁢</mo><msup><mi>q</mi><mi>k</mi></msup></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>q</mi><mo>⁢</mo><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mi>k</mi><mo>⁢</mo><msup><mi>q</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Subtracting,</p>
+<table id="S0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle(1-q)H_{n}(q)=\sum_{k=1}^{n}kq^{k}-\sum_{k=1}^{n}kq^{k+1}=\sum_{k%
+=1}^{n}kq^{k}-\sum_{k=2}^{n+1}(k-1)q^{k}=\sum_{k=1}^{n}kq^{k}-\sum_{k=2}^{n}(k%
+-1)q^{k}-nq^{n+1}." display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mi>k</mi><mo>⁢</mo><msup><mi>q</mi><mi>k</mi></msup></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mi>k</mi><mo>⁢</mo><msup><mi>q</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mi>k</mi><mo>⁢</mo><msup><mi>q</mi><mi>k</mi></msup></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>2</mn></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></munderover></mstyle><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>q</mi><mi>k</mi></msup></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mi>k</mi><mo>⁢</mo><msup><mi>q</mi><mi>k</mi></msup></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>2</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>q</mi><mi>k</mi></msup></mrow></mrow><mo>-</mo><mrow><mi>n</mi><mo>⁢</mo><msup><mi>q</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We will proceed to eliminate the right-hand side sums.</p>
+<table id="S0.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle(1-q)H_{n}(q)=q+\sum_{k=2}^{n}q^{k}-nq^{n+1}=\sum_{k=1}^{n}q^{k}-%
+nq^{n+1}." display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>q</mi><mo>+</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>2</mn></mrow><mi>n</mi></munderover></mstyle><msup><mi>q</mi><mi>k</mi></msup></mrow></mrow><mo>-</mo><mrow><mi>n</mi><mo>⁢</mo><msup><mi>q</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></mrow><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><msup><mi>q</mi><mi>k</mi></msup></mrow><mo>-</mo><mrow><mi>n</mi><mo>⁢</mo><msup><mi>q</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By using (1) and solving for <math id="p1.m3" class="ltx_Math" alttext="H_{n}(q)" display="inline"><mrow><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow></math>, we obtain</p>
+<table id="S0.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E3.m1" class="ltx_Math" alttext="\displaystyle H_{n}(q)=\sum_{k=1}^{n}kq^{k}=\frac{q}{(1-q)^{2}}(1-q^{n})-\frac%
+{nq^{n+1}}{1-q}\&gt;\cdot" display="inline"><mrow><msub><mi>H</mi><mi>n</mi></msub><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mi>k</mi><msup><mi>q</mi><mi>k</mi></msup><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>q</mi><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac></mstyle><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>-</mo><msup><mi>q</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow><mo>-</mo><mpadded width="+2.2pt"><mstyle displaystyle="true"><mfrac><mrow><mi>n</mi><mo>⁢</mo><msup><mi>q</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow><mrow><mn>1</mn><mo>-</mo><mi>q</mi></mrow></mfrac></mstyle></mpadded><mo>⋅</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The formula (3) holds in any commutative ring with 1, as long as <math id="p1.m4" class="ltx_Math" alttext="(1-q)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow></math>
+is invertible. If <math id="p1.m5" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> is a complex number and
+<math id="p1.m6" class="ltx_Math" alttext="|q|&lt;1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>q</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>, (3) is the partial sum of the convergent series</p>
+<table id="S0.EGx7" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle H(q)=\lim_{n\to\infty}H_{n}(q)=\lim_{n\to\infty}\sum_{k=1}^{n}kq%
+^{k}=\lim_{n\to\infty}\bigg{[}\frac{q}{(1-q)^{2}}(1-q^{n})-\frac{nq^{n+1}}{1-q%
+}\bigg{]}," display="inline"><mrow><mrow><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mi>k</mi><mo>⁢</mo><msup><mi>q</mi><mi>k</mi></msup></mrow></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><mo maxsize="210%" minsize="210%">[</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mi>q</mi><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>q</mi><mi>n</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mstyle displaystyle="true"><mfrac><mrow><mi>n</mi><mo>⁢</mo><msup><mi>q</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow><mrow><mn>1</mn><mo>-</mo><mi>q</mi></mrow></mfrac></mstyle></mrow><mo maxsize="210%" minsize="210%">]</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">that is,</p>
+<table id="S0.EGx8" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E4.m1" class="ltx_Math" alttext="\displaystyle H(q)=\sum_{k=1}^{\infty}kq^{k}=\frac{q}{(1-q)^{2}},\,\qquad|q|&lt;1." display="inline"><mrow><mrow><mrow><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mi>k</mi><mo>⁢</mo><msup><mi>q</mi><mi>k</mi></msup></mrow></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>q</mi><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac></mstyle></mrow><mo rspace="24.2pt">,</mo><mrow><mrow><mo stretchy="false">|</mo><mi>q</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">This last result giving the sum of a converging arithmetic-geometric series may be, naturally, obtained also from the sum formula of the converging geometric series, i.e.</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="1\!+\!q\!+q^{2}\!+\!q^{3}\!+...\,=\frac{1}{1-q}," display="block"><mrow><mrow><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">+</mo><mpadded width="-1.7pt"><mi>q</mi></mpadded><mo rspace="0.8pt">+</mo><mpadded width="-1.7pt"><msup><mi>q</mi><mn>2</mn></msup></mpadded><mo rspace="0.8pt">+</mo><mpadded width="-1.7pt"><msup><mi>q</mi><mn>3</mn></msup></mpadded><mo rspace="0.8pt">+</mo><mpadded width="+1.7pt"><mi mathvariant="normal">…</mi></mpadded></mrow><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>-</mo><mi>q</mi></mrow></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">when one differentiates both sides with respect to <math id="p2.m1" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> and then multiplies them by <math id="p2.m2" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math>:</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="1\!+\!2q\!+\!3q^{2}\!+...\,=\frac{1}{(1\!-\!q)^{2}}," display="block"><mrow><mrow><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">+</mo><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>q</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mrow><mn>3</mn><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>q</mi><mn>2</mn></msup></mpadded></mrow><mo rspace="0.8pt">+</mo><mpadded width="+1.7pt"><mi mathvariant="normal">…</mi></mpadded></mrow><mo>=</mo><mfrac><mn>1</mn><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="q\!+\!2q^{2}\!+\!3q^{3}\!+...\,=\frac{q}{(1\!-\!q)^{2}}" display="block"><mrow><mrow><mpadded width="-1.7pt"><mi>q</mi></mpadded><mo rspace="0.8pt">+</mo><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>q</mi><mn>2</mn></msup></mpadded></mrow><mo rspace="0.8pt">+</mo><mrow><mn>3</mn><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>q</mi><mn>3</mn></msup></mpadded></mrow><mo rspace="0.8pt">+</mo><mpadded width="+1.7pt"><mi mathvariant="normal">…</mi></mpadded></mrow><mo>=</mo><mfrac><mi>q</mi><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(A power series can be differentiated termwise on the open interval of convergence.)</p>
+</div>
+<div id="p3" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">arithmetic-geometric series</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ArithmeticgeometricSeries</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:02:15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:02:15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">perucho (2192)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">perucho (2192)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">perucho (2192)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Derivation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 40C99</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:24:41 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

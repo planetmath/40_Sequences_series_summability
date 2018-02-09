@@ -1,0 +1,966 @@
+<!DOCTYPE html><html>
+<head>
+<title>Vector Properties</title>
+<!--Generated on Fri Feb  9 21:22:27 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Vector Properties</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Vector Properties
+Swapnil Sunil Jain
+July 18, 2006</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Vector Properties</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_markedasmath ltx_font_bold">Some Unconventional Syntax:</span></p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle A^{x}\hat{e}_{x}+A^{y}\hat{e}_{y}+A^{z}\hat{e}_{z}" display="inline"><mrow><mrow><msup><mi>A</mi><mi>x</mi></msup><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mi>x</mi></msub></mrow><mo>+</mo><mrow><msup><mi>A</mi><mi>y</mi></msup><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mi>y</mi></msub></mrow><mo>+</mo><mrow><msup><mi>A</mi><mi>z</mi></msup><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mi>z</mi></msub></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m3" class="ltx_Math" alttext="\displaystyle A_{x}\hat{e}_{x}+A_{y}\hat{e}_{y}+A_{\phi}\hat{e}_{z}" display="inline"><mrow><mrow><msub><mi>A</mi><mi>x</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mi>x</mi></msub></mrow><mo>+</mo><mrow><msub><mi>A</mi><mi>y</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mi>y</mi></msub></mrow><mo>+</mo><mrow><msub><mi>A</mi><mi>ϕ</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mi>z</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle dx\wedge dy" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow><mo>∧</mo><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m3" class="ltx_Math" alttext="\displaystyle dxdy" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle dx\wedge dy\wedge dz" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow><mo>∧</mo><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow><mo>∧</mo><mrow><mi>d</mi><mo>⁢</mo><mi>z</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m3" class="ltx_Math" alttext="\displaystyle dxdydz" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>z</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle\int_{t_{1}}^{t_{2}}dtf(t)g(t)" display="inline"><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><msub><mi>t</mi><mn>1</mn></msub><msub><mi>t</mi><mn>2</mn></msub></msubsup></mstyle><mrow><mrow><mo>𝑑</mo><mi>t</mi></mrow><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle\int_{t_{1}}^{t_{2}}f(t)g(t)dt" display="inline"><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><msub><mi>t</mi><mn>1</mn></msub><msub><mi>t</mi><mn>2</mn></msub></msubsup></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>t</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\displaystyle{\partial}_{x}" display="inline"><msub><mo>∂</mo><mi>x</mi></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m3" class="ltx_Math" alttext="\displaystyle\frac{\partial}{\partial x}" display="inline"><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac></mstyle></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle d\Sigma" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi mathvariant="normal">Σ</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">material surface element</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\displaystyle f(\vec{r})" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>r</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m3" class="ltx_Math" alttext="\displaystyle f(x,y,z)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\displaystyle\mathbb{E}^{3}" display="inline"><msup><mi>𝔼</mi><mn>3</mn></msup></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m3" class="ltx_Math" alttext="\displaystyle\mathbb{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_markedasmath ltx_font_bold">Definitions:</span></p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\displaystyle\vec{A}\circ\vec{B}" display="inline"><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex10.m2" class="ltx_Math" alttext="\displaystyle\equiv" display="inline"><mo>≡</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex10.m3" class="ltx_Math" alttext="\displaystyle\sum_{i=1}^{3}A_{i}B_{i}" display="inline"><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mn>3</mn></munderover></mstyle><mrow><msub><mi>A</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>B</mi><mi>i</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex12" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex12.m1" class="ltx_Math" alttext="\displaystyle\vec{A}\times\vec{B}" display="inline"><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex12.m2" class="ltx_Math" alttext="\displaystyle\equiv" display="inline"><mo>≡</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex12.m3" class="ltx_Math" alttext="\displaystyle\left|\begin{array}[]{ccc}\mathbb{\hat{e}_{x}}&amp;\mathbb{\hat{e}_{y%
+}}&amp;\mathbb{\hat{e}_{z}}\\
+A_{x}&amp;A_{y}&amp;A_{z}\\
+B_{x}&amp;B_{y}&amp;B_{z}\end{array}\right|" display="inline"><mrow><mo>|</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><msub><mover accent="true"><mi>𝕖</mi><mo stretchy="false">^</mo></mover><mi>𝕩</mi></msub></mtd><mtd columnalign="center"><msub><mover accent="true"><mi>𝕖</mi><mo stretchy="false">^</mo></mover><mi>𝕪</mi></msub></mtd><mtd columnalign="center"><msub><mover accent="true"><mi>𝕖</mi><mo stretchy="false">^</mo></mover><mi>𝕫</mi></msub></mtd></mtr><mtr><mtd columnalign="center"><msub><mi>A</mi><mi>x</mi></msub></mtd><mtd columnalign="center"><msub><mi>A</mi><mi>y</mi></msub></mtd><mtd columnalign="center"><msub><mi>A</mi><mi>z</mi></msub></mtd></mtr><mtr><mtd columnalign="center"><msub><mi>B</mi><mi>x</mi></msub></mtd><mtd columnalign="center"><msub><mi>B</mi><mi>y</mi></msub></mtd><mtd columnalign="center"><msub><mi>B</mi><mi>z</mi></msub></mtd></mtr></mtable><mo>|</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p6" class="ltx_para">
+<table id="S0.EGx4" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex13" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex13.m1" class="ltx_Math" alttext="\displaystyle[\vec{A},\vec{B},\vec{C}]" display="inline"><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>C</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">]</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex13.m2" class="ltx_Math" alttext="\displaystyle\equiv" display="inline"><mo>≡</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex13.m3" class="ltx_Math" alttext="\displaystyle\vec{A}\circ(\vec{B}\times\vec{C})=(\vec{A}\times\vec{B})\circ%
+\vec{C}=\Bigg{|}\begin{array}[]{ccc}A_{x}&amp;A_{y}&amp;A_{z}\\
+B_{x}&amp;B_{y}&amp;B_{z}\\
+C_{x}&amp;C_{y}&amp;C_{z}\end{array}\Bigg{|}" display="inline"><mrow><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mover accent="true"><mi>C</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo><mover accent="true"><mi>C</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mo maxsize="260%" minsize="260%">|</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><msub><mi>A</mi><mi>x</mi></msub></mtd><mtd columnalign="center"><msub><mi>A</mi><mi>y</mi></msub></mtd><mtd columnalign="center"><msub><mi>A</mi><mi>z</mi></msub></mtd></mtr><mtr><mtd columnalign="center"><msub><mi>B</mi><mi>x</mi></msub></mtd><mtd columnalign="center"><msub><mi>B</mi><mi>y</mi></msub></mtd><mtd columnalign="center"><msub><mi>B</mi><mi>z</mi></msub></mtd></mtr><mtr><mtd columnalign="center"><msub><mi>C</mi><mi>x</mi></msub></mtd><mtd columnalign="center"><msub><mi>C</mi><mi>y</mi></msub></mtd><mtd columnalign="center"><msub><mi>C</mi><mi>z</mi></msub></mtd></mtr></mtable><mo maxsize="260%" minsize="260%">|</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p7" class="ltx_para">
+<table id="S0.EGx5" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex14" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex14.m1" class="ltx_Math" alttext="\displaystyle\Delta" display="inline"><mi mathvariant="normal">Δ</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex14.m2" class="ltx_Math" alttext="\displaystyle\equiv" display="inline"><mo>≡</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex14.m3" class="ltx_Math" alttext="\displaystyle{\nabla}^{2}\quad\mbox{(Laplace operator or Laplacian)}" display="inline"><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo mathvariant="italic" separator="true"> </mo><mtext>(Laplace operator or Laplacian)</mtext></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex15" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex15.m1" class="ltx_Math" alttext="\displaystyle{\Box}^{2}" display="inline"><msup><mi mathvariant="normal">□</mi><mn>2</mn></msup></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex15.m2" class="ltx_Math" alttext="\displaystyle\equiv" display="inline"><mo>≡</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex15.m3" class="ltx_Math" alttext="\displaystyle{\nabla}^{2}-\frac{1}{c^{2}}{{\partial}_{t}}^{2}\quad\mbox{(D'%
+Alembert or wave operator or D'Alembertian)}" display="inline"><mrow><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac></mstyle><mo>⁢</mo><mmultiscripts><mo>∂</mo><mi>t</mi><none></none><none></none><mn>2</mn></mmultiscripts></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mtext>(D’Alembert or wave operator or D’Alembertian)</mtext></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex16" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex16.m1" class="ltx_Math" alttext="\displaystyle{\nabla}^{2}\vec{A}\equiv\nabla(\nabla\circ\vec{A})-\nabla\times(%
+\nabla\times\vec{A})" display="inline"><mrow><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>⁡</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo>≡</mo><mrow><mrow><mo>∇</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>∘</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mo>∇</mo><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex16.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex16.m3" class="ltx_Math" alttext="\displaystyle({\nabla}^{2}A_{x},{\nabla}^{2}A_{y},{\nabla}^{2}A_{z})=\frac{%
+\partial\vec{A}}{\partial x}+\frac{\partial\vec{A}}{\partial y}+\frac{\partial%
+\vec{A}}{\partial z}\quad\mbox{(Vector Laplacian)}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>⁡</mo><msub><mi>A</mi><mi>x</mi></msub></mrow><mo>,</mo><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>⁡</mo><msub><mi>A</mi><mi>y</mi></msub></mrow><mo>,</mo><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>⁡</mo><msub><mi>A</mi><mi>z</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow></mfrac></mstyle></mrow><mo mathvariant="italic" separator="true"> </mo><mtext>(Vector Laplacian)</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex17" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex17.m1" class="ltx_Math" alttext="\displaystyle A\circ\nabla" display="inline"><mrow><mi>A</mi><mo>∘</mo><mo>∇</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex17.m2" class="ltx_Math" alttext="\displaystyle\equiv" display="inline"><mo>≡</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex17.m3" class="ltx_Math" alttext="\displaystyle(a_{1}\frac{\partial}{\partial x_{1}}+a_{2}\frac{\partial}{%
+\partial x_{2}}+\ldots+a_{n}\frac{\partial}{\partial x_{n}})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mfrac></mstyle></mrow><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>x</mi><mi>n</mi></msub></mrow></mfrac></mstyle></mrow></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p8" class="ltx_para">
+<table id="S0.EGx6" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex19" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex19.m1" class="ltx_Math" alttext="\displaystyle\nabla\circ\vec{F}" display="inline"><mrow><mo>∇</mo><mo>∘</mo><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex19.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex19.m3" class="ltx_Math" alttext="\displaystyle 0\Rightarrow\vec{F}\mbox{ is incompressible or solenoidal or %
+divergence-free}" display="inline"><mrow><mn>0</mn><mo>⇒</mo><mrow><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mtext> is incompressible or solenoidal or divergence-free</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex20" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex20.m1" class="ltx_Math" alttext="\displaystyle\nabla\times\vec{F}" display="inline"><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex20.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex20.m3" class="ltx_Math" alttext="\displaystyle 0\Rightarrow\vec{F}\mbox{ is irrotational or conservative or %
+curl-free}" display="inline"><mrow><mn>0</mn><mo>⇒</mo><mrow><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mtext> is irrotational or conservative or curl-free</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex21" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex21.m1" class="ltx_Math" alttext="\displaystyle laplacian(\vec{F})" display="inline"><mrow><mi>l</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex21.m2" class="ltx_Math" alttext="\displaystyle\equiv" display="inline"><mo>≡</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex21.m3" class="ltx_Math" alttext="\displaystyle div(grad(\vec{F}))" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex22" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex22.m1" class="ltx_Math" alttext="\displaystyle D_{\vec{u}}f" display="inline"><mrow><msub><mi>D</mi><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></msub><mo>⁢</mo><mi>f</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex22.m2" class="ltx_Math" alttext="\displaystyle\equiv" display="inline"><mo>≡</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex22.m3" class="ltx_Math" alttext="\displaystyle\nabla f\circ\hat{u}\qquad\mbox{(Directional Derivative)}" display="inline"><mrow><mrow><mo>∇</mo><mo>⁡</mo><mrow><mi>f</mi><mo>∘</mo><mover accent="true"><mi>u</mi><mo stretchy="false">^</mo></mover></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mtext>(Directional Derivative)</mtext></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex23" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex23.m1" class="ltx_Math" alttext="\displaystyle rot_{\vec{u}}\vec{F}" display="inline"><mrow><mi>r</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><msub><mi>t</mi><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></msub><mo>⁢</mo><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex23.m2" class="ltx_Math" alttext="\displaystyle\equiv" display="inline"><mo>≡</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex23.m3" class="ltx_Math" alttext="\displaystyle curl(\vec{F})\cdot\hat{u}\qquad\mbox{(Rotational Derivative)}" display="inline"><mrow><mrow><mrow><mi>c</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mover accent="true"><mi>u</mi><mo stretchy="false">^</mo></mover></mrow><mo mathvariant="italic" separator="true">  </mo><mtext>(Rotational Derivative)</mtext></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex24" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex24.m1" class="ltx_Math" alttext="\displaystyle helicity(\vec{F})" display="inline"><mrow><mi>h</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex24.m2" class="ltx_Math" alttext="\displaystyle\equiv" display="inline"><mo>≡</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex24.m3" class="ltx_Math" alttext="\displaystyle curl(\vec{F})\circ\vec{F}" display="inline"><mrow><mrow><mi>c</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>∘</mo><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p9" class="ltx_para">
+<table id="S0.EGx7" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex26" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex26.m1" class="ltx_Math" alttext="\displaystyle\nabla\circ\vec{F}" display="inline"><mrow><mo>∇</mo><mo>∘</mo><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex26.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex26.m3" class="ltx_Math" alttext="\displaystyle\lim_{\delta V\to 0}\frac{1}{\delta V}\oiint_{\delta S}\vec{F}%
+\circ\hat{n}\;dS" display="inline"><mrow><munder><mo movablelimits="false">lim</mo><mrow><mrow><mi>δ</mi><mo>⁢</mo><mi>V</mi></mrow><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>δ</mi><mo>⁢</mo><mi>V</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∯</mo><mrow><mi>δ</mi><mo>⁢</mo><mi>S</mi></mrow></msub></mstyle><mrow><mrow><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mpadded width="+2.8pt"><mover accent="true"><mi>n</mi><mo stretchy="false">^</mo></mover></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>S</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex27" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex27.m1" class="ltx_Math" alttext="\displaystyle(\nabla\times\vec{F})\circ\vec{n}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex27.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex27.m3" class="ltx_Math" alttext="\displaystyle\lim_{\delta S\to 0}\frac{1}{\delta S}\oint_{\delta C}\vec{F}%
+\circ\hat{t}\;ds" display="inline"><mrow><munder><mo movablelimits="false">lim</mo><mrow><mrow><mi>δ</mi><mo>⁢</mo><mi>S</mi></mrow><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>δ</mi><mo>⁢</mo><mi>S</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mrow><mi>δ</mi><mo>⁢</mo><mi>C</mi></mrow></msub></mstyle><mrow><mrow><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mpadded width="+2.8pt"><mover accent="true"><mi>t</mi><mo stretchy="false">^</mo></mover></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>s</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex28" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex28.m1" class="ltx_Math" alttext="\displaystyle\nabla\times\vec{F}" display="inline"><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex28.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex28.m3" class="ltx_Math" alttext="\displaystyle\lim_{\delta V\to 0}\frac{1}{\delta V}\oiint_{\delta S}\hat{n}%
+\times\vec{F}\;dS" display="inline"><mrow><munder><mo movablelimits="false">lim</mo><mrow><mrow><mi>δ</mi><mo>⁢</mo><mi>V</mi></mrow><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>δ</mi><mo>⁢</mo><mi>V</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∯</mo><mrow><mi>δ</mi><mo>⁢</mo><mi>S</mi></mrow></msub></mstyle><mrow><mrow><mover accent="true"><mi>n</mi><mo stretchy="false">^</mo></mover><mo>×</mo><mpadded width="+2.8pt"><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>S</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex29" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex29.m1" class="ltx_Math" alttext="\displaystyle\nabla f" display="inline"><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex29.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex29.m3" class="ltx_Math" alttext="\displaystyle\lim_{\delta V\to 0}\frac{1}{\delta V}\oiint_{\delta S}\hat{n}f\;dS" display="inline"><mrow><munder><mo movablelimits="false">lim</mo><mrow><mrow><mi>δ</mi><mo>⁢</mo><mi>V</mi></mrow><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>δ</mi><mo>⁢</mo><mi>V</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∯</mo><mrow><mi>δ</mi><mo>⁢</mo><mi>S</mi></mrow></msub></mstyle><mrow><mover accent="true"><mi>n</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mpadded width="+2.8pt"><mi>f</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>S</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex30" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex30.m1" class="ltx_Math" alttext="\displaystyle\nabla" display="inline"><mo>∇</mo></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex30.m2" class="ltx_Math" alttext="\displaystyle\equiv" display="inline"><mo>≡</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex30.m3" class="ltx_Math" alttext="\displaystyle\sum_{i}\frac{\hat{e}_{i}}{h_{i}}\frac{\partial}{\partial v_{i}}" display="inline"><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>i</mi></munder></mstyle><mrow><mstyle displaystyle="true"><mfrac><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub><msub><mi>h</mi><mi>i</mi></msub></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>v</mi><mi>i</mi></msub></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex31" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex31.m1" class="ltx_Math" alttext="\displaystyle\nabla\circ" display="inline"><mrow><mo>∇</mo><mo>∘</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex31.m2" class="ltx_Math" alttext="\displaystyle\equiv" display="inline"><mo>≡</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex31.m3" class="ltx_Math" alttext="\displaystyle\sum_{i}\frac{\hat{e}_{i}}{h_{i}}\circ\frac{\partial}{\partial v_%
+{i}}" display="inline"><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>i</mi></munder></mstyle><mrow><mstyle displaystyle="true"><mfrac><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub><msub><mi>h</mi><mi>i</mi></msub></mfrac></mstyle><mo>∘</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>v</mi><mi>i</mi></msub></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex32" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex32.m1" class="ltx_Math" alttext="\displaystyle\nabla\times" display="inline"><mrow><mo>∇</mo><mo>×</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex32.m2" class="ltx_Math" alttext="\displaystyle\equiv" display="inline"><mo>≡</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex32.m3" class="ltx_Math" alttext="\displaystyle\sum_{i}\frac{\hat{e}_{i}}{h_{i}}\times\frac{\partial}{\partial v%
+_{i}}" display="inline"><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>i</mi></munder></mstyle><mrow><mstyle displaystyle="true"><mfrac><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub><msub><mi>h</mi><mi>i</mi></msub></mfrac></mstyle><mo>×</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>v</mi><mi>i</mi></msub></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_markedasmath ltx_font_bold">Gradient, Divergence and Curl in Curvilinear Coordinates</span></p>
+<table id="S0.EGx8" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex34" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex34.m3" class="ltx_Math" alttext="\displaystyle\nabla f=\frac{1}{h_{1}}\frac{\partial f}{\partial u_{1}}\hat{e}_%
+{1}+\frac{1}{h_{2}}\frac{\partial f}{\partial u_{2}}\hat{e}_{2}+\frac{1}{h_{3}%
+}\frac{\partial f}{\partial u_{3}}\hat{e}_{3}" display="inline"><mrow><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msub><mi>h</mi><mn>1</mn></msub></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>u</mi><mn>1</mn></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mn>1</mn></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msub><mi>h</mi><mn>2</mn></msub></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>u</mi><mn>2</mn></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mn>2</mn></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msub><mi>h</mi><mn>3</mn></msub></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>u</mi><mn>3</mn></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mn>3</mn></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex35" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex35.m3" class="ltx_Math" alttext="\displaystyle\nabla\circ\vec{F}=\frac{1}{h_{1}h_{2}h_{3}}\bigg{[}\frac{%
+\partial}{\partial u_{1}}(h_{2}h_{3}F_{1})+\frac{\partial}{\partial u_{2}}(h_{%
+1}h_{3}F_{2})+\frac{\partial}{\partial u_{3}}(h_{1}h_{2}F_{3})\bigg{]}" display="inline"><mrow><mrow><mo>∇</mo><mo>∘</mo><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msub><mi>h</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>h</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>h</mi><mn>3</mn></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="210%" minsize="210%">[</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>u</mi><mn>1</mn></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>h</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>h</mi><mn>3</mn></msub><mo>⁢</mo><msub><mi>F</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>u</mi><mn>2</mn></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>h</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>h</mi><mn>3</mn></msub><mo>⁢</mo><msub><mi>F</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>u</mi><mn>3</mn></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>h</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>h</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>F</mi><mn>3</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo maxsize="210%" minsize="210%">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex36" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex36.m3" class="ltx_Math" alttext="\displaystyle{\nabla}^{2}f=\frac{1}{h_{1}h_{2}h_{3}}\bigg{[}\frac{\partial}{%
+\partial u_{1}}\bigg{(}\frac{h_{2}h_{3}}{h_{1}}\frac{\partial f}{\partial u_{1%
+}}\bigg{)}+\frac{\partial}{\partial u_{2}}\bigg{(}\frac{h_{1}h_{3}}{h_{2}}%
+\frac{\partial f}{\partial u_{2}}\bigg{)}+\frac{\partial}{\partial u_{3}}\bigg%
+{(}\frac{h_{1}h_{2}}{h_{3}}\frac{\partial f}{\partial u_{3}}\bigg{)}\bigg{]}" display="inline"><mrow><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>⁡</mo><mi>f</mi></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msub><mi>h</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>h</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>h</mi><mn>3</mn></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="210%" minsize="210%">[</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>u</mi><mn>1</mn></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="210%" minsize="210%">(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><msub><mi>h</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>h</mi><mn>3</mn></msub></mrow><msub><mi>h</mi><mn>1</mn></msub></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>u</mi><mn>1</mn></msub></mrow></mfrac></mstyle></mrow><mo maxsize="210%" minsize="210%">)</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>u</mi><mn>2</mn></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="210%" minsize="210%">(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><msub><mi>h</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>h</mi><mn>3</mn></msub></mrow><msub><mi>h</mi><mn>2</mn></msub></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>u</mi><mn>2</mn></msub></mrow></mfrac></mstyle></mrow><mo maxsize="210%" minsize="210%">)</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>u</mi><mn>3</mn></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="210%" minsize="210%">(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><msub><mi>h</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>h</mi><mn>2</mn></msub></mrow><msub><mi>h</mi><mn>3</mn></msub></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>u</mi><mn>3</mn></msub></mrow></mfrac></mstyle></mrow><mo maxsize="210%" minsize="210%">)</mo></mrow></mrow></mrow><mo maxsize="210%" minsize="210%">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex37" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex37.m3" class="ltx_Math" alttext="\displaystyle\nabla\times\vec{F}=\frac{1}{h_{1}h_{2}h_{3}}\left|\begin{array}[%
+]{ccc}h_{1}\hat{e}_{1}&amp;h_{2}\hat{e}_{2}&amp;h_{3}\hat{e}_{3}\\
+\frac{\partial}{\partial u_{1}}&amp;\frac{\partial}{\partial u_{2}}&amp;\frac{\partial%
+}{\partial u_{3}}\\
+h_{1}F_{1}&amp;h_{2}F_{2}&amp;h_{3}F_{3}\end{array}\right|" display="inline"><mrow><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msub><mi>h</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>h</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>h</mi><mn>3</mn></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>|</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><msub><mi>h</mi><mn>1</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mn>1</mn></msub></mrow></mtd><mtd columnalign="center"><mrow><msub><mi>h</mi><mn>2</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mn>2</mn></msub></mrow></mtd><mtd columnalign="center"><mrow><msub><mi>h</mi><mn>3</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mn>3</mn></msub></mrow></mtd></mtr><mtr><mtd columnalign="center"><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>u</mi><mn>1</mn></msub></mrow></mfrac></mstyle></mtd><mtd columnalign="center"><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>u</mi><mn>2</mn></msub></mrow></mfrac></mstyle></mtd><mtd columnalign="center"><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>u</mi><mn>3</mn></msub></mrow></mfrac></mstyle></mtd></mtr><mtr><mtd columnalign="center"><mrow><msub><mi>h</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>F</mi><mn>1</mn></msub></mrow></mtd><mtd columnalign="center"><mrow><msub><mi>h</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>F</mi><mn>2</mn></msub></mrow></mtd><mtd columnalign="center"><mrow><msub><mi>h</mi><mn>3</mn></msub><mo>⁢</mo><msub><mi>F</mi><mn>3</mn></msub></mrow></mtd></mtr></mtable><mo>|</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex38" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex38.m3" class="ltx_Math" alttext="\displaystyle\text{ For Cartesian coordinates: }h_{x}=h_{y}=h_{z}=1" display="inline"><mrow><mrow><mtext>For Cartesian coordinates: </mtext><mo>⁢</mo><msub><mi>h</mi><mi>x</mi></msub></mrow><mo>=</mo><msub><mi>h</mi><mi>y</mi></msub><mo>=</mo><msub><mi>h</mi><mi>z</mi></msub><mo>=</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex39" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex39.m3" class="ltx_Math" alttext="\displaystyle\text{ For Cylindrical coordinates: }h_{r}=1,h_{\phi}=r,h_{z}=1" display="inline"><mrow><mrow><mrow><mtext>For Cylindrical coordinates: </mtext><mo>⁢</mo><msub><mi>h</mi><mi>r</mi></msub></mrow><mo>=</mo><mn>1</mn></mrow><mo>,</mo><mrow><mrow><msub><mi>h</mi><mi>ϕ</mi></msub><mo>=</mo><mi>r</mi></mrow><mo>,</mo><mrow><msub><mi>h</mi><mi>z</mi></msub><mo>=</mo><mn>1</mn></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex40" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex40.m3" class="ltx_Math" alttext="\displaystyle\text{ For Spherical coordinates: }h_{r}=1,h_{\theta}=r,h_{\phi}=%
+r\sin(\theta)" display="inline"><mrow><mrow><mrow><mtext>For Spherical coordinates: </mtext><mo>⁢</mo><msub><mi>h</mi><mi>r</mi></msub></mrow><mo>=</mo><mn>1</mn></mrow><mo>,</mo><mrow><mrow><msub><mi>h</mi><mi>θ</mi></msub><mo>=</mo><mi>r</mi></mrow><mo>,</mo><mrow><msub><mi>h</mi><mi>ϕ</mi></msub><mo>=</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p11" class="ltx_para">
+<table id="S0.EGx9" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex42" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex42.m1" class="ltx_Math" alttext="\displaystyle\nabla f" display="inline"><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex42.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex42.m3" class="ltx_Math" alttext="\displaystyle\sum_{i}\frac{1}{h_{i}}\frac{\partial f}{\partial q_{i}}\hat{e}_{i}" display="inline"><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>i</mi></munder></mstyle><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msub><mi>h</mi><mi>i</mi></msub></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>q</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex43" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex43.m1" class="ltx_Math" alttext="\displaystyle\nabla\times\vec{F}" display="inline"><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex43.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex43.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{\Omega}\sum_{i}\hat{e}_{i}\sum_{jk}\epsilon_{ijk}h_{i}%
+\frac{\partial(h_{k}F_{k})}{\partial q_{j}}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi mathvariant="normal">Ω</mi></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>i</mi></munder></mstyle><mrow><msub><mover accent="true"><mi>e</mi><mo stretchy="false">^</mo></mover><mi>i</mi></msub><mo>⁢</mo><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></munder></mstyle><mrow><msub><mi>ϵ</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>⁢</mo><msub><mi>h</mi><mi>i</mi></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>h</mi><mi>k</mi></msub><mo>⁢</mo><msub><mi>F</mi><mi>k</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>q</mi><mi>j</mi></msub></mrow></mfrac></mstyle></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex44" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex44.m1" class="ltx_Math" alttext="\displaystyle\nabla\cdot\vec{F}" display="inline"><mrow><mo>∇</mo><mo>⋅</mo><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex44.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex44.m3" class="ltx_Math" alttext="\displaystyle\sum_{i}\frac{1}{\Omega}\frac{\partial}{\partial q_{i}}\Big{(}%
+\frac{\Omega F_{i}}{h_{i}}\Big{)}" display="inline"><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>i</mi></munder></mstyle><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi mathvariant="normal">Ω</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>q</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">Ω</mi><mo>⁢</mo><msub><mi>F</mi><mi>i</mi></msub></mrow><msub><mi>h</mi><mi>i</mi></msub></mfrac></mstyle><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex45" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex45.m1" class="ltx_Math" alttext="\displaystyle\nabla^{2}f" display="inline"><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>⁡</mo><mi>f</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex45.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex45.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{\Omega}\sum_{i}\frac{\partial}{\partial q_{i}}\Big{(}%
+\frac{\Omega}{h_{i}^{2}}\frac{\partial f}{\partial q_{i}}\Big{)}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi mathvariant="normal">Ω</mi></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>i</mi></munder></mstyle><mrow><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>q</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">Ω</mi><msubsup><mi>h</mi><mi>i</mi><mn>2</mn></msubsup></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>q</mi><mi>i</mi></msub></mrow></mfrac></mstyle></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex46" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex46.m1" class="ltx_Math" alttext="\displaystyle\text{ where }\Omega\equiv\Pi h_{i}" display="inline"><mrow><mrow><mtext>where </mtext><mo>⁢</mo><mi mathvariant="normal">Ω</mi></mrow><mo>≡</mo><mrow><mi mathvariant="normal">Π</mi><mo>⁢</mo><msub><mi>h</mi><mi>i</mi></msub></mrow></mrow></math></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_markedasmath ltx_font_bold">Inequalities:</span></p>
+<table id="S0.EGx10" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex48" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex48.m3" class="ltx_Math" alttext="\displaystyle\parallel\vec{u}+\vec{v}\parallel\;\leq\;\parallel\vec{u}%
+\parallel+\parallel\vec{v}\parallel\qquad\mbox{Triangle Inequality}" display="inline"><mrow><mrow><mo>∥</mo><mrow><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>+</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow><mo rspace="5.3pt">∥</mo></mrow><mo rspace="5.3pt">≤</mo><mrow><mrow><mrow><mo>∥</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>∥</mo></mrow><mo>+</mo><mrow><mo>∥</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo>∥</mo></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mtext>Triangle Inequality</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex49" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex49.m3" class="ltx_Math" alttext="\displaystyle|\vec{u}\circ\vec{v}|\;\leq\;\parallel\vec{u}\parallel\parallel%
+\vec{v}\parallel\qquad\mbox{Cauchy-Schwarz Inequality}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow><mo rspace="5.3pt" stretchy="false">|</mo></mrow><mo rspace="5.3pt">≤</mo><mrow><mrow><mrow><mo>∥</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>∥</mo></mrow><mo>⁢</mo><mrow><mo>∥</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo>∥</mo></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mtext>Cauchy-Schwarz Inequality</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p13" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_markedasmath ltx_font_bold">Product identities:</span></p>
+<table id="S0.EGx11" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex50" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex50.m1" class="ltx_Math" alttext="\displaystyle\vec{A}\circ(\vec{B}\times\vec{C})" display="inline"><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mover accent="true"><mi>C</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex50.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex50.m3" class="ltx_Math" alttext="\displaystyle\vec{B}\circ(\vec{C}\times\vec{A})=\vec{C}\circ(\vec{A}\times\vec%
+{B})\qquad\mbox{Scalar Triple Product}" display="inline"><mrow><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>C</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mover accent="true"><mi>C</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mtext>Scalar Triple Product</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex51" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex51.m1" class="ltx_Math" alttext="\displaystyle\vec{A}\times(\vec{B}\times\vec{C})" display="inline"><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mover accent="true"><mi>C</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex51.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex51.m3" class="ltx_Math" alttext="\displaystyle\vec{B}(\vec{A}\circ\vec{C})-\vec{C}(\vec{A}\circ\vec{B})\qquad%
+\mbox{Vector Triple Product}" display="inline"><mrow><mrow><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mover accent="true"><mi>C</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mover accent="true"><mi>C</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mtext>Vector Triple Product</mtext></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex52" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex52.m1" class="ltx_Math" alttext="\displaystyle\vec{A}\times(\vec{B}\times\vec{C})+\vec{B}\times(\vec{C}\times%
+\vec{A})+\vec{C}\times(\vec{A}\times\vec{B})" display="inline"><mrow><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mover accent="true"><mi>C</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>C</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mover accent="true"><mi>C</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex52.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex52.m3" class="ltx_Math" alttext="\displaystyle 0\qquad\mbox{Jacobi Identity}" display="inline"><mrow><mn>0</mn><mo mathvariant="italic" separator="true">  </mo><mtext>Jacobi Identity</mtext></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p14" class="ltx_para">
+<table id="S0.EGx12" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex54" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex54.m1" class="ltx_Math" alttext="\displaystyle(\vec{A}\times\vec{B})\circ(\vec{C}\times\vec{D})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>C</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mover accent="true"><mi>D</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex54.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex54.m3" class="ltx_Math" alttext="\displaystyle\vec{A}\circ[\vec{B}\times(\vec{C}\times\vec{D})]=(\vec{A}\circ%
+\vec{C})(\vec{B}\circ\vec{D})-(\vec{B}\circ\vec{C})(\vec{A}\circ\vec{D})\quad%
+\mbox{Scalar Quadruple Product}" display="inline"><mrow><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mrow><mo stretchy="false">[</mo><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>C</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mover accent="true"><mi>D</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mover accent="true"><mi>C</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mover accent="true"><mi>D</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mover accent="true"><mi>C</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mover accent="true"><mi>D</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mtext>Scalar Quadruple Product</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex55" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex55.m1" class="ltx_Math" alttext="\displaystyle(\vec{A}\times\vec{B})\times(\vec{C}\times\vec{D})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>C</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mover accent="true"><mi>D</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex55.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex55.m3" class="ltx_Math" alttext="\displaystyle(\vec{A}\times\vec{B}\circ\vec{D})\vec{C}-(\vec{A}\times\vec{B}%
+\circ\vec{C})\vec{D}=[\vec{C},\vec{D},\vec{A}]\vec{B}-[\vec{C},\vec{D},\vec{B}%
+]\vec{A}\quad\mbox{Vector Quadruple Product}" display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo>∘</mo><mover accent="true"><mi>D</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>C</mi><mo stretchy="false">→</mo></mover></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo>∘</mo><mover accent="true"><mi>C</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>D</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>C</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>D</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>C</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>D</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mtext>Vector Quadruple Product</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex56" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex56.m1" class="ltx_Math" alttext="\displaystyle\vec{A}\times[\vec{B}\times(\vec{C}\times\vec{D})]" display="inline"><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mrow><mo stretchy="false">[</mo><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>C</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mover accent="true"><mi>D</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex56.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex56.m3" class="ltx_Math" alttext="\displaystyle(\vec{A}\times\vec{C})(\vec{B}\circ\vec{D})-(\vec{B}\circ\vec{C})%
+(\vec{A}\times\vec{D})" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mover accent="true"><mi>C</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mover accent="true"><mi>D</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mover accent="true"><mi>C</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mover accent="true"><mi>D</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p15" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_markedasmath ltx_font_bold">Gradient Identities:</span></p>
+<table id="S0.EGx13" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex57" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex57.m1" class="ltx_Math" alttext="\displaystyle\nabla(f+g)" display="inline"><mrow><mo>∇</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex57.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex57.m3" class="ltx_Math" alttext="\displaystyle\nabla f+\nabla g" display="inline"><mrow><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow><mo>+</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>g</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex58" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex58.m1" class="ltx_Math" alttext="\displaystyle\nabla(fg)" display="inline"><mrow><mo>∇</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex58.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex58.m3" class="ltx_Math" alttext="\displaystyle f\nabla g+g\nabla f" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>g</mi></mrow></mrow><mo>+</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex59" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex59.m1" class="ltx_Math" alttext="\displaystyle\nabla(\vec{A}\circ\vec{B})" display="inline"><mrow><mo>∇</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex59.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex59.m3" class="ltx_Math" alttext="\displaystyle\vec{A}\times(\nabla\times\vec{B})+\vec{B}\times(\nabla\times\vec%
+{A})+(\vec{A}\circ\nabla)\vec{B}+(\vec{B}\circ\nabla)\vec{A}" display="inline"><mrow><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mo>∇</mo></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mo>∇</mo></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex60" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex60.m1" class="ltx_Math" alttext="\displaystyle\nabla(\vec{A}\times\vec{B})" display="inline"><mrow><mo>∇</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex60.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex60.m3" class="ltx_Math" alttext="\displaystyle(\nabla\vec{A})\times\vec{B}-(\nabla\vec{B})\times\vec{A}\qquad%
+\mbox{gradient of vector??}" display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>⁡</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>⁡</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>×</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mtext>gradient of vector??</mtext></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex61" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex61.m1" class="ltx_Math" alttext="\displaystyle\nabla(f\vec{A})" display="inline"><mrow><mo>∇</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex61.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex61.m3" class="ltx_Math" alttext="\displaystyle(\nabla f)\vec{A}+f(\nabla\vec{A})\qquad\mbox{gradient of vector??}" display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>⁡</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mtext>gradient of vector??</mtext></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p16" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_markedasmath ltx_font_bold">Divergence Identities:</span></p>
+<table id="S0.EGx14" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex62" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex62.m1" class="ltx_Math" alttext="\displaystyle\nabla\circ(\vec{A}+\vec{B})" display="inline"><mrow><mo>∇</mo><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>+</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex62.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex62.m3" class="ltx_Math" alttext="\displaystyle\nabla\circ\vec{A}+\nabla\circ\vec{B}" display="inline"><mrow><mrow><mo>∇</mo><mo>∘</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><mo>∇</mo><mo>∘</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex63" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex63.m1" class="ltx_Math" alttext="\displaystyle\nabla\circ(f\vec{A})" display="inline"><mrow><mo>∇</mo><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex63.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex63.m3" class="ltx_Math" alttext="\displaystyle f(\nabla\circ\vec{A})+\vec{A}\circ(\nabla f)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>∘</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex64" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex64.m1" class="ltx_Math" alttext="\displaystyle\nabla\circ(\vec{A}\times\vec{B})" display="inline"><mrow><mo>∇</mo><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex64.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex64.m3" class="ltx_Math" alttext="\displaystyle\vec{B}\circ(\nabla\times\vec{A})-\vec{A}\circ(\nabla\times\vec{B})" display="inline"><mrow><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex65" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex65.m1" class="ltx_Math" alttext="\displaystyle\nabla\circ(\vec{A}\vec{B})" display="inline"><mrow><mo>∇</mo><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex65.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex65.m3" class="ltx_Math" alttext="\displaystyle(\nabla\circ\vec{A})\vec{B}+\vec{A}\circ(\nabla\vec{B})=(\nabla%
+\circ\vec{A})\vec{B}+(\vec{A}\circ\nabla)\vec{B}" display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>∘</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>⁡</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>∘</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mo>∇</mo></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p17" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_markedasmath ltx_font_bold">Curl Identities:</span></p>
+<table id="S0.EGx15" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex66" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex66.m1" class="ltx_Math" alttext="\displaystyle\nabla\times(\vec{A}+\vec{B})" display="inline"><mrow><mo>∇</mo><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>+</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex66.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex66.m3" class="ltx_Math" alttext="\displaystyle\nabla\times\vec{A}+\nabla\times\vec{B}" display="inline"><mrow><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex67" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex67.m1" class="ltx_Math" alttext="\displaystyle\nabla\times(f\vec{A})" display="inline"><mrow><mo>∇</mo><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex67.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex67.m3" class="ltx_Math" alttext="\displaystyle f(\nabla\times\vec{A})-\vec{A}\times(\nabla f)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex68" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex68.m1" class="ltx_Math" alttext="\displaystyle\nabla\times(\vec{A}\times\vec{B})" display="inline"><mrow><mo>∇</mo><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex68.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex68.m3" class="ltx_Math" alttext="\displaystyle(\nabla\circ\vec{B})\vec{A}-(\vec{A}\circ\nabla)\vec{B}+(\vec{B}%
+\circ\nabla)\vec{A}-(\nabla\circ\vec{A})\vec{B}" display="inline"><mrow><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>∘</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mo>∇</mo></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mo>∇</mo></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>∘</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex69" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex69.m1" class="ltx_Math" alttext="\displaystyle\nabla\times(\vec{A}\vec{B})" display="inline"><mrow><mo>∇</mo><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex69.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex69.m3" class="ltx_Math" alttext="\displaystyle(\nabla\circ\vec{A})\vec{B}-\vec{A}\times(\nabla\vec{B})" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>∘</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo>-</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>⁡</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p18" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_markedasmath ltx_font_bold">Laplacian Identities:</span></p>
+<table id="S0.EGx16" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex70" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex70.m1" class="ltx_Math" alttext="\displaystyle{\nabla}^{2}(fg)" display="inline"><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex70.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex70.m3" class="ltx_Math" alttext="\displaystyle g{\nabla}^{2}f+2\nabla f\circ\nabla g+f{\nabla}^{2}g" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>⁡</mo><mi>f</mi></mrow></mrow><mo>+</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow></mrow><mo>∘</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>g</mi></mrow></mrow><mo>+</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>⁡</mo><mi>g</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex71" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex71.m1" class="ltx_Math" alttext="\displaystyle{\nabla}^{2}(f\vec{A})" display="inline"><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex71.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex71.m3" class="ltx_Math" alttext="\displaystyle=f{\nabla}^{2}\vec{A}+\vec{A}{\nabla}^{2}f+2(\nabla f\circ\nabla)%
+\vec{A}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>⁡</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo>+</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>⁡</mo><mi>f</mi></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow><mo>∘</mo><mo>∇</mo></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p19" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_markedasmath ltx_font_bold">Mixed Identities:</span>
+</p>
+<table id="S0.EGx17" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex72" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex72.m1" class="ltx_Math" alttext="\displaystyle\nabla\circ(\nabla\times\vec{A})" display="inline"><mrow><mo>∇</mo><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex72.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex72.m3" class="ltx_Math" alttext="\displaystyle 0" display="inline"><mn>0</mn></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex73" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex73.m1" class="ltx_Math" alttext="\displaystyle\nabla\times\nabla f" display="inline"><mrow><mo>∇</mo><mo>×</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex73.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex73.m3" class="ltx_Math" alttext="\displaystyle 0" display="inline"><mn>0</mn></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex74" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex74.m1" class="ltx_Math" alttext="\displaystyle\nabla\times(f\nabla g)" display="inline"><mrow><mo>∇</mo><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>g</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex74.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex74.m3" class="ltx_Math" alttext="\displaystyle\nabla f\times\nabla g" display="inline"><mrow><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow><mo>×</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>g</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex75" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex75.m1" class="ltx_Math" alttext="\displaystyle\nabla\circ f\nabla g" display="inline"><mrow><mrow><mo>∇</mo><mo>∘</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>g</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex75.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex75.m3" class="ltx_Math" alttext="\displaystyle f{\nabla}^{2}g+\nabla f\circ\nabla g" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>⁡</mo><mi>g</mi></mrow></mrow><mo>+</mo><mrow><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow><mo>∘</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>g</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex76" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex76.m1" class="ltx_Math" alttext="\displaystyle\nabla\times(\nabla\times\vec{A})" display="inline"><mrow><mo>∇</mo><mo>×</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex76.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex76.m3" class="ltx_Math" alttext="\displaystyle\nabla(\nabla\circ\vec{A})-{\nabla}^{2}\vec{A}\quad\mbox{only %
+true for rectangular coordinates}" display="inline"><mrow><mrow><mrow><mo>∇</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>∘</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>⁡</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mtext>only true for rectangular coordinates</mtext></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p20" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_markedasmath ltx_font_bold">Differential Identities:</span></p>
+<table id="S0.EGx18" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex77" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex77.m1" class="ltx_Math" alttext="\displaystyle\frac{d}{dt}(f\vec{A})" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex77.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex77.m3" class="ltx_Math" alttext="\displaystyle f\frac{d\vec{A}}{dt}+\frac{df}{dt}\vec{A}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>f</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex78" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex78.m1" class="ltx_Math" alttext="\displaystyle\frac{d}{dt}(\vec{A}\circ\vec{B})" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex78.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex78.m3" class="ltx_Math" alttext="\displaystyle\vec{A}\circ\frac{d\vec{B}}{dt}+\vec{B}\circ\frac{d\vec{A}}{dt}" display="inline"><mrow><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex79" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex79.m1" class="ltx_Math" alttext="\displaystyle\frac{d}{dt}(\vec{A}\times\vec{B})" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex79.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex79.m3" class="ltx_Math" alttext="\displaystyle\vec{A}\times\frac{d\vec{B}}{dt}+\vec{B}\times\frac{d\vec{A}}{dt}" display="inline"><mrow><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo>×</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p21" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_markedasmath ltx_font_bold">Integral Identities:</span></p>
+</div>
+<div id="p22" class="ltx_para">
+<p class="ltx_p">Gauss’/Divergence Thm:</p>
+</div>
+<div id="p23" class="ltx_para ltx_indent">
+<p class="ltx_p">Standard Form:</p>
+</div>
+<div id="p24" class="ltx_para">
+<table id="S0.EGx19" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex80" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex80.m1" class="ltx_Math" alttext="\displaystyle\oiint_{\mathcal{S}}\vec{F}\circ d\vec{A}" display="inline"><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∯</mo><mi class="ltx_font_mathcaligraphic">𝒮</mi></msub></mstyle><mrow><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mrow><mo>𝑑</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex80.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex80.m3" class="ltx_Math" alttext="\displaystyle\iiint_{\mathcal{V}}(\nabla\cdot\vec{F})\;dV\quad\mathrm{(%
+\mathcal{S}\,encloses\mathcal{V})}" display="inline"><mrow><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∭</mo><mi class="ltx_font_mathcaligraphic">𝒱</mi></msub></mstyle><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>⋅</mo><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover></mrow><mo rspace="5.3pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>V</mi></mrow></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+1.7pt"><mi class="ltx_font_mathcaligraphic">𝒮</mi></mpadded><mo>⁢</mo><mi>encloses</mi><mo>⁢</mo><mi class="ltx_font_mathcaligraphic">𝒱</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p25" class="ltx_para ltx_indent">
+<p class="ltx_p">Variants:</p>
+</div>
+<div id="p26" class="ltx_para">
+<table id="S0.EGx20" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex81" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex81.m1" class="ltx_Math" alttext="\displaystyle\oiint_{\mathcal{S}}\vec{F}\circ\vec{n}\;dS" display="inline"><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∯</mo><mi class="ltx_font_mathcaligraphic">𝒮</mi></msub></mstyle><mrow><mrow><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mpadded width="+2.8pt"><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>S</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex81.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex81.m3" class="ltx_Math" alttext="\displaystyle\iiint_{\mathcal{V}}(\nabla\cdot\vec{F})\;dV\quad\mathrm{(%
+\mathcal{S}\,encloses\mathcal{V})}" display="inline"><mrow><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∭</mo><mi class="ltx_font_mathcaligraphic">𝒱</mi></msub></mstyle><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>⋅</mo><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover></mrow><mo rspace="5.3pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>V</mi></mrow></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+1.7pt"><mi class="ltx_font_mathcaligraphic">𝒮</mi></mpadded><mo>⁢</mo><mi>encloses</mi><mo>⁢</mo><mi class="ltx_font_mathcaligraphic">𝒱</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p27" class="ltx_para">
+<p class="ltx_p">Stokes’ Thm:</p>
+</div>
+<div id="p28" class="ltx_para ltx_indent">
+<p class="ltx_p">Standard Form:</p>
+</div>
+<div id="p29" class="ltx_para">
+<table id="S0.EGx21" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex83" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex83.m1" class="ltx_Math" alttext="\displaystyle\oint_{\mathcal{C}}\vec{F}\circ d\vec{l}" display="inline"><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></msub></mstyle><mrow><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mrow><mo>𝑑</mo><mover accent="true"><mi>l</mi><mo stretchy="false">→</mo></mover></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex83.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex83.m3" class="ltx_Math" alttext="\displaystyle\iint_{\mathcal{S}}(\nabla\times\vec{F})\circ\vec{n}\;dS\quad%
+\mathrm{(\mathcal{S}\,bounded\,by\,\mathcal{C})}" display="inline"><mrow><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∬</mo><mi class="ltx_font_mathcaligraphic">𝒮</mi></msub></mstyle><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo><mpadded width="+2.8pt"><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>S</mi></mrow></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+1.7pt"><mi class="ltx_font_mathcaligraphic">𝒮</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mi>bounded</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mi>by</mi></mpadded><mo>⁢</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p30" class="ltx_para ltx_indent">
+<p class="ltx_p">Variants:</p>
+</div>
+<div id="p31" class="ltx_para">
+<table id="S0.EGx22" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex84" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex84.m1" class="ltx_Math" alttext="\displaystyle\oint_{\mathcal{C}}\vec{F}\circ d\vec{l}" display="inline"><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></msub></mstyle><mrow><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mrow><mo>𝑑</mo><mover accent="true"><mi>l</mi><mo stretchy="false">→</mo></mover></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex84.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex84.m3" class="ltx_Math" alttext="\displaystyle\iint_{\mathcal{S}}(\nabla\times\vec{F})\circ d\vec{A}\quad%
+\mathrm{(\mathcal{S}\,bounded\,by\,\mathcal{C})}" display="inline"><mrow><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∬</mo><mi class="ltx_font_mathcaligraphic">𝒮</mi></msub></mstyle><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo><mrow><mo>𝑑</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+1.7pt"><mi class="ltx_font_mathcaligraphic">𝒮</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mi>bounded</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mi>by</mi></mpadded><mo>⁢</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex85" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex85.m1" class="ltx_Math" alttext="\displaystyle\oint_{\mathcal{C}}\vec{F}\circ\vec{t}\;ds" display="inline"><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></msub></mstyle><mrow><mrow><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mpadded width="+2.8pt"><mover accent="true"><mi>t</mi><mo stretchy="false">→</mo></mover></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>s</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex85.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex85.m3" class="ltx_Math" alttext="\displaystyle\iint_{\mathcal{S}}(\nabla\times\vec{F})\circ\vec{n}\;dS\quad%
+\mathrm{(\mathcal{S}\,bounded\,by\,\mathcal{C})}" display="inline"><mrow><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∬</mo><mi class="ltx_font_mathcaligraphic">𝒮</mi></msub></mstyle><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo><mpadded width="+2.8pt"><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>S</mi></mrow></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+1.7pt"><mi class="ltx_font_mathcaligraphic">𝒮</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mi>bounded</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mi>by</mi></mpadded><mo>⁢</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex86" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex86.m1" class="ltx_Math" alttext="\displaystyle\oint_{\mathcal{C}}\vec{F}\circ\vec{t}\;ds" display="inline"><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></msub></mstyle><mrow><mrow><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mpadded width="+2.8pt"><mover accent="true"><mi>t</mi><mo stretchy="false">→</mo></mover></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>s</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex86.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex86.m3" class="ltx_Math" alttext="\displaystyle\iint_{\mathcal{S}}(\nabla\times\vec{F})\circ d\vec{A}\quad%
+\mathrm{(\mathcal{S}\,bounded\,by\,\mathcal{C})}" display="inline"><mrow><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∬</mo><mi class="ltx_font_mathcaligraphic">𝒮</mi></msub></mstyle><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>F</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo><mrow><mo>𝑑</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+1.7pt"><mi class="ltx_font_mathcaligraphic">𝒮</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mi>bounded</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mi>by</mi></mpadded><mo>⁢</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p32" class="ltx_para">
+<p class="ltx_p">Gradient theorem:</p>
+</div>
+<div id="p33" class="ltx_para ltx_indent">
+<p class="ltx_p">Standard Form:
+</p>
+</div>
+<div id="p34" class="ltx_para">
+<table id="S0.EGx23" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex88" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex88.m1" class="ltx_Math" alttext="\displaystyle\int_{\mathcal{C}}(\nabla f)\circ d\vec{l}" display="inline"><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></msub></mstyle><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo><mrow><mo>𝑑</mo><mover accent="true"><mi>l</mi><mo stretchy="false">→</mo></mover></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex88.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex88.m3" class="ltx_Math" alttext="\displaystyle f(r_{2})-f(r_{1})\quad\mathrm{(\mathcal{C}\,goes\,from\,r_{1}\,%
+to\,r_{2})}" display="inline"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+1.7pt"><mi class="ltx_font_mathcaligraphic">𝒞</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mi>goes</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mi>from</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi mathvariant="normal">r</mi><mn>1</mn></msub></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mi>to</mi></mpadded><mo>⁢</mo><msub><mi mathvariant="normal">r</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p35" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_markedasmath ltx_font_bold">Integration by Parts for Vectors</span></p>
+<table id="S0.EGx24" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex89" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex89.m1" class="ltx_Math" alttext="\displaystyle\iiint_{\mathcal{V}}f(\nabla\circ\vec{A})dV" display="inline"><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∭</mo><mi class="ltx_font_mathcaligraphic">𝒱</mi></msub></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>∘</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>V</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex89.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex89.m3" class="ltx_Math" alttext="\displaystyle\iint_{\mathcal{S}}f\vec{A}\circ d\vec{a}-\iiint_{\mathcal{V}}%
+\vec{A}\circ(\nabla f)dV" display="inline"><mrow><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∬</mo><mi class="ltx_font_mathcaligraphic">𝒮</mi></msub></mstyle><mrow><mrow><mi>f</mi><mo>⁢</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo>∘</mo><mrow><mo>𝑑</mo><mover accent="true"><mi>a</mi><mo stretchy="false">→</mo></mover></mrow></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∭</mo><mi class="ltx_font_mathcaligraphic">𝒱</mi></msub></mstyle><mrow><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>V</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p36" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_markedasmath ltx_font_bold">Integral Form of Maxwell’s Equations:</span></p>
+<table id="S0.EGx25" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex91" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex91.m1" class="ltx_Math" alttext="\displaystyle\oiint_{\mathcal{S}}\vec{D}\circ\hat{n}\;d^{2}A" display="inline"><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∯</mo><mi class="ltx_font_mathcaligraphic">𝒮</mi></msub></mstyle><mrow><mrow><mover accent="true"><mi>D</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mpadded width="+2.8pt"><mover accent="true"><mi>n</mi><mo stretchy="false">^</mo></mover></mpadded></mrow><mo>⁢</mo><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>A</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex91.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex91.m3" class="ltx_Math" alttext="\displaystyle Q_{free}^{enc}" display="inline"><msubsup><mi>Q</mi><mrow><mi>f</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>e</mi></mrow><mrow><mi>e</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>c</mi></mrow></msubsup></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex92" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex92.m1" class="ltx_Math" alttext="\displaystyle\oiint_{\mathcal{S}}\vec{B}\circ\hat{n}\;d^{2}A" display="inline"><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∯</mo><mi class="ltx_font_mathcaligraphic">𝒮</mi></msub></mstyle><mrow><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mpadded width="+2.8pt"><mover accent="true"><mi>n</mi><mo stretchy="false">^</mo></mover></mpadded></mrow><mo>⁢</mo><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>A</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex92.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex92.m3" class="ltx_Math" alttext="\displaystyle 0" display="inline"><mn>0</mn></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex93" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex93.m1" class="ltx_Math" alttext="\displaystyle\oint_{\mathcal{C}}\vec{E}\circ d\vec{l}" display="inline"><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></msub></mstyle><mrow><mover accent="true"><mi>E</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mrow><mo>𝑑</mo><mover accent="true"><mi>l</mi><mo stretchy="false">→</mo></mover></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex93.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex93.m3" class="ltx_Math" alttext="\displaystyle-\frac{d{\Phi_{B}}}{dt}" display="inline"><mrow><mo>-</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><msub><mi mathvariant="normal">Φ</mi><mi>B</mi></msub></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex94" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex94.m1" class="ltx_Math" alttext="\displaystyle\oint_{\mathcal{C}}\vec{H}\circ d\vec{l}" display="inline"><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∮</mo><mi class="ltx_font_mathcaligraphic">𝒞</mi></msub></mstyle><mrow><mover accent="true"><mi>H</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mrow><mo>𝑑</mo><mover accent="true"><mi>l</mi><mo stretchy="false">→</mo></mover></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex94.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex94.m3" class="ltx_Math" alttext="\displaystyle I_{free}^{enc}+\frac{d{\Phi_{D}}}{dt}" display="inline"><mrow><msubsup><mi>I</mi><mrow><mi>f</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>e</mi></mrow><mrow><mi>e</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>c</mi></mrow></msubsup><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><msub><mi mathvariant="normal">Φ</mi><mi>D</mi></msub></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex95" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex95.m1" class="ltx_Math" alttext="\displaystyle\Phi_{B}" display="inline"><msub><mi mathvariant="normal">Φ</mi><mi>B</mi></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex95.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex95.m3" class="ltx_Math" alttext="\displaystyle\iint_{\mathcal{S}}\vec{B}\circ\hat{n}\;d^{2}A" display="inline"><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∬</mo><mi class="ltx_font_mathcaligraphic">𝒮</mi></msub></mstyle><mrow><mrow><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mpadded width="+2.8pt"><mover accent="true"><mi>n</mi><mo stretchy="false">^</mo></mover></mpadded></mrow><mo>⁢</mo><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>A</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex96" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex96.m1" class="ltx_Math" alttext="\displaystyle\Phi_{D}" display="inline"><msub><mi mathvariant="normal">Φ</mi><mi>D</mi></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex96.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex96.m3" class="ltx_Math" alttext="\displaystyle\iint_{\mathcal{S}}\vec{D}\circ\hat{n}\;d^{2}A" display="inline"><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∬</mo><mi class="ltx_font_mathcaligraphic">𝒮</mi></msub></mstyle><mrow><mrow><mover accent="true"><mi>D</mi><mo stretchy="false">→</mo></mover><mo>∘</mo><mpadded width="+2.8pt"><mover accent="true"><mi>n</mi><mo stretchy="false">^</mo></mover></mpadded></mrow><mo>⁢</mo><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>A</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p37" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_markedasmath ltx_font_bold">Differential Form of Maxwell’s Equations:</span></p>
+<table id="S0.EGx26" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex98" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex98.m1" class="ltx_Math" alttext="\displaystyle\nabla\circ\vec{D}=\rho_{free}" display="inline"><mrow><mrow><mo>∇</mo><mo>∘</mo><mover accent="true"><mi>D</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><msub><mi>ρ</mi><mrow><mi>f</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>e</mi></mrow></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex99" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex99.m1" class="ltx_Math" alttext="\displaystyle\nabla\circ\vec{B}=0" display="inline"><mrow><mrow><mo>∇</mo><mo>∘</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex100" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex100.m1" class="ltx_Math" alttext="\displaystyle\nabla\times\vec{E}=-\frac{\partial\vec{B}}{\partial t}" display="inline"><mrow><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>E</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mo>-</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex101" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex101.m1" class="ltx_Math" alttext="\displaystyle\nabla\times\vec{H}=\vec{J}_{free}+\frac{\partial\vec{D}}{%
+\partial t}" display="inline"><mrow><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>H</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><msub><mover accent="true"><mi>J</mi><mo stretchy="false">→</mo></mover><mrow><mi>f</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>e</mi></mrow></msub><mo>+</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mover accent="true"><mi>D</mi><mo stretchy="false">→</mo></mover></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p38" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_markedasmath ltx_font_bold">Complex Differential Form of Maxwell’s Equations:</span></p>
+<table id="S0.EGx27" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex103" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex103.m1" class="ltx_Math" alttext="\displaystyle\nabla\circ\vec{M}=\frac{i\rho}{\epsilon_{o}}" display="inline"><mrow><mrow><mo>∇</mo><mo>∘</mo><mover accent="true"><mi>M</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi>i</mi><mo>⁢</mo><mi>ρ</mi></mrow><msub><mi>ϵ</mi><mi>o</mi></msub></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex104" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex104.m1" class="ltx_Math" alttext="\displaystyle\nabla\times\vec{M}=c\mu_{0}\vec{J}-\frac{i}{c}\frac{\partial\vec%
+{M}}{\partial t}" display="inline"><mrow><mrow><mo>∇</mo><mo>×</mo><mover accent="true"><mi>M</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mrow><mi>c</mi><mo>⁢</mo><msub><mi>μ</mi><mn>0</mn></msub><mo>⁢</mo><mover accent="true"><mi>J</mi><mo stretchy="false">→</mo></mover></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mi>i</mi><mi>c</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mover accent="true"><mi>M</mi><mo stretchy="false">→</mo></mover></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex105" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex105.m1" class="ltx_Math" alttext="\displaystyle\text{ where }\vec{M}\equiv c\vec{B}+i\vec{E}" display="inline"><mrow><mrow><mtext>where </mtext><mo>⁢</mo><mover accent="true"><mi>M</mi><mo stretchy="false">→</mo></mover></mrow><mo>≡</mo><mrow><mrow><mi>c</mi><mo>⁢</mo><mover accent="true"><mi>B</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mover accent="true"><mi>E</mi><mo stretchy="false">→</mo></mover></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p39" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_markedasmath ltx_font_bold">EM Equations:</span></p>
+<table id="S0.EGx28" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex107" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex107.m1" class="ltx_Math" alttext="\displaystyle{\nabla}^{2}\vec{A}-\frac{1}{c^{2}}\frac{{\partial}^{2}\vec{A}}{%
+\partial t^{2}}" display="inline"><mrow><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>⁡</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex107.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex107.m3" class="ltx_Math" alttext="\displaystyle-{\mu}_{0}\vec{J}\qquad\mbox{Vector Poisson's Equation}" display="inline"><mrow><mrow><mo>-</mo><mrow><msub><mi>μ</mi><mn>0</mn></msub><mo>⁢</mo><mover accent="true"><mi>J</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mtext>Vector Poisson’s Equation</mtext></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex108" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex108.m1" class="ltx_Math" alttext="\displaystyle{\nabla}^{2}\vec{V}-\frac{1}{c^{2}}\frac{{\partial}^{2}V}{%
+\partial t^{2}}" display="inline"><mrow><mrow><msup><mo>∇</mo><mn>2</mn></msup><mo>⁡</mo><mover accent="true"><mi>V</mi><mo stretchy="false">→</mo></mover></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>V</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex108.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex108.m3" class="ltx_Math" alttext="\displaystyle\frac{-\rho}{\epsilon}\qquad\mbox{Scalar Poisson's Equation}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>-</mo><mi>ρ</mi></mrow><mi>ϵ</mi></mfrac></mstyle><mo mathvariant="italic" separator="true">  </mo><mtext>Scalar Poisson’s Equation</mtext></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex109" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex109.m1" class="ltx_Math" alttext="\displaystyle\vec{A}(\vec{r})" display="inline"><mrow><mover accent="true"><mi>A</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>r</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex109.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex109.m3" class="ltx_Math" alttext="\displaystyle\frac{{\mu}_{0}}{4\pi}\int\frac{\vec{J}(\vec{r^{\prime}})}{|\vec{%
+r}-\vec{r^{\prime}}|}d^{3}\vec{r^{\prime}}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><msub><mi>μ</mi><mn>0</mn></msub><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mrow><mover accent="true"><mi>J</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><msup><mi>r</mi><mo>′</mo></msup><mo stretchy="false">→</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mrow><mo stretchy="false">|</mo><mrow><mover accent="true"><mi>r</mi><mo stretchy="false">→</mo></mover><mo>-</mo><mover accent="true"><msup><mi>r</mi><mo>′</mo></msup><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">|</mo></mrow></mfrac><mo>⁢</mo><msup><mi>d</mi><mn>3</mn></msup><mo>⁢</mo><mover accent="true"><msup><mi>r</mi><mo>′</mo></msup><mo stretchy="false">→</mo></mover></mrow></mrow></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex110" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex110.m1" class="ltx_Math" alttext="\displaystyle\phi(\vec{r})" display="inline"><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>r</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex110.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex110.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{4\pi{\epsilon}_{0}}\int\frac{\rho(\vec{r^{\prime}})}{|%
+\vec{r}-\vec{r^{\prime}}|}d^{3}\vec{r^{\prime}}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msub><mi>ϵ</mi><mn>0</mn></msub></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mfrac><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><msup><mi>r</mi><mo>′</mo></msup><mo stretchy="false">→</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mrow><mo stretchy="false">|</mo><mrow><mover accent="true"><mi>r</mi><mo stretchy="false">→</mo></mover><mo>-</mo><mover accent="true"><msup><mi>r</mi><mo>′</mo></msup><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">|</mo></mrow></mfrac><mo>⁢</mo><msup><mi>d</mi><mn>3</mn></msup><mo>⁢</mo><mover accent="true"><msup><mi>r</mi><mo>′</mo></msup><mo stretchy="false">→</mo></mover></mrow></mrow></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p40" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Vector Properties</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">VectorProperties1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-11 19:25:33</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-11 19:25:33</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">swapnizzle (13346)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">(0)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">swapnizzle (0)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Definition</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:22:27 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

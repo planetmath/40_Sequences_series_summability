@@ -1,0 +1,272 @@
+<!DOCTYPE html><html>
+<head>
+<title>Controlling Linking</title>
+<!--Generated on Fri Feb  9 21:12:26 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Controlling Linking</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Controlling Linking</p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Introduction</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Noosphere’s automatic linking system handles most inter-entry linking instances properly. However, a small fraction of the time, it does not have enough information based on concept label metadata (titles, synonyms, defines) and classification metadata to resolve ambiguous links. In these cases, something extra must be done to correct linking.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">There are two families of methods to accomplish this. The first involves improving the metadata, beyond concept labels and classification. We introduce <em class="ltx_emph ltx_font_italic">linking policy</em> metadata to accomplish this.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">The second family of methods involves pseudo-LaTeX commands to steer the linking. We call this the <em class="ltx_emph ltx_font_italic">in-situ</em> method.</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">In-situ controls should be considered a last resort, as it is much more elegant and labor-effective to separate link controls from the text. For example, consider a situation where someone points out a problem with a link in your entry, entry <math id="S1.p4.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. The errant link is due to a term defined in entry <math id="S1.p4.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>. This problem could be fixed if the author of <math id="S1.p4.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> improved its linking policy, or if you used an in-situ link steering command in <math id="S1.p4.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. However, assume that the same linking problem is also present in 100 other entries, all of which link to <math id="S1.p4.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>. Rather than fixing the 100 entries with in-situ commands, it makes much more sense for the author of <math id="S1.p4.m6" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> to modify its linking policy once, solving all 100 errant link instances.</p>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">The two families of methods are described below.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Linking Policy</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">The linking policy of an entry is a text field containing a set of directives, one per line. The currently-supported directives are described below.</p>
+</div>
+<section id="S2.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.1 </span>Link Priority</h3>
+
+<div id="S2.SS1.p1" class="ltx_para">
+<p class="ltx_p">This directive has the following syntax:</p>
+</div>
+<div id="S2.SS1.p2" class="ltx_para">
+<pre class="ltx_verbatim ltx_font_typewriter">
+ priority &lt;N&gt; [LABEL]
+</pre>
+</div>
+<div id="S2.SS1.p3" class="ltx_para">
+<p class="ltx_p">where <code class="ltx_verbatim ltx_font_typewriter">&lt;N&gt;</code> is a number and <code class="ltx_verbatim ltx_font_typewriter">[LABEL]</code> is an optional concept label defined by the entry. The default priority is 100, and integer values from 0 to 32767 are accepted. Smaller numbers mean higher priority. Examples are:</p>
+</div>
+<div id="S2.SS1.p4" class="ltx_para">
+<pre class="ltx_verbatim ltx_font_typewriter">
+ priority 10 normal
+ priority 200 "mapping function"
+</pre>
+</div>
+<div id="S2.SS1.p5" class="ltx_para">
+<p class="ltx_p">This directive is used as a tie-breaker when classification directives and category-based link steering fail to find a unique destination. Setting the priority higher than normal (closer to zero) results in an entry (or concept) being linked to “by default”. Setting it lower (above 100) would result in the entry or concept being linked to automatically only when the categorization of the other entry overlaps.</p>
+</div>
+</section>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>In-Situ Link Controls</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">The in-situ methods involve pseudo-LaTeX commands you can put in your entry to steer linking. As mentioned before, they should be considered a last resort, with proper concept labels, classification, and linking policy as the first lines of defense.</p>
+</div>
+<section id="S3.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.1 </span>Link Suppression</h3>
+
+<div id="S3.SS1.p1" class="ltx_para">
+<p class="ltx_p">Sometimes it makes sense to block linking entirely for a portion of an entry, rather than simply steering a link to a different target. Below are a number of commands to do this:</p>
+</div>
+<div id="S3.SS1.p2" class="ltx_para">
+<dl id="I1" class="ltx_description">
+<dt id="I1.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_description"><span class="ltx_text ltx_font_typewriter">\PMlinkescapetext</span></span></dt>
+<dd class="ltx_item">
+<div id="I1.ix1.p1" class="ltx_para">
+<p class="ltx_p">Usage: <span class="ltx_text ltx_font_typewriter">\PMlinkescapetext{text}</span> or <span class="ltx_text ltx_font_typewriter">{\PMlinkescape text}
+<br class="ltx_break"></span>This will result in “text” appearing rendered verbatim with no reference link processing applied to it. Note that these only act upon the single body of “text” given.</p>
+</div>
+</dd>
+<dt id="I1.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_description"><span class="ltx_text ltx_font_typewriter">\PMlinkescapeword</span></span></dt>
+<dd class="ltx_item">
+<div id="I1.ix2.p1" class="ltx_para">
+<p class="ltx_p">Usage: <span class="ltx_text ltx_font_typewriter">\PMlinkescapeword{word}
+<br class="ltx_break"></span>This will result in “word” being exempt from reference link processing anywhere it occurs, separated from other text by blanks, in the object. This tag can appear anywhere inside the text of the article (including at the end of the object, but <em class="ltx_emph ltx_font_italic">not inside the preamble</em>). Note that this tag produces no output.</p>
+</div>
+</dd>
+<dt id="I1.ix3" class="ltx_item"><span class="ltx_tag ltx_tag_description"><span class="ltx_text ltx_font_typewriter">\PMlinkescapephrase</span></span></dt>
+<dd class="ltx_item">
+<div id="I1.ix3.p1" class="ltx_para">
+<p class="ltx_p">Usage: <span class="ltx_text ltx_font_typewriter">\PMlinkescapephrase{phrase}
+<br class="ltx_break"></span>Results in the series of words “phrase” being exempt from reference link processing anywhere they occur in the object. In fact, this tag is currently implemented the same as <span class="ltx_text ltx_font_typewriter">\PMlinkescapeword</span>. However, it is conceivable that words and phrases may be treated differently at some point, so one should keep this in mind when deciding which command to use. Note that this tag produces no output.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div id="S3.SS1.p3" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Warning:</em> If you put <span class="ltx_text ltx_font_typewriter">\PMlinkescapeword</span> in your preamble, it may or may not work, and it may or may not cause random breakage of other things in your document. Do not do this!</p>
+</div>
+<div id="S3.SS1.p4" class="ltx_para">
+<p class="ltx_p">As an example, suppose I have an entry that looks like this:</p>
+<blockquote class="ltx_quote">
+<pre class="ltx_verbatim ltx_font_typewriter">
+Fix a prime $p$.
+Then $p$ is odd if and only if $p\neq 2$.
+</pre>
+</blockquote>
+</div>
+<div id="S3.SS1.p5" class="ltx_para">
+<p class="ltx_p">As it stands, the word “fix” will be autolinked to an entry on fixed points. This is not appropriate here. So we have two choices:</p>
+<blockquote class="ltx_quote">
+<pre class="ltx_verbatim ltx_font_typewriter">
+\PMlinkescapetext{Fix} a prime $p$.
+Then $p$ is odd if and only if $p\neq 2$.
+</pre>
+</blockquote>
+<p class="ltx_p">or</p>
+<blockquote class="ltx_quote">
+<pre class="ltx_verbatim ltx_font_typewriter">
+\PMlinkescapeword{Fix}
+\PMlinkescapeword{fix}
+Fix a prime $p$.
+Then $p$ is odd if and only if $p\neq 2$.
+</pre>
+</blockquote>
+</div>
+<div id="S3.SS1.p6" class="ltx_para">
+<p class="ltx_p">In the first case, if “fix” occurs again in the document, it will be autolinked, even though the first occurrence is not. This is appropriate if the second occurrence is actually using it in the technical sense. In the second case, the word “fix” is never autolinked; if you do use it in the technical sense, you should use one of the commands below to link it.</p>
+</div>
+<div id="S3.SS1.p7" class="ltx_para">
+<p class="ltx_p">Both capitalizations are included in the entry above because the autolink suppression is very simple: it only suppresses links from identical text. So in order to prevent autolinking on “fix” as well as “Fix”, we have to explicitly specify both.</p>
+</div>
+</section>
+<section id="S3.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.2 </span>Link Steering</h3>
+
+<div id="S3.SS2.p1" class="ltx_para">
+<p class="ltx_p">Using classification and linking policy, automatic linking can usually pick the correct destination for a link when there are multiple possibilities. However, when it fails, one might have to use a link steering command instead.</p>
+</div>
+<div id="S3.SS2.p2" class="ltx_para">
+<dl id="I2" class="ltx_description">
+<dt id="I2.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_description"><span class="ltx_text ltx_font_typewriter">\PMlinkid</span></span></dt>
+<dd class="ltx_item">
+<div id="I2.ix1.p1" class="ltx_para">
+<p class="ltx_p">Usage: <span class="ltx_text ltx_font_typewriter">\PMlinkid{anchor}{id}
+<br class="ltx_break"></span>This links text “anchor” to the PlanetMath encyclopedia object with id “id”. You can find out an object’s id when you view it. Produces a single instance of “anchor” hyperlinked where the command is issued.</p>
+</div>
+</dd>
+<dt id="I2.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_description"><span class="ltx_text ltx_font_typewriter">\PMlinkname</span></span></dt>
+<dd class="ltx_item">
+<div id="I2.ix2.p1" class="ltx_para">
+<p class="ltx_p">Usage: <span class="ltx_text ltx_font_typewriter">\PMlinkname{anchor}{name}
+<br class="ltx_break"></span>This links “anchor” text to the PlanetMath encyclopedia object with name “name”. Note that name is a PlanetMath canonical name. You can also find this out by viewing the object. Produces a single instance of “anchor” hyperlinked where the command is issued.</p>
+</div>
+</dd>
+</dl>
+</div>
+</section>
+<section id="S3.SS3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.3 </span>Manual Linking</h3>
+
+<div id="S3.SS3.p1" class="ltx_para">
+<p class="ltx_p">There are instances where entirely ad hoc links are desired, such as to an external object on the web, or to a file box. For these instances, a manual linking pseudo-LaTeX command is necessary. These commands are described below:</p>
+</div>
+<div id="S3.SS3.p2" class="ltx_para">
+<dl id="I3" class="ltx_description">
+<dt id="I3.ix1" class="ltx_item"><span class="ltx_tag ltx_tag_description"><span class="ltx_text ltx_font_typewriter">\PMlinkexternal</span></span></dt>
+<dd class="ltx_item">
+<div id="I3.ix1.p1" class="ltx_para">
+<p class="ltx_p">Usage: <span class="ltx_text ltx_font_typewriter">\PMlinkexternal{anchor}{url}
+<br class="ltx_break"></span>This allows you link to any arbitrary URL on the web within your object. “anchor” is the text which will appear in your rendered object. URL is the address you want to point to. This corresponds to <span class="ltx_text ltx_font_typewriter">&lt;a href="url"&gt;anchor&lt;/a&gt;</span>.</p>
+</div>
+</dd>
+<dt id="I3.ix2" class="ltx_item"><span class="ltx_tag ltx_tag_description"><span class="ltx_text ltx_font_typewriter">\PMlinktofile</span></span></dt>
+<dd class="ltx_item">
+<div id="I3.ix2.p1" class="ltx_para">
+<p class="ltx_p">Usage: <span class="ltx_text ltx_font_typewriter">\PMlinktofile{anchor}{filename}
+<br class="ltx_break"></span>This links “anchor” text to “filename” in the object’s filebox. One caveat: when previewing a new object, the URL generated for this command will not work.</p>
+</div>
+</dd>
+</dl>
+</div>
+</section>
+<section id="S3.SS4" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.4 </span>Notes</h3>
+
+<div id="S3.SS4.p1" class="ltx_para">
+<p class="ltx_p">Since there is no sophisticated parsing of the pseudo-LaTeX commands, you can’t put anything “fancy” inside the brackets for them. That is, plain text only. You cannot do something like <span class="ltx_text ltx_font_typewriter">\PMlinkescapetext{\emph{function}}</span>, you’d have to do <span class="ltx_text ltx_font_typewriter">\emph{\PMlinkescapetext{function}}</span>.</p>
+</div>
+<div id="S3.SS4.p2" class="ltx_para">
+<p class="ltx_p">These commands are implemented entirely in the code for PlanetMath, during the preprocessing that happens before the LaTeX content is sent to the rendering back-end. They were modeled after LaTeX commands in order to keep the overall content representation paradigm consistent.</p>
+</div>
+<div id="S3.SS4.p3" class="ltx_para">
+<p class="ltx_p">There is a package <a href="http://aux.planetmath.org/files/objects/4630/pmath.sty" title="" class="ltx_ref ltx_href ltx_font_typewriter">pmath.sty</a>
+that allows one to process the above commands if either of the following packages is used: <span class="ltx_text ltx_font_typewriter">hyperref</span>, <span class="ltx_text ltx_font_typewriter">html</span>, <span class="ltx_text ltx_font_typewriter">url</span>. If no such package is used, then no hyperlinks are created.</p>
+</div>
+<div id="S3.SS4.p4" class="ltx_para">
+<p class="ltx_p">All links are implemented using the actual LaTeX <span class="ltx_text ltx_font_typewriter">html</span> package, with the <span class="ltx_text ltx_font_typewriter">\htmladdnormallink</span> command.</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Controlling Linking</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ControllingLinking1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-11 19:20:14</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-11 19:20:14</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathwizard (128)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">(0)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathwizard (0)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Definition</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:12:26 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

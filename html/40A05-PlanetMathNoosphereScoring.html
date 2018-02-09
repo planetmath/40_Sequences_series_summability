@@ -1,0 +1,181 @@
+<!DOCTYPE html><html>
+<head>
+<title>PlanetMath/Noosphere Scoring</title>
+<!--Generated on Fri Feb  9 21:16:22 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">PlanetMath/Noosphere Scoring</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">PlanetMath/Noosphere Scoring</p>
+</div>
+<section id="Sx1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Justification</h2>
+
+<div id="Sx1.p1" class="ltx_para">
+<p class="ltx_p">Why the heck do we have scoring in Noosphere? Granted that Noosphere is for “serious” content — not video games. This is true, but there are still instances where it is desirable to have some approximate idea of how much
+“value” a user has contributed to the system. We developed scoring to be this “value metric”. The first thing one can do with scores is simply to make them visible, at which point they can serve as an indicator of “reputation”. This helps to direct beginners to experts, and helps experts identify each other to communicate at a common level. Another use for visible scores are to encourage competition. While this is probably not necessary, within communities like PlanetMath, it can’t hurt.</p>
+</div>
+<div id="Sx1.p2" class="ltx_para">
+<p class="ltx_p">In addition, there are situations where it’d help if the system itself had some rough idea of how “valuable” a user is. For example, it is possible that, when we implement ratings, we weigh ratings by the rater’s score. This would make ratings by “valuable” users more useful, and hence would increase the quality of the ratings. Another example is disallowing or granting abilities to do things based on how “senior” a user is, again based on the score as a value metric. A last reason is that having the scores allows us to do things like send top contributors goodies if we can afford it (i.e. if we ever get the finances for it).</p>
+</div>
+</section>
+<section id="Sx2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Scoring Breakdown</h2>
+
+<div id="Sx2.p1" class="ltx_para">
+<p class="ltx_p">Table <a href="#Sx2.T1" title="Table 1 ‣ Scoring Breakdown ‣ PlanetMath/Noosphere Scoring" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a> shows the current scoring chart as used on PlanetMath, which represent the default Noosphere scores.</p>
+</div>
+<figure id="Sx2.T1" class="ltx_table">
+<figcaption class="ltx_caption"><span class="ltx_tag ltx_tag_table">Table 1: </span>Scoring chart for PlanetMath</figcaption>
+<table class="ltx_tabular ltx_centering ltx_guessed_headers ltx_align_middle">
+<thead class="ltx_thead">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_column ltx_th_row ltx_border_l ltx_border_r ltx_border_t">Action</th>
+<th class="ltx_td ltx_align_right ltx_th ltx_th_column ltx_border_r ltx_border_t">Score Change</th>
+</tr>
+</thead>
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">add a paper</th>
+<td class="ltx_td ltx_align_right ltx_border_r ltx_border_t">+50</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">add an exposition</th>
+<td class="ltx_td ltx_align_right ltx_border_r ltx_border_t">+75</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">add to encyclopedia</th>
+<td class="ltx_td ltx_align_right ltx_border_r ltx_border_t">+100</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">add a book</th>
+<td class="ltx_td ltx_align_right ltx_border_r ltx_border_t">+100</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">vote (in a poll)</th>
+<td class="ltx_td ltx_align_right ltx_border_r ltx_border_t">+1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">post a message</th>
+<td class="ltx_td ltx_align_right ltx_border_r ltx_border_t">+1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">accepted correction (erratum)</th>
+<td class="ltx_td ltx_align_right ltx_border_r ltx_border_t">+30</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">accepted correction (addendum)</th>
+<td class="ltx_td ltx_align_right ltx_border_r ltx_border_t">+20</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">accepted correction (meta)</th>
+<td class="ltx_td ltx_align_right ltx_border_r ltx_border_t">+10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">revise an object</th>
+<td class="ltx_td ltx_align_right ltx_border_r ltx_border_t">+5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">minor edit (for admins)</th>
+<td class="ltx_td ltx_align_right ltx_border_r ltx_border_t">+5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">orphan/transfer an object</th>
+<td class="ltx_td ltx_align_right ltx_border_r ltx_border_t">-(1/2)(score)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_r ltx_border_t">adopt an object</th>
+<td class="ltx_td ltx_align_right ltx_border_r ltx_border_t">+(1/2)(score)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l ltx_border_r ltx_border_t">delete an object</th>
+<td class="ltx_td ltx_align_right ltx_border_b ltx_border_r ltx_border_t">-(score)</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<div id="Sx2.p2" class="ltx_para">
+<p class="ltx_p">Wherever we’ve said “score”, fill in the associated score from creating that particular type of object.</p>
+</div>
+</section>
+<section id="Sx3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">Conclusion</h2>
+
+<div id="Sx3.p1" class="ltx_para">
+<p class="ltx_p">These scores may not be what you’d pick. They are indeed somewhat arbitrary, and reflect the ideas of what we’d most like to encourage as content develops in PlanetMath. For this reason they may change over time.</p>
+</div>
+<div id="Sx3.p2" class="ltx_para">
+<p class="ltx_p">There is a similar problem in everyday life that is analagous to our problem of how to configure scoring, which is at the core the problem of representing as closely as possible the amount of “value” that is created in Noosphere. The analogous problem is how much money should be minted to account for the amount of wealth that is created by a group of people living under a government. The government must try to estimate this added wealth as closely as possible, or risk major economic consequences. In Noosphere the consequences are less dire, but to make the points (the “coinage”) as useful as possible, we need to try to closely estimate the value (“wealth”) added to the system.</p>
+</div>
+<div id="Sx3.p3" class="ltx_para">
+<p class="ltx_p">This analogy illustrates how this problem has no perfect solution, due to the subjectivity inherent in value. However, we have tried to come up with something functional. It is possible that we’ll decide the way the scores are balanced does not work well, and end up changing them. If this happens, we’ll post system news about it.</p>
+</div>
+<div id="Sx3.p4" class="ltx_para">
+<p class="ltx_p">Suggestions are welcome as always!</p>
+</div>
+<div id="Sx3.p5" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">PlanetMath/Noosphere Scoring</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PlanetMathNoosphereScoring</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-11 19:19:51</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-11 19:19:51</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathwizard (128)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">(0)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">mathwizard (0)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Definition</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:16:22 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

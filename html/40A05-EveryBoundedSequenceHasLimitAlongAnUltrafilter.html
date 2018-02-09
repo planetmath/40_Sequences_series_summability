@@ -1,0 +1,172 @@
+<!DOCTYPE html><html>
+<head>
+<title>every bounded sequence has limit along an ultrafilter</title>
+<!--Generated on Fri Feb  9 21:13:03 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">every bounded sequence has limit along an ultrafilter</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="ThmTHM1" class="ltx_theorem ltx_theorem_THM">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 1</span>.</h6>
+<div id="ThmTHM1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="ThmTHM1.p1.m1" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">F</mi></math> be an ultrafilter on <math id="ThmTHM1.p1.m2" class="ltx_Math" alttext="\mathbb{N}" display="inline"><mi mathvariant="normal">N</mi></math> and <math id="ThmTHM1.p1.m3" class="ltx_Math" alttext="(x_{n})" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> be a real bounded
+sequence. Then <math id="ThmTHM1.p1.m4" class="ltx_Math" alttext="\operatorname{\mathcal{F}\text{-}\lim}x_{n}" display="inline"><mrow><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">F</mi><mo mathvariant="italic">⁢</mo><mtext mathvariant="italic">-</mtext><mo mathvariant="italic">⁢</mo><mo mathvariant="normal">lim</mo></mrow><mo mathvariant="italic">⁡</mo><msub><mi>x</mi><mi>n</mi></msub></mrow></math> exists.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="(x_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></math> be a bounded sequence. Choose <math id="p2.m2" class="ltx_Math" alttext="a_{0}" display="inline"><msub><mi>a</mi><mn>0</mn></msub></math> and <math id="p2.m3" class="ltx_Math" alttext="b_{0}" display="inline"><msub><mi>b</mi><mn>0</mn></msub></math> such
+that <math id="p2.m4" class="ltx_Math" alttext="a_{0}\leq x_{n}\leq b_{0}" display="inline"><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>≤</mo><msub><mi>x</mi><mi>n</mi></msub><mo>≤</mo><msub><mi>b</mi><mn>0</mn></msub></mrow></math>. Put <math id="p2.m5" class="ltx_Math" alttext="c_{0}:=\frac{a_{0}+b_{0}}{2}" display="inline"><mrow><msub><mi>c</mi><mn>0</mn></msub><mo>:=</mo><mfrac><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><msub><mi>b</mi><mn>0</mn></msub></mrow><mn>2</mn></mfrac></mrow></math>. Then
+precisely one of the sets <math id="p2.m6" class="ltx_Math" alttext="\{n\in\mathbb{N};x_{n}\in\langle a_{0},c_{0}\rangle\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow><mo>;</mo><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>∈</mo><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>0</mn></msub><mo>,</mo><msub><mi>c</mi><mn>0</mn></msub><mo stretchy="false">⟩</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></math>,
+<math id="p2.m7" class="ltx_Math" alttext="\{n\in\mathbb{N};x_{n}\in\langle c_{0},b_{0}\rangle\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow><mo>;</mo><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>∈</mo><mrow><mo stretchy="false">⟨</mo><msub><mi>c</mi><mn>0</mn></msub><mo>,</mo><msub><mi>b</mi><mn>0</mn></msub><mo stretchy="false">⟩</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></math> belongs to the filter <math id="p2.m8" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>.
+(Their union is <math id="p2.m9" class="ltx_Math" alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math> and the filter <math id="p2.m10" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math> is an ultrafilter.) We
+choose <math id="p2.m11" class="ltx_Math" alttext="\langle a_{1},b_{1}\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>b</mi><mn>1</mn></msub><mo stretchy="false">⟩</mo></mrow></math> as that subinterval from
+<math id="p2.m12" class="ltx_Math" alttext="\langle a_{0},c_{0}\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>0</mn></msub><mo>,</mo><msub><mi>c</mi><mn>0</mn></msub><mo stretchy="false">⟩</mo></mrow></math> and <math id="p2.m13" class="ltx_Math" alttext="\langle c_{0},b_{0}\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><msub><mi>c</mi><mn>0</mn></msub><mo>,</mo><msub><mi>b</mi><mn>0</mn></msub><mo stretchy="false">⟩</mo></mrow></math> for which <math id="p2.m14" class="ltx_Math" alttext="C:=\{n\in\mathbb{N};x_{n}\in\langle a_{1},b_{1}\rangle\}" display="inline"><mrow><mi>C</mi><mo>:=</mo><mrow><mo stretchy="false">{</mo><mi>n</mi><mo>∈</mo><mi>ℕ</mi><mo>;</mo><msub><mi>x</mi><mi>n</mi></msub><mo>∈</mo><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>b</mi><mn>1</mn></msub><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></math> belongs to <math id="p2.m15" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Now we again bisect the interval <math id="p3.m1" class="ltx_Math" alttext="\langle a_{1},b_{1}\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>b</mi><mn>1</mn></msub><mo stretchy="false">⟩</mo></mrow></math> by putting
+<math id="p3.m2" class="ltx_Math" alttext="c_{1}=\frac{a_{1}+b_{1}}{2}" display="inline"><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>=</mo><mfrac><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>b</mi><mn>1</mn></msub></mrow><mn>2</mn></mfrac></mrow></math>. Denote <math id="p3.m3" class="ltx_Math" alttext="A:=\{n\in\mathbb{N};x_{n}\in\langle a_{1},c_{1}\rangle\}" display="inline"><mrow><mi>A</mi><mo>:=</mo><mrow><mo stretchy="false">{</mo><mi>n</mi><mo>∈</mo><mi>ℕ</mi><mo>;</mo><msub><mi>x</mi><mi>n</mi></msub><mo>∈</mo><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>c</mi><mn>1</mn></msub><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></math>, <math id="p3.m4" class="ltx_Math" alttext="B:=\{n\in\mathbb{N};x_{n}\in\langle c_{1},b_{1}\rangle\}" display="inline"><mrow><mi>B</mi><mo>:=</mo><mrow><mo stretchy="false">{</mo><mi>n</mi><mo>∈</mo><mi>ℕ</mi><mo>;</mo><msub><mi>x</mi><mi>n</mi></msub><mo>∈</mo><mrow><mo stretchy="false">⟨</mo><msub><mi>c</mi><mn>1</mn></msub><mo>,</mo><msub><mi>b</mi><mn>1</mn></msub><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. It
+holds <math id="p3.m5" class="ltx_Math" alttext="B\cup A\cup(\mathbb{N}\setminus C)=\mathbb{N}" display="inline"><mrow><mrow><mi>B</mi><mo>∪</mo><mi>A</mi><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ℕ</mi><mo>∖</mo><mi>C</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>ℕ</mi></mrow></math>. By the alternative
+characterization of ultrafilters we get that one of these sets is
+in <math id="p3.m6" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>. The set <math id="p3.m7" class="ltx_Math" alttext="\mathbb{N}\setminus C" display="inline"><mrow><mi>ℕ</mi><mo>∖</mo><mi>C</mi></mrow></math> doesn’t belong to <math id="p3.m8" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>, therefore
+it must be one of the sets <math id="p3.m9" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="p3.m10" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>. We choose the
+corresponding interval for <math id="p3.m11" class="ltx_Math" alttext="\langle a_{2},b_{2}\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><msub><mi>b</mi><mn>2</mn></msub><mo stretchy="false">⟩</mo></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">By induction we obtain the monotonous sequences <math id="p4.m1" class="ltx_Math" alttext="(a_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></math>, <math id="p4.m2" class="ltx_Math" alttext="(b_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>b</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></math>
+with the same limit <math id="p4.m3" class="ltx_Math" alttext="\lim\limits_{n\to\infty}a_{n}=\lim\limits_{n\to\infty}b_{n}:=L" display="inline"><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><msub><mi>a</mi><mi>n</mi></msub></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><msub><mi>b</mi><mi>n</mi></msub></mrow><mo>:=</mo><mi>L</mi></mrow></math> such that
+for any <math id="p4.m4" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math> it holds <math id="p4.m5" class="ltx_Math" alttext="\{n\in\mathbb{N};x_{n}\in\langle a_{1},b_{1}\rangle\}\in\mathcal{F}" display="inline"><mrow><mrow><mo stretchy="false">{</mo><mi>n</mi><mo>∈</mo><mi>ℕ</mi><mo>;</mo><msub><mi>x</mi><mi>n</mi></msub><mo>∈</mo><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>b</mi><mn>1</mn></msub><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">}</mo></mrow><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi></mrow></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">We claim that <math id="p5.m1" class="ltx_Math" alttext="\operatorname{\mathcal{F}\text{-}\lim}x_{n}=L" display="inline"><mrow><mrow><mrow><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>⁢</mo><mtext>-</mtext><mo>⁢</mo><mo>lim</mo></mrow><mo>⁡</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><mo>=</mo><mi>L</mi></mrow></math>. Indeed, for any <math id="p5.m2" class="ltx_Math" alttext="\varepsilon&gt;0" display="inline"><mrow><mi>ε</mi><mo>&gt;</mo><mn>0</mn></mrow></math> there is
+<math id="p5.m3" class="ltx_Math" alttext="n\in\mathbb{N}" display="inline"><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow></math> such that <math id="p5.m4" class="ltx_Math" alttext="\langle a_{n},b_{n}\rangle\subseteq(L-\varepsilon,L+\varepsilon)" display="inline"><mrow><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mi>n</mi></msub><mo>,</mo><msub><mi>b</mi><mi>n</mi></msub><mo stretchy="false">⟩</mo></mrow><mo>⊆</mo><mrow><mo stretchy="false">(</mo><mrow><mi>L</mi><mo>-</mo><mi>ε</mi></mrow><mo>,</mo><mrow><mi>L</mi><mo>+</mo><mi>ε</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, thus
+<math id="p5.m5" class="ltx_Math" alttext="\{n\in\mathbb{N};x_{n}\in\langle a_{n},b_{n}\rangle\}\subseteq A(\varepsilon)" display="inline"><mrow><mrow><mo stretchy="false">{</mo><mi>n</mi><mo>∈</mo><mi>ℕ</mi><mo>;</mo><msub><mi>x</mi><mi>n</mi></msub><mo>∈</mo><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mi>n</mi></msub><mo>,</mo><msub><mi>b</mi><mi>n</mi></msub><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">}</mo></mrow><mo>⊆</mo><mi>A</mi><mrow><mo stretchy="false">(</mo><mi>ε</mi><mo stretchy="false">)</mo></mrow></mrow></math>. The set
+<math id="p5.m6" class="ltx_Math" alttext="\{n\in\mathbb{N};x_{n}\in\langle a_{1},b_{1}\rangle\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow><mo>;</mo><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>∈</mo><mrow><mo stretchy="false">⟨</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>b</mi><mn>1</mn></msub><mo stretchy="false">⟩</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></math> belongs to <math id="p5.m7" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>, hence
+<math id="p5.m8" class="ltx_Math" alttext="A(\varepsilon)\in\mathcal{F}" display="inline"><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ε</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi></mrow></math> as well.
+∎</p>
+</div>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Note that, if we modify the definition of <math id="p6.m1" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>-limit in a such way
+that we admit the values <math id="p6.m2" class="ltx_Math" alttext="\pm\infty" display="inline"><mrow><mo>±</mo><mi mathvariant="normal">∞</mi></mrow></math>, then every sequence has
+<math id="p6.m3" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>-limit along an ultrafilter <math id="p6.m4" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>. (The limit is <math id="p6.m5" class="ltx_Math" alttext="+\infty" display="inline"><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></math> if
+for each neighborhood <math id="p6.m6" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> of infinity, the set <math id="p6.m7" class="ltx_Math" alttext="\{n\in\mathbb{N};x_{n}\in V\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mrow><mi>n</mi><mo>∈</mo><mi>ℕ</mi></mrow><mo>;</mo><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>∈</mo><mi>V</mi></mrow></mrow><mo stretchy="false">}</mo></mrow></math> belongs to <math id="p6.m8" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>. Similarly for <math id="p6.m9" class="ltx_Math" alttext="-\infty" display="inline"><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></math>.)</p>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+M. A. Alekseev, L. Yu. Glebsky, and E. I. Gordon, <em class="ltx_emph ltx_font_italic">On
+approximations of
+groups, group actions and Hopf algebras</em>, Journal of Mathematical Sciences
+<span class="ltx_text ltx_font_bold">107</span> (2001), no. 5, 4305–4332.
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+B. Balcar and P. Štěpánek, <em class="ltx_emph ltx_font_italic">Teorie množin</em>,
+Academia,
+Praha, 1986 (Czech).
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock">
+K. Hrbacek and T. Jech, <em class="ltx_emph ltx_font_italic">Introduction to set theory</em>,
+Marcel Dekker,
+New York, 1999.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p7" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">every bounded sequence has limit along an ultrafilter</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">EveryBoundedSequenceHasLimitAlongAnUltrafilter</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:32:26</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:32:26</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">kompik (10588)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">kompik (10588)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">kompik (10588)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 40A05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 03E99</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Ultrafilter</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:13:03 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

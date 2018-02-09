@@ -1,0 +1,1164 @@
+<!DOCTYPE html><html>
+<head>
+<title>TEXm m Mathematical Formula Quick Reference</title>
+<!--Generated on Fri Feb  9 21:21:17 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">T<span class="ltx_text" style="position:relative; bottom:-2.1pt;">E</span>Xm m  Mathematical Formula Quick Reference</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">T<span class="ltx_text" style="position:relative; bottom:-2.1pt;">E</span>Xm m  Mathematical Formula Quick Reference</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Typesetting some formulas in TeX is fairly straightforward and intuitive. Others are still easy provided one knows the syntax. And others require some lifting. This reference shall include almost all kinds of formulas one could possibly need to typeset in a typical mathematical paper, from the very simple to the very complicated.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">A good TeX document begins with a preamble. PlanetMath supplies a default preamble for most kinds of documents it contains. Any formula using standard mathematical symbols can be typeset in PlanetMath without making any changes to the default preamble. Nothing in this reference requires you to make any changes to the default preamble. </p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">After some general remarks on math mode, what follows will be organized by mathematical branch, from elementary to advanced, each syntax placed in the most elementary branch it is likely to occur in. Naturally some of these will be open to debate. But the idea is that for the most part, these usually hold.</p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Entering math mode</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">There are a few different ways of entering and leaving math mode. The two most commonly used on PlanetMath are the single dollar sign and the double dollar sign (this of course must be properly matched, if one closes with one too few or too many, an error occurs and rendering fails). The double dollar sign causes a linefeed before and after the formula, regardless of whether or not there is a linefeed in the source, and the formula is centered. This is recommended for most formulas where there is complicated nesting of expressions and/or several different levels with some particularly small elements.</p>
+</div>
+<section id="S1.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.1 </span>Remarks on spacing in the source</h3>
+
+<div id="S1.SS1.p1" class="ltx_para">
+<p class="ltx_p">Technically one could write in math mode and not use any spaces whatsoever, and the TeX rendering engine will take care of spacing according to the conventions of mathematical typesetting. However, for the sake of readability when one needs to look at the source, it is good form to use spacing in the source. One can even use more spacing than will actually show. In this reference, the examples will use spacing that tries to mimic the spacing in the output.</p>
+</div>
+</section>
+<section id="S1.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.2 </span>Grouping</h3>
+
+<div id="S1.SS2.p1" class="ltx_para">
+<p class="ltx_p">Often it is necessary to let the rendering engine know that two or more entities are to be treated as a single entity. This accomplished with “curly braces”. Actually displaying these braces will be dealt with later.</p>
+</div>
+</section>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Arithmetic</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Base 10 numbers are written with the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9, and the decimal point “.” Some operators can simply be typed in.</p>
+</div>
+<section id="S2.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.1 </span>Addition and subtraction</h3>
+
+<div id="S2.SS1.p1" class="ltx_para">
+<p class="ltx_p">The “+” key will do. But the “-” is technically not a subtraction operator, even though it is understood as a subtraction operator in most computer programming languages and computer algebra systems. It is understood that way too in TeX but only in math mode. In math mode, the rendering engine renders an en dash as a true subtraction sign. Out of math mode it remains an en dash.</p>
+</div>
+<div id="S2.SS1.p2" class="ltx_para">
+<table id="S2.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex1.m1" class="ltx_Math" alttext="31+13+2+1" display="block"><mrow><mn>31</mn><mo>+</mo><mn>13</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS1.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$31 + 13 + 2 + 1$</code></p>
+</div>
+<div id="S2.SS1.p4" class="ltx_para">
+<table id="S2.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex2.m1" class="ltx_Math" alttext="100-53" display="block"><mrow><mn>100</mn><mo>-</mo><mn>53</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS1.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$100 - 53$</code></p>
+</div>
+</section>
+<section id="S2.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.2 </span>Multiplication</h3>
+
+<div id="S2.SS2.p1" class="ltx_para">
+<p class="ltx_p">With multiplication we come to a veritable embarrasse de choix, though there are some guidelines to steer our choices by. The asterisk operator should generally only be used in programming language source code listings, not in math mode. In math mode, two options include the X-like cross “<math id="S2.SS2.p1.m1" class="ltx_Math" alttext="\times" display="inline"><mo>×</mo></math>” and the central dot “<math id="S2.SS2.p1.m2" class="ltx_Math" alttext="\cdot" display="inline"><mo>⋅</mo></math>”.</p>
+</div>
+<div id="S2.SS2.p2" class="ltx_para">
+<table id="S2.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex3.m1" class="ltx_Math" alttext="2\times 3\times 7+1" display="block"><mrow><mrow><mn>2</mn><mo>×</mo><mn>3</mn><mo>×</mo><mn>7</mn></mrow><mo>+</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS2.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$2 \times 3 \times 7 + 1$</code></p>
+</div>
+<div id="S2.SS2.p4" class="ltx_para">
+<table id="S2.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex4.m1" class="ltx_Math" alttext="2\cdot 3\cdot 7+1" display="block"><mrow><mrow><mn>2</mn><mo>⋅</mo><mn>3</mn><mo>⋅</mo><mn>7</mn></mrow><mo>+</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS2.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$2 \cdot 3 \cdot 7 + 1$</code></p>
+</div>
+<div id="S2.SS2.p6" class="ltx_para">
+<p class="ltx_p">We’ll get to the tacit multiplication operator soon. But first, exponentiation, a kind of iterated multiplication in which a single operand is repeatedly multiplied by itself a number of times, the operand being the “base” and the exponent, the number of times to multiply the operand by itself, being a small superscript to the right of the base. In the TeX source we write the caret symbol so familiar to computer programmers, and the rendering engine will typeset a single entity to the right of the caret as a superscript to the right of the base in a smaller font.</p>
+</div>
+<div id="S2.SS2.p7" class="ltx_para">
+<table id="S2.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex5.m1" class="ltx_Math" alttext="2^{3}-1" display="block"><mrow><msup><mn>2</mn><mn>3</mn></msup><mo>-</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS2.p8" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$2^3 - 1$</code></p>
+</div>
+<div id="S2.SS2.p9" class="ltx_para">
+<table id="S2.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex6.m1" class="ltx_Math" alttext="2^{3}1-1" display="block"><mrow><mrow><msup><mn>2</mn><mn>3</mn></msup><mo>⁢</mo><mn>1</mn></mrow><mo>-</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS2.p10" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$2^31 - 1$</code></p>
+</div>
+<div id="S2.SS2.p11" class="ltx_para">
+<p class="ltx_p">For the rendering engine, the most significant digit of the exponent counts as a single digit. We must let the rendering engine know if a group of digits is a single exponent.</p>
+</div>
+<div id="S2.SS2.p12" class="ltx_para">
+<table id="S2.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex7.m1" class="ltx_Math" alttext="2^{31}-1" display="block"><mrow><msup><mn>2</mn><mn>31</mn></msup><mo>-</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS2.p13" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$2^{31} - 1$</code></p>
+</div>
+<div id="S2.SS2.p14" class="ltx_para">
+<table id="S2.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex8.m1" class="ltx_Math" alttext="2^{131071}-1" display="block"><mrow><msup><mn>2</mn><mn>131071</mn></msup><mo>-</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS2.p15" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$2^{131071} - 1$</code></p>
+</div>
+<div id="S2.SS2.p16" class="ltx_para">
+<p class="ltx_p">This suggests one way to do the tacit multiplication operator when the multiplicands have exponents.</p>
+</div>
+<div id="S2.SS2.p17" class="ltx_para">
+<table id="S2.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex9.m1" class="ltx_Math" alttext="2^{2}3^{2}5^{2}7^{2}" display="block"><mrow><msup><mn>2</mn><mn>2</mn></msup><mo>⁢</mo><msup><mn>3</mn><mn>2</mn></msup><mo>⁢</mo><msup><mn>5</mn><mn>2</mn></msup><mo>⁢</mo><msup><mn>7</mn><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS2.p18" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$2^2 3^2 5^2 7^2$</code></p>
+</div>
+<div id="S2.SS2.p19" class="ltx_para">
+<table id="S2.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex10.m1" class="ltx_Math" alttext="2^{19}3^{17}5^{2}7^{2}" display="block"><mrow><msup><mn>2</mn><mn>19</mn></msup><mo>⁢</mo><msup><mn>3</mn><mn>17</mn></msup><mo>⁢</mo><msup><mn>5</mn><mn>2</mn></msup><mo>⁢</mo><msup><mn>7</mn><mn>2</mn></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS2.p20" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$2^{19} 3^{17} 5^2 7^2$</code></p>
+</div>
+<div id="S2.SS2.p21" class="ltx_para">
+<p class="ltx_p">(Though it’s good form to space them in the source).</p>
+</div>
+<div id="S2.SS2.p22" class="ltx_para">
+<p class="ltx_p">As for power towers, TeX can handle these just as easily as the usual exponentiation with a single base and exponent, so long as the author makes sure each opening bracket has a matching closing bracket.</p>
+</div>
+<div id="S2.SS2.p23" class="ltx_para">
+<table id="S2.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex11.m1" class="ltx_Math" alttext="2^{2^{3}}+1" display="block"><mrow><msup><mn>2</mn><msup><mn>2</mn><mn>3</mn></msup></msup><mo>+</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS2.p24" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$2^{2^3} + 1$</code></p>
+</div>
+<div id="S2.SS2.p25" class="ltx_para">
+<table id="S2.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex12.m1" class="ltx_Math" alttext="5^{4^{3^{2^{1}}}}" display="block"><msup><mn>5</mn><msup><mn>4</mn><msup><mn>3</mn><msup><mn>2</mn><mn>1</mn></msup></msup></msup></msup></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS2.p26" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$5^{4^{3^{2^1}}}$</code></p>
+</div>
+<div id="S2.SS2.p27" class="ltx_para">
+<p class="ltx_p">Theoretically, a power tower can go as far as the rendering engine’s maximum file size will allow. But for the sake of our older readers, power towers ought to be limited to three elements.</p>
+</div>
+<div id="S2.SS2.p28" class="ltx_para">
+<p class="ltx_p">For factorials, if one’s keyboard has the closing exclamation mark “!”, that’s good enough for the factorial symbol in TeX.</p>
+</div>
+<div id="S2.SS2.p29" class="ltx_para">
+<table id="S2.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex13.m1" class="ltx_Math" alttext="7!" display="block"><mrow><mn>7</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS2.p30" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$7!$</code></p>
+</div>
+</section>
+<section id="S2.SS3" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.3 </span>Divisions and fractions</h3>
+
+<div id="S2.SS3.p1" class="ltx_para">
+<p class="ltx_p">We may use either the forward slash “/” or the subtraction sign enmeshed with colon “<math id="S2.SS3.p1.m1" class="ltx_Math" alttext="\div" display="inline"><mo>÷</mo></math>.”</p>
+</div>
+<div id="S2.SS3.p2" class="ltx_para">
+<table id="S2.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex14.m1" class="ltx_Math" alttext="81263\div 47" display="block"><mrow><mn>81263</mn><mo>÷</mo><mn>47</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS3.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$81263 \div 47$</code></p>
+</div>
+<div id="S2.SS3.p4" class="ltx_para">
+<table id="S2.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex15.m1" class="ltx_Math" alttext="2^{1/2}" display="block"><msup><mn>2</mn><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS3.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$2^{1/2}$</code></p>
+</div>
+<div id="S2.SS3.p6" class="ltx_para">
+<p class="ltx_p">Generally, however, divisions should be expressed as fractions. There are two different ways of doing fractions, but the most straightforward is the backslash-frac-numerator enclosed by braces-denominator enclosed by braces syntax.</p>
+</div>
+<div id="S2.SS3.p7" class="ltx_para">
+<table id="S2.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex16.m1" class="ltx_Math" alttext="\frac{1}{2}+\frac{1}{4}+\frac{1}{20}" display="block"><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>20</mn></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS3.p8" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$$\frac{1}{2} + \frac{1}{4} + \frac{1}{20}$$</code></p>
+</div>
+<div id="S2.SS3.p9" class="ltx_para">
+<table id="S2.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex17.m1" class="ltx_Math" alttext="\frac{2^{13}}{7+19}" display="block"><mfrac><msup><mn>2</mn><mn>13</mn></msup><mrow><mn>7</mn><mo>+</mo><mn>19</mn></mrow></mfrac></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS3.p10" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$$\frac{2^{13}}{7 + 19}$$</code></p>
+</div>
+<div id="S2.SS3.p11" class="ltx_para">
+<table id="S2.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex18.m1" class="ltx_Math" alttext="4(\frac{2}{3}\times\frac{4}{3}\times\frac{4}{5}\times\frac{6}{5})" display="block"><mrow><mn>4</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>4</mn><mn>5</mn></mfrac><mo>×</mo><mfrac><mn>6</mn><mn>5</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS3.p12" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$$4(\frac{2}{3} \times \frac{4}{3} \times \frac{4}{5} \times</code></p>
+</div>
+<div id="S2.SS3.p13" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">\frac{6}{5})$$</code></p>
+</div>
+</section>
+<section id="S2.SS4" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.4 </span>Parentheses</h3>
+
+<div id="S2.SS4.p1" class="ltx_para">
+<p class="ltx_p">The parentheses available from the keyboard will do fine for most purposes. Occasionally, as the previous example shows, it is necessary to nudge the rendering engine to make the parentheses bigger with the use of the “left(” and “right)” commands.</p>
+</div>
+<div id="S2.SS4.p2" class="ltx_para">
+<table id="S2.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex19.m1" class="ltx_Math" alttext="4\left(\frac{2}{3}\times\frac{4}{3}\times\frac{4}{5}\times\frac{6}{5}\right)" display="block"><mrow><mn>4</mn><mo>⁢</mo><mrow><mo>(</mo><mrow><mfrac><mn>2</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>×</mo><mfrac><mn>4</mn><mn>5</mn></mfrac><mo>×</mo><mfrac><mn>6</mn><mn>5</mn></mfrac></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS4.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$$4\left(\frac{2}{3} \times \frac{4}{3} \times \frac{4}{5} \times \frac{6}{5}\right)$$</code></p>
+</div>
+</section>
+<section id="S2.SS5" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.5 </span>Comparisons</h3>
+
+<div id="S2.SS5.p1" class="ltx_para">
+<p class="ltx_p">The symbols for the three most commonly used comparisons, less than, equal to and more than, are available from the keyboard (or at least in the standard American layout) and can simply be typed straight in.</p>
+</div>
+<div id="S2.SS5.p2" class="ltx_para">
+<table id="S2.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex20.m1" class="ltx_Math" alttext="3^{2}&lt;2^{4}" display="block"><mrow><msup><mn>3</mn><mn>2</mn></msup><mo>&lt;</mo><msup><mn>2</mn><mn>4</mn></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS5.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$3^2 &lt; 2^4$</code></p>
+</div>
+<div id="S2.SS5.p4" class="ltx_para">
+<p class="ltx_p"><math id="S2.SS5.p4.m1" class="ltx_Math" alttext="2^{4}=4^{2}" display="inline"><mrow><msup><mn>2</mn><mn>4</mn></msup><mo>=</mo><msup><mn>4</mn><mn>2</mn></msup></mrow></math></p>
+</div>
+<div id="S2.SS5.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$2^4 = 4^2$</code>
+</p>
+</div>
+<div id="S2.SS5.p6" class="ltx_para">
+<table id="S2.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex21.m1" class="ltx_Math" alttext="3^{4}&gt;4^{3}" display="block"><mrow><msup><mn>3</mn><mn>4</mn></msup><mo>&gt;</mo><msup><mn>4</mn><mn>3</mn></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS5.p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$3^4 &gt; 4^3$</code></p>
+</div>
+<div id="S2.SS5.p8" class="ltx_para">
+<p class="ltx_p">For not equal to, neither “¡¿” nor “!=” should be used, except of course in computer programming language source code listings. The correct symbol is “<math id="S2.SS5.p8.m1" class="ltx_Math" alttext="\neq" display="inline"><mo>≠</mo></math>”, and its corresponding TeX command is either <code class="ltx_verbatim ltx_font_typewriter">\neq</code> or <code class="ltx_verbatim ltx_font_typewriter">\ne</code>. Similarly, for greater than or equal to and less than or equal to, the commands are <code class="ltx_verbatim ltx_font_typewriter">geq</code> (or <code class="ltx_verbatim ltx_font_typewriter">\ge</code>) and <code class="ltx_verbatim ltx_font_typewriter">leq</code> (or <code class="ltx_verbatim ltx_font_typewriter">\le</code>).</p>
+</div>
+<div id="S2.SS5.p9" class="ltx_para">
+<table id="S2.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex22.m1" class="ltx_Math" alttext="\left(\frac{1}{2}\right)^{(-1)}\leq 2" display="block"><mrow><msup><mrow><mo>(</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>)</mo></mrow><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></msup><mo>≤</mo><mn>2</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS5.p10" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$$(\frac{1}{2})^{(-1)} \leq 2$$</code></p>
+</div>
+<div id="S2.SS5.p11" class="ltx_para">
+<table id="S2.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex23.m1" class="ltx_Math" alttext="(21\times 3)\geq 60" display="block"><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>21</mn><mo>×</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow><mo>≥</mo><mn>60</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS5.p12" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$(21 \times 3) \geq 60$</code></p>
+</div>
+<div id="S2.SS5.p13" class="ltx_para">
+<p class="ltx_p">For congruences, one has the option of putting the “mod some number” part in parentheses or not.</p>
+</div>
+<div id="S2.SS5.p14" class="ltx_para">
+<table id="S2.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex24.m1" class="ltx_Math" alttext="4^{2}\equiv 1\mod 21" display="block"><mrow><msup><mn>4</mn><mn>2</mn></msup><mo>≡</mo><mrow><mn>1</mn><mo lspace="2.5pt" rspace="2.5pt">mod</mo><mn>21</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS5.p15" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$4^2 \equiv 1 \mod 21$</code></p>
+</div>
+<div id="S2.SS5.p16" class="ltx_para">
+<table id="S2.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex25.m1" class="ltx_Math" alttext="5^{3}\equiv 31\pmod{47}" display="block"><mrow><msup><mn>5</mn><mn>3</mn></msup><mo>≡</mo><mrow><mn>31</mn><mspace width="veryverythickmathspace"></mspace><mrow><mo lspace="8.1pt" stretchy="false">(</mo><mrow><mo movablelimits="false">mod</mo><mn>47</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS5.p17" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$5^3 \equiv 31 \pmod{47}$</code></p>
+</div>
+<div id="S2.SS5.p18" class="ltx_para">
+<p class="ltx_p">Note that for the parenthesized version, the modulus must follow, preferrably bracketed.</p>
+</div>
+<div id="S2.SS5.p19" class="ltx_para">
+<p class="ltx_p">Most computer keyboards provide a broken pipe symbol which however shows up in math mode as the single line of the divisibility symbol. For the does not divide symbol, however, use <code class="ltx_verbatim ltx_font_typewriter">\nmid</code>.</p>
+</div>
+<div id="S2.SS5.p20" class="ltx_para">
+<table id="S2.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex26.m1" class="ltx_Math" alttext="7|42" display="block"><mrow><mn>7</mn><mo stretchy="false">|</mo><mn>42</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS5.p21" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$7 | 42$</code></p>
+</div>
+<div id="S2.SS5.p22" class="ltx_para">
+<table id="S2.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex27.m1" class="ltx_Math" alttext="2\nmid 47" display="block"><mrow><mn>2</mn><mo>∤</mo><mn>47</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS5.p23" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$2 \nmid 47$</code></p>
+</div>
+<div id="S2.SS5.p24" class="ltx_para">
+<p class="ltx_p">For the two wavy lines of approximation, the command is <code class="ltx_verbatim ltx_font_typewriter">\approx</code>.</p>
+</div>
+<div id="S2.SS5.p25" class="ltx_para">
+<table id="S2.Ex28" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex28.m1" class="ltx_Math" alttext="\frac{4}{7}\approx 0.5714286" display="block"><mrow><mfrac><mn>4</mn><mn>7</mn></mfrac><mo>≈</mo><mn>0.5714286</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS5.p26" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$$\frac{4}{7} \approx 0.5714286$$</code></p>
+</div>
+</section>
+<section id="S2.SS6" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.6 </span>Radicals</h3>
+
+<div id="S2.SS6.p1" class="ltx_para">
+<p class="ltx_p">As you probably already know, for square roots the superscript 2 is understood as the default and need not be the stated; the command then consists of “sqrt” followed by the operand enclosed by curly braces.</p>
+</div>
+<div id="S2.SS6.p2" class="ltx_para">
+<table id="S2.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex29.m1" class="ltx_Math" alttext="\sqrt{17}\approx 4.1231" display="block"><mrow><msqrt><mn>17</mn></msqrt><mo>≈</mo><mn>4.1231</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS6.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$\sqrt{17} \approx 4.1231$</code>
+</p>
+</div>
+<div id="S2.SS6.p4" class="ltx_para">
+<p class="ltx_p">For other roots, “sqrt” is followed the exponent in “straight” braces “[” and “]”, followed by the operand in curly braces.</p>
+</div>
+<div id="S2.SS6.p5" class="ltx_para">
+<table id="S2.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex30.m1" class="ltx_Math" alttext="\sqrt[47]{8128}" display="block"><mroot><mn>8128</mn><mn>47</mn></mroot></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS6.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$\sqrt[47]{8128}$</code></p>
+</div>
+</section>
+<section id="S2.SS7" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.7 </span>Ellipses</h3>
+
+<div id="S2.SS7.p1" class="ltx_para">
+<p class="ltx_p">In most cases, the horizontal ellipses “ldots” will be sufficient.</p>
+</div>
+<div id="S2.SS7.p2" class="ltx_para">
+<p class="ltx_p">Gauß and his classmates were tasked with calculating <math id="S2.SS7.p2.m1" class="ltx_Math" alttext="1+2+3+\ldots+99+100" display="inline"><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mi mathvariant="normal">…</mi><mo>+</mo><mn>99</mn><mo>+</mo><mn>100</mn></mrow></math>.</p>
+</div>
+<div id="S2.SS7.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">Gau{\ss} and his classmates were tasked with calculating $1</code></p>
+</div>
+<div id="S2.SS7.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">+ 2 + 3 + \ldots + 99 + 100$.</code></p>
+</div>
+<div id="S2.SS7.p5" class="ltx_para">
+<table id="S2.Ex31" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex31.m1" class="ltx_Math" alttext="1+\frac{1}{3}-\frac{1}{5}+\frac{1}{7}+\ldots" display="block"><mrow><mrow><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow><mo>-</mo><mfrac><mn>1</mn><mn>5</mn></mfrac></mrow><mo>+</mo><mfrac><mn>1</mn><mn>7</mn></mfrac><mo>+</mo><mi mathvariant="normal">…</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS7.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$$1 + \frac{1}{3} - \frac{1}{5} + \frac{1}{7} + \ldots$$</code></p>
+</div>
+</section>
+<section id="S2.SS8" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.8 </span>Nested radicals and continued fractions</h3>
+
+<div id="S2.SS8.p1" class="ltx_para">
+<p class="ltx_p">In TeX we can nest radicals and divisions with an ease not possible in HTML. The only thing one needs to be careful about is closing each brace one opens.</p>
+</div>
+<div id="S2.SS8.p2" class="ltx_para">
+<table id="S2.Ex32" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex32.m1" class="ltx_Math" alttext="\sqrt{1+\sqrt{1+\sqrt{1+\sqrt{1+\sqrt{1+\ldots}}}}}" display="block"><msqrt><mrow><mn>1</mn><mo>+</mo><msqrt><mrow><mn>1</mn><mo>+</mo><msqrt><mrow><mn>1</mn><mo>+</mo><msqrt><mrow><mn>1</mn><mo>+</mo><msqrt><mrow><mn>1</mn><mo>+</mo><mi mathvariant="normal">…</mi></mrow></msqrt></mrow></msqrt></mrow></msqrt></mrow></msqrt></mrow></msqrt></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS8.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$\sqrt{1+\sqrt{1+\sqrt{1+\sqrt{1+\sqrt{1+\ldots}}}}}$</code></p>
+</div>
+<div id="S2.SS8.p4" class="ltx_para">
+<table id="S2.Ex33" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex33.m1" class="ltx_Math" alttext="3+\frac{1}{{7}+\frac{1}{{15}+\frac{1}{{1}+\,\cdots}}}" display="block"><mrow><mn>3</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>7</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>15</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo rspace="4.2pt">+</mo><mi mathvariant="normal">⋯</mi></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS8.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$$3 + \frac{1}{{7} + \frac{1}{{15} + \frac{1}{{1} + \,</code></p>
+</div>
+<div id="S2.SS8.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">\cdots}}}$$</code></p>
+</div>
+</section>
+<section id="S2.SS9" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.9 </span>Binomial coefficients.</h3>
+
+<div id="S2.SS9.p1" class="ltx_para">
+<p class="ltx_p">There are at least two different ways of doing binomial coefficients, but the most straightforward is the backslash-binom-top number enclosed by braces-bottom number enclosed by braces syntax. (Note the similarity between this and fractions.)</p>
+</div>
+<div id="S2.SS9.p2" class="ltx_para">
+<table id="S2.Ex34" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex34.m1" class="ltx_Math" alttext="\binom{7}{4}=\frac{7!}{(7-4)!4!}=35" display="block"><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mn>7</mn><mn>4</mn></mfrac><mo>)</mo></mrow><mo>=</mo><mfrac><mrow><mn>7</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>7</mn><mo>-</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><mrow><mn>4</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mfrac><mo>=</mo><mn>35</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS9.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$$\binom{7}{4}=\frac{7!}{(7-4)!4!}=35$$</code></p>
+</div>
+</section>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Algebra</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">By using non-numerical symbols to represent an unknown number, or any number, or any number that could be input, or all numbers of a kind or in a given range, or maybe even all numbers. In mathematical writings in English, the symbols most commonly used for this purpose are the uppercase and lowercase letters of the Greek alphabet and the uppercase and lowercase italicized letters of the English alphabet. For English letters, it is enough to type them in math mode, TeX will take care of italicizing them.</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">Shade the area between <math id="S3.p2.m1" class="ltx_Math" alttext="y=4x-3" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mn>3</mn></mrow></mrow></math> and <math id="S3.p2.m2" class="ltx_Math" alttext="y=-2x+1" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>+</mo><mn>1</mn></mrow></mrow></math>.</p>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">Shade the area between $y = 4x - 3$ and $y = -2x + 1$.</code></p>
+</div>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">Then <math id="S3.p4.m1" class="ltx_Math" alttext="N=p_{1}p_{2}\ldots p_{n}+1" display="inline"><mrow><mi>N</mi><mo>=</mo><mrow><mrow><msub><mi>p</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>p</mi><mn>2</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>p</mi><mi>n</mi></msub></mrow><mo>+</mo><mn>1</mn></mrow></mrow></math> is not divisible by any prime…
+</p>
+</div>
+<div id="S3.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">Then $N = p_1p_2 \ldots p_n + 1$ is not divisible by any</code></p>
+</div>
+<div id="S3.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">prime...</code></p>
+</div>
+<div id="S3.p7" class="ltx_para">
+<p class="ltx_p">For Greek letters, the command is the anglicized name of the Greek letter, with its first letter capitalized for the uppercase letters. At this point I’d like to mention that the use of non-numeric symbols is not limited to variables, but can also be used as a handy shortcut for constants that would be too cumbersome to write as literals each time they’re needed.</p>
+</div>
+<div id="S3.p8" class="ltx_para">
+<p class="ltx_p">Clearly <math id="S3.p8.m1" class="ltx_Math" alttext="2\epsilon&lt;1" display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>ϵ</mi></mrow><mo>&lt;</mo><mn>1</mn></mrow></math> and <math id="S3.p8.m2" class="ltx_Math" alttext="\Delta^{3}&gt;\sqrt{\kappa}" display="inline"><mrow><msup><mi mathvariant="normal">Δ</mi><mn>3</mn></msup><mo>&gt;</mo><msqrt><mi>κ</mi></msqrt></mrow></math>.</p>
+</div>
+<div id="S3.p9" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">Clearly $2\epsilon &lt; 1$ and $\Delta^3 &gt; \sqrt{\kappa}$.</code></p>
+</div>
+<div id="S3.p10" class="ltx_para">
+<p class="ltx_p">The golden ratio <math id="S3.p10.m1" class="ltx_Math" alttext="\phi=\frac{1+\sqrt{5}}{2}" display="inline"><mrow><mi>ϕ</mi><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><msqrt><mn>5</mn></msqrt></mrow><mn>2</mn></mfrac></mrow></math> applied to Doric columns…</p>
+</div>
+<div id="S3.p11" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">The golden ratio $\phi = \frac{1 + \sqrt{5}}{2}$ applied to</code></p>
+</div>
+<div id="S3.p12" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">Doric columns...</code></p>
+</div>
+<div id="S3.p13" class="ltx_para">
+<p class="ltx_p">Variant forms of some Greek letters are available for use in math mode, these are invoked by inserting “var” between the backslash and the letter name.</p>
+</div>
+<div id="S3.p14" class="ltx_para">
+<p class="ltx_p">Their handwriting was very similar, but Robert always wrote <math id="S3.p14.m1" class="ltx_Math" alttext="\phi\prime" display="inline"><mrow><mi>ϕ</mi><mo>′</mo></mrow></math> while Catherine prefered <math id="S3.p14.m2" class="ltx_Math" alttext="\varphi\prime" display="inline"><mrow><mi>φ</mi><mo>′</mo></mrow></math>.</p>
+</div>
+<div id="S3.p15" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">Their handwriting was very similar, but Robert always wrote</code></p>
+</div>
+<div id="S3.p16" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$\phi\prime$ while Catherine prefered $\varphi\prime$.</code></p>
+</div>
+<div id="S3.p17" class="ltx_para">
+<p class="ltx_p">See “Greek alphabet” in the PlanetMath encyclopedia for a complete listing.</p>
+</div>
+<div id="S3.p18" class="ltx_para">
+<p class="ltx_p">With the addition of parentheses, we can also use letters to stand for functions. Usually we can just type them from the keyboard.</p>
+</div>
+<div id="S3.p19" class="ltx_para">
+<p class="ltx_p">Define <math id="S3.p19.m1" class="ltx_Math" alttext="f(n)=n^{2}+m\mod a" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mi>m</mi></mrow><mo lspace="2.5pt" rspace="2.5pt">mod</mo><mi>a</mi></mrow></mrow></math> and iterate 7 times.</p>
+</div>
+<div id="S3.p20" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">Define $f(n) = n^2 + m \mod a$ and iterate 7 times.</code></p>
+</div>
+<div id="S3.p21" class="ltx_para">
+<p class="ltx_p">Clearly <math id="S3.p21.m1" class="ltx_Math" alttext="\Omega(n)&gt;\omega(n)" display="inline"><mrow><mrow><mi mathvariant="normal">Ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> if <math id="S3.p21.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is squarefull.</p>
+</div>
+<div id="S3.p22" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">Clearly $\Omega(n) &gt; \omega(n)$ if $n$ is squarefull.</code></p>
+</div>
+<section id="S3.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.1 </span>Superscripts and subscripts</h3>
+
+<div id="S3.SS1.p1" class="ltx_para">
+<p class="ltx_p">As shown, most of what was said about arithmetic applies to algebra as well. However, it now becomes useful to think of the caret as not being semantically tied down to exponentiation, but simply as a superscript symbol, as will become clear later on. TeX will properly determine from context the correct nature and placement of the superscript. Subscripts are obtained with the underscore character.</p>
+</div>
+<div id="S3.SS1.p2" class="ltx_para">
+<p class="ltx_p">By <math id="S3.SS1.p2.m1" class="ltx_Math" alttext="\phi^{3}(n)" display="inline"><mrow><msup><mi>ϕ</mi><mn>3</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> we mean <math id="S3.SS1.p2.m2" class="ltx_Math" alttext="\phi(\phi(\phi(n)))" display="inline"><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> and so on.</p>
+</div>
+<div id="S3.SS1.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">By $\phi^3(n)$ we mean $\phi(\phi(\phi(n)))$ and so on.</code></p>
+</div>
+<div id="S3.SS1.p4" class="ltx_para">
+<p class="ltx_p">For a prime <math id="S3.SS1.p4.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, <math id="S3.SS1.p4.m2" class="ltx_Math" alttext="\sigma_{3}(p)" display="inline"><mrow><msub><mi>σ</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></math> is <math id="S3.SS1.p4.m3" class="ltx_Math" alttext="1+p^{3}" display="inline"><mrow><mn>1</mn><mo>+</mo><msup><mi>p</mi><mn>3</mn></msup></mrow></math>.</p>
+</div>
+<div id="S3.SS1.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">For a prime $p$, $\sigma_3(p)$ is $1 + p^3$.</code></p>
+</div>
+</section>
+<section id="S3.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.2 </span>Iterated sums and products</h3>
+
+<div id="S3.SS2.p1" class="ltx_para">
+<p class="ltx_p">The basic syntax for iterated sums and products is well worth remembering as it comes in handy for other things later on. It consists of the “sum” or “prod” command followed by an underscore with the iterator initialization or iterator conditions (preferably grouped with braces), followed by the caret and the iterator’s maximum value (grouped with braces if consisting of more than one entity), then the expression to be iteratily summed or multiplied. It’s good form to include a space between the iterator end expression and the expression to be iterated.</p>
+</div>
+<div id="S3.SS2.p2" class="ltx_para">
+<table id="S3.Ex35" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex35.m1" class="ltx_Math" alttext="T_{n}=\sum_{i=1}^{n}i" display="block"><mrow><msub><mi>T</mi><mi>n</mi></msub><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>i</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.SS2.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$$T_n = \sum_{i = 1}^n i$$</code></p>
+</div>
+<div id="S3.SS2.p4" class="ltx_para">
+<table id="S3.Ex36" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex36.m1" class="ltx_Math" alttext="\sum_{i=0}^{\infty}(-1)^{i}\frac{1}{2i+1}" display="block"><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>i</mi></msup><mo>⁢</mo><mfrac><mn>1</mn><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>i</mi></mrow><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.SS2.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$$\sum_{i = 0}^\infty (-1)^i \frac{1}{2i + 1}$$</code></p>
+</div>
+<div id="S3.SS2.p6" class="ltx_para">
+<table id="S3.Ex37" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex37.m1" class="ltx_Math" alttext="\prod_{i=1}^{\infty}\left(\frac{i}{i+1}\right)^{{(-1)}^{i}}" display="block"><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><msup><mrow><mo>(</mo><mfrac><mi>i</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></mfrac><mo>)</mo></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>i</mi></msup></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.SS2.p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$$\sum_{i = 0}^\infty (-1)^i \frac{1}{2i + 1}$$</code></p>
+</div>
+</section>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Set theory</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">Generally uppercase letters are used to stand for sets. The command for the set membership symbol is <code class="ltx_verbatim ltx_font_typewriter">\in</code>.</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">Since any element <math id="S4.p2.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> satisfies both <math id="S4.p2.m2" class="ltx_Math" alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math> and <math id="S4.p2.m3" class="ltx_Math" alttext="x\in B" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>B</mi></mrow></math> …</p>
+</div>
+<div id="S4.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">Since any element $x$ satisfies both $x \in A$ and $x \in</code></p>
+</div>
+<div id="S4.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">B$ ...</code></p>
+</div>
+<div id="S4.p5" class="ltx_para">
+<p class="ltx_p">To list the member elements of a set, curly braces are typically used as delimiters, but these braces have an important function in TeX. Therefore, they must be “escaped” with a backslash.</p>
+</div>
+<div id="S4.p6" class="ltx_para">
+<p class="ltx_p">Given the set <math id="S4.p6.m1" class="ltx_Math" alttext="H=\{1,2,4,6\}" display="inline"><mrow><mi>H</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>6</mn><mo stretchy="false">}</mo></mrow></mrow></math>, it is clear that…</p>
+</div>
+<div id="S4.p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">Given the set $H = \{ 1, 2, 4, 6 \}$, it is clear that...</code></p>
+</div>
+<div id="S4.p8" class="ltx_para">
+<p class="ltx_p">The commands for union and intersection are “cap” and “cup” respectively.</p>
+</div>
+<div id="S4.p9" class="ltx_para">
+<p class="ltx_p"><math id="S4.p9.m1" class="ltx_Math" alttext="\{a,e,i,o,u,y\}\cap\{b,c,d,f,\ldots x,y,z\}=\{y\}" display="inline"><mrow><mrow><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>e</mi><mo>,</mo><mi>i</mi><mo>,</mo><mi>o</mi><mo>,</mo><mi>u</mi><mo>,</mo><mi>y</mi><mo stretchy="false">}</mo></mrow><mo>∩</mo><mrow><mo stretchy="false">{</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo>,</mo><mi>f</mi><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><mi>x</mi></mrow><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">}</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>y</mi><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+<div id="S4.p10" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$\{ a, e, i, o, u, y \} \cap \{ b, c, d, f, \ldots x, y,</code></p>
+</div>
+<div id="S4.p11" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">z \} = \{ y \}$</code></p>
+</div>
+<div id="S4.p12" class="ltx_para">
+<p class="ltx_p">If <math id="S4.p12.m1" class="ltx_Math" alttext="C=A\cup B" display="inline"><mrow><mi>C</mi><mo>=</mo><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow></mrow></math>, then both <math id="S4.p12.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S4.p12.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> are subsets of <math id="S4.p12.m4" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>.</p>
+</div>
+<div id="S4.p13" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">If $C = A \cup B$, then both $A$ and $B$ are subsets of $C$.</code></p>
+</div>
+<section id="S4.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.1 </span>Blackboard bold</h3>
+
+<div id="S4.SS1.p1" class="ltx_para">
+<p class="ltx_p">Certain special infinite sets which need frequent reference are symbolized by blackboard bold letters. The command is <code class="ltx_verbatim ltx_font_typewriter">\mathbb{X}</code> where <code class="ltx_verbatim ltx_font_typewriter">X</code> is replaced by the desired letter.</p>
+</div>
+<div id="S4.SS1.p2" class="ltx_para">
+<p class="ltx_p"><math id="S4.SS1.p2.m1" class="ltx_Math" alttext="\mathbb{N}=\{1,2,3,4,5,6,7,8,9,10,11,12,\ldots\}" display="inline"><mrow><mi>ℕ</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>5</mn><mo>,</mo><mn>6</mn><mo>,</mo><mn>7</mn><mo>,</mo><mn>8</mn><mo>,</mo><mn>9</mn><mo>,</mo><mn>10</mn><mo>,</mo><mn>11</mn><mo>,</mo><mn>12</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">}</mo></mrow></mrow></math></p>
+</div>
+<div id="S4.SS1.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$\mathbb{N} = \{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, \ldots \}$</code>
+</p>
+</div>
+<div id="S4.SS1.p4" class="ltx_para">
+<p class="ltx_p">Even <math id="S4.SS1.p4.m1" class="ltx_Math" alttext="(0+0i)\in\mathbb{C}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>0</mn><mo>+</mo><mrow><mn>0</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>ℂ</mi></mrow></math>, thus <math id="S4.SS1.p4.m2" class="ltx_Math" alttext="\mathbb{C}\cap\mathbb{R}=\mathbb{R}" display="inline"><mrow><mrow><mi>ℂ</mi><mo>∩</mo><mi>ℝ</mi></mrow><mo>=</mo><mi>ℝ</mi></mrow></math>.</p>
+</div>
+<div id="S4.SS1.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">Even $(0 + 0i) \in \mathbb{C}$, thus $\mathbb{C} \cap</code></p>
+</div>
+<div id="S4.SS1.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">\mathbb{R} = \mathbb{R}$.</code></p>
+</div>
+</section>
+<section id="S4.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.2 </span>Empty set</h3>
+
+<div id="S4.SS2.p1" class="ltx_para">
+<p class="ltx_p">The empty set can simply be denoted as <math id="S4.SS2.p1.m1" class="ltx_Math" alttext="\{\}" display="inline"><mrow><mo stretchy="false">{</mo><mo stretchy="false">}</mo></mrow></math>, but the symbols <math id="S4.SS2.p1.m2" class="ltx_Math" alttext="\emptyset" display="inline"><mi mathvariant="normal">∅</mi></math> and <math id="S4.SS2.p1.m3" class="ltx_Math" alttext="\varnothing" display="inline"><mi mathvariant="normal">∅</mi></math> are also available.</p>
+</div>
+<div id="S4.SS2.p2" class="ltx_para">
+<p class="ltx_p">Obviously <math id="S4.SS2.p2.m1" class="ltx_Math" alttext="\mathbb{J}\cap\mathbb{N}=\varnothing" display="inline"><mrow><mrow><mi>𝕁</mi><mo>∩</mo><mi>ℕ</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</p>
+</div>
+<div id="S4.SS2.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">Obviously $\mathbb{J} \cap \mathbb{N} = \varnothing$.</code></p>
+</div>
+<div id="S4.SS2.p4" class="ltx_para">
+<p class="ltx_p">If <math id="S4.SS2.p4.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S4.SS2.p4.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> have no elements in common then <math id="S4.SS2.p4.m3" class="ltx_Math" alttext="A\cap B=\emptyset" display="inline"><mrow><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</p>
+</div>
+<div id="S4.SS2.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">If $A$ and $B$ have no elements in common then $A \cap B = \emptyset$.</code></p>
+</div>
+</section>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Trigonometry</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">The trigonometric functions are just strings of three or four lowercase English letters, but shouldn’t just be typed in, or else they’ll be italicized. It’s enough to precede them with backslashes.</p>
+</div>
+<div id="S5.p2" class="ltx_para">
+<p class="ltx_p">The parametric equations in this case are <math id="S5.p2.m1" class="ltx_Math" alttext="x=a+r\cos t" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>t</mi></mrow></mrow></mrow></mrow></math> and <math id="S5.p2.m2" class="ltx_Math" alttext="y=b+r\sin t" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>b</mi><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>t</mi></mrow></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S5.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">The parametric equations in this case are $x = a + r \cos t$</code></p>
+</div>
+<div id="S5.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">and $y = b + r \sin t$.</code></p>
+</div>
+</section>
+<section id="S6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6 </span>Calculus</h2>
+
+<div id="S6.p1" class="ltx_para">
+<p class="ltx_p">Calculus has been described as the “art of finding limits.” Therefore we’ll begin with limit notation. The syntax consists of the “lim” command followed by an underscore and the expression of limit enclosed by braces, then the expression of which we’re stating the limit.</p>
+</div>
+<div id="S6.p2" class="ltx_para">
+<p class="ltx_p">Hadamard proved that</p>
+<table id="S6.Ex38" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex38.m1" class="ltx_Math" alttext="\lim_{x\to\infty}\frac{\pi(x)}{\frac{x}{\ln(x)}}=1." display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>x</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mfrac><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mfrac><mi>x</mi><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mfrac></mrow><mo>=</mo><mn>1</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S6.p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">Hadamard proved that $$\lim_{x \to \infty} \frac{\pi(x)}</code></p>
+</div>
+<div id="S6.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">{\frac{x}{\ln(x)}} = 1.$$</code></p>
+</div>
+<div id="S6.p5" class="ltx_para">
+<p class="ltx_p">As mentioned before, the underlying idea of the iterated sum and product comes in handy later on. Integration is also an iterated computation, and the syntax is the same, only we use “int” instead of “sum” or “prod.”</p>
+</div>
+<div id="S6.p6" class="ltx_para">
+<table id="S6.Ex39" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex39.m1" class="ltx_Math" alttext="\int_{0}^{x}\frac{dt}{\ln t}" display="block"><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>x</mi></msubsup><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow><mrow><mi>ln</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S6.p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$$\int_0^x \frac{dt}{\ln t}$$</code></p>
+</div>
+<div id="S6.p8" class="ltx_para">
+<p class="ltx_p">Some people prefer to use the command “limits” to make the lower bound of integration appear lower and the upper bound of integration appear higher.</p>
+</div>
+<div id="S6.p9" class="ltx_para">
+<table id="S6.Ex40" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex40.m1" class="ltx_Math" alttext="\int\limits_{0}^{x}\frac{dt}{\ln t}" display="block"><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∫</mo><mn>0</mn><mi>x</mi></munderover><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow><mrow><mi>ln</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S6.p10" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$$\int\limits_0^x \frac{dt}{\ln t}$$</code>
+</p>
+</div>
+<div id="S6.p11" class="ltx_para">
+<p class="ltx_p">The same concept applies for substitution notation: The square brackets can simply be typed in (or “left[” and “right]” used if bigger brackets are needed), then the underscore followed by the start value, and the caret followed by the end value.</p>
+</div>
+<div id="S6.p12" class="ltx_para">
+<table id="S6.Ex41" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex41.m1" class="ltx_Math" alttext="\Gamma(1)=\int_{0}^{\infty}e^{-t}\,dt=[-e^{-t}]_{0}^{\infty}=1" display="block"><mrow><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mo>-</mo><mi>t</mi></mrow></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>t</mi></mrow></mrow></mrow><mo>=</mo><msubsup><mrow><mo stretchy="false">[</mo><mrow><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>t</mi></mrow></msup></mrow><mo stretchy="false">]</mo></mrow><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mo>=</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S6.p13" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$$\Gamma(1) = \int_0^\infty e^{-t} \, dt = [-e^{-t}]_0^\infty</code></p>
+</div>
+<div id="S6.p14" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">= 1$$</code></p>
+</div>
+<div id="S6.p15" class="ltx_para">
+<p class="ltx_p">Note that the “<math id="S6.p15.m1" class="ltx_Math" alttext="dt" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></math>” has an extra space in front of it — this serves as
+a visual cue that <math id="S6.p15.m2" class="ltx_Math" alttext="dt" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></math> is to be taken as a unit. Likewise, when several
+differentials appear, it is good to separate them with spaces:</p>
+<table id="S6.Ex42" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex42.m1" class="ltx_Math" alttext="\int_{0}^{1}\int_{x}^{1}\sqrt{x^{2}+y^{2}}\,dy\,dx" display="block"><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mn>1</mn></msubsup><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>x</mi><mn>1</mn></msubsup><mrow><mpadded width="+1.7pt"><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+1.7pt"><mi>y</mi></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter"> $$\int_0^1 \int_x^1 \sqrt{x^2 + y^2} \, dy \, dx$$</code></p>
+</div>
+</section>
+<section id="S7" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">7 </span>Logic</h2>
+
+<div id="S7.p1" class="ltx_para">
+<p class="ltx_p">In any treatment of mathematical logic, certain words are bound to occur with a frequency that bloats a document and makes it seem rather verbose. Mathematicians have invented a standard set of symbols that abbreviate all these common words that pertain to logic, enabling conciseness. It is possible, even outside the study of logic, to use these symbols so pervasively that the use of a natural language like English is almost completely avoided, resulting in a very dense document. For guidance on the proper balance of English and logical symbols in PlanetMath, consult the section “Logic symbols versus words” in the <span class="ltx_text ltx_font_italic">PlanetMath Content and Style Guide</span> (in the Docs group under Information). The examples in this section of this reference will of necessity skew towards a near-total avoidance of English.</p>
+</div>
+<div id="S7.p2" class="ltx_para">
+<p class="ltx_p">Just as variables can be symbolized in algebra by italicized letters of the English alphabet, so can propositions in logic.</p>
+</div>
+<div id="S7.p3" class="ltx_para">
+<p class="ltx_p"><math id="S7.p3.m1" class="ltx_Math" alttext="\forall x\;(S(x)\to P(x))" display="inline"><mrow><mo>∀</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded><mrow><mo stretchy="false">(</mo><mi>S</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>→</mo><mi>P</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+<div id="S7.p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$\forall x\; (S(x) \to P(x))$</code></p>
+</div>
+<div id="S7.p5" class="ltx_para">
+<p class="ltx_p"><math id="S7.p5.m1" class="ltx_Math" alttext="\forall x\;(S(x)\to\neg P(x))" display="inline"><mrow><mo>∀</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded><mrow><mo stretchy="false">(</mo><mi>S</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>→</mo><mi mathvariant="normal">¬</mi><mi>P</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+<div id="S7.p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$\forall x\; (S(x) \to \neg P(x))$</code></p>
+</div>
+<div id="S7.p7" class="ltx_para">
+<p class="ltx_p"><math id="S7.p7.m1" class="ltx_Math" alttext="\exists x\;(S(x)\wedge P(x))" display="inline"><mrow><mo>∃</mo><mrow><mpadded width="+2.8pt"><mi>x</mi></mpadded><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∧</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+<div id="S7.p8" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$\exists x\; (S(x) \wedge P(x))$</code></p>
+</div>
+<div id="S7.p9" class="ltx_para">
+<p class="ltx_p"><math id="S7.p9.m1" class="ltx_Math" alttext="\exists x\;(S(x)\wedge\neg P(x)" display="inline"><mrow><mo>∃</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded><mrow><mo stretchy="false">(</mo><mi>S</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>∧</mo><mi mathvariant="normal">¬</mi><mi>P</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></p>
+</div>
+<div id="S7.p10" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$\exists x\; (S(x) \wedge \neg P(x)$</code></p>
+</div>
+<div id="S7.p11" class="ltx_para">
+<p class="ltx_p">The logic symbols in the Latex2e editor are contained under the
+“Comparison, or Comparison 2” menus:</p>
+</div>
+<div id="S7.p12" class="ltx_para">
+<table id="S7.Ex43" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex43.m1" class="ltx_Math" alttext="Exists=\exists," display="block"><mrow><mrow><mrow><mi>E</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mi>s</mi></mrow><mo>=</mo><mo>∃</mo></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S7.p13" class="ltx_para">
+<p class="ltx_p"><math id="S7.p13.m1" class="ltx_Math" alttext="\ni" display="inline"><mo>∋</mo></math></p>
+</div>
+<div id="S7.p14" class="ltx_para">
+<table id="S7.Ex44" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex44.m1" class="ltx_Math" alttext="any=\forall" display="block"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>y</mi></mrow><mo>=</mo><mo>∀</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S7.p15" class="ltx_para">
+<table id="S7.Ex45" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex45.m1" class="ltx_Math" alttext="negation=\neg=N" display="block"><mrow><mrow><mi>n</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>o</mi><mo>⁢</mo><mi>n</mi></mrow><mo>=</mo><mi mathvariant="normal">¬</mi><mo>=</mo><mi>N</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S7.Ex46" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex46.m1" class="ltx_Math" alttext="vee=\vee" display="block"><mrow><mrow><mi>v</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>e</mi></mrow><mo>=</mo><mo>∨</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S7.Ex47" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex47.m1" class="ltx_Math" alttext="wedge=\wedge," display="block"><mrow><mrow><mrow><mi>w</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mi>e</mi></mrow><mo>=</mo><mo>∧</mo></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S7.p16" class="ltx_para">
+<table id="S7.Ex48" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex48.m1" class="ltx_Math" alttext="Bigvee=\bigvee" display="block"><mrow><mrow><mi>B</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mi>v</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>e</mi></mrow><mo>=</mo><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋁</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">,</p>
+<table id="S7.Ex49" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex49.m1" class="ltx_Math" alttext="Bigwedge=\bigwedge." display="block"><mrow><mrow><mrow><mi>B</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mi>w</mi><mo>⁢</mo><mi>e</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mi>e</mi></mrow><mo>=</mo><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋀</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The implication is however found as a double or single arrow under the arrows
+menu in the latex2e editor. For symbols used in conjuction with multi-valued
+or LM- logic algebras see for example:</p>
+<table id="S7.Ex50" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex50.m1" class="ltx_Math" alttext="http://planetmath.org/encyclopedia/AlgebraicCategoryOfLMnLogicAlgebras.html" display="block"><mrow><mi>h</mi><mi>t</mi><mi>t</mi><mi>p</mi><mo>:</mo><mo>/</mo><mo>/</mo><mi>p</mi><mi>l</mi><mi>a</mi><mi>n</mi><mi>e</mi><mi>t</mi><mi>m</mi><mi>a</mi><mi>t</mi><mi>h</mi><mo>.</mo><mi>o</mi><mi>r</mi><mi>g</mi><mo>/</mo><mi>e</mi><mi>n</mi><mi>c</mi><mi>y</mi><mi>c</mi><mi>l</mi><mi>o</mi><mi>p</mi><mi>e</mi><mi>d</mi><mi>i</mi><mi>a</mi><mo>/</mo><mi>A</mi><mi>l</mi><mi>g</mi><mi>e</mi><mi>b</mi><mi>r</mi><mi>a</mi><mi>i</mi><mi>c</mi><mi>C</mi><mi>a</mi><mi>t</mi><mi>e</mi><mi>g</mi><mi>o</mi><mi>r</mi><mi>y</mi><mi>O</mi><mi>f</mi><mi>L</mi><mi>M</mi><mi>n</mi><mi>L</mi><mi>o</mi><mi>g</mi><mi>i</mi><mi>c</mi><mi>A</mi><mi>l</mi><mi>g</mi><mi>e</mi><mi>b</mi><mi>r</mi><mi>a</mi><mi>s</mi><mo>.</mo><mi>h</mi><mi>t</mi><mi>m</mi><mi>l</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">.</p>
+</div>
+<div id="S7.p17" class="ltx_para">
+<p class="ltx_p">Of course, just as algebra can have literal numbers, so too can logic have literal propositions.</p>
+</div>
+<div id="S7.p18" class="ltx_para">
+<p class="ltx_p"><math id="S7.p18.m1" class="ltx_Math" alttext="(x=|x|)\Leftrightarrow(\neg x=(-1)|x|\And x\neq 0)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>=</mo><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo><mo stretchy="false">)</mo></mrow><mo>⇔</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">¬</mi><mi>x</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mo>-</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo><mo>&amp;</mo><mi>x</mi><mo>≠</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+<div id="S7.p19" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$(x = |x|) \Leftrightarrow (\neg x = (-1)|x| \And x \neq 0)$</code></p>
+</div>
+<div id="S7.p20" class="ltx_para">
+<p class="ltx_p"><math id="S7.p20.m1" class="ltx_Math" alttext="\pi\neq\frac{a}{b}\therefore\pi\not\in\mathbb{Q}" display="inline"><mrow><mrow><mi>π</mi><mo>≠</mo><mfrac><mi>a</mi><mi>b</mi></mfrac></mrow><mo>∴</mo><mrow><mi>π</mi><mo>∉</mo><mi>ℚ</mi></mrow></mrow></math></p>
+</div>
+<div id="S7.p21" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Code:</span> <code class="ltx_verbatim ltx_font_typewriter">$\pi \neq \frac{a}{b} \therefore \pi \not \in \mathbb{Q}$</code></p>
+</div>
+<div id="S7.p22" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">T<span class="ltx_text" style="position:relative; bottom:-2.1pt;">E</span>Xm m  Mathematical Formula Quick Reference</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">TeXMathematicalFormulaQuickReference</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-05-16 10:53:21</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-05-16 10:53:21</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (13766)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">unlord (1)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PrimeFan (1)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Definition</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 21:21:17 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
