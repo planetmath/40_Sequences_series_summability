@@ -27,7 +27,7 @@
 <span class="ltx_tag ltx_tag_section">1 </span>Introduction</h2>
 
 <div id="S1.p1" class="ltx_para">
-<p class="ltx_p">Noosphere’s automatic linking system handles most inter-entry linking instances properly. However, a small fraction of the time, it does not have enough information based on concept label metadata (titles, synonyms, defines) and classification metadata to resolve ambiguous links. In these cases, something extra must be done to correct linking.</p>
+<p class="ltx_p">Noosphere’s automatic linking system handles most inter-entry linking <a class="nnexus_concept" href="http://planetmath.org/substitutionsinpropositionallogic">instances</a> properly. However, a small <a class="nnexus_concept" href="http://planetmath.org/fraction">fraction</a> of the time, it does not have enough information based on <a class="nnexus_concept" href="http://planetmath.org/conceptlattice">concept</a> label metadata (titles, synonyms, defines) and classification metadata to resolve ambiguous links. In these cases, something extra must be done to correct linking.</p>
 </div>
 <div id="S1.p2" class="ltx_para">
 <p class="ltx_p">There are two families of methods to accomplish this. The first involves improving the metadata, beyond concept labels and classification. We introduce <em class="ltx_emph ltx_font_italic">linking policy</em> metadata to accomplish this.</p>
@@ -67,7 +67,7 @@
 <div id="S2.SS1.p4" class="ltx_para">
 <pre class="ltx_verbatim ltx_font_typewriter">
  priority 10 normal
- priority 200 "mapping function"
+ priority 200 "<a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">mapping function</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/transformation"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/operator"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>"
 </pre>
 </div>
 <div id="S2.SS1.p5" class="ltx_para">
@@ -109,7 +109,7 @@
 <dd class="ltx_item">
 <div id="I1.ix3.p1" class="ltx_para">
 <p class="ltx_p">Usage: <span class="ltx_text ltx_font_typewriter">\PMlinkescapephrase{phrase}
-<br class="ltx_break"></span>Results in the series of words “phrase” being exempt from reference link processing anywhere they occur in the object. In fact, this tag is currently implemented the same as <span class="ltx_text ltx_font_typewriter">\PMlinkescapeword</span>. However, it is conceivable that words and phrases may be treated differently at some point, so one should keep this in mind when deciding which command to use. Note that this tag produces no output.</p>
+<br class="ltx_break"></span>Results in the series of words “phrase” being exempt from reference link processing anywhere they <a class="nnexus_concept" href="http://planetmath.org/word">occur in</a> the object. In fact, this tag is currently implemented the same as <span class="ltx_text ltx_font_typewriter">\PMlinkescapeword</span>. However, it is conceivable that words and phrases may be treated differently at some point, so one should keep this in mind when deciding which command to use. Note that this tag produces no output.</p>
 </div>
 </dd>
 </dl>
@@ -127,7 +127,7 @@ Then $p$ is odd if and only if $p\neq 2$.
 </blockquote>
 </div>
 <div id="S3.SS1.p5" class="ltx_para">
-<p class="ltx_p">As it stands, the word “fix” will be autolinked to an entry on fixed points. This is not appropriate here. So we have two choices:</p>
+<p class="ltx_p">As it stands, the word “fix” will be autolinked to an entry on <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">fixed points</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/fixedpointarithmetic"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/fixedpoint"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>. This is not appropriate here. So we have two choices:</p>
 <blockquote class="ltx_quote">
 <pre class="ltx_verbatim ltx_font_typewriter">
 \PMlinkescapetext{Fix} a prime $p$.
@@ -156,7 +156,7 @@ Then $p$ is odd if and only if $p\neq 2$.
 <span class="ltx_tag ltx_tag_subsection">3.2 </span>Link Steering</h3>
 
 <div id="S3.SS2.p1" class="ltx_para">
-<p class="ltx_p">Using classification and linking policy, automatic linking can usually pick the correct destination for a link when there are multiple possibilities. However, when it fails, one might have to use a link steering command instead.</p>
+<p class="ltx_p">Using classification and linking policy, automatic linking can usually pick the correct destination for a link when there are <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">multiple</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Multiple.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/generalassociativity"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/divisibility"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> possibilities. However, when it fails, one might have to use a link steering command instead.</p>
 </div>
 <div id="S3.SS2.p2" class="ltx_para">
 <dl id="I2" class="ltx_description">
@@ -208,10 +208,10 @@ Then $p$ is odd if and only if $p\neq 2$.
 <span class="ltx_tag ltx_tag_subsection">3.4 </span>Notes</h3>
 
 <div id="S3.SS4.p1" class="ltx_para">
-<p class="ltx_p">Since there is no sophisticated parsing of the pseudo-LaTeX commands, you can’t put anything “fancy” inside the brackets for them. That is, plain text only. You cannot do something like <span class="ltx_text ltx_font_typewriter">\PMlinkescapetext{\emph{function}}</span>, you’d have to do <span class="ltx_text ltx_font_typewriter">\emph{\PMlinkescapetext{function}}</span>.</p>
+<p class="ltx_p">Since there is no sophisticated parsing of the pseudo-LaTeX commands, you can’t put anything “fancy” inside the brackets for them. That is, plain text only. You cannot do something like <span class="ltx_text ltx_font_typewriter">\PMlinkescapetext{\emph{<a class="nnexus_concept" href="http://planetmath.org/function">function</a>}}</span>, you’d have to do <span class="ltx_text ltx_font_typewriter">\emph{\PMlinkescapetext{function}}</span>.</p>
 </div>
 <div id="S3.SS4.p2" class="ltx_para">
-<p class="ltx_p">These commands are implemented entirely in the code for PlanetMath, during the preprocessing that happens before the LaTeX content is sent to the rendering back-end. They were modeled after LaTeX commands in order to keep the overall content representation paradigm consistent.</p>
+<p class="ltx_p">These commands are implemented entirely in the code for PlanetMath, during the preprocessing that happens before the LaTeX content is sent to the rendering back-end. They were modeled after LaTeX commands in order to keep the overall content <a class="nnexus_concept" href="http://planetmath.org/grouprepresentation">representation</a> paradigm <a class="nnexus_concept" href="http://planetmath.org/consistent">consistent</a>.</p>
 </div>
 <div id="S3.SS4.p3" class="ltx_para">
 <p class="ltx_p">There is a package <a href="http://aux.planetmath.org/files/objects/4630/pmath.sty" title="" class="ltx_ref ltx_href ltx_font_typewriter">pmath.sty</a>
