@@ -40,23 +40,23 @@
 
 % define commands here
 \begin{document}
-From the definition of convergence , for every $\epsilon > 0$ there is $N(\epsilon) \in \mathbb{N}$ such that $(\forall) n \geq N(\epsilon)$ , we have :
+From the definition of convergence, for every $\epsilon > 0$ there is $N(\epsilon) \in \mathbb{N}$ such that $(\forall) n \geq N(\epsilon)$, we have:
 $$ l-\epsilon < \frac{a_{n+1}-a_n}{b_{n+1}-b_n} < l + \epsilon $$
-Because $b_n$ is strictly increasing we can multiply the last equation with $b_{n+1}-b_n$ to get :
+Because $b_n$ is strictly increasing we can multiply the last equation with $b_{n+1}-b_n$ to get:
 $$ (l-\epsilon)(b_{n+1}-b_n) < a_{n+1}-a_n < (l+\epsilon)(b_{n+1}-b_n) $$
-Let $k>N(\epsilon)$ be a natural number . Summing the last relation we get :
-$$ (l-\epsilon)\sum_{i=N(\epsilon)}^{k}(b_{i+1}-b_i) < \sum_{i=N(\epsilon)}^{k}(a_{n+1}-a_n) < (l+\epsilon)\sum_{i=N(\epsilon)}^{k}(b_{i+1}-b_i) \Rightarrow $$
+Let $k>N(\epsilon)$ be a natural number. Summing the last relation we get:
+$$ (l-\epsilon)\sum_{i=N(\epsilon)}^{k}(b_{i+1}-b_i) < \sum_{i=N(\epsilon)}^{k}(a_{i+1}-a_i) < (l+\epsilon)\sum_{i=N(\epsilon)}^{k}(b_{i+1}-b_i) \Rightarrow $$
 $$ (l-\epsilon)(b_{k+1}-b_{N(\epsilon)}) < a_{k+1} - a_{N(\epsilon)} < (l+\epsilon)(b_{k+1}-b_{N(\epsilon)})$$
-Divide the last relation by $b_{k+1}>0$ to get :
+Divide the last relation by $b_{k+1}>0$ to get:
 $$ (l-\epsilon)(1 - \frac{b_{N(\epsilon)}}{b_{k+1}}) < \frac{a_{k+1}}{b_{k+1}} - \frac{a_{N(\epsilon)}}{b_{k+1}}<(l+\epsilon)(1 - \frac{b_{N(\epsilon)}}{b_{k+1}}) \Leftrightarrow$$
 $$ (l-\epsilon)(1 - \frac{b_{N(\epsilon)}}{b_{k+1}}) + \frac{a_{N(\epsilon)}}{b_{k+1}}< \frac{a_{k+1}}{b_{k+1}}<(l+\epsilon)(1 - \frac{b_{N(\epsilon)}}{b_{k+1}}) + \frac{a_{N(\epsilon)}}{b_{k+1}} $$
-This means that there is some $K$ such that for $k \geq K$ we have :
+This means that there is some $K$ such that for $k \geq K$ we have:
 $$(l-\epsilon)<\frac{a_{k+1}}{b_{k+1}}< (l+\epsilon)$$
-(since the other terms who were left out converge to 0)
+(since the other terms who were left out converge to 0).
 
-This obviously means that :
+This obviously means that:
 $$ \lim_{n \rightarrow \infty} \frac{a_n}{b_n}=l$$
-and we are done .
+and we are done.
 %%%%%
 %%%%%
 \end{document}
