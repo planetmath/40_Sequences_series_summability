@@ -51,8 +51,8 @@ construct an open cover of $X$.  Because the series is assumed to converge point
 every $x \in X$, there exists  an integer $n_x$ such that $\sum_{k=n_x}^\infty f_k (x) < \epsilon 
 / 3$.  By continuity, there exists an open neighborhood $N_1$ of $x$ such that $|f(x) - f(y)| 
 < \epsilon /3$ when $y \in N_1$ and an open neighborhood $N_2$ of $x$ such that $\left| 
-\sum_{k=0}^{n_x} f_k (x) - \sum_{k=0}^n  f_k (y) \right| < \epsilon / 3$ when $y \in N_2$.  
-Let $N_x$ be the intersection of $N_1$ and $N_2$.  Then, for every $y \in N$, we have
+\sum_{k=0}^{n_x} f_k (x) - \sum_{k=0}^{n_x}  f_k (y) \right| < \epsilon / 3$ when $y \in N_2$.  
+Let $N_x$ be the intersection of $N_1$ and $N_2$.  Then, for every $y \in N_x$, we have
 \[
  f(y) - \sum_{k=0}^{n_x} f_k (y) < |f(y) - f(x)| + 
                                    \left| f(x) - \sum_{k=0}^{n_x} f_k (x) \right| +
