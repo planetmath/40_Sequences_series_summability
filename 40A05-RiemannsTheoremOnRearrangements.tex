@@ -114,7 +114,7 @@ $$
 
 
 {\em Proof.}
-Let $a_n^+ = \max\{0,a_n\}$ and $a_n^- = \min\{0,-a_n\}$.  Then we have $a_n = a_n^+ - a_n^-$ and $|a_n| = a_n^+ + a_n^-$.  Since $\sum a_n < \infty$, both $\sum a_n^+$ and $\sum a_n^-$ diverge or converge simultaneously. But since $\sum|a_n|=\infty$, we see that at least one of $\sum a_n^+$ and $\sum a_n^-$ must diverge.  It follows that  $\sum a_n^+ = \infty$ and $\sum a_n^- = \infty$.
+Let $a_n^+ = \max\{0,a_n\}$ and $a_n^- = \max\{0,-a_n\}$.  Then we have $a_n = a_n^+ - a_n^-$ and $|a_n| = a_n^+ + a_n^-$.  Since $\sum a_n < \infty$, both $\sum a_n^+$ and $\sum a_n^-$ diverge or converge simultaneously. But since $\sum|a_n|=\infty$, we see that at least one of $\sum a_n^+$ and $\sum a_n^-$ must diverge.  It follows that  $\sum a_n^+ = \infty$ and $\sum a_n^- = \infty$.
 
 Also by the $n$th term test, $\lim_n a_n^+ = \lim_n a_n^- = 0$. 
 
@@ -122,10 +122,10 @@ Now we pass to subsequence of $(a_n^+)$ by removing all terms with $a_n^+ = 0$ a
 
 Now we will define integers $m_j$ and $k_j$ for $j\in\mathbb{N}$, and consider the series
 \begin{align*}
-a^+_1 & + a^+_2 + \cdots + a^+_{m_1}\\
-&- a^-_1 - a^-_2 - \cdots - a^-_{k_2}\\
-& + a^+_{m_1+1}  + a^+_2 + \cdots + a^+_{m_2}\\
-&- a^-_{k_1+1} - a^-_2 - \cdots - a^-_{k_2}+ \\
+a^+_1 & {}+ a^+_2 + \cdots + a^+_{m_1}\\
+&{}- a^-_1 - a^-_2 - \cdots - a^-_{k_1}\\
+&{} + a^+_{m_1+1}  + a^+_2 + \cdots + a^+_{m_2}\\
+&{}- a^-_{k_1+1} - a^-_2 - \cdots - a^-_{k_2} \\
 & \ \ \ \vdots 
 \end{align*}
 This series is clearly a rearrangement of $\sum a_n$, by our choice of the subsequences $a^+_n$ and $a^-_n$.  
